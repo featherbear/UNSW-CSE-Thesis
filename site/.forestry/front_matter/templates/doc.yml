@@ -10,7 +10,7 @@ fields:
   label: Description
 - type: boolean
   name: toc
-  label: Show TOC?
+  label: Show Table of Contents
   default: true
 - type: datetime
   name: date
