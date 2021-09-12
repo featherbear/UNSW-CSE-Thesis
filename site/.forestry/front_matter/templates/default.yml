@@ -23,10 +23,10 @@ fields:
   description: ''
   config:
     required: true
-    date_format: DD/MM/YYYY
+    date_format: ''
     time_format: 
     display_utc: false
-    export_format: YYYY-MM-DD
+    export_format: ''
   default: now
 - name: toc
   type: boolean
