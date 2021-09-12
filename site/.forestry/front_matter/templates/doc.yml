@@ -14,6 +14,16 @@ fields:
 - type: datetime
   name: date
   label: date
+- name: weight
+  type: number
+  label: Post Order
+  description: ''
+  default: 0
+  required: true
+  config:
+    min: 0
+    max: 
+    step: 
 pages:
 - site/content/docs/about-the-thesis/useful-meetings.md
 - site/content/docs/about-the-thesis/what-goes-in-a-thesis.md
