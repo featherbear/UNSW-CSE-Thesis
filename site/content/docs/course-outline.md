@@ -2,7 +2,6 @@
 categories = []
 date = 2021-09-12T16:00:50Z
 description = ""
-draft = true
 series = []
 tags = []
 title = "Course Outline"
@@ -55,3 +54,33 @@ Through the thesis, you will put into practice the knowledge and skills that you
 4. **Plan your attack:** decide on the method(s) that are most appropriate, and justify your decision(s). Plan how you will do the work, and check with your supervisor that your plan is realistic. Note that you will be using this plan in Thesis Part B.
 5. **Solve the problem:** carry out your plan and either develop a solution to the research problem, or build the system.
 6. **Evaluate your solution:** justify why your solution is a good solution. For a theory problem, this may already be clear from the solution (proof) itself. For other kinds of research problems, you might do some complexity analysis or build a simulation. For software development, you need to carry out a testing plan which analyses relevant aspects of the system such as correctness, performance, usability, etc.
+
+## Deliverables and Assessment
+
+### Thesis A
+
+* **Thesis Seminar Presentation** (during Week 8) (25%): Make a 30-minute presentation about your Thesis A topic and the plan
+* **Thesis A Written Report** (Wednesday Week 11) (75%)
+
+A mark out of 100 will be returned by your supervisor and the assessor. Your thesis A mark is the average of your supervisor’s mark and assessor’s mark. It will contribute 20% towards your final thesis mark. In your UNSW academic transcript, Thesis A is graded as Enrolment Continuing/Discontinuing. You must pass both the written report and the seminar to receive an Enrolment Continuing(EC) grade in Thesis A.
+
+### Thesis B
+
+* **Thesis Seminar Presentation** (during Week 11) (100%): Make a 30-minute presentation about your preliminary outcome and the plan for the rest of the thesis
+
+A mark out of 100 will be returned by your supervisor and the assessor. Your thesis B mark is the average of your supervisor’s mark and assessor’s mark. It will contribute 5% towards your final thesis mark. In your UNSW academic transcript, Thesis B is graded as Enrolment Continuing/Discontinuing.
+
+### Thesis C
+
+* **Thesis Demonstration/Presentation** (During Week 8) (10%): Make a 30-minute presentation about the final outcome of your thesis. This could be a demonstration of your system built or a presentation of your theoretical work.
+* **Final Thesis Report** (Week 11) (90%): The final Thesis Report is often called simply "The Thesis".
+* **Thesis Summary/Abstract** (Wednesday Week 11): Along with the report, you are required to submit a 150-word summary of your thesis. This summary is going to be published in the CSE Thesis Digital Archive.
+
+A mark out of 100 will be returned by your supervisor and the assessor. Your thesis C mark is the average of your supervisor’s mark and assessor’s mark. It will contribute 70% towards your final thesis mark.
+
+Participation:
+
+* Participation is a component of Thesis C but assessed by the supervisor only.
+* The supervisor gives the participation marks based on student participation (contact frequency with the supervisor, efforts made, etc) during the entire thesis process.
+
+A mark out of 100 will be returned by your supervisor.
