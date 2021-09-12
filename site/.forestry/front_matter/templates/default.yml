@@ -47,5 +47,3 @@ fields:
   default: []
   label: Series
   description: "<em>i.e. for Part 1 and Part 2 posts</em>"
-pages:
-- site/content/docs/course-outline.md
