@@ -66,9 +66,8 @@ A mark out of 100 will be returned by your supervisor and the assessor. Your the
 
 #### Marking Criteria
 
-##### Seminar
-
-![](/uploads/20210912-snipaste_2021-09-13_02-08-12.png)
+* [Seminar](/uploads/20210912-thesisaseminarmarkingcriteria.pdf)
+* [Report](/uploads/20210912-thesisareportmarkingscheme.pdf)
 
 ### Thesis B
 
