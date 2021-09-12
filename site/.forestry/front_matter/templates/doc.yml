@@ -4,16 +4,26 @@ hide_body: false
 fields:
 - type: text
   name: title
-  label: title
+  label: Title
 - type: text
   name: description
-  label: description
+  label: Description
 - type: boolean
   name: toc
-  label: toc
+  label: Show TOC?
 - type: datetime
   name: date
-  label: date
+  label: Date
+- name: weight
+  type: number
+  label: Post Order
+  description: ''
+  default: 0
+  required: true
+  config:
+    min: 0
+    max: 
+    step: 
 pages:
 - site/content/docs/about-the-thesis/useful-meetings.md
 - site/content/docs/about-the-thesis/what-goes-in-a-thesis.md
