@@ -9,11 +9,15 @@ sections:
   label: Docs
   create: all
   match: "**/*"
+  templates:
+  - doc
 - type: directory
   path: site/content/posts
   label: Posts
   create: all
   match: "**/*"
+  templates:
+  - default
 upload_dir: site/static/uploads
 public_path: "/uploads"
 front_matter_path: ''
