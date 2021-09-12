@@ -1,7 +1,6 @@
 +++
 date = ""
 description = "What makes a meeting efficient?"
-draft = true
 title = "Useful Meetings"
 toc = false
 
