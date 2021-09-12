@@ -1,5 +1,6 @@
 ---
 title: What Is A Thesis
+description: More about this reverse-financed research
 
 ---
 # Note - A thesis is **not** an assignment
