@@ -1,9 +1,25 @@
-# Generic Cards List Page
+Hey! This is the Svelte site source for the development log [summary page](https://featherbear.cc/UNSW-CSE-Thesis/tldr)
+
 ---
 
-> Modified version of my [Filmstrip Messages](https://github.com/featherbear/filmstrip-messages)
+* Development Logs - [featherbear.cc/UNSW-CSE-Thesis](https://featherbear.cc/UNSW-CSE-Thesis)
+* Summary - [featherbear.cc/UNSW-CSE-Thesis/tldr](https://featherbear.cc/UNSW-CSE-Thesis/tldr)
 
-This project was built with the [Svelte](https://svelte.dev/) framework
+---
+
+&nbsp;  
+
+&nbsp;  
+
+&nbsp;  
+
+&nbsp;  
+
+&nbsp;  
+
+# CSE Thesis Devlog TL;DR
+
+_Based from [featherbear/generic-cards-list-page](https://github.com/featherbear/generic-cards-list-page)_
 
 ## Getting Started
 
@@ -15,11 +31,6 @@ This project was built with the [Svelte](https://svelte.dev/) framework
 
 ### Building a static version
 
+**Note: This site is automatically built via GitHub Workflows**
+
 Deploy with `npm run build`
-
----
-
-# GitHub Pages
-
-The provided `.github/workflows/gh-pages.yml` will automatically build and publish a static version of this repo with every push of the `master` branch to GitHub.
-
