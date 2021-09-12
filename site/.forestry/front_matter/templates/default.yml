@@ -1,4 +1,49 @@
 ---
 label: Default
 hide_body: false
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+  description: Post title
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Description
+- name: date
+  type: datetime
+  label: Publish Date
+  description: ''
+  config:
+    required: true
+    date_format: 
+    time_format: 
+    display_utc: false
+    export_format: YYYY-MM-DD
+  default: now
+- name: toc
+  type: boolean
+  label: Show Table of Contents
+  default: true
+  description: Displayed on the right-hand side of the page
+- name: tags
+  type: tag_list
+  default: []
+  label: Tags
+  description: "#tags shown at the bottom"
+- name: categories
+  type: tag_list
+  default: []
+  label: Categories
+- name: series
+  type: tag_list
+  default: []
+  label: Series
+  description: "<em>i.e. for Part 1 and Part 2 posts</em>"
