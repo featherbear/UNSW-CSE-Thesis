@@ -50,3 +50,4 @@ title: What Is A Thesis
 * Final thesis report
   * Project description + Literature review
   * Approach + Evaluation + Conclusion
+* Summary / Abstract
