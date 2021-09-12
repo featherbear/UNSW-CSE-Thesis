@@ -1,4 +1,4 @@
 ---
-title: About the Thesis
+title: About The Thesis
 draft: false
 ---
