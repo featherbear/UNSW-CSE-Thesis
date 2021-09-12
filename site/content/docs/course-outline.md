@@ -64,6 +64,12 @@ Through the thesis, you will put into practice the knowledge and skills that you
 
 A mark out of 100 will be returned by your supervisor and the assessor. Your thesis A mark is the average of your supervisor’s mark and assessor’s mark. It will contribute 20% towards your final thesis mark. In your UNSW academic transcript, Thesis A is graded as Enrolment Continuing/Discontinuing. You must pass both the written report and the seminar to receive an Enrolment Continuing(EC) grade in Thesis A.
 
+#### Marking Criteria
+
+##### Seminar
+
+![](/uploads/20210912-snipaste_2021-09-13_02-08-12.png)
+
 ### Thesis B
 
 * **Thesis Seminar Presentation** (during Week 11) (100%): Make a 30-minute presentation about your preliminary outcome and the plan for the rest of the thesis
