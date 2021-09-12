@@ -1,6 +1,6 @@
 ---
 title: Andrew Wong
-role: UNSW Computer Science and Engineering
+role: z5206677 | UNSW
 avatar: https://featherbear.cc/assets/images/profilepic.jpg
 bio: I make stuff, and occasionally break stuff... okay mainly the lattter
 social:
@@ -10,6 +10,9 @@ social:
   - icon: github
     iconPack: fab
     url: https://github.com/featherbear
+  - icon: linkedin
+    iconPack: fab
+    url: https://www.linkedin.com/in/andrewjinmengwong/
 
 weight: 1
 widget:
@@ -40,14 +43,14 @@ widget:
     attachment: 
 ---
 
-## Insert Clickbait Title Here
+## Insert clickbait title here!
 
 Whoa, what's that? This site contains cool stuff about my thesis research?  
 Yeah well, soon.
 
 ## Details  
 
-circuit go brrrr
+circuits go brrrr
 
 
 ## Acknowledgements
