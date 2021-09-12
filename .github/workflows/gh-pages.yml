@@ -21,8 +21,20 @@ jobs:
         hugo-version: '0.88.1'
         extended: true
 
-    - name: Build
+    - name: Build Hugo site
       run: hugo --gc --minify --cleanDestinationDir -s site -d public
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '14.x'
+
+    - name: Build TLDR site
+      run: |
+        npm install
+        npm run build
+        cp -R public ../public/tldr
+      working-directory: ./site/tldr
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v2.3.1
