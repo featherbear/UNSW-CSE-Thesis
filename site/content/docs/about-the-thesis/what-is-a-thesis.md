@@ -20,3 +20,18 @@ title: What Is A Thesis
 ## R&D Project
 
 > Both!
+
+# Parts of the UNSW Thesis
+
+## Thesis A
+
+* Background research (literature review)
+* Current state of the art
+* How to advance
+* Presentation (Project overview + plan)
+  * Use feedback to broaden literature review and to refine the topic
+* Report (Summarise thesis A achievements)
+
+## Thesis B
+
+## Thesis C
