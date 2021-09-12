@@ -1,4 +1,6 @@
-baseURL: /
+# baseURL: /
+relativeURLs: true
+
 title: CSE Thesis Musings
 
 theme: hugo-eureka
