@@ -1,12 +1,12 @@
 +++
 categories = []
 date = 2021-09-12T16:00:50Z
-description = ""
+description = " "
 series = []
 tags = []
 title = "Course Outline"
 toc = true
-
+weight = 1
 +++
 ## Course Aims
 

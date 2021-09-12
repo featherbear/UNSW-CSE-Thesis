@@ -1,7 +1,7 @@
 ---
 title: What Is A Thesis
 description: More about this reverse-financed research
-
+weight: 2
 ---
 # Note - A thesis is **not** an assignment
 
