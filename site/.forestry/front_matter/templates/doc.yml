@@ -4,16 +4,16 @@ hide_body: false
 fields:
 - type: text
   name: title
-  label: title
+  label: Title
 - type: text
   name: description
-  label: description
+  label: Description
 - type: boolean
   name: toc
-  label: toc
+  label: Show TOC?
 - type: datetime
   name: date
-  label: date
+  label: Date
 - name: weight
   type: number
   label: Post Order
