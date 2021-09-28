@@ -1,0 +1,230 @@
+<!doctype html><html lang=en><meta charset=utf-8>
+<meta name=viewport content="width=device-width">
+<title>Capturing Network Activity (Securely) | CSE Thesis Musings</title>
+<meta name=generator content="Hugo Eureka 0.8.2">
+<link rel=stylesheet href=../../css/eureka.min.css>
+<script defer src=../../js/eureka.min.js></script>
+<link rel=preconnect href=https://fonts.gstatic.com crossorigin>
+<link rel=preload href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" as=style onload="this.onload=null,this.rel='stylesheet'">
+<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/styles/solarized-light.min.css media=print onload="this.media='all',this.onload=null" crossorigin>
+<script defer src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/highlight.min.js crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/languages/dart.min.js crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js integrity="sha256-uNYoXefWRqv+PsIF/OflNmwtKM4lStn9yrz2gVl6ymo=" crossorigin></script>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css integrity=sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X media=print onload="this.media='all',this.onload=null" crossorigin>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js integrity=sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4 crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js integrity=sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa crossorigin></script>
+<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}]})})</script>
+<script defer src=https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js integrity="sha256-Zmpaaj+GXFsPF5WdPArSrnW3b30dovldeKsW00xBVwE=" crossorigin></script>
+<link rel=preconnect href=https://www.google-analytics.com crossorigin>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107434487-2"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-107434487-2')</script>
+<script>(function(e,b,f,c,a,d){b[c]=b[c]||function(){(b[c].q=b[c].q||[]).push(arguments)},a=e.createElement('script'),d=e.getElementsByTagName('script')[0],a.async=1,a.src=f,a.id='fathom-script',d.parentNode.insertBefore(a,d)})(document,window,'//ss.featherbear.cc/tracker.js','fathom'),fathom('set','siteId','NEQTU'),fathom('trackPageview')</script>
+<style>html.dark{--color-primary-bg:#232327 !important}div#sidebar-toc>ul.pl-6{margin-left:1em}</style>
+<meta name=description content="Setting up an isolated network">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"Capturing Network Activity (Securely)","item":"/posts/capturing-network-activity-securely/"}]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/capturing-network-activity-securely/"},"headline":"Capturing Network Activity (Securely) | CSE Thesis Musings","datePublished":"2021-09-28T12:00:00+00:00","dateModified":"2021-09-28T12:00:00+00:00","wordCount":777,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Setting up an isolated network"}</script><meta property="og:title" content="Capturing Network Activity (Securely) | CSE Thesis Musings">
+<meta property="og:type" content="article">
+<meta property="og:url" content="/posts/capturing-network-activity-securely/">
+<meta property="og:description" content="Setting up an isolated network">
+<meta property="og:locale" content="en">
+<meta property="og:site_name" content="CSE Thesis Musings">
+<meta property="article:published_time" content="2021-09-28T12:00:00+00:00">
+<meta property="article:modified_time" content="2021-09-28T12:00:00+00:00">
+<meta property="article:section" content="posts">
+<body class="flex flex-col min-h-screen">
+<header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
+<div class="w-full max-w-screen-xl mx-auto"><script>let storageColorScheme=localStorage.getItem("lightDarkMode");((storageColorScheme=='Auto'||storageColorScheme==null)&&window.matchMedia("(prefers-color-scheme: dark)").matches||storageColorScheme=="Dark")&&document.getElementsByTagName('html')[0].classList.add('dark')</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+<a href=../../ class="mr-6 text-primary-text text-xl font-bold">CSE Thesis Musings</a>
+<button id=navbar-btn class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+<i class="fas fa-bars"></i>
+</button>
+<div id=target class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+<div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
+<a href=../../#about class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">About</a>
+<a href=../../posts/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 selected-menu-item mr-4">Posts</a>
+<a href=../../docs/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">Docs</a>
+</div>
+<div class=flex>
+<div class="relative pt-4 md:pt-0">
+<div class="cursor-pointer hover:text-eureka" id=lightDarkMode>
+<i class="fas fa-adjust"></i>
+</div>
+<div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id=is-open>
+</div>
+<div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40" id=lightDarkOptions>
+<span class="px-4 py-1 hover:text-eureka" name=Light>Light</span>
+<span class="px-4 py-1 hover:text-eureka" name=Dark>Dark</span>
+<span class="px-4 py-1 hover:text-eureka" name=Auto>Auto</span>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id=is-open-mobile>
+</div>
+</nav>
+<script>let element=document.getElementById('lightDarkMode');storageColorScheme==null||storageColorScheme=='Auto'?document.addEventListener('DOMContentLoaded',()=>{window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change',switchDarkMode)}):storageColorScheme=="Light"?(element.firstElementChild.classList.remove('fa-adjust'),element.firstElementChild.setAttribute("data-icon",'sun'),element.firstElementChild.classList.add('fa-sun')):storageColorScheme=="Dark"&&(element.firstElementChild.classList.remove('fa-adjust'),element.firstElementChild.setAttribute("data-icon",'moon'),element.firstElementChild.classList.add('fa-moon')),document.addEventListener('DOMContentLoaded',()=>{getcolorscheme(),switchBurger()})</script>
+</div>
+</header>
+<main class="flex-grow pt-16">
+<div class=pl-scrollbar>
+<div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
+<div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
+<div class="col-span-2 lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+<h1 class="font-bold text-3xl text-primary-text">Capturing Network Activity (Securely)</h1>
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+<div class="mr-6 my-2">
+<i class="fas fa-calendar mr-1"></i>
+<span>2021-09-28</span>
+</div>
+</div>
+<div class=content>
+<h1 id=capturing-network-activity-in-a-secure-manner>Capturing Network Activity (in a secure manner)</h1>
+<blockquote>
+<p>(hopefully)</p>
+</blockquote>
+<ul>
+<li>WiFi network that the vacuum cleaner can connect to.</li>
+<li>Packet capture
+<ul>
+<li>TCP</li>
+<li>UDP</li>
+<li>Multicast</li>
+<li>Broadcasts</li>
+</ul>
+</li>
+</ul>
+<h1 id=solutions>Solutions</h1>
+<h2 id=passive-monitoring>Passive Monitoring</h2>
+<h3 id=wired-monitoring---hub>Wired Monitoring - Hub</h3>
+<div class=mermaid>
+graph LR
+A\[Device\] ---|data| B\[Hub\]
+B ---|data| C\[Device\]
+B ---|data| D\[Device\]
+B ---|data| E\[Device\]
+B ---|data| F\[Device\]
+</div>
+<p>An Ethernet <strong>hub</strong> naively broadcasts all packets from one port to the other, meaning that any device connected to that hub will receive packets destined for anyone.<br>
+By default, Network Interface Cards (NICs) will drop any packets whose destination MAC address does not match - however NICs that support and have Promiscuous Mode enabled can capture <em>any</em> network packet.</p>
+<p>However, Ethernet hubs are very rare these days and hard to obtain due to Ethernet Switches being better in every way (except for when they&rsquo;re not 🙃)</p>
+<h3 id=wired-monitoring---network-taps>Wired Monitoring - Network Taps</h3>
+<p>Network Taps are like Ethernet Hubs, however they operate only for a single line connection.<br>
+Also they&rsquo;re sort of expensive; although you can DIY them!</p>
+<h3 id=wired-monitoring---switch>Wired Monitoring - Switch</h3>
+<blockquote>
+<p>aka port mirroring / port monitoring / Switched Port Analyzer (SPAN)</p>
+</blockquote>
+<div class=mermaid>
+graph LR
+A\[Device\] ---|data for B| B\[Switch\]
+B --- C\[Device A\]
+B ---|data| D\[Device B\]
+B --- E\[Device C\]
+B --- F\[Device D\]
+B ---|data| G(Monitoring Device)
+</div>
+<p>Compared to hubs, Ethernet switches selectively forward packets <em>only</em> to the port which is connected to / in the path towards the device. As a result, simply connecting a monitoring device to the switch is not sufficient to receive traffic. &ldquo;Smarter&rdquo; switches have the functionality to forward traffic on a certain port(s) to another port - a feature known as port mirroring; commonly found in business/enterprise/managed switches.</p>
+<p>Different switches implement port mirroring in different ways. Some switches disable all traffic on the mirror destination / sink - preventing the monitoring device (attached to the sink port) from making its own network communications; this may be a desired consequence if you wish to only log the mirror source traffic. Other switches simply copy the mirror traffic onto the sink port - whilst still allowing network activity on the mirror sink.</p>
+<h3 id=wireless-monitoring>Wireless Monitoring</h3>
+<p>A Wireless Access Point (WAP) is essentially a &ldquo;Wireless Hub&rdquo;, where packets are broadcasted both from the WAP to a client device; and from client devices to the WAP (due to the nature of shared RF space).
+Therefore, a Wireless NIC (WNIC) with Promiscuous Mode enabled too can monitor wireless network activity.</p>
+<p>We are also able to monitor and capture 802.11 radio frames, which may be useful in side channel analysis of network activity. (i.e Does it try to host / join a wireless network during boot?)</p>
+<hr>
+<h2 id=active-monitoring>Active Monitoring</h2>
+<h3 id=wired-monitoring---mitm>Wired Monitoring - MITM</h3>
+<div class=mermaid>
+graph LR
+Computer --- Switch --- Router --- Internet
+</div>
+<p>When wired computers are connected to a network; their topology is often as seen above
+A Man-In-The-Middle interception involved placing a device between the <em>Computer</em> and <em>Router</em>, whose role is to relay network activity whilst simultaneously capturing the packets.</p>
+<div class=mermaid>
+graph LR
+Computer --- MITM --- Switch --- Router --- Internet
+</div>
+<h3 id=network-attacks->Network Attacks 👻</h3>
+<h4 id=arp-poisoning>ARP Poisoning</h4>
+<blockquote>
+<p>The Address Resolution Protocol (ARP) is a TCP/IP technology to translate IP addresses to MAC addresses</p>
+</blockquote>
+<p>As routing is done in Layer 2 of the OSI Network Stack (a.k.a routing via MAC addresses), IP addresses need to be resolved to a MAC address.<br>
+This is done by an ARP Request that is broadcasted on a network (i.e <em>&ldquo;Who has 111.222.333.444?"</em>) - where the owner of that IP address would reply with their MAC address.</p>
+<p>ARP Poisoning involves arbitrarily replying to any ARP Request as to trick the requestor into believing that the attacker&rsquo;s MAC address is the owner of the IP address.
+Once the client is tricked, the client computer will address data to the attacker&rsquo;s machine instead of the intended machine.
+This invites further attack methods such as MITM attacks</p>
+<p><img src=../../uploads/20210928-arppoisoningspoofing.png alt></p>
+<h4 id=mac-flooding>MAC Flooding</h4>
+<blockquote>
+<p>Ethernet Switches keep a translation table that maps various MAC addresses to the physical ports on the switch; to facilitate the forwarding of network traffic to <em>only</em> the required port. However, this translation table only can only store a finite number of entries.</p>
+</blockquote>
+<p>MAC Flooding involves spamming the Ethernet Switch with packets destined for arbitrary MAC addresses (<em>this attack could be used in conjunction with ARP Poisining!</em>), as to fill up the translation table.<br>
+Once the translation table is at capacity, existing entries (i.e. a legitimate translation for a victim&rsquo;s machine) would be lost - allowing an attacker to trick a switch into then switching packets to the attacker&rsquo;s machine instead.</p>
+<hr>
+<h1 id=conclusion>Conclusion</h1>
+<p>Wireless Monitoring</p>
+<p>SG-105E $30AUD
+:: port mirroring (forward mode)</p>
+<ul>
+<li>
+<p><a href=https://goughlui.com/2018/11/03/not-so-smart-tp-link-tl-sg105e-v3-0-5-port-gigabit-easy-smart-switch/>https://goughlui.com/2018/11/03/not-so-smart-tp-link-tl-sg105e-v3-0-5-port-gigabit-easy-smart-switch/</a></p>
+</li>
+<li>
+<p><a href=https://www.pentestpartners.com/security-blog/how-i-can-gain-control-of-your-tp-link-home-switch/>https://www.pentestpartners.com/security-blog/how-i-can-gain-control-of-your-tp-link-home-switch/</a></p>
+</li>
+<li>
+<p>MITM
+Target -> Internet
+Target -> MITM -> Internet
+Target -WiFi-> AP -> MITM -> &mldr;</p>
+</li>
+</ul>
+<hr>
+<h1 id=references>References</h1>
+<p><a href=https://gitlab.com/wireshark/wireshark/-/wikis/CaptureSetup/Ethernet>https://gitlab.com/wireshark/wireshark/-/wikis/CaptureSetup/Ethernet</a></p>
+</div>
+</div>
+<div class=col-span-2>
+<div class="sticky top-16 z-10 hidden lg:block px-6 py-4 bg-primary-bg">
+<span class="text-lg font-semibold">On This Page</span>
+</div>
+<div class="sticky-toc hidden lg:block px-6 pb-6">
+<nav id=TableOfContents>
+<ul>
+<li><a href=#passive-monitoring>Passive Monitoring</a>
+<ul>
+<li><a href=#wired-monitoring---hub>Wired Monitoring - Hub</a></li>
+<li><a href=#wired-monitoring---network-taps>Wired Monitoring - Network Taps</a></li>
+<li><a href=#wired-monitoring---switch>Wired Monitoring - Switch</a></li>
+<li><a href=#wireless-monitoring>Wireless Monitoring</a></li>
+</ul>
+</li>
+<li><a href=#active-monitoring>Active Monitoring</a>
+<ul>
+<li><a href=#wired-monitoring---mitm>Wired Monitoring - MITM</a></li>
+<li><a href=#network-attacks->Network Attacks 👻</a>
+<ul>
+<li><a href=#arp-poisoning>ARP Poisoning</a></li>
+<li><a href=#mac-flooding>MAC Flooding</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+<script>window.addEventListener('DOMContentLoaded',()=>{enableStickyToc()})</script>
+</div>
+</div>
+<script>document.addEventListener('DOMContentLoaded',()=>{hljs.initHighlightingOnLoad()})</script>
+</div>
+</div>
+</main>
+<footer class=pl-scrollbar>
+<div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
+<p class="text-sm text-tertiary-text">&copy; 2021 <a href=https://featherbear.cc>Andrew Wong (z5206677)</a>
+&#183; Powered by the <a href=https://github.com/wangchucheng/hugo-eureka class=hover:text-eureka>Eureka</a> theme for <a href=https://gohugo.io class=hover:text-eureka>Hugo</a></p>
+</div></div>
+</footer>
+</body>
+</html>
