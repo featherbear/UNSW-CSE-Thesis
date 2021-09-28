@@ -29,17 +29,17 @@ _EDIT: I also imagine I might need to do some Bluetooth communications investiga
 
 <div class="mermaid">
 graph LR
-A\[Device\] ---|data| B\[Hub\]
-B ---|data| C\[Device\]
-B ---|data| D\[Device\]
-B ---|data| E\[Device\]
-B ---|data| F\[Device\]
+A[Device] ---|data| B[Hub]
+B ---|data| C[Device]
+B ---|data| D[Device]
+B ---|data| E[Device]
+B ---|data| F[Device]
 </div>
 
 An Ethernet **hub** naively broadcasts all packets from one port to the other, meaning that any device connected to that hub will receive packets destined for anyone.  
 By default, Network Interface Cards (NICs) will drop any packets whose destination MAC address does not match - however NICs that support and have Promiscuous Mode enabled can capture _any_ network packet.
 
-However, Ethernet hubs are very rare these days and hard to obtain due to Ethernet Switches being better in every way (except for when they're not 🙃)
+However, Ethernet hubs are very rare these days and hard to obtain due to Ethernet Switches being better in every way (except for when they're not ??)
 
 ### Wired Monitoring - Network Taps
 
@@ -55,11 +55,11 @@ Also they're sort of expensive; although you can DIY them!
 
 <div class="mermaid">
 graph LR
-A\[Device\] ---|data for B| B\[Switch\]
-B --- C\[Device A\]
-B ---|data| D\[Device B\]
-B --- E\[Device C\]
-B --- F\[Device D\]
+A[Device] ---|data for B| B[Switch]
+B --- C[Device A]
+B ---|data| D[Device B]
+B --- E[Device C]
+B --- F[Device D]
 B ---|data| G(Monitoring Device)
 </div>
 
@@ -97,7 +97,7 @@ A program that could be used is `tcpdump`, or `udpdump` (for UDP packets).
 
 i.e. `tcpdump -U -i IFACE -w - > localfile`
 
-### Network Attacks 👻
+### Network Attacks ??
 
 #### ARP Poisoning
 
