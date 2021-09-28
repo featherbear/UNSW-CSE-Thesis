@@ -92,15 +92,15 @@
 <h3 id=wired-monitoring---hub>Wired Monitoring - Hub</h3>
 <div class=mermaid>
 graph LR
-A\[Device\] ---|data| B\[Hub\]
-B ---|data| C\[Device\]
-B ---|data| D\[Device\]
-B ---|data| E\[Device\]
-B ---|data| F\[Device\]
+A[Device] ---|data| B[Hub]
+B ---|data| C[Device]
+B ---|data| D[Device]
+B ---|data| E[Device]
+B ---|data| F[Device]
 </div>
 <p>An Ethernet <strong>hub</strong> naively broadcasts all packets from one port to the other, meaning that any device connected to that hub will receive packets destined for anyone.<br>
 By default, Network Interface Cards (NICs) will drop any packets whose destination MAC address does not match - however NICs that support and have Promiscuous Mode enabled can capture <em>any</em> network packet.</p>
-<p>However, Ethernet hubs are very rare these days and hard to obtain due to Ethernet Switches being better in every way (except for when they&rsquo;re not 🙃)</p>
+<p>However, Ethernet hubs are very rare these days and hard to obtain due to Ethernet Switches being better in every way (except for when they&rsquo;re not ??)</p>
 <h3 id=wired-monitoring---network-taps>Wired Monitoring - Network Taps</h3>
 <p>Network Taps are like Ethernet Hubs, however they operate only for a single line connection.<br>
 Also they&rsquo;re sort of expensive; although you can DIY them!</p>
@@ -110,11 +110,11 @@ Also they&rsquo;re sort of expensive; although you can DIY them!</p>
 </blockquote>
 <div class=mermaid>
 graph LR
-A\[Device\] ---|data for B| B\[Switch\]
-B --- C\[Device A\]
-B ---|data| D\[Device B\]
-B --- E\[Device C\]
-B --- F\[Device D\]
+A[Device] ---|data for B| B[Switch]
+B --- C[Device A]
+B ---|data| D[Device B]
+B --- E[Device C]
+B --- F[Device D]
 B ---|data| G(Monitoring Device)
 </div>
 <p>Compared to hubs, Ethernet switches selectively forward packets <em>only</em> to the port which is connected to / in the path towards the device. As a result, simply connecting a monitoring device to the switch is not sufficient to receive traffic. &ldquo;Smarter&rdquo; switches have the functionality to forward traffic on a certain port(s) to another port - a feature known as port mirroring; commonly found in business/enterprise/managed switches.</p>
@@ -138,7 +138,7 @@ Computer --- MITM --- Switch --- Router --- Internet
 </div>
 <p>A program that could be used is <code>tcpdump</code>, or <code>udpdump</code> (for UDP packets).</p>
 <p>i.e. <code>tcpdump -U -i IFACE -w - > localfile</code></p>
-<h3 id=network-attacks->Network Attacks 👻</h3>
+<h3 id=network-attacks->Network Attacks ??</h3>
 <h4 id=arp-poisoning>ARP Poisoning</h4>
 <blockquote>
 <p>The Address Resolution Protocol (ARP) is a TCP/IP technology to translate IP addresses to MAC addresses</p>
@@ -198,7 +198,7 @@ Time to build a Faraday cage???</p>
 <li><a href=#active-monitoring>Active Monitoring</a>
 <ul>
 <li><a href=#wired-monitoring---mitm>Wired Monitoring - MITM</a></li>
-<li><a href=#network-attacks->Network Attacks 👻</a>
+<li><a href=#network-attacks->Network Attacks ??</a>
 <ul>
 <li><a href=#arp-poisoning>ARP Poisoning</a></li>
 <li><a href=#mac-flooding>MAC Flooding</a></li>
