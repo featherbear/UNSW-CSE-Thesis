@@ -8,16 +8,18 @@ title = "Capturing Network Activity (Securely)"
 toc = true
 
 +++
-# Capturing Network Activity (in a secure manner)
+# Capturing Network Activity (for security)
 
 > (hopefully)
 
-* WiFi network that the vacuum cleaner can connect to.
-* Packet capture
-  * TCP
-  * UDP
-  * Multicast
-  * Broadcasts
+In order to better understand what the vacuum cleaner is doing, I need to figure out what the vacuum cleaner is both sending and receiving!
+
+This means that I will need to do some packet capturing, to get the TCP / UDP / etc... packets; but what's the best (and budget-friendly) way to do that?
+
+_EDIT: I also imagine I might need to do some Bluetooth communications investigation too, huh..._
+
+
+---
 
 # Solutions
 
@@ -70,7 +72,7 @@ Different switches implement port mirroring in different ways. Some switches dis
 A Wireless Access Point (WAP) is essentially a "Wireless Hub", where packets are broadcasted both from the WAP to a client device; and from client devices to the WAP (due to the nature of shared RF space).
 Therefore, a Wireless NIC (WNIC) with Promiscuous Mode enabled too can monitor wireless network activity.
 
-We are also able to monitor and capture 802.11 radio frames, which may be useful in side channel analysis of network activity. (i.e Does it try to host / join a wireless network during boot?)
+We are also able to monitor and capture 802.11 radio frames, which may be useful in side-channel analysis of network activity. (i.e Does it try to host / join a wireless network during boot?)
 
 ***
 
@@ -90,6 +92,10 @@ A Man-In-The-Middle interception involved placing a device between the _Computer
 graph LR
 Computer --- MITM --- Switch --- Router --- Internet
 </div>
+
+A program that could be used is `tcpdump`, or `udpdump` (for UDP packets).  
+
+i.e. `tcpdump -U -i IFACE -w - > localfile`
 
 ### Network Attacks 👻
 
@@ -117,19 +123,31 @@ Once the translation table is at capacity, existing entries (i.e. a legitimate t
 
 # Conclusion
 
-Wireless Monitoring
+After researching various methods to capture network activity, I will go ahead with two methods - Wired Monitoring via Port Mirroring, and Passive Wireless Monitoring
 
-SG-105E $30AUD
-:: port mirroring (forward mode)
+## Port Mirroring
 
-* https://goughlui.com/2018/11/03/not-so-smart-tp-link-tl-sg105e-v3-0-5-port-gigabit-easy-smart-switch/
-* https://www.pentestpartners.com/security-blog/how-i-can-gain-control-of-your-tp-link-home-switch/
+After some research on the most trustworthy of internet sites - Reddit, I found a bunch of budget switches that support Port Mirroring.
 
+Netgear GS105E, Netgear GS108E, TP-Link TL-SG105E, MikroTik RB260GSP, HP ProCurve 1810 series, etc...
 
-* MITM
-  Target -> Internet
-  Target -> MITM -> Internet
-  Target -WiFi-> AP -> MITM -> ...
+At the time of writing, the TP-Link TL-SG105E is the cheapest at around AUD$40.
+I actually own a bunch of ProCurve 1810 switches, but as they are in active deployment - I'd rather not use them (also they're discontinued).
+
+Since the vacuum cleaner is not wired - rather it communicates wirelessly - the below topology would be used
+
+<div class="mermaid">
+graph TD
+  V[Vacuum Cleaner] -.- AP[Access Point] --- Switch --- Router
+  Switch -->|Port Mirror| M(Monitoring Device)
+</div>
+
+> Fun fact, the TL-SG105E has its own set of security issues [[#1]](https://goughlui.com/2018/11/03/not-so-smart-tp-link-tl-sg105e-v3-0-5-port-gigabit-easy-smart-switch/) [[#2]](https://www.pentestpartners.com/security-blog/how-i-can-gain-control-of-your-tp-link-home-switch/)
+
+## Passive Wireless Monitoring
+
+In the event that the vacuum cleaner might have some side-channel activity (i.e. Trying to set up its own SSID for ad-hoc pairing, etc...), I'd like to be able to monitor any sort of wireless communications.  
+Time to build a Faraday cage???
 
 ***
 
