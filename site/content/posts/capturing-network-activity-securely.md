@@ -8,12 +8,8 @@ title = "Capturing Network Activity (Securely)"
 toc = true
 
 +++
-# Capturing Network Activity (for security)
 
-> (hopefully)
-
-In order to better understand what the vacuum cleaner is doing, I need to figure out what the vacuum cleaner is both sending and receiving!
-
+> In order to better understand what the vacuum cleaner is doing, I need to figure out what the vacuum cleaner is both sending and receiving!  
 This means that I will need to do some packet capturing, to get the TCP / UDP / etc... packets; but what's the best (and budget-friendly) way to do that?
 
 _EDIT: I also imagine I might need to do some Bluetooth communications investigation too, huh..._
