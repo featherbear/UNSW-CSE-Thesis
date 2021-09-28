@@ -22,7 +22,7 @@
 <style>html.dark{--color-primary-bg:#232327 !important}div#sidebar-toc>ul.pl-6{margin-left:1em}</style>
 <meta name=description content="Setting up an isolated network">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"Capturing Network Activity (Securely)","item":"/posts/capturing-network-activity-securely/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/capturing-network-activity-securely/"},"headline":"Capturing Network Activity (Securely) | CSE Thesis Musings","datePublished":"2021-09-28T12:00:00+00:00","dateModified":"2021-09-28T12:00:00+00:00","wordCount":777,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Setting up an isolated network"}</script><meta property="og:title" content="Capturing Network Activity (Securely) | CSE Thesis Musings">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/capturing-network-activity-securely/"},"headline":"Capturing Network Activity (Securely) | CSE Thesis Musings","datePublished":"2021-09-28T12:00:00+00:00","dateModified":"2021-09-28T12:00:00+00:00","wordCount":1019,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Setting up an isolated network"}</script><meta property="og:title" content="Capturing Network Activity (Securely) | CSE Thesis Musings">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/posts/capturing-network-activity-securely/">
 <meta property="og:description" content="Setting up an isolated network">
@@ -79,21 +79,14 @@
 </div>
 </div>
 <div class=content>
-<h1 id=capturing-network-activity-in-a-secure-manner>Capturing Network Activity (in a secure manner)</h1>
+<h1 id=capturing-network-activity-for-security>Capturing Network Activity (for security)</h1>
 <blockquote>
 <p>(hopefully)</p>
 </blockquote>
-<ul>
-<li>WiFi network that the vacuum cleaner can connect to.</li>
-<li>Packet capture
-<ul>
-<li>TCP</li>
-<li>UDP</li>
-<li>Multicast</li>
-<li>Broadcasts</li>
-</ul>
-</li>
-</ul>
+<p>In order to better understand what the vacuum cleaner is doing, I need to figure out what the vacuum cleaner is both sending and receiving!</p>
+<p>This means that I will need to do some packet capturing, to get the TCP / UDP / etc&mldr; packets; but what&rsquo;s the best (and budget-friendly) way to do that?</p>
+<p><em>EDIT: I also imagine I might need to do some Bluetooth communications investigation too, huh&mldr;</em></p>
+<hr>
 <h1 id=solutions>Solutions</h1>
 <h2 id=passive-monitoring>Passive Monitoring</h2>
 <h3 id=wired-monitoring---hub>Wired Monitoring - Hub</h3>
@@ -129,7 +122,7 @@ B ---|data| G(Monitoring Device)
 <h3 id=wireless-monitoring>Wireless Monitoring</h3>
 <p>A Wireless Access Point (WAP) is essentially a &ldquo;Wireless Hub&rdquo;, where packets are broadcasted both from the WAP to a client device; and from client devices to the WAP (due to the nature of shared RF space).
 Therefore, a Wireless NIC (WNIC) with Promiscuous Mode enabled too can monitor wireless network activity.</p>
-<p>We are also able to monitor and capture 802.11 radio frames, which may be useful in side channel analysis of network activity. (i.e Does it try to host / join a wireless network during boot?)</p>
+<p>We are also able to monitor and capture 802.11 radio frames, which may be useful in side-channel analysis of network activity. (i.e Does it try to host / join a wireless network during boot?)</p>
 <hr>
 <h2 id=active-monitoring>Active Monitoring</h2>
 <h3 id=wired-monitoring---mitm>Wired Monitoring - MITM</h3>
@@ -143,6 +136,8 @@ A Man-In-The-Middle interception involved placing a device between the <em>Compu
 graph LR
 Computer --- MITM --- Switch --- Router --- Internet
 </div>
+<p>A program that could be used is <code>tcpdump</code>, or <code>udpdump</code> (for UDP packets).</p>
+<p>i.e. <code>tcpdump -U -i IFACE -w - > localfile</code></p>
 <h3 id=network-attacks->Network Attacks 👻</h3>
 <h4 id=arp-poisoning>ARP Poisoning</h4>
 <blockquote>
@@ -162,23 +157,24 @@ This invites further attack methods such as MITM attacks</p>
 Once the translation table is at capacity, existing entries (i.e. a legitimate translation for a victim&rsquo;s machine) would be lost - allowing an attacker to trick a switch into then switching packets to the attacker&rsquo;s machine instead.</p>
 <hr>
 <h1 id=conclusion>Conclusion</h1>
-<p>Wireless Monitoring</p>
-<p>SG-105E $30AUD
-:: port mirroring (forward mode)</p>
-<ul>
-<li>
-<p><a href=https://goughlui.com/2018/11/03/not-so-smart-tp-link-tl-sg105e-v3-0-5-port-gigabit-easy-smart-switch/>https://goughlui.com/2018/11/03/not-so-smart-tp-link-tl-sg105e-v3-0-5-port-gigabit-easy-smart-switch/</a></p>
-</li>
-<li>
-<p><a href=https://www.pentestpartners.com/security-blog/how-i-can-gain-control-of-your-tp-link-home-switch/>https://www.pentestpartners.com/security-blog/how-i-can-gain-control-of-your-tp-link-home-switch/</a></p>
-</li>
-<li>
-<p>MITM
-Target -> Internet
-Target -> MITM -> Internet
-Target -WiFi-> AP -> MITM -> &mldr;</p>
-</li>
-</ul>
+<p>After researching various methods to capture network activity, I will go ahead with two methods - Wired Monitoring via Port Mirroring, and Passive Wireless Monitoring</p>
+<h2 id=port-mirroring>Port Mirroring</h2>
+<p>After some research on the most trustworthy of internet sites - Reddit, I found a bunch of budget switches that support Port Mirroring.</p>
+<p>Netgear GS105E, Netgear GS108E, TP-Link TL-SG105E, MikroTik RB260GSP, HP ProCurve 1810 series, etc&mldr;</p>
+<p>At the time of writing, the TP-Link TL-SG105E is the cheapest at around AUD$40.
+I actually own a bunch of ProCurve 1810 switches, but as they are in active deployment - I&rsquo;d rather not use them (also they&rsquo;re discontinued).</p>
+<p>Since the vacuum cleaner is not wired - rather it communicates wirelessly - the below topology would be used</p>
+<div class=mermaid>
+graph TD
+V[Vacuum Cleaner] -.- AP[Access Point] --- Switch --- Router
+Switch -->|Port Mirror| M(Monitoring Device)
+</div>
+<blockquote>
+<p>Fun fact, the TL-SG105E has its own set of security issues <a href=https://goughlui.com/2018/11/03/not-so-smart-tp-link-tl-sg105e-v3-0-5-port-gigabit-easy-smart-switch/>[#1]</a> <a href=https://www.pentestpartners.com/security-blog/how-i-can-gain-control-of-your-tp-link-home-switch/>[#2]</a></p>
+</blockquote>
+<h2 id=passive-wireless-monitoring>Passive Wireless Monitoring</h2>
+<p>In the event that the vacuum cleaner might have some side-channel activity (i.e. Trying to set up its own SSID for ad-hoc pairing, etc&mldr;), I&rsquo;d like to be able to monitor any sort of wireless communications.<br>
+Time to build a Faraday cage???</p>
 <hr>
 <h1 id=references>References</h1>
 <p><a href=https://gitlab.com/wireshark/wireshark/-/wikis/CaptureSetup/Ethernet>https://gitlab.com/wireshark/wireshark/-/wikis/CaptureSetup/Ethernet</a></p>
@@ -210,6 +206,10 @@ Target -WiFi-> AP -> MITM -> &mldr;</p>
 </li>
 </ul>
 </li>
+</ul>
+<ul>
+<li><a href=#port-mirroring>Port Mirroring</a></li>
+<li><a href=#passive-wireless-monitoring>Passive Wireless Monitoring</a></li>
 </ul>
 </nav>
 </div>
