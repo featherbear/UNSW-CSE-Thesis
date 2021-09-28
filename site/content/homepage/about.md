@@ -2,7 +2,7 @@
 title: Andrew Wong
 role: z5206677 | UNSW Computer Science & Engineering
 avatar: https://featherbear.cc/assets/images/profilepic.jpg
-bio: I make stuff, and occasionally break stuff... okay mainly the lattter
+bio: I make stuff, and occasionally break stuff... mainly the lattter
 social:
   - icon: globe
     iconPack: fas
