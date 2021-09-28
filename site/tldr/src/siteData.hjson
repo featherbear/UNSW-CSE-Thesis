@@ -1,17 +1,18 @@
 [
   {
-    title: TITLE
+    title: Research
     content: [
       {
-        title: TITLE
-        date: DD/MM/YYYY
-        content: STRING OR STRING[]
-        link: HREF
-        frame: {
-          url: HREF
-          title: TITLE
-        }
+        title: Wednesday
+        date: 29/09/2021
+        content: Researched and planned how to capture network traffic to/from the vacuum cleaner
+        link: https://featherbear.cc/UNSW-CSE-Thesis/posts/capturing-network-activity-securely/
       }
+    ]
+  }
+  {
+    title: Hardware Hacking
+    content: [
     ]
   }
 ]
