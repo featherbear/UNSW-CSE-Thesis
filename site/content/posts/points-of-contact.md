@@ -84,6 +84,8 @@ i.e Marvell MW30X - afx2firmware
 
 bindiff
 
+[https://github.com/google/binnavi](https://github.com/google/binnavi "https://github.com/google/binnavi")
+
 # ARM
 
 FW Updates replace the entire partition
