@@ -83,6 +83,10 @@ MIPS
 
 # Pulling The Firmware
 
+Firmware is encrypted and signed!?!??!?! noooooo?
+
+Tuya integration?
+
 ## Dumping SPI Flash
 
 JTAG, SWD - Can use a RaspPi with OpenOCD
