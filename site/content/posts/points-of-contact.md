@@ -57,6 +57,28 @@ MIPS
 * [https://github.com/unrelentingtech/micloudfaker](https://github.com/unrelentingtech/micloudfaker "https://github.com/unrelentingtech/micloudfaker")
 * [https://github.com/dgiese/dustcloud](https://github.com/dgiese/dustcloud "https://github.com/dgiese/dustcloud")
 
+# ARM
+
+FW Updates replace the entire partition
+
+  
+  
+CLI via serial - `updatefw ___`
+
+SWD - dump
+
+# Vacuum Cleaner... runs... Linux????
+
+[https://www.reddit.com/r/linux/comments/7y9ddk/is_your_robot_vacuum_cleaner_running_ubuntu_1404/](https://www.reddit.com/r/linux/comments/7y9ddk/is_your_robot_vacuum_cleaner_running_ubuntu_1404/ "https://www.reddit.com/r/linux/comments/7y9ddk/is_your_robot_vacuum_cleaner_running_ubuntu_1404/")
+
+[https://medium.com/@anxodio/how-to-get-spotify-working-on-your-xiaomi-vacuum-da28c52bbb4e](https://medium.com/@anxodio/how-to-get-spotify-working-on-your-xiaomi-vacuum-da28c52bbb4e "https://medium.com/@anxodio/how-to-get-spotify-working-on-your-xiaomi-vacuum-da28c52bbb4e")
+
+[https://www.cnx-software.com/2021/01/20/valetudo-is-a-cloud-free-web-interface-for-robot-vacuum-cleaners/](https://www.cnx-software.com/2021/01/20/valetudo-is-a-cloud-free-web-interface-for-robot-vacuum-cleaners/ "https://www.cnx-software.com/2021/01/20/valetudo-is-a-cloud-free-web-interface-for-robot-vacuum-cleaners/")
+
+[https://github.com/LazyT/rrcc](https://github.com/LazyT/rrcc "https://github.com/LazyT/rrcc")
+
+[https://github.com/pezema/home-vacuum](https://github.com/pezema/home-vacuum "https://github.com/pezema/home-vacuum")
+
 # MikroTik Wireshark
 
 (I can use my MikroTik router to packet sniff by IP or MAC)  
