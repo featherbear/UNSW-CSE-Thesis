@@ -54,6 +54,8 @@ Device might not respond without an active network connection?
 (I can use my MikroTik router to packet sniff by IP or MAC)  
 (Note: Will only send WAN packets, as local packets would be switched without reaching the router?)
 
+[https://tojaj.com/packet-capture-from-mikrotik-to-wireshark/](https://tojaj.com/packet-capture-from-mikrotik-to-wireshark/ "https://tojaj.com/packet-capture-from-mikrotik-to-wireshark/")
+
 [https://www.youtube.com/watch?v=zj2vLZOVOT0](https://www.youtube.com/watch?v=zj2vLZOVOT0 "https://www.youtube.com/watch?v=zj2vLZOVOT0")
 
 [https://mikrotik.com/download/trafr.tgz](https://mikrotik.com/download/trafr.tgz "https://mikrotik.com/download/trafr.tgz")
