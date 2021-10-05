@@ -294,3 +294,7 @@ Teardown - [https://dontvacuum.me/teardowns/roborock.vacuum.x6/](https://dontvac
 [https://github.com/marcelrv/XiaomiRobotVacuumProtocol](https://github.com/marcelrv/XiaomiRobotVacuumProtocol "https://github.com/marcelrv/XiaomiRobotVacuumProtocol")
 
 [https://valetudo.cloud/](https://valetudo.cloud/ "https://valetudo.cloud/")
+
+***
+
+Existing research
