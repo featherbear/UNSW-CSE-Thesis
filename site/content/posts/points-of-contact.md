@@ -298,3 +298,17 @@ Teardown - [https://dontvacuum.me/teardowns/roborock.vacuum.x6/](https://dontvac
 ***
 
 Existing research
+
+AEC128CBC Key  for Gen2  "RoCKR0B0@BEIJING"
+
+CIA Principals
+
+What makes something "secure"?
+
+"How secure is the implementation of the ecosystem of the IoT market leader Xiaomi?"
+
+"– Will be introduced in November 2019" Xiaomi
+
+Replication study
+
+Firmware Analysis and Comparison Tool
