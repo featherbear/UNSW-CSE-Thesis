@@ -318,3 +318,5 @@ Firmware Analysis and Comparison Tool
 [https://github.com/rampageX/firmware-mod-kit](https://github.com/rampageX/firmware-mod-kit "https://github.com/rampageX/firmware-mod-kit")
 
 "r0ckrobo#23456"
+
+/run/shm
