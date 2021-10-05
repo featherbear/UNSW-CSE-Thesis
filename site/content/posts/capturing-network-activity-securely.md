@@ -147,6 +147,16 @@ Time to build a Faraday cage???
 
 ***
 
+# EDIT: 5th October 2021
+
+After some reasearch, it turns out that I could also use my MikroTik router to do packet sniffing and forwarding using the Packet Sniffer feature (Sending [TZSP](https://en.wikipedia.org/wiki/TZSP) packets to Wireshark, etc).
+
+The TL-SG105E that I had _just_ purchased (AUD$30 on sale)... I no longer need it haha!  
+I guess I can add this 5 port gigabit switch to my collection of spare devices (along with a bunch of other spare switches)
+
+***
+
+
 # References
 
 https://gitlab.com/wireshark/wireshark/-/wikis/CaptureSetup/Ethernet
