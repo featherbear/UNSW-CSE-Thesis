@@ -59,6 +59,8 @@ MIPS
 
 [https://dontvacuum.me/](https://dontvacuum.me/ "https://dontvacuum.me/")
 
+[https://builder.dontvacuum.me/](https://builder.dontvacuum.me/ "https://builder.dontvacuum.me/")
+
 # Pulling The Firmware
 
 ## Dumping SPI Flash
@@ -165,3 +167,18 @@ Helps to
 [https://www.youtube.com/watch?v=uhyM-bhzFsI](https://www.youtube.com/watch?v=uhyM-bhzFsI "https://www.youtube.com/watch?v=uhyM-bhzFsI")
 
 [https://media.ccc.de/v/34c3-9147-unleash_your_smart-home_devices_vacuum_cleaning_robot_hacking](https://media.ccc.de/v/34c3-9147-unleash_your_smart-home_devices_vacuum_cleaning_robot_hacking "https://media.ccc.de/v/34c3-9147-unleash_your_smart-home_devices_vacuum_cleaning_robot_hacking")
+
+[https://www.consumerreports.org/robotic-vacuums/is-your-robotic-vacuum-sharing-data-about-you-a1563001307/](https://www.consumerreports.org/robotic-vacuums/is-your-robotic-vacuum-sharing-data-about-you-a1563001307/ "https://www.consumerreports.org/robotic-vacuums/is-your-robotic-vacuum-sharing-data-about-you-a1563001307/")
+
+* [https://blog.avast.com/locking-down-smart-home-security-avast](https://blog.avast.com/locking-down-smart-home-security-avast "https://blog.avast.com/locking-down-smart-home-security-avast")
+  * The Roborock vacuum, on the other hand, is sketchy. This is the only device that I’d actually prefer we didn’t have in our home, because I really don’t trust the parent company to use the information it gathers responsibly. We actually moved recently and haven’t used it since settling into our new place — and I’d like to keep it that way.
+
+    But, just in case, I made sure that the Roborock vacuum is connected to a guest network, which has a different password than our main network. That way it at least can’t compromise our main network (and everything else that’s on it) if there’s ever a security breach.
+
+[https://www.reddit.com/r/homeautomation/comments/l24jj4/roborock_securitysetup_guest_network_enough/](https://www.reddit.com/r/homeautomation/comments/l24jj4/roborock_securitysetup_guest_network_enough/ "https://www.reddit.com/r/homeautomation/comments/l24jj4/roborock_securitysetup_guest_network_enough/")
+
+50 million connected devices - tech crunch
+
+revenue > 15B yuan
+
+Dennis Giese
