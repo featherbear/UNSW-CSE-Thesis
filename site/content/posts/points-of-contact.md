@@ -24,6 +24,14 @@ When pairing the device over WiFi (for initial setup), the device acts as a wire
 
 Device might not respond without an active network connection?
 
+# Roborock CPU
+
+ARM Cortex-A?  
+ARM Cortex-M?  
+  Marvell 88MW30X (wifi)  
+  Mediatek MT7687N (wifi + ble)  
+MIPS
+
 # Cloud Protocol
 
 * DeviceID - unique per device
