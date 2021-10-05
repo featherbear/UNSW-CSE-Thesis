@@ -320,3 +320,5 @@ Firmware Analysis and Comparison Tool
 "r0ckrobo#23456"
 
 /run/shm
+
+/mnt/default
