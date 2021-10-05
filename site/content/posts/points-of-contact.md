@@ -57,6 +57,8 @@ MIPS
 * [https://github.com/unrelentingtech/micloudfaker](https://github.com/unrelentingtech/micloudfaker "https://github.com/unrelentingtech/micloudfaker")
 * [https://github.com/dgiese/dustcloud](https://github.com/dgiese/dustcloud "https://github.com/dgiese/dustcloud")
 
+[https://dontvacuum.me/](https://dontvacuum.me/ "https://dontvacuum.me/")
+
 # Pulling The Firmware
 
 ## Dumping SPI Flash
