@@ -8,7 +8,22 @@
         content: Researched and planned how to capture network traffic to/from the vacuum cleaner
         link: https://featherbear.cc/UNSW-CSE-Thesis/posts/capturing-network-activity-securely/
       }
+      {
+        title: Tuesday
+        date: 5/10/2021
+        content: [
+            Did research on existing works regarding IoT vacuums
+            Found a entire suite of resources regarding smart vacuums - https://dontvacuum.me/
+            Watched some talks and found tools to aid in analysis
+            Discovered that my home router (MikroTik Routerboard) can actually do packet sniffing via TZSP to Wireshark
+            Seems like Roborock is a Xiaomi-partner 
+            Also the Roborock S6 runs Ubuntu!
+        ]
+      }
     ]
+  }
+  {
+  
   }
   {
     title: Hardware Hacking
