@@ -71,6 +71,14 @@ MIPS
 
 [https://dontvacuum.me/thesis/](https://dontvacuum.me/thesis/ "https://dontvacuum.me/thesis/")
 
+[https://media.ccc.de/v/34c3-9147-unleash_your_smart-home_devices_vacuum_cleaning_robot_hacking](https://media.ccc.de/v/34c3-9147-unleash_your_smart-home_devices_vacuum_cleaning_robot_hacking "https://media.ccc.de/v/34c3-9147-unleash_your_smart-home_devices_vacuum_cleaning_robot_hacking")
+
+[https://www.reddit.com/r/homeassistant/comments/fdrcz0/how_to_install_valetudo_re_on_a_xiaomi_robot/](https://www.reddit.com/r/homeassistant/comments/fdrcz0/how_to_install_valetudo_re_on_a_xiaomi_robot/ "https://www.reddit.com/r/homeassistant/comments/fdrcz0/how_to_install_valetudo_re_on_a_xiaomi_robot/")
+
+[https://www.youtube.com/playlist?list=PL9PoaNtZCJRZc61c792VCr_I6jQK_IdSb](https://www.youtube.com/playlist?list=PL9PoaNtZCJRZc61c792VCr_I6jQK_IdSb "https://www.youtube.com/playlist?list=PL9PoaNtZCJRZc61c792VCr_I6jQK_IdSb")
+
+[https://www.youtube.com/watch?v=r_04K5SPEXI](https://www.youtube.com/watch?v=r_04K5SPEXI "https://www.youtube.com/watch?v=r_04K5SPEXI")
+
 \->  Technical background: If you dont trust this tool, you can convert the vinda file yourself by XOR'ing every character with "0x37". The resulting string should be all lowercase letters.
 
 # Pulling The Firmware
