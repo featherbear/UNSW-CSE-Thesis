@@ -61,6 +61,14 @@ MIPS
 
 [https://builder.dontvacuum.me/](https://builder.dontvacuum.me/ "https://builder.dontvacuum.me/")
 
+[https://builder.dontvacuum.me/_s6.html](https://builder.dontvacuum.me/_s6.html "https://builder.dontvacuum.me/_s6.html")
+
+[https://builder.dontvacuum.me/password.php](https://builder.dontvacuum.me/password.php "https://builder.dontvacuum.me/password.php")
+
+[https://www.youtube.com/watch?v=r_04K5SPEXI](https://www.youtube.com/watch?v=r_04K5SPEXI "https://www.youtube.com/watch?v=r_04K5SPEXI")
+
+[https://builder.dontvacuum.me/x6cheatsheet.txt](https://builder.dontvacuum.me/x6cheatsheet.txt "https://builder.dontvacuum.me/x6cheatsheet.txt")
+
 # Pulling The Firmware
 
 ## Dumping SPI Flash
