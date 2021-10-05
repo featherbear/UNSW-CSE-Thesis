@@ -69,6 +69,10 @@ MIPS
 
 [https://builder.dontvacuum.me/x6cheatsheet.txt](https://builder.dontvacuum.me/x6cheatsheet.txt "https://builder.dontvacuum.me/x6cheatsheet.txt")
 
+[https://dontvacuum.me/thesis/](https://dontvacuum.me/thesis/ "https://dontvacuum.me/thesis/")
+
+\->  Technical background: If you dont trust this tool, you can convert the vinda file yourself by XOR'ing every character with "0x37". The resulting string should be all lowercase letters.
+
 # Pulling The Firmware
 
 ## Dumping SPI Flash
