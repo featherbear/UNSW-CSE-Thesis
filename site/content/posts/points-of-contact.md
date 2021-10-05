@@ -87,6 +87,8 @@ Firmware is encrypted and signed!?!??!?! noooooo?
 
 Tuya integration?
 
+Two separate apps Mi Home (MiIO) / Roborock (Tuya)
+
 ## Dumping SPI Flash
 
 JTAG, SWD - Can use a RaspPi with OpenOCD
