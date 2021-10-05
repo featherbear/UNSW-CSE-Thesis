@@ -87,7 +87,27 @@ Firmware is encrypted and signed!?!??!?! noooooo?
 
 Tuya integration?
 
+Ubuntu 14.04.3
+
+`rr_loader` (Player 3.10)
+
+`/opt/roborock`
+
+* `AppProxy`
+* `miIO-client/tuya-client`
+* `SysUpdate`
+* `adbd`
+
+SSH (22) and player (6665) blocked  
+IPv6 blocked
+
 Two separate apps Mi Home (MiIO) / Roborock (Tuya)
+
+11:25 - [https://www.youtube.com/watch?v=r_04K5SPEXI](https://www.youtube.com/watch?v=r_04K5SPEXI "https://www.youtube.com/watch?v=r_04K5SPEXI")
+
+Hold S whilst rebooting on the UART
+
+then press middle button for 3s??
 
 ## Dumping SPI Flash
 
@@ -203,8 +223,74 @@ Helps to
 
 [https://www.reddit.com/r/homeautomation/comments/l24jj4/roborock_securitysetup_guest_network_enough/](https://www.reddit.com/r/homeautomation/comments/l24jj4/roborock_securitysetup_guest_network_enough/ "https://www.reddit.com/r/homeautomation/comments/l24jj4/roborock_securitysetup_guest_network_enough/")
 
+[https://builder.dontvacuum.me/x6howtoroot.pdf](https://builder.dontvacuum.me/x6howtoroot.pdf "https://builder.dontvacuum.me/x6howtoroot.pdf")
+
 50 million connected devices - tech crunch
 
 revenue > 15B yuan
 
 Dennis Giese
+
+Model Name - Roborock S6 
+
+Model ID - roborock.vacuum.s6 
+
+Codename - tanos 
+
+Firmware - A=enc(AES-256-CBC), signed (RSA) 
+
+Sound Files - A=enc, signed 
+
+SoC - Allwinner R16 (4x) 
+
+RAM - 512 MByte 
+
+Flash - 4GByte eMMC 
+
+MCU - WiFi STM32F103VCT6 
+
+WiFi - RTL8189ETV 
+
+OS (Kernel) - Ubuntu 14.04 (3.4.x) 
+
+Year - Q2/2018
+
+Lidar - Yes
+
+Camera - No
+
+Mop - Yes
+
+Waterpump - No
+
+LIDAR-Tower Bumper - Yes
+
+IR-Dropdensors - 6
+
+IR-side sensors - Yes
+
+Frontsensor - IR
+
+Cloud - 3.5.8 / Tuya
+
+Root Possible Since (Q2 2019)
+
+Complexity - Disass / Simple Soldering
+
+Valetudo - Yes
+
+Teardown - [https://dontvacuum.me/teardowns/roborock.vacuum.x6/](https://dontvacuum.me/teardowns/roborock.vacuum.x6/ "https://dontvacuum.me/teardowns/roborock.vacuum.x6/")
+
+[https://dontvacuum.me/robotinfo/configfiles/roborock.s6/](https://dontvacuum.me/robotinfo/configfiles/roborock.s6/ "https://dontvacuum.me/robotinfo/configfiles/roborock.s6/")
+
+[https://dontvacuum.me/robotinfo/firmwares/roborock.vacuum.s6.html](https://dontvacuum.me/robotinfo/firmwares/roborock.vacuum.s6.html "https://dontvacuum.me/robotinfo/firmwares/roborock.vacuum.s6.html")
+
+[https://dontvacuum.me/thesis/Security_Analysis_of_the_Xiaomi_IoT_Ecosystem.pdf](https://dontvacuum.me/thesis/Security_Analysis_of_the_Xiaomi_IoT_Ecosystem.pdf "https://dontvacuum.me/thesis/Security_Analysis_of_the_Xiaomi_IoT_Ecosystem.pdf")
+
+[https://dontvacuum.me/thesis/2019-09-masterthesis-defensetalk.pdf](https://dontvacuum.me/thesis/2019-09-masterthesis-defensetalk.pdf "https://dontvacuum.me/thesis/2019-09-masterthesis-defensetalk.pdf")
+
+[https://github.com/porech/roborock-oucher](https://github.com/porech/roborock-oucher "https://github.com/porech/roborock-oucher")
+
+[https://github.com/marcelrv/XiaomiRobotVacuumProtocol](https://github.com/marcelrv/XiaomiRobotVacuumProtocol "https://github.com/marcelrv/XiaomiRobotVacuumProtocol")
+
+[https://valetudo.cloud/](https://valetudo.cloud/ "https://valetudo.cloud/")
