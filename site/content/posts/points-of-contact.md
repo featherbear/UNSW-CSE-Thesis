@@ -163,3 +163,5 @@ Helps to
 [https://www.reddit.com/r/homeautomation/comments/bcpnr8/the_most_secure_private_robot_vacuum_cleaner_ie/](https://www.reddit.com/r/homeautomation/comments/bcpnr8/the_most_secure_private_robot_vacuum_cleaner_ie/ "https://www.reddit.com/r/homeautomation/comments/bcpnr8/the_most_secure_private_robot_vacuum_cleaner_ie/")
 
 [https://www.youtube.com/watch?v=uhyM-bhzFsI](https://www.youtube.com/watch?v=uhyM-bhzFsI "https://www.youtube.com/watch?v=uhyM-bhzFsI")
+
+[https://media.ccc.de/v/34c3-9147-unleash_your_smart-home_devices_vacuum_cleaning_robot_hacking](https://media.ccc.de/v/34c3-9147-unleash_your_smart-home_devices_vacuum_cleaning_robot_hacking "https://media.ccc.de/v/34c3-9147-unleash_your_smart-home_devices_vacuum_cleaning_robot_hacking")
