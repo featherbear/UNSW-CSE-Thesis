@@ -28,8 +28,8 @@ Device might not respond without an active network connection?
 
 ARM Cortex-A?  
 ARM Cortex-M?  
-  Marvell 88MW30X (wifi)  
-  Mediatek MT7687N (wifi + ble)  
+Marvell 88MW30X (wifi)  
+Mediatek MT7687N (wifi + ble)  
 MIPS
 
 # Cloud Protocol
@@ -63,7 +63,7 @@ MIPS
 
 ## Dumping SPI Flash
 
-JTAG, SWD - Can use a RaspPi with OpenOCD 
+JTAG, SWD - Can use a RaspPi with OpenOCD
 
 Desolder the flash; use flashrom
 
@@ -73,7 +73,6 @@ Chips with secure boot?
 
 Intercept traffic, but block the actual update
 
-  
 The device might not be using DNS, or might fallback to IP regardless
 
 SSL? Cert.. or deny enough times?
@@ -90,7 +89,7 @@ bindiff
 
 ***
 
- Zynamics acquired by google in 2011
+Zynamics acquired by google in 2011
 
 > ## [zynamics acquired by Google !](http://blog.zynamics.com/2011/03/01/zynamics-acquired-by-google/ "Permanent Link to zynamics acquired by Google !")
 >
@@ -106,8 +105,6 @@ bindiff
 
 FW Updates replace the entire partition
 
-  
-  
 CLI via serial - `updatefw ___`
 
 SWD - dump
@@ -122,7 +119,7 @@ SWD - dump
 
 [https://github.com/joxeankoret/diaphora](https://github.com/joxeankoret/diaphora "https://github.com/joxeankoret/diaphora")
 
-Helps to 
+Helps to
 
 * Overwrite branch instructions
 * Write new code
@@ -158,3 +155,11 @@ Helps to
 [https://github.com/thefloweringash/tzsp2pcap](https://github.com/thefloweringash/tzsp2pcap "https://github.com/thefloweringash/tzsp2pcap")
 
 [https://forum.mikrotik.com/viewtopic.php?p=727384#p727384](https://forum.mikrotik.com/viewtopic.php?p=727384#p727384 "https://forum.mikrotik.com/viewtopic.php?p=727384#p727384")
+
+# Public Security
+
+[https://www.reddit.com/r/privacy/comments/bb0tz3/safe_use_of_the_xiaomi_roborock/](https://www.reddit.com/r/privacy/comments/bb0tz3/safe_use_of_the_xiaomi_roborock/ "https://www.reddit.com/r/privacy/comments/bb0tz3/safe_use_of_the_xiaomi_roborock/")
+
+[https://www.reddit.com/r/homeautomation/comments/bcpnr8/the_most_secure_private_robot_vacuum_cleaner_ie/](https://www.reddit.com/r/homeautomation/comments/bcpnr8/the_most_secure_private_robot_vacuum_cleaner_ie/ "https://www.reddit.com/r/homeautomation/comments/bcpnr8/the_most_secure_private_robot_vacuum_cleaner_ie/")
+
+[https://www.youtube.com/watch?v=uhyM-bhzFsI](https://www.youtube.com/watch?v=uhyM-bhzFsI "https://www.youtube.com/watch?v=uhyM-bhzFsI")
