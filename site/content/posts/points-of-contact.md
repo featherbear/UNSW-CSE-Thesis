@@ -65,6 +65,8 @@ JTAG, SWD - Can use a RaspPi with OpenOCD
 
 Desolder the flash; use flashrom
 
+Chips with secure boot?
+
 ## OTA
 
 Intercept traffic, but block the actual update
@@ -84,7 +86,19 @@ i.e Marvell MW30X - afx2firmware
 
 bindiff
 
+***
+
+ Zynamics acquired by google in 2011
+
+> ## [zynamics acquired by Google !](http://blog.zynamics.com/2011/03/01/zynamics-acquired-by-google/ "Permanent Link to zynamics acquired by Google !")
+>
+> [http://blog.zynamics.com/2011/03/01/zynamics-acquired-by-google/](http://blog.zynamics.com/2011/03/01/zynamics-acquired-by-google/ "http://blog.zynamics.com/2011/03/01/zynamics-acquired-by-google/")
+
+[https://security.googleblog.com/2016/03/bindiff-now-available-for-free.html](https://security.googleblog.com/2016/03/bindiff-now-available-for-free.html "https://security.googleblog.com/2016/03/bindiff-now-available-for-free.html")
+
 [https://github.com/google/binnavi](https://github.com/google/binnavi "https://github.com/google/binnavi")
+
+[https://github.com/google/binexport](https://github.com/google/binexport "https://github.com/google/binexport")
 
 # ARM
 
