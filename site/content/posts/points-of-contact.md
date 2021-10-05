@@ -312,3 +312,5 @@ What makes something "secure"?
 Replication study
 
 Firmware Analysis and Comparison Tool
+
+[https://github.com/fkie-cad/FACT_core](https://github.com/fkie-cad/FACT_core "https://github.com/fkie-cad/FACT_core")
