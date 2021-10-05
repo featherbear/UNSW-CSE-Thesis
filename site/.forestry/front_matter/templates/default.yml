@@ -49,3 +49,4 @@ fields:
   description: "<em>i.e. for Part 1 and Part 2 posts</em>"
 pages:
 - site/content/posts/capturing-network-activity-securely.md
+- site/content/posts/points-of-contact.md
