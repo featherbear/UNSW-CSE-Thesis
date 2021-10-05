@@ -57,6 +57,33 @@ MIPS
 * [https://github.com/unrelentingtech/micloudfaker](https://github.com/unrelentingtech/micloudfaker "https://github.com/unrelentingtech/micloudfaker")
 * [https://github.com/dgiese/dustcloud](https://github.com/dgiese/dustcloud "https://github.com/dgiese/dustcloud")
 
+# Pulling The Firmware
+
+## Dumping SPI Flash
+
+JTAG, SWD - Can use a RaspPi with OpenOCD 
+
+Desolder the flash; use flashrom
+
+## OTA
+
+Intercept traffic, but block the actual update
+
+  
+The device might not be using DNS, or might fallback to IP regardless
+
+SSL? Cert.. or deny enough times?
+
+CDN with authentication
+
+# RE the firmware
+
+Reverse engineer the firmware by using the official SDK and compiling - then figuring out what it does
+
+i.e Marvell MW30X - afx2firmware
+
+bindiff
+
 # ARM
 
 FW Updates replace the entire partition
@@ -66,6 +93,26 @@ FW Updates replace the entire partition
 CLI via serial - `updatefw ___`
 
 SWD - dump
+
+# Binary Patching
+
+`nexmon`
+
+`bindiff`
+
+[https://github.com/PistonMiner/binaryninja-bindiff-viewer](https://github.com/PistonMiner/binaryninja-bindiff-viewer "https://github.com/PistonMiner/binaryninja-bindiff-viewer")
+
+[https://github.com/joxeankoret/diaphora](https://github.com/joxeankoret/diaphora "https://github.com/joxeankoret/diaphora")
+
+Helps to 
+
+* Overwrite branch instructions
+* Write new code
+* Model the address space (i.e. RAM, ROM, Free space)
+* Call existing functions
+* handle different firmware versions and devices
+
+> how do people test firmware on a embedded system?
 
 # Vacuum Cleaner... runs... Linux????
 
