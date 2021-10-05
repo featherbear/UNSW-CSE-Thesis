@@ -24,6 +24,17 @@ When pairing the device over WiFi (for initial setup), the device acts as a wire
 
 Device might not respond without an active network connection?
 
+# Cloud Protocol
+
+* DeviceID - unique per device
+* Keys
+  * Cloud key (16 byte alphanum)
+    * Used in cloud comms (AES)
+    * Static
+  * Token (16 byte alphanum)
+    * App communication (AES)
+    * Dynamic (created when new WiFi setup)
+
 # Different vendors, one ecosystem
 
 > [https://dontvacuum.me/talks/DEFCON26-IoT-Village/DEFCON26-IoT-Village_How_to_Modify_Cortex_M_Firmware-Xiaomi.html](https://dontvacuum.me/talks/DEFCON26-IoT-Village/DEFCON26-IoT-Village_How_to_Modify_Cortex_M_Firmware-Xiaomi.html "https://dontvacuum.me/talks/DEFCON26-IoT-Village/DEFCON26-IoT-Village_How_to_Modify_Cortex_M_Firmware-Xiaomi.html")
@@ -31,9 +42,22 @@ Device might not respond without an active network connection?
 * Same communication protocol
 * Different technologies supported
 * Implementation differs from manufacturers
-  * QUALITY OF SOFTWARE IS DIFFERENT
+  * Software quality very different
 
 ### Emulate the Mi Cloud server
 
 * [https://github.com/unrelentingtech/micloudfaker](https://github.com/unrelentingtech/micloudfaker "https://github.com/unrelentingtech/micloudfaker")
 * [https://github.com/dgiese/dustcloud](https://github.com/dgiese/dustcloud "https://github.com/dgiese/dustcloud")
+
+# MikroTik Wireshark
+
+(I can use my MikroTik router to packet sniff by IP or MAC)  
+(Note: Will only send WAN packets, as local packets would be switched without reaching the router?)
+
+[https://www.youtube.com/watch?v=zj2vLZOVOT0](https://www.youtube.com/watch?v=zj2vLZOVOT0 "https://www.youtube.com/watch?v=zj2vLZOVOT0")
+
+[https://mikrotik.com/download/trafr.tgz](https://mikrotik.com/download/trafr.tgz "https://mikrotik.com/download/trafr.tgz")
+
+[https://github.com/thefloweringash/tzsp2pcap](https://github.com/thefloweringash/tzsp2pcap "https://github.com/thefloweringash/tzsp2pcap")
+
+[https://forum.mikrotik.com/viewtopic.php?p=727384#p727384](https://forum.mikrotik.com/viewtopic.php?p=727384#p727384 "https://forum.mikrotik.com/viewtopic.php?p=727384#p727384")
