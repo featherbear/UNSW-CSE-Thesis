@@ -167,13 +167,18 @@ Helps to
 
 # Previous Research
 
-  * Dennis Giese - Don't Vacuum Me
-  * [https://dontvacuum.me/](https://dontvacuum.me/ "https://dontvacuum.me/")
-  * [https://builder.dontvacuum.me/](https://dontvacuum.me/ "https://dontvacuum.me/")
-  * [https://builder.dontvacuum.me/_s6.html](https://dontvacuum.me/ "https://dontvacuum.me/")
-  * [https://dontvacuum.me/thesis/](https://dontvacuum.me/thesis/ "https://dontvacuum.me/thesis/")
+> Dennis Giese - Don't Vacuum Me
+
+* [https://dontvacuum.me/](https://dontvacuum.me/ "https://dontvacuum.me/")
+* [https://builder.dontvacuum.me/](https://dontvacuum.me/ "https://dontvacuum.me/")
+* [https://builder.dontvacuum.me/_s6.html](https://dontvacuum.me/ "https://dontvacuum.me/")
+* [https://dontvacuum.me/thesis/](https://dontvacuum.me/thesis/ "https://dontvacuum.me/thesis/")
 * [https://dontvacuum.me/thesis/Security_Analysis_of_the_Xiaomi_IoT_Ecosystem.pdf](https://dontvacuum.me/thesis/Security_Analysis_of_the_Xiaomi_IoT_Ecosystem.pdf "https://dontvacuum.me/thesis/Security_Analysis_of_the_Xiaomi_IoT_Ecosystem.pdf")
 * [https://dontvacuum.me/thesis/2019-09-masterthesis-defensetalk.pdf](https://dontvacuum.me/thesis/2019-09-masterthesis-defensetalk.pdf "https://dontvacuum.me/thesis/2019-09-masterthesis-defensetalk.pdf")
+
+***
+
+[https://www.roboter-forum.com/index.php?board/163-roborock-s6/](https://www.roboter-forum.com/index.php?board/163-roborock-s6/ "https://www.roboter-forum.com/index.php?board/163-roborock-s6/")
 
 # Custom Software
 
@@ -195,11 +200,9 @@ Helps to
 
 # Vacuum Cleaner... runs... Linux????
 
-[https://www.reddit.com/r/linux/comments/7y9ddk/is_your_robot_vacuum_cleaner_running_ubuntu_1404/](https://www.reddit.com/r/linux/comments/7y9ddk/is_your_robot_vacuum_cleaner_running_ubuntu_1404/ "https://www.reddit.com/r/linux/comments/7y9ddk/is_your_robot_vacuum_cleaner_running_ubuntu_1404/")
-
-[https://medium.com/@anxodio/how-to-get-spotify-working-on-your-xiaomi-vacuum-da28c52bbb4e](https://medium.com/@anxodio/how-to-get-spotify-working-on-your-xiaomi-vacuum-da28c52bbb4e "https://medium.com/@anxodio/how-to-get-spotify-working-on-your-xiaomi-vacuum-da28c52bbb4e")
-
-[https://www.cnx-software.com/2021/01/20/valetudo-is-a-cloud-free-web-interface-for-robot-vacuum-cleaners/](https://www.cnx-software.com/2021/01/20/valetudo-is-a-cloud-free-web-interface-for-robot-vacuum-cleaners/ "https://www.cnx-software.com/2021/01/20/valetudo-is-a-cloud-free-web-interface-for-robot-vacuum-cleaners/")
+* [https://www.reddit.com/r/linux/comments/7y9ddk/is_your_robot_vacuum_cleaner_running_ubuntu_1404/](https://www.reddit.com/r/linux/comments/7y9ddk/is_your_robot_vacuum_cleaner_running_ubuntu_1404/ "https://www.reddit.com/r/linux/comments/7y9ddk/is_your_robot_vacuum_cleaner_running_ubuntu_1404/")
+* [https://medium.com/@anxodio/how-to-get-spotify-working-on-your-xiaomi-vacuum-da28c52bbb4e](https://medium.com/@anxodio/how-to-get-spotify-working-on-your-xiaomi-vacuum-da28c52bbb4e "https://medium.com/@anxodio/how-to-get-spotify-working-on-your-xiaomi-vacuum-da28c52bbb4e")
+* [https://www.cnx-software.com/2021/01/20/valetudo-is-a-cloud-free-web-interface-for-robot-vacuum-cleaners/](https://www.cnx-software.com/2021/01/20/valetudo-is-a-cloud-free-web-interface-for-robot-vacuum-cleaners/ "https://www.cnx-software.com/2021/01/20/valetudo-is-a-cloud-free-web-interface-for-robot-vacuum-cleaners/")
 
 [https://github.com/LazyT/rrcc](https://github.com/LazyT/rrcc "https://github.com/LazyT/rrcc")
 
