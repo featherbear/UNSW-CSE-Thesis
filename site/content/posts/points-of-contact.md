@@ -56,18 +56,10 @@ MIPS
 
 ### Emulate the Mi Cloud server
 
-* [https://github.com/unrelentingtech/micloudfaker](https://github.com/unrelentingtech/micloudfaker "https://github.com/unrelentingtech/micloudfaker")
-* [https://github.com/dgiese/dustcloud](https://github.com/dgiese/dustcloud "https://github.com/dgiese/dustcloud")
-* Don't Vacuum Me
-  * [https://dontvacuum.me/](https://dontvacuum.me/ "https://dontvacuum.me/")
-  * [https://builder.dontvacuum.me/](https://builder.dontvacuum.me/ "https://builder.dontvacuum.me/")
-  * [https://builder.dontvacuum.me/_s6.html](https://builder.dontvacuum.me/_s6.html "https://builder.dontvacuum.me/_s6.html")
 * Rooting Information
   * [https://www.youtube.com/watch?v=r_04K5SPEXI](https://www.youtube.com/watch?v=r_04K5SPEXI "https://www.youtube.com/watch?v=r_04K5SPEXI")
   * [https://builder.dontvacuum.me/x6cheatsheet.txt](https://builder.dontvacuum.me/x6cheatsheet.txt "https://builder.dontvacuum.me/x6cheatsheet.txt")
 * 
-
-[https://dontvacuum.me/thesis/](https://dontvacuum.me/thesis/ "https://dontvacuum.me/thesis/")
 
 [https://media.ccc.de/v/34c3-9147-unleash_your_smart-home_devices_vacuum_cleaning_robot_hacking](https://media.ccc.de/v/34c3-9147-unleash_your_smart-home_devices_vacuum_cleaning_robot_hacking "https://media.ccc.de/v/34c3-9147-unleash_your_smart-home_devices_vacuum_cleaning_robot_hacking")
 
@@ -173,6 +165,16 @@ Helps to
 
 > how do people test firmware on a embedded system?
 
+# Previous Research
+
+  * Dennis Giese - Don't Vacuum Me
+  * [https://dontvacuum.me/](https://dontvacuum.me/ "https://dontvacuum.me/")
+  * [https://builder.dontvacuum.me/](https://dontvacuum.me/ "https://dontvacuum.me/")
+  * [https://builder.dontvacuum.me/_s6.html](https://dontvacuum.me/ "https://dontvacuum.me/")
+  * [https://dontvacuum.me/thesis/](https://dontvacuum.me/thesis/ "https://dontvacuum.me/thesis/")
+* [https://dontvacuum.me/thesis/Security_Analysis_of_the_Xiaomi_IoT_Ecosystem.pdf](https://dontvacuum.me/thesis/Security_Analysis_of_the_Xiaomi_IoT_Ecosystem.pdf "https://dontvacuum.me/thesis/Security_Analysis_of_the_Xiaomi_IoT_Ecosystem.pdf")
+* [https://dontvacuum.me/thesis/2019-09-masterthesis-defensetalk.pdf](https://dontvacuum.me/thesis/2019-09-masterthesis-defensetalk.pdf "https://dontvacuum.me/thesis/2019-09-masterthesis-defensetalk.pdf")
+
 # Custom Software
 
 ## Valetudo
@@ -181,9 +183,15 @@ Helps to
 
 ## Dust Cloud
 
+[https://github.com/dgiese/dustcloud](https://github.com/unrelentingtech/micloudfaker "https://github.com/unrelentingtech/micloudfaker")
+
 ## Flole
 
 [https://xiaomi.flole.de/](https://xiaomi.flole.de/ "https://xiaomi.flole.de/")
+
+## Others
+
+* [https://github.com/unrelentingtech/micloudfaker](https://github.com/unrelentingtech/micloudfaker "https://github.com/unrelentingtech/micloudfaker")
 
 # Vacuum Cleaner... runs... Linux????
 
@@ -236,8 +244,6 @@ Helps to
 50 million connected devices - tech crunch
 
 revenue > 15B yuan
-
-Dennis Giese
 
 Model Name - Roborock S6
 
@@ -292,10 +298,6 @@ Teardown - [https://dontvacuum.me/teardowns/roborock.vacuum.x6/](https://dontvac
 [https://dontvacuum.me/robotinfo/configfiles/roborock.s6/](https://dontvacuum.me/robotinfo/configfiles/roborock.s6/ "https://dontvacuum.me/robotinfo/configfiles/roborock.s6/")
 
 [https://dontvacuum.me/robotinfo/firmwares/roborock.vacuum.s6.html](https://dontvacuum.me/robotinfo/firmwares/roborock.vacuum.s6.html "https://dontvacuum.me/robotinfo/firmwares/roborock.vacuum.s6.html")
-
-[https://dontvacuum.me/thesis/Security_Analysis_of_the_Xiaomi_IoT_Ecosystem.pdf](https://dontvacuum.me/thesis/Security_Analysis_of_the_Xiaomi_IoT_Ecosystem.pdf "https://dontvacuum.me/thesis/Security_Analysis_of_the_Xiaomi_IoT_Ecosystem.pdf")
-
-[https://dontvacuum.me/thesis/2019-09-masterthesis-defensetalk.pdf](https://dontvacuum.me/thesis/2019-09-masterthesis-defensetalk.pdf "https://dontvacuum.me/thesis/2019-09-masterthesis-defensetalk.pdf")
 
 [https://github.com/porech/roborock-oucher](https://github.com/porech/roborock-oucher "https://github.com/porech/roborock-oucher")
 
