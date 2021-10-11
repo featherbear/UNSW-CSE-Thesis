@@ -52,42 +52,45 @@ MIPS
 * Implementation differs from manufacturers
   * Software quality very different
 
+# Useful Links
+
 ### Emulate the Mi Cloud server
 
 * [https://github.com/unrelentingtech/micloudfaker](https://github.com/unrelentingtech/micloudfaker "https://github.com/unrelentingtech/micloudfaker")
 * [https://github.com/dgiese/dustcloud](https://github.com/dgiese/dustcloud "https://github.com/dgiese/dustcloud")
-
-[https://dontvacuum.me/](https://dontvacuum.me/ "https://dontvacuum.me/")
-
-[https://builder.dontvacuum.me/](https://builder.dontvacuum.me/ "https://builder.dontvacuum.me/")
-
-[https://builder.dontvacuum.me/_s6.html](https://builder.dontvacuum.me/_s6.html "https://builder.dontvacuum.me/_s6.html")
-
-[https://builder.dontvacuum.me/password.php](https://builder.dontvacuum.me/password.php "https://builder.dontvacuum.me/password.php")
-
-[https://www.youtube.com/watch?v=r_04K5SPEXI](https://www.youtube.com/watch?v=r_04K5SPEXI "https://www.youtube.com/watch?v=r_04K5SPEXI")
-
-[https://builder.dontvacuum.me/x6cheatsheet.txt](https://builder.dontvacuum.me/x6cheatsheet.txt "https://builder.dontvacuum.me/x6cheatsheet.txt")
+* Don't Vacuum Me
+  * [https://dontvacuum.me/](https://dontvacuum.me/ "https://dontvacuum.me/")
+  * [https://builder.dontvacuum.me/](https://builder.dontvacuum.me/ "https://builder.dontvacuum.me/")
+  * [https://builder.dontvacuum.me/_s6.html](https://builder.dontvacuum.me/_s6.html "https://builder.dontvacuum.me/_s6.html")
+* Rooting Information
+  * [https://www.youtube.com/watch?v=r_04K5SPEXI](https://www.youtube.com/watch?v=r_04K5SPEXI "https://www.youtube.com/watch?v=r_04K5SPEXI")
+  * [https://builder.dontvacuum.me/x6cheatsheet.txt](https://builder.dontvacuum.me/x6cheatsheet.txt "https://builder.dontvacuum.me/x6cheatsheet.txt")
+* 
 
 [https://dontvacuum.me/thesis/](https://dontvacuum.me/thesis/ "https://dontvacuum.me/thesis/")
 
 [https://media.ccc.de/v/34c3-9147-unleash_your_smart-home_devices_vacuum_cleaning_robot_hacking](https://media.ccc.de/v/34c3-9147-unleash_your_smart-home_devices_vacuum_cleaning_robot_hacking "https://media.ccc.de/v/34c3-9147-unleash_your_smart-home_devices_vacuum_cleaning_robot_hacking")
 
-[https://www.reddit.com/r/homeassistant/comments/fdrcz0/how_to_install_valetudo_re_on_a_xiaomi_robot/](https://www.reddit.com/r/homeassistant/comments/fdrcz0/how_to_install_valetudo_re_on_a_xiaomi_robot/ "https://www.reddit.com/r/homeassistant/comments/fdrcz0/how_to_install_valetudo_re_on_a_xiaomi_robot/")
-
 [https://www.youtube.com/playlist?list=PL9PoaNtZCJRZc61c792VCr_I6jQK_IdSb](https://www.youtube.com/playlist?list=PL9PoaNtZCJRZc61c792VCr_I6jQK_IdSb "https://www.youtube.com/playlist?list=PL9PoaNtZCJRZc61c792VCr_I6jQK_IdSb")
 
 [https://www.youtube.com/watch?v=r_04K5SPEXI](https://www.youtube.com/watch?v=r_04K5SPEXI "https://www.youtube.com/watch?v=r_04K5SPEXI")
 
-\->  Technical background: If you dont trust this tool, you can convert the vinda file yourself by XOR'ing every character with "0x37". The resulting string should be all lowercase letters.
+# Firmware
 
-# Pulling The Firmware
+# The Password
 
-Firmware is encrypted and signed!?!??!?! noooooo?
+[https://builder.dontvacuum.me/password.php](https://builder.dontvacuum.me/password.php "https://builder.dontvacuum.me/password.php")
 
+> "Technical background: If you dont trust this tool, you can convert the vinda file yourself by XOR'ing every character with "0x37". The resulting string should be all lowercase letters."
+
+## Pulling The Firmware
+
+Firmware is encrypted and signed!?!??!?! noooooo?  
 Tuya integration?
 
-Ubuntu 14.04.3
+OS: Ubuntu 14.04.3
+
+## On-board Software
 
 `rr_loader` (Player 3.10)
 
@@ -97,6 +100,8 @@ Ubuntu 14.04.3
 * `miIO-client/tuya-client`
 * `SysUpdate`
 * `adbd`
+
+## Firewall
 
 SSH (22) and player (6665) blocked  
 IPv6 blocked
@@ -111,45 +116,36 @@ then press middle button for 3s??
 
 ## Dumping SPI Flash
 
-JTAG, SWD - Can use a RaspPi with OpenOCD
-
-Desolder the flash; use flashrom
-
+JTAG, SWD - Can use a RaspPi with OpenOCD  
+Desolder the flash; use flashrom  
 Chips with secure boot?
 
-## OTA
+## OTA Updates
 
-Intercept traffic, but block the actual update
-
-The device might not be using DNS, or might fallback to IP regardless
-
-SSL? Cert.. or deny enough times?
-
-CDN with authentication
+* Intercept traffic, but block the actual update
+* The device might not be using DNS, or might fallback to IP regardless
+* SSL? Cert.. or deny enough times?
+* CDN with authentication
 
 # RE the firmware
 
-Reverse engineer the firmware by using the official SDK and compiling - then figuring out what it does
+Reverse engineer the firmware by using the official SDK and compiling - then figuring out what it does?
 
 i.e Marvell MW30X - afx2firmware
 
-bindiff
+`bindiff`
 
-***
+## bindiff
 
-Zynamics acquired by google in 2011
+> Zynamics acquired by google in 2011
 
 > ## [zynamics acquired by Google !](http://blog.zynamics.com/2011/03/01/zynamics-acquired-by-google/ "Permanent Link to zynamics acquired by Google !")
 >
 > [http://blog.zynamics.com/2011/03/01/zynamics-acquired-by-google/](http://blog.zynamics.com/2011/03/01/zynamics-acquired-by-google/ "http://blog.zynamics.com/2011/03/01/zynamics-acquired-by-google/")
 
-[https://security.googleblog.com/2016/03/bindiff-now-available-for-free.html](https://security.googleblog.com/2016/03/bindiff-now-available-for-free.html "https://security.googleblog.com/2016/03/bindiff-now-available-for-free.html")
-
-[https://github.com/google/binnavi](https://github.com/google/binnavi "https://github.com/google/binnavi")
-
-[https://github.com/google/binexport](https://github.com/google/binexport "https://github.com/google/binexport")
-
-# ARM
+* [https://security.googleblog.com/2016/03/bindiff-now-available-for-free.html](https://security.googleblog.com/2016/03/bindiff-now-available-for-free.html "https://security.googleblog.com/2016/03/bindiff-now-available-for-free.html")
+* [https://github.com/google/binnavi](https://github.com/google/binnavi "https://github.com/google/binnavi")
+* [https://github.com/google/binexport](https://github.com/google/binexport "https://github.com/google/binexport")
 
 FW Updates replace the entire partition
 
@@ -176,6 +172,18 @@ Helps to
 * handle different firmware versions and devices
 
 > how do people test firmware on a embedded system?
+
+# Custom Software
+
+## Valetudo
+
+[https://www.reddit.com/r/homeassistant/comments/fdrcz0/how_to_install_valetudo_re_on_a_xiaomi_robot/](https://www.reddit.com/r/homeassistant/comments/fdrcz0/how_to_install_valetudo_re_on_a_xiaomi_robot/ "https://www.reddit.com/r/homeassistant/comments/fdrcz0/how_to_install_valetudo_re_on_a_xiaomi_robot/")
+
+## Dust Cloud
+
+## Flole
+
+[https://xiaomi.flole.de/](https://xiaomi.flole.de/ "https://xiaomi.flole.de/")
 
 # Vacuum Cleaner... runs... Linux????
 
@@ -231,27 +239,27 @@ revenue > 15B yuan
 
 Dennis Giese
 
-Model Name - Roborock S6 
+Model Name - Roborock S6
 
-Model ID - roborock.vacuum.s6 
+Model ID - roborock.vacuum.s6
 
-Codename - tanos 
+Codename - tanos
 
-Firmware - A=enc(AES-256-CBC), signed (RSA) 
+Firmware - A=enc(AES-256-CBC), signed (RSA)
 
-Sound Files - A=enc, signed 
+Sound Files - A=enc, signed
 
-SoC - Allwinner R16 (4x) 
+SoC - Allwinner R16 (4x)
 
-RAM - 512 MByte 
+RAM - 512 MByte
 
-Flash - 4GByte eMMC 
+Flash - 4GByte eMMC
 
-MCU - WiFi STM32F103VCT6 
+MCU - WiFi STM32F103VCT6
 
-WiFi - RTL8189ETV 
+WiFi - RTL8189ETV
 
-OS (Kernel) - Ubuntu 14.04 (3.4.x) 
+OS (Kernel) - Ubuntu 14.04 (3.4.x)
 
 Year - Q2/2018
 
