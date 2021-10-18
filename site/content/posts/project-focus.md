@@ -18,6 +18,9 @@ toc = true
   * What data is stored on the device
   * Does that data get cleared during a reset?
 * Exploitation, Viruses, Malware
+
+* Microphone -> Play recordings
+
 * Smartphone App
 * Servers
 * Device
