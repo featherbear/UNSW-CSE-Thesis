@@ -281,6 +281,8 @@ What makes something "secure"?
 
 "– Will be introduced in November 2019" Xiaomi
 
+[https://www.reddit.com/r/Roborock/comments/efw5c6/are_roborock_and_xiaomi_the_same_company/](https://www.reddit.com/r/Roborock/comments/efw5c6/are_roborock_and_xiaomi_the_same_company/ "https://www.reddit.com/r/Roborock/comments/efw5c6/are_roborock_and_xiaomi_the_same_company/")
+
 # Device Info
 
 * Model Name - Roborock S6
