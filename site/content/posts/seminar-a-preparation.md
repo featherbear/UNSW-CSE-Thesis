@@ -2,7 +2,6 @@
 categories = []
 date = 2021-10-18T02:59:50Z
 description = ""
-draft = true
 series = []
 tags = []
 title = "Seminar A Preparation"

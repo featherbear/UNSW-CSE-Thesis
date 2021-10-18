@@ -2,7 +2,6 @@
 categories = []
 date = 2021-10-18T02:57:16Z
 description = ""
-draft = true
 series = []
 tags = []
 title = "Thesis Tasks"
