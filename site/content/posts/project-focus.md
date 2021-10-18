@@ -15,6 +15,9 @@ toc = true
 * Privacy
   * What data is being transmitted
   * Sensors - what can it see?
+  * What data is stored on the device
+  * Does that data get cleared during a reset?
+* Exploitation, Viruses, Malware
 * Smartphone App
 * Servers
 * Device
