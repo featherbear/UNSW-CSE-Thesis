@@ -13,6 +13,7 @@ toc = true
 
 * Roborock
   * Founded in 2014
+  * [https://roborock.com.au/pages/about-us](https://roborock.com.au/pages/about-us "https://roborock.com.au/pages/about-us")
 * Partnered with Xiaomi (investor)
   * Developed the Xiaomi Mi Robot along with other devices
   * Have since been also releasing their own products
