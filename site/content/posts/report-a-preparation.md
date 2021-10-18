@@ -1,5 +1,5 @@
 +++
-categories = []
+categories = ["Thesis A"]
 date = 2021-10-18T03:02:25Z
 description = ""
 series = []
