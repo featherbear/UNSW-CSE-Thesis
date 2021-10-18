@@ -283,6 +283,8 @@ What makes something "secure"?
 
 [https://www.reddit.com/r/Roborock/comments/efw5c6/are_roborock_and_xiaomi_the_same_company/](https://www.reddit.com/r/Roborock/comments/efw5c6/are_roborock_and_xiaomi_the_same_company/ "https://www.reddit.com/r/Roborock/comments/efw5c6/are_roborock_and_xiaomi_the_same_company/")
 
+[https://github.com/allwinner-zh/bootloader/blob/master/u-boot-2011.09/board/sunxi/board_common.c#L843-L847](https://github.com/allwinner-zh/bootloader/blob/master/u-boot-2011.09/board/sunxi/board_common.c#L843-L847 "https://github.com/allwinner-zh/bootloader/blob/master/u-boot-2011.09/board/sunxi/board_common.c#L843-L847")
+
 # Device Info
 
 * Model Name - Roborock S6

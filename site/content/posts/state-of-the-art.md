@@ -9,8 +9,7 @@ toc = true
 
 +++
 * Existing research into the Roborock by Dennie Giese (2019)
-  * Allowed the expansion for custom software firmware (DustCloud, Valetudo, RRoR)
-
+  * Allowed the expansion for custom software firmware (DustCloud, Valetudo, RRoR, MiCloudFaker)
 * Roborock
   * Founded in 2014
   * [https://roborock.com.au/pages/about-us](https://roborock.com.au/pages/about-us "https://roborock.com.au/pages/about-us")
@@ -19,5 +18,7 @@ toc = true
   * Have since been also releasing their own products
   * Partnership -> Uses the Xiaomi Protocol
     * [RE](https://github.com/OpenMiHome/mihome-binary-protocol/blob/master/doc/PROTOCOL.md)
+* MiIO
 * Alexa, Google Assistant, Siri
-* Home IoT, Home Assistant, OpenHAB, 
+* Home IoT, Home Assistant, OpenHAB
+* 
