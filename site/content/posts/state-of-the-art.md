@@ -8,3 +8,14 @@ title = "State of the Art"
 toc = true
 
 +++
+* Existing research into the Roborock by Dennie Giese (2019)
+  * Allowed the expansion for custom software firmware (DustCloud, Valetudo, RRoR)
+
+* Roborock
+  * Founded in 2014
+* Partnered with Xiaomi (investor)
+  * Developed the Xiaomi Mi Robot along with other devices
+  * Have since been also releasing their own products
+  * Partnership -> Uses the Xiaomi Protocol
+* Alexa, Google Assistant, Siri
+* Home IoT, Home Assistant, OpenHAB, 
