@@ -18,5 +18,4 @@ toc = true
 * Excellent structure and well-designed materials that can best convey the essential message.
 * Captures attention.
 * An interactive delivery tailored appropriately to the audience.
-* Uses presentation aides - effortlessly   
-  integrated with the delivery.
+* Uses presentation aides - effortlessly integrated with the delivery.
