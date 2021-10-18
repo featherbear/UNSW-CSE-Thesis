@@ -2,7 +2,6 @@
 categories = []
 date = 2021-10-05T08:14:37Z
 description = "A running list of things to probe into"
-draft = true
 series = []
 tags = []
 title = "Points of Contact"
@@ -125,7 +124,7 @@ Reverse engineer the firmware by using the official SDK and compiling - then fig
 
 i.e Marvell MW30X - afx2firmware
 
-`bindiff`
+# (Useful?) Analysis Software
 
 ## bindiff
 
@@ -145,15 +144,13 @@ CLI via serial - `updatefw ___`
 
 SWD - dump
 
-# Binary Patching
+Bindiff viewer for Binary Ninja - [https://github.com/PistonMiner/binaryninja-bindiff-viewer](https://github.com/PistonMiner/binaryninja-bindiff-viewer "https://github.com/PistonMiner/binaryninja-bindiff-viewer")
 
-`nexmon`
+## nexmon
 
-`bindiff`
+> Binary / Firmware patching
 
-[https://github.com/PistonMiner/binaryninja-bindiff-viewer](https://github.com/PistonMiner/binaryninja-bindiff-viewer "https://github.com/PistonMiner/binaryninja-bindiff-viewer")
-
-[https://github.com/joxeankoret/diaphora](https://github.com/joxeankoret/diaphora "https://github.com/joxeankoret/diaphora")
+Binary Diff Tool - [https://github.com/joxeankoret/diaphora](https://github.com/joxeankoret/diaphora "https://github.com/joxeankoret/diaphora")
 
 Helps to
 
@@ -335,3 +332,6 @@ Firmware Analysis and Comparison Tool
 /run/shm
 
 /mnt/default
+
+* Factory reset  
+  – Does not delete data: Maps, Logs still exist
