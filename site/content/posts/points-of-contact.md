@@ -58,9 +58,10 @@ MIPS
 * Rooting Information
   * [https://www.youtube.com/watch?v=r_04K5SPEXI](https://www.youtube.com/watch?v=r_04K5SPEXI "https://www.youtube.com/watch?v=r_04K5SPEXI")
   * [https://builder.dontvacuum.me/x6cheatsheet.txt](https://builder.dontvacuum.me/x6cheatsheet.txt "https://builder.dontvacuum.me/x6cheatsheet.txt")
-* 
 
 [https://media.ccc.de/v/34c3-9147-unleash_your_smart-home_devices_vacuum_cleaning_robot_hacking](https://media.ccc.de/v/34c3-9147-unleash_your_smart-home_devices_vacuum_cleaning_robot_hacking "https://media.ccc.de/v/34c3-9147-unleash_your_smart-home_devices_vacuum_cleaning_robot_hacking")
+
+[https://dontvacuum.me/talks/DEFCON26/DEFCON26-Having_fun_with_IoT-Xiaomi.pdf](https://dontvacuum.me/talks/DEFCON26/DEFCON26-Having_fun_with_IoT-Xiaomi.pdf "https://dontvacuum.me/talks/DEFCON26/DEFCON26-Having_fun_with_IoT-Xiaomi.pdf")
 
 [https://www.youtube.com/playlist?list=PL9PoaNtZCJRZc61c792VCr_I6jQK_IdSb](https://www.youtube.com/playlist?list=PL9PoaNtZCJRZc61c792VCr_I6jQK_IdSb "https://www.youtube.com/playlist?list=PL9PoaNtZCJRZc61c792VCr_I6jQK_IdSb")
 
@@ -162,6 +163,12 @@ Helps to
 
 > how do people test firmware on a embedded system?
 
+## Other
+
+Firmware Analysis and Comparison Tool - [https://github.com/fkie-cad/FACT_core](https://github.com/fkie-cad/FACT_core "https://github.com/fkie-cad/FACT_core")
+
+[https://github.com/rampageX/firmware-mod-kit](https://github.com/rampageX/firmware-mod-kit "https://github.com/rampageX/firmware-mod-kit")
+
 # Previous Research
 
 > Dennis Giese - Don't Vacuum Me
@@ -169,6 +176,9 @@ Helps to
 * [https://dontvacuum.me/](https://dontvacuum.me/ "https://dontvacuum.me/")
 * [https://builder.dontvacuum.me/](https://dontvacuum.me/ "https://dontvacuum.me/")
 * [https://builder.dontvacuum.me/_s6.html](https://dontvacuum.me/ "https://dontvacuum.me/")
+* [https://dontvacuum.me/robotinfo/firmwares/roborock.vacuum.s6.html](https://dontvacuum.me/robotinfo/firmwares/roborock.vacuum.s6.html "https://dontvacuum.me/robotinfo/firmwares/roborock.vacuum.s6.html")
+* [https://dontvacuum.me/robotinfo/configfiles/roborock.s6/](https://dontvacuum.me/robotinfo/configfiles/roborock.s6/ "https://dontvacuum.me/robotinfo/configfiles/roborock.s6/")
+* [https://dontvacuum.me/teardowns/roborock.vacuum.x6/](https://dontvacuum.me/teardowns/roborock.vacuum.x6/ "https://dontvacuum.me/teardowns/roborock.vacuum.x6/")
 * [https://dontvacuum.me/thesis/](https://dontvacuum.me/thesis/ "https://dontvacuum.me/thesis/")
 * [https://dontvacuum.me/thesis/Security_Analysis_of_the_Xiaomi_IoT_Ecosystem.pdf](https://dontvacuum.me/thesis/Security_Analysis_of_the_Xiaomi_IoT_Ecosystem.pdf "https://dontvacuum.me/thesis/Security_Analysis_of_the_Xiaomi_IoT_Ecosystem.pdf")
 * [https://dontvacuum.me/thesis/2019-09-masterthesis-defensetalk.pdf](https://dontvacuum.me/thesis/2019-09-masterthesis-defensetalk.pdf "https://dontvacuum.me/thesis/2019-09-masterthesis-defensetalk.pdf")
@@ -183,6 +193,8 @@ Helps to
 
 [https://www.reddit.com/r/homeassistant/comments/fdrcz0/how_to_install_valetudo_re_on_a_xiaomi_robot/](https://www.reddit.com/r/homeassistant/comments/fdrcz0/how_to_install_valetudo_re_on_a_xiaomi_robot/ "https://www.reddit.com/r/homeassistant/comments/fdrcz0/how_to_install_valetudo_re_on_a_xiaomi_robot/")
 
+[https://valetudo.cloud/](https://valetudo.cloud/ "https://valetudo.cloud/")
+
 ## Dust Cloud
 
 [https://github.com/dgiese/dustcloud](https://github.com/unrelentingtech/micloudfaker "https://github.com/unrelentingtech/micloudfaker")
@@ -193,7 +205,19 @@ Helps to
 
 ## Others
 
-* [https://github.com/unrelentingtech/micloudfaker](https://github.com/unrelentingtech/micloudfaker "https://github.com/unrelentingtech/micloudfaker")
+[https://github.com/unrelentingtech/micloudfaker](https://github.com/unrelentingtech/micloudfaker "https://github.com/unrelentingtech/micloudfaker")
+
+## Proto
+
+[https://github.com/OpenMiHome/mihome-binary-protocol/blob/master/doc/PROTOCOL.md](https://github.com/OpenMiHome/mihome-binary-protocol/blob/master/doc/PROTOCOL.md "https://github.com/OpenMiHome/mihome-binary-protocol/blob/master/doc/PROTOCOL.md")
+
+> `mirobo --debug discover --handshake true`
+
+[https://github.com/marcelrv/XiaomiRobotVacuumProtocol](https://github.com/marcelrv/XiaomiRobotVacuumProtocol "https://github.com/marcelrv/XiaomiRobotVacuumProtocol")
+
+[https://github.com/rytilahti/python-miio](https://github.com/rytilahti/python-miio "https://github.com/rytilahti/python-miio")
+
+[https://www.yeelight.com/download/Yeelight_Inter-Operation_Spec.pdf](https://www.yeelight.com/download/Yeelight_Inter-Operation_Spec.pdf "https://www.yeelight.com/download/Yeelight_Inter-Operation_Spec.pdf")
 
 # Vacuum Cleaner... runs... Linux????
 
@@ -220,6 +244,12 @@ Helps to
 
 [https://forum.mikrotik.com/viewtopic.php?p=727384#p727384](https://forum.mikrotik.com/viewtopic.php?p=727384#p727384 "https://forum.mikrotik.com/viewtopic.php?p=727384#p727384")
 
+# Post-Exploitation TODOs
+
+* /run/shm - memory
+* /mnt/default -> ???
+* 
+
 # Public Security
 
 [https://www.reddit.com/r/privacy/comments/bb0tz3/safe_use_of_the_xiaomi_roborock/](https://www.reddit.com/r/privacy/comments/bb0tz3/safe_use_of_the_xiaomi_roborock/ "https://www.reddit.com/r/privacy/comments/bb0tz3/safe_use_of_the_xiaomi_roborock/")
@@ -245,71 +275,36 @@ Helps to
 
 revenue > 15B yuan
 
-Model Name - Roborock S6
+# Device Info
 
-Model ID - roborock.vacuum.s6
-
-Codename - tanos
-
-Firmware - A=enc(AES-256-CBC), signed (RSA)
-
-Sound Files - A=enc, signed
-
-SoC - Allwinner R16 (4x)
-
-RAM - 512 MByte
-
-Flash - 4GByte eMMC
-
-MCU - WiFi STM32F103VCT6
-
-WiFi - RTL8189ETV
-
-OS (Kernel) - Ubuntu 14.04 (3.4.x)
-
-Year - Q2/2018
-
-Lidar - Yes
-
-Camera - No
-
-Mop - Yes
-
-Waterpump - No
-
-LIDAR-Tower Bumper - Yes
-
-IR-Dropdensors - 6
-
-IR-side sensors - Yes
-
-Frontsensor - IR
-
-Cloud - 3.5.8 / Tuya
-
-Root Possible Since (Q2 2019)
-
-Complexity - Disass / Simple Soldering
-
-Valetudo - Yes
-
-Teardown - [https://dontvacuum.me/teardowns/roborock.vacuum.x6/](https://dontvacuum.me/teardowns/roborock.vacuum.x6/ "https://dontvacuum.me/teardowns/roborock.vacuum.x6/")
-
-[https://dontvacuum.me/robotinfo/configfiles/roborock.s6/](https://dontvacuum.me/robotinfo/configfiles/roborock.s6/ "https://dontvacuum.me/robotinfo/configfiles/roborock.s6/")
-
-[https://dontvacuum.me/robotinfo/firmwares/roborock.vacuum.s6.html](https://dontvacuum.me/robotinfo/firmwares/roborock.vacuum.s6.html "https://dontvacuum.me/robotinfo/firmwares/roborock.vacuum.s6.html")
-
-[https://github.com/porech/roborock-oucher](https://github.com/porech/roborock-oucher "https://github.com/porech/roborock-oucher")
-
-[https://github.com/marcelrv/XiaomiRobotVacuumProtocol](https://github.com/marcelrv/XiaomiRobotVacuumProtocol "https://github.com/marcelrv/XiaomiRobotVacuumProtocol")
-
-[https://valetudo.cloud/](https://valetudo.cloud/ "https://valetudo.cloud/")
+* Model Name - Roborock S6
+* Model ID - roborock.vacuum.s6
+* Codename - tanos
+* Firmware - A=enc(AES-256-CBC), signed (RSA)
+* Sound Files - A=enc, signed
+* SoC - Allwinner R16 (4x)
+* RAM - 512 MByte
+* Flash - 4GByte eMMC
+* MCU - WiFi STM32F103VCT6
+* WiFi - RTL8189ETV
+* OS (Kernel) - Ubuntu 14.04 (3.4.x)
+* Year - Q2/2018
+* Lidar - Yes
+* Camera - No
+* Mop - Yes
+* Waterpump - No
+* LIDAR-Tower Bumper - Yes
+* IR-Dropdensors - 6
+* IR-side sensors - Yes
+* Frontsensor - IR
+* Cloud - 3.5.8 / Tuya
+* Root Possible Since (Q2 2019)
+* Complexity - Disass / Simple Soldering
+* Valetudo - Yes
 
 ***
 
-Existing research
-
-AEC128CBC Key  for Gen2  "RoCKR0B0@BEIJING"
+Device ID: 32 bits - Unique number. Possibly derived from the MAC address.
 
 CIA Principals
 
@@ -321,17 +316,10 @@ What makes something "secure"?
 
 Replication study
 
-Firmware Analysis and Comparison Tool
+* Old static password (still used for sound files?) - "r0ckrobo#23456"
 
-[https://github.com/fkie-cad/FACT_core](https://github.com/fkie-cad/FACT_core "https://github.com/fkie-cad/FACT_core")
 
-[https://github.com/rampageX/firmware-mod-kit](https://github.com/rampageX/firmware-mod-kit "https://github.com/rampageX/firmware-mod-kit")
-
-"r0ckrobo#23456"
-
-/run/shm
-
-/mnt/default
+* AEC128CBC Key  for Gen2  "RoCKR0B0@BEIJING"
 
 * Factory reset  
   – Does not delete data: Maps, Logs still exist
