@@ -275,6 +275,12 @@ Firmware Analysis and Comparison Tool - [https://github.com/fkie-cad/FACT_core](
 
 revenue > 15B yuan
 
+What makes something "secure"?
+
+"How secure is the implementation of the ecosystem of the IoT market leader Xiaomi?"
+
+"– Will be introduced in November 2019" Xiaomi
+
 # Device Info
 
 * Model Name - Roborock S6
@@ -306,20 +312,11 @@ revenue > 15B yuan
 
 Device ID: 32 bits - Unique number. Possibly derived from the MAC address.
 
-CIA Principals
-
-What makes something "secure"?
-
-"How secure is the implementation of the ecosystem of the IoT market leader Xiaomi?"
-
-"– Will be introduced in November 2019" Xiaomi
-
-Replication study
+Replication study?
 
 * Old static password (still used for sound files?) - "r0ckrobo#23456"
-
-
 * AEC128CBC Key  for Gen2  "RoCKR0B0@BEIJING"
-
 * Factory reset  
   – Does not delete data: Maps, Logs still exist
+
+CIA Principals
