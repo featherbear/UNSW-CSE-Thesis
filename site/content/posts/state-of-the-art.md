@@ -18,5 +18,6 @@ toc = true
   * Developed the Xiaomi Mi Robot along with other devices
   * Have since been also releasing their own products
   * Partnership -> Uses the Xiaomi Protocol
+    * [RE](https://github.com/OpenMiHome/mihome-binary-protocol/blob/master/doc/PROTOCOL.md)
 * Alexa, Google Assistant, Siri
 * Home IoT, Home Assistant, OpenHAB, 
