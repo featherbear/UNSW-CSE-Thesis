@@ -48,6 +48,7 @@ fields:
   label: Series
   description: "<em>i.e. for Part 1 and Part 2 posts</em>"
 pages:
+- site/content/posts/20211025-progress.md
 - site/content/posts/capturing-network-activity-securely.md
 - site/content/posts/points-of-contact.md
 - site/content/posts/project-focus.md
