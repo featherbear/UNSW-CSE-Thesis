@@ -9,6 +9,6 @@ main:
     url: /docs/
     weight: 3
   - name: Progress Log
-    url: https://featherbear.cc/UNSW-CSE-Thesis/tldr/
+    url: /tldr/
     weight: 4
     
