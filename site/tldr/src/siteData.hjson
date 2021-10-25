@@ -19,6 +19,7 @@
             Seems like Roborock is a Xiaomi-partner 
             Also the Roborock S6 runs Ubuntu!
         ]
+        link: https://featherbear.cc/UNSW-CSE-Thesis/posts/points-of-contact/
       }
       {
         title: Tuesday
@@ -43,6 +44,7 @@
       {
         title: Monday
         date: 25/10/2021
+        link: https://featherbear.cc/UNSW-CSE-Thesis/posts/roborock-s6-teardown/
         content: [
             (Finally) Opened up the unit
             Opened up the charger
@@ -57,6 +59,7 @@
       {
         title: Monday
         date: 25/10/2021
+        link: https://featherbear.cc/UNSW-CSE-Thesis/posts/20211025-progress/
         content: [
             Set up Android MITM and L3-based MITM (on the Mikrotik router)
             Logged the network activity during pairing
