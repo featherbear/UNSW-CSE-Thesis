@@ -50,6 +50,7 @@ fields:
 pages:
 - site/content/posts/20211025-progress.md
 - site/content/posts/capturing-network-activity-securely.md
+- site/content/posts/capturing-packets-on-android.md
 - site/content/posts/points-of-contact.md
 - site/content/posts/project-focus.md
 - site/content/posts/report-a-preparation.md
