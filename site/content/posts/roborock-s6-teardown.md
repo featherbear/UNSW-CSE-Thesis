@@ -42,3 +42,9 @@ Four IR sensors
 
 * Is there a specific IR code it broadcasts?
   * Not really security though
+
+# Vacuum Cleaner
+
+![](/uploads/20211025-20211026_005121.jpg)
+
+Status LED
