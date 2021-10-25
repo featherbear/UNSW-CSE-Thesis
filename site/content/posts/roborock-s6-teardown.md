@@ -17,18 +17,28 @@ toc = true
 
 ![](/uploads/20211025-20211025_175620.jpg)
 
+![](/uploads/20211025-20211025_180532.jpg)  
+
+![](/uploads/20211025-20211025_180406.jpg)  
+
 ## Circuit
 
 ![](/uploads/20211025-20211025_175245.jpg)
 
 ![](/uploads/20211025-20211025_175214.jpg) ![](/uploads/20211025-20211025_175344.jpg)
 
-![](/uploads/20211025-20211025_175307.jpg)
+![](/uploads/20211025-20211025_175307.jpg)  
+Four IR sensors
 
 ![](/uploads/20211025-20211025_175320.jpg)
 
 ## Infrared
 
-![](/uploads/20211025-20211025_180001.jpg)
+![](/uploads/20211025-20211025_180001.jpg)  ![](/uploads/20211025-20211025_180131.jpg)
+
+![](/uploads/20211025-20211025_180118.jpg)
 
 > Helps the Roborock to locate the base station
+
+* Is there a specific IR code it broadcasts?
+  * Not really security though
