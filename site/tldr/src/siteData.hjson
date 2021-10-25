@@ -38,11 +38,34 @@
     ]
   }
   {
-  
-  }
-  {
     title: Hardware Hacking
     content: [
+      {
+        title: Monday
+        date: 25/10/2021
+        content: [
+            (Finally) Opened up the unit
+            Opened up the charger
+            Checked power draw
+        ]
+      }
+    ]
+  }
+  {
+    title: Software Hacking
+    content: [
+      {
+        title: Monday
+        date: 25/10/2021
+        content: [
+            Set up Android MITM and L3-based MITM (on the Mikrotik router)
+            Logged the network activity during pairing
+            Logged the network activity of the Xiaomi Home application
+            Logged _some_ network activity between the Roborock and Xiaomi Home application
+            Current Firmware: 3.5.4_1558
+            Takeaway - Don't packet log through the router, as only internet-bound traffic will be logged (and not local traffic)
+        ]
+      }
     ]
   }
 ]
