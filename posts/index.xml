@@ -2,7 +2,7 @@
 I ended up using PCAPdroid, which allowed me to target a specific app (or just everything) to capture network activity from.</description></item><item><title>Roborock S6 Teardown</title><link>/posts/roborock-s6-teardown/</link><pubDate>Mon, 25 Oct 2021 15:09:51 +0000</pubDate><guid>/posts/roborock-s6-teardown/</guid><description>Charging Station Model Number: CDZ08RR / CDZ08RR
 Circuit Four IR sensors
 Infrared Helps the Roborock to locate the base station
-Is there a specific IR code it broadcasts? Not really security though Vacuum Cleaner Status LED</description></item><item><title>20211025 Progress</title><link>/posts/20211025-progress/</link><pubDate>Mon, 25 Oct 2021 14:46:46 +0000</pubDate><guid>/posts/20211025-progress/</guid><description>Observations Power Usage
+Is there a specific IR code it broadcasts? Not really security though Vacuum Cleaner Status LED</description></item><item><title>Daily Progress</title><link>/posts/20211025-progress/</link><pubDate>Mon, 25 Oct 2021 14:46:46 +0000</pubDate><guid>/posts/20211025-progress/</guid><description>Observations Power Usage
 Idle Power: 0.2W
 Whilst Charging
 Internal AP
