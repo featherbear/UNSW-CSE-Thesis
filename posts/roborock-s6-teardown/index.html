@@ -25,7 +25,7 @@
 Infrared  Helps the Roborock to locate the base station
   Is there a specific IR code it broadcasts?  Not really security though    Vacuum Cleaner Status LED">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"Roborock S6 Teardown","item":"/posts/roborock-s6-teardown/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/roborock-s6-teardown/"},"headline":"Roborock S6 Teardown | CSE Thesis Musings","datePublished":"2021-10-25T15:09:51+00:00","dateModified":"2021-10-25T15:09:51+00:00","wordCount":51,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Charging Station  Model Number: CDZ08RR \/ CDZ08RR\n Circuit Four IR sensors\nInfrared  Helps the Roborock to locate the base station\n  Is there a specific IR code it broadcasts?  Not really security though    Vacuum Cleaner Status LED"}</script><meta property="og:title" content="Roborock S6 Teardown | CSE Thesis Musings">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/roborock-s6-teardown/"},"headline":"Roborock S6 Teardown | CSE Thesis Musings","datePublished":"2021-10-25T15:09:51+00:00","dateModified":"2021-10-25T15:09:51+00:00","wordCount":115,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Charging Station  Model Number: CDZ08RR \/ CDZ08RR\n Circuit Four IR sensors\nInfrared  Helps the Roborock to locate the base station\n  Is there a specific IR code it broadcasts?  Not really security though    Vacuum Cleaner Status LED"}</script><meta property="og:title" content="Roborock S6 Teardown | CSE Thesis Musings">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/posts/roborock-s6-teardown/">
 <meta property="og:description" content="Charging Station  Model Number: CDZ08RR / CDZ08RR
@@ -124,6 +124,7 @@ Four IR sensors</p>
 <p>14.43V Li-ion; 5200 mAH; 77.88Wh</p>
 <p><img src=../../uploads/20211029-20211029_220613.jpg alt> <img src=../../uploads/20211029-20211029_220601.jpg alt> <img src=../../uploads/20211029-20211029_220555.jpg alt></p>
 <h2 id=wheels>Wheels</h2>
+<p><img src=../../uploads/20211029-20211030_010623.jpg alt> <img src=../../uploads/20211029-20211030_010634.jpg alt></p>
 <h2 id=lidar>LIDAR</h2>
 <blockquote>
 <p>LDS02RR</p>
@@ -131,6 +132,28 @@ Four IR sensors</p>
 <p>Related: <a href=https://www.robotis.us/360-laser-distance-sensor-lds-01-lidar/ title=https://www.robotis.us/360-laser-distance-sensor-lds-01-lidar/>https://www.robotis.us/360-laser-distance-sensor-lds-01-lidar/</a></p>
 <p><img src=../../uploads/20211029-20211030_010214.jpg alt> <img src=../../uploads/20211029-20211030_010201.jpg alt></p>
 <h2 id=circuitry>Circuitry</h2>
+<h3 id=button-panel>Button Panel</h3>
+<p><img src=../../uploads/20211029-20211030_010804.jpg alt> <img src=../../uploads/20211029-20211030_010821.jpg alt></p>
+<p><img src=../../uploads/20211029-20211030_011017.jpg alt> <img src=../../uploads/20211029-20211030_011036.jpg alt></p>
+<h3 id=pinout->Pinout (?)</h3>
+<p><img src=../../uploads/20211029-20211030_002444.jpg alt></p>
+<blockquote>
+<p>From top-down view; left to right</p>
+</blockquote>
+<ul>
+<li>Header 1</li>
+<li>Header 2 - 14</li>
+<li>Header 3 - 71</li>
+<li>Header 4 - 72</li>
+<li>Header 5 - 89</li>
+<li>Header 6</li>
+<li>Header 7 - GND EG. 74</li>
+<li>Header 8 - 24? 99? 45? 46? 35? GND&mldr;</li>
+<li>Header 9 - PWR BTN</li>
+<li>Header 10 - 15 - TP11 (HOME)</li>
+<li>Header 11 - 69</li>
+<li>Header 12 -</li>
+</ul>
 </div>
 <div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
 <div>
@@ -161,7 +184,12 @@ Four IR sensors</p>
 </li>
 <li><a href=#wheels>Wheels</a></li>
 <li><a href=#lidar>LIDAR</a></li>
-<li><a href=#circuitry>Circuitry</a></li>
+<li><a href=#circuitry>Circuitry</a>
+<ul>
+<li><a href=#button-panel>Button Panel</a></li>
+<li><a href=#pinout->Pinout (?)</a></li>
+</ul>
+</li>
 </ul>
 </nav>
 </div>
