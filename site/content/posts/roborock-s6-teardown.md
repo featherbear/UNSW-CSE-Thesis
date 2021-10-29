@@ -16,9 +16,9 @@ toc = true
 
 ![](/uploads/20211025-20211025_175620.jpg)
 
-![](/uploads/20211025-20211025_180532.jpg)  
+![](/uploads/20211025-20211025_180532.jpg)
 
-![](/uploads/20211025-20211025_180406.jpg)  
+![](/uploads/20211025-20211025_180406.jpg)
 
 ## Circuit
 
@@ -47,3 +47,25 @@ Four IR sensors
 ![](/uploads/20211025-20211026_005121.jpg)
 
 Status LED
+
+## External Components
+
+### Battery
+
+> BRR-2P4S-5200D
+
+14\.43V Li-ion; 5200 mAH; 77.88Wh
+
+## Wheels
+
+## LIDAR
+
+> LDS02RR
+
+Related: [https://www.robotis.us/360-laser-distance-sensor-lds-01-lidar/](https://www.robotis.us/360-laser-distance-sensor-lds-01-lidar/ "https://www.robotis.us/360-laser-distance-sensor-lds-01-lidar/")
+
+![](/uploads/20211029-20211030_010214.jpg)
+
+![](/uploads/20211029-20211030_010201.jpg)
+
+## Circuitry
