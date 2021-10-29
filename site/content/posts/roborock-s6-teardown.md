@@ -205,3 +205,9 @@ The [button panel](#button-panel) is on another board than the main circuit boar
 
 **Right Wing  
 ![](/uploads/20211029-20211030_020758.jpg)**
+
+***
+
+![](/uploads/20211029-20211030_021531.jpg)
+
+![](/uploads/20211029-20211030_021507.jpg)
