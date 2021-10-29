@@ -156,6 +156,13 @@ _"802.11bgn SDIO Network Interface Controller"_
 
 ## Chassis
 
+![](/uploads/20211029-20211029_224759.jpg)  ![](/uploads/20211029-20211029_224911.jpg)  ![](/uploads/20211029-20211029_224857.jpg)  
+Some force is needed to pry the frontplate that surrounds the button panel off.
+
+![](/uploads/20211029-20211029_225036.jpg)  
+Here we find a Micro USB connector; When the device is powered on; we get the descriptor for some sort of Android Debugging Bridge???  
+[\[Read More\]](../usb-port/)
+
 ![](/uploads/20211029-20211029_215244.jpg)  
 Underside of the Roborock with the brushes removed
 
@@ -173,16 +180,17 @@ Plenty of cable length to easily lift out components :)
 ![](/uploads/20211029-20211029_223556.jpg)  ![](/uploads/20211029-20211029_223602.jpg)  
 The side sweeper motor uses some 'slip contacts' to supply power
 
-![](/uploads/20211029-20211029_224759.jpg)  ![](/uploads/20211029-20211029_224911.jpg)  ![](/uploads/20211029-20211029_224857.jpg)  
-Some force is needed to pry the frontplate that surrounds the button panel off.
-
-![](/uploads/20211029-20211029_225036.jpg)  
-Here we find a Micro USB connector; When the device is powered on; we get the descriptor for some sort of Android Debugging Bridge???  
-[\[Read More\]](../usb-port/)
-
 ![](/uploads/20211029-20211029_231857.jpg)  ![](/uploads/20211029-20211029_231903.jpg)  ![](/uploads/20211029-20211029_231905.jpg)  
 A bunch of screws later, we're exposed with the circuit board!  
 Apart from the breakout boards; that mainboard is the only board in the chassis
 
 ![](/uploads/20211029-20211029_232708.jpg)  
 The [button panel](#button-panel) is on another board than the main circuit board; on the [other side](#button-panel) of the panel are some test pins.
+
+***
+
+![](/uploads/20211029-20211029_233611.jpg)
+
+![](/uploads/20211029-20211030_000502.jpg)  ![](/uploads/20211029-20211030_000509.jpg)
+
+![](/uploads/20211029-20211030_000506.jpg)  ![](/uploads/20211029-20211030_000218.jpg)
