@@ -8,6 +8,14 @@ title = "UART / Preboot Communications"
 toc = true
 
 +++
+# Gaining Access
+
+* TPA16 is the GND
+* TPA15 is the device's RX pin - Connect this to your UART client's TX
+* TPA8 is the device's TX pin - Connect this to your UART client's RX
+
+## On Power On
+
 ```
 *-boot0 version : 4.0.0
 fel_flag = 0x00000000
