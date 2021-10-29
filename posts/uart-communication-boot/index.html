@@ -22,7 +22,7 @@
 <style>html.dark{--color-primary-bg:#232327 !important}div#sidebar-toc>ul.pl-6{margin-left:1em}</style>
 <meta name=description content="*-boot0 version : 4.0.0 fel_flag = 0x00000000 rtc[0] value = 0x00000000 rtc[1] value = 0x00000000 rtc[2] value = 0x00000000 rtc[3] value = 0x00000000 DRAM DRIVE INFO: V1.7 DRAM Type =3 (2:DDR2,3:DDR3,6:LPDDR2,7:LPDDR3) DRAM zq value: 00003bbbDRAM CLK =552 MHZ ID CHECK VERSION: V0.">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"UART Communication (Boot)","item":"/posts/uart-communication-boot/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/uart-communication-boot/"},"headline":"UART Communication (Boot) | CSE Thesis Musings","datePublished":"2021-10-29T15:39:50+00:00","dateModified":"2021-10-29T15:39:50+00:00","wordCount":5898,"publisher":{"@type":"Person","name":"A. Wong"},"description":"*-boot0 version : 4.0.0 fel_flag = 0x00000000 rtc[0] value = 0x00000000 rtc[1] value = 0x00000000 rtc[2] value = 0x00000000 rtc[3] value = 0x00000000 DRAM DRIVE INFO: V1.7 DRAM Type =3 (2:DDR2,3:DDR3,6:LPDDR2,7:LPDDR3) DRAM zq value: 00003bbbDRAM CLK =552 MHZ ID CHECK VERSION: V0."}</script><meta property="og:title" content="UART Communication (Boot) | CSE Thesis Musings">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/uart-communication-boot/"},"headline":"UART Communication (Boot) | CSE Thesis Musings","datePublished":"2021-10-29T15:39:50+00:00","dateModified":"2021-10-29T15:39:50+00:00","wordCount":6203,"publisher":{"@type":"Person","name":"A. Wong"},"description":"*-boot0 version : 4.0.0 fel_flag = 0x00000000 rtc[0] value = 0x00000000 rtc[1] value = 0x00000000 rtc[2] value = 0x00000000 rtc[3] value = 0x00000000 DRAM DRIVE INFO: V1.7 DRAM Type =3 (2:DDR2,3:DDR3,6:LPDDR2,7:LPDDR3) DRAM zq value: 00003bbbDRAM CLK =552 MHZ ID CHECK VERSION: V0."}</script><meta property="og:title" content="UART Communication (Boot) | CSE Thesis Musings">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/posts/uart-communication-boot/">
 <meta property="og:description" content="*-boot0 version : 4.0.0 fel_flag = 0x00000000 rtc[0] value = 0x00000000 rtc[1] value = 0x00000000 rtc[2] value = 0x00000000 rtc[3] value = 0x00000000 DRAM DRIVE INFO: V1.7 DRAM Type =3 (2:DDR2,3:DDR3,6:LPDDR2,7:LPDDR3) DRAM zq value: 00003bbbDRAM CLK =552 MHZ ID CHECK VERSION: V0.">
@@ -984,6 +984,119 @@ Capacity: 3.7 GiB
 Bus Width: 4-bit
 </code></pre>
 <hr>
+<h2 id=mmc-part>mmc part</h2>
+<pre><code>sunxi#mmc part
+
+Partition Map for MMC device 2  --   Partition Type: DOS
+
+Partition     Start Sector     Num Sectors     Type
+    1              4513792         3268608       b
+    2                73728           16384       6
+    3                    1         4423680       5 Extd
+    5                90112           32768      83
+    6               122880          131072      83
+    7               253952         1048576      83
+    8              1302528         1048576      83
+    9              2351104         1048576      83
+   10              3399680         1081344      83
+   11              4481024           32768      83
+</code></pre>
+<hr>
+<h2 id=ext4ls-mmc-21>ext4ls mmc 2:1</h2>
+<pre><code>sunxi#ext4ls mmc 2:1
+&lt;DIR&gt;       4096 .
+&lt;DIR&gt;       4096 ..
+&lt;DIR&gt;      16384 lost+found
+&lt;DIR&gt;       4096 rockrobo
+&lt;DIR&gt;       4096 wlan
+&lt;DIR&gt;       4096 miio
+&lt;DIR&gt;       4096 rriot
+</code></pre>
+<hr>
+<h2 id=ext4ls-mmc-21-1>ext4ls mmc 2:1</h2>
+<pre><code>&lt;DIR&gt;       4096 .
+&lt;DIR&gt;       4096 ..
+&lt;DIR&gt;       4096 lost+found
+          344813 font24.sft
+          357443 font32.sft
+            8838 test_config.fex
+            6776 test_config.bin
+</code></pre>
+<hr>
+<h2 id=ext4ls-mmc-26>ext4ls mmc 2:6</h2>
+<pre><code>&lt;DIR&gt;       1024 .
+&lt;DIR&gt;       1024 ..
+           30772 librrafm.so
+              98 device.conf
+              16 vinda
+&lt;DIR&gt;       1024 roborock
+             256 roborock.conf.sign
+             185 roborock.conf
+              10 adb.conf
+</code></pre>
+<hr>
+<h2 id=ext4ls-mmc-27>ext4ls mmc 2:7</h2>
+<pre><code>&lt;DIR&gt;       1024 .
+&lt;DIR&gt;       1024 ..
+&lt;DIR&gt;      12288 lost+found
+&lt;DIR&gt;       5120 sbin
+&lt;DIR&gt;       1024 usr
+&lt;DIR&gt;       1024 sys
+&lt;DIR&gt;       1024 opt
+&lt;DIR&gt;       1024 run
+&lt;DIR&gt;       1024 tmp
+&lt;DIR&gt;       1024 media
+&lt;DIR&gt;       1024 home
+&lt;DIR&gt;       1024 lib
+&lt;DIR&gt;       1024 mnt
+&lt;DIR&gt;       3072 bin
+&lt;DIR&gt;       1024 srv
+&lt;DIR&gt;       1024 root
+&lt;DIR&gt;       5120 etc
+&lt;DIR&gt;       1024 proc
+&lt;DIR&gt;       3072 dev
+&lt;DIR&gt;       1024 var
+&lt;DIR&gt;       1024 boot
+</code></pre>
+<hr>
+<h2 id=ext4ls-mmc-28>ext4ls mmc 2:8</h2>
+<pre><code>&lt;DIR&gt;       1024 .
+&lt;DIR&gt;       1024 ..
+&lt;DIR&gt;      12288 lost+found
+&lt;DIR&gt;       5120 sbin
+&lt;DIR&gt;       1024 usr
+&lt;DIR&gt;       1024 sys
+&lt;DIR&gt;       1024 opt
+&lt;DIR&gt;       1024 run
+&lt;DIR&gt;       1024 tmp
+&lt;DIR&gt;       1024 media
+&lt;DIR&gt;       1024 home
+&lt;DIR&gt;       1024 lib
+&lt;DIR&gt;       1024 mnt
+&lt;DIR&gt;       3072 bin
+&lt;DIR&gt;       1024 srv
+&lt;DIR&gt;       1024 root
+&lt;DIR&gt;       5120 etc
+&lt;DIR&gt;       1024 proc
+&lt;DIR&gt;       3072 dev
+&lt;DIR&gt;       1024 var
+&lt;DIR&gt;       1024 boot
+</code></pre>
+<hr>
+<h2 id=ext4load>ext4load</h2>
+<pre><code>ext4load - load binary file from a Ext4 filesystem
+
+Usage:
+ext4load &lt;interface&gt; &lt;dev[:part]&gt; [addr] [filename] [bytes]
+          - load binary file 'filename' from 'dev' on 'interface'
+                 to address 'addr' from ext4 filesystem
+</code></pre>
+<hr>
+<h2 id=mmc-dev>mmc dev</h2>
+<pre><code>sunxi#mmc dev
+mmc2(part 0) is current device
+</code></pre>
+<hr>
 <h2 id=on-shutdown>On Shutdown</h2>
 <pre><code>wait-for-state stop/waiting
 haveged: haveged Stopping due to signal 15
@@ -1023,6 +1136,14 @@ umount: /tmp: device is busy.
 <li><a href=#env-print>env print</a></li>
 <li><a href=#version>version</a></li>
 <li><a href=#mmcinfo>mmcinfo</a></li>
+<li><a href=#mmc-part>mmc part</a></li>
+<li><a href=#ext4ls-mmc-21>ext4ls mmc 2:1</a></li>
+<li><a href=#ext4ls-mmc-21-1>ext4ls mmc 2:1</a></li>
+<li><a href=#ext4ls-mmc-26>ext4ls mmc 2:6</a></li>
+<li><a href=#ext4ls-mmc-27>ext4ls mmc 2:7</a></li>
+<li><a href=#ext4ls-mmc-28>ext4ls mmc 2:8</a></li>
+<li><a href=#ext4load>ext4load</a></li>
+<li><a href=#mmc-dev>mmc dev</a></li>
 <li><a href=#on-shutdown>On Shutdown</a></li>
 </ul>
 </nav>
