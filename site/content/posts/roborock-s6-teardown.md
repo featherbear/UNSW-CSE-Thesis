@@ -56,6 +56,8 @@ Status LED
 
 14\.43V Li-ion; 5200 mAH; 77.88Wh
 
+![](/uploads/20211029-20211029_220613.jpg) ![](/uploads/20211029-20211029_220601.jpg) ![](/uploads/20211029-20211029_220555.jpg)
+
 ## Wheels
 
 ## LIDAR
@@ -64,8 +66,6 @@ Status LED
 
 Related: [https://www.robotis.us/360-laser-distance-sensor-lds-01-lidar/](https://www.robotis.us/360-laser-distance-sensor-lds-01-lidar/ "https://www.robotis.us/360-laser-distance-sensor-lds-01-lidar/")
 
-![](/uploads/20211029-20211030_010214.jpg)
-
-![](/uploads/20211029-20211030_010201.jpg)
+![](/uploads/20211029-20211030_010214.jpg)  ![](/uploads/20211029-20211030_010201.jpg)
 
 ## Circuitry
