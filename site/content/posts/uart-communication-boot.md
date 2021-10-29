@@ -864,10 +864,55 @@ rockrobo login:
 
 ---
 
+## env print
+
+```
+sunxi#env print
+audio_en=1
+audio_file=poweron.wav
+audio_vol=100
+boot_fs=a
+boot_normal=ext4load mmc ${fat_num} 40008000 /boot/zImage;bootz 40008000
+boot_reason=0x0
+boot_ver=2011.09-rc1-dirty
+bootcmd=run setargs_mmc boot_normal
+bootdelay=3
+console=ttyS0,115200
+fat_num=2:8
+filesize=20
+init=/init
+location=en
+loglevel=7
+mmc_root=/dev/mmcblk0p8
+partitions=boot-res@mmcblk0p2:env@mmcblk0p5:app@mmcblk0p6:recovery@mmcblk0p7:system_a@mmcblk0p8:system_b@mmcblk0p9:Download@mmcblk0p10:reserve@mmcblk0p11:UDISK@mmcblk0p1
+rr_recovery_flag=normal
+setargs_mmc=setenv bootargs rootwait boot_fs=${boot_fs} console=${console} root=${mmc_root} rootfstype=ext4 loglevel=${loglevel} partitions=${partitions} boot_reason=${boot_reason} location=${location} boot_ver=${boot_ver}
+stderr=serial
+stdin=serial
+stdout=serial
+
+Environment size: 828/131068 bytes
+```
+
+---
+
+## version
+
+```
+sunxi#version
+
+U-Boot 2011.09-rc1-dirty (Mar 25 2020 - 20:45:43) Allwinner Technology 
+arm-linux-gnueabi-gcc (Ubuntu/Linaro 4.7.3-12ubuntu1) 4.7.3
+GNU ld (GNU Binutils for Ubuntu) 2.24
+```
+
+---
+
 ## mmcinfo
 
 ```
 sunxi#mmcinfo
+
 Device: SUNXI SD/MMC
 Manufacturer ID: 11
 OEM: 100
