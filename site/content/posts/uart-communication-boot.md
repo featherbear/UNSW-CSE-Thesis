@@ -861,3 +861,23 @@ Ubuntu 14.04.3 LTS rockrobo ttyS0
 
 rockrobo login: 
 ```
+
+## On Shutdown
+
+```
+wait-for-state stop/waiting
+haveged: haveged Stopping due to signal 15
+
+ * Stopping rsync daemon rsync                                           [ OK ] 
+ * (not running)
+ * Asking all remaining processes to terminate...                        [ OK ] 
+ * All processes ended within 1 seconds...                               [ OK ] 
+umount: /tmp: device is busy.
+        (In some cases useful info about processes that use
+         the device is found by lsof(8) or fuser(1))
+ * Unmounting temporary filesystems...                                   [fail] 
+ * Deactivating swap...                                                  [ OK ] 
+ * Unmounting local filesystems...                                       [ OK ] 
+ * Will now halt
+[  216.968322] [MCU_UART] sent ap poweroff event to mcu
+```
