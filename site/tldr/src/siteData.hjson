@@ -90,6 +90,15 @@
         link: https://featherbear.cc/UNSW-CSE-Thesis/posts/usb-port/
         content: Looked at the USB port communications (not much happening..)
       }
+      {
+        title: Saturday
+        date: 30/10/2021
+        link: https://featherbear.cc/UNSW-CSE-Thesis/posts/20211030-progress/
+        content: [
+          Connected to the vacuum cleaner via UART (baud rate 115200)
+          Got root!
+        ]
+     }
     ]
   }
 ]
