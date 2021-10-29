@@ -153,3 +153,16 @@ _"802.11bgn SDIO Network Interface Controller"_
 * Header 10 - 15 - TP11 (HOME) 
 * Header 11 - 69
 * Header 12 -
+
+## Chassis
+
+![](/uploads/20211029-20211029_215244.jpg)  
+Underside of the Roborock with the brushes removed
+
+![](/uploads/20211029-20211029_215755.jpg)  ![](/uploads/20211029-20211029_220800.jpg)  
+Removing the cover plate reveals parts of the I/O.  
+The battery, wheels, and sidebrush motor are easily interchangeable - simply just unscrew (and disconnect any necessary wires), replace, and screw back in
+
+![](/uploads/20211029-20211029_221700.jpg)  ![](/uploads/20211029-20211029_221710.jpg)  
+For communication between the removable parts, we have these interface connectors :)  
+_(What are they actually called?)_
