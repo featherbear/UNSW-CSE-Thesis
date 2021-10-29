@@ -1071,6 +1071,20 @@ sunxi#mmc dev
 mmc2(part 0) is current device
 ```
 
+---
+
+> ROOOT
+
+> `CRA[FCEQBPPTUV_R`
+> Decrypted (XOR with `0x37`): `tevlqtrfuggcbahe`
+
+## uname -a
+
+```
+Linux rockrobo 3.4.39 #1 SMP PREEMPT Wed Mar 25 20:47:59 CST 2020 armv7l armv7l armv7l GNU/Linux
+```
+
+
 
 ---
 
