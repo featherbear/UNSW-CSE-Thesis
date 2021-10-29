@@ -184,6 +184,9 @@ The side sweeper motor uses some 'slip contacts' to supply power
 A bunch of screws later, we're exposed with the circuit board!  
 Apart from the breakout boards; that mainboard is the only board in the chassis
 
+![](/uploads/20211029-20211029_231930.jpg)  ![](/uploads/20211029-20211029_231921.jpg)  
+Cliff sensors (proximity?), the IR blaster (or receiver?) and switches can be found around the perimeter of the chassis
+
 ![](/uploads/20211029-20211029_232708.jpg)  
 The [button panel](#button-panel) is on another board than the main circuit board; on the [other side](#button-panel) of the panel are some test pins.
 
