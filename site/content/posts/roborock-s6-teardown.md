@@ -129,7 +129,7 @@ _"802.11bgn SDIO Network Interface Controller"_
 
 ![](/uploads/20211029-20211029_233311.jpg)  ![](/uploads/20211029-20211029_232513.jpg)
 
-### Button Panel
+### Button Panel![](/uploads/20211029-20211029_232708.jpg)
 
 ![](/uploads/20211029-20211030_010804.jpg)  ![](/uploads/20211029-20211030_010821.jpg)
 
@@ -179,3 +179,7 @@ Some force is needed to pry the frontplate that surrounds the button panel off.
 ![](/uploads/20211029-20211029_225036.jpg)  
 Here we find a Micro USB connector; When the device is powered on; we get the descriptor for some sort of Android Debugging Bridge???  
 [\[Read More\]](../usb-port/)
+
+![](/uploads/20211029-20211029_231857.jpg)  ![](/uploads/20211029-20211029_231903.jpg)  ![](/uploads/20211029-20211029_231905.jpg)  
+A bunch of screws later, we're exposed with the circuit board!  
+Apart from the breakout boards; that mainboard is the only board in the chassis
