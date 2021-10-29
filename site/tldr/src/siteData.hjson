@@ -51,7 +51,7 @@
             Checked power draw
         ]
      }
-      {
+     {
         title: Tuesday
         date: 26/10/2021
         link: https://featherbear.cc/UNSW-CSE-Thesis/posts/20211026-progress/
@@ -59,6 +59,12 @@
           Crimped some network cables
           Put the network gear into the server rack (to tidy up my room and workspace)
         ]
+     }
+     {
+        title: Friday
+        date: 29/10/2021
+        link: https://featherbear.cc/UNSW-CSE-Thesis/posts/roborock-s6-teardown/#vacuum-cleaner
+        content: Opened up the vacuum cleaner and inspected circuitry
      }
     ]
   }
@@ -77,6 +83,12 @@
             Current Firmware: 3.5.4_1558
             Takeaway - Don't packet log through the router, as only internet-bound traffic will be logged (and not local traffic)
         ]
+      }
+      {
+        title: Friday
+        date: 29/10/2021
+        link: https://featherbear.cc/UNSW-CSE-Thesis/posts/usb-port/
+        content: Looked at the USB port communications (not much happening..)
       }
     ]
   }
