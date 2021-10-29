@@ -99,6 +99,28 @@ Datasheet: [https://www.st.com/resource/en/datasheet/stm32f103vc.pdf](https://ww
 
 ![](/uploads/20211029-20211029_232748.jpg)
 
+### Memory
+
+> Micron D9SHD
+
+![](/uploads/20211029-20211029_232941.jpg)
+
+### Flash Memory (eMMC)
+
+> Kioxia THGBMNG5D1LBAIL
+
+Datasheet: [https://media.digikey.com/pdf/Data%20Sheets/Toshiba%20PDFs/THGBMNG5D1LBAIT.pdf](https://media.digikey.com/pdf/Data%20Sheets/Toshiba%20PDFs/THGBMNG5D1LBAIT.pdf "https://media.digikey.com/pdf/Data%20Sheets/Toshiba%20PDFs/THGBMNG5D1LBAIT.pdf")
+
+![](/uploads/20211029-20211029_232807.jpg) ![](/uploads/20211029-20211029_235625.jpg)
+
+### Power Management IC
+
+> X-Powers AXP223
+
+Datasheet: [https://www.micros.com.pl/mediaserver/info-uiaxp223.pdf](https://www.micros.com.pl/mediaserver/info-uiaxp223.pdf "https://www.micros.com.pl/mediaserver/info-uiaxp223.pdf")
+
+![](/uploads/20211029-20211029_232816.jpg)
+
 ### WiFi Chip
 
 > Realtek RTL8189ETV
