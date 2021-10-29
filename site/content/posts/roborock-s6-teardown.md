@@ -211,3 +211,7 @@ The [button panel](#button-panel) is on another board than the main circuit boar
 ![](/uploads/20211029-20211030_021531.jpg)
 
 ![](/uploads/20211029-20211030_021507.jpg)
+
+***
+
+![](/uploads/20211029-20211030_021350.jpg)  ![](/uploads/20211029-20211030_021324.jpg)
