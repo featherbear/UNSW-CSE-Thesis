@@ -27,7 +27,7 @@
 <meta property="og:description" content="Musings of a CSE Thesis">
 <meta property="og:locale" content="en">
 <meta property="og:site_name" content="CSE Thesis Musings">
-<meta property="og:updated_time" content="2021-10-29T16:38:37+00:00">
+<meta property="og:updated_time" content="2021-10-29T16:41:37+00:00">
 <meta property="article:section" content>
 <link rel=alternate type=application/rss+xml href=./index.xml title="CSE Thesis Musings">
 <body class="flex flex-col min-h-screen">
@@ -132,6 +132,27 @@ I make stuff, and occasionally break stuff&mldr; mainly the lattter
 <div class="bg-secondary-bg rounded overflow-hidden border hover:shadow-lg transition ease-in-out duration-200">
 <div class="px-6 pt-6">
 <div class="font-bold text-xl text-primary-text mb-2">
+<a href=./posts/20211030-progress/ class=hover:text-eureka>30/10/2021 - Daily Progress</a>
+</div>
+<div>Removed the logic board from the robot and had a look at the pins near the Allwinner R16 processor / SoC. Read Dennis' writeup about the UART pins being located on RX:TPA15, TX:TPA8, GND:TPA16
+I then soldered some wires onto the test pins (too hard to just hold it with my hands) Was able to connect to the device with baud rate 115200.</div>
+</div>
+<div class="px-6 pb-2">
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+<div class="mr-6 my-2">
+<i class="fas fa-calendar mr-1"></i>
+<span>2021-10-29</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=item>
+<div class=grid-content>
+<div class="bg-secondary-bg rounded overflow-hidden border hover:shadow-lg transition ease-in-out duration-200">
+<div class="px-6 pt-6">
+<div class="font-bold text-xl text-primary-text mb-2">
 <a href=./posts/i-am-root/ class=hover:text-eureka>I am root!</a>
 </div>
 <div>From the bootloader, we can dump the file vinda in the ext4 partition at emmc2:6.
@@ -199,27 +220,6 @@ sunxi#ext4load ext4load - load binary file from a Ext4 filesystem Usage: ext4loa
 Findings can be found in the Teardown post
 Also plugged my laptop into the USB port on the top of the unit.
 Seems to be some sort of custom ADB implementation; as I couldn&amp;rsquo;t do much with adb tools.</div>
-</div>
-<div class="px-6 pb-2">
-<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
-<div class="mr-6 my-2">
-<i class="fas fa-calendar mr-1"></i>
-<span>2021-10-29</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class=item>
-<div class=grid-content>
-<div class="bg-secondary-bg rounded overflow-hidden border hover:shadow-lg transition ease-in-out duration-200">
-<div class="px-6 pt-6">
-<div class="font-bold text-xl text-primary-text mb-2">
-<a href=./posts/usb-port/ class=hover:text-eureka>USB Port</a>
-</div>
-<div>Device ID Bus 001 Device 004: ID 1f3a:1001 Allwinner Technology Rockrobo ruby
-dmesg output [5991703.724675] usb 1-2: new high-speed USB device number 4 using xhci_hcd [5991703.881398] usb 1-2: New USB device found, idVendor=1f3a, idProduct=1001, bcdDevice= 2.33 [5991703.881400] usb 1-2: New USB device strings: Mfr=1, Product=2, SerialNumber=3 [5991703.</div>
 </div>
 <div class="px-6 pb-2">
 <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">

@@ -1,6 +1,6 @@
 <!doctype html><html lang=en><meta charset=utf-8>
 <meta name=viewport content="width=device-width">
-<title>I am root! | CSE Thesis Musings</title>
+<title>30/10/2021 - Daily Progress | CSE Thesis Musings</title>
 <meta name=generator content="Hugo Eureka 0.8.2">
 <link rel=stylesheet href=../../css/eureka.min.css>
 <script defer src=../../js/eureka.min.js></script>
@@ -20,16 +20,18 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-107434487-2')</script>
 <script>(function(e,b,f,c,a,d){b[c]=b[c]||function(){(b[c].q=b[c].q||[]).push(arguments)},a=e.createElement('script'),d=e.getElementsByTagName('script')[0],a.async=1,a.src=f,a.id='fathom-script',d.parentNode.insertBefore(a,d)})(document,window,'//ss.featherbear.cc/tracker.js','fathom'),fathom('set','siteId','NEQTU'),fathom('trackPageview')</script>
 <style>html.dark{--color-primary-bg:#232327 !important}div#sidebar-toc>ul.pl-6{margin-left:1em}</style>
-<meta name=description content="Gaining root access">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"I am root!","item":"/posts/i-am-root/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/i-am-root/"},"headline":"I am root! | CSE Thesis Musings","datePublished":"2021-10-29T16:38:37+00:00","dateModified":"2021-10-29T16:38:37+00:00","wordCount":113,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Gaining root access"}</script><meta property="og:title" content="I am root! | CSE Thesis Musings">
+<meta name=description content="Removed the logic board from the robot and had a look at the pins near the Allwinner R16 processor / SoC. Read Dennis' writeup about the UART pins being located on RX:TPA15, TX:TPA8, GND:TPA16
+ I then soldered some wires onto the test pins (too hard to just hold it with my hands) Was able to connect to the device with baud rate 115200.">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"30/10/2021 - Daily Progress","item":"/posts/20211030-progress/"}]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/20211030-progress/"},"headline":"30\/10\/2021 - Daily Progress | CSE Thesis Musings","datePublished":"2021-10-29T16:41:37+00:00","dateModified":"2021-10-29T16:41:37+00:00","wordCount":118,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Removed the logic board from the robot and had a look at the pins near the Allwinner R16 processor \/ SoC. Read Dennis\u0027 writeup about the UART pins being located on RX:TPA15, TX:TPA8, GND:TPA16\n I then soldered some wires onto the test pins (too hard to just hold it with my hands) Was able to connect to the device with baud rate 115200."}</script><meta property="og:title" content="30/10/2021 - Daily Progress | CSE Thesis Musings">
 <meta property="og:type" content="article">
-<meta property="og:url" content="/posts/i-am-root/">
-<meta property="og:description" content="Gaining root access">
+<meta property="og:url" content="/posts/20211030-progress/">
+<meta property="og:description" content="Removed the logic board from the robot and had a look at the pins near the Allwinner R16 processor / SoC. Read Dennis' writeup about the UART pins being located on RX:TPA15, TX:TPA8, GND:TPA16
+ I then soldered some wires onto the test pins (too hard to just hold it with my hands) Was able to connect to the device with baud rate 115200.">
 <meta property="og:locale" content="en">
 <meta property="og:site_name" content="CSE Thesis Musings">
-<meta property="article:published_time" content="2021-10-29T16:38:37+00:00">
-<meta property="article:modified_time" content="2021-10-29T16:38:37+00:00">
+<meta property="article:published_time" content="2021-10-29T16:41:37+00:00">
+<meta property="article:modified_time" content="2021-10-29T16:41:37+00:00">
 <meta property="article:section" content="posts">
 <body class="flex flex-col min-h-screen">
 <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
@@ -71,8 +73,8 @@
 <div class=pl-scrollbar>
 <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
 <div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
-<div class="col-span-2 lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
-<h1 class="font-bold text-3xl text-primary-text">I am root!</h1>
+<div class="col-span-2 lg:col-start-2 lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+<h1 class="font-bold text-3xl text-primary-text">30/10/2021 - Daily Progress</h1>
 <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
 <div class="mr-6 my-2">
 <i class="fas fa-calendar mr-1"></i>
@@ -80,53 +82,29 @@
 </div>
 </div>
 <div class=content>
-<p>From the bootloader, we can dump the file <code>vinda</code> in the ext4 partition at <code>emmc2:6</code>.</p>
-<pre><code>sunxi#ext4load
-ext4load - load binary file from a Ext4 filesystem
-
-Usage:
-ext4load &lt;interface&gt; &lt;dev[:part]&gt; [addr] [filename] [bytes]
-          - load binary file 'filename' from 'dev' on 'interface'
-                 to address 'addr' from ext4 filesystem
-
-
-sunxi#ext4load mmc 2:6 0 vinda
-Loading file &quot;vinda&quot; from mmc device 2:6
-16 bytes read
-
-sunxi#md 0 4
-00000000: 5b415243 51454346 54505042 525f5655    CRA[FCEQBPPTUV_R
-</code></pre>
-<p>The string of bytes can be XOR&rsquo;d with the byte <code>0x37</code> to gain the root password.<br>
-For my device, the decrypted password is <code>tevlqtrfuggcbahe</code>.</p>
+<p>Removed the logic board from the robot and had a look at the pins near the Allwinner R16 processor / SoC. Read Dennis' writeup about the UART pins being located on RX:TPA15, TX:TPA8, GND:TPA16</p>
+<p><img src=../../uploads/20211029-20211030_022010.jpg alt> <img src=../../uploads/20211029-20211030_021616.jpg alt></p>
 <hr>
-<h2 id=uname--a>uname -a</h2>
-<pre><code>Linux rockrobo 3.4.39 #1 SMP PREEMPT Wed Mar 25 20:47:59 CST 2020 armv7l armv7l armv7l GNU/Linux
-</code></pre>
+<p>I then soldered some wires onto the test pins (too hard to just hold it with my hands)<img src=../../uploads/20211029-20211030_025959.jpg alt></p>
+<hr>
+<p>Was able to connect to the device with baud rate 115200.<br>
+Read <a href=../../uart-preboot-communications/>[here]</a> for the communications dump.</p>
+<p>According to these lines in the uboot <a href=https://github.com/allwinner-zh/bootloader/blob/master/u-boot-2011.09/board/sunxi/board_common.c#L843-L847>source code</a> holding <code>s</code> drops us into a shell</p>
+<p><img src=../../uploads/20211029-snipaste_2021-10-30_03-06-33.jpg alt></p>
+<hr>
+<p>After <a href=../../uart-preboot-communications/>enumerating</a> through the different partitions, we can find the file <code>vinda</code> in emmc device 2, partition 6. This file contains an <code>XOR(0x37)</code>&rsquo;d copy of the <code>root</code> password</p>
+<p><img src=../../uploads/20211029-snipaste_2021-10-30_03-24-41.jpg alt></p>
+<p>After the decryption, <a href=../i-am-root>we&rsquo;re root</a>!</p>
+<p><img src=../../uploads/20211029-snipaste_2021-10-30_03-26-11.jpg alt></p>
 </div>
 <div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
 <div>
-<span class="block font-bold">Previous</span>
-<a href=../../posts/20211030-progress/ class=block>30/10/2021 - Daily Progress</a>
 </div>
 <div class="md:text-right mt-4 md:mt-0">
 <span class="block font-bold">Next</span>
-<a href=../../posts/uart-preboot-communications/ class=block>UART / Preboot Communications</a>
+<a href=../../posts/i-am-root/ class=block>I am root!</a>
 </div>
 </div>
-</div>
-<div class=col-span-2>
-<div class="sticky top-16 z-10 hidden lg:block px-6 py-4 bg-primary-bg">
-<span class="text-lg font-semibold">On This Page</span>
-</div>
-<div class="sticky-toc hidden lg:block px-6 pb-6">
-<nav id=TableOfContents>
-<ul>
-<li><a href=#uname--a>uname -a</a></li>
-</ul>
-</nav>
-</div>
-<script>window.addEventListener('DOMContentLoaded',()=>{enableStickyToc()})</script>
 </div>
 </div>
 <script>document.addEventListener('DOMContentLoaded',()=>{hljs.initHighlightingOnLoad()})</script>
