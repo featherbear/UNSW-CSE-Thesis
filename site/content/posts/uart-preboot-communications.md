@@ -1,10 +1,10 @@
 +++
 categories = []
-date = 2021-10-29T15:39:50Z
+date = 2021-10-29T16:35:19Z
 description = ""
 series = []
 tags = []
-title = "UART Communication (Boot)"
+title = "UART / Preboot Communications"
 toc = true
 
 +++
