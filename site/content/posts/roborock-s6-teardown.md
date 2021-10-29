@@ -129,7 +129,7 @@ _"802.11bgn SDIO Network Interface Controller"_
 
 ![](/uploads/20211029-20211029_233311.jpg)  ![](/uploads/20211029-20211029_232513.jpg)
 
-### Button Panel![](/uploads/20211029-20211029_232708.jpg)
+### Button Panel
 
 ![](/uploads/20211029-20211030_010804.jpg)  ![](/uploads/20211029-20211030_010821.jpg)
 
@@ -148,9 +148,9 @@ _"802.11bgn SDIO Network Interface Controller"_
 * Header 5 - 89
 * Header 6
 * Header 7 - GND   EG. 74
-* Header 8 - 24? 99? 45? 46? 35?     GND... 
+* Header 8 - 24? 99? 45? 46? 35?     GND...
 * Header 9 - PWR BTN
-* Header 10 - 15 - TP11 (HOME) 
+* Header 10 - 15 - TP11 (HOME)
 * Header 11 - 69
 * Header 12 -
 
@@ -183,3 +183,6 @@ Here we find a Micro USB connector; When the device is powered on; we get the de
 ![](/uploads/20211029-20211029_231857.jpg)  ![](/uploads/20211029-20211029_231903.jpg)  ![](/uploads/20211029-20211029_231905.jpg)  
 A bunch of screws later, we're exposed with the circuit board!  
 Apart from the breakout boards; that mainboard is the only board in the chassis
+
+![](/uploads/20211029-20211029_232708.jpg)  
+The [button panel](#button-panel) is on another board than the main circuit board; on the [other side](#button-panel) of the panel are some test pins.
