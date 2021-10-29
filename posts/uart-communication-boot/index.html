@@ -22,7 +22,7 @@
 <style>html.dark{--color-primary-bg:#232327 !important}div#sidebar-toc>ul.pl-6{margin-left:1em}</style>
 <meta name=description content="*-boot0 version : 4.0.0 fel_flag = 0x00000000 rtc[0] value = 0x00000000 rtc[1] value = 0x00000000 rtc[2] value = 0x00000000 rtc[3] value = 0x00000000 DRAM DRIVE INFO: V1.7 DRAM Type =3 (2:DDR2,3:DDR3,6:LPDDR2,7:LPDDR3) DRAM zq value: 00003bbbDRAM CLK =552 MHZ ID CHECK VERSION: V0.">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"UART Communication (Boot)","item":"/posts/uart-communication-boot/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/uart-communication-boot/"},"headline":"UART Communication (Boot) | CSE Thesis Musings","datePublished":"2021-10-29T15:39:50+00:00","dateModified":"2021-10-29T15:39:50+00:00","wordCount":5828,"publisher":{"@type":"Person","name":"A. Wong"},"description":"*-boot0 version : 4.0.0 fel_flag = 0x00000000 rtc[0] value = 0x00000000 rtc[1] value = 0x00000000 rtc[2] value = 0x00000000 rtc[3] value = 0x00000000 DRAM DRIVE INFO: V1.7 DRAM Type =3 (2:DDR2,3:DDR3,6:LPDDR2,7:LPDDR3) DRAM zq value: 00003bbbDRAM CLK =552 MHZ ID CHECK VERSION: V0."}</script><meta property="og:title" content="UART Communication (Boot) | CSE Thesis Musings">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/uart-communication-boot/"},"headline":"UART Communication (Boot) | CSE Thesis Musings","datePublished":"2021-10-29T15:39:50+00:00","dateModified":"2021-10-29T15:39:50+00:00","wordCount":5898,"publisher":{"@type":"Person","name":"A. Wong"},"description":"*-boot0 version : 4.0.0 fel_flag = 0x00000000 rtc[0] value = 0x00000000 rtc[1] value = 0x00000000 rtc[2] value = 0x00000000 rtc[3] value = 0x00000000 DRAM DRIVE INFO: V1.7 DRAM Type =3 (2:DDR2,3:DDR3,6:LPDDR2,7:LPDDR3) DRAM zq value: 00003bbbDRAM CLK =552 MHZ ID CHECK VERSION: V0."}</script><meta property="og:title" content="UART Communication (Boot) | CSE Thesis Musings">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/posts/uart-communication-boot/">
 <meta property="og:description" content="*-boot0 version : 4.0.0 fel_flag = 0x00000000 rtc[0] value = 0x00000000 rtc[1] value = 0x00000000 rtc[2] value = 0x00000000 rtc[3] value = 0x00000000 DRAM DRIVE INFO: V1.7 DRAM Type =3 (2:DDR2,3:DDR3,6:LPDDR2,7:LPDDR3) DRAM zq value: 00003bbbDRAM CLK =552 MHZ ID CHECK VERSION: V0.">
@@ -933,8 +933,45 @@ Ubuntu 14.04.3 LTS rockrobo ttyS0
 rockrobo login: 
 </code></pre>
 <hr>
+<h2 id=env-print>env print</h2>
+<pre><code>sunxi#env print
+audio_en=1
+audio_file=poweron.wav
+audio_vol=100
+boot_fs=a
+boot_normal=ext4load mmc ${fat_num} 40008000 /boot/zImage;bootz 40008000
+boot_reason=0x0
+boot_ver=2011.09-rc1-dirty
+bootcmd=run setargs_mmc boot_normal
+bootdelay=3
+console=ttyS0,115200
+fat_num=2:8
+filesize=20
+init=/init
+location=en
+loglevel=7
+mmc_root=/dev/mmcblk0p8
+partitions=boot-res@mmcblk0p2:env@mmcblk0p5:app@mmcblk0p6:recovery@mmcblk0p7:system_a@mmcblk0p8:system_b@mmcblk0p9:Download@mmcblk0p10:reserve@mmcblk0p11:UDISK@mmcblk0p1
+rr_recovery_flag=normal
+setargs_mmc=setenv bootargs rootwait boot_fs=${boot_fs} console=${console} root=${mmc_root} rootfstype=ext4 loglevel=${loglevel} partitions=${partitions} boot_reason=${boot_reason} location=${location} boot_ver=${boot_ver}
+stderr=serial
+stdin=serial
+stdout=serial
+
+Environment size: 828/131068 bytes
+</code></pre>
+<hr>
+<h2 id=version>version</h2>
+<pre><code>sunxi#version
+
+U-Boot 2011.09-rc1-dirty (Mar 25 2020 - 20:45:43) Allwinner Technology 
+arm-linux-gnueabi-gcc (Ubuntu/Linaro 4.7.3-12ubuntu1) 4.7.3
+GNU ld (GNU Binutils for Ubuntu) 2.24
+</code></pre>
+<hr>
 <h2 id=mmcinfo>mmcinfo</h2>
 <pre><code>sunxi#mmcinfo
+
 Device: SUNXI SD/MMC
 Manufacturer ID: 11
 OEM: 100
@@ -983,6 +1020,8 @@ umount: /tmp: device is busy.
 <div class="sticky-toc hidden lg:block px-6 pb-6">
 <nav id=TableOfContents>
 <ul>
+<li><a href=#env-print>env print</a></li>
+<li><a href=#version>version</a></li>
 <li><a href=#mmcinfo>mmcinfo</a></li>
 <li><a href=#on-shutdown>On Shutdown</a></li>
 </ul>
