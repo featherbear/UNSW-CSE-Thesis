@@ -1,6 +1,6 @@
 <!doctype html><html lang=en><meta charset=utf-8>
 <meta name=viewport content="width=device-width">
-<title>USB Port | CSE Thesis Musings</title>
+<title>29/10/2021 - Daily Progress | CSE Thesis Musings</title>
 <meta name=generator content="Hugo Eureka 0.8.2">
 <link rel=stylesheet href=../../css/eureka.min.css>
 <script defer src=../../js/eureka.min.js></script>
@@ -20,16 +20,22 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-107434487-2')</script>
 <script>(function(e,b,f,c,a,d){b[c]=b[c]||function(){(b[c].q=b[c].q||[]).push(arguments)},a=e.createElement('script'),d=e.getElementsByTagName('script')[0],a.async=1,a.src=f,a.id='fathom-script',d.parentNode.insertBefore(a,d)})(document,window,'//ss.featherbear.cc/tracker.js','fathom'),fathom('set','siteId','NEQTU'),fathom('trackPageview')</script>
 <style>html.dark{--color-primary-bg:#232327 !important}div#sidebar-toc>ul.pl-6{margin-left:1em}</style>
-<meta name=description content="dump">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"USB Port","item":"/posts/usb-port/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/usb-port/"},"headline":"USB Port | CSE Thesis Musings","datePublished":"2021-10-29T13:57:53+00:00","dateModified":"2021-10-29T13:57:53+00:00","wordCount":308,"publisher":{"@type":"Person","name":"A. Wong"},"description":"dump"}</script><meta property="og:title" content="USB Port | CSE Thesis Musings">
+<meta name=description content="Opened up the vacuum cleaner and had a look at the circuit board.
+Findings can be found in the Teardown post
+ Also plugged my laptop into the USB port on the top of the unit.
+Seems to be some sort of custom ADB implementation; as I couldn&rsquo;t do much with adb tools.">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"29/10/2021 - Daily Progress","item":"/posts/20211029-progress/"}]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/20211029-progress/"},"headline":"29\/10\/2021 - Daily Progress | CSE Thesis Musings","datePublished":"2021-10-29T14:57:23+00:00","dateModified":"2021-10-29T14:57:23+00:00","wordCount":52,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Opened up the vacuum cleaner and had a look at the circuit board.\nFindings can be found in the Teardown post\n Also plugged my laptop into the USB port on the top of the unit.\nSeems to be some sort of custom ADB implementation; as I couldn\u0026rsquo;t do much with adb tools."}</script><meta property="og:title" content="29/10/2021 - Daily Progress | CSE Thesis Musings">
 <meta property="og:type" content="article">
-<meta property="og:url" content="/posts/usb-port/">
-<meta property="og:description" content="dump">
+<meta property="og:url" content="/posts/20211029-progress/">
+<meta property="og:description" content="Opened up the vacuum cleaner and had a look at the circuit board.
+Findings can be found in the Teardown post
+ Also plugged my laptop into the USB port on the top of the unit.
+Seems to be some sort of custom ADB implementation; as I couldn&rsquo;t do much with adb tools.">
 <meta property="og:locale" content="en">
 <meta property="og:site_name" content="CSE Thesis Musings">
-<meta property="article:published_time" content="2021-10-29T13:57:53+00:00">
-<meta property="article:modified_time" content="2021-10-29T13:57:53+00:00">
+<meta property="article:published_time" content="2021-10-29T14:57:23+00:00">
+<meta property="article:modified_time" content="2021-10-29T14:57:23+00:00">
 <meta property="article:section" content="posts">
 <body class="flex flex-col min-h-screen">
 <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
@@ -72,7 +78,7 @@
 <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
 <div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
 <div class="col-span-2 lg:col-start-2 lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
-<h1 class="font-bold text-3xl text-primary-text">USB Port</h1>
+<h1 class="font-bold text-3xl text-primary-text">29/10/2021 - Daily Progress</h1>
 <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
 <div class="mr-6 my-2">
 <i class="fas fa-calendar mr-1"></i>
@@ -80,105 +86,20 @@
 </div>
 </div>
 <div class=content>
-<h1 id=device-id>Device ID</h1>
-<p>Bus 001 Device 004: ID 1f3a:1001 Allwinner Technology Rockrobo ruby</p>
-<h1 id=dmesg-output>dmesg output</h1>
-<pre><code>[5991703.724675] usb 1-2: new high-speed USB device number 4 using xhci_hcd
-[5991703.881398] usb 1-2: New USB device found, idVendor=1f3a, idProduct=1001, bcdDevice= 2.33
-[5991703.881400] usb 1-2: New USB device strings: Mfr=1, Product=2, SerialNumber=3
-[5991703.881402] usb 1-2: Product: Rockrobo ruby
-[5991703.881403] usb 1-2: Manufacturer: Rockrobo USB Developer
-[5991703.881404] usb 1-2: SerialNumber: 8a80ab8936d76c118000
-</code></pre>
-<pre><code>[5991703.724675] usb 1-2: new high-speed USB device number 4 using xhci_hcd
-[5991703.881398] usb 1-2: New USB device found, idVendor=1f3a, idProduct=1001, bcdDevice= 2.33
-[5991703.881400] usb 1-2: New USB device strings: Mfr=1, Product=2, SerialNumber=3
-[5991703.881402] usb 1-2: Product: Rockrobo ruby
-[5991703.881403] usb 1-2: Manufacturer: Rockrobo USB Developer
-[5991703.881404] usb 1-2: SerialNumber: 8a80ab8936d76c118000
-[5992597.924031] usb 1-2: USB disconnect, device number 4
-</code></pre>
-<h1 id=lsusb-output>lsusb output</h1>
-<pre><code>Bus 001 Device 004: ID 1f3a:1001 Allwinner Technology Rockrobo ruby
-Device Descriptor:
-  bLength                18
-  bDescriptorType         1
-  bcdUSB               2.00
-  bDeviceClass            0 
-  bDeviceSubClass         0 
-  bDeviceProtocol         0 
-  bMaxPacketSize0        64
-  idVendor           0x1f3a Allwinner Technology
-  idProduct          0x1001 
-  bcdDevice            2.33
-  iManufacturer           1 Rockrobo USB Developer
-  iProduct                2 Rockrobo ruby
-  iSerial                 3 8a80ab8936d76c118000
-  bNumConfigurations      1
-  Configuration Descriptor:
-    bLength                 9
-    bDescriptorType         2
-    wTotalLength       0x0020
-    bNumInterfaces          1
-    bConfigurationValue     1
-    iConfiguration          0 
-    bmAttributes         0xc0
-      Self Powered
-    MaxPower              224mA
-    Interface Descriptor:
-      bLength                 9
-      bDescriptorType         4
-      bInterfaceNumber        0
-      bAlternateSetting       0
-      bNumEndpoints           2
-      bInterfaceClass       255 Vendor Specific Class
-      bInterfaceSubClass     66 
-      bInterfaceProtocol      1 
-      iInterface              0 
-      Endpoint Descriptor:
-        bLength                 7
-        bDescriptorType         5
-        bEndpointAddress     0x81  EP 1 IN
-        bmAttributes            2
-          Transfer Type            Bulk
-          Synch Type               None
-          Usage Type               Data
-        wMaxPacketSize     0x0200  1x 512 bytes
-        bInterval               0
-      Endpoint Descriptor:
-        bLength                 7
-        bDescriptorType         5
-        bEndpointAddress     0x01  EP 1 OUT
-        bmAttributes            2
-          Transfer Type            Bulk
-          Synch Type               None
-          Usage Type               Data
-        wMaxPacketSize     0x0200  1x 512 bytes
-        bInterval               0
-Device Qualifier (for other device speed):
-  bLength                10
-  bDescriptorType         6
-  bcdUSB               2.00
-  bDeviceClass            0 
-  bDeviceSubClass         0 
-  bDeviceProtocol         0 
-  bMaxPacketSize0        64
-  bNumConfigurations      1
-can't get debug descriptor: Resource temporarily unavailable
-Device Status:     0x0001
-  Self Powered
-</code></pre>
+<p><img src=../../uploads/20211029-20211029_233611.jpg alt></p>
 <hr>
-<p><a href="http://www.robotreviews.com/chat/viewtopic.php?f=6&t=19479&sid=6e9b84c899e07bceedbcadef7a16a110&start=220">http://www.robotreviews.com/chat/viewtopic.php?f=6&t=19479&sid=6e9b84c899e07bceedbcadef7a16a110&start=220</a></p>
+<p>Opened up the vacuum cleaner and had a look at the circuit board.</p>
+<p>Findings can be found in the <a href=https://featherbear.cc/UNSW-CSE-Thesis/posts/roborock-s6-teardown/#vacuum-cleaner>Teardown post</a></p>
+<hr>
+<p>Also plugged my laptop into the <a href=https://featherbear.cc/UNSW-CSE-Thesis/posts/usb-port/>USB port</a> on the top of the unit.<br>
+Seems to be some sort of custom ADB implementation; as I couldn&rsquo;t do much with adb tools.</p>
 </div>
 <div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
 <div>
-<span class="block font-bold">Previous</span>
-<a href=../../posts/20211029-progress/ class=block>29/10/2021 - Daily Progress</a>
 </div>
 <div class="md:text-right mt-4 md:mt-0">
 <span class="block font-bold">Next</span>
-<a href=../../posts/20211026-progress/ class=block>26/10/2021 - Daily Progress</a>
+<a href=../../posts/usb-port/ class=block>USB Port</a>
 </div>
 </div>
 </div>
