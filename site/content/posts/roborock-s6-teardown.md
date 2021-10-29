@@ -60,6 +60,8 @@ Status LED
 
 ## Wheels
 
+![](/uploads/20211029-20211030_010623.jpg) ![](/uploads/20211029-20211030_010634.jpg)
+
 ## LIDAR
 
 > LDS02RR
@@ -69,3 +71,28 @@ Related: [https://www.robotis.us/360-laser-distance-sensor-lds-01-lidar/](https:
 ![](/uploads/20211029-20211030_010214.jpg)  ![](/uploads/20211029-20211030_010201.jpg)
 
 ## Circuitry
+
+### Button Panel
+
+![](/uploads/20211029-20211030_010804.jpg)  ![](/uploads/20211029-20211030_010821.jpg)
+
+![](/uploads/20211029-20211030_011017.jpg)  ![](/uploads/20211029-20211030_011036.jpg)
+
+### Pinout (?)
+
+![](/uploads/20211029-20211030_002444.jpg)
+
+> From top-down view; left to right
+
+* Header 1
+* Header 2 - 14
+* Header 3 - 71
+* Header 4 - 72
+* Header 5 - 89
+* Header 6
+* Header 7 - GND   EG. 74
+* Header 8 - 24? 99? 45? 46? 35?     GND... 
+* Header 9 - PWR BTN
+* Header 10 - 15 - TP11 (HOME) 
+* Header 11 - 69
+* Header 12 -
