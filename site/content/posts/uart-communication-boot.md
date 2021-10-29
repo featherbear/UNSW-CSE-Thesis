@@ -862,6 +862,26 @@ Ubuntu 14.04.3 LTS rockrobo ttyS0
 rockrobo login: 
 ```
 
+---
+
+## mmcinfo
+
+```
+sunxi#mmcinfo
+Device: SUNXI SD/MMC
+Manufacturer ID: 11
+OEM: 100
+Name: 004GA 
+Tran Speed: 25000000
+Rd Block Len: 512
+MMC version 5.0
+High Capacity: Yes
+Capacity: 3.7 GiB
+Bus Width: 4-bit
+```
+
+---
+
 ## On Shutdown
 
 ```
