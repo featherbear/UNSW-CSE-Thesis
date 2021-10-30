@@ -97,6 +97,7 @@
         content: [
           Connected to the vacuum cleaner via UART (baud rate 115200)
           Got root!
+          Started research on disk imaging best practices
         ]
      }
     ]
