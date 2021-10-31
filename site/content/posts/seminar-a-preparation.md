@@ -50,7 +50,11 @@ Andrew Wong
 * Image the system for offline analysis
 * Find a way in (it runs Linux!)
 * Get root access
+
+### Stretch Goals
+
 * See what the sensors see
+* Circuit board decomposition
 
 ## Project Timeline
 
@@ -75,6 +79,10 @@ Andrew Wong
 * Linux kernel
 
 ARM - Processor Modes, Ring Protection
+
+Things to look out for 
+
+* vulnerable binaries - priv esc?
 
 ***
 
