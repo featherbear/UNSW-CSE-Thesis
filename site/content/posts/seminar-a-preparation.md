@@ -32,6 +32,10 @@ Andrew Wong
 
 <script>document.write(atob('YW5kcmV3Lmoud29uZ0BzdHVkZW50LnVuc3cuZWR1LmF1'))</script>
 
+## About Roborock
+
+> roborock x xiaomi
+
 ## Background Material
 
 Dennis Giese
@@ -44,6 +48,8 @@ Dennis Giese
 ## Hypothesis / Problem
 
 > How have manufacturers of IoT-enabled / smart home devices addressed the increasing concerns of digital privacy and integrity
+
+How have manufacturers attempted to mitigate the potential for IoT-enabled / smart home devices to be modified with malicious intent?
 
 ***
 
@@ -61,6 +67,7 @@ Dennis Giese
 
 * See what the sensors see
 * Circuit board decomposition
+* Reverse engineer the USB ADB port
 
 ***
 
@@ -83,12 +90,26 @@ Dennis Giese
 
 ## Hardware Hacking: Tools (and Skills) of the Trade
 
-* Understanding of the ARMv7-A instruction set architecture
-  * The Roborock S6 uses an Allwinner R16 chip
+* Understanding ARM
+  * ARMv7-A instruction set architecture
+    * (The Roborock S6 uses an Allwinner R16 chip)
+  * Processor Modes
+  * Protection Rings
 * JTAG / UART / Serial communications
-* Linux kernel
+* Binary Analysis
+  * IDA / Ghidra / Binary Ninja / etc...
+* Linux forensics
+  * Processes
+  * File / Directories
+  * Users
+  * Logs
+* Network Monitoring
+  * Isolated / VLAN Network
+  * Access Point
+  * Port Mirroring
+  * SSL Decryption via MITM (?)
 
-ARM - Processor Modes, Ring Protection
+***
 
 Things to look out for 
 
@@ -98,15 +119,37 @@ Things to look out for
 
 ***
 
-## Current Progress
-
-* The easily accessible micro USB port on the top of the device provides some ADB functionality - however it is a stripped copy.
-  * Existing implementations of custom firmware/software had simply replaced this file with a full version.
-  * But can the stripped version do?
-  * Why is it there?
-
-***
-
 ## Rolling Research
 
 INSERT SCREENSHOT OF THESIS RESEARCH PAGE
+
+***
+
+## Current Progress
+
+* Researched about network capturing
+  * Isolated Networks / VLAN
+  * Packet Sniffer (router - WAN)
+  * Port Mirroring (switch - LAN)
+  * Packet analysis
+  * Have set up a wireless network
+* Have acquired the vacuum
+* Opened up the charging unit (got some infrared LEDs for homing)
+* Opened up the vacuum cleaner
+  * The easily accessible micro USB port on the top of the device provides some ADB functionality - however it is a stripped copy.
+    * Existing implementations of custom firmware/software had simply replaced this file with a full version.
+    * But can the stripped version do?
+    * Why is it there?
+  * Identified IC and primary components on the logic board
+    * STM32...... - ACU (I/O)
+    * Allwinner R16 - MCU (Quad-core ARMv7a processor)
+  * Located the UART pins
+    * hahahahahahhahaikilledausbcontrolleronmydesktopcomputerriphahahahaa
+    * Able to receive boot messages
+    * Also able to send data
+  * Basic enumeration of directories over the ext4 partitions on the eMMC flash
+  * `vinda` file contains the root password!
+  * Decrypted the root password (XOR `0x37`)
+  * root@... # echo got root!
+
+***
