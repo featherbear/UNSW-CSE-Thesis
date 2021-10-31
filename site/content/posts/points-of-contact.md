@@ -326,3 +326,17 @@ Replication study?
 CIA Principals
 
 DISCONTINUED
+
+***
+
+[https://book.hacktricks.xyz/forensics/basic-forensic-methodology/linux-forensics](https://book.hacktricks.xyz/forensics/basic-forensic-methodology/linux-forensics "https://book.hacktricks.xyz/forensics/basic-forensic-methodology/linux-forensics")
+
+[https://countuponsecurity.com/2017/04/12/intro-to-linux-forensics/](https://countuponsecurity.com/2017/04/12/intro-to-linux-forensics/ "https://countuponsecurity.com/2017/04/12/intro-to-linux-forensics/")
+
+[https://opensource.com/article/18/4/linux-filesystem-forensics](https://opensource.com/article/18/4/linux-filesystem-forensics "https://opensource.com/article/18/4/linux-filesystem-forensics")
+
+[https://tho-le.medium.com/linux-forensics-some-useful-artifacts-74497dca1ab2](https://tho-le.medium.com/linux-forensics-some-useful-artifacts-74497dca1ab2 "https://tho-le.medium.com/linux-forensics-some-useful-artifacts-74497dca1ab2")
+
+[https://www.sandflysecurity.com/blog/compromised-linux-cheat-sheet/](https://www.sandflysecurity.com/blog/compromised-linux-cheat-sheet/ "https://www.sandflysecurity.com/blog/compromised-linux-cheat-sheet/")
+
+[https://valetudo.cloud/pages/general/rooting-instructions.html](https://valetudo.cloud/pages/general/rooting-instructions.html "https://valetudo.cloud/pages/general/rooting-instructions.html")
