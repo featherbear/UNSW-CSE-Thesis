@@ -154,6 +154,8 @@ After some reasearch, it turns out that I could also use my MikroTik router to d
 The TL-SG105E that I had _just_ purchased (AUD$30 on sale)... I no longer need it haha!  
 I guess I can add this 5 port gigabit switch to my collection of spare devices (along with a bunch of other spare switches)
 
+![](/uploads/20211031-20210930_153318.jpg)
+
 ***
 
 
