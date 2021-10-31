@@ -22,7 +22,7 @@
 <style>html.dark{--color-primary-bg:#232327 !important}div#sidebar-toc>ul.pl-6{margin-left:1em}</style>
 <meta name=description content="Criterion  Make a 30-minute presentation about your Thesis A topic and the plan The talk presents an extensive, logically organised review, analysis and discussion of background material. Demonstrates clear mastery of the material in the topic area already. A clearly articulated definition of the problem and/or hypothesis (statement of purpose).">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"Seminar A Preparation","item":"/posts/seminar-a-preparation/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/seminar-a-preparation/"},"headline":"Seminar A Preparation | CSE Thesis Musings","datePublished":"2021-10-18T02:59:50+00:00","dateModified":"2021-10-18T02:59:50+00:00","wordCount":374,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Criterion  Make a 30-minute presentation about your Thesis A topic and the plan The talk presents an extensive, logically organised review, analysis and discussion of background material. Demonstrates clear mastery of the material in the topic area already. A clearly articulated definition of the problem and\/or hypothesis (statement of purpose)."}</script><meta property="og:title" content="Seminar A Preparation | CSE Thesis Musings">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/seminar-a-preparation/"},"headline":"Seminar A Preparation | CSE Thesis Musings","datePublished":"2021-10-18T02:59:50+00:00","dateModified":"2021-10-18T02:59:50+00:00","wordCount":543,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Criterion  Make a 30-minute presentation about your Thesis A topic and the plan The talk presents an extensive, logically organised review, analysis and discussion of background material. Demonstrates clear mastery of the material in the topic area already. A clearly articulated definition of the problem and\/or hypothesis (statement of purpose)."}</script><meta property="og:title" content="Seminar A Preparation | CSE Thesis Musings">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/posts/seminar-a-preparation/">
 <meta property="og:description" content="Criterion  Make a 30-minute presentation about your Thesis A topic and the plan The talk presents an extensive, logically organised review, analysis and discussion of background material. Demonstrates clear mastery of the material in the topic area already. A clearly articulated definition of the problem and/or hypothesis (statement of purpose).">
@@ -102,6 +102,10 @@
 <p>Andrew Wong</p>
 <p>4th Year Computer Engineering student @ UNSW</p>
 <script>document.write(atob('YW5kcmV3Lmoud29uZ0BzdHVkZW50LnVuc3cuZWR1LmF1'))</script>
+<h2 id=about-roborock>About Roborock</h2>
+<blockquote>
+<p>roborock x xiaomi</p>
+</blockquote>
 <h2 id=background-material>Background Material</h2>
 <p>Dennis Giese</p>
 <ul>
@@ -114,6 +118,7 @@
 <blockquote>
 <p>How have manufacturers of IoT-enabled / smart home devices addressed the increasing concerns of digital privacy and integrity</p>
 </blockquote>
+<p>How have manufacturers attempted to mitigate the potential for IoT-enabled / smart home devices to be modified with malicious intent?</p>
 <hr>
 <h2 id=plan>Plan</h2>
 <ul>
@@ -132,6 +137,7 @@
 <ul>
 <li>See what the sensors see</li>
 <li>Circuit board decomposition</li>
+<li>Reverse engineer the USB ADB port</li>
 </ul>
 <hr>
 <h2 id=project-timeline>Project Timeline</h2>
@@ -161,15 +167,41 @@
 <hr>
 <h2 id=hardware-hacking-tools-and-skills-of-the-trade>Hardware Hacking: Tools (and Skills) of the Trade</h2>
 <ul>
-<li>Understanding of the ARMv7-A instruction set architecture
+<li>Understanding ARM
 <ul>
-<li>The Roborock S6 uses an Allwinner R16 chip</li>
+<li>ARMv7-A instruction set architecture
+<ul>
+<li>(The Roborock S6 uses an Allwinner R16 chip)</li>
+</ul>
+</li>
+<li>Processor Modes</li>
+<li>Protection Rings</li>
 </ul>
 </li>
 <li>JTAG / UART / Serial communications</li>
-<li>Linux kernel</li>
+<li>Binary Analysis
+<ul>
+<li>IDA / Ghidra / Binary Ninja / etc&mldr;</li>
 </ul>
-<p>ARM - Processor Modes, Ring Protection</p>
+</li>
+<li>Linux forensics
+<ul>
+<li>Processes</li>
+<li>File / Directories</li>
+<li>Users</li>
+<li>Logs</li>
+</ul>
+</li>
+<li>Network Monitoring
+<ul>
+<li>Isolated / VLAN Network</li>
+<li>Access Point</li>
+<li>Port Mirroring</li>
+<li>SSL Decryption via MITM (?)</li>
+</ul>
+</li>
+</ul>
+<hr>
 <p>Things to look out for</p>
 <ul>
 <li>vulnerable binaries - priv esc?</li>
@@ -177,7 +209,23 @@
 <li>ADB port - RE</li>
 </ul>
 <hr>
+<h2 id=rolling-research>Rolling Research</h2>
+<p>INSERT SCREENSHOT OF THESIS RESEARCH PAGE</p>
+<hr>
 <h2 id=current-progress>Current Progress</h2>
+<ul>
+<li>Researched about network capturing
+<ul>
+<li>Isolated Networks / VLAN</li>
+<li>Packet Sniffer (router - WAN)</li>
+<li>Port Mirroring (switch - LAN)</li>
+<li>Packet analysis</li>
+<li>Have set up a wireless network</li>
+</ul>
+</li>
+<li>Have acquired the vacuum</li>
+<li>Opened up the charging unit (got some infrared LEDs for homing)</li>
+<li>Opened up the vacuum cleaner
 <ul>
 <li>The easily accessible micro USB port on the top of the device provides some ADB functionality - however it is a stripped copy.
 <ul>
@@ -186,10 +234,27 @@
 <li>Why is it there?</li>
 </ul>
 </li>
+<li>Identified IC and primary components on the logic board
+<ul>
+<li>STM32&mldr;&mldr; - ACU (I/O)</li>
+<li>Allwinner R16 - MCU (Quad-core ARMv7a processor)</li>
+</ul>
+</li>
+<li>Located the UART pins
+<ul>
+<li>hahahahahahhahaikilledausbcontrolleronmydesktopcomputerriphahahahaa</li>
+<li>Able to receive boot messages</li>
+<li>Also able to send data</li>
+</ul>
+</li>
+<li>Basic enumeration of directories over the ext4 partitions on the eMMC flash</li>
+<li><code>vinda</code> file contains the root password!</li>
+<li>Decrypted the root password (XOR <code>0x37</code>)</li>
+<li>root@&mldr; # echo got root!</li>
+</ul>
+</li>
 </ul>
 <hr>
-<h2 id=rolling-research>Rolling Research</h2>
-<p>INSERT SCREENSHOT OF THESIS RESEARCH PAGE</p>
 </div>
 <div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
 <div>
@@ -211,6 +276,7 @@
 <ul>
 <li><a href=#criterion>Criterion</a></li>
 <li><a href=#introduction>Introduction</a></li>
+<li><a href=#about-roborock>About Roborock</a></li>
 <li><a href=#background-material>Background Material</a></li>
 <li><a href=#hypothesis--problem>Hypothesis / Problem</a></li>
 <li><a href=#plan>Plan</a>
@@ -224,8 +290,8 @@
 </ul>
 </li>
 <li><a href=#hardware-hacking-tools-and-skills-of-the-trade>Hardware Hacking: Tools (and Skills) of the Trade</a></li>
-<li><a href=#current-progress>Current Progress</a></li>
 <li><a href=#rolling-research>Rolling Research</a></li>
+<li><a href=#current-progress>Current Progress</a></li>
 </ul>
 </nav>
 </div>
