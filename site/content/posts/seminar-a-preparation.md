@@ -34,9 +34,16 @@ Andrew Wong
 
 ## Background Material
 
+Dennis Giese
+
+* Dustcloud
+* Valetudo
+* MiIO
+* HomeAssistant
+
 ## Hypothesis / Problem
 
-> How have manufacturers of IoT-enabled / smart home devices addressed the uprising prevalence of digital privacy and integrity
+> How have manufacturers of IoT-enabled / smart home devices addressed the increasing concerns of digital privacy and integrity
 
 ***
 
