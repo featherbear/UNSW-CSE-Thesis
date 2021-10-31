@@ -45,18 +45,21 @@ Andrew Wong
 * Research
 * Get the Roborock S6 vacuum cleaner
 * Acquisition and capture of network activity
-* Reverse engineering and binary analysis of firmware and software
-* Look binaries for security vulnerabilities and fortifications
-* Image the system for offline analysis
 * Find a way in (it runs Linux!)
-* Get root access
+* Image the system for offline analysis
+* Reverse engineering and binary analysis of firmware and software
+  * Look binaries for security vulnerabilities and fortifications
 
 ### Stretch Goals
 
 * See what the sensors see
 * Circuit board decomposition
 
+***
+
 ## Project Timeline
+
+...
 
 ***
 
@@ -83,6 +86,17 @@ ARM - Processor Modes, Ring Protection
 Things to look out for 
 
 * vulnerable binaries - priv esc?
+* How easy is it to maliciously 'bug' a vacuum cleaner (IoT reseller concerns)
+* ADB port - RE
+
+***
+
+## Current Progress
+
+* The easily accessible micro USB port on the top of the device provides some ADB functionality - however it is a stripped copy.
+  * Existing implementations of custom firmware/software had simply replaced this file with a full version.
+  * But can the stripped version do?
+  * Why is it there?
 
 ***
 
