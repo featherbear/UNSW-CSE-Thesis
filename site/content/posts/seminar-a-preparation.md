@@ -19,3 +19,65 @@ toc = true
 * Captures attention.
 * An interactive delivery tailored appropriately to the audience.
 * Uses presentation aides - effortlessly integrated with the delivery.
+
+***
+
+## Introduction
+
+Who, me? 
+
+Andrew Wong
+
+4th Year Computer Engineering student @ UNSW
+
+<script>document.write(atob('YW5kcmV3Lmoud29uZ0BzdHVkZW50LnVuc3cuZWR1LmF1'))</script>
+
+## Background Material
+
+## Hypothesis / Problem
+
+> How have manufacturers of IoT-enabled / smart home devices addressed the uprising prevalence of digital privacy and integrity
+
+***
+
+## Plan
+
+* Research
+* Get the Roborock S6 vacuum cleaner
+* Acquisition and capture of network activity
+* Reverse engineering and binary analysis of firmware and software
+* Look binaries for security vulnerabilities and fortifications
+* Image the system for offline analysis
+* Find a way in (it runs Linux!)
+* Get root access
+* See what the sensors see
+
+## Project Timeline
+
+***
+
+### Contingency Plan
+
+* If we can't get into the device, then switch focus to
+  * Option 1 - Communications Protocol (network traffic)
+    * i.e. Inspect the data and its nature
+      * Frequency, Time, Destination, Content if possible
+  * Option 2 - Xiaomi Home smartphone application (used to communicate with the device)
+    * i.e. Decompile the Android APK file and look for security vulnerabilities and fortifications
+
+***
+
+## Hardware Hacking: Tools (and Skills) of the Trade
+
+* Understanding of the ARMv7-A instruction set architecture
+  * The Roborock S6 uses an Allwinner R16 chip
+* JTAG / UART / Serial communications
+* Linux kernel
+
+ARM - Processor Modes, Ring Protection
+
+***
+
+## Rolling Research
+
+INSERT SCREENSHOT OF THESIS RESEARCH PAGE
