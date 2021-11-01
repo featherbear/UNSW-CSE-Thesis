@@ -340,3 +340,12 @@ DISCONTINUED
 [https://www.sandflysecurity.com/blog/compromised-linux-cheat-sheet/](https://www.sandflysecurity.com/blog/compromised-linux-cheat-sheet/ "https://www.sandflysecurity.com/blog/compromised-linux-cheat-sheet/")
 
 [https://valetudo.cloud/pages/general/rooting-instructions.html](https://valetudo.cloud/pages/general/rooting-instructions.html "https://valetudo.cloud/pages/general/rooting-instructions.html")
+
+***
+
+## Side channels
+
+* ADB
+* Laser Microphone - LidarPhone
+  * [https://www.youtube.com/watch?v=5qYbzykT4C0&t=163s](https://www.youtube.com/watch?v=5qYbzykT4C0&t=163s "https://www.youtube.com/watch?v=5qYbzykT4C0&t=163s")
+* [https://dl.acm.org/doi/10.1145/3384419.3430430](https://dl.acm.org/doi/10.1145/3384419.3430430 "https://dl.acm.org/doi/10.1145/3384419.3430430")
