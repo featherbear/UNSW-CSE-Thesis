@@ -5,12 +5,24 @@ fields:
 - type: text
   name: title
   label: title
+  config:
+    required: true
 - type: text
   name: layout
   label: layout
-- type: list
-  name: outputs
+  hidden: true
+  default: bundle
+  config:
+    required: true
+- name: outputs
+  type: tag_list
+  default:
+  - Reveal
   label: outputs
+  hidden: true
 - type: datetime
   name: date
   label: date
+  default: now
+  config:
+    required: true
