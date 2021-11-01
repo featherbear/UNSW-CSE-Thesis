@@ -372,6 +372,28 @@ Device
 
 Proto
 
+aka  
+  
+Protocol
+
+* Auth
+* Leakage of sensitive
+* Unsafe remote
+
+Software
+
+* Misconfiguration
+* Unsafe application
+* Leakage of sensitive
+* Unsafe OS
+* Unsafe bootloader
+
+Hardware
+
+* Debugging interface
+* Unprotected flash 
+* Leakage of sensitive
+
 ***
 
 ## Smartphone App analysis
