@@ -39,7 +39,11 @@
       {
         title: Monday
         date: 1/11/2021
-        content: Drafted content for the Seminar A presentation
+        content: [
+          Integrated reveal-js with PDF building capability, Logitech Spotlight support and a custom theme
+          Drafted content for the Seminar A presentation
+          Began designing content for the Seminar A presentation
+        ]  
         link: https://featherbear.cc/UNSW-CSE-Thesis/posts/seminar-a-preparation/
       }
     ]
