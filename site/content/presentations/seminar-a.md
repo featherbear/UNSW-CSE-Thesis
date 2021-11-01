@@ -6,7 +6,7 @@ title = "Seminar A"
 
 +++
 
-{{< slide background-image="/uploads/20211030_040050.jpg" transition="fade" >}}
+{{< slide background-image="https://featherbear.cc/UNSW-CSE-Thesis/uploads/20211030_040050.jpg" transition="fade" >}}
 
 <br />
 <br />
