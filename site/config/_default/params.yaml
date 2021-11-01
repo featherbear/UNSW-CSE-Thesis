@@ -82,6 +82,7 @@ reveal_hugo:
   history: true
   center: false
   pdf_separate_fragments: true
+  custom_theme: "presentations/theme.css"
   dependencies: [
     {
       src: '../plugins/capsLockKeymod.js'
