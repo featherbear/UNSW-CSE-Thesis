@@ -7,29 +7,47 @@
 <meta name=apple-mobile-web-app-status-bar-style content="black-translucent">
 <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <link rel=stylesheet href=../../reveal-js/css/reset.css>
-<link rel=stylesheet href=../../reveal-js/css/reveal.css><link rel=stylesheet href=../../reveal-js/css/theme/black.css id=theme>
-<link rel=stylesheet href=../../highlight-js/default.min.css>
+<link rel=stylesheet href=../../reveal-js/css/reveal.css>
+<link rel=stylesheet href=../../_.min.d5df08a2ad508e8523e78728a4aba9189b94165888c7d7f08e82f2d0af573c16.css id=theme><link rel=stylesheet href=../../highlight-js/default.min.css>
 </head>
 <body>
 <div class=reveal>
 <div class=slides>
-<section><h1 id=smart-vacuum-cleaners>“Smart” Vacuum Cleaners</h1>
-<h3 id=an-audit-into-the-security-and-integrity-of-iot-systems>An Audit Into The Security and Integrity of IoT Systems</h3>
+<section data-noprocess data-shortcode-slide data-background-image=/uploads/20211030_040050.jpg data-transition=fade>
+<p><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br></p>
+<h3 id=smart-vacuum-cleaners>&ldquo;Smart&rdquo; Vacuum Cleaners</h3>
+<h5 id=an-audit-into-the-security-and-integrity-of-iot-systems>An Audit Into The Security and Integrity of IoT Systems</h5>
+<h6 id=andrew-wong--unsw-sydney>Andrew Wong | UNSW Sydney</h6>
+</section>
+<section data-noprocess data-shortcode-slide data-transition=fade>
+<h1 id=introduction>Introduction</h1>
+<p>Internet of Things (IoT) and Smart Home devices are everywhere.</p>
+<aside class=notes><p>The Internet of Things (IoT) and Smart Home devices are everywhere&mldr;<br>
+From smart lightbulbs, to smart fridges&mldr; to &mldr; [*] smart &mldr; flip-flops?
+We can&rsquo;t seem live without them, but should we really be living <em>with</em> them?</p>
+<p>Now regardless of where you stand in the pro or anti smart device debate, the matter of fact is that the adoption of these devices into our daily lives have been widespread.</p>
+<p>Of course though, everything comes at a cost.</p>
+</aside>
 </section><section>
 <h1 id=about-me>About Me</h1>
-<p>Andrew Wong</p>
-<p>Computer Engineering @ UNSW Sydney</p>
-<p>Interests:</p>
-<ul>
-<li>:)</li>
-</ul>
-</section><section>
-<h1 id=introduction>Introduction</h1>
-<ul>
-<li>What</li>
-<li>Why</li>
-<li>But whyy</li>
-</ul>
+<style>.profileBanner{width:100%;height:280px;background-image:url(https://featherbear.cc/assets/images/cover.jpg);background-position:100% 30%;background-size:cover;position:relative;box-shadow:none;margin:1em 0;border-radius:10px}.profileBanner::before{content:' ';position:absolute;inset:0;z-index:-1;background:inherit;filter:blur(.2em)}</style>
+<p><strong>Andrew Wong</strong><br>
+Computer Engineering @ UNSW Sydney</p>
+<sub>
+e: <script>document.write(atob('YW5kcmV3Lmoud29uZ0BzdHVkZW50LnVuc3cuZWR1LmF1'))</script>
+<p><label>Interests</label></br>
+Making things, breaking things&mldr; mainly the latter
+</sub></p>
+<div class=profileBanner></div>
 </section><section>
 <h1 id=background-information>Background Information</h1>
 <section data-shortcode-section>
@@ -57,7 +75,7 @@
 <script type=text/javascript src=../../reveal-hugo/object-assign.js></script>
 <a href=../../reveal-js/css/print/ id=print-location style=display:none></a>
 <script type=text/javascript>var printLocationElement=document.getElementById('print-location'),link=document.createElement('link');link.rel='stylesheet',link.type='text/css',link.href=printLocationElement.href+(window.location.search.match(/print-pdf/gi)?'pdf.css':'paper.css'),document.getElementsByTagName('head')[0].appendChild(link)</script>
-<script type=application/json id=reveal-hugo-site-params>{"center":false,"dependencies":[{"src":"../plugins/capsLockKeymod.js"}],"history":true,"pdf_separate_fragments":true,"slide_number":true}</script>
+<script type=application/json id=reveal-hugo-site-params>{"center":false,"custom_theme":"presentations/theme.scss","custom_theme_compile":true,"dependencies":[{"src":"../plugins/capsLockKeymod.js"}],"history":true,"pdf_separate_fragments":true,"slide_number":true,"width":1024}</script>
 <script type=application/json id=reveal-hugo-page-params>null</script>
 <script src=../../reveal-js/js/reveal.js></script>
 <script type=text/javascript>var revealHugoDefaults,revealHugoSiteParams,revealHugoPageParams,options;function camelize(a){return a&&Object.keys(a).forEach(function(b){newK=b.replace(/(\_\w)/g,function(a){return a[1].toUpperCase()}),newK!=b&&(a[newK]=a[b],delete a[b])}),a}revealHugoDefaults={center:!0,controls:!0,history:!0,progress:!0,transition:"slide"},revealHugoSiteParams=JSON.parse(document.getElementById('reveal-hugo-site-params').innerHTML),revealHugoPageParams=JSON.parse(document.getElementById('reveal-hugo-page-params').innerHTML),options=Object.assign({},camelize(revealHugoDefaults),camelize(revealHugoSiteParams),camelize(revealHugoPageParams)),Reveal.initialize(options)</script>
@@ -66,5 +84,6 @@
 <script type=text/javascript src=../../reveal-js/plugin/highlight/highlight.js></script>
 <script type=text/javascript src=../../reveal-js/plugin/zoom-js/zoom.js></script>
 <script type=text/javascript src=../../reveal-js/plugin/notes/notes.js></script>
+<script type=text/javascript>for(let a of document.querySelectorAll(".reveal .slides > section"))a.dataset.transition||(a.dataset.transition="fade-out slide-in")</script>
 </body>
 </html>
