@@ -353,3 +353,45 @@ DISCONTINUED
 * [https://dl.acm.org/doi/10.1145/2789168.2790119](https://dl.acm.org/doi/10.1145/2789168.2790119 "https://dl.acm.org/doi/10.1145/2789168.2790119")
 * [https://dl.acm.org/doi/10.1145/3384419.3430430](https://dl.acm.org/doi/10.1145/3384419.3430430 "https://dl.acm.org/doi/10.1145/3384419.3430430")
 * [https://doi.org/10.1145/3384419.3430781](https://doi.org/10.1145/3384419.3430781 "https://doi.org/10.1145/3384419.3430781")
+
+* [https://ieeexplore-ieee-org.wwwproxy1.library.unsw.edu.au/document/8835392](https://ieeexplore-ieee-org.wwwproxy1.library.unsw.edu.au/document/8835392 "https://ieeexplore-ieee-org.wwwproxy1.library.unsw.edu.au/document/8835392")
+
+
+* [https://arxiv.org/abs/2105.05162](https://arxiv.org/abs/2105.05162 "https://arxiv.org/abs/2105.05162")
+
+
+* [https://iotrim.github.io/](https://iotrim.github.io/ "https://iotrim.github.io/")
+
+***
+
+Cloud
+
+Smartphone
+
+Device
+
+Proto
+
+***
+
+## Smartphone App analysis
+
+> [https://ieeexplore-ieee-org.wwwproxy1.library.unsw.edu.au/document/8835392](https://ieeexplore-ieee-org.wwwproxy1.library.unsw.edu.au/document/8835392 "https://ieeexplore-ieee-org.wwwproxy1.library.unsw.edu.au/document/8835392")
+
+[https://github.com/linkedin/qark/](https://github.com/linkedin/qark/ "https://github.com/linkedin/qark/")
+
+[https://opensecurity.in/](https://opensecurity.in/ "https://opensecurity.in/")
+
+[https://github.com/MobSF/Mobile-Security-Framework-MobSF](https://github.com/MobSF/Mobile-Security-Framework-MobSF "https://github.com/MobSF/Mobile-Security-Framework-MobSF")
+
+[https://www.roe.ch/SSLsplit](https://www.roe.ch/SSLsplit "https://www.roe.ch/SSLsplit")
+
+[https://www.ntop.org/products/traffic-analysis/ntop/#ntopng-screenshots](https://www.ntop.org/products/traffic-analysis/ntop/#ntopng-screenshots "https://www.ntop.org/products/traffic-analysis/ntop/#ntopng-screenshots")
+
+[https://ieeexplore-ieee-org.wwwproxy1.library.unsw.edu.au/abstract/document/8939043](https://ieeexplore-ieee-org.wwwproxy1.library.unsw.edu.au/abstract/document/8939043 "https://ieeexplore-ieee-org.wwwproxy1.library.unsw.edu.au/abstract/document/8939043")
+
+[https://www.mdpi.com/1999-5903/12/2/27](https://www.mdpi.com/1999-5903/12/2/27 "https://www.mdpi.com/1999-5903/12/2/27")
+
+[https://www.usenix.org/conference/woot19/presentation/ullrich](https://www.usenix.org/conference/woot19/presentation/ullrich "https://www.usenix.org/conference/woot19/presentation/ullrich")
+
+[https://dontvacuum.me/talks/DEFCON26/DEFCON26-Having_fun_with_IoT-Xiaomi.pdf](https://dontvacuum.me/talks/DEFCON26/DEFCON26-Having_fun_with_IoT-Xiaomi.pdf "https://dontvacuum.me/talks/DEFCON26/DEFCON26-Having_fun_with_IoT-Xiaomi.pdf")
