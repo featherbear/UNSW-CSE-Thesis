@@ -8,8 +8,8 @@
     "buildPDF": "node ./buildPDF.js"
   },
   "dependencies": {
-    "decktape": "^3.3.0",
     "polka": "^0.5.2",
+    "puppeteer": "^10.4.0",
     "sirv": "^1.0.18",
     "xml2js": "^0.4.23"
   }

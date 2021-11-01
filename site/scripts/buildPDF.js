@@ -3,7 +3,7 @@ const xml2js = require('xml2js'),
   path = require('path'),
   sirv = require('sirv'),
   polka = require('polka'),
-  childProcess = require('child_process')
+  puppeteer = require('puppeteer')
 
 let httpRoot = path.join(__dirname, '../public')
 let workDir = path.join(httpRoot, 'presentations')
@@ -17,6 +17,7 @@ let server = polka()
       fs.readFileSync(path.join(workDir, 'index.xml'), 'utf8')
     )
 
+    const browser = await puppeteer.launch({ headless: true })
     let promises = []
 
     for (let {
@@ -25,40 +26,23 @@ let server = polka()
       let linkSplit = link.split('/').filter(v => v)
       let fileName = linkSplit[linkSplit.length - 1]
       console.log('Exporting ' + link + ' to ' + fileName + '.pdf')
-      let command = [
-        'npx',
-        'decktape',
-        'reveal',
-        BASE_HOST + link,
-        path.join(workDir, fileName + '.pdf')
-      ].join(' ')
-      //   console.log('Executing', command)
 
-      promises.push(
-        new Promise((resolve, reject) => {
-          childProcess
-            .exec(command, (error, stdout, stderr) => {
-              if (error) {
-                console.error(`error: ${error.message}`)
-                return
-              }
+      const page = await browser.newPage()
+      await page.goto(BASE_HOST + link + '?print-pdf', {
+        waitUntil: 'networkidle0'
+      })
 
-              if (stderr) {
-                console.error(`stderr: ${stderr}`)
-                return
-              }
-
-              console.log(stdout)
-            })
-            .on('close', function () {
-              resolve()
-            })
-        })
-      )
+      await page.pdf({
+        path: path.join(workDir, fileName + '.pdf'),
+        landscape: true,
+        preferCSSPageSize: true,
+        printBackground: true,
+        displayHeaderFooter: false,
+        omitBackground: false
+      })
     }
 
-    console.log("")
-    await Promise.all(promises)
     console.log('Shutting down server')
+    browser.close()
     server.server.close()
   })
