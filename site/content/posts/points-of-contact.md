@@ -347,5 +347,7 @@ DISCONTINUED
 
 * ADB
 * Laser Microphone - LidarPhone
+  * Distance is provided by the LIDAR sensor
+  * Intensity is also provided by the LIDAR sensor
   * [https://www.youtube.com/watch?v=5qYbzykT4C0&t=163s](https://www.youtube.com/watch?v=5qYbzykT4C0&t=163s "https://www.youtube.com/watch?v=5qYbzykT4C0&t=163s")
 * [https://dl.acm.org/doi/10.1145/3384419.3430430](https://dl.acm.org/doi/10.1145/3384419.3430430 "https://dl.acm.org/doi/10.1145/3384419.3430430")
