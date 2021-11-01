@@ -5,10 +5,12 @@ admin_path: ''
 webhook_url: 
 sections:
 - type: directory
-  path: site/content/presentations
-  label: Presentation
+  path: site/content/posts
+  label: Posts
   create: all
   match: "**/*"
+  templates:
+  - default
 - type: directory
   path: site/content/docs
   label: Docs
@@ -17,12 +19,10 @@ sections:
   templates:
   - doc
 - type: directory
-  path: site/content/posts
-  label: Posts
+  path: site/content/presentations
+  label: Presentation
   create: all
   match: "**/*"
-  templates:
-  - default
 upload_dir: site/static/uploads
 public_path: "/uploads"
 front_matter_path: ''
