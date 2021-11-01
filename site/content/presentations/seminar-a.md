@@ -21,7 +21,12 @@ Computer Engineering @ UNSW Sydney
 Interests:
 
 * :)
-* 
+
+# Introduction
+
+* What
+* Why
+* But whyy
 
 ***
 
