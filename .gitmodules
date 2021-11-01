@@ -1,3 +1,6 @@
 [submodule "site/themes/hugo-eureka"]
 	path = site/themes/hugo-eureka
 	url = https://github.com/wangchucheng/hugo-eureka.git
+[submodule "site/themes/reveal-hugo"]
+	path = site/themes/reveal-hugo
+	url = https://github.com/dzello/reveal-hugo

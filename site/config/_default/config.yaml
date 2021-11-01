@@ -3,7 +3,9 @@ relativeURLs: true
 
 title: CSE Thesis Musings
 
-theme: hugo-eureka
+theme:
+  - hugo-eureka
+  - reveal-hugo
 
 paginate: 25
 copyright: >
@@ -38,3 +40,9 @@ taxonomies:
 
 build:
   useResourceCacheWhen: always
+
+outputFormats:
+  Reveal:
+    baseName: index
+    mediaType: text/html
+    isHTML: true
