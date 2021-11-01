@@ -5,12 +5,67 @@ outputs = ["Reveal"]
 title = "Seminar A"
 
 +++
-# It's a test presentation!
+
+# “Smart” Vacuum Cleaners
+
+### An Audit Into The Security and Integrity of IoT Systems
 
 ***
 
-# Some second slide
+# About Me
+
+Andrew Wong
+
+Computer Engineering @ UNSW Sydney
+
+Interests:
+
+* :)
+
+# Introduction
+
+* What
+* Why
+* But whyy
 
 ***
 
-## A third slide
+# Background Information
+
+{{% section %}}
+
+## Roborock
+
+***
+
+## Roborock S6 Vacuum Cleaner
+
+{{% /section %}}
+
+***
+
+# Rationale
+
+***
+
+# Proposal
+
+***
+
+# Literature Review
+
+***
+
+# Plan
+
+***
+
+# Preliminary Results
+
+***
+
+# Future
+
+***
+
+# Any Questions?
