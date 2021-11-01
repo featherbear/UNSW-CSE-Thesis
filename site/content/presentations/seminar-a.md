@@ -33,6 +33,21 @@ title = "Seminar A"
 
 Internet of Things (IoT) and Smart Home devices are everywhere.
 
+{{% fragment %}}
+Q: Can we completely trust a device's {security, privacy}?  
+A: <label>no</label>
+
+* Developers are humans.
+    * Humans make mistakes.
+        * Developers make <s>mistakes</s> bugs
+* Or maybe secret company agendas?
+{{% /fragment %}}
+
+{{% fragment %}}
+<label>We should always verify and test things where possible!</label>
+{{% /fragment %}}
+
+
 {{% note %}}
 The Internet of Things (IoT) and Smart Home devices are everywhere...  
 From smart lightbulbs, to smart fridges... to ... [*] smart ... flip-flops?
