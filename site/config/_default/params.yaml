@@ -84,6 +84,7 @@ reveal_hugo:
   pdf_separate_fragments: true
   custom_theme: "presentations/theme.scss"
   custom_theme_compile: true
+  width: 1024
   dependencies: [
     {
       src: '../plugins/capsLockKeymod.js'

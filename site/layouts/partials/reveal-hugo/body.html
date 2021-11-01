@@ -1,0 +1,8 @@
+<script type="text/javascript">
+  // Apply default fade to slide transition
+  for (let slide of document.querySelectorAll(".reveal .slides > section")) {
+    if (!slide.dataset.transition) {
+      slide.dataset.transition = "fade-out slide-in";
+    }
+  }
+</script>
