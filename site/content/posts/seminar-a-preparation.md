@@ -24,7 +24,7 @@ toc = true
 
 ## Introduction
 
-Who, me? 
+Who, me?
 
 Andrew Wong
 
@@ -111,7 +111,7 @@ How have manufacturers attempted to mitigate the potential for IoT-enabled / sma
 
 ***
 
-Things to look out for 
+Things to look out for
 
 * vulnerable binaries - priv esc?
 * How easy is it to maliciously 'bug' a vacuum cleaner (IoT reseller concerns)
@@ -153,3 +153,15 @@ INSERT SCREENSHOT OF THESIS RESEARCH PAGE
   * root@... # echo got root!
 
 ***
+
+background info
+
+why im doing this
+
+what am i doing
+
+(lit review)
+
+preliminary results
+
+future plans
