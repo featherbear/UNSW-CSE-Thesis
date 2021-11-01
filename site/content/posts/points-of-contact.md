@@ -395,3 +395,33 @@ Proto
 [https://www.usenix.org/conference/woot19/presentation/ullrich](https://www.usenix.org/conference/woot19/presentation/ullrich "https://www.usenix.org/conference/woot19/presentation/ullrich")
 
 [https://dontvacuum.me/talks/DEFCON26/DEFCON26-Having_fun_with_IoT-Xiaomi.pdf](https://dontvacuum.me/talks/DEFCON26/DEFCON26-Having_fun_with_IoT-Xiaomi.pdf "https://dontvacuum.me/talks/DEFCON26/DEFCON26-Having_fun_with_IoT-Xiaomi.pdf")
+
+***
+
+## Security Prevalance
+
+iRobot Roomba - selling data - July 2017
+
+[https://www.theverge.com/2017/7/24/16021610/irobot-roomba-homa-map-dat_-sale_](https://www.theverge.com/2017/7/24/16021610/irobot-roomba-homa-map-data-sale "https://www.theverge.com/2017/7/24/16021610/irobot-roomba-homa-map-data-sale")
+
+> shipping address, WiFi configuration, or simply position data
+>
+> collected by the robot or the app, apartment size and furniture
+>
+> can be associated with locations.
+>
+> ( Woot 19 )
+
+Debug pins
+
+Secure boot bypass
+
+static keys
+
+ip disclosure
+
+buffer overlow
+
+Breakdown of hardware  
+\- it's just a computer.  
+\- It's an entire computer.
