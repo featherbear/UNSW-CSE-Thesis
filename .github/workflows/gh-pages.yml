@@ -29,6 +29,11 @@ jobs:
       with:
         node-version: '14.x'
 
+    - name: Build presentations as PDF
+      run: |
+        npm --prefix ./site/scripts install
+        npm --prefix ./site/scripts run buildPDF
+
     - name: Build TLDR site
       run: |
         npm install

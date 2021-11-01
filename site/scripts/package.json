@@ -4,6 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "buildPDF": "node ./buildPDF.js"
+  },
   "dependencies": {
     "decktape": "^3.3.0",
     "polka": "^0.5.2",
