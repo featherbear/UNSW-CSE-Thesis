@@ -23,6 +23,8 @@ sections:
   label: Presentation
   create: all
   match: "**/*"
+  templates:
+  - presentation
 upload_dir: site/static/uploads
 public_path: "/uploads"
 front_matter_path: ''
