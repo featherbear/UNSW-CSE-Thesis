@@ -8,7 +8,7 @@
 <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <link rel=stylesheet href=../../reveal-js/css/reset.css>
 <link rel=stylesheet href=../../reveal-js/css/reveal.css>
-<link rel=stylesheet href=../../_.min.aae64fea6fbed8955ca810c33ca5c07ef9e275c24c07999d7ff1e17559676ce9.css id=theme><link rel=stylesheet href=../../highlight-js/default.min.css>
+<link rel=stylesheet href=../../_.min.92362cc8c3cd71919e6ec6ad37d40b05e67c1ea1a249f5b99f579dc3216d4959.css id=theme><link rel=stylesheet href=../../highlight-js/default.min.css>
 </head>
 <body>
 <div class=reveal>
@@ -67,23 +67,242 @@ Making things, breaking things&mldr; mainly the latter
 <div class=profileBanner></div>
 </section><section>
 <h1 id=background-information>Background Information</h1>
+<p><img src=../../uploads/20211003-60410b5d26ef2b00045692ec.png class="plain small"></p>
 <section data-shortcode-section>
-<h2 id=roborock>Roborock</h2>
 </section><section>
-<h2 id=roborock-s6-vacuum-cleaner>Roborock S6 Vacuum Cleaner</h2>
+<ul>
+<li>Robotic home cleaning appliances</li>
+<li>Founded in July 2014, Beijing</li>
+<li>Partnered with Xiaomi in September 2014
+<ul>
+<li>Investments + Partnership</li>
+</ul>
+</li>
+</ul>
+</section><section>
+<ul>
+<li>September 2016 - Mi Home Robotic Vaccuum Cleaner
+<ul>
+<li>Very first product!</li>
+</ul>
+</li>
+<li>⋮ Roborock S5, E2, E3</li>
+<li>June 2019 - <label>Roborock S6</label></li>
+<li>⋮ Roborock S5 Max, S4, S6 Pure, S6 MaxV, E4, S4 Max</li>
+<li>January 2021 - S7</li>
+</ul>
 </section>
 </section><section>
+<h1 id=background-information-1>Background Information</h1>
+<h3 id=roborock-s6-vacuum-cleaner>Roborock S6 Vacuum Cleaner</h3>
+<section data-shortcode-section>
+<p><img src=../../uploads/20211103-s6-pure-banner.webp alt></p>
+</section><section>
+<ul>
+<li>Chips, specs</li>
+</ul>
+</section><section>
+<ul>
+<li>ADB Port?</li>
+</ul>
+</section><section>
+<p>Xiaomi
+Smartphone Application</p>
+</section><section>
+<p>Ubuntu</p>
+</section>
+</section><section>
+<h1 id=background-information-2>Background Information</h1>
+<p>Widespread product release</p>
+<ul>
+<li>Buy &lsquo;generic&rsquo;, resell</li>
+<li>Buy into the framework</li>
+<li>i.e. Tuya (smart home), Xiaomi</li>
+<li>Use their ecosystem / framework
+<ul>
+<li>And their associated risks</li>
+</ul>
+</li>
+</ul>
+<p>MENTION SOMETHING ABOUT ALEXA, GOOGLE ASSISTANT, SIRI IN THE INTRODUCTION?</p>
+<p><a href=https://github.com/OpenMiHome/mihome-binary-protocol/blob/master/doc/PROTOCOL.md>https://github.com/OpenMiHome/mihome-binary-protocol/blob/master/doc/PROTOCOL.md</a></p>
+<ul>
+<li>Liberation from coupled service</li>
+<li>Privacy?</li>
+</ul>
+<p>RRoR
+(DustCloud)
+MiCloudFaker
+Valetudo</p>
+<h3 id=xiaomi-integration>Xiaomi Integration</h3>
+<p>MiIO
+HomeAssistant
+OpenHab</p>
+</section><section>
 <h1 id=rationale>Rationale</h1>
+<p>Security is important!</p>
+<p>Check things for (y)ourself!</p>
+</section><section>
+<h1 id=statement>Statement</h1>
+<blockquote>
+</blockquote>
+<p>How have manufacturers of IoT / smart home devices addressed the increasing concerns of digital privacy and product security?</p>
+<blockquote>
+</blockquote>
 </section><section>
 <h1 id=proposal>Proposal</h1>
+<blockquote>
+<p>Digital Privacy</p>
+</blockquote>
+<p>Investigate the nature of network data (i.e. content, frequency, destination) from the Roborock S6, and how the data is used.</p>
+<hr>
+<blockquote>
+<p>Product Security</p>
+</blockquote>
+<p>Investigate potential security vulnerabilities of the Roborock S6, and assess the effectiveness of current security fortifications.</p>
 </section><section>
 <h1 id=literature-review>Literature Review</h1>
+<section data-shortcode-section>
+<blockquote>
+<p>2017 - Dennis Giese</p>
+</blockquote>
+<ul>
+<li>Found ways to root the Mi Home Robotic Vacuum Cleaner and the Roborock S6</li>
+<li><a href=https://dontvacuum.me>https://dontvacuum.me</a></li>
+<li>Continued analysis on later Xiaomi (and derivative) vacuum cleaners</li>
+</ul>
+<p>Dustcloud</p>
+<p>TODO: OTHER PAPERS</p>
+</section>
 </section><section>
 <h1 id=plan>Plan</h1>
+<section data-shortcode-section>
+<ul>
+<li>Research</li>
+<li>Get the Roborock S6 vacuum cleaner</li>
+<li>Acquisition and capture of network activity</li>
+<li>Find a way in (it runs Linux!)</li>
+<li>Image the system for offline analysis</li>
+<li>Reverse engineering and binary analysis of firmware and software
+<ul>
+<li>Look through binaries for security vulnerabilities and fortifications</li>
+</ul>
+</li>
+</ul>
+</section><section>
+<h3 id=contingency>Contingency</h3>
+<p><label>If we can&rsquo;t get into the device?</label></p>
+<ul>
+<li>
+<p>Option 1 - Protocol analysis (network traffic)</p>
+<ul>
+<li>i.e. Inspect the data and its nature
+<ul>
+<li>Content, Frequency, Destination</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Option 2 - Investigate the <img src=../../uploads/20211103-xiaomi-home-logo.png height=24px> <a href="https://play.google.com/store/apps/details?id=com.xiaomi.smarthome" style="text-decoration:underline dotted">Xiaomi Home</a> smartphone application (used to communicate with the device)</p>
+<ul>
+<li>i.e. Decompile the Android APK file and look for security vulnerabilities and fortifications</li>
+</ul>
+</li>
+</ul>
+</section><section>
+<h3 id=future-plans>Future Plans</h3>
+<ul>
+<li>See what the sensors see</li>
+<li>Circuit board decomposition</li>
+<li>Analyse the custom ADB binary serving the USB port</li>
+</ul>
+</section>
+</section><section>
+<h1 id=project-timeline>Project Timeline</h1>
+</section><section>
+<h1 id=rolling-research>Rolling Research</h1>
+<section data-shortcode-section>
+<blockquote>
+<p><a href=https://featherbear.cc/UNSW-CSE-Thesis/>featherbear.cc/UNSW-CSE-Thesis</a></p>
+</blockquote>
+<p><a href=https://featherbear.cc/UNSW-CSE-Thesis/><img src=../../uploads/20211103-screely-1635868857938.png alt></a></p>
+</section><section>
+<blockquote>
+<p><a href=https://featherbear.cc/UNSW-CSE-Thesis/tldr>featherbear.cc/UNSW-CSE-Thesis/tldr</a></p>
+</blockquote>
+<p><a href=https://featherbear.cc/UNSW-CSE-Thesis/tldr><img src=../../uploads/20211103-screely-1635869059154.png alt></a></p>
+</section>
+</section><section>
+<h1 id=research-upskill-tooling>Research, Upskill, Tooling</h1>
+<ul>
+<li>How to capture network activity <label>without</label> compromising my home network?</li>
+<li>Interfacing with JTAG / UART / Serial</li>
+<li>Linux forensics</li>
+<li>Learn the ARM ISA
+<ul>
+<li>Processor Modes, Protection Rings?</li>
+</ul>
+</li>
+</ul>
+<aside class=notes><ul>
+<li>Isolated Network</li>
+<li>VLAN?</li>
+<li>Port Mirroring / Packet Sniffing</li>
+<li>Wireshark</li>
+</ul>
+</aside>
 </section><section>
 <h1 id=preliminary-results>Preliminary Results</h1>
+<section data-shortcode-section>
+<h3 id=network-setup>Network Setup</h3>
+<p><img src=../../uploads/20211027-20211026_210111-highlighted.jpg alt></p>
 </section><section>
-<h1 id=future>Future</h1>
+<h3 id=initial-packet-capture>[Initial] Packet Capture</h3>
+<p><img src=../../uploads/20211025-snipaste_2021-10-26_02-04-58.jpg alt></p>
+<ul>
+<li>No LAN-LAN packets???</li>
+<li><label>incomplete test</label> - misconfigured packet capture setup</li>
+</ul>
+</section><section>
+<h3 id=teardown>Teardown</h3>
+<p><img src=../../uploads/20211029-20211029_233611.jpg alt></p>
+</section><section>
+<h3 id=initial-breakdown-and-pinout-where-needed>Initial Breakdown and Pinout (where needed)</h3>
+<p><img src=../../uploads/20211029-20211030_021531.jpg alt></p>
+<aside class=notes><p>STM32, Allwinner R16 (Quad-core ARMv7 processor), USB Port (custom ADB?)</p>
+</aside>
+</section><section>
+<h3 id=identification-of-the-uart-pins>Identification of the UART pins</h3>
+<p><img src=../../uploads/20211029-20211030_021507-uart-highlighted.jpg alt></p>
+</section><section>
+<h3 id=serial-access>Serial Access</h3>
+<ul>
+<li>Serial (baud=115200) gives us a shell!</li>
+</ul>
+<p><img src=../../uploads/20211029-20211030_025959.jpg width=33.5%>
+<img src=../../uploads/20211103-serial-comms.gif width=60%></p>
+<blockquote>
+<p>Need a root password though&mldr;</p>
+</blockquote>
+</section><section>
+<h3 id=u-boot-bootloader>U-Boot Bootloader</h3>
+<p><img src=../../uploads/20211103-Snipaste_2021-11-03_03-47-40.jpg alt></p>
+<ul>
+<li>Able to enter the bootloader shell if <code>s</code> is pressed during init</li>
+</ul>
+<p><img src=../../uploads/20211029-bootloader-shell.jpg alt></p>
+</section><section>
+<h3 id=root>Root!</h3>
+<p><img src=../../uploads/20211029-snipaste_2021-10-30_03-24-41.jpg alt></p>
+<p><img src=../../uploads/20211029-snipaste_2021-10-30_03-26-11.jpg alt></p>
+</section>
+</section><section>
+<h1 id=moving-ahead>Moving Ahead</h1>
+<ul>
+<li>Dump the firmware and begin RE / forensics</li>
+<li>Redo (and further investigate) live system analysis</li>
+</ul>
 </section><section>
 <h1 id=any-questions>Any Questions?</h1>
 </section>
