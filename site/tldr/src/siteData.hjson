@@ -30,6 +30,7 @@
       {
         title: Monday
         date: 18/10/2021
+        link: https://featherbear.cc/UNSW-CSE-Thesis/posts/seminar-a-preparation/
         content: [
             Updated Points of Contact document
             Extracted key TODOs for Seminar A and Report A
@@ -44,7 +45,15 @@
           Drafted content for the Seminar A presentation
           Began designing content for the Seminar A presentation
         ]  
-        link: https://featherbear.cc/UNSW-CSE-Thesis/posts/seminar-a-preparation/
+        link: https://featherbear.cc/UNSW-CSE-Thesis/docs/presentations/seminar-a/
+      }
+      {
+        title: Wednesday
+        date: 3/11/2021
+        content: [
+          Continued working on Seminar A presentation
+        ]  
+        link: https://featherbear.cc/UNSW-CSE-Thesis/docs/presentations/seminar-a/
       }
     ]
   }
