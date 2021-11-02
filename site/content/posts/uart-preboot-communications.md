@@ -870,6 +870,8 @@ Ubuntu 14.04.3 LTS rockrobo ttyS0
 rockrobo login: 
 ```
 
+![](/uploads/20211103-serial-comms.gif)
+
 ---
 
 ## env print

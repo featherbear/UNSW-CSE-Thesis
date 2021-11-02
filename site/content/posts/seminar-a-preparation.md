@@ -47,9 +47,9 @@ Dennis Giese
 
 ## Hypothesis / Problem
 
-> How have manufacturers of IoT-enabled / smart home devices addressed the increasing concerns of digital privacy and integrity
+> How have manufacturers of IoT-enabled / smart home devices addressed the increasing concerns of digital privacy and product security?
 
-How have manufacturers attempted to mitigate the potential for IoT-enabled / smart home devices to be modified with malicious intent?
+<s>How have manufacturers attempted to mitigate the potential for IoT-enabled / smart home devices to be modified with malicious intent?</s>
 
 ***
 
