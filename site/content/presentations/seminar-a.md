@@ -2,8 +2,7 @@
 date = 2021-11-01T07:28:19Z
 layout = "bundle"
 outputs = ["Reveal"]
-title = "Seminar A"
-
+title = "Seminar A | Andrew Wong"
 +++
 
 {{< slide background-image="https://featherbear.cc/UNSW-CSE-Thesis/uploads/20211030_040050.jpg" transition="fade" >}}
@@ -36,6 +35,11 @@ Internet of Things (IoT) and Smart Home devices are everywhere.
 {{% fragment %}}
 Q: Can we completely trust a device's {security, privacy}?  
 A: <label>no</label>
+{{% /fragment %}}
+
+{{% fragment %}}
+
+<hr >
 
 - Developers are humans.
   - Humans make mistakes.
@@ -101,7 +105,118 @@ Making things, breaking things... mainly the latter
 
 ---
 
+{{< slide transition="fade" >}}
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
 # Background Information
+
+---
+
+# Background Information
+
+##### Widespread availability of IoT brands
+
+{{% section %}}
+![](/uploads/20211103-screely-1635938406254.png)
+
+---
+
+- IoT manufacturers sell their products to vendors
+  - The product itself
+  - Cloud infrastructure
+  - Smartphone application
+- White-label vendors buy a generic product
+  - Rebrand and sell products under their name
+
+---
+
+<blockquote>
+Vulnerabilities in IoT infrastructure<br />=<br /> Vulnerability in all white-label products
+</blockquote>
+
+{{% /section %}}
+
+---
+
+# Background Information
+
+##### Centralisation and IoT Manufacturers as "Data Giants"
+
+{{% section %}}
+
+- Same IoT cloud infrastructure used by white-label vendors
+- Data and network activity is all centralised / standardised
+- Privacy concerns?
+  - Who, What, Where, When, Why?
+
+<blockquote>
+IoT infrastructure outage<br />=<br />Product-wide outage
+</blockquote>
+
+
+---
+
+- Reverse engineering of cloud communications protocols / API
+  - e.g. MiIO protocol [(link)](https://github.com/OpenMiHome/mihome-binary-protocol)
+- Decoupling of devices from the necessity of internet / IoT cloud
+  - <label>HomeAssistant</label> - Home Automation [(link)](https://www.home-assistant.io/)
+  - <label>OpenHAB</label> - Home Automation [(link)](https://www.openhab.org/)
+  - <label>Valetudo</label> - Cloud-less vacuum cleaner control inferface [(link)](https://github.com/Hypfer/Valetudo)
+  - <label>DustCloud</label> - Xiaomi Cloud Emulation [(link)](https://github.com/dgiese/dustcloud)
+  - <label>MiCloudFaker</label> - Xiaomi Cloud Emulation [(link)](https://github.com/unrelentingtech/micloudfaker)
+  - <label>tuya-convert</label> - Flash Tuya devices to custom firmware [(link)](https://github.com/ct-Open-Source/tuya-convert)
+
+{{% /section %}}
+
+---
+
+# Statement
+
+>
+
+How have manufacturers of IoT / smart home devices addressed the increasing concerns of digital privacy and product security?
+
+>
+
+{{% section %}}
+
+---
+
+# Rationale
+
+> Security is important!
+
+> Check things for yourself!
+
+{{% /section %}}
+
+---
+
+# Proposal
+
+> Digital Privacy
+
+Investigate the nature of network data (i.e. content, frequency, destination) from the Roborock S6, and how the data is used.
+
+<hr >
+
+> Product Security
+
+Investigate potential security vulnerabilities of the Roborock S6, and assess the effectiveness of current security fortifications.
+
+---
+
+# About The Company
 
 <img src="/uploads/20211003-60410b5d26ef2b00045692ec.png" class="plain small" />
 
@@ -127,7 +242,7 @@ Making things, breaking things... mainly the latter
 
 ---
 
-# Background Information
+# About The Device
 
 ### Roborock S6 Vacuum Cleaner
 
@@ -137,85 +252,47 @@ Making things, breaking things... mainly the latter
 
 ---
 
-* Chips, specs
+<!-- ##### Model Comparison -->
+<!-- --- -->
+
+##### Specifications
+
+<!-- 2019 Flagship -->
+
+- CPU: Allwinner R16 Quad-core ARMv7
+- ACU: STM32F103VC
+- RAM: 512 MB
+- Flash: 4 GB eMMC
+- Wireless: RTL8189ETV (802.11 b/g/n)
+- Cloud: Tuya / Xiaomi
+- OS: Ubuntu 14.04
 
 ---
 
-* ADB Port?
+#### Cloud Capability
+
+<div class="split2">
+<div>
+<label>Roborock (Xiaomi Cloud)</label>
+
+![](/uploads/20211103%20-%20Snipaste_2021-11-03_21-47-05.jpg)
+
+</div>
+
+<div>
+<label>Tuya Cloud</label>
+
+![](/uploads/20211103%20-%20Snipaste_2021-11-03_21-48-02.jpg)
+</div>
+</div>
 
 ---
 
-Xiaomi
-Smartphone Application
+IoT infrastructure vulnerability ([15/09/2021](https://global.roborock.com/pages/disclosure-security-vulnerability-on-tuya-iot-cloud))
 
----
-
-Ubuntu
+![](/uploads/20211103-screely-1635941373424-highlight.png)
 
 {{% /section %}}
-
----
-
-
-# Background Information
-
-Widespread product release
-
-* Buy 'generic', resell
-* Buy into the framework
-* i.e. Tuya (smart home), Xiaomi
-* Use their ecosystem / framework
-  * And their associated risks
-
-MENTION SOMETHING ABOUT ALEXA, GOOGLE ASSISTANT, SIRI IN THE INTRODUCTION?
-
-https://github.com/OpenMiHome/mihome-binary-protocol/blob/master/doc/PROTOCOL.md
-
-* Liberation from coupled service
-* Privacy?
-
-RRoR
-(DustCloud)
-MiCloudFaker
-Valetudo
-
-### Xiaomi Integration
-
-MiIO
-HomeAssistant
-OpenHab
-
----
-
-# Rationale
-
-Security is important!
-
-Check things for (y)ourself!
-
----
-
-# Statement
-
->
-
-How have manufacturers of IoT / smart home devices addressed the increasing concerns of digital privacy and product security?
-
->
-
----
-
-# Proposal
-
-> Digital Privacy
-
-Investigate the nature of network data (i.e. content, frequency, destination) from the Roborock S6, and how the data is used.
-
-<hr >
-
-> Product Security
-
-Investigate potential security vulnerabilities of the Roborock S6, and assess the effectiveness of current security fortifications.
 
 ---
 
@@ -231,10 +308,7 @@ Investigate potential security vulnerabilities of the Roborock S6, and assess th
 
 Dustcloud
 
-
 TODO: OTHER PAPERS
-
-
 
 {{% /section %}}
 
@@ -259,6 +333,7 @@ TODO: OTHER PAPERS
 <label>If we can't get into the device?</label>
 
 - Option 1 - Protocol analysis (network traffic)
+
   - i.e. Inspect the data and its nature
     - Content, Frequency, Destination
 
@@ -277,7 +352,59 @@ TODO: OTHER PAPERS
 
 ---
 
+# Research, Upskill, Tooling
+
+> Research areas as of initial exploration
+
+- How to capture network activity <label>without</label> compromising my home network?
+- Interfacing with JTAG / UART / Serial
+- Linux filesystem / system forensics
+- Learn the ARM Instruction Set (ISA)
+  - Processor Modes, Protection Rings?
+- Acquisition of hardware
+  - Serial adapters?
+  - Network switch?
+  - etc...
+
+{{% note %}}
+
+- Isolated Network
+- VLAN?
+- Port Mirroring / Packet Sniffing
+- Wireshark
+
+{{% /note %}}
+
+---
+
+
 # Project Timeline
+
+#### Thesis A
+
+* Initial research and research environment setup
+* Teardown and initial hands-on of Roborock S6
+
+#### Thesis B + C
+
+* Assessment of product security and privacy
+
+---
+
+{{< slide transition="fade" >}}
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+# Current Progress
 
 ---
 
@@ -291,30 +418,11 @@ TODO: OTHER PAPERS
 
 ---
 
-> [featherbear.cc/UNSW-CSE-Thesis/tldr](https://featherbear.cc/UNSW-CSE-Thesis/tldr)
+> [Summary](https://featherbear.cc/UNSW-CSE-Thesis/tldr)
 
 [![](/uploads/20211103-screely-1635869059154.png)](https://featherbear.cc/UNSW-CSE-Thesis/tldr)
 
 {{% /section %}}
-
----
-
-# Research, Upskill, Tooling
-
-- How to capture network activity <label>without</label> compromising my home network?
-- Interfacing with JTAG / UART / Serial
-- Linux forensics
-- Learn the ARM ISA
-  - Processor Modes, Protection Rings?
-
-{{% note %}}
-
-- Isolated Network
-- VLAN?
-- Port Mirroring / Packet Sniffing
-- Wireshark
-
-{{% /note %}}
 
 ---
 
@@ -392,11 +500,31 @@ STM32, Allwinner R16 (Quad-core ARMv7 processor), USB Port (custom ADB?)
 
 ---
 
-# Moving Ahead
+# Next Steps
 
-* Dump the firmware and begin RE / forensics
-* Redo (and further investigate) live system analysis
+- Dump the firmware and begin RE / forensics
+- Redo (and further investigate) live system analysis
+  - i.e. Properly capture _all_ network traffic
 
 ---
 
 # Any Questions?
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+
+<hr >
+
+Andrew Wong
+
+<sub>
+<p>w: <a href="https://featherbear.cc/UNSW-CSE-Thesis">featherbear.cc/UNSW-CSE-Thesis</a></p>
+<p>e: <script>document.write(atob('YW5kcmV3Lmoud29uZ0BzdHVkZW50LnVuc3cuZWR1LmF1'))</script></p>
+</sub>

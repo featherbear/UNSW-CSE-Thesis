@@ -295,7 +295,7 @@ What makes something "secure"?
 * SoC - Allwinner R16 (4x)
 * RAM - 512 MByte
 * Flash - 4GByte eMMC
-* MCU - WiFi STM32F103VCT6
+* MCU - STM32F103VCT6
 * WiFi - RTL8189ETV
 * OS (Kernel) - Ubuntu 14.04 (3.4.x)
 * Year - Q2/2018
@@ -420,7 +420,7 @@ Hardware
 
 ***
 
-## Security Prevalance
+## Security Prevailance
 
 iRobot Roomba - selling data - July 2017
 
