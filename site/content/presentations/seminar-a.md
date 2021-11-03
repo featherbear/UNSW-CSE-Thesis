@@ -180,42 +180,6 @@ IoT infrastructure outage<br />=<br />Product-wide outage
 
 ---
 
-# Statement
-
->
-
-How have manufacturers of IoT / smart home devices addressed the increasing concerns of digital privacy and product security?
-
->
-
-{{% section %}}
-
----
-
-# Rationale
-
-> Security is important!
-
-> Check things for yourself!
-
-{{% /section %}}
-
----
-
-# Proposal
-
-> Digital Privacy
-
-Investigate the nature of network data (i.e. content, frequency, destination) from the Roborock S6, and how the data is used.
-
-<hr >
-
-> Product Security
-
-Investigate potential security vulnerabilities of the Roborock S6, and assess the effectiveness of current security fortifications.
-
----
-
 # About The Company
 
 <img src="/uploads/20211003-60410b5d26ef2b00045692ec.png" class="plain small" />
@@ -296,6 +260,62 @@ IoT infrastructure vulnerability ([15/09/2021](https://global.roborock.com/pages
 
 ---
 
+{{< slide transition="fade" >}}
+
+# Statement
+
+>
+
+How have manufacturers of IoT / smart home devices addressed the increasing concerns of digital privacy and product security?
+
+>
+
+{{% section %}}
+
+---
+
+# Rationale
+
+> Security is important!
+
+> Check things for yourself!
+
+{{% /section %}}
+
+---
+
+# Proposal
+
+> Digital Privacy
+
+Investigate the nature of network data (i.e. content, frequency, destination) from the Roborock S6, and how the data is used.
+
+<hr >
+
+> Product Security
+
+Investigate potential security vulnerabilities of the Roborock S6, and assess the effectiveness of current security fortifications.
+
+---
+
+{{< slide transition="fade" >}}
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+# Literature Review
+#### Existing Works and Papers
+
+---
+
 # Literature Review
 
 {{% section %}}
@@ -311,6 +331,23 @@ Dustcloud
 TODO: OTHER PAPERS
 
 {{% /section %}}
+
+---
+
+{{< slide transition="fade" >}}
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+# Plan
 
 ---
 
