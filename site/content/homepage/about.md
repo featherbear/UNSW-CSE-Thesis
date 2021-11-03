@@ -45,11 +45,15 @@ widget:
 
 ## "Smart" Vacuum Cleaners - An Audit Into The Security and Integrity of IoT Systems
 
-With the rising availability of convenient and end-user friendly Internet of Things devices, there is an increasing demand for users to permit these devices to communicate remotely. Consequently, the unknown nature of communication and of what data is communicated raises privacy concerns that may often overlooked or trivialised in exchange for convenience. This project will involve the audit of an internet-connected robotic vacuum cleaner to assess the internal operations and nature of data that is transmitted, as to investigate any potential vulnerabilities that may potentially render the device insecure.
+With the rising availability of convenient and end-user friendly Internet of Things devices, there is an increasing demand for users to permit these devices to communicate remotely. Consequently, the unknown nature of communication and of what data is communicated raises privacy concerns that may often be overlooked or trivialised in exchange for convenience. This project will involve the audit of an internet-connected robotic vacuum cleaner (Roborock S6) to assess the internal operations and nature of data that is transmitted, as to investigate any potential vulnerabilities that may render the device insecure.
 
 ## Details  
 
-TODO: Insert a clickbait title, also circuits go brrrr
+> How have manufacturers of IoT / smart home devices addressed the increasing concerns of digital privacy and product security?
+
+## Conclusions
+
+We will see, when we finish :)
 
 ## Acknowledgements
 
@@ -60,3 +64,4 @@ Special thanks to:
 - et al.
 - The people who wrote useful resources on the internet
 - Supervisor - Richard Buckland
+- TODO: All the people whom I've based my research from
