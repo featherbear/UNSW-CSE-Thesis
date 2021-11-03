@@ -1,14 +1,14 @@
 <!doctype html><html lang=en>
 <head>
 <meta charset=utf-8>
-<title>Seminar A</title>
+<title>Seminar A | Andrew Wong</title>
 <meta name=description content="Musings of a CSE Thesis">
 <meta name=apple-mobile-web-app-capable content="yes">
 <meta name=apple-mobile-web-app-status-bar-style content="black-translucent">
 <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <link rel=stylesheet href=../../reveal-js/css/reset.css>
 <link rel=stylesheet href=../../reveal-js/css/reveal.css>
-<link rel=stylesheet href=../../_.min.92362cc8c3cd71919e6ec6ad37d40b05e67c1ea1a249f5b99f579dc3216d4959.css id=theme><link rel=stylesheet href=../../highlight-js/default.min.css>
+<link rel=stylesheet href=../../_.min.7d694823d2d9d1ee48251589ba394b2e82b7846e813e97bb6ffd80beb2eca778.css id=theme><link rel=stylesheet href=../../highlight-js/default.min.css>
 </head>
 <body>
 <div class=reveal>
@@ -33,6 +33,8 @@
 <p>Internet of Things (IoT) and Smart Home devices are everywhere.</p>
 <span class=fragment><p>Q: Can we completely trust a device&rsquo;s {security, privacy}?<br>
 A: <label>no</label></p>
+</span>
+<span class=fragment><hr>
 <ul>
 <li>Developers are humans.
 <ul>
@@ -65,8 +67,109 @@ e: <script>document.write(atob('YW5kcmV3Lmoud29uZ0BzdHVkZW50LnVuc3cuZWR1LmF1'))<
 Making things, breaking things&mldr; mainly the latter
 </sub></p>
 <div class=profileBanner></div>
-</section><section>
+</section>
+<section data-noprocess data-shortcode-slide data-transition=fade>
+<p><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br></p>
 <h1 id=background-information>Background Information</h1>
+</section><section>
+<h1 id=background-information-1>Background Information</h1>
+<h5 id=widespread-availability-of-iot-brands>Widespread availability of IoT brands</h5>
+<section data-shortcode-section>
+<p><img src=../../uploads/20211103-screely-1635938406254.png alt></p>
+</section><section>
+<ul>
+<li>IoT manufacturers sell their products to vendors
+<ul>
+<li>The product itself</li>
+<li>Cloud infrastructure</li>
+<li>Smartphone application</li>
+</ul>
+</li>
+<li>White-label vendors buy a generic product
+<ul>
+<li>Rebrand and sell products under their name</li>
+</ul>
+</li>
+</ul>
+</section><section>
+<blockquote>
+Vulnerabilities in IoT infrastructure<br>=<br> Vulnerability in all white-label products
+</blockquote>
+</section>
+</section><section>
+<h1 id=background-information-2>Background Information</h1>
+<h5 id=centralisation-and-iot-manufacturers-as-data-giants>Centralisation and IoT Manufacturers as &ldquo;Data Giants&rdquo;</h5>
+<section data-shortcode-section>
+<ul>
+<li>Same IoT cloud infrastructure used by white-label vendors</li>
+<li>Data and network activity is all centralised / standardised</li>
+<li>Privacy concerns?
+<ul>
+<li>Who, What, Where, When, Why?</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+IoT infrastructure outage<br>=<br>Product-wide outage
+</blockquote>
+</section><section>
+<ul>
+<li>Reverse engineering of cloud communications protocols / API
+<ul>
+<li>e.g. MiIO protocol <a href=https://github.com/OpenMiHome/mihome-binary-protocol>(link)</a></li>
+</ul>
+</li>
+<li>Decoupling of devices from the necessity of internet / IoT cloud
+<ul>
+<li><label>HomeAssistant</label> - Home Automation <a href=https://www.home-assistant.io/>(link)</a></li>
+<li><label>OpenHAB</label> - Home Automation <a href=https://www.openhab.org/>(link)</a></li>
+<li><label>Valetudo</label> - Cloud-less vacuum cleaner control inferface <a href=https://github.com/Hypfer/Valetudo>(link)</a></li>
+<li><label>DustCloud</label> - Xiaomi Cloud Emulation <a href=https://github.com/dgiese/dustcloud>(link)</a></li>
+<li><label>MiCloudFaker</label> - Xiaomi Cloud Emulation <a href=https://github.com/unrelentingtech/micloudfaker>(link)</a></li>
+<li><label>tuya-convert</label> - Flash Tuya devices to custom firmware <a href=https://github.com/ct-Open-Source/tuya-convert>(link)</a></li>
+</ul>
+</li>
+</ul>
+</section>
+</section><section>
+<h1 id=statement>Statement</h1>
+<blockquote>
+</blockquote>
+<p>How have manufacturers of IoT / smart home devices addressed the increasing concerns of digital privacy and product security?</p>
+<blockquote>
+</blockquote>
+<section data-shortcode-section>
+</section><section>
+<h1 id=rationale>Rationale</h1>
+<blockquote>
+<p>Security is important!</p>
+</blockquote>
+<blockquote>
+<p>Check things for yourself!</p>
+</blockquote>
+</section>
+</section><section>
+<h1 id=proposal>Proposal</h1>
+<blockquote>
+<p>Digital Privacy</p>
+</blockquote>
+<p>Investigate the nature of network data (i.e. content, frequency, destination) from the Roborock S6, and how the data is used.</p>
+<hr>
+<blockquote>
+<p>Product Security</p>
+</blockquote>
+<p>Investigate potential security vulnerabilities of the Roborock S6, and assess the effectiveness of current security fortifications.</p>
+</section><section>
+<h1 id=about-the-company>About The Company</h1>
 <p><img src=../../uploads/20211003-60410b5d26ef2b00045692ec.png class="plain small"></p>
 <section data-shortcode-section>
 </section><section>
@@ -93,73 +196,37 @@ Making things, breaking things&mldr; mainly the latter
 </ul>
 </section>
 </section><section>
-<h1 id=background-information-1>Background Information</h1>
+<h1 id=about-the-device>About The Device</h1>
 <h3 id=roborock-s6-vacuum-cleaner>Roborock S6 Vacuum Cleaner</h3>
 <section data-shortcode-section>
 <p><img src=../../uploads/20211103-s6-pure-banner.webp alt></p>
 </section><section>
+<h5 id=specifications>Specifications</h5>
 <ul>
-<li>Chips, specs</li>
+<li>CPU: Allwinner R16 Quad-core ARMv7</li>
+<li>ACU: STM32F103VC</li>
+<li>RAM: 512 MB</li>
+<li>Flash: 4 GB eMMC</li>
+<li>Wireless: RTL8189ETV (802.11 b/g/n)</li>
+<li>Cloud: Tuya / Xiaomi</li>
+<li>OS: Ubuntu 14.04</li>
 </ul>
 </section><section>
-<ul>
-<li>ADB Port?</li>
-</ul>
+<h4 id=cloud-capability>Cloud Capability</h4>
+<div class=split2>
+<div>
+<label>Roborock (Xiaomi Cloud)</label>
+<p><img src=../../uploads/20211103%20-%20Snipaste_2021-11-03_21-47-05.jpg alt></p>
+</div>
+<div>
+<label>Tuya Cloud</label>
+<p><img src=../../uploads/20211103%20-%20Snipaste_2021-11-03_21-48-02.jpg alt></p>
+</div>
+</div>
 </section><section>
-<p>Xiaomi
-Smartphone Application</p>
-</section><section>
-<p>Ubuntu</p>
+<p>IoT infrastructure vulnerability (<a href=https://global.roborock.com/pages/disclosure-security-vulnerability-on-tuya-iot-cloud>15/09/2021</a>)</p>
+<p><img src=../../uploads/20211103-screely-1635941373424-highlight.png alt></p>
 </section>
-</section><section>
-<h1 id=background-information-2>Background Information</h1>
-<p>Widespread product release</p>
-<ul>
-<li>Buy &lsquo;generic&rsquo;, resell</li>
-<li>Buy into the framework</li>
-<li>i.e. Tuya (smart home), Xiaomi</li>
-<li>Use their ecosystem / framework
-<ul>
-<li>And their associated risks</li>
-</ul>
-</li>
-</ul>
-<p>MENTION SOMETHING ABOUT ALEXA, GOOGLE ASSISTANT, SIRI IN THE INTRODUCTION?</p>
-<p><a href=https://github.com/OpenMiHome/mihome-binary-protocol/blob/master/doc/PROTOCOL.md>https://github.com/OpenMiHome/mihome-binary-protocol/blob/master/doc/PROTOCOL.md</a></p>
-<ul>
-<li>Liberation from coupled service</li>
-<li>Privacy?</li>
-</ul>
-<p>RRoR
-(DustCloud)
-MiCloudFaker
-Valetudo</p>
-<h3 id=xiaomi-integration>Xiaomi Integration</h3>
-<p>MiIO
-HomeAssistant
-OpenHab</p>
-</section><section>
-<h1 id=rationale>Rationale</h1>
-<p>Security is important!</p>
-<p>Check things for (y)ourself!</p>
-</section><section>
-<h1 id=statement>Statement</h1>
-<blockquote>
-</blockquote>
-<p>How have manufacturers of IoT / smart home devices addressed the increasing concerns of digital privacy and product security?</p>
-<blockquote>
-</blockquote>
-</section><section>
-<h1 id=proposal>Proposal</h1>
-<blockquote>
-<p>Digital Privacy</p>
-</blockquote>
-<p>Investigate the nature of network data (i.e. content, frequency, destination) from the Roborock S6, and how the data is used.</p>
-<hr>
-<blockquote>
-<p>Product Security</p>
-</blockquote>
-<p>Investigate potential security vulnerabilities of the Roborock S6, and assess the effectiveness of current security fortifications.</p>
 </section><section>
 <h1 id=literature-review>Literature Review</h1>
 <section data-shortcode-section>
@@ -219,29 +286,24 @@ OpenHab</p>
 </ul>
 </section>
 </section><section>
-<h1 id=project-timeline>Project Timeline</h1>
-</section><section>
-<h1 id=rolling-research>Rolling Research</h1>
-<section data-shortcode-section>
-<blockquote>
-<p><a href=https://featherbear.cc/UNSW-CSE-Thesis/>featherbear.cc/UNSW-CSE-Thesis</a></p>
-</blockquote>
-<p><a href=https://featherbear.cc/UNSW-CSE-Thesis/><img src=../../uploads/20211103-screely-1635868857938.png alt></a></p>
-</section><section>
-<blockquote>
-<p><a href=https://featherbear.cc/UNSW-CSE-Thesis/tldr>featherbear.cc/UNSW-CSE-Thesis/tldr</a></p>
-</blockquote>
-<p><a href=https://featherbear.cc/UNSW-CSE-Thesis/tldr><img src=../../uploads/20211103-screely-1635869059154.png alt></a></p>
-</section>
-</section><section>
 <h1 id=research-upskill-tooling>Research, Upskill, Tooling</h1>
+<blockquote>
+<p>Research areas as of initial exploration</p>
+</blockquote>
 <ul>
 <li>How to capture network activity <label>without</label> compromising my home network?</li>
 <li>Interfacing with JTAG / UART / Serial</li>
-<li>Linux forensics</li>
-<li>Learn the ARM ISA
+<li>Linux filesystem / system forensics</li>
+<li>Learn the ARM Instruction Set (ISA)
 <ul>
 <li>Processor Modes, Protection Rings?</li>
+</ul>
+</li>
+<li>Acquisition of hardware
+<ul>
+<li>Serial adapters?</li>
+<li>Network switch?</li>
+<li>etc&mldr;</li>
 </ul>
 </li>
 </ul>
@@ -252,6 +314,43 @@ OpenHab</p>
 <li>Wireshark</li>
 </ul>
 </aside>
+</section><section>
+<h1 id=project-timeline>Project Timeline</h1>
+<h4 id=thesis-a>Thesis A</h4>
+<ul>
+<li>Initial research and research environment setup</li>
+<li>Teardown and initial hands-on of Roborock S6</li>
+</ul>
+<h4 id=thesis-b--c>Thesis B + C</h4>
+<ul>
+<li>Assessment of product security and privacy</li>
+</ul>
+</section>
+<section data-noprocess data-shortcode-slide data-transition=fade>
+<p><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br></p>
+<h1 id=current-progress>Current Progress</h1>
+</section><section>
+<h1 id=rolling-research>Rolling Research</h1>
+<section data-shortcode-section>
+<blockquote>
+<p><a href=https://featherbear.cc/UNSW-CSE-Thesis/>featherbear.cc/UNSW-CSE-Thesis</a></p>
+</blockquote>
+<p><a href=https://featherbear.cc/UNSW-CSE-Thesis/><img src=../../uploads/20211103-screely-1635868857938.png alt></a></p>
+</section><section>
+<blockquote>
+<p><a href=https://featherbear.cc/UNSW-CSE-Thesis/tldr>Summary</a></p>
+</blockquote>
+<p><a href=https://featherbear.cc/UNSW-CSE-Thesis/tldr><img src=../../uploads/20211103-screely-1635869059154.png alt></a></p>
+</section>
 </section><section>
 <h1 id=preliminary-results>Preliminary Results</h1>
 <section data-shortcode-section>
@@ -298,14 +397,31 @@ OpenHab</p>
 <p><img src=../../uploads/20211029-snipaste_2021-10-30_03-26-11.jpg alt></p>
 </section>
 </section><section>
-<h1 id=moving-ahead>Moving Ahead</h1>
+<h1 id=next-steps>Next Steps</h1>
 <ul>
 <li>Dump the firmware and begin RE / forensics</li>
-<li>Redo (and further investigate) live system analysis</li>
+<li>Redo (and further investigate) live system analysis
+<ul>
+<li>i.e. Properly capture <em>all</em> network traffic</li>
+</ul>
+</li>
 </ul>
 </section><section>
 <h1 id=any-questions>Any Questions?</h1>
-</section>
+<p><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br></p>
+<hr>
+<p>Andrew Wong</p>
+<sub>
+<p>w: <a href=https://featherbear.cc/UNSW-CSE-Thesis>featherbear.cc/UNSW-CSE-Thesis</a></p>
+<p>e: <script>document.write(atob('YW5kcmV3Lmoud29uZ0BzdHVkZW50LnVuc3cuZWR1LmF1'))</script></p>
+</sub></section>
 </div>
 </div>
 <script type=text/javascript src=../../reveal-hugo/object-assign.js></script>
