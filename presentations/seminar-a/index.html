@@ -8,7 +8,7 @@
 <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <link rel=stylesheet href=../../reveal-js/css/reset.css>
 <link rel=stylesheet href=../../reveal-js/css/reveal.css>
-<link rel=stylesheet href=../../_.min.7d694823d2d9d1ee48251589ba394b2e82b7846e813e97bb6ffd80beb2eca778.css id=theme><link rel=stylesheet href=../../highlight-js/default.min.css>
+<link rel=stylesheet href=../../_.min.2f73f9dd7d439f6f001058d13da984dadd8bb87f9f9085d44d46e3ba00164816.css id=theme><link rel=stylesheet href=../../highlight-js/default.min.css>
 </head>
 <body>
 <div class=reveal>
@@ -132,7 +132,7 @@ IoT infrastructure outage<br>=<br>Product-wide outage
 <ul>
 <li><label>HomeAssistant</label> - Home Automation <a href=https://www.home-assistant.io/>(link)</a></li>
 <li><label>OpenHAB</label> - Home Automation <a href=https://www.openhab.org/>(link)</a></li>
-<li><label>Valetudo</label> - Cloud-less vacuum cleaner control inferface <a href=https://github.com/Hypfer/Valetudo>(link)</a></li>
+<li><label>Valetudo</label> - Cloud-less vacuum cleaner control interface <a href=https://github.com/Hypfer/Valetudo>(link)</a></li>
 <li><label>DustCloud</label> - Xiaomi Cloud Emulation <a href=https://github.com/dgiese/dustcloud>(link)</a></li>
 <li><label>MiCloudFaker</label> - Xiaomi Cloud Emulation <a href=https://github.com/unrelentingtech/micloudfaker>(link)</a></li>
 <li><label>tuya-convert</label> - Flash Tuya devices to custom firmware <a href=https://github.com/ct-Open-Source/tuya-convert>(link)</a></li>
@@ -245,17 +245,152 @@ IoT infrastructure outage<br>=<br>Product-wide outage
 </section><section>
 <h1 id=literature-review-1>Literature Review</h1>
 <section data-shortcode-section>
+<h5 id=iot>IoT</h5>
+<p>The majority of hardware hacks / custom firmwares have originated from the desire to decouple hardware from cloud services</p>
+</section>
+<section data-noprocess data-shortcode-slide data-transition=fade>
+<h5 id=iot--2018---michael-steigerwald-vtrust>IoT | 2018 - Michael Steigerwald (VTRUST)</h5>
 <blockquote>
-<p>2017 - Dennis Giese</p>
+<p>Talk: <a href=https://media.ccc.de/v/35c3-9723-smart_home_-_smart_hack>Smart home - Smart hack</a></p>
 </blockquote>
 <ul>
-<li>Found ways to root the Mi Home Robotic Vacuum Cleaner and the Roborock S6</li>
-<li><a href=https://dontvacuum.me>https://dontvacuum.me</a></li>
-<li>Continued analysis on later Xiaomi (and derivative) vacuum cleaners</li>
+<li>Products from different manufacturers used the same cloud infrastructure (with supposed &lsquo;military-grade security&rsquo;), each with their own &lsquo;customised&rsquo; (white-label) smartphone apps</li>
+<li>Used the <a style="text-decoration:underline dotted" href=https://www.espressif.com/en/products/socs/esp8266>Espressif ESP8266</a> chip
+<ul>
+<li>WiFi-enabled SoC with Arduino support</li>
+<li>Often used by tinkerers and enthusiasts</li>
 </ul>
-<p>Dustcloud</p>
-<p>TODO: OTHER PAPERS</p>
+</li>
+<li>Anyone can become an &lsquo;IoT company&rsquo; regardless of &ldquo;having in-depth technical knowledge of IoT or IT security.&rdquo; 🚩🚩🚩</li>
+</ul>
 </section>
+<section data-noprocess data-shortcode-slide data-transition=fade>
+<h5 id=iot--2018---michael-steigerwald-vtrust-1>IoT | 2018 - Michael Steigerwald (VTRUST)</h5>
+<blockquote>
+<p>Talk: <a href=https://media.ccc.de/v/35c3-9723-smart_home_-_smart_hack>Smart home - Smart hack</a></p>
+</blockquote>
+<p><em>&ldquo;The analysis of the &lsquo;smart&rsquo; devices using this basic platform is generally frightening [&mldr;] serious [&mldr;] shortcomings&rdquo;</em></p>
+<ul>
+<li>Insecure transmission of encryption keys, serial number, etc&mldr;</li>
+<li>Insecure transmission of wireless credentials during pairing</li>
+<li>Ease of white-labelling and starting your own IoT business
+<ul>
+<li>Ease of selling malicious devices</li>
+</ul>
+</li>
+</ul>
+</section>
+<section data-noprocess data-shortcode-slide data-transition=fade>
+<h5 id=iot--2018---michael-steigerwald-vtrust-2>IoT | 2018 - Michael Steigerwald (VTRUST)</h5>
+<blockquote>
+<p>Talk: <a href=https://media.ccc.de/v/35c3-9723-smart_home_-_smart_hack>Smart home - Smart hack</a></p>
+</blockquote>
+<p><a href=https://github.com/ct-Open-Source/tuya-convert><img src="https://gh-card.dev/repos/ct-Open-Source/tuya-convert.svg?fullname=" alt=center></a></p>
+<p>Automated flashing tool <code>tuya-convert</code> created that exploited prior vulnerabilities to flash custom decoupled firmware<br>
+(i.e. <a href=https://esphome.io/>ESPhome</a>, <a href=https://tasmota.github.io/docs/>Tasmota</a>, etc&mldr;)</p>
+</section>
+<section data-noprocess data-shortcode-slide data-transition=fade>
+<h5 id=iot--2018---michael-steigerwald-vtrust-3>IoT | 2018 - Michael Steigerwald (VTRUST)</h5>
+<blockquote>
+<p>Tuya&rsquo;s Response</p>
+</blockquote>
+<ul>
+<li>28th January 2019 - <a href=https://www.heise.de/newsticker/meldung/Smart-Home-Hack-Tuya-veroeffentlicht-Sicherheitsupdate-4292028.html>patch</a> released <em>(later subverted)</em>
+<ul>
+<li>TLS encrypted firmware update procedure</li>
+<li>Encryption of flash memory</li>
+</ul>
+</li>
+<li>3rd January 2020 - <a href=https://github.com/ct-Open-Source/tuya-convert/issues/483>new patch</a> released
+<ul>
+<li>unbreakable™</li>
+</ul>
+</li>
+<li>23rd April 2020 - Switched from the ESP8266 to a custom SoC
+<ul>
+<li><a href=https://github.com/ct-Open-Source/tuya-convert/issues/483>Tuya WB3S</a></li>
+</ul>
+</li>
+<li>16th June 2021 - Announced official support for HomeAssistant</li>
+</ul>
+</section><section>
+<h5 id=iot--20172018---xiaomi-dafang-hacks>IoT | 2017/2018 - Xiaomi Dafang Hacks</h5>
+<p><a href=https://github.com/EliasKotlyar/Xiaomi-Dafang-Hacks><img src="https://gh-card.dev/repos/EliasKotlyar/Xiaomi-Dafang-Hacks.svg?fullname=" alt=center></a> <a href=https://github.com/samtap/fang-hacks><img src="https://gh-card.dev/repos/samtap/fang-hacks.svg?fullname=" alt=center></a></p>
+<ul>
+<li>Cheap WiFi camera that can be made to boot off a microSD card</li>
+<li>Circuit board exposed UART (<code>baud_rate=115200</code>) pins that allowed interaction with U-Boot bootloader</li>
+<li>Modification of boot environment to start <code>/bin/sh</code> (<a href=https://github.com/EliasKotlyar/Xiaomi-Dafang-Hacks/blob/master/hacks/getroot.md>[link]</a>)</li>
+<li>Gain root shell access</li>
+<li>Dump firmware</li>
+<li>Analyse, modify and package updated firmware</li>
+</ul>
+</section>
+<section data-noprocess data-shortcode-slide data-transition=fade>
+<h5 id=xiaomi-ecosystem--2017-2019---dennis-giese>Xiaomi Ecosystem | 2017-2019 - Dennis Giese</h5>
+<blockquote>
+<p>Paper: <a href=https://dontvacuum.me/thesis/Security_Analysis_of_the_Xiaomi_IoT_Ecosystem.pdf><code>SEEMOO-MSC-0142</code></a> (July 10, 2019)</p>
+</blockquote>
+<ul>
+<li>Research available: <a href=https://dontvacuum.me>dontvacuum.me</a></li>
+<li>Performed security analysis of a range of Xiaomi products</li>
+<li>Found ways to root the Mi Home Robotic Vacuum Cleaner and the Roborock S6
+<ul>
+<li>UART, hardware fault injection, etc&mldr;</li>
+</ul>
+</li>
+<li>Developed cloud emulation software (<a href=https://github.com/dgiese/dustcloud>DustCloud</a>)</li>
+<li>Research led to development of 3rd party software (i.e. <a href=https://github.com/Hypfer/Valetudo>Valeduto</a>)</li>
+</ul>
+</section>
+<section data-noprocess data-shortcode-slide data-transition=fade>
+<h5 id=xiaomi-ecosystem--2017-2019---dennis-giese-1>Xiaomi Ecosystem | 2017-2019 - Dennis Giese</h5>
+<blockquote>
+<p>&ldquo;How secure is the implementation of the ecosystem of the IoT market leader Xiaomi?&rdquo;</p>
+</blockquote>
+<p><label>Conclusions</label></p>
+<ul>
+<li>⌚ The company quickly responds to security concerns</li>
+<li>🔍 Many exposed endpoints of deprecated APIs</li>
+<li>🔓 Many devices do not enforce proper HTTPS checks</li>
+<li>🤝 Difficult to enforce security for plugins (vendor-provided)</li>
+<li>❓ CIA principles generally kept</li>
+</ul>
+</section>
+<section data-noprocess data-shortcode-slide data-transition=fade>
+<h5 id=xiaomi-ecosystem--2017-2019---dennis-giese-2>Xiaomi Ecosystem | 2017-2019 - Dennis Giese</h5>
+<blockquote>
+<p>More to be done</p>
+</blockquote>
+<p><img src=../../uploads/20211110-screely-1636466635263.png alt></p>
+</section>
+</section><section>
+<p>TODO:</p>
+<ul>
+<li>Reverse engineering IoT</li>
+<li>Reverse engineering Vacuum Cleaners</li>
+<li>Papers about IoT network vulnerabilities</li>
+<li>Microsoldering</li>
+<li>My own research into RE of network protocols, etc?</li>
+</ul>
+</section><section>
+<h1 id=extrapolation>Extrapolation</h1>
+<blockquote>
+<p>Previous Achievements</p>
+</blockquote>
+<ul>
+<li>Smartphone application reverse engineering</li>
+<li>Device firmware interception</li>
+<li>Device hardware and component identification</li>
+<li>Network traffic analysis</li>
+<li>Storage analysis</li>
+</ul>
+<blockquote>
+<p>Unaddressed Areas</p>
+</blockquote>
+<ul>
+<li>Post-2019 replication study</li>
+<li>In-depth firmware analysis</li>
+</ul>
 </section>
 <section data-noprocess data-shortcode-slide data-transition=fade>
 <p><br>
@@ -281,6 +416,18 @@ IoT infrastructure outage<br>=<br>Product-wide outage
 <li>Reverse engineering and binary analysis of firmware and software
 <ul>
 <li>Look through binaries for security vulnerabilities and fortifications</li>
+</ul>
+</li>
+</ul>
+</section><section>
+<h3 id=considerations>Considerations</h3>
+<ul>
+<li>Only have one device to use</li>
+<li>Access to equipment and facilities are limited (COVID?)</li>
+<li>I&rsquo;m just a fourth year!
+<ul>
+<li>Limited skills</li>
+<li>i.e. microsoldering for flash chip extraction and dumping</li>
 </ul>
 </li>
 </ul>
@@ -464,6 +611,6 @@ IoT infrastructure outage<br>=<br>Product-wide outage
 <script type=text/javascript src=../../reveal-js/plugin/highlight/highlight.js></script>
 <script type=text/javascript src=../../reveal-js/plugin/zoom-js/zoom.js></script>
 <script type=text/javascript src=../../reveal-js/plugin/notes/notes.js></script>
-<script type=text/javascript>for(let a of document.querySelectorAll(".reveal .slides > section"))a.dataset.transition||(a.dataset.transition="fade-out slide-in")</script>
+<script type=text/javascript>for(let a of document.querySelectorAll(".reveal .slides > section"))a.dataset.transition||(a.dataset.transition="fade-out slide-in");document.querySelectorAll('p img').forEach(b=>{if(b.alt!='center')return;let a=b;while(a.tagName!='P')a=a.parentNode;a.style.textAlign='center'})</script>
 </body>
 </html>
