@@ -1,5 +1,16 @@
 [
   {
+    title: Meetings
+    content: [
+      {
+        title: Wednesday
+        date: 10/11/2021
+        content: [
+        ]
+      }
+    ]
+  }
+  {
     title: Research
     content: [
       {
@@ -54,6 +65,12 @@
           (End of Tuesday) Continued working on Seminar A presentation
           (Night) Completed background information and planning sections
         ]  
+        link: https://featherbear.cc/UNSW-CSE-Thesis/docs/presentations/seminar-a/
+      }
+      {
+        title: Wednesday
+        date: 10/11/2021
+        content: Added literature review slides
         link: https://featherbear.cc/UNSW-CSE-Thesis/docs/presentations/seminar-a/
       }
     ]
