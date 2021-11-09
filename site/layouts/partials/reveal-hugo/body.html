@@ -5,4 +5,17 @@
       slide.dataset.transition = "fade-out slide-in";
     }
   }
+
+  // CSS polyfill
+  /*
+    p:has(img[alt*=center]) {
+      text-align: center;
+    }
+  */
+  document.querySelectorAll('p img').forEach(imgElem => {
+    if (imgElem.alt != 'center') return
+    let parentElem = imgElem;
+    while (parentElem.tagName != 'P') parentElem = parentElem.parentNode
+    parentElem.style.textAlign = 'center'
+  })
 </script>

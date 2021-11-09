@@ -316,21 +316,147 @@ Investigate potential security vulnerabilities of the Roborock S6, and assess th
 
 ---
 
+
+
 # Literature Review
 
 {{% section %}}
 
-> 2017 - Dennis Giese
+##### IoT
 
+The majority of hardware hacks / custom firmwares have originated from the desire to decouple hardware from cloud services
+
+---
+
+{{< slide transition="fade" >}}
+
+##### IoT | 2018 - Michael Steigerwald (VTRUST)
+
+> Talk: [Smart home - Smart hack](https://media.ccc.de/v/35c3-9723-smart_home_-_smart_hack)
+
+* Products from different manufacturers used the same cloud infrastructure (with supposed 'military-grade security'), each with their own 'customised' (white-label) smartphone apps
+* Used the <a style="text-decoration: underline dotted" href="https://www.espressif.com/en/products/socs/esp8266">Espressif ESP8266</a> chip
+  * WiFi-enabled SoC with Arduino support
+  * Often used by tinkerers and enthusiasts
+* Anyone can become an 'IoT company' regardless of "having in-depth technical knowledge of IoT or IT security." 🚩🚩🚩
+
+---
+
+{{< slide transition="fade" >}}
+
+##### IoT | 2018 - Michael Steigerwald (VTRUST)
+
+> Talk: [Smart home - Smart hack](https://media.ccc.de/v/35c3-9723-smart_home_-_smart_hack)
+
+_"The analysis of the 'smart' devices using this basic platform is generally frightening [...] serious [...] shortcomings"_
+
+* Insecure transmission of encryption keys, serial number, etc...
+* Insecure transmission of wireless credentials during pairing
+* Ease of white-labelling and starting your own IoT business
+  * Ease of selling malicious devices
+
+---
+
+{{< slide transition="fade" >}}
+
+##### IoT | 2018 - Michael Steigerwald (VTRUST)
+
+> Talk: [Smart home - Smart hack](https://media.ccc.de/v/35c3-9723-smart_home_-_smart_hack)
+
+[![center](https://gh-card.dev/repos/ct-Open-Source/tuya-convert.svg?fullname=)](https://github.com/ct-Open-Source/tuya-convert)
+
+Automated flashing tool `tuya-convert` created that exploited prior vulnerabilities to flash custom decoupled firmware  
+(i.e. [ESPhome](https://esphome.io/), [Tasmota](https://tasmota.github.io/docs/), etc...)
+
+---
+
+{{< slide transition="fade" >}}
+
+##### IoT | 2018 - Michael Steigerwald (VTRUST)
+
+> Tuya's Response
+
+* 28th January 2019 - [patch](https://www.heise.de/newsticker/meldung/Smart-Home-Hack-Tuya-veroeffentlicht-Sicherheitsupdate-4292028.html) released _(later subverted)_
+  * TLS encrypted firmware update procedure
+  * Encryption of flash memory
+* 3rd January 2020 - [new patch](https://github.com/ct-Open-Source/tuya-convert/issues/483) released
+  * unbreakable™
+* 23rd April 2020 - Switched from the ESP8266 to a custom SoC
+  * [Tuya WB3S](https://github.com/ct-Open-Source/tuya-convert/issues/483)
+* 16th June 2021 - Announced official support for HomeAssistant
+
+---
+
+{{< slide transition="fade" >}}
+
+
+
+  - <label>Valetudo</label> - Cloud-less vacuum cleaner control inferface [(link)](https://github.com/Hypfer/Valetudo)
+  - <label>DustCloud</label> - Xiaomi Cloud Emulation [(link)](https://github.com/dgiese/dustcloud)
+  - <label>MiCloudFaker</label> - Xiaomi Cloud Emulation [(link)](https://github.com/unrelentingtech/micloudfaker)
+
+
+---
+
+<!-- https://github.com/EliasKotlyar/Xiaomi-Dafang-Hacks -->
+
+---
+
+{{< slide transition="fade" >}}
+
+##### Xiaomi Ecosystem | 2017-2019 - Dennis Giese
+
+> Paper: [`SEEMOO-MSC-0142`](https://dontvacuum.me/thesis/Security_Analysis_of_the_Xiaomi_IoT_Ecosystem.pdf) (July 10, 2019)
+
+- Performed security analysis of a range of Xiaomi products
 - Found ways to root the Mi Home Robotic Vacuum Cleaner and the Roborock S6
-- https://dontvacuum.me
-- Continued analysis on later Xiaomi (and derivative) vacuum cleaners
+- Developed cloud emulation software ([DustCloud](https://github.com/dgiese/dustcloud))
+- Research available: [dontvacuum.me](https://dontvacuum.me)
 
-Dustcloud
+---
 
-TODO: OTHER PAPERS
+{{< slide transition="fade" >}}
+
+##### Xiaomi Ecosystem | 2017-2019 - Dennis Giese
+
+> "How secure is the implementation of the ecosystem of the IoT market leader Xiaomi?"
+
+<label>Conclusions</label>
+
+* ⌚ The company quickly responds to security concerns
+* 🔍 Many exposed endpoints of deprecated APIs
+* 🔓 Many devices do not enforce proper HTTPS checks
+* 🤝 Difficult to enforce security for plugins (vendor-provided)
+* ❓ CIA principles generally kept 
+
+---
+
+{{< slide transition="fade" >}}
+
+##### Xiaomi Ecosystem | 2017-2019 - Dennis Giese
+
+> More to be done
+
+![](/uploads/20211110-screely-1636466635263.png)
 
 {{% /section %}}
+
+---
+
+# Extrapolation
+
+> Previous Achievements
+
+* Smartphone application reverse engineering
+* Device firmware interception
+* Device hardware and component identification
+* Network traffic analysis
+* Storage analysis
+
+> Unaddressed Areas
+
+* Post-2019 replication study
+* In-depth firmware analysis
 
 ---
 
