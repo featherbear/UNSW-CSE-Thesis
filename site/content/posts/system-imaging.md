@@ -47,3 +47,10 @@ Source: [https://unix.stackexchange.com/questions/41399/system-image-of-running-
 ## Networked Backups
 
 Since there is limited storage on the device, we will need to create the backup over the network. Probably just pipe it with `netcat` I guess
+
+
+--- 
+
+# TODO:
+
+https://github.com/EliasKotlyar/Xiaomi-Dafang-Hacks/blob/master/hacks/firmware-dump.md
