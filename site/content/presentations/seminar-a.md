@@ -171,7 +171,7 @@ IoT infrastructure outage<br />=<br />Product-wide outage
 - Decoupling of devices from the necessity of internet / IoT cloud
   - <label>HomeAssistant</label> - Home Automation [(link)](https://www.home-assistant.io/)
   - <label>OpenHAB</label> - Home Automation [(link)](https://www.openhab.org/)
-  - <label>Valetudo</label> - Cloud-less vacuum cleaner control inferface [(link)](https://github.com/Hypfer/Valetudo)
+  - <label>Valetudo</label> - Cloud-less vacuum cleaner control interface [(link)](https://github.com/Hypfer/Valetudo)
   - <label>DustCloud</label> - Xiaomi Cloud Emulation [(link)](https://github.com/dgiese/dustcloud)
   - <label>MiCloudFaker</label> - Xiaomi Cloud Emulation [(link)](https://github.com/unrelentingtech/micloudfaker)
   - <label>tuya-convert</label> - Flash Tuya devices to custom firmware [(link)](https://github.com/ct-Open-Source/tuya-convert)
@@ -387,18 +387,16 @@ Automated flashing tool `tuya-convert` created that exploited prior vulnerabilit
 
 ---
 
-{{< slide transition="fade" >}}
+##### IoT | 2017/2018 - Xiaomi Dafang Hacks
 
+[![center](https://gh-card.dev/repos/EliasKotlyar/Xiaomi-Dafang-Hacks.svg?fullname=)](https://github.com/EliasKotlyar/Xiaomi-Dafang-Hacks) [![center](https://gh-card.dev/repos/samtap/fang-hacks.svg?fullname=)](https://github.com/samtap/fang-hacks)
 
-
-  - <label>Valetudo</label> - Cloud-less vacuum cleaner control inferface [(link)](https://github.com/Hypfer/Valetudo)
-  - <label>DustCloud</label> - Xiaomi Cloud Emulation [(link)](https://github.com/dgiese/dustcloud)
-  - <label>MiCloudFaker</label> - Xiaomi Cloud Emulation [(link)](https://github.com/unrelentingtech/micloudfaker)
-
-
----
-
-<!-- https://github.com/EliasKotlyar/Xiaomi-Dafang-Hacks -->
+* Cheap WiFi camera that can be made to boot off a microSD card
+* Circuit board exposed UART (`baud_rate=115200`) pins that allowed interaction with U-Boot bootloader
+* Modification of boot environment to start `/bin/sh` ([[link]](https://github.com/EliasKotlyar/Xiaomi-Dafang-Hacks/blob/master/hacks/getroot.md))
+* Gain root shell access
+* Dump firmware
+* Analyse, modify and package updated firmware
 
 ---
 
@@ -408,10 +406,12 @@ Automated flashing tool `tuya-convert` created that exploited prior vulnerabilit
 
 > Paper: [`SEEMOO-MSC-0142`](https://dontvacuum.me/thesis/Security_Analysis_of_the_Xiaomi_IoT_Ecosystem.pdf) (July 10, 2019)
 
+- Research available: [dontvacuum.me](https://dontvacuum.me)
 - Performed security analysis of a range of Xiaomi products
 - Found ways to root the Mi Home Robotic Vacuum Cleaner and the Roborock S6
+  * UART, hardware fault injection, etc...
 - Developed cloud emulation software ([DustCloud](https://github.com/dgiese/dustcloud))
-- Research available: [dontvacuum.me](https://dontvacuum.me)
+- Research led to development of 3rd party software (i.e. [Valeduto](https://github.com/Hypfer/Valetudo))
 
 ---
 
@@ -440,6 +440,16 @@ Automated flashing tool `tuya-convert` created that exploited prior vulnerabilit
 ![](/uploads/20211110-screely-1636466635263.png)
 
 {{% /section %}}
+
+---
+
+TODO: 
+
+* Reverse engineering IoT
+* Reverse engineering Vacuum Cleaners
+* Papers about IoT network vulnerabilities
+* Microsoldering
+* My own research into RE of network protocols, etc?
 
 ---
 
@@ -488,6 +498,16 @@ Automated flashing tool `tuya-convert` created that exploited prior vulnerabilit
 - Image the system for offline analysis
 - Reverse engineering and binary analysis of firmware and software
   - Look through binaries for security vulnerabilities and fortifications
+
+---
+
+### Considerations
+
+* Only have one device to use
+* Access to equipment and facilities are limited (COVID?)
+* I'm just a fourth year!
+  * Limited skills
+  * i.e. microsoldering for flash chip extraction and dumping
 
 ---
 
