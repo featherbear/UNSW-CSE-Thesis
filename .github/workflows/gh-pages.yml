@@ -29,17 +29,17 @@ jobs:
       with:
         node-version: '14.x'
 
-    - name: Build presentations as PDF
-      run: |
-        npm --prefix ./site/scripts install
-        npm --prefix ./site/scripts run buildPDF
-
     - name: Build TLDR site
       run: |
         npm install
         npm run build
         cp -R public ../public/tldr
       working-directory: ./site/tldr
+
+    - name: Build presentations as PDF
+      run: |
+        npm --prefix ./site/scripts install
+        npm --prefix ./site/scripts run buildPDF
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v2.3.1

@@ -17,7 +17,7 @@ let server = polka()
       fs.readFileSync(path.join(workDir, 'index.xml'), 'utf8')
     )
 
-    const browser = await puppeteer.launch({ headless: true })
+    // const browser = await puppeteer.launch({ headless: true })
     let promises = []
 
     for (let {
@@ -27,22 +27,47 @@ let server = polka()
       let fileName = linkSplit[linkSplit.length - 1]
       console.log('Exporting ' + link + ' to ' + fileName + '.pdf')
 
-      const page = await browser.newPage()
-      await page.goto(BASE_HOST + link + '?print-pdf', {
-        waitUntil: 'networkidle0'
-      })
+      function execCommand (cmd) {
+        return new Promise((resolve, reject) => {
+          require('child_process').exec(cmd, (err, data) => {
+            if (err) return reject(err)
+            resolve(data)
+          })
+        })
+      }
 
-      await page.pdf({
-        path: path.join(workDir, fileName + '.pdf'),
-        landscape: true,
-        preferCSSPageSize: true,
-        printBackground: true,
-        displayHeaderFooter: false,
-        omitBackground: false
-      })
+      promises.push(
+        execCommand(
+          [
+            'npx',
+            'decktape',
+            ['--size', '1920x1080'],
+            BASE_HOST + link,
+            path.join(workDir, fileName + '.pdf')
+          ]
+            .flat()
+            .join(' ')
+        )
+      )
+
+      // const page = await browser.newPage()
+      // await page.goto(BASE_HOST + link + '?print-pdf', {
+      //   waitUntil: 'networkidle0'
+      // })
+
+      // await page.pdf({
+      //   path: path.join(workDir, fileName + '.pdf'),
+      //   landscape: true,
+      //   preferCSSPageSize: true,
+      //   printBackground: true,
+      //   displayHeaderFooter: false,
+      //   omitBackground: false
+      // })
     }
 
+    await Promise.all(promises)
+
     console.log('Shutting down server')
-    browser.close()
+    // browser.close()
     server.server.close()
   })
