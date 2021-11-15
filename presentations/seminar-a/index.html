@@ -8,7 +8,7 @@
 <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <link rel=stylesheet href=../../reveal-js/css/reset.css>
 <link rel=stylesheet href=../../reveal-js/css/reveal.css>
-<link rel=stylesheet href=../../_.min.2f73f9dd7d439f6f001058d13da984dadd8bb87f9f9085d44d46e3ba00164816.css id=theme><link rel=stylesheet href=../../highlight-js/default.min.css>
+<link rel=stylesheet href=../../_.min.a230c4a7a1567dd6102968d8163a8141477da8488849428e390a8cd00a44c5a7.css id=theme><link rel=stylesheet href=../../highlight-js/default.min.css>
 </head>
 <body>
 <div class=reveal>
@@ -100,6 +100,9 @@ Making things, breaking things&mldr; mainly the latter
 </ul>
 </li>
 </ul>
+<style>.marquee-parent{position:relative;width:100vw;max-width:100%;height:200px;overflow-x:hidden;border-radius:10px}.marquee-child{position:absolute;white-space:nowrap;will-change:transform;max-width:unset!important;max-height:100%!important;animation:marquee 360s linear infinite}.marquee-child:hover{animation-play-state:paused}@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-87.5%)}}</style>
+<p><br></p>
+<div class=marquee-parent><img src=../../uploads/20211115-lightbulbs-marquee.png class=marquee-child></div>
 </section><section>
 <blockquote>
 Vulnerabilities in IoT infrastructure<br>=<br> Vulnerability in all white-label products
@@ -112,15 +115,10 @@ Vulnerabilities in IoT infrastructure<br>=<br> Vulnerability in all white-label 
 <ul>
 <li>Same IoT cloud infrastructure used by white-label vendors</li>
 <li>Data and network activity is all centralised / standardised</li>
-<li>Privacy concerns?
-<ul>
-<li>Who, What, Where, When, Why?</li>
+<li>Privacy concerns - Who, What, Where, When, Why?</li>
+<li>Infrastructure outage = really <em>really</em> big outage..</li>
 </ul>
-</li>
-</ul>
-<blockquote>
-IoT infrastructure outage<br>=<br>Product-wide outage
-</blockquote>
+<p><img src=../../uploads/20211115-spof.gif width=30% alt=center></p>
 </section><section>
 <ul>
 <li>Reverse engineering of cloud communications protocols / API
@@ -211,10 +209,10 @@ IoT infrastructure outage<br>=<br>Product-wide outage
 </section><section>
 <h1 id=rationale>Rationale</h1>
 <blockquote>
-<p>Security is important!</p>
+<p>🔐 Security is important!</p>
 </blockquote>
 <blockquote>
-<p>Check things for yourself!</p>
+<p>📒 Check things for yourself!</p>
 </blockquote>
 </section>
 </section><section>
@@ -250,7 +248,7 @@ IoT infrastructure outage<br>=<br>Product-wide outage
 <br>
 <br>
 <br></p>
-<h2 id=iot>IoT</h2>
+<h2 id=iot->IoT ☁</h2>
 <p>The majority of hardware hacks / custom firmwares have originated from the desire to decouple hardware from cloud services</p>
 </section>
 <section data-noprocess data-shortcode-slide data-transition=fade>
@@ -259,14 +257,22 @@ IoT infrastructure outage<br>=<br>Product-wide outage
 <p>Talk: <a href=https://media.ccc.de/v/35c3-9723-smart_home_-_smart_hack>Smart home - Smart hack</a></p>
 </blockquote>
 <ul>
-<li>Products from different manufacturers used the same cloud infrastructure (with supposed &lsquo;military-grade security&rsquo;), each with their own &lsquo;customised&rsquo; (white-label) smartphone apps</li>
+<li>Products from different manufacturers used the same cloud infrastructure each with their own &lsquo;customised&rsquo; (white-label) smartphone apps
+<ul>
+<li>Supposed &lsquo;military-grade security&rsquo;</li>
+</ul>
+</li>
 <li>Used the <a style="text-decoration:underline dotted" href=https://www.espressif.com/en/products/socs/esp8266>Espressif ESP8266</a> chip
 <ul>
 <li>WiFi-enabled SoC with Arduino support</li>
 <li>Often used by tinkerers and enthusiasts</li>
 </ul>
 </li>
-<li>Anyone can become an &lsquo;IoT company&rsquo; regardless of &ldquo;having in-depth technical knowledge of IoT or IT security.&rdquo; 🚩🚩🚩</li>
+<li>Anyone can become an &lsquo;IoT company&rsquo; regardless of &ldquo;having in-depth technical knowledge of IoT or IT security.&rdquo;
+<ul>
+<li>🚩🚩🚩</li>
+</ul>
+</li>
 </ul>
 </section>
 <section data-noprocess data-shortcode-slide data-transition=fade>
@@ -339,15 +345,13 @@ IoT infrastructure outage<br>=<br>Product-wide outage
 <p>Gaining access to a shell / stored data / things we shouldn&rsquo;t.</p>
 </section><section>
 <h5 id=flash-ic-dumping>Flash IC Dumping</h5>
+<p><img src=http://www.saelig.com/miva/graphics/00000001/848pro725_350x189.jpg alt=center></p>
 <ul>
-<li>Requires a flash programmer ($$$)
-<ul>
-<li>Budget Solution: Raspberry Pi?</li>
-</ul>
-</li>
+<li>May require a proprietary flash programmer (above: US$3655)</li>
+<li>Budget solution for common flash types: Raspberry Pi (AU$100)</li>
 <li>Some flash chips (depending on form factor) may require to be desoldered
 <ul>
-<li>Possibly a destructive process</li>
+<li>🧨 Possibly a destructive process 🧨</li>
 </ul>
 </li>
 <li>Open-source software: <a href=https://www.flashrom.org/Flashrom><code>flashrom</code></a></li>
@@ -362,31 +366,36 @@ IoT infrastructure outage<br>=<br>Product-wide outage
 <ul>
 <li>FEL mode is a &ldquo;fallback&rdquo; system on Allwinner SoCs</li>
 <li>Allows the flashing and reprogramming of the SoC</li>
-<li>Generally triggered by pulling FEL pin (<code>LRADC0</code>) LOW during boot</li>
+<li>Generally triggered by pulling
+<a href=https://linux-sunxi.org/images/b/b3/R16_Datasheet_V1.4_(1).pdf style="text-decoration:underline dotted">FEL pin</a> (<code>LRADC0</code>) LOW during boot</li>
 <li>FEL mode can also be entered if the bootloader fails to load 🤔</li>
 </ul>
 </section>
 <section data-noprocess data-shortcode-slide data-transition=fade>
 <h5 id=bga-shorting-to-gain-access-to-fel-1>BGA shorting to gain access to FEL</h5>
 <ul>
-<li>On the Allwinner R16 (BGA package) FEL pin located on ball <code>L14</code>
+<li>On the Allwinner R16 (BGA package) FEL pin located on ball location <code>L14</code>
 <ul>
-<li>Not located on package edge the chip so desoldering required</li>
+<li>Not located on package edge the chip so <label>desoldering required</label></li>
 </ul>
 </li>
-<li>Enter FEL mode by preventing successful (e)MMC load?
+</ul>
+<blockquote>
+<p>Enter FEL mode by preventing (e)MMC load?</p>
+</blockquote>
 <ul>
-<li>SoC has a solder plane height of around 0.3mm
+<li>SoC has a solder plane height of around 0.3mm</li>
+<li>Too shallow for a wire, but tall enough for aluminium foil&mldr;</li>
+</ul>
+</section>
+<section data-noprocess data-shortcode-slide data-transition=fade>
+<h5 id=bga-shorting-to-gain-access-to-fel-2>BGA shorting to gain access to FEL</h5>
+<p><label>Aluminium Foil</label></p>
+<p><img src=../../uploads/20211115-Snipaste_2021-11-15_19-45-37-dgiese.jpg height=300px alt=center></p>
 <ul>
-<li>Too shallow for a wire</li>
-<li>But tall enough for aluminium foil&mldr;</li>
-<li>Thickness: ~0.02mm</li>
-<li>Conductive: Yes&mldr;</li>
+<li>Thickness: ~0.02mm (&mldr; 0.02mm &#171; 0.3mm)</li>
+<li>Conductive: Yep!</li>
 <li>$$$</li>
-</ul>
-</li>
-</ul>
-</li>
 </ul>
 <p>Documented: <a href=https://dontvacuum.me/thesis/Security_Analysis_of_the_Xiaomi_IoT_Ecosystem.pdf><code>SEEMOO-MSC-0142</code></a></p>
 </section>
@@ -395,7 +404,7 @@ IoT infrastructure outage<br>=<br>Product-wide outage
 <blockquote>
 <p>On later versions (post 2020), U-Boot shell access was patched, so shell access via UART was mitigated</p>
 </blockquote>
-<p>Pin TPA17 on the Roborock S7 circuit board was <a href=https://dontvacuum.me/talks/DEFCON29/DEFCON29-vacuum-robots.pdf>discovered</a> to connect to ball L14 on the SoC.</p>
+<p>Pin TPA17 on the Roborock S7 circuit board was <a href=https://dontvacuum.me/talks/DEFCON29/DEFCON29-vacuum-robots.pdf>discovered</a> to connect to ball location L14 on the SoC.</p>
 <p>Therefore by pulling TPA17 / L14 / LRADC0 LOW (i.e connect to GND), FEL mode can be entered</p>
 </section>
 <section data-noprocess data-shortcode-slide data-transition="slide-in fade-out">
@@ -408,7 +417,8 @@ IoT infrastructure outage<br>=<br>Product-wide outage
 <li>AM335x Microprocessor (ARM Cortex-A8)</li>
 <li>Cold-boot attack allowed RAM to be dumped over serial
 <ul>
-<li>USB + Serial communication allowed boot into custom image</li>
+<li><label>Cold-boot attack</label> - restarting the system whilst keeping memory modules powered on, keeping memory (mostly) in-tact</li>
+<li>USB + Serial communication allowed boot into custom image that could then dump the memory for later triage</li>
 </ul>
 </li>
 </ul>
@@ -416,33 +426,27 @@ IoT infrastructure outage<br>=<br>Product-wide outage
 <section data-noprocess data-shortcode-slide data-transition=fade>
 <h5 id=vacuums-in-the-cloud-analyzing-security-in-a-hardened-iot-ecosystem-1>Vacuums in the Cloud: Analyzing Security in a Hardened IoT Ecosystem</h5>
 <ul>
-<li>Memory dumped contained confidential keys
+<li>Memory dumps contained confidential keys
 <ul>
-<li>Authentication and authorisation to the robot</li>
-<li>Authentication and authorisation to the cloud infrastructure</li>
+<li>🙋‍♀️ Auth/Authz to the robot</li>
+<li>🙆‍♀️ Auth/Authz to the cloud infrastructure</li>
 </ul>
 </li>
+<li>Logs and coredumps were encrypted&mldr; but keys hardcoded</li>
 <li>Secret key RNG algorithm determined to be weak
 <ul>
-<li>Small keyspace given known data = bruteforce</li>
+<li>Small keyspace given known data = bruteforceable</li>
 </ul>
 </li>
-<li>RSA key was shared with all devices
+<li>RSA key was shared with all devices 🔓
 <ul>
 <li>Identity impersonation</li>
 </ul>
 </li>
-<li>Logs and coredumps were encrypted
-<ul>
-<li>But encryption keys were hardcoded</li>
 </ul>
-</li>
-<li>Also discovered unauthenticated buffer overflow vulnerability
-<ul>
-<li>RCE of arbitrary code</li>
-</ul>
-</li>
-</ul>
+<blockquote>
+<p>Also discovered <label>buffer overflow</label> vulnerability in an unauthenticated stage.</p>
+</blockquote>
 </section>
 <section data-noprocess data-shortcode-slide data-transition="slide-in fade-out">
 <h5 id=2014---firmware-analysis>2014 - Firmware Analysis</h5>
@@ -477,6 +481,35 @@ IoT infrastructure outage<br>=<br>Product-wide outage
 <li>Certificate pinning bypass-able</li>
 </ul>
 <p>Source: <a href=https://media.defcon.org/DEF%20CON%2024/DEF%20CON%2024%20presentations/DEF%20CON%2024%20-%20Jmaxxz-Backdooring-the-Frontdoor-UPDATED.pdf>Backdooring the Frontdoor</a></p>
+</section>
+<section data-noprocess data-shortcode-slide data-transition="slide-in fade-out">
+<h5 id=lidar---acoustic-eavesdropping>LIDAR - Acoustic Eavesdropping</h5>
+<blockquote>
+<p>LIDAR - Light Detection and Ranging</p>
+</blockquote>
+<ul>
+<li>Uses laser lights to sense distance</li>
+<li>Side-channel also exposes intensity (on some units)
+<ul>
+<li>Can use to detect minute vibrations induced by audio sources</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://eak2mvmpt4a.exactdn.com/wp-content/uploads/2020/07/A-Guide-to-Lidar-Wavelengths-Velodyne-Lidar-AlphaPrime-1.jpg?strip=all&lossy=1&ssl=1" alt></p>
+</section>
+<section data-noprocess data-shortcode-slide data-transition=fade>
+<h5 id=lidar---acoustic-eavesdropping-1>LIDAR - Acoustic Eavesdropping</h5>
+<ul>
+<li>Vibrations are extracted and turned back into sound waves
+<ul>
+<li>Extraction of sensitive data (i.e. credit card digits)</li>
+<li>Achieved 91% classification accuracy</li>
+</ul>
+</li>
+</ul>
+<p>2015: <a href=https://dl.acm.org/doi/10.1145/2789168.2790119>Acoustic Eavesdropping through Wireless Vibrometry</a><br>
+2020: <a href=https://dl.acm.org/doi/10.1145/3384419.3430430>LidarPhone: acoustic eavesdropping using a lidar sensor</a></p>
+<p><img src="https://www.zdnet.com/a/img/resize/cdaf0753c4b991623b9413270b0d9ceff8a6e730/2020/11/19/2f9e0e96-c3e5-4cdc-b9bb-24022efd5b3b/lidarphone.png?fit=bounds&auto=webp" alt=center></p>
 </section>
 <section data-noprocess data-shortcode-slide data-transition=fade>
 <h5 id=xiaomi-ecosystem--2017-2019---dennis-giese>Xiaomi Ecosystem | 2017-2019 - Dennis Giese</h5>
@@ -566,14 +599,14 @@ IoT infrastructure outage<br>=<br>Product-wide outage
 </section><section>
 <h3 id=considerations>Considerations</h3>
 <ul>
-<li>Only have one device to use</li>
-<li>Access to equipment and facilities are limited (COVID?)</li>
 <li>I&rsquo;m just a fourth year!
 <ul>
 <li>Limited skills</li>
 <li>i.e. microsoldering for flash chip extraction and dumping</li>
 </ul>
 </li>
+<li>Access to equipment and facilities are limited (COVID?)</li>
+<li>Only have one device to test on</li>
 </ul>
 </section><section>
 <h3 id=contingency>Contingency</h3>
@@ -616,6 +649,11 @@ IoT infrastructure outage<br>=<br>Product-wide outage
 <li>Learn the ARM Instruction Set (ISA)
 <ul>
 <li>Processor Modes, Protection Rings?</li>
+</ul>
+</li>
+<li>Learn about other hardware protections
+<ul>
+<li>Secure Boot, RPBM, SELinux, LUKS, OPTEE, TrustZone, etc&mldr;</li>
 </ul>
 </li>
 <li>Acquisition of hardware
