@@ -245,7 +245,12 @@ IoT infrastructure outage<br>=<br>Product-wide outage
 </section><section>
 <h1 id=literature-review-1>Literature Review</h1>
 <section data-shortcode-section>
-<h5 id=iot>IoT</h5>
+<p><br>
+<br>
+<br>
+<br>
+<br></p>
+<h2 id=iot>IoT</h2>
 <p>The majority of hardware hacks / custom firmwares have originated from the desire to decouple hardware from cloud services</p>
 </section>
 <section data-noprocess data-shortcode-slide data-transition=fade>
@@ -325,6 +330,14 @@ IoT infrastructure outage<br>=<br>Product-wide outage
 <li>Analyse, modify and package updated firmware</li>
 </ul>
 </section><section>
+<p><br>
+<br>
+<br>
+<br>
+<br></p>
+<h2 id=access-and-control>Access and Control</h2>
+<p>Gaining access to a shell / stored data / things we shouldn&rsquo;t.</p>
+</section><section>
 <h5 id=flash-ic-dumping>Flash IC Dumping</h5>
 <ul>
 <li>Requires a flash programmer ($$$)
@@ -337,7 +350,7 @@ IoT infrastructure outage<br>=<br>Product-wide outage
 <li>Possibly a destructive process</li>
 </ul>
 </li>
-<li>Free software: <a href=https://www.flashrom.org/Flashrom><code>flashrom</code></a></li>
+<li>Open-source software: <a href=https://www.flashrom.org/Flashrom><code>flashrom</code></a></li>
 </ul>
 <blockquote>
 <p>Source: <a href=https://jcjc-dev.com/2016/06/08/reversing-huawei-4-dumping-flash/>J. Jimenez - Practical Reverse Engineering</a></p>
@@ -384,20 +397,8 @@ IoT infrastructure outage<br>=<br>Product-wide outage
 </blockquote>
 <p>Pin TPA17 on the Roborock S7 circuit board was <a href=https://dontvacuum.me/talks/DEFCON29/DEFCON29-vacuum-robots.pdf>discovered</a> to connect to ball L14 on the SoC.</p>
 <p>Therefore by pulling TPA17 / L14 / LRADC0 LOW (i.e connect to GND), FEL mode can be entered</p>
-</section><section>
-<h5 id=client-side-and-infrastructural-security>Client-Side and Infrastructural Security</h5>
-<blockquote>
-<p>iOS application of a smart doorlock was analysed to (in)validate claims made by the device company</p>
-</blockquote>
-<p><label>Findings</label></p>
-<ul>
-<li>Lock events and other sensitive information were being logged independent of locking functionality</li>
-<li>Access to lock settings were purely client-side UI checks</li>
-<li>Certificate pinning bypass-able</li>
-</ul>
-<p>Source: <a href=https://media.defcon.org/DEF%20CON%2024/DEF%20CON%2024%20presentations/DEF%20CON%2024%20-%20Jmaxxz-Backdooring-the-Frontdoor-UPDATED.pdf>Backdooring the Frontdoor</a></p>
 </section>
-<section data-noprocess data-shortcode-slide data-transition=fade>
+<section data-noprocess data-shortcode-slide data-transition="slide-in fade-out">
 <h5 id=vacuums-in-the-cloud-analyzing-security-in-a-hardened-iot-ecosystem>Vacuums in the Cloud: Analyzing Security in a Hardened IoT Ecosystem</h5>
 <blockquote>
 <p>Presentation: <a href=https://www.usenix.org/conference/woot19/presentation/ullrich>USENIX WOOT 19</a></p>
@@ -443,7 +444,7 @@ IoT infrastructure outage<br>=<br>Product-wide outage
 </li>
 </ul>
 </section>
-<section data-noprocess data-shortcode-slide data-transition=fade>
+<section data-noprocess data-shortcode-slide data-transition="slide-in fade-out">
 <h5 id=2014---firmware-analysis>2014 - Firmware Analysis</h5>
 <blockquote>
 <p>Paper: <a href=https://www.usenix.org/node/184450.>A Large-Scale Analysis of the Security of Embedded Firmwares</a></p>
@@ -452,22 +453,30 @@ IoT infrastructure outage<br>=<br>Product-wide outage
 <li>Broad analysis of a large number of firmware images</li>
 <li>Discovered 38 new vulnerabilities over 693 images</li>
 <li>Similarities in vulnerabilities</li>
-<li>Static analysis and extraction of keys, credentials, configs, other &lsquo;tells&rsquo;</li>
+<li>Static analysis and extraction of keys, credentials, configurations and other &lsquo;tells&rsquo;</li>
 </ul>
 </section>
 <section data-noprocess data-shortcode-slide data-transition=fade>
 <h5 id=2014---firmware-analysis-1>2014 - Firmware Analysis</h5>
-<blockquote>
-<p><a href=https://github.com/ReFirmLabs/binwalk>https://github.com/ReFirmLabs/binwalk</a><br>
-<a href=https://github.com/ssdeep-project/ssdeep>https://github.com/ssdeep-project/ssdeep</a><br>
-<a href=https://github.com/sdhash/sdhash>https://github.com/sdhash/sdhash</a></p>
-</blockquote>
 <ul>
 <li>Source code changes largely remain the same</li>
 <li>But binary files change &lsquo;arbitrarily&rsquo;</li>
 <li>Difficult to compare binary files</li>
 <li>Calculate fuzzy hashes instead to compare similarity</li>
 </ul>
+<p>e.g. <a href=https://github.com/ReFirmLabs/binwalk>binwalk</a>, <a href=https://github.com/ssdeep-project/ssdeep>ssdeep</a>, <a href=https://github.com/sdhash/sdhash>sdhash</a></p>
+</section><section>
+<h5 id=client-side-and-infrastructural-security>Client-Side and Infrastructural Security</h5>
+<blockquote>
+<p>iOS application of a smart doorlock was analysed to (in)validate claims made by the device company</p>
+</blockquote>
+<p><label>Findings</label></p>
+<ul>
+<li>Lock events and other sensitive information were being logged independent of locking functionality</li>
+<li>Access to lock settings were purely client-side UI checks</li>
+<li>Certificate pinning bypass-able</li>
+</ul>
+<p>Source: <a href=https://media.defcon.org/DEF%20CON%2024/DEF%20CON%2024%20presentations/DEF%20CON%2024%20-%20Jmaxxz-Backdooring-the-Frontdoor-UPDATED.pdf>Backdooring the Frontdoor</a></p>
 </section>
 <section data-noprocess data-shortcode-slide data-transition=fade>
 <h5 id=xiaomi-ecosystem--2017-2019---dennis-giese>Xiaomi Ecosystem | 2017-2019 - Dennis Giese</h5>
@@ -507,15 +516,6 @@ IoT infrastructure outage<br>=<br>Product-wide outage
 </blockquote>
 <p><img src=../../uploads/20211110-screely-1636466635263.png alt></p>
 </section>
-</section><section>
-<p>TODO:</p>
-<ul>
-<li>Reverse engineering IoT</li>
-<li>Reverse engineering Vacuum Cleaners</li>
-<li>Papers about IoT network vulnerabilities</li>
-<li>Microsoldering</li>
-<li>My own research into RE of network protocols, etc?</li>
-</ul>
 </section><section>
 <h1 id=extrapolation>Extrapolation</h1>
 <blockquote>
