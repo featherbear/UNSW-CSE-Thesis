@@ -24,10 +24,10 @@ let server = polka()
       return new Promise((resolve, reject) => {
         let proc = require('child_process').spawn(cmd[0], cmd.slice(1))
         proc.stdout.on('data', function (data) {
-          console.log(header, data.toString())
+          console.log(header, data.toString().trim())
         })
         proc.stderr.on('data', function (data) {
-          console.log(header, data.toString())
+          console.log(header, data.toString().trim())
         })
         proc.on('exit', function (code) {
           resolve(code)
