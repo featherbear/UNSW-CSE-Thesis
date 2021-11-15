@@ -453,4 +453,6 @@ Breakdown of hardware
 
 * Nexmon
 * MobSF
-* Qardk
+* Quark APK
+
+https://shelat.ccis.neu.edu/dl/2550-s21/2550-L23-IOT.pdf
