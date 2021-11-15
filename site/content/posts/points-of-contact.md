@@ -447,3 +447,10 @@ buffer overlow
 Breakdown of hardware  
 \- it's just a computer.  
 \- It's an entire computer.
+
+
+---
+
+* Nexmon
+* MobSF
+* Qardk
