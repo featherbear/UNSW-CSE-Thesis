@@ -27,7 +27,7 @@
 <meta property="og:description" content="Musings of a CSE Thesis">
 <meta property="og:locale" content="en">
 <meta property="og:site_name" content="CSE Thesis Musings">
-<meta property="og:updated_time" content="2021-11-01T07:28:19+00:00">
+<meta property="og:updated_time" content="2021-11-15T11:06:25+11:00">
 <meta property="article:section" content>
 <link rel=alternate type=application/rss+xml href=./index.xml title="CSE Thesis Musings">
 <body class="flex flex-col min-h-screen">
@@ -137,6 +137,52 @@ I make stuff, and occasionally break stuff&mldr; mainly the lattter
 <div class="bg-secondary-bg rounded overflow-hidden border hover:shadow-lg transition ease-in-out duration-200">
 <div class="px-6 pt-6">
 <div class="font-bold text-xl text-primary-text mb-2">
+<a href=./posts/linux-forensics/ class=hover:text-eureka>Linux Forensics</a>
+</div>
+<div> System imaging
+https://countuponsecurity.com/2017/04/12/intro-to-linux-forensics/
+https://opensource.com/article/18/4/linux-filesystem-forensics
+https://tho-le.medium.com/linux-forensics-some-useful-artifacts-74497dca1ab2
+https://www.sandflysecurity.com/blog/compromised-linux-cheat-sheet/
+Linux Rapid Compromise Assessment - Craig H. Rowland </div>
+</div>
+<div class="px-6 pb-2">
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+<div class="mr-6 my-2">
+<i class="fas fa-calendar mr-1"></i>
+<span>2021-11-15</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=item>
+<div class=grid-content>
+<div class="bg-secondary-bg rounded overflow-hidden border hover:shadow-lg transition ease-in-out duration-200">
+<div class="px-6 pt-6">
+<div class="font-bold text-xl text-primary-text mb-2">
+<a href=./posts/literature-review/ class=hover:text-eureka>Literature Review</a>
+</div>
+<div>2018 - Michael Steigerwald (VTRUST) Talk: Smart home - Smart hack
+Products from different manufacturers used the same cloud infrastructure (with supposed &amp;lsquo;military-grade security&amp;rsquo;), each with their own &amp;lsquo;customised&amp;rsquo; (white-label) smartphone apps Used the Espressif ESP8266 chip WiFi-enabled SoC with Arduino support Often used by tinkerers and enthusiasts Anyone can become an &amp;lsquo;IoT company&amp;rsquo; regardless of &amp;ldquo;having in-depth technical knowledge of IoT or IT security.</div>
+</div>
+<div class="px-6 pb-2">
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+<div class="mr-6 my-2">
+<i class="fas fa-calendar mr-1"></i>
+<span>2021-11-15</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=item>
+<div class=grid-content>
+<div class="bg-secondary-bg rounded overflow-hidden border hover:shadow-lg transition ease-in-out duration-200">
+<div class="px-6 pt-6">
+<div class="font-bold text-xl text-primary-text mb-2">
 <a href=./posts/seminar-a-preparation/ class=hover:text-eureka>Seminar A Preparation</a>
 </div>
 <div>Criterion Make a 30-minute presentation about your Thesis A topic and the plan The talk presents an extensive, logically organised review, analysis and discussion of background material. Demonstrates clear mastery of the material in the topic area already. A clearly articulated definition of the problem and/or hypothesis (statement of purpose).</div>
@@ -186,47 +232,6 @@ dd Make an exact (byte-to-byte) copy of the disk - will also include unused spac
 </div>
 <div>Removed the logic board from the robot and had a look at the pins near the Allwinner R16 processor / SoC. Read Dennis' writeup about the UART pins being located on RX:TPA15, TX:TPA8, GND:TPA16
 I then soldered some wires onto the test pins (too hard to just hold it with my hands)</div>
-</div>
-<div class="px-6 pb-2">
-<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
-<div class="mr-6 my-2">
-<i class="fas fa-calendar mr-1"></i>
-<span>2021-10-29</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class=item>
-<div class=grid-content>
-<div class="bg-secondary-bg rounded overflow-hidden border hover:shadow-lg transition ease-in-out duration-200">
-<div class="px-6 pt-6">
-<div class="font-bold text-xl text-primary-text mb-2">
-<a href=./posts/i-am-root/ class=hover:text-eureka>I am root!</a>
-</div>
-<div>From the bootloader, we can dump the file vinda in the ext4 partition at emmc2:6.
-sunxi#ext4load ext4load - load binary file from a Ext4 filesystem Usage: ext4load &amp;lt;interface&amp;gt; &amp;lt;dev[:part]&amp;gt; [addr] [filename] [bytes] - load binary file 'filename' from 'dev' on 'interface' to address 'addr' from ext4 filesystem sunxi#ext4load mmc 2:6 0 vinda Loading file &amp;quot;vinda&amp;quot; from mmc device 2:6 16 bytes read sunxi#md 0 4 00000000: 5b415243 51454346 54505042 525f5655 CRA[FCEQBPPTUV_R The string of bytes can be XOR&amp;rsquo;d with the byte 0x37 to gain the root password.</div>
-</div>
-<div class="px-6 pb-2">
-<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
-<div class="mr-6 my-2">
-<i class="fas fa-calendar mr-1"></i>
-<span>2021-10-29</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class=item>
-<div class=grid-content>
-<div class="bg-secondary-bg rounded overflow-hidden border hover:shadow-lg transition ease-in-out duration-200">
-<div class="px-6 pt-6">
-<div class="font-bold text-xl text-primary-text mb-2">
-<a href=./posts/uart-preboot-communications/ class=hover:text-eureka>UART / Preboot Communications</a>
-</div>
-<div>Gaining Access TPA16 is the GND TPA15 is the device&amp;rsquo;s RX pin - Connect this to your UART client&amp;rsquo;s TX TPA8 is the device&amp;rsquo;s TX pin - Connect this to your UART client&amp;rsquo;s RX On Power On *-boot0 version : 4.</div>
 </div>
 <div class="px-6 pb-2">
 <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">

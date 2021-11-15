@@ -1,0 +1,360 @@
+<!doctype html><html lang=en><meta charset=utf-8>
+<meta name=viewport content="width=device-width">
+<title>Literature Review | CSE Thesis Musings</title>
+<meta name=generator content="Hugo Eureka 0.8.2">
+<link rel=stylesheet href=../../css/eureka.min.css>
+<script defer src=../../js/eureka.min.js></script>
+<link rel=preconnect href=https://fonts.gstatic.com crossorigin>
+<link rel=preload href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" as=style onload="this.onload=null,this.rel='stylesheet'">
+<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/styles/solarized-light.min.css media=print onload="this.media='all',this.onload=null" crossorigin>
+<script defer src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/highlight.min.js crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/languages/dart.min.js crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js integrity="sha256-uNYoXefWRqv+PsIF/OflNmwtKM4lStn9yrz2gVl6ymo=" crossorigin></script>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css integrity=sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X media=print onload="this.media='all',this.onload=null" crossorigin>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js integrity=sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4 crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js integrity=sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa crossorigin></script>
+<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}]})})</script>
+<script defer src=https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js integrity="sha256-Zmpaaj+GXFsPF5WdPArSrnW3b30dovldeKsW00xBVwE=" crossorigin></script>
+<link rel=preconnect href=https://www.google-analytics.com crossorigin>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107434487-2"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-107434487-2')</script>
+<script>(function(e,b,f,c,a,d){b[c]=b[c]||function(){(b[c].q=b[c].q||[]).push(arguments)},a=e.createElement('script'),d=e.getElementsByTagName('script')[0],a.async=1,a.src=f,a.id='fathom-script',d.parentNode.insertBefore(a,d)})(document,window,'//ss.featherbear.cc/tracker.js','fathom'),fathom('set','siteId','NEQTU'),fathom('trackPageview')</script>
+<style>html.dark{--color-primary-bg:#232327 !important}div#sidebar-toc>ul.pl-6{margin-left:1em}</style>
+<meta name=description content="Related research and works">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"Literature Review","item":"/posts/literature-review/"}]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/literature-review/"},"headline":"Literature Review | CSE Thesis Musings","datePublished":"2021-11-15T10:39:22+11:00","dateModified":"2021-11-15T10:39:22+11:00","wordCount":640,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Related research and works"}</script><meta property="og:title" content="Literature Review | CSE Thesis Musings">
+<meta property="og:type" content="article">
+<meta property="og:url" content="/posts/literature-review/">
+<meta property="og:description" content="Related research and works">
+<meta property="og:locale" content="en">
+<meta property="og:site_name" content="CSE Thesis Musings">
+<meta property="article:published_time" content="2021-11-15T10:39:22+11:00">
+<meta property="article:modified_time" content="2021-11-15T10:39:22+11:00">
+<meta property="article:section" content="posts">
+<body class="flex flex-col min-h-screen">
+<header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
+<div class="w-full max-w-screen-xl mx-auto"><script>let storageColorScheme=localStorage.getItem("lightDarkMode");((storageColorScheme=='Auto'||storageColorScheme==null)&&window.matchMedia("(prefers-color-scheme: dark)").matches||storageColorScheme=="Dark")&&document.getElementsByTagName('html')[0].classList.add('dark')</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+<a href=../../ class="mr-6 text-primary-text text-xl font-bold">CSE Thesis Musings</a>
+<button id=navbar-btn class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+<i class="fas fa-bars"></i>
+</button>
+<div id=target class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+<div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
+<a href=../../#about class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">About</a>
+<a href=../../posts/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 selected-menu-item mr-4">Posts</a>
+<a href=../../docs/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">Docs</a>
+<a href=../../tldr/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">Progress Log</a>
+</div>
+<div class=flex>
+<div class="relative pt-4 md:pt-0">
+<div class="cursor-pointer hover:text-eureka" id=lightDarkMode>
+<i class="fas fa-adjust"></i>
+</div>
+<div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id=is-open>
+</div>
+<div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40" id=lightDarkOptions>
+<span class="px-4 py-1 hover:text-eureka" name=Light>Light</span>
+<span class="px-4 py-1 hover:text-eureka" name=Dark>Dark</span>
+<span class="px-4 py-1 hover:text-eureka" name=Auto>Auto</span>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id=is-open-mobile>
+</div>
+</nav>
+<script>let element=document.getElementById('lightDarkMode');storageColorScheme==null||storageColorScheme=='Auto'?document.addEventListener('DOMContentLoaded',()=>{window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change',switchDarkMode)}):storageColorScheme=="Light"?(element.firstElementChild.classList.remove('fa-adjust'),element.firstElementChild.setAttribute("data-icon",'sun'),element.firstElementChild.classList.add('fa-sun')):storageColorScheme=="Dark"&&(element.firstElementChild.classList.remove('fa-adjust'),element.firstElementChild.setAttribute("data-icon",'moon'),element.firstElementChild.classList.add('fa-moon')),document.addEventListener('DOMContentLoaded',()=>{getcolorscheme(),switchBurger()})</script>
+</div>
+</header>
+<main class="flex-grow pt-16">
+<div class=pl-scrollbar>
+<div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
+<div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
+<div class="col-span-2 lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+<h1 class="font-bold text-3xl text-primary-text">Literature Review</h1>
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+<div class="mr-6 my-2">
+<i class="fas fa-calendar mr-1"></i>
+<span>2021-11-15</span>
+</div>
+</div>
+<div class=content>
+<h2 id=2018---michael-steigerwald-vtrust>2018 - Michael Steigerwald (VTRUST)</h2>
+<blockquote>
+<p>Talk: <a href=https://media.ccc.de/v/35c3-9723-smart_home_-_smart_hack>Smart home - Smart hack</a></p>
+</blockquote>
+<ul>
+<li>Products from different manufacturers used the same cloud infrastructure (with supposed &lsquo;military-grade security&rsquo;), each with their own &lsquo;customised&rsquo; (white-label) smartphone apps</li>
+<li>Used the <a style="text-decoration:underline dotted" href=https://www.espressif.com/en/products/socs/esp8266>Espressif ESP8266</a> chip
+<ul>
+<li>WiFi-enabled SoC with Arduino support</li>
+<li>Often used by tinkerers and enthusiasts</li>
+</ul>
+</li>
+<li>Anyone can become an &lsquo;IoT company&rsquo; regardless of &ldquo;having in-depth technical knowledge of IoT or IT security.&rdquo;</li>
+</ul>
+<blockquote>
+<p><em>&ldquo;The analysis of the &lsquo;smart&rsquo; devices using this basic platform is generally frightening [&mldr;] serious [&mldr;] shortcomings&rdquo;</em></p>
+</blockquote>
+<ul>
+<li>Insecure transmission of encryption keys, serial number, etc&mldr;</li>
+<li>Insecure transmission of wireless credentials during pairing</li>
+<li>Ease of white-labelling and starting your own IoT business
+<ul>
+<li>Ease of selling malicious devices</li>
+</ul>
+</li>
+</ul>
+<p><a href=https://github.com/ct-Open-Source/tuya-convert><img src="https://gh-card.dev/repos/ct-Open-Source/tuya-convert.svg?fullname=" alt=center></a></p>
+<p>Automated flashing tool <code>tuya-convert</code> created that exploited prior vulnerabilities to flash custom decoupled firmware<br>
+(i.e. <a href=https://esphome.io/>ESPhome</a>, <a href=https://tasmota.github.io/docs/>Tasmota</a>, etc&mldr;)</p>
+<h3 id=tuyas-response>Tuya&rsquo;s Response</h3>
+<ul>
+<li>28th January 2019 - <a href=https://www.heise.de/newsticker/meldung/Smart-Home-Hack-Tuya-veroeffentlicht-Sicherheitsupdate-4292028.html>patch</a> released <em>(later subverted)</em>
+<ul>
+<li>TLS encrypted firmware update procedure</li>
+<li>Encryption of flash memory</li>
+</ul>
+</li>
+<li>3rd January 2020 - <a href=https://github.com/ct-Open-Source/tuya-convert/issues/483>new patch</a> released
+<ul>
+<li>unbreakable™</li>
+</ul>
+</li>
+<li>23rd April 2020 - Switched from the ESP8266 to a custom SoC
+<ul>
+<li><a href=https://github.com/ct-Open-Source/tuya-convert/issues/483>Tuya WB3S</a></li>
+</ul>
+</li>
+<li>16th June 2021 - Announced official support for HomeAssistant</li>
+</ul>
+<hr>
+<h2 id=lidarphone---2020---acoustic-eavesdropping>LIDARPhone - 2020 - Acoustic Eavesdropping</h2>
+<blockquote>
+<p>2015 - <a href=https://dl.acm.org/doi/10.1145/2789168.2790119>https://dl.acm.org/doi/10.1145/2789168.2790119</a></p>
+</blockquote>
+<blockquote>
+<p>2020 - <a href=https://dl.acm.org/doi/10.1145/3384419.3430430>https://dl.acm.org/doi/10.1145/3384419.3430430</a></p>
+</blockquote>
+<ul>
+<li>LIDAR sensor detects minute vibrations that are induced on objects near audio sources</li>
+<li>Vibrations are extracted and turned back into sound waves</li>
+<li>Extraction of sensitive data (i.e. credit card digits)</li>
+<li>Achieved 91% classification accuracy</li>
+</ul>
+<hr>
+<p>TODO:
+TODO:
+TODO:
+TODO:
+TODO:</p>
+<h2 id=flash-dumping>Flash Dumping</h2>
+<hr>
+<h2 id=bga-shorting-to-gain-access-to-fel>BGA shorting to gain access to FEL</h2>
+<p><a href=https://docs.neutis.io/img/hardware-integration/boot-sequence.png>https://docs.neutis.io/img/hardware-integration/boot-sequence.png</a></p>
+<p>Shorting TPA17 to GND</p>
+<hr>
+<h2 id=secure-boot-bypass>Secure Boot Bypass</h2>
+<p>[MAXV]</p>
+<p>Secure boot
+–Replay-Protected-Memory-Block (RPMB) enabled
+•DM-Verity
+–System partition integrity protected
+•SELinux enabled and enforced
+•LUKS encrypted partitions
+–All application specific programs protected
+–Keys stored in OPTEE / ARM TrustZone</p>
+<p>Security measures
+•Signed ELF-Binaries and kernel-based
+verification
+•Signed and encrypted Firmware updates
+–Keys different per firmware version
+–Master keys stored in OPTEE /
+TrustZone
+•IPtables binary cannot flush/delete rules
+•Locked UART</p>
+<hr>
+<h2 id=taking-matters-in-our-own-hands>Taking Matters In Our Own Hands</h2>
+<ul>
+<li>PiHole</li>
+<li>IoTrim
+<ul>
+<li><a href=https://arxiv.org/abs/2105.05162>https://arxiv.org/abs/2105.05162</a></li>
+</ul>
+</li>
+</ul>
+<h2 id=infrastructure-security>Infrastructure Security</h2>
+<blockquote>
+<p><a href=https://media.defcon.org/DEF%20CON%2024/DEF%20CON%2024%20presentations/DEF%20CON%2024%20-%20Jmaxxz-Backdooring-the-Frontdoor-UPDATED.pdf>Backdooring the Frontdoor</a></p>
+</blockquote>
+<ul>
+<li>Sensitive information inside logs</li>
+<li>Client-side access management</li>
+<li>Certificate pinning bypass-able</li>
+<li></li>
+</ul>
+<hr>
+<h2 id=vacuums-in-the-cloud-analyzing-security-in-a-hardened-iot-ecosystem>Vacuums in the Cloud: Analyzing Security in a Hardened IoT Ecosystem</h2>
+<blockquote>
+<p><a href=https://www.usenix.org/conference/woot19/presentation/ullrich>https://www.usenix.org/conference/woot19/presentation/ullrich</a></p>
+</blockquote>
+<ul>
+<li>AM335x Microprocessor
+<ul>
+<li>ARM Cortex-A8</li>
+</ul>
+</li>
+<li>Cold-boot attack
+<ul>
+<li>USB + Serial communication allowed boot into custom image</li>
+<li>RAM could be dumped to the serial port</li>
+</ul>
+</li>
+<li>Extraction of keys
+<ul>
+<li>Auth/Authz to the robot AND cloud</li>
+</ul>
+</li>
+<li>Secret key RNG weak - able to bruteforce</li>
+<li>RSA key was shared with all devices</li>
+<li>Identity impersonation</li>
+<li>Logs and coredumps were encrypted :)
+<ul>
+<li>But encryption keys were hardcoded :(</li>
+</ul>
+</li>
+<li>Buffer Overflow -> RCE</li>
+</ul>
+<hr>
+<h2 id=2014---large-scale-firmware-analysis>2014 - Large-scale Firmware Analysis</h2>
+<blockquote>
+<p><a href=https://www.usenix.org/node/184450>https://www.usenix.org/node/184450</a>.</p>
+</blockquote>
+<ul>
+<li>Broad analysis of a large number of firmware images</li>
+<li>Discovered 38 new vulnerabilities over 693 images</li>
+<li>Similarities in vulnerabilities</li>
+<li>Static analysis and extraction of keys, credentials, configs, other &lsquo;tells&rsquo;</li>
+</ul>
+<hr>
+<h2 id=fuzzy-binary-analysis>Fuzzy Binary Analysis</h2>
+<blockquote>
+<p><a href=https://github.com/ReFirmLabs/binwalk>https://github.com/ReFirmLabs/binwalk</a><br>
+<a href=https://github.com/ssdeep-project/ssdeep>https://github.com/ssdeep-project/ssdeep</a><br>
+<a href=https://github.com/sdhash/sdhash>https://github.com/sdhash/sdhash</a></p>
+</blockquote>
+<ul>
+<li>Source code changes largely remain the same</li>
+<li>But binary files change &lsquo;arbitrarily&rsquo;</li>
+<li>Difficult to compare binary files</li>
+<li></li>
+</ul>
+<hr>
+<h2 id=iot--20172018---xiaomi-dafang-hacks>IoT | 2017/2018 - Xiaomi Dafang Hacks</h2>
+<p><a href=https://github.com/EliasKotlyar/Xiaomi-Dafang-Hacks><img src="https://gh-card.dev/repos/EliasKotlyar/Xiaomi-Dafang-Hacks.svg?fullname=" alt=center></a><br>
+<a href=https://github.com/samtap/fang-hacks><img src="https://gh-card.dev/repos/samtap/fang-hacks.svg?fullname=" alt=center></a></p>
+<ul>
+<li>Cheap WiFi camera that can be made to boot off a microSD card</li>
+<li>Circuit board exposed UART (<code>baud_rate=115200</code>) pins that allowed interaction with U-Boot bootloader</li>
+<li>Modification of boot environment to start <code>/bin/sh</code> (<a href=https://github.com/EliasKotlyar/Xiaomi-Dafang-Hacks/blob/master/hacks/getroot.md>[link]</a>)</li>
+<li>Gain root shell access</li>
+<li>Dump firmware</li>
+<li>Analyse, modify and package updated firmware</li>
+</ul>
+<hr>
+<h2 id=xiaomi-ecosystem--2017-2019---dennis-giese>Xiaomi Ecosystem | 2017-2019 - Dennis Giese</h2>
+<blockquote>
+<p>Paper: <a href=https://dontvacuum.me/thesis/Security_Analysis_of_the_Xiaomi_IoT_Ecosystem.pdf><code>SEEMOO-MSC-0142</code></a> (July 10, 2019)</p>
+</blockquote>
+<ul>
+<li>Research available: <a href=https://dontvacuum.me>dontvacuum.me</a></li>
+<li>Performed security analysis of a range of Xiaomi products</li>
+<li>Found ways to root the Mi Home Robotic Vacuum Cleaner and the Roborock S6
+<ul>
+<li>UART, hardware fault injection, etc&mldr;</li>
+</ul>
+</li>
+<li>Developed cloud emulation software (<a href=https://github.com/dgiese/dustcloud>DustCloud</a>)</li>
+<li>Research led to development of 3rd party software (i.e. <a href=https://github.com/Hypfer/Valetudo>Valeduto</a>)</li>
+</ul>
+<blockquote>
+<p>&ldquo;How secure is the implementation of the ecosystem of the IoT market leader Xiaomi?&rdquo;</p>
+</blockquote>
+<h3 id=conclusions>Conclusions</h3>
+<ul>
+<li>⌚ The company quickly responds to security concerns</li>
+<li>🔍 Many exposed endpoints of deprecated APIs</li>
+<li>🔓 Many devices do not enforce proper HTTPS checks</li>
+<li>🤝 Difficult to enforce security for plugins (vendor-provided)</li>
+<li>❓ CIA principles generally kept</li>
+</ul>
+<hr>
+<p>TODO:
+TODO:
+TODO:
+TODO:
+TODO:
+TODO:
+TODO:
+TODO:
+TODO:
+TODO:</p>
+<p><a href=https://dontvacuum.me/talks/DEFCON29/DEFCON29-vacuum-robots.pdf>https://dontvacuum.me/talks/DEFCON29/DEFCON29-vacuum-robots.pdf</a></p>
+</div>
+<div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
+<div>
+<span class="block font-bold">Previous</span>
+<a href=../../posts/linux-forensics/ class=block>Linux Forensics</a>
+</div>
+<div class="md:text-right mt-4 md:mt-0">
+<span class="block font-bold">Next</span>
+<a href=../../posts/seminar-a-preparation/ class=block>Seminar A Preparation</a>
+</div>
+</div>
+</div>
+<div class=col-span-2>
+<div class="sticky top-16 z-10 hidden lg:block px-6 py-4 bg-primary-bg">
+<span class="text-lg font-semibold">On This Page</span>
+</div>
+<div class="sticky-toc hidden lg:block px-6 pb-6">
+<nav id=TableOfContents>
+<ul>
+<li><a href=#2018---michael-steigerwald-vtrust>2018 - Michael Steigerwald (VTRUST)</a>
+<ul>
+<li><a href=#tuyas-response>Tuya&rsquo;s Response</a></li>
+</ul>
+</li>
+<li><a href=#lidarphone---2020---acoustic-eavesdropping>LIDARPhone - 2020 - Acoustic Eavesdropping</a></li>
+<li><a href=#flash-dumping>Flash Dumping</a></li>
+<li><a href=#bga-shorting-to-gain-access-to-fel>BGA shorting to gain access to FEL</a></li>
+<li><a href=#secure-boot-bypass>Secure Boot Bypass</a></li>
+<li><a href=#taking-matters-in-our-own-hands>Taking Matters In Our Own Hands</a></li>
+<li><a href=#infrastructure-security>Infrastructure Security</a></li>
+<li><a href=#vacuums-in-the-cloud-analyzing-security-in-a-hardened-iot-ecosystem>Vacuums in the Cloud: Analyzing Security in a Hardened IoT Ecosystem</a></li>
+<li><a href=#2014---large-scale-firmware-analysis>2014 - Large-scale Firmware Analysis</a></li>
+<li><a href=#fuzzy-binary-analysis>Fuzzy Binary Analysis</a></li>
+<li><a href=#iot--20172018---xiaomi-dafang-hacks>IoT | 2017/2018 - Xiaomi Dafang Hacks</a></li>
+<li><a href=#xiaomi-ecosystem--2017-2019---dennis-giese>Xiaomi Ecosystem | 2017-2019 - Dennis Giese</a>
+<ul>
+<li><a href=#conclusions>Conclusions</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+<script>window.addEventListener('DOMContentLoaded',()=>{enableStickyToc()})</script>
+</div>
+</div>
+<script>document.addEventListener('DOMContentLoaded',()=>{hljs.initHighlightingOnLoad()})</script>
+</div>
+</div>
+</main>
+<footer class=pl-scrollbar>
+<div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
+<p class="text-sm text-tertiary-text">&copy; 2021 <a href=https://featherbear.cc>Andrew Wong (z5206677)</a>
+&#183; Powered by the <a href=https://github.com/wangchucheng/hugo-eureka class=hover:text-eureka>Eureka</a> theme for <a href=https://gohugo.io class=hover:text-eureka>Hugo</a></p>
+</div></div>
+</footer>
+</body>
+</html>
