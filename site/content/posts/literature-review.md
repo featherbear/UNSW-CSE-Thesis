@@ -57,58 +57,52 @@ Automated flashing tool `tuya-convert` created that exploited prior vulnerabilit
 
 ----
 
-TODO:
-TODO:
-TODO:
-TODO:
-TODO:
-
-
 ## Flash Dumping
+
+> Source: [J. Jimenez - Practical Reverse Engineering](https://jcjc-dev.com/2016/06/08/reversing-huawei-4-dumping-flash/)
+
+* Requires a flash programmer ($$$)
+  * Budget Solution: Raspberry Pi?
+* Some flash chips (depending on form factor) may require to be desoldered
+  * Possibly a destructive process
+* Free software: [`flashrom`](https://www.flashrom.org/Flashrom)
 
 ----
 
 ## BGA shorting to gain access to FEL
 
-https://docs.neutis.io/img/hardware-integration/boot-sequence.png
+![](/uploads/20211115-boot-sequence.png)
 
-Shorting TPA17 to GND
+<!-- https://docs.neutis.io/img/hardware-integration/boot-sequence.png -->
+
+* FEL mode is a "fallback" system on Allwinner SoCs that allows flashing
+* Generally triggered by pulling the FEL pin to LOW during boot
+  * On the Allwinner R16 (BGA), located on ball L14
+    * Ball not located on the edge of the chip and so required desoldering / breakout
+* FEL mode can also be entered if U-Boot (or another bootloader) fails to load 🤔
+
+---
+
+* The Allwinner R16 (used in the Roborock) has a solder plane height of around 0.3mm
+  * Too shallow for a wire
+  * Aluminium foil has a thickness of ~0.02mm
+  * Aluminium foil is conductive...
+  * $
+* Enter FEL mode by corrupting the eMMC reading
+
+Documented: [`SEEMOO-MSC-0142`](https://dontvacuum.me/thesis/Security_Analysis_of_the_Xiaomi_IoT_Ecosystem.pdf)
+
+---
+
+> Aside (2021)
+
+[Dennis](https://dontvacuum.me/talks/DEFCON29/DEFCON29-vacuum-robots.pdf) discovered that on the Roborock S7, TPA17 (on the circuit board) connects to ball L14 on the SoC.  
+By pulling TPA17 / L14 / LRADC0 low (i.e connect to GND), FEL mode can be entered
+
+<!-- U-Boot method was patched, so UART access would not work -->
+<!-- RootFS is now a read-only SquashFS -->
 
 ----
-
-## Secure Boot Bypass
-
-
-[MAXV]
-
-Secure boot
-–Replay-Protected-Memory-Block (RPMB) enabled
-•DM-Verity
-–System partition integrity protected
-•SELinux enabled and enforced
-•LUKS encrypted partitions
-–All application specific programs protected
-–Keys stored in OPTEE / ARM TrustZone
-
-
-
-Security measures
-•Signed ELF-Binaries and kernel-based 
-verification
-•Signed and encrypted Firmware updates
-–Keys different per firmware version
-–Master keys stored in OPTEE / 
-TrustZone
-•IPtables binary cannot flush/delete rules
-•Locked UART
-
-----
-
-## Taking Matters In Our Own Hands
-
-* PiHole
-* IoTrim
-  * https://arxiv.org/abs/2105.05162
 
 ## Infrastructure Security
 
@@ -152,7 +146,7 @@ TrustZone
 
 ----
 
-## Fuzzy Binary Analysis
+### Fuzzy Binary Analysis
 
 > https://github.com/ReFirmLabs/binwalk  
 > https://github.com/ssdeep-project/ssdeep  
@@ -161,8 +155,7 @@ TrustZone
 * Source code changes largely remain the same
 * But binary files change 'arbitrarily'
 * Difficult to compare binary files
-* 
-
+* Calculate fuzzy hashes instead to compare similarity
 
 ----
 
@@ -203,16 +196,47 @@ TrustZone
 
 ---
 
-TODO:
-TODO:
-TODO:
-TODO:
-TODO:
-TODO:
-TODO:
-TODO:
-TODO:
-TODO:
+<!-- # Replay-Protected-Memory-Block
+
+https://documents.westerndigital.com/content/dam/doc-library/en_us/assets/public/western-digital/collateral/white-paper/white-paper-emmc-security.pdf -->
+
+<!-- https://dontvacuum.me/talks/DEFCON29/DEFCON29-vacuum-robots.pdf
+ -->
 
 
-https://dontvacuum.me/talks/DEFCON29/DEFCON29-vacuum-robots.pdf
+ <!-- 
+## Secure Boot Bypass
+
+[DEFCON 29 - Robots with lasers and cameras (but no security)](https://dontvacuum.me/talks/DEFCON29/DEFCON29-vacuum-robots.pdf)
+
+[MAXV]
+
+Secure boot
+–Replay-Protected-Memory-Block (RPMB) enabled
+•DM-Verity
+–System partition integrity protected
+•SELinux enabled and enforced
+•LUKS encrypted partitions
+–All application specific programs protected
+–Keys stored in OPTEE / ARM TrustZone
+
+
+
+Security measures
+•Signed ELF-Binaries and kernel-based 
+verification
+•Signed and encrypted Firmware updates
+–Keys different per firmware version
+–Master keys stored in OPTEE / 
+TrustZone
+•IPtables binary cannot flush/delete rules
+•Locked UART
+
+----
+
+## Taking Matters In Our Own Hands
+
+* PiHole
+* IoTrim
+  * https://arxiv.org/abs/2105.05162
+ -->

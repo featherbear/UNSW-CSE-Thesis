@@ -400,6 +400,145 @@ Automated flashing tool `tuya-convert` created that exploited prior vulnerabilit
 
 ---
 
+##### Flash IC Dumping
+
+* Requires a flash programmer ($$$)
+  * Budget Solution: Raspberry Pi?
+* Some flash chips (depending on form factor) may require to be desoldered
+  * Possibly a destructive process
+* Free software: [`flashrom`](https://www.flashrom.org/Flashrom)
+
+> Source: [J. Jimenez - Practical Reverse Engineering](https://jcjc-dev.com/2016/06/08/reversing-huawei-4-dumping-flash/)
+
+---
+
+{{< slide transition="fade" >}}
+
+
+##### BGA shorting to gain access to FEL
+
+<img src="/uploads/20211115-boot-sequence.png" height="300px" alt="center" />
+
+<!-- https://docs.neutis.io/img/hardware-integration/boot-sequence.png -->
+
+* FEL mode is a "fallback" system on Allwinner SoCs
+* Allows the flashing and reprogramming of the SoC
+* Generally triggered by pulling FEL pin (`LRADC0`) LOW during boot
+* FEL mode can also be entered if the bootloader fails to load 🤔
+
+---
+
+{{< slide transition="fade" >}}
+
+##### BGA shorting to gain access to FEL
+
+* On the Allwinner R16 (BGA package) FEL pin located on ball `L14`
+  * Not located on package edge the chip so desoldering required
+* Enter FEL mode by preventing successful (e)MMC load?
+  * SoC has a solder plane height of around 0.3mm
+    * Too shallow for a wire
+    * But tall enough for aluminium foil...
+    * Thickness: ~0.02mm
+    * Conductive: Yes...
+    * $$$
+
+Documented: [`SEEMOO-MSC-0142`](https://dontvacuum.me/thesis/Security_Analysis_of_the_Xiaomi_IoT_Ecosystem.pdf)
+
+---
+
+{{< slide transition="fade" >}}
+
+##### BGA shorting to gain access to FEL | Aside (2021)
+
+> On later versions (post 2020), U-Boot shell access was patched, so shell access via UART was mitigated
+
+
+
+
+Pin TPA17 on the Roborock S7 circuit board was [discovered](https://dontvacuum.me/talks/DEFCON29/DEFCON29-vacuum-robots.pdf) to connect to ball L14 on the SoC.  
+
+Therefore by pulling TPA17 / L14 / LRADC0 LOW (i.e connect to GND), FEL mode can be entered
+
+
+<!-- RootFS is now a read-only SquashFS -->
+
+---
+
+##### Client-Side and Infrastructural Security 
+
+> iOS application of a smart doorlock was analysed to (in)validate claims made by the device company
+
+<label>Findings</label>
+
+* Lock events and other sensitive information were being logged independent of locking functionality
+* Access to lock settings were purely client-side UI checks
+* Certificate pinning bypass-able
+
+Source: [Backdooring the Frontdoor](https://media.defcon.org/DEF%20CON%2024/DEF%20CON%2024%20presentations/DEF%20CON%2024%20-%20Jmaxxz-Backdooring-the-Frontdoor-UPDATED.pdf)
+
+---
+
+{{< slide transition="fade" >}}
+
+##### Vacuums in the Cloud: Analyzing Security in a Hardened IoT Ecosystem
+
+> Presentation: [USENIX WOOT 19](https://www.usenix.org/conference/woot19/presentation/ullrich)
+> 
+
+* Security analysis performed on a Neato BotVac Connected robot vacuum cleaner (popular in the US)
+* AM335x Microprocessor (ARM Cortex-A8)
+* Cold-boot attack allowed RAM to be dumped over serial
+  * USB + Serial communication allowed boot into custom image
+
+---
+
+{{< slide transition="fade" >}}
+
+##### Vacuums in the Cloud: Analyzing Security in a Hardened IoT Ecosystem
+
+* Memory dumped contained confidential keys
+    * Authentication and authorisation to the robot
+    * Authentication and authorisation to the cloud infrastructure
+* Secret key RNG algorithm determined to be weak
+  * Small keyspace given known data = bruteforce
+* RSA key was shared with all devices
+  * Identity impersonation
+* Logs and coredumps were encrypted
+    * But encryption keys were hardcoded
+* Also discovered unauthenticated buffer overflow vulnerability
+  * RCE of arbitrary code
+
+---
+
+{{< slide transition="fade" >}}
+
+
+##### 2014 - Firmware Analysis
+
+> Paper: [A Large-Scale Analysis of the Security of Embedded Firmwares](https://www.usenix.org/node/184450.)
+
+* Broad analysis of a large number of firmware images
+* Discovered 38 new vulnerabilities over 693 images
+* Similarities in vulnerabilities
+* Static analysis and extraction of keys, credentials, configs, other 'tells'
+
+---
+
+{{< slide transition="fade" >}}
+
+##### 2014 - Firmware Analysis
+
+> https://github.com/ReFirmLabs/binwalk  
+> https://github.com/ssdeep-project/ssdeep  
+> https://github.com/sdhash/sdhash  
+
+* Source code changes largely remain the same
+* But binary files change 'arbitrarily'
+* Difficult to compare binary files
+* Calculate fuzzy hashes instead to compare similarity
+
+---
+
 {{< slide transition="fade" >}}
 
 ##### Xiaomi Ecosystem | 2017-2019 - Dennis Giese
