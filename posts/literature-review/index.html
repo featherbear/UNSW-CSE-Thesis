@@ -22,7 +22,7 @@
 <style>html.dark{--color-primary-bg:#232327 !important}div#sidebar-toc>ul.pl-6{margin-left:1em}</style>
 <meta name=description content="Related research and works">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"Literature Review","item":"/posts/literature-review/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/literature-review/"},"headline":"Literature Review | CSE Thesis Musings","datePublished":"2021-11-15T10:39:22+11:00","dateModified":"2021-11-15T10:39:22+11:00","wordCount":640,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Related research and works"}</script><meta property="og:title" content="Literature Review | CSE Thesis Musings">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/literature-review/"},"headline":"Literature Review | CSE Thesis Musings","datePublished":"2021-11-15T10:39:22+11:00","dateModified":"2021-11-15T10:39:22+11:00","wordCount":730,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Related research and works"}</script><meta property="og:title" content="Literature Review | CSE Thesis Musings">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/posts/literature-review/">
 <meta property="og:description" content="Related research and works">
@@ -144,46 +144,59 @@
 <li>Achieved 91% classification accuracy</li>
 </ul>
 <hr>
-<p>TODO:
-TODO:
-TODO:
-TODO:
-TODO:</p>
 <h2 id=flash-dumping>Flash Dumping</h2>
+<blockquote>
+<p>Source: <a href=https://jcjc-dev.com/2016/06/08/reversing-huawei-4-dumping-flash/>J. Jimenez - Practical Reverse Engineering</a></p>
+</blockquote>
+<ul>
+<li>Requires a flash programmer ($$$)
+<ul>
+<li>Budget Solution: Raspberry Pi?</li>
+</ul>
+</li>
+<li>Some flash chips (depending on form factor) may require to be desoldered
+<ul>
+<li>Possibly a destructive process</li>
+</ul>
+</li>
+<li>Free software: <a href=https://www.flashrom.org/Flashrom><code>flashrom</code></a></li>
+</ul>
 <hr>
 <h2 id=bga-shorting-to-gain-access-to-fel>BGA shorting to gain access to FEL</h2>
-<p><a href=https://docs.neutis.io/img/hardware-integration/boot-sequence.png>https://docs.neutis.io/img/hardware-integration/boot-sequence.png</a></p>
-<p>Shorting TPA17 to GND</p>
-<hr>
-<h2 id=secure-boot-bypass>Secure Boot Bypass</h2>
-<p>[MAXV]</p>
-<p>Secure boot
-–Replay-Protected-Memory-Block (RPMB) enabled
-•DM-Verity
-–System partition integrity protected
-•SELinux enabled and enforced
-•LUKS encrypted partitions
-–All application specific programs protected
-–Keys stored in OPTEE / ARM TrustZone</p>
-<p>Security measures
-•Signed ELF-Binaries and kernel-based
-verification
-•Signed and encrypted Firmware updates
-–Keys different per firmware version
-–Master keys stored in OPTEE /
-TrustZone
-•IPtables binary cannot flush/delete rules
-•Locked UART</p>
-<hr>
-<h2 id=taking-matters-in-our-own-hands>Taking Matters In Our Own Hands</h2>
+<p><img src=../../uploads/20211115-boot-sequence.png alt></p>
 <ul>
-<li>PiHole</li>
-<li>IoTrim
+<li>FEL mode is a &ldquo;fallback&rdquo; system on Allwinner SoCs that allows flashing</li>
+<li>Generally triggered by pulling the FEL pin to LOW during boot
 <ul>
-<li><a href=https://arxiv.org/abs/2105.05162>https://arxiv.org/abs/2105.05162</a></li>
+<li>On the Allwinner R16 (BGA), located on ball L14
+<ul>
+<li>Ball not located on the edge of the chip and so required desoldering / breakout</li>
 </ul>
 </li>
 </ul>
+</li>
+<li>FEL mode can also be entered if U-Boot (or another bootloader) fails to load 🤔</li>
+</ul>
+<hr>
+<ul>
+<li>The Allwinner R16 (used in the Roborock) has a solder plane height of around 0.3mm
+<ul>
+<li>Too shallow for a wire</li>
+<li>Aluminium foil has a thickness of ~0.02mm</li>
+<li>Aluminium foil is conductive&mldr;</li>
+<li>$</li>
+</ul>
+</li>
+<li>Enter FEL mode by corrupting the eMMC reading</li>
+</ul>
+<p>Documented: <a href=https://dontvacuum.me/thesis/Security_Analysis_of_the_Xiaomi_IoT_Ecosystem.pdf><code>SEEMOO-MSC-0142</code></a></p>
+<hr>
+<blockquote>
+<p>Aside (2021)</p>
+</blockquote>
+<p><a href=https://dontvacuum.me/talks/DEFCON29/DEFCON29-vacuum-robots.pdf>Dennis</a> discovered that on the Roborock S7, TPA17 (on the circuit board) connects to ball L14 on the SoC.<br>
+By pulling TPA17 / L14 / LRADC0 low (i.e connect to GND), FEL mode can be entered</p>
+<hr>
 <h2 id=infrastructure-security>Infrastructure Security</h2>
 <blockquote>
 <p><a href=https://media.defcon.org/DEF%20CON%2024/DEF%20CON%2024%20presentations/DEF%20CON%2024%20-%20Jmaxxz-Backdooring-the-Frontdoor-UPDATED.pdf>Backdooring the Frontdoor</a></p>
@@ -238,7 +251,7 @@ TrustZone
 <li>Static analysis and extraction of keys, credentials, configs, other &lsquo;tells&rsquo;</li>
 </ul>
 <hr>
-<h2 id=fuzzy-binary-analysis>Fuzzy Binary Analysis</h2>
+<h3 id=fuzzy-binary-analysis>Fuzzy Binary Analysis</h3>
 <blockquote>
 <p><a href=https://github.com/ReFirmLabs/binwalk>https://github.com/ReFirmLabs/binwalk</a><br>
 <a href=https://github.com/ssdeep-project/ssdeep>https://github.com/ssdeep-project/ssdeep</a><br>
@@ -248,7 +261,7 @@ TrustZone
 <li>Source code changes largely remain the same</li>
 <li>But binary files change &lsquo;arbitrarily&rsquo;</li>
 <li>Difficult to compare binary files</li>
-<li></li>
+<li>Calculate fuzzy hashes instead to compare similarity</li>
 </ul>
 <hr>
 <h2 id=iot--20172018---xiaomi-dafang-hacks>IoT | 2017/2018 - Xiaomi Dafang Hacks</h2>
@@ -290,17 +303,8 @@ TrustZone
 <li>❓ CIA principles generally kept</li>
 </ul>
 <hr>
-<p>TODO:
-TODO:
-TODO:
-TODO:
-TODO:
-TODO:
-TODO:
-TODO:
-TODO:
-TODO:</p>
-<p><a href=https://dontvacuum.me/talks/DEFCON29/DEFCON29-vacuum-robots.pdf>https://dontvacuum.me/talks/DEFCON29/DEFCON29-vacuum-robots.pdf</a></p>
+<blockquote>
+</blockquote>
 </div>
 <div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
 <div>
@@ -328,12 +332,13 @@ TODO:</p>
 <li><a href=#lidarphone---2020---acoustic-eavesdropping>LIDARPhone - 2020 - Acoustic Eavesdropping</a></li>
 <li><a href=#flash-dumping>Flash Dumping</a></li>
 <li><a href=#bga-shorting-to-gain-access-to-fel>BGA shorting to gain access to FEL</a></li>
-<li><a href=#secure-boot-bypass>Secure Boot Bypass</a></li>
-<li><a href=#taking-matters-in-our-own-hands>Taking Matters In Our Own Hands</a></li>
 <li><a href=#infrastructure-security>Infrastructure Security</a></li>
 <li><a href=#vacuums-in-the-cloud-analyzing-security-in-a-hardened-iot-ecosystem>Vacuums in the Cloud: Analyzing Security in a Hardened IoT Ecosystem</a></li>
-<li><a href=#2014---large-scale-firmware-analysis>2014 - Large-scale Firmware Analysis</a></li>
+<li><a href=#2014---large-scale-firmware-analysis>2014 - Large-scale Firmware Analysis</a>
+<ul>
 <li><a href=#fuzzy-binary-analysis>Fuzzy Binary Analysis</a></li>
+</ul>
+</li>
 <li><a href=#iot--20172018---xiaomi-dafang-hacks>IoT | 2017/2018 - Xiaomi Dafang Hacks</a></li>
 <li><a href=#xiaomi-ecosystem--2017-2019---dennis-giese>Xiaomi Ecosystem | 2017-2019 - Dennis Giese</a>
 <ul>

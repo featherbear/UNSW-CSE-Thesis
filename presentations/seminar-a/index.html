@@ -324,6 +324,150 @@ IoT infrastructure outage<br>=<br>Product-wide outage
 <li>Dump firmware</li>
 <li>Analyse, modify and package updated firmware</li>
 </ul>
+</section><section>
+<h5 id=flash-ic-dumping>Flash IC Dumping</h5>
+<ul>
+<li>Requires a flash programmer ($$$)
+<ul>
+<li>Budget Solution: Raspberry Pi?</li>
+</ul>
+</li>
+<li>Some flash chips (depending on form factor) may require to be desoldered
+<ul>
+<li>Possibly a destructive process</li>
+</ul>
+</li>
+<li>Free software: <a href=https://www.flashrom.org/Flashrom><code>flashrom</code></a></li>
+</ul>
+<blockquote>
+<p>Source: <a href=https://jcjc-dev.com/2016/06/08/reversing-huawei-4-dumping-flash/>J. Jimenez - Practical Reverse Engineering</a></p>
+</blockquote>
+</section>
+<section data-noprocess data-shortcode-slide data-transition=fade>
+<h5 id=bga-shorting-to-gain-access-to-fel>BGA shorting to gain access to FEL</h5>
+<p><img src=../../uploads/20211115-boot-sequence.png height=300px alt=center></p>
+<ul>
+<li>FEL mode is a &ldquo;fallback&rdquo; system on Allwinner SoCs</li>
+<li>Allows the flashing and reprogramming of the SoC</li>
+<li>Generally triggered by pulling FEL pin (<code>LRADC0</code>) LOW during boot</li>
+<li>FEL mode can also be entered if the bootloader fails to load 🤔</li>
+</ul>
+</section>
+<section data-noprocess data-shortcode-slide data-transition=fade>
+<h5 id=bga-shorting-to-gain-access-to-fel-1>BGA shorting to gain access to FEL</h5>
+<ul>
+<li>On the Allwinner R16 (BGA package) FEL pin located on ball <code>L14</code>
+<ul>
+<li>Not located on package edge the chip so desoldering required</li>
+</ul>
+</li>
+<li>Enter FEL mode by preventing successful (e)MMC load?
+<ul>
+<li>SoC has a solder plane height of around 0.3mm
+<ul>
+<li>Too shallow for a wire</li>
+<li>But tall enough for aluminium foil&mldr;</li>
+<li>Thickness: ~0.02mm</li>
+<li>Conductive: Yes&mldr;</li>
+<li>$$$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Documented: <a href=https://dontvacuum.me/thesis/Security_Analysis_of_the_Xiaomi_IoT_Ecosystem.pdf><code>SEEMOO-MSC-0142</code></a></p>
+</section>
+<section data-noprocess data-shortcode-slide data-transition=fade>
+<h5 id=bga-shorting-to-gain-access-to-fel--aside-2021>BGA shorting to gain access to FEL | Aside (2021)</h5>
+<blockquote>
+<p>On later versions (post 2020), U-Boot shell access was patched, so shell access via UART was mitigated</p>
+</blockquote>
+<p>Pin TPA17 on the Roborock S7 circuit board was <a href=https://dontvacuum.me/talks/DEFCON29/DEFCON29-vacuum-robots.pdf>discovered</a> to connect to ball L14 on the SoC.</p>
+<p>Therefore by pulling TPA17 / L14 / LRADC0 LOW (i.e connect to GND), FEL mode can be entered</p>
+</section><section>
+<h5 id=client-side-and-infrastructural-security>Client-Side and Infrastructural Security</h5>
+<blockquote>
+<p>iOS application of a smart doorlock was analysed to (in)validate claims made by the device company</p>
+</blockquote>
+<p><label>Findings</label></p>
+<ul>
+<li>Lock events and other sensitive information were being logged independent of locking functionality</li>
+<li>Access to lock settings were purely client-side UI checks</li>
+<li>Certificate pinning bypass-able</li>
+</ul>
+<p>Source: <a href=https://media.defcon.org/DEF%20CON%2024/DEF%20CON%2024%20presentations/DEF%20CON%2024%20-%20Jmaxxz-Backdooring-the-Frontdoor-UPDATED.pdf>Backdooring the Frontdoor</a></p>
+</section>
+<section data-noprocess data-shortcode-slide data-transition=fade>
+<h5 id=vacuums-in-the-cloud-analyzing-security-in-a-hardened-iot-ecosystem>Vacuums in the Cloud: Analyzing Security in a Hardened IoT Ecosystem</h5>
+<blockquote>
+<p>Presentation: <a href=https://www.usenix.org/conference/woot19/presentation/ullrich>USENIX WOOT 19</a></p>
+</blockquote>
+<ul>
+<li>Security analysis performed on a Neato BotVac Connected robot vacuum cleaner (popular in the US)</li>
+<li>AM335x Microprocessor (ARM Cortex-A8)</li>
+<li>Cold-boot attack allowed RAM to be dumped over serial
+<ul>
+<li>USB + Serial communication allowed boot into custom image</li>
+</ul>
+</li>
+</ul>
+</section>
+<section data-noprocess data-shortcode-slide data-transition=fade>
+<h5 id=vacuums-in-the-cloud-analyzing-security-in-a-hardened-iot-ecosystem-1>Vacuums in the Cloud: Analyzing Security in a Hardened IoT Ecosystem</h5>
+<ul>
+<li>Memory dumped contained confidential keys
+<ul>
+<li>Authentication and authorisation to the robot</li>
+<li>Authentication and authorisation to the cloud infrastructure</li>
+</ul>
+</li>
+<li>Secret key RNG algorithm determined to be weak
+<ul>
+<li>Small keyspace given known data = bruteforce</li>
+</ul>
+</li>
+<li>RSA key was shared with all devices
+<ul>
+<li>Identity impersonation</li>
+</ul>
+</li>
+<li>Logs and coredumps were encrypted
+<ul>
+<li>But encryption keys were hardcoded</li>
+</ul>
+</li>
+<li>Also discovered unauthenticated buffer overflow vulnerability
+<ul>
+<li>RCE of arbitrary code</li>
+</ul>
+</li>
+</ul>
+</section>
+<section data-noprocess data-shortcode-slide data-transition=fade>
+<h5 id=2014---firmware-analysis>2014 - Firmware Analysis</h5>
+<blockquote>
+<p>Paper: <a href=https://www.usenix.org/node/184450.>A Large-Scale Analysis of the Security of Embedded Firmwares</a></p>
+</blockquote>
+<ul>
+<li>Broad analysis of a large number of firmware images</li>
+<li>Discovered 38 new vulnerabilities over 693 images</li>
+<li>Similarities in vulnerabilities</li>
+<li>Static analysis and extraction of keys, credentials, configs, other &lsquo;tells&rsquo;</li>
+</ul>
+</section>
+<section data-noprocess data-shortcode-slide data-transition=fade>
+<h5 id=2014---firmware-analysis-1>2014 - Firmware Analysis</h5>
+<blockquote>
+<p><a href=https://github.com/ReFirmLabs/binwalk>https://github.com/ReFirmLabs/binwalk</a><br>
+<a href=https://github.com/ssdeep-project/ssdeep>https://github.com/ssdeep-project/ssdeep</a><br>
+<a href=https://github.com/sdhash/sdhash>https://github.com/sdhash/sdhash</a></p>
+</blockquote>
+<ul>
+<li>Source code changes largely remain the same</li>
+<li>But binary files change &lsquo;arbitrarily&rsquo;</li>
+<li>Difficult to compare binary files</li>
+<li>Calculate fuzzy hashes instead to compare similarity</li>
+</ul>
 </section>
 <section data-noprocess data-shortcode-slide data-transition=fade>
 <h5 id=xiaomi-ecosystem--2017-2019---dennis-giese>Xiaomi Ecosystem | 2017-2019 - Dennis Giese</h5>
