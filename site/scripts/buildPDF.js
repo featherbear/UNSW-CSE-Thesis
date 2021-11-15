@@ -2,8 +2,8 @@ const xml2js = require('xml2js'),
   fs = require('fs'),
   path = require('path'),
   sirv = require('sirv'),
-  polka = require('polka'),
-  puppeteer = require('puppeteer')
+  polka = require('polka')
+// puppeteer = require('puppeteer')
 
 let httpRoot = path.join(__dirname, '../public')
 let workDir = path.join(httpRoot, 'presentations')
