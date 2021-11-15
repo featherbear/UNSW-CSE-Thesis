@@ -20,6 +20,21 @@ let server = polka()
     // const browser = await puppeteer.launch({ headless: true })
     let promises = []
 
+    function execCommand (cmd, header) {
+      return new Promise((resolve, reject) => {
+        let proc = require('child_process').spawn(cmd[0], cmd.slice(1))
+        proc.stdout.on('data', function (data) {
+          console.log(header, data.toString())
+        })
+        proc.stderr.on('data', function (data) {
+          console.log(header, data.toString())
+        })
+        proc.on('exit', function (code) {
+          resolve(code)
+        })
+      })
+    }
+
     for (let {
       link: [link, ..._]
     } of data.rss.channel[0].item) {
@@ -27,26 +42,16 @@ let server = polka()
       let fileName = linkSplit[linkSplit.length - 1]
       console.log('Exporting ' + link + ' to ' + fileName + '.pdf')
 
-      function execCommand (cmd) {
-        return new Promise((resolve, reject) => {
-          require('child_process').exec(cmd, (err, data) => {
-            if (err) return reject(err)
-            resolve(data)
-          })
-        })
-      }
-
       promises.push(
         execCommand(
           [
-            'npx',
-            'decktape',
+            'node',
+            './node_modules/decktape/decktape.js',
             ['--size', '1920x1080'],
             BASE_HOST + link,
             path.join(workDir, fileName + '.pdf')
-          ]
-            .flat()
-            .join(' ')
+          ].flat(),
+          fileName
         )
       )
 
