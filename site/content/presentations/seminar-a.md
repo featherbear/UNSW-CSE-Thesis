@@ -138,6 +138,39 @@ Making things, breaking things... mainly the latter
 - White-label vendors buy a generic product
   - Rebrand and sell products under their name
 
+<style>
+.marquee-parent {
+  position: relative;
+  width: 100vw;
+  max-width: 100%;
+  height: 200px;
+  overflow-x: hidden;
+  border-radius: 10px;
+}
+
+.marquee-child {
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  max-width: unset !important;
+  max-height: 100% !important;
+  animation: marquee 360s linear infinite;
+}
+
+.marquee-child:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-87.5%); }
+}
+
+</style>
+
+<br />
+<div class="marquee-parent"><img src="/uploads/20211115-lightbulbs-marquee.png" class="marquee-child" ></div>
+
 ---
 
 <blockquote>
@@ -156,13 +189,10 @@ Vulnerabilities in IoT infrastructure<br />=<br /> Vulnerability in all white-la
 
 - Same IoT cloud infrastructure used by white-label vendors
 - Data and network activity is all centralised / standardised
-- Privacy concerns?
-  - Who, What, Where, When, Why?
+- Privacy concerns - Who, What, Where, When, Why?
+- Infrastructure outage = really _really_ big outage..
 
-<blockquote>
-IoT infrastructure outage<br />=<br />Product-wide outage
-</blockquote>
-
+<img src="/uploads/20211115-spof.gif" width="30%" alt="center" />
 
 ---
 
@@ -276,9 +306,9 @@ How have manufacturers of IoT / smart home devices addressed the increasing conc
 
 # Rationale
 
-> Security is important!
+> 🔐 Security is important!
 
-> Check things for yourself!
+> 📒 Check things for yourself!
 
 {{% /section %}}
 
@@ -328,7 +358,7 @@ Investigate potential security vulnerabilities of the Roborock S6, and assess th
 <br />
 <br />
 
-## IoT
+## IoT ☁
 
 
 The majority of hardware hacks / custom firmwares have originated from the desire to decouple hardware from cloud services
@@ -341,11 +371,13 @@ The majority of hardware hacks / custom firmwares have originated from the desir
 
 > Talk: [Smart home - Smart hack](https://media.ccc.de/v/35c3-9723-smart_home_-_smart_hack)
 
-* Products from different manufacturers used the same cloud infrastructure (with supposed 'military-grade security'), each with their own 'customised' (white-label) smartphone apps
+* Products from different manufacturers used the same cloud infrastructure each with their own 'customised' (white-label) smartphone apps
+  * Supposed 'military-grade security'
 * Used the <a style="text-decoration: underline dotted" href="https://www.espressif.com/en/products/socs/esp8266">Espressif ESP8266</a> chip
   * WiFi-enabled SoC with Arduino support
   * Often used by tinkerers and enthusiasts
-* Anyone can become an 'IoT company' regardless of "having in-depth technical knowledge of IoT or IT security." 🚩🚩🚩
+* Anyone can become an 'IoT company' regardless of "having in-depth technical knowledge of IoT or IT security."
+  * 🚩🚩🚩
 
 ---
 
@@ -421,10 +453,12 @@ Gaining access to a shell / stored data / things we shouldn't.
 
 ##### Flash IC Dumping
 
-* Requires a flash programmer ($$$)
-  * Budget Solution: Raspberry Pi?
+<img src="http://www.saelig.com/miva/graphics/00000001/848pro725_350x189.jpg" alt="center" />
+
+* May require a proprietary flash programmer (above: US$3655)
+* Budget solution for common flash types: Raspberry Pi (AU$100)
 * Some flash chips (depending on form factor) may require to be desoldered
-  * Possibly a destructive process
+  * 🧨 Possibly a destructive process 🧨
 * Open-source software: [`flashrom`](https://www.flashrom.org/Flashrom)
 
 > Source: [J. Jimenez - Practical Reverse Engineering](https://jcjc-dev.com/2016/06/08/reversing-huawei-4-dumping-flash/)
@@ -442,7 +476,8 @@ Gaining access to a shell / stored data / things we shouldn't.
 
 * FEL mode is a "fallback" system on Allwinner SoCs
 * Allows the flashing and reprogramming of the SoC
-* Generally triggered by pulling FEL pin (`LRADC0`) LOW during boot
+* Generally triggered by pulling 
+<a href="https://linux-sunxi.org/images/b/b3/R16_Datasheet_V1.4_(1).pdf" style="text-decoration: underline dotted">FEL pin</a> (`LRADC0`) LOW during boot
 * FEL mode can also be entered if the bootloader fails to load 🤔
 
 ---
@@ -451,15 +486,30 @@ Gaining access to a shell / stored data / things we shouldn't.
 
 ##### BGA shorting to gain access to FEL
 
-* On the Allwinner R16 (BGA package) FEL pin located on ball `L14`
-  * Not located on package edge the chip so desoldering required
-* Enter FEL mode by preventing successful (e)MMC load?
-  * SoC has a solder plane height of around 0.3mm
-    * Too shallow for a wire
-    * But tall enough for aluminium foil...
-    * Thickness: ~0.02mm
-    * Conductive: Yes...
-    * $$$
+* On the Allwinner R16 (BGA package) FEL pin located on ball location `L14`
+  * Not located on package edge the chip so <label>desoldering required</label>
+
+> Enter FEL mode by preventing (e)MMC load?
+
+* SoC has a solder plane height of around 0.3mm
+* Too shallow for a wire, but tall enough for aluminium foil...
+
+---
+
+
+{{< slide transition="fade" >}}
+
+##### BGA shorting to gain access to FEL
+
+<label>Aluminium Foil</label>
+
+<img src="/uploads/20211115-Snipaste_2021-11-15_19-45-37-dgiese.jpg" height="300px" alt="center" />
+
+* Thickness: ~0.02mm (... 0.02mm << 0.3mm)
+* Conductive: Yep!
+* $$$
+
+
 
 Documented: [`SEEMOO-MSC-0142`](https://dontvacuum.me/thesis/Security_Analysis_of_the_Xiaomi_IoT_Ecosystem.pdf)
 
@@ -471,7 +521,7 @@ Documented: [`SEEMOO-MSC-0142`](https://dontvacuum.me/thesis/Security_Analysis_o
 
 > On later versions (post 2020), U-Boot shell access was patched, so shell access via UART was mitigated
 
-Pin TPA17 on the Roborock S7 circuit board was [discovered](https://dontvacuum.me/talks/DEFCON29/DEFCON29-vacuum-robots.pdf) to connect to ball L14 on the SoC.  
+Pin TPA17 on the Roborock S7 circuit board was [discovered](https://dontvacuum.me/talks/DEFCON29/DEFCON29-vacuum-robots.pdf) to connect to ball location L14 on the SoC.  
 
 Therefore by pulling TPA17 / L14 / LRADC0 LOW (i.e connect to GND), FEL mode can be entered
 
@@ -489,7 +539,8 @@ Therefore by pulling TPA17 / L14 / LRADC0 LOW (i.e connect to GND), FEL mode can
 * Security analysis performed on a Neato BotVac Connected robot vacuum cleaner (popular in the US)
 * AM335x Microprocessor (ARM Cortex-A8)
 * Cold-boot attack allowed RAM to be dumped over serial
-  * USB + Serial communication allowed boot into custom image
+  * <label>Cold-boot attack</label> - restarting the system whilst keeping memory modules powered on, keeping memory (mostly) in-tact
+  * USB + Serial communication allowed boot into custom image that could then dump the memory for later triage
 
 ---
 
@@ -497,17 +548,17 @@ Therefore by pulling TPA17 / L14 / LRADC0 LOW (i.e connect to GND), FEL mode can
 
 ##### Vacuums in the Cloud: Analyzing Security in a Hardened IoT Ecosystem
 
-* Memory dumped contained confidential keys
-    * Authentication and authorisation to the robot
-    * Authentication and authorisation to the cloud infrastructure
+* Memory dumps contained confidential keys
+    * 🙋‍♀️ Auth/Authz to the robot
+    * 🙆‍♀️ Auth/Authz to the cloud infrastructure
+* Logs and coredumps were encrypted... but keys hardcoded
 * Secret key RNG algorithm determined to be weak
-  * Small keyspace given known data = bruteforce
-* RSA key was shared with all devices
+  * Small keyspace given known data = bruteforceable
+* RSA key was shared with all devices 🔓
   * Identity impersonation
-* Logs and coredumps were encrypted
-    * But encryption keys were hardcoded
-* Also discovered unauthenticated buffer overflow vulnerability
-  * RCE of arbitrary code
+
+> Also discovered <label>buffer overflow</label> vulnerability in an unauthenticated stage.
+
 
 ---
 
@@ -551,6 +602,35 @@ Source: [Backdooring the Frontdoor](https://media.defcon.org/DEF%20CON%2024/DEF%
 
 ---
 
+{{< slide transition="slide-in fade-out" >}}
+
+##### LIDAR - Acoustic Eavesdropping
+
+> LIDAR - Light Detection and Ranging
+
+* Uses laser lights to sense distance
+* Side-channel also exposes intensity (on some units)
+  * Can use to detect minute vibrations induced by audio sources
+
+![](https://eak2mvmpt4a.exactdn.com/wp-content/uploads/2020/07/A-Guide-to-Lidar-Wavelengths-Velodyne-Lidar-AlphaPrime-1.jpg?strip=all&lossy=1&ssl=1)
+
+---
+
+{{< slide transition="fade" >}}
+
+##### LIDAR - Acoustic Eavesdropping
+
+* Vibrations are extracted and turned back into sound waves
+  * Extraction of sensitive data (i.e. credit card digits)
+  * Achieved 91% classification accuracy
+
+2015: [Acoustic Eavesdropping through Wireless Vibrometry](https://dl.acm.org/doi/10.1145/2789168.2790119)  
+2020: [LidarPhone: acoustic eavesdropping using a lidar sensor](https://dl.acm.org/doi/10.1145/3384419.3430430)
+
+![center](https://www.zdnet.com/a/img/resize/cdaf0753c4b991623b9413270b0d9ceff8a6e730/2020/11/19/2f9e0e96-c3e5-4cdc-b9bb-24022efd5b3b/lidarphone.png?fit=bounds&auto=webp)
+
+
+---
 
 {{< slide transition="fade" >}}
 
@@ -645,11 +725,11 @@ Source: [Backdooring the Frontdoor](https://media.defcon.org/DEF%20CON%2024/DEF%
 
 ### Considerations
 
-* Only have one device to use
-* Access to equipment and facilities are limited (COVID?)
 * I'm just a fourth year!
   * Limited skills
   * i.e. microsoldering for flash chip extraction and dumping
+* Access to equipment and facilities are limited (COVID?)
+* Only have one device to test on
 
 ---
 
@@ -686,6 +766,8 @@ Source: [Backdooring the Frontdoor](https://media.defcon.org/DEF%20CON%2024/DEF%
 - Linux filesystem / system forensics
 - Learn the ARM Instruction Set (ISA)
   - Processor Modes, Protection Rings?
+- Learn about other hardware protections
+  - Secure Boot, RPBM, SELinux, LUKS, OPTEE, TrustZone, etc...
 - Acquisition of hardware
   - Serial adapters?
   - Network switch?
