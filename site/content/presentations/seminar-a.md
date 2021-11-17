@@ -787,14 +787,23 @@ Source: [Backdooring the Frontdoor](https://media.defcon.org/DEF%20CON%2024/DEF%
 
 # Project Timeline
 
-#### Thesis A
+#### <label>Thesis A</label>
 
 * Initial research and research environment setup
 * Teardown and initial hands-on of Roborock S6
 
-#### Thesis B + C
+#### <label>Thesis B - Binary Assessment</label>
 
-* Assessment of product security and privacy
+* Disassembly and analysis of firmware binaries to identify vulnerabilities
+  * inc. ADB binary functionality
+* Search for unsecured secrets, logs, configurations
+
+#### <label>Thesis C - Connectivity Assessment</label>
+
+* Inspection of outbound internet traffic - security, PII, etc
+* Inspection of local network traffic
+* Inspection of interaction with nearby devices
+* Protocol analysis
 
 ---
 
