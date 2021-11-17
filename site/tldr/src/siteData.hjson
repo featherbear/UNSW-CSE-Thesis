@@ -13,6 +13,12 @@
           Look at EndNote for referencing and bibliography management
         ]
       }
+      {
+        title: Wednesday
+        date: 17/11/2021
+        content: Presented Seminar A
+        link: https://featherbear.cc/UNSW-CSE-Thesis/docs/presentations/seminar-a/
+      }
     ]
   }
   {
@@ -82,6 +88,12 @@
         title: Monday
         date: 15/11/2021
         content: Finalise Seminar A slides
+        link: https://featherbear.cc/UNSW-CSE-Thesis/docs/presentations/seminar-a/
+      }
+      {
+        title: Wednesday
+        date: 17/11/2021
+        content: Elaborate on timeline slide for Seminar A
         link: https://featherbear.cc/UNSW-CSE-Thesis/docs/presentations/seminar-a/
       }
     ]
