@@ -16,4 +16,7 @@ Whilst the benefit of convenience is sought after from smart home devices, these
 Whilst manufacturers and vendors may claim to be secure and/or confidential in how they treat UGC and PII, it lies evident from various incidents that we cannot completely trust such claims.
 From involuntary exposure of leaked Facebook user data [@LawrenceAbrams-2021], to claims of corporations monetising user data without consent [@RhettJones-2017], there lies an equal need for consumers to understand the terms of service to which they agree under, but for companies to be audited against the very same terms of service.
 
+
+@TODO: Add thesis aims
+
 ## References
