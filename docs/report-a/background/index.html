@@ -22,7 +22,7 @@
 <style>html.dark{--color-primary-bg:#232327 !important}div#sidebar-toc>ul.pl-6{margin-left:1em}</style>
 <meta name=description content="The consumer market has experienced an abundance of IoT devices, largely attributed to the presence of IoT manufacturers who offer white-label partnerships with resellers to provide “custom” products. Through these partnerships, vendors buy into the IoT manufacturer’s ecosystem - namely being the product itself, the companion smartphone application, and the cloud infrastructure supporting backend communications - all without requiring vendors to posses any knowledge or understanding of how to design, develop nor manufacture the IoT products that they sell.">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Docs","item":"/docs/"},{"@type":"ListItem","position":2,"name":"Report A","item":"/docs/report-a/"},{"@type":"ListItem","position":3,"name":"Background","item":"/docs/report-a/background/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/docs/report-a/background/"},"headline":"Background | Report A | CSE Thesis Musings","wordCount":494,"publisher":{"@type":"Person","name":"A. Wong"},"description":"The consumer market has experienced an abundance of IoT devices, largely attributed to the presence of IoT manufacturers who offer white-label partnerships with resellers to provide “custom” products. Through these partnerships, vendors buy into the IoT manufacturer’s ecosystem - namely being the product itself, the companion smartphone application, and the cloud infrastructure supporting backend communications - all without requiring vendors to posses any knowledge or understanding of how to design, develop nor manufacture the IoT products that they sell."}</script><meta property="og:title" content="Background | Report A | CSE Thesis Musings">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/docs/report-a/background/"},"headline":"Background | Report A | CSE Thesis Musings","wordCount":543,"publisher":{"@type":"Person","name":"A. Wong"},"description":"The consumer market has experienced an abundance of IoT devices, largely attributed to the presence of IoT manufacturers who offer white-label partnerships with resellers to provide “custom” products. Through these partnerships, vendors buy into the IoT manufacturer’s ecosystem - namely being the product itself, the companion smartphone application, and the cloud infrastructure supporting backend communications - all without requiring vendors to posses any knowledge or understanding of how to design, develop nor manufacture the IoT products that they sell."}</script><meta property="og:title" content="Background | Report A | CSE Thesis Musings">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/docs/report-a/background/">
 <meta property="og:description" content="The consumer market has experienced an abundance of IoT devices, largely attributed to the presence of IoT manufacturers who offer white-label partnerships with resellers to provide “custom” products. Through these partnerships, vendors buy into the IoT manufacturer’s ecosystem - namely being the product itself, the companion smartphone application, and the cloud infrastructure supporting backend communications - all without requiring vendors to posses any knowledge or understanding of how to design, develop nor manufacture the IoT products that they sell.">
@@ -83,7 +83,7 @@
 <ul class=pl-6>
 <li class=py-2>
 <div>
-<a class=hover:text-eureka href=../../../docs/report-a/introduction/>Introduction</a>
+<a class=hover:text-eureka href=../../../docs/report-a/acronyms/>Glossary of Acronyms</a>
 </div>
 </li>
 <li class=py-2>
@@ -93,12 +93,32 @@
 </li>
 <li class=py-2>
 <div>
+<a class=hover:text-eureka href=../../../docs/report-a/introduction/>Introduction</a>
+</div>
+</li>
+<li class=py-2>
+<div>
 <a class=hover:text-eureka href=../../../docs/report-a/literature-review/>Literature Review</a>
 </div>
 </li>
 <li class=py-2>
 <div>
-<a class=hover:text-eureka href=../../../docs/report-a/proposal/></a>
+<a class=hover:text-eureka href=../../../docs/report-a/proposal/>Progress</a>
+</div>
+</li>
+<li class=py-2>
+<div>
+<a class=hover:text-eureka href=../../../docs/report-a/bibliography/></a>
+</div>
+</li>
+<li class=py-2>
+<div>
+<a class=hover:text-eureka href=../../../docs/report-a/conclusion/></a>
+</div>
+</li>
+<li class=py-2>
+<div>
+<a class=hover:text-eureka href=../../../docs/report-a/progress/></a>
 </div>
 </li>
 </ul>
@@ -114,7 +134,6 @@
 <div class=flex>
 <div class="w-full lg:w-3/4 px-6">
 <div class=content>
-<p><img src=../../../uploads/20211103-screely-1635938406254.png alt></p>
 <div class=marquee-parent>
 <p><img src=../../../uploads/20211115-lightbulbs-marquee.png class=marquee-child></p>
 </div>
@@ -149,6 +168,7 @@ force for developers and hackers to research and develop software, as to
 replace the out-of-the-box internet-dependent software, effectively
 decoupling devices from vendor services.</p>
 <h1 id=about-the-company>About The Company</h1>
+<p><img src=../../../uploads/20211003-60410b5d26ef2b00045692ec.png class="plain small"></p>
 <p>Roborock is a Chinese company founded in Beijing that develops robotic
 cleaning appliances for households. Partnering with Xiaomi ever since a
 short period after the opening of their business in 2014, Roborock has
@@ -158,36 +178,22 @@ released in September 2016. They have since released eleven other
 robotic vacuum cleaner models, each model offering new and/or improved
 features - such as the addition of a mop functionality and improved
 spatial object detection via LIDAR technologies.</p>
-<p><img src=../../../uploads/20211003-60410b5d26ef2b00045692ec.png class="plain small"></p>
+<p><img src=../../../uploads/20211103-s6-pure-banner.webp alt></p>
 <p>In June 2019, Roborock released their flagship Roborock S6 vacuum
 cleaner (the focus of this thesis), which boasted in reduced operating
-noise volumes, and better overall cleaning performances</p>
-<p><img src=../../../uploads/20211103-s6-pure-banner.webp alt></p>
-<ul>
-<li>CPU: Allwinner R16 Quad-core ARMv7</li>
-<li>ACU: STM32F103VC</li>
-<li>RAM: 512 MB</li>
-<li>Flash: 4 GB eMMC</li>
-<li>Wireless: RTL8189ETV (802.11 b/g/n)</li>
-<li>Cloud: Tuya / Xiaomi</li>
-<li>OS: Ubuntu 14.04</li>
-</ul>
-<hr>
+noise volumes, and better overall cleaning performances. The Roborock S6
+is powered by an Allwinner R16 SoC (ARM architecture) alongside an STM32
+for auxiliary motor and sensor I/O. Depending on the region and
+firmware, the robot vacuum cleaner is powered by either Xiaomi Cloud or
+Tuya Smart cloud infrastructures, both which are market leaders in the
+consumer IoT industry. Whilst superseded by newer revisions such as the
+S6 MaxV and the S7, the S6 still remains largely popular and is still
+actively maintained by Roborock.</p>
 <h4 id=cloud-capability>Cloud Capability</h4>
-<div class=split2>
-<div>
-<p><label>Roborock (Xiaomi Cloud)</label></p>
-<p><img src=../../../uploads/20211103%20-%20Snipaste_2021-11-03_21-47-05.jpg alt></p>
-</div>
-<div>
-<p><label>Tuya Cloud</label></p>
-<p><img src=../../../uploads/20211103%20-%20Snipaste_2021-11-03_21-48-02.jpg alt></p>
-</div>
-</div>
-<hr>
-<p>IoT infrastructure vulnerability
-(<a href=https://global.roborock.com/pages/disclosure-security-vulnerability-on-tuya-iot-cloud>15/09/2021</a>)</p>
-<p><img src=../../../uploads/20211103-screely-1635941373424-highlight.png alt></p>
+<p><label>Roborock (Xiaomi Cloud)</label>
+<img src=../../../uploads/20211103%20-%20Snipaste_2021-11-03_21-47-05.jpg alt></p>
+<p><label>Tuya Smart</label>
+<img src=../../../uploads/20211103%20-%20Snipaste_2021-11-03_21-48-02.jpg alt></p>
 <hr>
 <style>.marquee-parent{position:relative;width:100vw;max-width:100%;height:200px;overflow-x:hidden;border-radius:10px}.marquee-child{position:absolute;white-space:nowrap;will-change:transform;max-width:unset!important;max-height:100%!important;animation:marquee 360s linear infinite}.marquee-child:hover{animation-play-state:paused}@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-87.5%)}}</style>
 <h2 id=references>References</h2>
@@ -195,11 +201,11 @@ noise volumes, and better overall cleaning performances</p>
 <div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
 <div>
 <span class="block font-bold">Previous</span>
-<a href=../../../docs/report-a/introduction/ class=block>Introduction</a>
+<a href=../../../docs/report-a/acronyms/ class=block>Glossary of Acronyms</a>
 </div>
 <div class="md:text-right mt-4 md:mt-0">
 <span class="block font-bold">Next</span>
-<a href=../../../docs/report-a/literature-review/ class=block>Literature Review</a>
+<a href=../../../docs/report-a/introduction/ class=block>Introduction</a>
 </div>
 </div>
 </div>

@@ -97,7 +97,7 @@
 <ul class=pl-6>
 <li class=py-2>
 <div>
-<a class=hover:text-eureka href=../../../docs/report-a/introduction/>Introduction</a>
+<a class=hover:text-eureka href=../../../docs/report-a/acronyms/>Glossary of Acronyms</a>
 </div>
 </li>
 <li class=py-2>
@@ -107,12 +107,32 @@
 </li>
 <li class=py-2>
 <div>
+<a class=hover:text-eureka href=../../../docs/report-a/introduction/>Introduction</a>
+</div>
+</li>
+<li class=py-2>
+<div>
 <a class="text-eureka hover:text-eureka" href=../../../docs/report-a/literature-review/>Literature Review</a>
 </div>
 </li>
 <li class=py-2>
 <div>
-<a class=hover:text-eureka href=../../../docs/report-a/proposal/></a>
+<a class=hover:text-eureka href=../../../docs/report-a/proposal/>Progress</a>
+</div>
+</li>
+<li class=py-2>
+<div>
+<a class=hover:text-eureka href=../../../docs/report-a/bibliography/></a>
+</div>
+</li>
+<li class=py-2>
+<div>
+<a class=hover:text-eureka href=../../../docs/report-a/conclusion/></a>
+</div>
+</li>
+<li class=py-2>
+<div>
+<a class=hover:text-eureka href=../../../docs/report-a/progress/></a>
 </div>
 </li>
 </ul>
@@ -149,7 +169,7 @@
 <blockquote>
 <p>TODO: Application?</p>
 </blockquote>
-<h5 id=iot--2018---michael-steigerwald-vtrust>IoT | 2018 - Michael Steigerwald (VTRUST)</h5>
+<h2 id=iot--2018---michael-steigerwald-vtrust>IoT | 2018 - Michael Steigerwald (VTRUST)</h2>
 <p>In 2018 the security research group VTRUST (2018) analysed a line of
 white-labelled IoT product revisions based from the IoT manufacturer
 Tuya. Despite supposed claims of ‘military-grade security’, basic packet
@@ -188,7 +208,7 @@ VTRUSTS’s findings, the overall security posture of modern Tuya-powered
 devices has since improved<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup>, with implementations of local flash
 memory encryption and firmware signing measures during over-the-air
 firmware upgrades.</p>
-<h5 id=iot--20172018---xiaomi-dafang-hacks>IoT | 2017/2018 - Xiaomi Dafang Hacks</h5>
+<h2 id=iot--20172018---xiaomi-dafang-hacks>IoT | 2017/2018 - Xiaomi Dafang Hacks</h2>
 <p>Methods of ‘rooting’ IoT devices has been widely addressed, often out of
 the necessity to gain shell access to the device prior to any further
 research or development. To facilitate offline firmware upgrades for
@@ -202,7 +222,7 @@ shell (<code>/bin/sh</code>) instead of the original entry-point script,
 effectively rooting the device. This invited Kotlyar to dump the
 firmware and later produce a custom firmware release that did not rely
 on the vendor’s cloud infrastructure.</p>
-<h5 id=iot--smartphone-application-security-assessment>IoT | Smartphone Application Security Assessment</h5>
+<h2 id=iot--smartphone-application-security-assessment>IoT | Smartphone Application Security Assessment</h2>
 <p>Jmaxxz (2016) investigated the security claims of a smart doorlock which
 boasted in bank-grade security, and better security over conventional
 lock and key methods. Various flaws within the smartphone application
@@ -213,7 +233,7 @@ were present in the production version of the application, allowing
 certificate pinning protections to be subverted. Furthermore, lock
 events and other identifiable information were being transmitted to a
 logging endpoint.</p>
-<h5 id=bga-shorting-to-gain-access-to-fel>BGA shorting to gain access to FEL</h5>
+<h2 id=bga-shorting-to-gain-access-to-fel>BGA shorting to gain access to FEL</h2>
 <p><img src=../../../uploads/20211115-boot-sequence.png height=300px alt=center>
 <img src=../../../uploads/20211115-Snipaste_2021-11-15_19-45-37-dgiese.jpg height=300px alt=center></p>
 <p>For devices that do not automatically boot into removable media, methods
@@ -242,7 +262,7 @@ firmware dumping / analysis.</p>
 pin <code>TPA17</code> is connected to the ball grid location corresponding to the
 FEL pin - allowing FEL mode to be entered without shorting the data
 pins.</p>
-<h5 id=flash-ic-dumping-hardware>Flash IC Dumping Hardware</h5>
+<h2 id=flash-ic-dumping-hardware>Flash IC Dumping Hardware</h2>
 <p><img src=http://www.saelig.com/miva/graphics/00000001/848pro725_350x189.jpg alt=center></p>
 <p>In situations where no provisions exist to programmatically extract
 stored data from a system (i.e. shell access to perform disk imaging),
@@ -262,7 +282,7 @@ with hardware-based methods being possibly destructive with irrevocable
 damage. Preliminary results (TODO: SEE SECTION? ) have however suggested
 that firmware data can be obtained through programmatic methods, and as
 such this method will not be pursued.</p>
-<h5 id=2014---firmware-analysis>2014 - Firmware Analysis</h5>
+<h2 id=2014---firmware-analysis>2014 - Firmware Analysis</h2>
 <p>In 2014, Costin et al. (2014) performed a broad static analysis over a
 large number of firmware images to identify common patterns and
 similarities between different product vendors. During the analysis of
@@ -281,7 +301,7 @@ graphs, indicative that a large number of vendors had simply used and
 repurposed sample code (often available as part part of a SoC’s SDK).
 Given the commonality of vulnerabilities, concern is raised as to the
 vendor’s technical capability and understanding of IoT systems.</p>
-<h5 id=vacuums-in-the-cloud-analyzing-security-in-a-hardened-iot-ecosystem>Vacuums in the Cloud: Analyzing Security in a Hardened IoT Ecosystem</h5>
+<h2 id=vacuums-in-the-cloud-analyzing-security-in-a-hardened-iot-ecosystem>Vacuums in the Cloud: Analyzing Security in a Hardened IoT Ecosystem</h2>
 <p>Regarding prior investigations of smart robot vacuum cleaners, Ullrich
 et al. (2019) performed a security analysis on the <em>Neato BotVac
 Connected</em> robot. Through the combination of a cold-boot attack - where
@@ -302,7 +322,7 @@ short that the key was able to be bruteforced within reasonable time.</p>
 <p>An unauthenticated endpoint on the robot vacuum cleaner’s remote port
 was found to be vulnerable to a buffer overflow, allowing remote code
 execution on the robot by anyone connected to the same wireless network.</p>
-<h5 id=lidar---acoustic-eavesdropping>LIDAR - Acoustic Eavesdropping</h5>
+<h2 id=lidar---acoustic-eavesdropping>LIDAR - Acoustic Eavesdropping</h2>
 <p><img src="https://eak2mvmpt4a.exactdn.com/wp-content/uploads/2020/07/A-Guide-to-Lidar-Wavelengths-Velodyne-Lidar-AlphaPrime-1.jpg?strip=all&lossy=1&ssl=1" alt></p>
 <p>As more and more IoT devices become online and sensor data is
 transmitted around the world, there grows popularity to thoroughly
@@ -327,7 +347,7 @@ accuracy of 91% was achieved when extracting sensitive data such as
 digits of a credit card</p>
 <p><img src="https://www.zdnet.com/a/img/resize/cdaf0753c4b991623b9413270b0d9ceff8a6e730/2020/11/19/2f9e0e96-c3e5-4cdc-b9bb-24022efd5b3b/lidarphone.png?fit=bounds&auto=webp" alt=center></p>
 <hr>
-<h5 id=xiaomi-iot-ecosystem>Xiaomi IoT Ecosystem</h5>
+<h2 id=xiaomi-iot-ecosystem>Xiaomi IoT Ecosystem</h2>
 <p>Giese (2019) performed a security assessment over a broad range of
 Xiaomi’s IoT products to examine how secure their ecosystem was. Through
 a series of UART commands and keystroke injections as well as hardware
@@ -415,13 +435,35 @@ pin</a> (<code>LRADC0</code>) LOW during boot&#160;<a href=#fnref:2 class=footno
 <div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
 <div>
 <span class="block font-bold">Previous</span>
-<a href=../../../docs/report-a/background/ class=block>Background</a>
+<a href=../../../docs/report-a/introduction/ class=block>Introduction</a>
 </div>
 <div class="md:text-right mt-4 md:mt-0">
 <span class="block font-bold">Next</span>
-<a href=../../../docs/report-a/proposal/ class=block></a>
+<a href=../../../docs/report-a/proposal/ class=block>Progress</a>
 </div>
 </div>
+</div>
+<div class="hidden lg:block lg:w-1/4">
+<div class="sticky top-16 z-10 hidden lg:block px-6 py-4 bg-secondary-bg pt-16 -mt-16">
+<span class="text-lg font-semibold">On This Page</span>
+</div>
+<div class="sticky-toc hidden lg:block px-6 pb-6 pt-10 -mt-10 border-l">
+<nav id=TableOfContents>
+<ul>
+<li><a href=#iot--2018---michael-steigerwald-vtrust>IoT | 2018 - Michael Steigerwald (VTRUST)</a></li>
+<li><a href=#iot--20172018---xiaomi-dafang-hacks>IoT | 2017/2018 - Xiaomi Dafang Hacks</a></li>
+<li><a href=#iot--smartphone-application-security-assessment>IoT | Smartphone Application Security Assessment</a></li>
+<li><a href=#bga-shorting-to-gain-access-to-fel>BGA shorting to gain access to FEL</a></li>
+<li><a href=#flash-ic-dumping-hardware>Flash IC Dumping Hardware</a></li>
+<li><a href=#2014---firmware-analysis>2014 - Firmware Analysis</a></li>
+<li><a href=#vacuums-in-the-cloud-analyzing-security-in-a-hardened-iot-ecosystem>Vacuums in the Cloud: Analyzing Security in a Hardened IoT Ecosystem</a></li>
+<li><a href=#lidar---acoustic-eavesdropping>LIDAR - Acoustic Eavesdropping</a></li>
+<li><a href=#xiaomi-iot-ecosystem>Xiaomi IoT Ecosystem</a></li>
+<li><a href=#references>References</a></li>
+</ul>
+</nav>
+</div>
+<script>window.addEventListener('DOMContentLoaded',()=>{enableStickyToc()})</script>
 </div>
 </div>
 </div>
