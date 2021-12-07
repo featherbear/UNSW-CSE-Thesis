@@ -12,6 +12,15 @@ jobs:
   build-deploy:
     runs-on: ubuntu-18.04
     steps:
+    - uses: dorny/paths-filter@v2
+      id: changes
+      with:
+        filters: |
+          presentations:
+            - 'site/content/presentations/**'
+          tldr:
+            - 'site/tldr/**'
+
     - uses: actions/checkout@master
       with:
         submodules: true
@@ -38,6 +47,7 @@ jobs:
         node-version: '14.x'
 
     - name: Build TLDR site
+      if: steps.changes.outputs.tldr == 'true'
       run: |
         npm install
         npm run build
@@ -45,6 +55,7 @@ jobs:
       working-directory: ./site/tldr
 
     - name: Build presentations as PDF
+      if: steps.changes.outputs.presentations == 'true'
       run: |
         npm --prefix ./site/scripts install
         npm --prefix ./site/scripts run buildPDF
