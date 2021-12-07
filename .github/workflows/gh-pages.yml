@@ -12,6 +12,10 @@ jobs:
   build-deploy:
     runs-on: ubuntu-18.04
     steps:
+    - uses: actions/checkout@master
+      with:
+        submodules: true
+
     - uses: dorny/paths-filter@v2
       id: changes
       with:
@@ -20,11 +24,7 @@ jobs:
             - 'site/content/presentations/**'
           tldr:
             - 'site/tldr/**'
-
-    - uses: actions/checkout@master
-      with:
-        submodules: true
-
+            
     - name: Update citations for Report A
       run: |
         wget https://github.com/jgm/pandoc/releases/download/2.16.2/pandoc-2.16.2-1-amd64.deb -O /tmp/pandoc.deb
