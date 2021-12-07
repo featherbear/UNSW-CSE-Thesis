@@ -104,3 +104,5 @@ From this research, a [vacuum cleaner cloud emulator](https://github.com/dgiese/
 <!-- As a result, many attempts (regardless of success) aimed to completely replace original code with homebrew functionality, such that the original code was never analysed. -->
 
 <!-- pandoc literature-review.md -t gfm --citeproc --bibliography bib.bib --csl ref_format.cls -s -o temp.md -->
+
+## References
