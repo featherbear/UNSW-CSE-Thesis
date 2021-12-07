@@ -6,13 +6,11 @@ toc: false
 weight: 5
 ---
 
-Articulating a research question, plan and thesis outline
+<!-- Articulating a research question, plan and thesis outline
 
 The plan is robust and has provision for project variations and contingencies. The plan fits within the narrative set out by the literature review –the student makes clear why the plan is developed this way in the context of the reviewed literature. Thesis outline includes sub-sections, logical flow with a clear connection to the project plan and literature review.
 
-	
-
-All the project-dependent essential skills are identified. The student has not only acquired all the skills but also done additional work (completed partial design of a system/some algorithms/interface etc.) 
+All the project-dependent essential skills are identified. The student has not only acquired all the skills but also done additional work (completed partial design of a system/some algorithms/interface etc.)  -->
 
 
 
