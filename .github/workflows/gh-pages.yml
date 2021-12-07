@@ -17,7 +17,8 @@ jobs:
 
     - name: Update citations for Report A
       run: |
-        sudo apt install pandoc
+        wget https://github.com/jgm/pandoc/releases/download/2.16.2/pandoc-2.16.2-1-amd64.deb -O /tmp/pandoc.deb
+        sudo dpkg -i /tmp/pandoc.deb
         ls -1 *.md | grep "^[^_]" | xargs -L1 -I {} pandoc {} -t gfm --citeproc --bibliography bib.bib --csl ref_format.cls -s -o {}
       working-directory: ./site/content/docs/report-a
 
