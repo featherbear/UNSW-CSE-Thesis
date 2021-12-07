@@ -1,55 +1,19 @@
-+++
-date = ""
-description = ""
-title = "Introduction"
-toc = false
-weight = 1
+---
+date: ""
+description: ""
+title: "Introduction"
+toc: false
+weight: 1
 
-+++
+---
 
-
-
-Internet of Things (IoT) and Smart Home devices are everywhere.
-
-{{% fragment %}}
-Q: Can we completely trust a device's {security, privacy}?  
-A: <label>no</label>
-{{% /fragment %}}
-
-{{% fragment %}}
-
-<hr >
-
-- Developers are humans.
-  - Humans make mistakes.
-    - Developers make <s>mistakes</s> bugs
-- Or maybe secret company agendas?
-  {{% /fragment %}}
-
-{{% fragment %}}
-<label>We should always verify and test things where possible!</label>
-{{% /fragment %}}
-
-{{% /note %}}
+The adoption of consumer-grade Internet of Things (IoT) devices has been both widespread and constantly growing. With demands for such devices growing by 12% each year [@ResearchMarkets-2021], this AU$130B (TODO:) industry has cordially invited thousands of households to invest in smart devices such as light bulbs, fans, televisions and fridges. Giving their abundance and affordability, it has become an integral part of a household, where 4 in 5 consumers would be more inclined to choose a property over another if the former were to have such technologies (SOURCE: https://techjury.net/blog/smart-home-statistics/)
 
 
 
+Whilst the benefit of convenience is sought after from smart home devices, these technologies do come with hidden costs and risks. In the process(TODO:) of making consumer friendly devices "simple" and "smart", a hidden complex network of services and devices are present in the background, where their functionality is often obscured and private. Without the transparency of what data is being sent, and of where that data is being sent to, consumers inevitably pay for convenience with their own privacy and security.
 
+Whilst manufacturers and vendors may claim to be secure and/or confidential in how they treat UGC and PII, it lies evident from various incidents that we cannot completely trust such claims.
+From involuntary exposure of leaked Facebook user data [@LawrenceAbrams-2021], to claims of corporations monetising user data without consent [@RhettJones-2017], there lies an equal need for consumers to understand the terms of service to which they agree under, but for companies to be audited against the very same terms of service.
 
-
-
-The Internet of Things (IoT) and Smart Home devices are everywhere...  
-From smart lightbulbs, to smart fridges... to ... [*] smart ... flip-flops?
-We can't seem live without them, but...  should we really be living _with_ them?
-
-Now regardless of where you stand in the pro or anti smart device debate, the matter of fact is that the adoption of these devices into our daily lives have been widespread.
-
-Of course though, everything comes at a cost.
-
-The question lies upon us, can we completely trust the claims that manufacturers promise about our security and privacy?
-
-Unfortunately, it is hard to fully place such trust. [*] Developers are humans, and as humans we naturally make mistakes. Or perhaps, companies wish to profit off from us, whether that be monetarily or politically, or whatever it is... Our data is their currency.
-
-Facebook, Cambridge Analytica, Roomba selling data?
-
-We should always verify and test things ourselves where possible!
+## References

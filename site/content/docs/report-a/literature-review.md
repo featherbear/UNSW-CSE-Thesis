@@ -1,113 +1,49 @@
-+++
-date = ""
-description = ""
-title = "Literature Review"
-toc = false
-weight = 3
-
-+++
-
-In addition to meeting the quality at the previous band –“Solid, and linked” –the student has made a critical assessment of the literature in the context of their research project to a depth and breadth that is of the quality that could be anticipated to be seen in a journal review paper
-The most significant areas of literature relevant to the proposed work have been reviewed and the student has clearly identified one or more knowledge gaps. The student will haveshown that they understand the conceptual relationships between reviewed works and between reviewed works and the student’s research project. i.e., the student makes intellectual connections between the different parts of the review and puts their work in context.
-
-
-
-## IoT ☁
-
-
-The majority of hardware hacks / custom firmwares have originated from the desire to decouple hardware from cloud services
-
 ---
-
-{{< slide transition="fade" >}}
+date: ""
+description: ""
+title: "Literature Review"
+toc: false
+weight: 3
+---
 
 ##### IoT | 2018 - Michael Steigerwald (VTRUST)
 
-> Talk: [Smart home - Smart hack](https://media.ccc.de/v/35c3-9723-smart_home_-_smart_hack)
+In 2018 the VTRUST [@MichaelSteigerwaldVTRUST-2018] security research group analysed a (now discontinued) line of white-labelled IoT product revisions based from the IoT manufacturer Tuya. Despite supposed claims of 'military-grade security', basic packet logging of network activity concluded that "the analysis of the 'smart' devices using this basic platform is generally frightening", with "serious [...] shortcomings". It was revealed that amongst various **PII**, encryption keys and the device's serial number (used to target a specific device through remote commands) were insecurely transmitted over the network - allowing a malicious user on the same wireless network to eavesdrop on the communication. Furthermore, during the initial setup and pairing of the IoT device, wireless credentials were also insecurely transmitted in plain text, allowing wireless network credentials to also be observed.
 
-* Products from different manufacturers used the same cloud infrastructure each with their own 'customised' (white-label) smartphone apps
-  * Supposed 'military-grade security'
-* Used the <a style="text-decoration: underline dotted" href="https://www.espressif.com/en/products/socs/esp8266">Espressif ESP8266</a> chip
-  * WiFi-enabled SoC with Arduino support
-  * Often used by tinkerers and enthusiasts
-* Anyone can become an 'IoT company' regardless of "having in-depth technical knowledge of IoT or IT security."
-  * 🚩🚩🚩
+VTRUST commented on the dangers of vendors selling white-label products, where anyone could become a so-called 'IoT company' regardless of "having in-depth technical knowledge of IoT or IT security". As a result of the hands-free approach to security and privacy for both direct and indirect customers of the IoT platform, concern is raised regarding the ease of distributing maliciously modified devices; where firmware could be tampered at any stage during the supply chain. It is of significance to recognise that the majority of custom firmware releases or so-called "hardware hacks" have originated from the desire to decouple hardware from online and official cloud services. These attempts effectually disconnect devices from the internet, and limit their connectivity to a local server where communications are transparent and minimal.
 
----
+As a result of many Tuya-powered devices using the widely popular <a style="text-decoration: underline dotted" href="https://www.espressif.com/en/products/socs/esp8266">Espressif ESP8266 SoC</a>, VTRUST was able to exploit discovered vulnerabilities to perform over-the-air upgrades of custom firmware such as [ESPhome](https://esphome.io/) and [Tasmota](https://tasmota.github.io/docs/). Their automated flashing tool PoC `tuya-convert` allowed consumers to easily integrate these devices with local home automation software such as [HomeAssistant](https://www.home-assistant.io/). As a result of VTRUSTS's findings, the overall security posture of modern Tuya-powered devices has since improved[^updated_firmware], with implementations of local flash memory encryption and firmware signing measures during over-the-air firmware upgrades.
 
-{{< slide transition="fade" >}}
+[^updated_firmware]: https://www.heise.de/newsticker/meldung/Smart-Home-Hack-Tuya-veroeffentlicht-Sicherheitsupdate-4292028.html
 
-##### IoT | 2018 - Michael Steigerwald (VTRUST)
-
-> Talk: [Smart home - Smart hack](https://media.ccc.de/v/35c3-9723-smart_home_-_smart_hack)
-
-_"The analysis of the 'smart' devices using this basic platform is generally frightening [...] serious [...] shortcomings"_
-
-* Insecure transmission of encryption keys, serial number, etc...
-* Insecure transmission of wireless credentials during pairing
-* Ease of white-labelling and starting your own IoT business
-  * Ease of selling malicious devices
-
----
-
-{{< slide transition="fade" >}}
-
-##### IoT | 2018 - Michael Steigerwald (VTRUST)
-
-> Talk: [Smart home - Smart hack](https://media.ccc.de/v/35c3-9723-smart_home_-_smart_hack)
-
-[![center](https://gh-card.dev/repos/ct-Open-Source/tuya-convert.svg?fullname=)](https://github.com/ct-Open-Source/tuya-convert)
-
-Automated flashing tool `tuya-convert` created that exploited prior vulnerabilities to flash custom decoupled firmware  
-(i.e. [ESPhome](https://esphome.io/), [Tasmota](https://tasmota.github.io/docs/), etc...)
-
----
-
-{{< slide transition="fade" >}}
-
-##### IoT | 2018 - Michael Steigerwald (VTRUST)
-
-> Tuya's Response
-
-* 28th January 2019 - [patch](https://www.heise.de/newsticker/meldung/Smart-Home-Hack-Tuya-veroeffentlicht-Sicherheitsupdate-4292028.html) released _(later subverted)_
-  * TLS encrypted firmware update procedure
-  * Encryption of flash memory
-* 3rd January 2020 - [new patch](https://github.com/ct-Open-Source/tuya-convert/issues/483) released
-  * unbreakable™
-* 23rd April 2020 - Switched from the ESP8266 to a custom SoC
-  * [Tuya WB3S](https://github.com/ct-Open-Source/tuya-convert/issues/483)
-* 16th June 2021 - Announced official support for HomeAssistant
-
----
+<!-- As a result, many attempts (regardless of success) aimed to completely replace original code with homebrew functionality, such that the original code was never analysed. -->
 
 ##### IoT | 2017/2018 - Xiaomi Dafang Hacks
 
-[![center](https://gh-card.dev/repos/EliasKotlyar/Xiaomi-Dafang-Hacks.svg?fullname=)](https://github.com/EliasKotlyar/Xiaomi-Dafang-Hacks) [![center](https://gh-card.dev/repos/samtap/fang-hacks.svg?fullname=)](https://github.com/samtap/fang-hacks)
+Methods of 'rooting' IoT devices has been widely addressed, often out of the necessity to gain shell access to the device prior to any further research or development. To facilitate offline firmware upgrades for devices that might not have outbound internet connectivity, devices may execute scripts or boot from removable flash memory such as SD Cards. @{EliasKotlyar-2017} demonstrated the ability for the inexpensive Xiaomi Dafang WiFi Camera to boot into a custom `u-boot` bootloader flashed onto a microSD card. Through UART headers located on the device's circuit board, the boot environment was able to be modified to start a shell (`/bin/sh`) instead of the original entry-point script, effectively rooting the device. This invited Kotlyar to dump the firmware and later produce a custom firmware release that did not rely on the vendor's cloud infrastructure.
 
-* Cheap WiFi camera that can be made to boot off a microSD card
-* Circuit board exposed UART (`baud_rate=115200`) pins that allowed interaction with U-Boot bootloader
-* Modification of boot environment to start `/bin/sh` ([[link]](https://github.com/EliasKotlyar/Xiaomi-Dafang-Hacks/blob/master/hacks/getroot.md))
-* Gain root shell access
-* Dump firmware
-* Analyse, modify and package updated firmware
 
----
+For devices that do not automatically boot into removable media, methods have been discovered to force certain SoC's to enter a recovery or fallback mode.
 
-<br />
-<br />
-<br />
-<br />
-<br />
+##### BGA shorting to gain access to FEL
 
-## Access and Control
+<img src="/uploads/20211115-boot-sequence.png" height="300px" alt="center" />
+<img src="/uploads/20211115-Snipaste_2021-11-15_19-45-37-dgiese.jpg" height="300px" alt="center" />
 
-Gaining access to a shell / stored data / things we shouldn't.
+On Allwinner-based SoCs, a programming mode known as "FEL" can be entered by pulling a certain pin LOW during boot[^FEL_pin], which allowed device manufacturers to perform initial image flashing and bootloader configurations. It can be noted that FEL mode can also be entered if the SoC failed to successfully start the bootloader. @DennisGiese-2019 identified this fact and exploited the physical layout of the Allwinner R16 BGA package, where the data pins connected to the MMC / eMMC chips were on the physical perimeter of the SoC. By sliding a piece of electrically conductive aluminium foil (roughly 0.02mm thick) between the circuit board and the solder plane of the SoC (0.3mm), the data pins could be momentarily shorted for long enough to cause the bootloader read operation to corrupt and fail, hence booting into FEL mode. This was a favourable result as compared to pulling the FEL pin low during boot - as access to the FEL pin would require the desoldering and removal of the SoC, due to the pin being physically inaccessible when soldered without a test pad.
 
----
+Once FEL mode has been obtained, the boot environment can be configured to launch a shell, allowing for further post-exploitation methods and firmware dumping / analysis.
 
-##### Flash IC Dumping
+It is noted that on the circuit board of the Roborock S7 vacuum cleaner, pin `TPA17` is connected to the ball grid location corresponding to the FEL pin - allowing FEL mode to be entered without shorting the data pins.
+
+[^FEL_pin]: Generally triggered by pulling 
+<a href="https://linux-sunxi.org/images/b/b3/R16_Datasheet_V1.4_(1).pdf" style="text-decoration: underline dotted">FEL pin</a> (`LRADC0`) LOW during boot
+
+##### Flash IC Dumping Hardware
 
 <img src="http://www.saelig.com/miva/graphics/00000001/848pro725_350x189.jpg" alt="center" />
+
+In situations 
 
 * May require a proprietary flash programmer (above: US$3655)
 * Budget solution for common flash types: Raspberry Pi (AU$100)
@@ -116,245 +52,3 @@ Gaining access to a shell / stored data / things we shouldn't.
 * Open-source software: [`flashrom`](https://www.flashrom.org/Flashrom)
 
 > Source: [J. Jimenez - Practical Reverse Engineering](https://jcjc-dev.com/2016/06/08/reversing-huawei-4-dumping-flash/)
-
----
-
-{{< slide transition="fade" >}}
-
-
-##### BGA shorting to gain access to FEL
-
-<img src="/uploads/20211115-boot-sequence.png" height="300px" alt="center" />
-
-<!-- https://docs.neutis.io/img/hardware-integration/boot-sequence.png -->
-
-* FEL mode is a "fallback" system on Allwinner SoCs
-* Allows the flashing and reprogramming of the SoC
-* Generally triggered by pulling 
-<a href="https://linux-sunxi.org/images/b/b3/R16_Datasheet_V1.4_(1).pdf" style="text-decoration: underline dotted">FEL pin</a> (`LRADC0`) LOW during boot
-* FEL mode can also be entered if the bootloader fails to load 🤔
-
----
-
-{{< slide transition="fade" >}}
-
-##### BGA shorting to gain access to FEL
-
-* On the Allwinner R16 (BGA package) FEL pin located on ball location `L14`
-  * Not located on package edge the chip so <label>desoldering required</label>
-
-> Enter FEL mode by preventing (e)MMC load?
-
-* SoC has a solder plane height of around 0.3mm
-* Too shallow for a wire, but tall enough for aluminium foil...
-
----
-
-
-{{< slide transition="fade" >}}
-
-##### BGA shorting to gain access to FEL
-
-<label>Aluminium Foil</label>
-
-<img src="/uploads/20211115-Snipaste_2021-11-15_19-45-37-dgiese.jpg" height="300px" alt="center" />
-
-* Thickness: ~0.02mm (... 0.02mm << 0.3mm)
-* Conductive: Yep!
-* $$$
-
-
-
-Documented: [`SEEMOO-MSC-0142`](https://dontvacuum.me/thesis/Security_Analysis_of_the_Xiaomi_IoT_Ecosystem.pdf)
-
----
-
-{{< slide transition="fade" >}}
-
-##### BGA shorting to gain access to FEL | Aside (2021)
-
-> On later versions (post 2020), U-Boot shell access was patched, so shell access via UART was mitigated
-
-Pin TPA17 on the Roborock S7 circuit board was [discovered](https://dontvacuum.me/talks/DEFCON29/DEFCON29-vacuum-robots.pdf) to connect to ball location L14 on the SoC.  
-
-Therefore by pulling TPA17 / L14 / LRADC0 LOW (i.e connect to GND), FEL mode can be entered
-
-
-<!-- RootFS is now a read-only SquashFS -->
-
----
-
-{{< slide transition="slide-in fade-out" >}}
-
-##### Vacuums in the Cloud: Analyzing Security in a Hardened IoT Ecosystem
-
-> Presentation: [USENIX WOOT 19](https://www.usenix.org/conference/woot19/presentation/ullrich)
-
-* Security analysis performed on a Neato BotVac Connected robot vacuum cleaner (popular in the US)
-* AM335x Microprocessor (ARM Cortex-A8)
-* Cold-boot attack allowed RAM to be dumped over serial
-  * <label>Cold-boot attack</label> - restarting the system whilst keeping memory modules powered on, keeping memory (mostly) in-tact
-  * USB + Serial communication allowed boot into custom image that could then dump the memory for later triage
-
----
-
-{{< slide transition="fade" >}}
-
-##### Vacuums in the Cloud: Analyzing Security in a Hardened IoT Ecosystem
-
-* Memory dumps contained confidential keys
-    * 🙋‍♀️ Auth/Authz to the robot
-    * 🙆‍♀️ Auth/Authz to the cloud infrastructure
-* Logs and coredumps were encrypted... but keys hardcoded
-* Secret key RNG algorithm determined to be weak
-  * Small keyspace given known data = bruteforceable
-* RSA key was shared with all devices 🔓
-  * Identity impersonation
-
-> Also discovered <label>buffer overflow</label> vulnerability in an unauthenticated stage.
-
-
----
-
-{{< slide transition="slide-in fade-out" >}}
-
-##### 2014 - Firmware Analysis
-
-> Paper: [A Large-Scale Analysis of the Security of Embedded Firmwares](https://www.usenix.org/node/184450.)
-
-* Broad analysis of a large number of firmware images
-* Discovered 38 new vulnerabilities over 693 images
-* Similarities in vulnerabilities
-* Static analysis and extraction of keys, credentials, configurations and other 'tells'
-
----
-
-{{< slide transition="fade" >}}
-
-##### 2014 - Firmware Analysis
-
-* Source code changes largely remain the same
-* But binary files change 'arbitrarily'
-* Difficult to compare binary files
-* Calculate fuzzy hashes instead to compare similarity
-
-e.g. [binwalk](https://github.com/ReFirmLabs/binwalk),  [ssdeep](https://github.com/ssdeep-project/ssdeep),  [sdhash](https://github.com/sdhash/sdhash)
-
----
-
-##### Client-Side and Infrastructural Security 
-
-> iOS application of a smart doorlock was analysed to (in)validate claims made by the device company
-
-<label>Findings</label>
-
-* Lock events and other sensitive information were being logged independent of locking functionality
-* Access to lock settings were purely client-side UI checks
-* Certificate pinning bypass-able
-
-Source: [Backdooring the Frontdoor](https://media.defcon.org/DEF%20CON%2024/DEF%20CON%2024%20presentations/DEF%20CON%2024%20-%20Jmaxxz-Backdooring-the-Frontdoor-UPDATED.pdf)
-
----
-
-{{< slide transition="slide-in fade-out" >}}
-
-##### LIDAR - Acoustic Eavesdropping
-
-> LIDAR - Light Detection and Ranging
-
-* Uses laser lights to sense distance
-* Side-channel also exposes intensity (on some units)
-  * Can use to detect minute vibrations induced by audio sources
-
-![](https://eak2mvmpt4a.exactdn.com/wp-content/uploads/2020/07/A-Guide-to-Lidar-Wavelengths-Velodyne-Lidar-AlphaPrime-1.jpg?strip=all&lossy=1&ssl=1)
-
----
-
-{{< slide transition="fade" >}}
-
-##### LIDAR - Acoustic Eavesdropping
-
-* Vibrations are extracted and turned back into sound waves
-  * Extraction of sensitive data (i.e. credit card digits)
-  * Achieved 91% classification accuracy
-
-2015: [Acoustic Eavesdropping through Wireless Vibrometry](https://dl.acm.org/doi/10.1145/2789168.2790119)  
-2020: [LidarPhone: acoustic eavesdropping using a lidar sensor](https://dl.acm.org/doi/10.1145/3384419.3430430)
-
-![center](https://www.zdnet.com/a/img/resize/cdaf0753c4b991623b9413270b0d9ceff8a6e730/2020/11/19/2f9e0e96-c3e5-4cdc-b9bb-24022efd5b3b/lidarphone.png?fit=bounds&auto=webp)
-
-
----
-
-{{< slide transition="fade" >}}
-
-##### Xiaomi Ecosystem | 2017-2019 - Dennis Giese
-
-> Paper: [`SEEMOO-MSC-0142`](https://dontvacuum.me/thesis/Security_Analysis_of_the_Xiaomi_IoT_Ecosystem.pdf) (July 10, 2019)
-
-- Research available: [dontvacuum.me](https://dontvacuum.me)
-- Performed security analysis of a range of Xiaomi products
-- Found ways to root the Mi Home Robotic Vacuum Cleaner and the Roborock S6
-  * UART, hardware fault injection, etc...
-- Developed cloud emulation software ([DustCloud](https://github.com/dgiese/dustcloud))
-- Research led to development of 3rd party software (i.e. [Valeduto](https://github.com/Hypfer/Valetudo))
-
----
-
-{{< slide transition="fade" >}}
-
-##### Xiaomi Ecosystem | 2017-2019 - Dennis Giese
-
-> "How secure is the implementation of the ecosystem of the IoT market leader Xiaomi?"
-
-<label>Conclusions</label>
-
-* ⌚ The company quickly responds to security concerns
-* 🔍 Many exposed endpoints of deprecated APIs
-* 🔓 Many devices do not enforce proper HTTPS checks
-* 🤝 Difficult to enforce security for plugins (vendor-provided)
-* ❓ CIA principles generally kept 
-
----
-
-{{< slide transition="fade" >}}
-
-##### Xiaomi Ecosystem | 2017-2019 - Dennis Giese
-
-> More to be done
-
-![](/uploads/20211110-screely-1636466635263.png)
-
-{{% /section %}}
-
----
-
-# Extrapolation
-
-> Previous Achievements
-
-* Smartphone application reverse engineering
-* Device firmware interception
-* Device hardware and component identification
-* Network traffic analysis
-* Storage analysis
-
-> Unaddressed Areas
-
-* Post-2019 replication study
-* In-depth firmware analysis
-
----
-
-{{< slide transition="fade" >}}
-
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
