@@ -1,11 +1,10 @@
-<!-- +++
-date = ""
-description = ""
-title = "Progress"
-toc = false
-weight = 5
-
-+++
+---
+date: ""
+description: ""
+title: "Progress"
+toc: false
+weight: 5
+---
 
 Articulating a research question, plan and thesis outline
 
@@ -36,15 +35,12 @@ All the project-dependent essential skills are identified. The student has not o
 * In-depth firmware analysis
 
 
+Still!!!!
 
+https://global.roborock.com/pages/disclosure-security-vulnerability-on-tuya-iot-cloud
 
 
 @{fi12020027} outlines a list of things to look out for during analysis
-
-
-
-
-
 
 
 # Statement
@@ -178,4 +174,4 @@ Investigate potential security vulnerabilities of the Roborock S6, and assess th
 * Inspection of interaction with nearby devices
 * Protocol analysis
 
---- -->
+---

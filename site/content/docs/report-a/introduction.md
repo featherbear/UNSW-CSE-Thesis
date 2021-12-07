@@ -3,8 +3,7 @@ date: ""
 description: ""
 title: "Introduction"
 toc: false
-weight: 1
-
+weight: 2
 ---
 
 The adoption of consumer-grade Internet of Things (IoT) devices has been both widespread and constantly growing. With demands for such devices growing by 12% each year [@ResearchMarkets-2021], this AU$130B industry has cordially invited thousands of households to invest in smart devices such as light bulbs, fans, televisions and fridges. Giving the abundance of products and affordability, it has become an integral part of many homes, where 4 in 5 consumers would be more inclined to choose a property over another if the former were to have such technologies. [@RichBrown-2015]

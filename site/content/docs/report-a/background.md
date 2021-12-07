@@ -8,8 +8,6 @@ weight: 2
 
 <!-- ## Widespread availability of IoT brands -->
 
-![](/uploads/20211103-screely-1635938406254.png)
-
 <div class="marquee-parent"><img src="/uploads/20211115-lightbulbs-marquee.png" class="marquee-child" ></div>
 
 
@@ -21,49 +19,22 @@ In the event that an IoT infrastructure suffers downtime or service instability,
 
 # About The Company
 
-Roborock is a Chinese company founded in Beijing that develops robotic cleaning appliances for households. Partnering with Xiaomi ever since a short period after the opening of their business in 2014, Roborock has released a line of variously priced smart robotic vacuum cleaners, with their first iteration the "Mi Home Robotic vacuum Cleaner" being released in September 2016. They have since released eleven other robotic vacuum cleaner models, each model offering new and/or improved features - such as the addition of a mop functionality and improved spatial object detection via LIDAR technologies.
-
 <img src="/uploads/20211003-60410b5d26ef2b00045692ec.png" class="plain small" />
 
-In June 2019, Roborock released their flagship Roborock S6 vacuum cleaner (the focus of this thesis), which boasted in reduced operating noise volumes, and better overall cleaning performances 
+Roborock is a Chinese company founded in Beijing that develops robotic cleaning appliances for households. Partnering with Xiaomi ever since a short period after the opening of their business in 2014, Roborock has released a line of variously priced smart robotic vacuum cleaners, with their first iteration the "Mi Home Robotic vacuum Cleaner" being released in September 2016. They have since released eleven other robotic vacuum cleaner models, each model offering new and/or improved features - such as the addition of a mop functionality and improved spatial object detection via LIDAR technologies.
 
 
 ![](/uploads/20211103-s6-pure-banner.webp)
 
-
-- CPU: Allwinner R16 Quad-core ARMv7
-- ACU: STM32F103VC
-- RAM: 512 MB
-- Flash: 4 GB eMMC
-- Wireless: RTL8189ETV (802.11 b/g/n)
-- Cloud: Tuya / Xiaomi
-- OS: Ubuntu 14.04
-
----
+In June 2019, Roborock released their flagship Roborock S6 vacuum cleaner (the focus of this thesis), which boasted in reduced operating noise volumes, and better overall cleaning performances. The Roborock S6 is powered by an Allwinner R16 SoC (ARM architecture) alongside an STM32 for auxiliary motor and sensor I/O. Depending on the region and firmware, the robot vacuum cleaner is powered by either Xiaomi Cloud or Tuya Smart cloud infrastructures, both which are market leaders in the consumer IoT industry. Whilst superseded by newer revisions such as the S6 MaxV and the S7, the S6 still remains largely popular and is still actively maintained by Roborock.
 
 #### Cloud Capability
 
-<div class="split2">
-<div>
 <label>Roborock (Xiaomi Cloud)</label>
-
 ![](/uploads/20211103%20-%20Snipaste_2021-11-03_21-47-05.jpg)
 
-</div>
-
-<div>
-<label>Tuya Cloud</label>
-
+<label>Tuya Smart</label>
 ![](/uploads/20211103%20-%20Snipaste_2021-11-03_21-48-02.jpg)
-</div>
-</div>
-
----
-
-IoT infrastructure vulnerability ([15/09/2021](https://global.roborock.com/pages/disclosure-security-vulnerability-on-tuya-iot-cloud))
-
-![](/uploads/20211103-screely-1635941373424-highlight.png)
-
 
 ---
 
