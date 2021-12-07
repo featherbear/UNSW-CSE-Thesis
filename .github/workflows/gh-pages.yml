@@ -15,6 +15,12 @@ jobs:
       with:
         submodules: true
 
+    - name: Update citations for Report A
+      run: |
+        sudo apt install pandoc
+        ls -1 *.md | grep "^[^_]" | xargs -L1 -I {} pandoc {} -t gfm --citeproc --bibliography bib.bib --csl ref_format.cls -s -o {}
+      working-directory: ./site/content/docs/report-a
+
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v2.4.13
       with:
