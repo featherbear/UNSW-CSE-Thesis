@@ -1,7 +1,7 @@
 ---
 date: ""
 description: ""
-title: "5 | Preliminary Results"
+title: "5. Preliminary Results"
 toc: true
 weight: 6
 ---

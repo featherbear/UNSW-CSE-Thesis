@@ -1,7 +1,7 @@
 ---
 date: ""
 description: ""
-title: "2 | Background"
+title: "2. Background"
 toc: false
 weight: 3
 ---

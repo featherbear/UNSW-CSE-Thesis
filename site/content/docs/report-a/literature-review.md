@@ -1,7 +1,7 @@
 ---
 date: ""
 description: ""
-title: "3 | Literature Review"
+title: "3. Literature Review"
 toc: true
 weight: 4
 ---

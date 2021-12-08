@@ -1,7 +1,7 @@
 ---
 date: ""
 description: ""
-title: "4 | Thesis Plan"
+title: "4. Thesis Plan"
 toc: false
 weight: 5
 ---

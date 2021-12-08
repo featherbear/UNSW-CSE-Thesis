@@ -1,7 +1,7 @@
 ---
 date: ""
 description: ""
-title: "1 | Introduction"
+title: "1. Introduction"
 toc: false
 weight: 2
 ---
