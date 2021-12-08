@@ -6,6 +6,7 @@ on:
     - master
     paths:
     - 'site/**'
+  workflow_dispatch:
 
 jobs:
   build-deploy:
@@ -14,6 +15,23 @@ jobs:
     - uses: actions/checkout@master
       with:
         submodules: true
+
+    - uses: dorny/paths-filter@v2
+      id: changes
+      with:
+        filters: |
+          presentations:
+            - 'site/content/presentations/**'
+          tldr:
+            - 'site/tldr/**'
+            
+    - name: Update citations for Report A
+      run: |
+        wget https://github.com/jgm/pandoc/releases/download/2.16.2/pandoc-2.16.2-1-amd64.deb -O /tmp/pandoc.deb
+        sudo dpkg -i /tmp/pandoc.deb
+        echo Citing entries for report A...
+        ls -1 *.md | grep "^[^_]" | xargs -L1 -I {}  sh -c 'echo "\n\n## References\n\n" >> {}; pandoc {} -t gfm --citeproc --bibliography bib.bib --csl ref_format.cls -s -o {}'
+      working-directory: ./site/content/docs/report-a
 
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v2.4.13
@@ -30,6 +48,7 @@ jobs:
         node-version: '14.x'
 
     - name: Build TLDR site
+      if: steps.changes.outputs.tldr == 'true'
       run: |
         npm install
         npm run build
@@ -37,6 +56,7 @@ jobs:
       working-directory: ./site/tldr
 
     - name: Build presentations as PDF
+      if: steps.changes.outputs.presentations == 'true'
       run: |
         npm --prefix ./site/scripts install
         npm --prefix ./site/scripts run buildPDF
