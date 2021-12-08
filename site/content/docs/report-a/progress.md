@@ -8,75 +8,42 @@ weight: 6
 
 # Preliminary Results
 
+## Privacy Assessment
+
 ### Network Setup
 
-![](/uploads/20211027-20211026_210111-highlighted.jpg)
+![](/uploads/Snipaste_2021-12-08_19-14-32.jpg)
 
----
+An isolated wireless network was set up to securely observe the wireless network activity of the vacuum cleaner.  
+A DHCP server was set up to serve address leases on the `10.10.10.0/24` network, where the IPv4 address of the vacuum cleaner is dynamically issued to simulate a general home network. A TP-LINK TL-SG105E switch was configured to port mirror any data sent and received through the wireless access point to the Roborock S6.
 
-### \[Initial\] Packet Capture
+An Android smartphone with the Xiaomi Cloud application was also connected to the isolated network so that intra-device connectivity could be observed. This phone was configured to relay all of its connections through a MITM SSL proxy, so that HTTPS payloads could be decoded.
 
-![](/uploads/20211025-snipaste_2021-10-26_02-04-58.jpg)
+### Network Activity
 
-- No LAN-LAN packets???
-- <label>incomplete test</label> - misconfigured packet capture setup
+Initial network observations indicated a high volume of network activity between the Xiaomi Cloud application to their IoT servers.  
+It was also observed that the Roborock S6 periodically replied to an incoming request roughly every 2 seconds - this is presumably either a keep-alive / command and control mechanism. Detailed payload analysis has not yet been attempted.
 
----
+It is worthwhile to note that the network was initially set up incorrectly when packet logging took place. As a result of port mirroring being set up on the router instead of on the network switch, only inbound and outbound WAN packets were being forwarded. This misconfiguration had prevented the logging of LAN packets transmitted between the Xioami Cloud smartphone application and the Roborock S6 whilst remote control operation was in place. The correct networking monitoring environment will be provisioned for future network activity monitoring.
 
-### Teardown
 
-![](/uploads/20211029-20211029_233611.jpg)
+## Security Assessment
 
----
-
-### Initial Breakdown and Pinout (where needed)
-
-![](/uploads/20211029-20211030_021531.jpg)
-
-{{% note %}}
-STM32, Allwinner R16 (Quad-core ARMv7 processor), USB Port (custom ADB?)
-{{% /note %}}
-
----
-
-### Identification of the UART pins
+Prior to starting  the firmware security analysis, the firmware image first had to be be obtained. However as there are no public images of the firmware available online, physical disassembly of the vacuum cleaner was required in order expose the UART pins, as outlined by @{DennisGiese-2019}. 
 
 ![](/uploads/20211029-20211030_021507-uart-highlighted.jpg)
 
----
-
-### Serial Access
-
-- Serial (baud=115200) gives us a shell!
-
-<img src="/uploads/20211029-20211030_025959.jpg" width="33.5%" />
-<img src="/uploads/20211103-serial-comms.gif" width="60%" />
-
-<!-- Haahah widths... -->
-
-> Need a root password though...
-
----
-
-### U-Boot Bootloader
-
-![](/uploads/20211103-Snipaste_2021-11-03_03-47-40.jpg)
-
-- Able to enter the bootloader shell if `s` is pressed during init
-
-![](/uploads/20211029-bootloader-shell.jpg)
-
----
-
-### Root!
-
-![](/uploads/20211029-snipaste_2021-10-30_03-24-41.jpg)
+Once the circuit board was removed from the vacuum cleaner chassis, UART pins could be attached to test pads `TPA15`, `TPA16` and `TPA18`. When the vacuum cleaner was powered on and a serial connection was established a baud rate of `115200`, the bootloader and system serial interfaces were able to be interacted with.
 
 ![](/uploads/20211029-snipaste_2021-10-30_03-26-11.jpg)
 
+Through research into the bootloader source code[^uboot_shell_mode], it was revealed that the injection of the `s` character during boot would trigger the bootloader to enter a shell. Which granted access to read and decrypt the root password that was encrypted in a file called `vinda`. No attempts to further to explore the file system nor to create an image of the firmware has yet been performed
 
-# Next Steps
+[^uboot_shell_mode]: https://github.com/allwinner-zh/bootloader/blob/master/u-boot-2011.09/board/sunxi/board_common.c#L843-L847
 
-- Dump the firmware and begin RE / forensics
-- Redo (and further investigate) live system analysis
-  - i.e. Properly capture _all_ network traffic
+
+## Plans for Future Research
+
+Preliminary security assessment results were satisfactory, as obtaining root access was a critical step prerequisite to analysing the Roborock S6's firmware without expensive equipment like a flash chip programmer - which would have its own inherent risks at outlined in Chapter 3. Moving forwards, the next steps in carrying out the product security assessment will involve the dumping of the flash chip content into an image that can externally analysed offline. It will also be worthwhile to also perform live system forensics, as dynamic behaviours will be hard to detect during a static analysis.
+
+Whilst not the immediate focus for Thesis B, a reconfiguration of the network monitoring setup is required to properly begin the privacy assessment of the product. Additionally, network activity during initial device pairing as well as general network activity will require to be recaptured to observe the LAN packets that were previously omitted during network capture.
