@@ -1,15 +1,16 @@
 ---
 date: ""
 description: ""
-title: "Background"
+title: "2 | Background"
 toc: false
-weight: 2
+weight: 3
 ---
 
-<!-- ## Widespread availability of IoT brands -->
+# Background
+
+## The widespread availability of IoT
 
 <div class="marquee-parent"><img src="/uploads/20211115-lightbulbs-marquee.png" class="marquee-child" ></div>
-
 
 The consumer market has experienced a large influx of IoT devices, largely attributed to the presence of IoT manufacturers who offer white-label partnerships with resellers to provide "custom" products. Through these partnerships, vendors buy into the IoT manufacturer's ecosystem - namely being the product itself, the companion smartphone application, and the cloud infrastructure supporting backend communications - all without requiring vendors to posses any knowledge or understanding of how to design, develop nor manufacture the IoT products that they sell.
 
@@ -67,6 +68,3 @@ In June 2019, Roborock released their flagship Roborock S6 vacuum cleaner (the f
 }
 
 </style>
-
-
-## References

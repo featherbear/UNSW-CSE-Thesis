@@ -1,10 +1,12 @@
 ---
 date: ""
 description: ""
-title: "Literature Review"
+title: "3 | Literature Review"
 toc: true
-weight: 3
+weight: 4
 ---
+
+# Literature Review
 
 ## Broad security study of Tuya-based devices
 
@@ -92,5 +94,3 @@ Regarding prior investigations of smart robot vacuum cleaners, @{238606} perform
 Whilst logs and coredumps were encrypted when transmitted to cloud servers, the encryption keys were discovered to be hardcoded which nullified any assurances of encryption. Authentication and authorisation tokens were all encrypted with the same static RSA key - which left the cloud infrastructure vulnerable to impersonated identities and access. Supposed randomly generated keys were also discovered to be vulnerable, due to the keyspace for entropy being so short that the key was able to be bruteforced within reasonable time. Furthermore, an unauthenticated endpoint on the robot vacuum cleaner's remote port was found to be vulnerable to a buffer overflow, allowing remote code execution on the robot by anyone connected to the same wireless network.
 
 The analysis of a system's memory state is beneficial to the security assessment of a product's firmware as static analysis techniques are unable to account for dynamic data such as response payloads from HTTP communications. It is however, unlikely that a cold-boot attack will be necessary in the scope of this thesis as preliminary results have already concluded that shell access is obtainable, hence other simpler methods could be performed to extract memory states.
-
-## References

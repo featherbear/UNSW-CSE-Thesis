@@ -1,10 +1,12 @@
 ---
 date: ""
 description: ""
-title: "Introduction"
+title: "1 | Introduction"
 toc: false
 weight: 2
 ---
+
+# Introduction
 
 Consumer grade Internet of Things (IoT) devices have become widely adopted with continuously growing demand. With demands for such devices growing by 12% each year [@ResearchMarkets-2021], this AU$130B industry has cordially invited thousands of households to invest in smart devices such as light bulbs, fans, televisions and fridges. Giving the abundance and affordability of these products, IoT devices have become an integral part of many homes, where 4 in 5 consumers would be more inclined to choose a property over another if the former were to have such technologies [@RichBrown-2015].
 
@@ -19,5 +21,3 @@ The infrastructural security and product security of IoT devices must also be sc
 The black-box nature of IoT network communication raises both privacy and security concerns that may often be overlooked or trivialised in exchange for convenience. This this will involve the audit of an internet-connected robotic vacuum cleaner (Roborock S6) to assess the internal operations and nature of data that is transmitted, as to investigate any potential vulnerabilities that may render the device insecure.
 
 The outline of this thesis is as follows: In Chapter 2, we study the motivations behind wanting to audit the privacy and security of IoT systems. In Chapter 3, we will review existing research, results and methods that comprise the current state of the art of security research on robot vacuum cleaners. Gaps in existing research will then be formalised through the thesis plan in Chapter 4. Finally we will conclude this report in a discussion of preliminary results that will be carried forwards into the later stages of research
-
-## References

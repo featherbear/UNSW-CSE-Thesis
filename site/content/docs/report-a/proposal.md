@@ -1,10 +1,12 @@
 ---
 date: ""
 description: ""
-title: "Proposal"
+title: "4 | Thesis Plan"
 toc: false
-weight: 4
+weight: 5
 ---
+
+# Thesis Plan
 
 <!-- Articulating a research question, plan and thesis outline
 
