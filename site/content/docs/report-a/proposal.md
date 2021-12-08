@@ -12,12 +12,7 @@ The plan is robust and has provision for project variations and contingencies. T
 
 All the project-dependent essential skills are identified. The student has not only acquired all the skills but also done additional work (completed partial design of a system/some algorithms/interface etc.)  -->
 
-
-
-
-
-
-# Extrapolation
+## Summary of Literature Review
 
 > Previous Achievements
 
@@ -39,6 +34,11 @@ https://global.roborock.com/pages/disclosure-security-vulnerability-on-tuya-iot-
 
 
 @{fi12020027} outlines a list of things to look out for during analysis
+
+
+
+
+<!-- As a result, many attempts (regardless of success) aimed to completely replace original code with homebrew functionality, such that the original code was never analysed. -->
 
 
 # Statement
