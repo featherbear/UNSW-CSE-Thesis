@@ -1,0 +1,153 @@
+\documentclass[]{resources/unswthesis}
+
+%%% Class options:
+
+%  undergrad (default)
+%  hdr
+
+%  11pt (default)
+%  12pt
+
+%  final (default)
+%  draft
+
+%  oneside (default for hdr)
+%  twoside (default for undergrad)
+
+
+%% Thesis details
+\thesistitle{Requirements to theses submitted in the Faculty of Engineering}
+\thesisschool{School of Computer Science and Engineering}
+\thesisauthor{Andrew Jin-Meng Wong}
+\thesisZid{z5206677}
+\thesistopic{"Smart" Vacuum Cleaners - An Audit Into The Security and Integrity of IoT Systems}
+\thesisdegree{Bachelor of Engineering in Computer Engineering}
+\thesisdate{November 2021}
+\thesissupervisor{Prof.\ Richard Buckland}% for undergrad theses only
+
+
+%% My own LaTeX macros, definitions, etc
+\include{definitions}
+
+
+\begin{document}
+
+%% pages in the ``frontmatter'' section have roman numeral page number
+\frontmatter  
+\maketitle
+
+\include{abstract}
+\include{acknowledgements}
+\include{abbreviations}
+
+\tableofcontents
+\listoffigures  % if required
+\listoftables  % if required
+
+%% pages in the ``mainmatter'' section have arabic page numbers and chapters are numbered
+\mainmatter
+
+\hypertarget{introduction}{%
+\chapter{Introduction}\label{introduction}}
+
+Consumer grade Internet of Things (IoT) devices have become widely
+adopted with continuously growing demand. With demands for such devices
+growing by 12\% each year (Research \& Markets 2021), this AU\$130B
+industry has cordially invited thousands of households to invest in
+smart devices such as light bulbs, fans, televisions and fridges. Giving
+the abundance and affordability of these products, IoT devices have
+become an integral part of many homes, where 4 in 5 consumers would be
+more inclined to choose a property over another if the former were to
+have such technologies (Brown 2015).
+
+Although convenient, these devices come with hidden costs and risks.
+Behind the seemingly `simple', `smart' and `secure' product features
+that attract the general populus lies a hidden complex network of
+services and devices, where functionality is often obscured and private.
+Without the transparency of what data is being sent, and of where that
+data is being sent to, consumers inevitably pay for convenience with not
+only their money but with their privacy and security (Mehic et al.
+2019).
+
+Whilst manufacturers and vendors claim to be secure and/or confidential
+in how they treat \textbf{UGC} and \textbf{PII}, it lies evident from
+various incidents that we cannot completely trust such claims. From
+involuntary exposure of leaked Facebook user data (Abrams 2021), to
+rumours of corporations monetising user data without consent (Jones
+2017), there lies an equal need for consumers to understand the terms of
+service to which they agree to, but additionally for companies to be
+audited against those very same terms of service.
+
+The infrastructural security and product security of IoT devices must
+also be scrutinised, given the rapid product lifecycle of IoT
+developments (Giese 2021). As security is often not a sellable feature
+in contrast to new products and most mistakenly, convenience, proper and
+wholistic security precautions are often overlooked by companies who are
+more concerned with profits and high return on investments.
+Consequently, the prevalence of malicious actors in the cyberworld is
+alarming, where the overall lack of security awareness between consumers
+invites target devices to be easily accessed with default passwords or
+through unpatched vulnerabilities\footnote{https://www.shodan.io/search?query=webcam}.
+
+The black-box nature of IoT network communication raises both privacy
+and security concerns that may often be overlooked or trivialised in
+exchange for convenience. This this will involve the audit of an
+internet-connected robotic vacuum cleaner (Roborock S6) to assess the
+internal operations and nature of data that is transmitted, as to
+investigate any potential vulnerabilities that may render the device
+insecure.
+
+The outline of this thesis is as follows: In Chapter 2, we study the
+motivations behind wanting to audit the privacy and security of IoT
+systems. In Chapter 3, we will review existing research, results and
+methods that comprise the current state of the art of security research
+on robot vacuum cleaners. Gaps in existing research will then be
+formalised through the thesis plan in Chapter 4. Finally we will
+conclude this report in a discussion of preliminary results that will be
+carried forwards into the later stages of research
+
+\hypertarget{refs}{}
+\begin{CSLReferences}{1}{0}
+\leavevmode\vadjust pre{\hypertarget{ref-LawrenceAbrams-2021}{}}%
+Abrams, L., 2021. 533 million facebook users' phone numbers leaked on
+hacker forum. Available at:
+\url{https://www.bleepingcomputer.com/news/security/533-million-facebook-users-phone-numbers-leaked-on-hacker-forum/}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-RichBrown-2015}{}}%
+Brown, R., 2015. Smart homes can pay off when it's time to sell.
+Available at:
+\url{https://www.cnet.com/home/smart-home/what-happens-when-you-sell-your-smart-house/}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-DennisGiese-2021}{}}%
+Giese, D., 2021. Smart home security \& privacy.
+
+\leavevmode\vadjust pre{\hypertarget{ref-RhettJones-2017}{}}%
+Jones, R., 2017. Roomba's next big step is selling maps of your home to
+the highest bidder. Available at:
+\url{https://gizmodo.com/roombas-next-big-step-is-selling-maps-of-your-home-to-t-1797187829}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-8939043}{}}%
+Mehic, M., Selimovic, N. \& Komosny, D., 2019.
+\href{https://doi.org/10.1109/ICAT47117.2019.8939043}{About the
+connectivity of xiaomi internet-of-things smart home devices}. In
+\emph{2019 XXVII international conference on information, communication
+and automation technologies (ICAT)}. pp. 1--6.
+
+\leavevmode\vadjust pre{\hypertarget{ref-ResearchMarkets-2021}{}}%
+Research \& Markets, 2021. Insights on the smart homes global market to
+2026 - featuring ABB, acuity brands and emerson electric among others.
+Available at:
+\url{https://www.prnewswire.com/news-releases/insights-on-the-smart-homes-global-market-to-2026---featuring-abb-acuity-brands-and-emerson-electric-among-others-301425322.html}.
+
+\end{CSLReferences}
+
+%% chapters in the ``backmatter'' section do not have chapter numbering
+%% text in the ``backmatter'' is single spaced
+\backmatter
+\bibliographystyle{alpha}
+\bibliography{pubs}
+
+\include{appendix1}
+\include{appendix2}
+
+\end{document}

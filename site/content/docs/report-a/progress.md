@@ -12,7 +12,7 @@ weight: 6
 
 ### Network Setup
 
-![](/uploads/Snipaste_2021-12-08_19-14-32.jpg)
+![](https://featherbear.cc/UNSW-CSE-Thesis/uploads/Snipaste_2021-12-08_19-14-32.jpg)
 
 An isolated wireless network was set up to securely observe the wireless network activity of the vacuum cleaner.  
 A DHCP server was set up to serve address leases on the `10.10.10.0/24` network, where the IPv4 address of the vacuum cleaner is dynamically issued to simulate a general home network. A TP-LINK TL-SG105E switch was configured to port mirror any data sent and received through the wireless access point to the Roborock S6.
@@ -26,18 +26,17 @@ It was also observed that the Roborock S6 periodically replied to an incoming re
 
 It is worthwhile to note that the network was initially set up incorrectly when packet logging took place. As a result of port mirroring being set up on the router instead of on the network switch, only inbound and outbound WAN packets were being forwarded. This misconfiguration had prevented the logging of LAN packets transmitted between the Xioami Cloud smartphone application and the Roborock S6 whilst remote control operation was in place. The correct networking monitoring environment will be provisioned for future network activity monitoring.
 
-
 ## Security Assessment
 
 Prior to starting  the firmware security analysis, the firmware image first had to be be obtained. However as there are no public images of the firmware available online, physical disassembly of the vacuum cleaner was required in order expose the UART pins, as outlined by @{DennisGiese-2019}. 
 
-![](/uploads/20211029-20211030_021507-uart-highlighted.jpg)
+![](https://featherbear.cc/UNSW-CSE-Thesis/uploads/20211029-20211030_021507-uart-highlighted.jpg)
 
 Once the circuit board was removed from the vacuum cleaner chassis, UART pins could be attached to test pads `TPA15`, `TPA16` and `TPA18`. When the vacuum cleaner was powered on and a serial connection was established a baud rate of `115200`, the bootloader and system serial interfaces were able to be interacted with.
 
-![](/uploads/20211029-snipaste_2021-10-30_03-26-11.jpg)
+![](https://featherbear.cc/UNSW-CSE-Thesis/uploads/20211029-snipaste_2021-10-30_03-26-11.jpg)
 
-Through research into the bootloader source code[^uboot_shell_mode], it was revealed that the injection of the `s` character during boot would trigger the bootloader to enter a shell. Which granted access to read and decrypt the root password that was encrypted in a file called `vinda`. No attempts to further to explore the file system nor to create an image of the firmware has yet been performed
+Through research into the bootloader source code[^uboot_shell_mode], it was revealed that the injection of the `s` character during boot would trigger the bootloader to enter a shell. Which granted access to read and decrypt the root password that was encrypted in a file called `vinda`. No attempts to further to explore the file system nor to create an image of the firmware has yet been made.
 
 [^uboot_shell_mode]: https://github.com/allwinner-zh/bootloader/blob/master/u-boot-2011.09/board/sunxi/board_common.c#L843-L847
 

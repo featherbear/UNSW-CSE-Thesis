@@ -429,7 +429,7 @@ Graduate Research.
         \enlargethispage{\footskip}% no footer on cover
 	\begin{center}%
             \coverpagefont%
-            \includegraphics{crest}%
+            \includegraphics{resources/crest}%
 	    \vskip 0pt plus 8fill
 	    {\boldcoverpagefont \ThesisSchoolName\par}%
 	    {\boldcoverpagefont \ThesisFacultyName\par}%
@@ -469,7 +469,7 @@ Graduate Research.
           { A thesis in fulfillment of the requirements for the degree of \\[2ex]
               \ThesisDegreeName \par}%
           \vskip 0pt plus 8fill
-          \includegraphics{crest}
+          \includegraphics{resources/crest}
 	  \vskip 0pt plus 4fill
           \ThesisSchoolName\par
           \ThesisFacultyName\par

@@ -46,10 +46,11 @@ A large proportion of images shared similarities in code execution graphs, indic
 
 ## Side-channel application of LIDAR sensor measurements
 
-![center](https://www.zdnet.com/a/img/resize/cdaf0753c4b991623b9413270b0d9ceff8a6e730/2020/11/19/2f9e0e96-c3e5-4cdc-b9bb-24022efd5b3b/lidarphone.png?fit=bounds&auto=webp)
+![](https://www.zdnet.com/a/img/resize/cdaf0753c4b991623b9413270b0d9ceff8a6e730/2020/11/19/2f9e0e96-c3e5-4cdc-b9bb-24022efd5b3b/lidarphone.png?fit=bounds&auto=webp)
 
 As more and more IoT devices become online and sensor data is transmitted around the world, there are growing concerns to thoroughly investigate the extents of what data can be retrieved from the sensors. Given that the outputs of Light Detection and Ranging (LIDAR) sensors are intensity readings and distance measurements, @{10.1145/2789168.2790119} developed a method to translate the intensity readings from the LIDAR sensor back into audio singles, when the LIDAR sensor was directed towards a surface near an audio source. This allowed speech to be identified from micro-vibrations within objects, prospectively raising concern regarding the privacy and confidentiality of sound in a sound-proof room.
 
+\newpage
 This research has since been continued and tested on robot vacuum cleaners which too incorporate LIDAR sensors intended for spatial mapping. As general off-the-shelf LIDAR sensor units are used within vacuum cleaners, light intensity values were also returned by the sensor, and could be used to in a similar fashion to detect speech and sound [@10.1145/3384419.3430430]. In the application of a robotic vacuum cleaner, light intensity values are considered a side-channel concern as those readings are not required for the operation of a vacuum cleaner. Despite integration limitations of sampling intensity values on a vacuum cleaner (i.e. accounting for the continuous rotation of the LIDAR sensor and noise floor as a result of the vacuum engine), a classification accuracy of 91% was achieved when extracting sensitive data such as digits of a credit card.
 
 Whilst this thesis will not pursue the exploration of sensor data analysis, these two studies offer potential future research areas on privacy concerns surrounding robot vacuum cleaners, as newer revisions of smart devices become continually equipped with more accurate and feature-rich sensor.
@@ -63,11 +64,11 @@ Through the subversion of interrupting the default boot sequence, access to a sh
 
 ## Shell access via BGA pin shorting
 
-<img src="/uploads/20211115-boot-sequence.png" height="300px" alt="center" />
+![](https://featherbear.cc/UNSW-CSE-Thesis/uploads/20211115-boot-sequence.png)
 
 For devices that do not automatically boot into removable media, methods have been discovered to force certain SoC's to enter a recovery or fallback mode. Allwinner-based SoCs implement a mode known as "FEL" that can be entered by pulling a certain pin LOW during boot[^FEL_pin], which allows device manufacturers to perform initial image flashing and bootloader configuration. For developers and hardware hackers, FEL mode allows users to modify the boot environment to execute a shell, allowing for further post-exploitation methods and firmware dumping / analysis.
 
-<img src="/uploads/20211115-Snipaste_2021-11-15_19-45-37-dgiese.jpg" height="300px" alt="center" />
+<img src="https://featherbear.cc/UNSW-CSE-Thesis/uploads/20211115-Snipaste_2021-11-15_19-45-37-dgiese.jpg" height="300px" alt="center" />
 
 It is noted that FEL mode can also be entered if the SoC fails to successfully launch the bootloader. @DennisGiese-2019 identified this fact and exploited the physical pin layout of the Allwinner R16 BGA package, where the data pins connecting the SoC to the (e)MMC chips (where the bootloader is stored) were on the physical perimeter of the SoC. By sliding a piece of aluminium foil (roughly 0.02mm thick) between the circuit board and the solder plane of the SoC (0.3mm), the electrically conductive aluminium foil could momentarily short the data pins long enough to cause the bootloader read operation to corrupt and fail, hence booting into FEL mode and eventually gaining shell access. This method is favourable when compared to pulling the FEL pin low during boot - as access to the FEL pin would require the desoldering and removal of the SoC from a circuit board - which can be tedious and potentially destructive.
 
@@ -77,8 +78,6 @@ It is noted that FEL mode can also be entered if the SoC fails to successfully l
 Through this hardware fault injection technique of shorting data pins during boot, Giese was able to successfully gain access to a shell on Roborock's first robot vacuum cleaner (Mi Robot Vacuum Cleaner). later
 Giese noted that on the circuit board of the Roborock S7 vacuum cleaner, test pad `TPA17` is connected to the ball grid location corresponding to the FEL pin - allowing FEL mode to be entered without performing a hardware fault injection.
 
-
-
 ## Hardware based extraction of flash memory
 
 <img src="http://www.saelig.com/miva/graphics/00000001/848pro725_350x189.jpg" alt="center" />
@@ -87,6 +86,7 @@ In situations where no provisions exist to programmatically extract stored data 
 
 It is noted that the process of hardware flash chip dumping is not feasible in the scope of this thesis due to resource constraints of not possessing a suitable flash programmer, as well as the risk associated with hardware-based methods being possibly destructive with irreversible damage. Preliminary results (See chapter 5) have however suggested that firmware data can be obtained through programmatic methods, and as such this method will not be pursued.
 
+\newpage 
 ## Cold-boot attack to dump memory state
 
 Regarding prior investigations of smart robot vacuum cleaners, @{238606} performed a security analysis on the _Neato BotVac Connected_ robot. Through the combination of a cold-boot attack - where a system is rebooted without the volatile memory (i.e. RAM) being cleared - and the booting of a custom bootloader image, the memory state of the system's prior execution was able to be dumped and analysed. This memory dump is of significant value as it would contain the binaries of loaded programs as well as their application state. The proceeding analysis revealed major vulnerabilities and concerns in the vacuum cleaner and more alarmingly, in Neato's cloud infrastructure.

@@ -14,6 +14,7 @@ Although convenient, these devices come with hidden costs and risks. Behind the 
 
 Whilst manufacturers and vendors claim to be secure and/or confidential in how they treat **UGC** and **PII**, it lies evident from various incidents that we cannot completely trust such claims. From involuntary exposure of leaked Facebook user data [@LawrenceAbrams-2021], to rumours of corporations monetising user data without consent [@RhettJones-2017], there lies an equal need for consumers to understand the terms of service to which they agree to, but additionally for companies to be audited against those very same terms of service.
 
+\newpage
 The infrastructural security and product security of IoT devices must also be scrutinised, given the rapid product lifecycle of IoT developments [@DennisGiese-2021]. As security is often not a sellable feature in contrast to new products and most mistakenly, convenience, proper and wholistic security precautions are often overlooked by companies who are more concerned with profits and high return on investments. Consequently, the prevalence of malicious actors in the cyberworld is alarming, where the overall lack of security awareness between consumers invites target devices to be easily accessed with default passwords or through unpatched vulnerabilities[^shodan_webcam].
 
 [^shodan_webcam]: https://www.shodan.io/search?query=webcam
