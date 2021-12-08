@@ -27,9 +27,9 @@
   TODO: Application?
   TODO: Application?
   TODO: Application?
- IoT | 2018 - Michael Steigerwald (VTRUST) In 2018 the security research group VTRUST (2018) analysed a line of white-labelled IoT product revisions based from the IoT manufacturer Tuya.">
+ Broad security study of Tuya-based devices In 2018 the security research group VTRUST (2018) analysed a line of white-labelled IoT product revisions based from the IoT manufacturer Tuya.">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Docs","item":"/docs/"},{"@type":"ListItem","position":2,"name":"Report A","item":"/docs/report-a/"},{"@type":"ListItem","position":3,"name":"Literature Review","item":"/docs/report-a/literature-review/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/docs/report-a/literature-review/"},"headline":"Literature Review | Report A | CSE Thesis Musings","wordCount":2046,"publisher":{"@type":"Person","name":"A. Wong"},"description":"TODO: Application?\n  TODO: Application?\n  TODO: Application?\n  TODO: Application?\n  TODO: Application?\n  TODO: Application?\n  TODO: Application?\n IoT | 2018 - Michael Steigerwald (VTRUST) In 2018 the security research group VTRUST (2018) analysed a line of white-labelled IoT product revisions based from the IoT manufacturer Tuya."}</script><meta property="og:title" content="Literature Review | Report A | CSE Thesis Musings">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/docs/report-a/literature-review/"},"headline":"Literature Review | Report A | CSE Thesis Musings","wordCount":2594,"publisher":{"@type":"Person","name":"A. Wong"},"description":"TODO: Application?\n  TODO: Application?\n  TODO: Application?\n  TODO: Application?\n  TODO: Application?\n  TODO: Application?\n  TODO: Application?\n Broad security study of Tuya-based devices In 2018 the security research group VTRUST (2018) analysed a line of white-labelled IoT product revisions based from the IoT manufacturer Tuya."}</script><meta property="og:title" content="Literature Review | Report A | CSE Thesis Musings">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/docs/report-a/literature-review/">
 <meta property="og:description" content="TODO: Application?
@@ -39,7 +39,7 @@
   TODO: Application?
   TODO: Application?
   TODO: Application?
- IoT | 2018 - Michael Steigerwald (VTRUST) In 2018 the security research group VTRUST (2018) analysed a line of white-labelled IoT product revisions based from the IoT manufacturer Tuya.">
+ Broad security study of Tuya-based devices In 2018 the security research group VTRUST (2018) analysed a line of white-labelled IoT product revisions based from the IoT manufacturer Tuya.">
 <meta property="og:locale" content="en">
 <meta property="og:site_name" content="CSE Thesis Musings">
 <meta property="article:section" content="docs">
@@ -169,7 +169,7 @@
 <blockquote>
 <p>TODO: Application?</p>
 </blockquote>
-<h2 id=iot--2018---michael-steigerwald-vtrust>IoT | 2018 - Michael Steigerwald (VTRUST)</h2>
+<h2 id=broad-security-study-of-tuya-based-devices>Broad security study of Tuya-based devices</h2>
 <p>In 2018 the security research group VTRUST (2018) analysed a line of
 white-labelled IoT product revisions based from the IoT manufacturer
 Tuya. Despite supposed claims of ‘military-grade security’, basic packet
@@ -179,7 +179,7 @@ devices using this basic platform is generally frightening”, with
 <strong>PII</strong>, encryption keys and the device’s serial number (used to target
 a specific device through remote commands) were insecurely transmitted
 over the network - allowing a malicious user on the same wireless
-network to eavesdrop on the communication. Furthermore, during the
+network to eavesdrop on the communication. Furthermore during the
 initial setup and pairing of the IoT device, wireless credentials were
 also insecurely transmitted in plain text, allowing wireless network
 credentials to also be observed.</p>
@@ -187,82 +187,191 @@ credentials to also be observed.</p>
 where anyone could become a so-called ‘IoT company’ regardless of
 “having in-depth technical knowledge of IoT or IT security”. As a result
 of the hands-free approach to security and privacy for both direct and
-indirect customers of the IoT platform, concern is raised regarding the
-ease of distributing maliciously modified devices; where firmware could
-be tampered at any stage during the supply chain. It is of significance
-to recognise that the majority of custom firmware releases or so-called
-“hardware hacks” have originated from the desire to decouple hardware
-from online and official cloud services. These attempts effectually
-disconnect devices from the internet, and limit their connectivity to a
-local server where communications are transparent and minimal.</p>
+indirect customers of the IoT platform, concerns are raised regarding
+the ease of possibly distributing maliciously modified devices; where
+firmwares could be tampered at any stage during the supply chain. It is
+of significance to recognise that the majority of custom firmware
+releases or so-called “hardware hacks” have originated from the desire
+to decouple hardware from online and official cloud services. These
+ventures effectually disconnect internet-reliant devices from the cloud,
+and limit their connectivity to a local server where communications are
+transparent and minimal.</p>
 <p>As a result of many Tuya-powered devices using the widely popular
 <a style="text-decoration:underline dotted" href=https://www.espressif.com/en/products/socs/esp8266>Espressif
 ESP8266 SoC</a>, VTRUST was able to exploit discovered vulnerabilities
 to perform over-the-air upgrades of custom firmware such as
 <a href=https://esphome.io/>ESPhome</a> and
-<a href=https://tasmota.github.io/docs/>Tasmota</a>. Their automated flashing
-tool PoC <code>tuya-convert</code> allowed consumers to easily integrate these
-devices with local home automation software such as
+<a href=https://tasmota.github.io/docs/>Tasmota</a>. An automated flashing tool
+(<code>tuya-convert</code>) was released, allowing consumers to easily integrate
+these devices with local home automation software such as
 <a href=https://www.home-assistant.io/>HomeAssistant</a>. As a result of
 VTRUSTS’s findings, the overall security posture of modern Tuya-powered
 devices has since improved<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup>, with implementations of local flash
 memory encryption and firmware signing measures during over-the-air
 firmware upgrades.</p>
-<h2 id=iot--20172018---xiaomi-dafang-hacks>IoT | 2017/2018 - Xiaomi Dafang Hacks</h2>
-<p>Methods of ‘rooting’ IoT devices has been widely addressed, often out of
-the necessity to gain shell access to the device prior to any further
-research or development. To facilitate offline firmware upgrades for
-devices that might not have outbound internet connectivity, devices may
-execute scripts or boot from removable flash memory such as SD Cards.
-Kotlyar (2017) demonstrated the ability for the inexpensive Xiaomi
-Dafang WiFi Camera to boot into a custom <code>u-boot</code> bootloader flashed
-onto a microSD card. Through UART headers located on the device’s
-circuit board, the boot environment was able to be modified to start a
-shell (<code>/bin/sh</code>) instead of the original entry-point script,
-effectively rooting the device. This invited Kotlyar to dump the
-firmware and later produce a custom firmware release that did not rely
-on the vendor’s cloud infrastructure.</p>
-<h2 id=iot--smartphone-application-security-assessment>IoT | Smartphone Application Security Assessment</h2>
+<p>VTRUST’s technical findings offer insights into methods of network-level
+security assessment and brings to light how simple it is for an
+individual to start their own IoT company, and of how possible it is to
+resell devices with modified firmware with malicious intent.</p>
+<h2 id=broad-security-study-of-xiaomi-based-devices>Broad security study of Xiaomi-based devices</h2>
+<p>Giese (2019) performed a security assessment over a broad range of
+Xiaomi’s IoT products to examine how secure their ecosystem was. Through
+a number of different keystroke injection methods, UART commands and
+hardware fault injection techniques, shell access into various
+Xiaomi-powered devices was obtained. It was concluded that due to the
+enormous size of Xiaomi’s ecosystem, it was difficult to enforce global
+security policies between the different vendor-provided plugins that
+continued to supported deprecated functions and APIs which were still
+used by legacy devices. From this research, a <a href=https://github.com/dgiese/dustcloud>Xiaomi cloud
+emulator</a> was built, allowing for
+complete offline functionality and control over a large range of Xioami
+devices without requiring internet connectivity. This research also
+paved the way for other third party software to be developed, such as
+<a href=https://github.com/Hypfer/Valetudo>Valeduto</a> - which provides a
+feature-rich web interface to operate a robot vacuum cleaner.</p>
+<p>It was also concluded that Xiaomi does indeed treat their security
+concerns seriously, as they had been quick to respond to security
+incidents and vulnerability reports. During this study, the security of
+the Roborock S6 vacuum cleaner was also assessed - albeit briefly, and
+as such this thesis will not only further explore the security posture
+of the Roborock S6 since 2019, but to also audit the state of privacy of
+the device.</p>
+<h2 id=security-study-of-smartphone-applications>Security study of smartphone applications</h2>
 <p>Jmaxxz (2016) investigated the security claims of a smart doorlock which
-boasted in bank-grade security, and better security over conventional
-lock and key methods. Various flaws within the smartphone application
-however invalidated these claims, as it was discovered that access to
-lock settings were purely client-side checks, and as such; requests to
-the server could be modified to elevate privileges. Various debug menus
-were present in the production version of the application, allowing
-certificate pinning protections to be subverted. Furthermore, lock
-events and other identifiable information were being transmitted to a
-logging endpoint.</p>
-<h2 id=bga-shorting-to-gain-access-to-fel>BGA shorting to gain access to FEL</h2>
-<p><img src=../../../uploads/20211115-boot-sequence.png height=300px alt=center>
-<img src=../../../uploads/20211115-Snipaste_2021-11-15_19-45-37-dgiese.jpg height=300px alt=center></p>
+boasted in bank-grade security, overall better security over
+conventional lock and key systems. Various flaws within the smartphone
+application however invalidated these claims, as it was discovered that
+access to lock settings were purely client-side checks. As such,
+modified request payloads containing elevated authorisation claims would
+be naively accepted by the server, allowing lock settings to be modified
+by a guest or limited user. Furthermore, various debugging menus were
+present in the production version of the smartphone application,
+allowing certificate pinning protections to be subverted. In addition,
+the privacy of the user was also questioned, as it was observed that
+door lock events and other identifiable information were being
+transmitted to a logging endpoint.</p>
+<p>The repudiation of a supposed security product’s security (i.e a door
+lock’s purpose to to secure a house from unauthorised entry) highlight
+the importance to verify claims that manufacturers may advertise. This
+study serves as an excellent example of how not to implement access
+control, where novel methods of HTTP request tampering, hardcoded keys
+and insufficient keyspaces allow for the arbitrary privileged control of
+the smart doorlock. Subversion of HTTP Strict Transport Security (HSTS)
+and certificate pinning policies through system-wide tools<sup id=fnref:2><a href=#fn:2 class=footnote-ref role=doc-noteref>2</a></sup>,
+per-application patching<sup id=fnref:3><a href=#fn:3 class=footnote-ref role=doc-noteref>3</a></sup> or accessible debug menus furthermore
+spotlights the necessity to understand that certificate pinning should
+not be relied upon to verify identity nor authority.</p>
+<h2 id=analysis-of-similarities-in-iot-firmwares>Analysis of similarities in IoT firmwares</h2>
+<p>Costin et al. (2014) performed a broad static analysis over a large
+number of firmware images to identify common patterns and similarities
+between firmwares of different product vendors. During the analysis of
+the 693 images, 38 new vulnerabilities were discovered, some which were
+present in the majority of images. A large number of hardcoded keys and
+credentials were also discovered that could render the IoT device or its
+infrastructural service vulnerable. To facilitate the similarity
+analysis of firmware images, where per-byte analysis techniques are
+nonsensical, tools like
+<a href=https://github.com/ReFirmLabs/binwalk>binwalk</a>,
+<a href=https://github.com/ssdeep-project/ssdeep>ssdeep</a>, and
+<a href=https://github.com/sdhash/sdhash>sdhash</a> were employed - which helped
+to facilitate file exploration relative to their file type and
+architecture. To compare versions of the same binary across different
+firmwares, a tool called
+<a href=https://www.zynamics.com/software.html>BinDiff</a> was used, which would
+compare similarities and differences in disassembled code</p>
+<p>A large proportion of images shared similarities in code execution
+graphs, indicative that a large number of vendors had simply used and
+repurposed sample code (often available as part part of a SoC’s SDK).
+Whilst the sample code is often not vulnerable itself, given the
+commonality of other vulnerabilities, concern is raised as to the
+vendor’s technical capability and understanding of IoT systems and of
+security. The tools and methods to perform this firmware study are
+transferable to the scope of this thesis.</p>
+<h2 id=side-channel-application-of-lidar-sensor-measurements>Side-channel application of LIDAR sensor measurements</h2>
+<p><img src="https://www.zdnet.com/a/img/resize/cdaf0753c4b991623b9413270b0d9ceff8a6e730/2020/11/19/2f9e0e96-c3e5-4cdc-b9bb-24022efd5b3b/lidarphone.png?fit=bounds&auto=webp" alt=center></p>
+<p>As more and more IoT devices become online and sensor data is
+transmitted around the world, there grows increasing concern to
+thoroughly investigate the extents of what data can be retrieved from
+the sensors. Given that the outputs of Light Detection and Ranging
+(LIDAR) sensors are intensity readings and distance measurements, Wei et
+al. (2015) developed a method to translate the intensity readings from
+the LIDAR sensor back into audio singles, when the LIDAR sensor was
+directed towards a surface near an audio source. This allowed speech to
+be identified from micro-vibrations within objects, prospectively
+raising concern regarding the privacy and confidentiality of sound in a
+sound-proof room.</p>
+<p>This research has since been continued and tested on robot vacuum
+cleaners which too incorporate LIDAR sensors intended for spatial
+mapping. Consequent to general off-the-shelf LIDAR sensor units being
+used within vacuum cleaners, light intensity values were also returned
+by the sensor, and could also be used to in a similar fashion to detect
+speech and sound (Sami et al. 2020). In the application of a robotic
+vacuum cleaner, light intensity values are considered a side-channel
+concern as those readings are not required for the operation of a vacuum
+cleaner. Despite integration limitations of sampling intensity values on
+a vacuum cleaner (i.e. accounting for the continuous rotation of the
+LIDAR sensor and noise floor as a result of the vacuum engine), a
+classification accuracy of 91% was achieved when extracting sensitive
+data such as digits of a credit card.</p>
+<p>Whilst this thesis will not pursue the exploration of sensor data
+analysis, these two studies offer potential future research areas on
+privacy concerns surrounding robot vacuum cleaners, as newer revisions
+of smart devices become continually equipped with more accurate and
+feature-rich sensor.</p>
+<h2 id=shell-access-via-sideloaded-media>Shell access via sideloaded media</h2>
+<p>Often as a necessary preliminary step to further research, modification
+and integration of proprietary technologies, many device rooting methods
+(i.e ways to gain elevated access to a device) have been publicly
+disclosed on the internet. Commonly, devices that may not be expected to
+have outbound internet connectivity may provide offline firmware upgrade
+functionality by executing a script, or booting from some form of
+removable flash memry such as an microSD / SD card. Kotlyar (2017)
+demonstrated the ability for the inexpensive Xiaomi Dafang WiFi Camera
+to boot into a custom alternate <code>u-boot</code> bootloader flashed onto a
+microSD card. Through UART headers located on the device’s circuit
+board, the boot environment was able to be modified to start a shell
+(<code>/bin/sh</code>) instead of the original entry-point script, effectively
+rooting the device. Kotlyar was then able to dump the firmware, later
+producing a custom firmware release that did not rely on the vendor’s
+cloud infrastructure.</p>
+<p>Through the subversion of interrupting the default boot sequence, access
+to a shell allowed for the development and release of decoupled
+software. Whilst the exact rooting steps are unlikely to be directly
+transferable to other devices, the idea of obtaining elevated access via
+sideloading techniques is an important method to investigate.</p>
+<h2 id=shell-access-via-bga-pin-shorting>Shell access via BGA pin shorting</h2>
+<p><img src=../../../uploads/20211115-boot-sequence.png height=300px alt=center></p>
 <p>For devices that do not automatically boot into removable media, methods
 have been discovered to force certain SoC’s to enter a recovery or
-fallback mode.</p>
-<p>On Allwinner-based SoCs, a programming mode known as “FEL” can be
-entered by pulling a certain pin LOW during boot<sup id=fnref:2><a href=#fn:2 class=footnote-ref role=doc-noteref>2</a></sup>, which allowed
-device manufacturers to perform initial image flashing and bootloader
-configurations. It can be noted that FEL mode can also be entered if the
-SoC failed to successfully start the bootloader. Giese (2019) identified
-this fact and exploited the physical layout of the Allwinner R16 BGA
-package, where the data pins connected to the MMC / eMMC chips were on
-the physical perimeter of the SoC. By sliding a piece of electrically
-conductive aluminium foil (roughly 0.02mm thick) between the circuit
-board and the solder plane of the SoC (0.3mm), the data pins could be
-momentarily shorted for long enough to cause the bootloader read
-operation to corrupt and fail, hence booting into FEL mode. This was a
-favourable result as compared to pulling the FEL pin low during boot -
-as access to the FEL pin would require the desoldering and removal of
-the SoC, due to the pin being physically inaccessible when soldered
-without a test pad.</p>
-<p>Once FEL mode has been obtained, the boot environment can be configured
-to drop a shell, allowing for further post-exploitation methods and
-firmware dumping / analysis.</p>
-<p>It is noted that on the circuit board of the Roborock S7 vacuum cleaner,
-pin <code>TPA17</code> is connected to the ball grid location corresponding to the
-FEL pin - allowing FEL mode to be entered without shorting the data
-pins.</p>
-<h2 id=flash-ic-dumping-hardware>Flash IC Dumping Hardware</h2>
+fallback mode. Allwinner-based SoCs implement a mode known as “FEL” that
+can be entered by pulling a certain pin LOW during boot<sup id=fnref:4><a href=#fn:4 class=footnote-ref role=doc-noteref>4</a></sup>, which
+allows device manufacturers to perform initial image flashing and
+bootloader configuration. For developers and hardware hackers, FEL mode
+allows users to modify the boot environment to execute a shell, allowing
+for further post-exploitation methods and firmware dumping / analysis.</p>
+<p><img src=../../../uploads/20211115-Snipaste_2021-11-15_19-45-37-dgiese.jpg height=300px alt=center></p>
+<p>It is noted that FEL mode can also be entered if the SoC fails to
+successfully launch the bootloader. Giese (2019) identified this fact
+and exploited the physical pin layout of the Allwinner R16 BGA package,
+where the data pins connecting the SoC to the (e)MMC chips (where the
+bootloader is stored) were on the physical perimeter of the SoC. By
+sliding a piece of aluminium foil (roughly 0.02mm thick) between the
+circuit board and the solder plane of the SoC (0.3mm), the electrically
+conductive aluminium foil could momentarily short the data pins long
+enough to cause the bootloader read operation to corrupt and fail, hence
+booting into FEL mode and eventually gaining shell access. This method
+is favourable when compared to pulling the FEL pin low during boot - as
+access to the FEL pin would require the desoldering and removal of the
+SoC from a circuit board - which can be tedious and potentially
+destructive.</p>
+<p>Through this hardware fault injection technique of shorting data pins
+during boot, Giese was able to successfully gain access to a shell on
+Roborock’s first robot vacuum cleaner (Mi Robot Vacuum Cleaner). later
+Giese noted that on the circuit board of the Roborock S7 vacuum cleaner,
+test pad <code>TPA17</code> is connected to the ball grid location corresponding to
+the FEL pin - allowing FEL mode to be entered without performing a
+hardware fault injection.</p>
+<h2 id=hardware-based-extraction-of-flash-memory>Hardware based extraction of flash memory</h2>
 <p><img src=http://www.saelig.com/miva/graphics/00000001/848pro725_350x189.jpg alt=center></p>
 <p>In situations where no provisions exist to programmatically extract
 stored data from a system (i.e. shell access to perform disk imaging),
@@ -279,29 +388,10 @@ with open source flash programming software like
 feasible in the scope of this thesis due to resource constraints of not
 possessing a suitable flash programmer, as well as the risk associated
 with hardware-based methods being possibly destructive with irrevocable
-damage. Preliminary results (TODO: SEE SECTION? ) have however suggested
+damage. Preliminary results (TODO: See section 5) have however suggested
 that firmware data can be obtained through programmatic methods, and as
 such this method will not be pursued.</p>
-<h2 id=2014---firmware-analysis>2014 - Firmware Analysis</h2>
-<p>In 2014, Costin et al. (2014) performed a broad static analysis over a
-large number of firmware images to identify common patterns and
-similarities between different product vendors. During the analysis of
-the 693 images, 38 new vulnerabilities were discovered, some which were
-present in the majority of images. Hardcoded keys and credentials were
-also discovered</p>
-<p>To facilitate the similarity analysis of firmware images, where per-byte
-analysis techniques are nonsensical, tools like
-<a href=https://github.com/ReFirmLabs/binwalk>binwalk</a>,
-<a href=https://github.com/ssdeep-project/ssdeep>ssdeep</a>, and
-<a href=https://github.com/sdhash/sdhash>sdhash</a> were employed - which help to
-facilitate file exploration relative to their file type and
-architecture.</p>
-<p>A large proportion of images shared similarities in code execution
-graphs, indicative that a large number of vendors had simply used and
-repurposed sample code (often available as part part of a SoC’s SDK).
-Given the commonality of vulnerabilities, concern is raised as to the
-vendor’s technical capability and understanding of IoT systems.</p>
-<h2 id=vacuums-in-the-cloud-analyzing-security-in-a-hardened-iot-ecosystem>Vacuums in the Cloud: Analyzing Security in a Hardened IoT Ecosystem</h2>
+<h2 id=cold-boot-attack-to-dump-memory-state>Cold-boot attack to dump memory state</h2>
 <p>Regarding prior investigations of smart robot vacuum cleaners, Ullrich
 et al. (2019) performed a security analysis on the <em>Neato BotVac
 Connected</em> robot. Through the combination of a cold-boot attack - where
@@ -313,60 +403,21 @@ proceeding analysis revealed major vulnerabilities and concerns in the
 vacuum cleaner and more alarmingly, in Neato’s cloud infrastructure.</p>
 <p>Whilst logs and coredumps were encrypted when transmitted to cloud
 servers, the encryption keys were discovered to be hardcoded which
-nullified any premise of encryption. Furthermore, authentication and
-authorisation tokens were all encrypted with the same static RSA key -
-which left the cloud infrastructure vulnerable to impersonated
-identities and access. Supposed randomly generated keys were also
-discovered to be vulnerable, due to the keyspace for entropy being so
-short that the key was able to be bruteforced within reasonable time.</p>
-<p>An unauthenticated endpoint on the robot vacuum cleaner’s remote port
-was found to be vulnerable to a buffer overflow, allowing remote code
-execution on the robot by anyone connected to the same wireless network.</p>
-<h2 id=lidar---acoustic-eavesdropping>LIDAR - Acoustic Eavesdropping</h2>
-<p><img src="https://eak2mvmpt4a.exactdn.com/wp-content/uploads/2020/07/A-Guide-to-Lidar-Wavelengths-Velodyne-Lidar-AlphaPrime-1.jpg?strip=all&lossy=1&ssl=1" alt></p>
-<p>As more and more IoT devices become online and sensor data is
-transmitted around the world, there grows popularity to thoroughly
-investigate the extents of what data can be retrieved from the sensors.
-Given the outputs of Light Detection and Ranging (LIDAR) sensors being
-intensity and distance, intensity measurements when pointed towards an
-audio source were able to be processed and translated back into audio
-signals - allowing speech to be identified from micro-vibrations within
-objects (Wei et al. 2015).</p>
-<p>This research has since been continued and tested on robot vacuum
-cleaners which too posses LIDAR sensors. As consequent to off-the-shelf
-LIDAR sensor units being used within the vacuum cleaners, light
-intensity values were also returned by the sensor, and could also be
-used to in a similar fashion to detect speech and sound (Sami et al.
-2020). In the application of a robotic vacuum cleaner, light intensity
-values are considered a side-channel concern as those values are not
-required for the operation of a vacuum cleaner.</p>
-<p>Despite integration limitations of sampling intensity values on a vacuum
-cleaner (i.e. accounting for the continuous rotation of the LIDAR sensor
-and noise floor as a result of the vacuum engine), a classification
-accuracy of 91% was achieved when extracting sensitive data such as
-digits of a credit card</p>
-<p><img src="https://www.zdnet.com/a/img/resize/cdaf0753c4b991623b9413270b0d9ceff8a6e730/2020/11/19/2f9e0e96-c3e5-4cdc-b9bb-24022efd5b3b/lidarphone.png?fit=bounds&auto=webp" alt=center></p>
-<hr>
-<h2 id=xiaomi-iot-ecosystem>Xiaomi IoT Ecosystem</h2>
-<p>Giese (2019) performed a security assessment over a broad range of
-Xiaomi’s IoT products to examine how secure their ecosystem was. Through
-a series of UART commands and keystroke injections as well as hardware
-fault injection techniques, shell access into various Xiaomi-partnered
-robot vacuum cleaners (running Linux or some variant of Android) was
-obtained. In his research it was concluded that due to the enormous size
-of Xiaomi’s ecosystem, it was difficult to enforce global security
-policies between the different vendor-provided plugins due to deprecated
-functions and APIs still being used by legacy devices. It was also
-concluded that Xiaomi does indeed treat their security concerns
-seriously, as they have had been quick to respond to security incidents
-and vulnerability reports.</p>
-<p>From this research, a <a href=https://github.com/dgiese/dustcloud>vacuum cleaner cloud
-emulator</a> was built, allowing
-complete offline functionality of robot vacuum cleaners without
-requiring internet connectivity. This research also paved the way for
-other third party software to be developed, such as
-<a href=https://github.com/Hypfer/Valetudo>Valeduto</a> - which provides a
-standalone web interface to the vacuum cleaner’s functions</p>
+nullified any assurances of encryption. Authentication and authorisation
+tokens were all encrypted with the same static RSA key - which left the
+cloud infrastructure vulnerable to impersonated identities and access.
+Supposed randomly generated keys were also discovered to be vulnerable,
+due to the keyspace for entropy being so short that the key was able to
+be bruteforced within reasonable time. Furthermore, an unauthenticated
+endpoint on the robot vacuum cleaner’s remote port was found to be
+vulnerable to a buffer overflow, allowing remote code execution on the
+robot by anyone connected to the same wireless network.</p>
+<p>The analysis of a system’s memory state is beneficial to the security
+assessment of a product’s firmware as static analysis techniques are
+unable to account for dynamic data such as response payloads from HTTP
+communications. It is however, unlikely that a cold-boot attack will be
+beneficial to the security analysis of the Roborock S6 as preliminary
+results have found that shell access is obtainable.</p>
 <h2 id=references>References</h2>
 <div id=refs class="references csl-bib-body hanging-indent">
 <div id=ref-184449 class=csl-entry>
@@ -425,9 +476,15 @@ Association for Computing Machinery, pp. 130–141. Available at:
 <p><a href=https://www.heise.de/newsticker/meldung/Smart-Home-Hack-Tuya-veroeffentlicht-Sicherheitsupdate-4292028.html>https://www.heise.de/newsticker/meldung/Smart-Home-Hack-Tuya-veroeffentlicht-Sicherheitsupdate-4292028.html</a>&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
 </li>
 <li id=fn:2 role=doc-endnote>
+<p><a href=https://github.com/nabla-c0d3/ssl-kill-switch2>https://github.com/nabla-c0d3/ssl-kill-switch2</a>&#160;<a href=#fnref:2 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
+</li>
+<li id=fn:3 role=doc-endnote>
+<p><a href=https://github.com/shroudedcode/apk-mitm>https://github.com/shroudedcode/apk-mitm</a>&#160;<a href=#fnref:3 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
+</li>
+<li id=fn:4 role=doc-endnote>
 <p>Generally triggered by pulling
 <a href=https://linux-sunxi.org/images/b/b3/R16_Datasheet_V1.4_(1).pdf style="text-decoration:underline dotted">FEL
-pin</a> (<code>LRADC0</code>) LOW during boot&#160;<a href=#fnref:2 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
+pin</a> (<code>LRADC0</code>) LOW during boot&#160;<a href=#fnref:4 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
 </li>
 </ol>
 </section>
@@ -450,15 +507,15 @@ pin</a> (<code>LRADC0</code>) LOW during boot&#160;<a href=#fnref:2 class=footno
 <div class="sticky-toc hidden lg:block px-6 pb-6 pt-10 -mt-10 border-l">
 <nav id=TableOfContents>
 <ul>
-<li><a href=#iot--2018---michael-steigerwald-vtrust>IoT | 2018 - Michael Steigerwald (VTRUST)</a></li>
-<li><a href=#iot--20172018---xiaomi-dafang-hacks>IoT | 2017/2018 - Xiaomi Dafang Hacks</a></li>
-<li><a href=#iot--smartphone-application-security-assessment>IoT | Smartphone Application Security Assessment</a></li>
-<li><a href=#bga-shorting-to-gain-access-to-fel>BGA shorting to gain access to FEL</a></li>
-<li><a href=#flash-ic-dumping-hardware>Flash IC Dumping Hardware</a></li>
-<li><a href=#2014---firmware-analysis>2014 - Firmware Analysis</a></li>
-<li><a href=#vacuums-in-the-cloud-analyzing-security-in-a-hardened-iot-ecosystem>Vacuums in the Cloud: Analyzing Security in a Hardened IoT Ecosystem</a></li>
-<li><a href=#lidar---acoustic-eavesdropping>LIDAR - Acoustic Eavesdropping</a></li>
-<li><a href=#xiaomi-iot-ecosystem>Xiaomi IoT Ecosystem</a></li>
+<li><a href=#broad-security-study-of-tuya-based-devices>Broad security study of Tuya-based devices</a></li>
+<li><a href=#broad-security-study-of-xiaomi-based-devices>Broad security study of Xiaomi-based devices</a></li>
+<li><a href=#security-study-of-smartphone-applications>Security study of smartphone applications</a></li>
+<li><a href=#analysis-of-similarities-in-iot-firmwares>Analysis of similarities in IoT firmwares</a></li>
+<li><a href=#side-channel-application-of-lidar-sensor-measurements>Side-channel application of LIDAR sensor measurements</a></li>
+<li><a href=#shell-access-via-sideloaded-media>Shell access via sideloaded media</a></li>
+<li><a href=#shell-access-via-bga-pin-shorting>Shell access via BGA pin shorting</a></li>
+<li><a href=#hardware-based-extraction-of-flash-memory>Hardware based extraction of flash memory</a></li>
+<li><a href=#cold-boot-attack-to-dump-memory-state>Cold-boot attack to dump memory state</a></li>
 <li><a href=#references>References</a></li>
 </ul>
 </nav>
