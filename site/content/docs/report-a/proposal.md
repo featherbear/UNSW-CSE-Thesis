@@ -1,9 +1,9 @@
 ---
 date: ""
 description: ""
-title: "Progress"
+title: "Proposal"
 toc: false
-weight: 5
+weight: 4
 ---
 
 <!-- Articulating a research question, plan and thesis outline
@@ -12,70 +12,26 @@ The plan is robust and has provision for project variations and contingencies. T
 
 All the project-dependent essential skills are identified. The student has not only acquired all the skills but also done additional work (completed partial design of a system/some algorithms/interface etc.)  -->
 
-## Summary of Literature Review
-
-> Previous Achievements
-
-* Smartphone application reverse engineering
-* Device firmware interception
-* Device hardware and component identification
-* Network traffic analysis
-* Storage analysis
-
-> Unaddressed Areas
-
-* Post-2019 replication study
-* In-depth firmware analysis
+## Statement
 
 
-Still!!!!
+With the widespread availability of IoT devices, there is large interest in exploring **how manufacturers of IoT / smart home devices have addressed the increasing concerns of digital privacy and product security**. This thesis aims to explore the stance and measures that Roborock has taken regarding privacy policies and security concerns in their Roborock S6 robot vacuum cleaner.
 
-https://global.roborock.com/pages/disclosure-security-vulnerability-on-tuya-iot-cloud
+Whilst the Roborock S6 vacuum cleaner has been assessed before [@DennisGiese-2019], there has since been changes and updates to the firmware and communications protocol - with security vulnerabilities even being reported recently[^roborock_vuln]. As such, it is favourable to perform a replication study of Giese's past work, as well as to complete further in-depth security and privacy assessments of the Roborock S6.
+
+[^roborock_vuln]: https://global.roborock.com/pages/disclosure-security-vulnerability-on-tuya-iot-cloud
+
+Over the course of the thesis, the concerns of digital privacy and product security will be addressed concurrently.  
+An investigation into the nature of network data (i.e. content, frequency, destination, use) will be performed to research how tightly Roborock treats the digital privacy of their customers. Likewise, a security assessment of the Roborock S6 firmware will be performed to identify potential security vulnerabilities, and to assess the effectiveness of current security fortifications.
+
+It should be noted research into the security of the Xiaomi Home smartphone application is beyond the scope of this thesis and will only be investigated should it be required, as extensive research on the application's security has already been completed [@8939043; @fi12020027; @DennisGiese-2019]
 
 
-@{fi12020027} outlines a list of things to look out for during analysis
+## Plan
 
-
-
+<!-- In @{fi12020027}'s sss -->
 
 <!-- As a result, many attempts (regardless of success) aimed to completely replace original code with homebrew functionality, such that the original code was never analysed. -->
-
-
-# Statement
-
->
-
-How have manufacturers of IoT / smart home devices addressed the increasing concerns of digital privacy and product security?
-
->
-
-{{% section %}}
-
----
-
-# Rationale
-
-> 🔐 Security is important!
-
-> 📒 Check things for yourself!
-
-{{% /section %}}
-
----
-
-# Proposal
-
-> Digital Privacy
-
-Investigate the nature of network data (i.e. content, frequency, destination) from the Roborock S6, and how the data is used.
-
-<hr >
-
-> Product Security
-
-Investigate potential security vulnerabilities of the Roborock S6, and assess the effectiveness of current security fortifications.
-
----
 
 
 {{% section %}}
