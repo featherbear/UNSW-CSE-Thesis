@@ -1,10 +1,10 @@
 +++
 categories = []
 date = 2022-03-02T06:01:48Z
-description = ""
+description = "fdisk -l"
 series = []
 tags = []
-title = "fdisk Dump"
+title = "fdisk dump"
 toc = true
 
 +++
