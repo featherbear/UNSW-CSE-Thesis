@@ -20,7 +20,7 @@ toc = true
     [5991703.881402] usb 1-2: Product: Rockrobo ruby
     [5991703.881403] usb 1-2: Manufacturer: Rockrobo USB Developer
     [5991703.881404] usb 1-2: SerialNumber: 8a80ab8936d76c118000
-
+    
     [5991703.724675] usb 1-2: new high-speed USB device number 4 using xhci_hcd
     [5991703.881398] usb 1-2: New USB device found, idVendor=1f3a, idProduct=1001, bcdDevice= 2.33
     [5991703.881400] usb 1-2: New USB device strings: Mfr=1, Product=2, SerialNumber=3
@@ -103,3 +103,5 @@ toc = true
 ***
 
 http://www.robotreviews.com/chat/viewtopic.php?f=6&t=19479&sid=6e9b84c899e07bceedbcadef7a16a110&start=220
+
+![](/uploads/20211115-boot-sequence.png)
