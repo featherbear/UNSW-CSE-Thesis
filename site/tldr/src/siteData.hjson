@@ -19,6 +19,11 @@
         content: Presented Seminar A
         link: https://featherbear.cc/UNSW-CSE-Thesis/docs/presentations/seminar-a/
       }
+      {
+        title: Thursday
+        date: 24/02/2022
+        content: Discussed with Lachlan about the acquisition of Burp Suite Pro and an FPGA?
+      }
     ]
   }
   {
@@ -34,12 +39,12 @@
         title: Tuesday
         date: 5/10/2021
         content: [
-            Did research on existing works regarding IoT vacuums
-            Found a entire suite of resources regarding smart vacuums - https://dontvacuum.me/
-            Watched some talks and found tools to aid in analysis
-            Discovered that my home router (MikroTik Routerboard) can actually do packet sniffing via TZSP to Wireshark
-            Seems like Roborock is a Xiaomi-partner 
-            Also the Roborock S6 runs Ubuntu!
+          Did research on existing works regarding IoT vacuums
+          Found a entire suite of resources regarding smart vacuums - https://dontvacuum.me/
+          Watched some talks and found tools to aid in analysis
+          Discovered that my home router (MikroTik Routerboard) can actually do packet sniffing via TZSP to Wireshark
+          Seems like Roborock is a Xiaomi-partner
+          Also the Roborock S6 runs Ubuntu!
         ]
         link: https://featherbear.cc/UNSW-CSE-Thesis/posts/points-of-contact/
       }
@@ -54,9 +59,9 @@
         date: 18/10/2021
         link: https://featherbear.cc/UNSW-CSE-Thesis/posts/seminar-a-preparation/
         content: [
-            Updated Points of Contact document
-            Extracted key TODOs for Seminar A and Report A
-            Begin formulating goals
+          Updated Points of Contact document
+          Extracted key TODOs for Seminar A and Report A
+          Begin formulating goals
         ]
       }
       {
@@ -66,7 +71,7 @@
           Integrated reveal-js with PDF building capability, Logitech Spotlight support and a custom theme
           Drafted content for the Seminar A presentation
           Began designing content for the Seminar A presentation
-        ]  
+        ]
         link: https://featherbear.cc/UNSW-CSE-Thesis/docs/presentations/seminar-a/
       }
       {
@@ -75,7 +80,7 @@
         content: [
           (End of Tuesday) Continued working on Seminar A presentation
           (Night) Completed background information and planning sections
-        ]  
+        ]
         link: https://featherbear.cc/UNSW-CSE-Thesis/docs/presentations/seminar-a/
       }
       {
@@ -118,12 +123,12 @@
         date: 25/10/2021
         link: https://featherbear.cc/UNSW-CSE-Thesis/posts/roborock-s6-teardown/
         content: [
-            (Finally) Opened up the packaging
-            Opened up the charger
-            Checked power draw
+          (Finally) Opened up the packaging
+          Opened up the charger
+          Checked power draw
         ]
-     }
-     {
+      }
+      {
         title: Tuesday
         date: 26/10/2021
         link: https://featherbear.cc/UNSW-CSE-Thesis/posts/20211026-progress/
@@ -131,13 +136,13 @@
           Crimped some network cables
           Put the network gear into the server rack (to tidy up my room and workspace)
         ]
-     }
-     {
+      }
+      {
         title: Friday
         date: 29/10/2021
         link: https://featherbear.cc/UNSW-CSE-Thesis/posts/roborock-s6-teardown/#vacuum-cleaner
         content: Opened up the vacuum cleaner and inspected circuitry
-     }
+      }
     ]
   }
   {
@@ -148,12 +153,12 @@
         date: 25/10/2021
         link: https://featherbear.cc/UNSW-CSE-Thesis/posts/20211025-progress/
         content: [
-            Set up Android MITM and L3-based MITM (on the Mikrotik router)
-            Logged the network activity during pairing
-            Logged the network activity of the Xiaomi Home application
-            Logged _some_ network activity between the Roborock and Xiaomi Home application
-            Current Firmware: 3.5.4_1558
-            Takeaway - Don't packet log through the router, as only internet-bound traffic will be logged (and not local traffic)
+          Set up Android MITM and L3-based MITM (on the Mikrotik router)
+          Logged the network activity during pairing
+          Logged the network activity of the Xiaomi Home application
+          Logged _some_ network activity between the Roborock and Xiaomi Home application
+          Current Firmware: 3.5.4_1558
+          Takeaway - Don't packet log through the router, as only internet-bound traffic will be logged (and not local traffic)
         ]
       }
       {
@@ -171,7 +176,13 @@
           Got root!
           Started research on disk imaging best practices
         ]
-     }
+      }
+      {
+        title: Wednesday
+        date: 02/03/2022
+        link: https://featherbear.cc/UNSW-CSE-Thesis/posts/20211025-progress/
+        content: Made a live system image of the eMMC chip for offline analysis
+      }
     ]
   }
 ]
