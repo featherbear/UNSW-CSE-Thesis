@@ -1,7 +1,7 @@
 +++
 categories = []
 date = 2021-10-29T13:57:53Z
-description = "dump"
+description = "USB micro port diagnostics"
 series = []
 tags = []
 title = "USB Port"
