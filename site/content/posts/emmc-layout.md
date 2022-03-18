@@ -1,7 +1,7 @@
 +++
 categories = []
 date = 2021-10-29T16:02:52Z
-description = ""
+description = "From the serial comms"
 series = []
 tags = []
 title = "eMMC Layout"
