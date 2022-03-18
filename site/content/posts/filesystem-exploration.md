@@ -18,7 +18,7 @@ boot-res@mmcblk0p2
 
 env@mmcblk0p5
 
-app@mmcblk0p6
+app@mmcblk0p6            (default)    (read only)
 
 recovery@mmcblk0p7
 
@@ -26,11 +26,11 @@ system_a@mmcblk0p8
 
 system_b@mmcblk0p9
 
-Download@mmcblk0p10
+Download@mmcblk0p10       (updbuf)
 
-reserve@mmcblk0p11
+reserve@mmcblk0p11      (reserve)
 
-UDISK@mmcblk0p1
+UDISK@mmcblk0p1         (data)
 
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Label | Device | Boot | Start | End | Blocks | Id | System |
