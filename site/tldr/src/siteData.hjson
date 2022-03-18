@@ -195,6 +195,12 @@
         link: https://github.com/featherbear/commentree
         content: Working version of the Commentree app
       }
+      {
+        title: "Filesystem inspection"
+        date: 19/03/2022
+        link: https://featherbear.cc/UNSW-CSE-Thesis/posts/running-questions/
+        content: Looked at the file system dumps for interesting data
+      }
     ]
   }
 ]
