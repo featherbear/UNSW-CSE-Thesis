@@ -48,3 +48,5 @@ UDISK@mmcblk0p1         (data)
 ***
 
 Refer to Commentree JSON
+
+[https://github.com/dgiese/dustcloud/wiki/Partition-Information](https://github.com/dgiese/dustcloud/wiki/Partition-Information "https://github.com/dgiese/dustcloud/wiki/Partition-Information")

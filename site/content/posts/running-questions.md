@@ -25,3 +25,12 @@ toc = true
 * mmcblk0p6\\adb.conf
   * `adb_lock=1`
 * mmcblk0p7\\boot\\zImage
+* mmclbk0p7\\etc\\init\\adbd.conf
+* vinda usage
+* mmcblk0p7\\opt\\rockrobo
+* adb
+* mmcblk0p7\\usr\\sbin\\tcpdump
+
+## Fun
+
+* mmcblk0p7\\etc\\init\\bootring.conf
