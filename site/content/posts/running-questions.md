@@ -35,7 +35,11 @@ toc = true
 
 syslog
 
-Look for IPs, emails, host/domains, passwords, keys
+TODO
+
+* Look for IPs, emails, host/domains, passwords, keys
+* Check where DID and UID is used
+* Dummy data to check if it's logged
 
 ## Fun
 
