@@ -30,6 +30,10 @@ toc = true
 * mmcblk0p7\\opt\\rockrobo
 * adb
 * mmcblk0p7\\usr\\sbin\\tcpdump
+* mmcblk0p8\\var\\log\\upstart\\adbd.log
+  * passwords
+
+Look for IPs, emails, host/domains, passwords, keys
 
 ## Fun
 
