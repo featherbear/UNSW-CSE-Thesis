@@ -31,3 +31,5 @@ ID CHECK VERSION: V0.1
 \[    0.000000\] Machine: sun8i
 
 ROBOROCK_VERSION=3.5.4_1558
+
+Ubuntu 14.04.3 LTS
