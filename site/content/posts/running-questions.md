@@ -33,6 +33,8 @@ toc = true
 * mmcblk0p8\\var\\log\\upstart\\adbd.log
   * passwords
 
+syslog
+
 Look for IPs, emails, host/domains, passwords, keys
 
 ## Fun
