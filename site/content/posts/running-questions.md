@@ -17,7 +17,11 @@ toc = true
 * mmcblk01\\rockrobo\\rrlog\\**\\*.rr.gz
   * Look out for code/scripts that operate on these files
     * `rr.`?
+
+## Interesting
+
 * mmcblk0p11\\endpoint.bin
   * AWS address + key?
 * mmcblk0p6\\adb.conf
   * `adb_lock=1`
+* mmcblk0p7\\boot\\zImage
