@@ -23,7 +23,7 @@
 <meta name=description content="Make ~/z5206677 directory Install wget, curl, htop Install ZeroTier  Client ID: c5a9b2380f Network ID: abfd31bd47e18e42 IP: 10.147.20.24    ZT install.zerotier.com&rsquo;s certificate issued by &lsquo;/C=GB/ST=Greater Manchester/L=Salford/O=Sectigo Limited/CN=Sectigo RSA Domain Validation Secure Server CA&rsquo;
 Device doesn&rsquo;t have cert">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"Device Actions","item":"/posts/device-actions/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/device-actions/"},"headline":"Device Actions | CSE Thesis Musings","datePublished":"2022-04-06T08:51:59+00:00","dateModified":"2022-04-06T08:51:59+00:00","wordCount":621,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Make ~\/z5206677 directory Install wget, curl, htop Install ZeroTier  Client ID: c5a9b2380f Network ID: abfd31bd47e18e42 IP: 10.147.20.24    ZT install.zerotier.com\u0026rsquo;s certificate issued by \u0026lsquo;\/C=GB\/ST=Greater Manchester\/L=Salford\/O=Sectigo Limited\/CN=Sectigo RSA Domain Validation Secure Server CA\u0026rsquo;\nDevice doesn\u0026rsquo;t have cert"}</script><meta property="og:title" content="Device Actions | CSE Thesis Musings">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/device-actions/"},"headline":"Device Actions | CSE Thesis Musings","datePublished":"2022-04-06T08:51:59+00:00","dateModified":"2022-04-06T08:51:59+00:00","wordCount":634,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Make ~\/z5206677 directory Install wget, curl, htop Install ZeroTier  Client ID: c5a9b2380f Network ID: abfd31bd47e18e42 IP: 10.147.20.24    ZT install.zerotier.com\u0026rsquo;s certificate issued by \u0026lsquo;\/C=GB\/ST=Greater Manchester\/L=Salford\/O=Sectigo Limited\/CN=Sectigo RSA Domain Validation Secure Server CA\u0026rsquo;\nDevice doesn\u0026rsquo;t have cert"}</script><meta property="og:title" content="Device Actions | CSE Thesis Musings">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/posts/device-actions/">
 <meta property="og:description" content="Make ~/z5206677 directory Install wget, curl, htop Install ZeroTier  Client ID: c5a9b2380f Network ID: abfd31bd47e18e42 IP: 10.147.20.24    ZT install.zerotier.com&rsquo;s certificate issued by &lsquo;/C=GB/ST=Greater Manchester/L=Salford/O=Sectigo Limited/CN=Sectigo RSA Domain Validation Secure Server CA&rsquo;
@@ -73,7 +73,7 @@ Device doesn&rsquo;t have cert">
 <div class=pl-scrollbar>
 <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
 <div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
-<div class="col-span-2 lg:col-start-2 lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+<div class="col-span-2 lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
 <h1 class="font-bold text-3xl text-primary-text">Device Actions</h1>
 <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
 <div class="mr-6 my-2">
@@ -205,6 +205,9 @@ update-rc.d: warning: default stop runlevel arguments (0 1 6) do not match zerot
 
 *** Success! You are ZeroTier address [ c5a9b2380f ].
 </code></pre>
+<h2 id=version-gotcha>Version Gotcha</h2>
+<p>Latest working is 1.8.1</p>
+<p>Else you get this error <a href=https://github.com/zerotier/ZeroTierOne/issues/1314>[1]</a> <a href=https://github.com/zerotier/ZeroTierOne/blob/e4404164bd9eb14c91906ec3cf577ba98eb24b8a/osdep/LinuxEthernetTap.cpp#L223-L229>[2]</a></p>
 <h1 id=todo>TODO</h1>
 <p>Dump cert list and compare</p>
 <p>Dump CA cert list and compare</p>
@@ -219,6 +222,19 @@ update-rc.d: warning: default stop runlevel arguments (0 1 6) do not match zerot
 <a href=../../posts/proc-dump/ class=block>proc dump</a>
 </div>
 </div>
+</div>
+<div class=col-span-2>
+<div class="sticky top-16 z-10 hidden lg:block px-6 py-4 bg-primary-bg">
+<span class="text-lg font-semibold">On This Page</span>
+</div>
+<div class="sticky-toc hidden lg:block px-6 pb-6">
+<nav id=TableOfContents>
+<ul>
+<li><a href=#version-gotcha>Version Gotcha</a></li>
+</ul>
+</nav>
+</div>
+<script>window.addEventListener('DOMContentLoaded',()=>{enableStickyToc()})</script>
 </div>
 </div>
 <script>document.addEventListener('DOMContentLoaded',()=>{hljs.initHighlightingOnLoad()})</script>
