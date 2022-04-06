@@ -70,3 +70,28 @@ mmcblk0      179:0    0   3.7G  0 disk
 |-mmcblk0p10 179:10   0   528M  0 part /mnt/updbuf
 `-mmcblk0p11 179:11   0    16M  0 part /mnt/reserve
 ```
+
+
+---
+
+```
+root@rockrobo:~# mount            
+/dev/root on / type ext4 (rw)
+none on /proc type proc (rw,noexec,nosuid,nodev)
+sysfs on /sys type sysfs (rw,noexec,nosuid,nodev)
+devtmpfs on /dev type devtmpfs (rw,mode=0755)
+none on /dev/pts type devpts (rw,noexec,nosuid,gid=5,mode=0620)
+none on /proc/sys/fs/binfmt_misc type binfmt_misc (rw,noexec,nosuid,nodev)
+none on /sys/fs/cgroup type tmpfs (rw)
+none on /sys/fs/fuse/connections type fusectl (rw)
+none on /sys/kernel/debug type debugfs (rw)
+tmpfs on /tmp type tmpfs (rw,size=30m)
+none on /run type tmpfs (rw,noexec,nosuid,size=10%,mode=0755)
+none on /run/lock type tmpfs (rw,noexec,nosuid,nodev,size=5242880)
+tmpfs on /run/shm type tmpfs (rw,size=100m)
+none on /run/user type tmpfs (rw,noexec,nosuid,nodev,size=104857600,mode=0755)
+/dev/mmcblk0p11 on /mnt/reserve type ext4 (rw)
+/dev/mmcblk0p10 on /mnt/updbuf type ext4 (rw)
+/dev/mmcblk0p6 on /mnt/default type ext4 (ro)
+/dev/mmcblk0p1 on /mnt/data type ext4 (rw)
+```
