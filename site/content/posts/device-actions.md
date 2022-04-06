@@ -130,6 +130,12 @@ Device doesn't have cert
     
     *** Success! You are ZeroTier address [ c5a9b2380f ].
 
+## Version Gotcha
+
+Latest working is 1.8.1
+
+Else you get this error [\[1\]](https://github.com/zerotier/ZeroTierOne/issues/1314) [\[2\]](https://github.com/zerotier/ZeroTierOne/blob/e4404164bd9eb14c91906ec3cf577ba98eb24b8a/osdep/LinuxEthernetTap.cpp#L223-L229)
+
 # TODO
 
 Dump cert list and compare
