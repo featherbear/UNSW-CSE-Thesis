@@ -22,7 +22,7 @@
 <style>html.dark{--color-primary-bg:#232327 !important}div#sidebar-toc>ul.pl-6{margin-left:1em}</style>
 <meta name=description content="Overview">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"Filesystem Exploration","item":"/posts/filesystem-exploration/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/filesystem-exploration/"},"headline":"Filesystem Exploration | CSE Thesis Musings","datePublished":"2022-03-18T14:04:37+00:00","dateModified":"2022-03-18T14:04:37+00:00","wordCount":315,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Overview"}</script><meta property="og:title" content="Filesystem Exploration | CSE Thesis Musings">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/filesystem-exploration/"},"headline":"Filesystem Exploration | CSE Thesis Musings","datePublished":"2022-03-18T14:04:37+00:00","dateModified":"2022-03-18T14:04:37+00:00","wordCount":425,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Overview"}</script><meta property="og:title" content="Filesystem Exploration | CSE Thesis Musings">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/posts/filesystem-exploration/">
 <meta property="og:description" content="Overview">
@@ -127,6 +127,27 @@ mmcblk0      179:0    0   3.7G  0 disk
 |-mmcblk0p9  179:9    0   512M  0 part 
 |-mmcblk0p10 179:10   0   528M  0 part /mnt/updbuf
 `-mmcblk0p11 179:11   0    16M  0 part /mnt/reserve
+</code></pre>
+<hr>
+<pre><code>root@rockrobo:~# mount            
+/dev/root on / type ext4 (rw)
+none on /proc type proc (rw,noexec,nosuid,nodev)
+sysfs on /sys type sysfs (rw,noexec,nosuid,nodev)
+devtmpfs on /dev type devtmpfs (rw,mode=0755)
+none on /dev/pts type devpts (rw,noexec,nosuid,gid=5,mode=0620)
+none on /proc/sys/fs/binfmt_misc type binfmt_misc (rw,noexec,nosuid,nodev)
+none on /sys/fs/cgroup type tmpfs (rw)
+none on /sys/fs/fuse/connections type fusectl (rw)
+none on /sys/kernel/debug type debugfs (rw)
+tmpfs on /tmp type tmpfs (rw,size=30m)
+none on /run type tmpfs (rw,noexec,nosuid,size=10%,mode=0755)
+none on /run/lock type tmpfs (rw,noexec,nosuid,nodev,size=5242880)
+tmpfs on /run/shm type tmpfs (rw,size=100m)
+none on /run/user type tmpfs (rw,noexec,nosuid,nodev,size=104857600,mode=0755)
+/dev/mmcblk0p11 on /mnt/reserve type ext4 (rw)
+/dev/mmcblk0p10 on /mnt/updbuf type ext4 (rw)
+/dev/mmcblk0p6 on /mnt/default type ext4 (ro)
+/dev/mmcblk0p1 on /mnt/data type ext4 (rw)
 </code></pre>
 </div>
 <div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
