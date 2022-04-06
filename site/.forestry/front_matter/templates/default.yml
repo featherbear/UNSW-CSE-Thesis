@@ -63,6 +63,7 @@ pages:
 - site/content/posts/i-am-root.md
 - site/content/posts/lsblk-dump.md
 - site/content/posts/main-view-checks.md
+- site/content/posts/mmcblk0p7-usr-bin-adbd.md
 - site/content/posts/mmcblk0p7.md
 - site/content/posts/points-of-contact.md
 - site/content/posts/proc-dump.md
