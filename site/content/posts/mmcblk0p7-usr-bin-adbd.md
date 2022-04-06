@@ -17,3 +17,17 @@ locksec_apply_key: locksec_apply_key, erI09cyW%()+-[]_8a80ab8936d76c118000:;<=>?
 locksec_apply_passwd: adb source str: erI09cyW%()+-[]_8a80ab8936d76c118000:;<=>?@{}CzD2xuMNlwabTK7
 locksec_apply_passwd: locksec_apply_passwd, passwd: 0y[ad8@w
 ```
+
+adb_lock
+
+adb shell
+
+locksec
+
+adb_passwd
+
+sys_passwd
+
+levels?
+
+shell
