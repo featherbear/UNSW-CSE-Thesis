@@ -201,6 +201,17 @@
         link: https://featherbear.cc/UNSW-CSE-Thesis/posts/running-questions/
         content: Looked at the file system dumps for interesting data
       }
+      {
+        title: "Install software"
+        date: 06/04/2022
+        content: Install wget, curl, htop, zerotier
+      }
+
+      {
+        title: "Look at adbd binary"
+        date: 07/04/2022
+        content: Look at the custom adbd binary that serves the usb port
+      }
     ]
   }
 ]
