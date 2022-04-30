@@ -39,5 +39,3 @@ toc = true
     done
 
 [https://featherbear.cc/UNSW-CSE-Thesis/posts/device-actions/](https://featherbear.cc/UNSW-CSE-Thesis/posts/device-actions/ "https://featherbear.cc/UNSW-CSE-Thesis/posts/device-actions/")
-
-    hj
