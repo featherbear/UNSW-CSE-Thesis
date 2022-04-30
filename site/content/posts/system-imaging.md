@@ -50,6 +50,7 @@ Since there is limited storage on the device, we will need to create the backup 
 
 > Or we can use `ssh` and `dd` - See [here](../20220302-progress)
 
+![](/uploads/20220501-0T4A9824.JPG)
 
 --- 
 
