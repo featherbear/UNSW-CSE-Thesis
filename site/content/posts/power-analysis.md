@@ -10,6 +10,12 @@ toc = true
 +++
 Charger output - 4.27V (open circuit)
 
-At 3.7kΩ, charger outputs \~20.4V
+At 3.7kΩ load, charger outputs \~20.4V
 
-Device connected to charger - turns off after a bit - haveged 15?
+Device connected to charger without battery - turns off after a bit - haveged 15?  
+20\.4V, peak 140mA
+
+\--
+
+Device connected to charger with battery  
+20\.04V, idle 41.1mA
