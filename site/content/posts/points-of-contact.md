@@ -442,7 +442,7 @@ static keys
 
 ip disclosure
 
-buffer overlow
+buffer overflow
 
 Breakdown of hardware  
 \- it's just a computer.  

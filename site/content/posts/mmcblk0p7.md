@@ -8,5 +8,6 @@ title = "mmcblk0p7"
 toc = true
 
 +++
+
 * netcat
 * nc

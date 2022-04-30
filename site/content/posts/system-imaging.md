@@ -48,6 +48,8 @@ Source: [https://unix.stackexchange.com/questions/41399/system-image-of-running-
 
 Since there is limited storage on the device, we will need to create the backup over the network. Probably just pipe it with `netcat` I guess
 
+> Or we can use `ssh` and `dd` - See [here](../20220302-progress)
+
 
 --- 
 

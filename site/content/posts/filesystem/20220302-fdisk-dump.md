@@ -1,5 +1,5 @@
 +++
-categories = []
+categories = ["Filesystem"]
 date = 2022-03-02T06:01:48Z
 description = "fdisk -l"
 series = []
