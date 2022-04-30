@@ -13,7 +13,7 @@
 <body>
 <div class=reveal>
 <div class=slides>
-<section data-noprocess data-shortcode-slide data-background-image=https://featherbear.cc/UNSW-CSE-Thesis/uploads/20211030_040050.jpg data-transition=fade>
+<section data-noprocess data-shortcode-slide data-background-image=/uploads/covers/0T4A9791.JPG data-transition=fade>
 <p><br>
 <br>
 <br>
@@ -34,112 +34,274 @@
 <p>How have manufacturers of IoT / smart home devices addressed the increasing concerns of digital privacy and product security?</p>
 <blockquote>
 </blockquote>
+<span class=fragment><p> <br>
+ </p>
+<ul>
+<li>Digital Privacy - Investigate the nature of network data (i.e. content, frequency, destination) and how the data is used.</li>
+<li>Product Security - Investigate potential security vulnerabilities and assess the effectiveness of current security fortifications.</li>
+</ul>
+</span>
+</section>
+<section data-noprocess data-shortcode-slide data-background-image=/uploads/20211030_040050.jpg data-transition=fade>
+<p><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br></p>
+<h3 id=work-performed>Work Performed</h3>
 </section><section>
-<h1 id=proposal>Proposal</h1>
-<blockquote>
-<p>Digital Privacy</p>
-</blockquote>
-<p>Investigate the nature of network data (i.e. content, frequency, destination) from the Roborock S6, and how the data is used.</p>
-<hr>
-<blockquote>
-<p>Product Security</p>
-</blockquote>
-<p>Investigate potential security vulnerabilities of the Roborock S6, and assess the effectiveness of current security fortifications.</p>
-</section><section>
-<h1 id=work>Work</h1>
-<h1 id=current-findings>Current Findings</h1>
-<h1 id=relate-back-to-the-question-about--security--privacy>Relate back to the question about security / privacy</h1>
 <h1 id=fingerprinting>Fingerprinting</h1>
 <pre><code>[ 0.340]U-Boot 2011.09-rc1-dirty (Mar 25 2020 - 20:45:43) Allwinner Technology
 [ 0.000000] Linux version 3.4.39 (rockrobo@apimg) (gcc version 4.8.4 (Ubuntu/Linaro 4.8.4-2ubuntu1~14.04.1) ) #1 SMP PREEMPT Wed Mar 25 20:47:59 CST 2020
 [ 0.000000] CPU: ARMv7 Processor [410fc075] revision 5 (ARMv7), cr=10c5387d
 [ 0.000000] Machine: sun8i
+...
 </code></pre>
-<p><a href=https://en.wikipedia.org/wiki/Linaro>https://en.wikipedia.org/wiki/Linaro</a></p>
-<p>ROBOROCK_VERSION=3.5.4_1558</p>
-<p>Ubuntu 14.04.3 LTS</p>
-<pre><code>for partition in `ssh root@10.10.10.8 &quot;ls /dev/mmcblk0?* -1&quot;`
-do
-    ssh root@10.10.10.8 &quot;sudo dd if=$partition bs=1M&quot; | dd of=$(basename $partition).img
-done
-</code></pre>
+<p>CPU: Allwinner R16 (ARM Cortex-A7)<br>
+ACU: STM32F103VCT6 (ARM Cortex-M3)<br>
+Roborock Firmware version: 3.5.4_1558<br>
+Operating system: Ubuntu 14.04.3 LTS</p>
 </section><section>
-<h1 id=commentree>Commentree</h1>
-<p>Documentation tool</p>
-<p><img src=commentree.png alt></p>
-</section><section>
-</section><section>
-<h1 id=persistence>Persistence!</h1>
-<p>Copying the password is annoying
-(don&rsquo;t want to change it either)</p>
-<pre><code>ssh-copy-id -i ~/.ssh/id_rsa root@10.10.10.8
-</code></pre>
-<p><img src=proc_misc.png alt></p>
-<p><img src=iptables.png alt></p>
+<h1 id=going-wireless---establishing-ssh>Going wireless - establishing SSH</h1>
+<div style=display:flex;flex-direction:row;align-items:center>
+<img src=iptables.png width=65% style=flex:1>
+<div style=flex:1>
 <ul>
 <li>Why is there an SSH server running?</li>
-<li>What&rsquo;s running on ____
+<li>What&rsquo;s running on port 6665
 <ul>
-<li>Why exposed via ports rather than internal IPC</li>
+<li><code>player</code></li>
+<li>Why not file-based IPC?</li>
 </ul>
 </li>
-<li>Can I ping the internet (y)</li>
+<li>Can I ping the internet
+<ul>
+<li>Yep!</li>
+</ul>
+</li>
+<li>Can I add persistent access?
+<ul>
+<li>Yes, modify <code>rrwatchdoge.conf</code></li>
+<li>Can also add remote access
+<ul>
+<li>e.g. ZeroTier</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</section><section>
+<section data-shortcode-section>
+<h1 id=trivial-power-analysis>Trivial Power Analysis</h1>
+<blockquote>
+<p>Batteries dont&rsquo;t last forever!</p>
+</blockquote>
+<p><img src=../../uploads/20220501_051651.jpg alt></p>
+</section><section>
+<blockquote>
+<p>What if I unplug the battery?</p>
+</blockquote>
+<ul>
+<li>No change in output during boot</li>
+<li>But device will turn off after around 20 seconds</li>
+</ul>
+<p>See <a href=https://featherbear.cc/UNSW-CSE-Thesis/posts/power/serial-dump-during-2-wire-power/>2-wire log</a>, <a href=https://featherbear.cc/UNSW-CSE-Thesis/posts/power/serial-dump-during-4-wire-power/>4-wire log</a></p>
+</section>
+</section><section>
+<section data-shortcode-section>
+<h1 id=file-system-imaging>File System Imaging</h1>
+<p>The eMMC only has 4GB of storage, so we can&rsquo;t (also shouldn&rsquo;t) image the flash onto itself&mldr; but we can image it remotely!</p>
+<pre><code class=language-bash>IP=10.10.10.8
+for partition in `ssh root@$IP &quot;ls /dev/mmcblk0?* -1&quot;`
+do
+    ssh root@$IP &quot;sudo dd if=$partition bs=1M&quot; | dd of=$(basename $partition).img
+done
+</code></pre>
+<div style=text-align:center>
+<img src=../../uploads/20220430-disk_imaging.jpg>
+</div>
+</section><section>
+<h1 id=file-system-structure>File System Structure</h1>
+<table>
+<thead>
+<tr>
+<th style=text-align:left>partition</th>
+<th style=text-align:left>label</th>
+<th style=text-align:left>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:left>mmcblk0p1</td>
+<td style=text-align:left>UDISK</td>
+<td style=text-align:left>user data</td>
+</tr>
+<tr>
+<td style=text-align:left>mmcblk0p2</td>
+<td style=text-align:left>boot-res</td>
+<td style=text-align:left>bootloader stuff</td>
+</tr>
+<tr>
+<td style=text-align:left>mmcblk0p5</td>
+<td style=text-align:left>env</td>
+<td style=text-align:left></td>
+</tr>
+<tr>
+<td style=text-align:left>mmcblk0p6</td>
+<td style=text-align:left>app (RO)</td>
+<td style=text-align:left>device data</td>
+</tr>
+<tr>
+<td style=text-align:left>mmcblk0p7</td>
+<td style=text-align:left>recovery</td>
+<td style=text-align:left>stock firmware</td>
+</tr>
+<tr>
+<td style=text-align:left>mmcblk0p8</td>
+<td style=text-align:left>system_a</td>
+<td style=text-align:left>Main OS (boot)</td>
+</tr>
+<tr>
+<td style=text-align:left>mmcblk0p9</td>
+<td style=text-align:left>system_b</td>
+<td style=text-align:left>Backup OS</td>
+</tr>
+<tr>
+<td style=text-align:left>mmcblk0p10</td>
+<td style=text-align:left>Download</td>
+<td style=text-align:left>Update temp</td>
+</tr>
+<tr>
+<td style=text-align:left>mmcblk0p11</td>
+<td style=text-align:left>reserve</td>
+<td style=text-align:left>blackbox???</td>
+</tr>
+</tbody>
+</table>
+</section><section>
+<h1 id=recovery-reset>Recovery Reset</h1>
+<p>Recovery supposedly resets <code>system_a</code>, <code>system_b</code>, <code>UDISK</code> and <code>Download</code></p>
+<div style=text-align:center>
+<img src=../../uploads/20220501-recovery.png width=70%>
+</div>
+<p>What about the other partitions? If we want to plant malicious software, can put it in <code>recovery</code> and <code>system_a</code>?</p>
+</section><section>
+<div style=display:flex;flex-direction:row;align-items:center>
+<img src=../../uploads/Snipaste_2022-05-01_05-53-51.jpg width=65% style=flex:1>
+<div style=flex:1>
+<blockquote>
+<p>28,189 files&mldr;</p>
+</blockquote>
+<blockquote>
+<p>Well there&rsquo;s for sure a lot of files to look at&mldr;</p>
+</blockquote>
+</div>
+</div>
+</section><section>
+<h1 id=i-did-a-thing---commentreehttpsgithubcomfeatherbearcommentree>I did a thing - <a href=https://github.com/featherbear/commentree>Commentree</a></h1>
+<blockquote>
+<p>Plain-text annotation / commentary tool</p>
+</blockquote>
+<p><img src=commentree.png alt></p>
+</section>
+</section><section>
+<h2 id=interesting-files>Interesting Files</h2>
+<p>device.token=utnevRELra5sqef3
+device.uid=1738271950
+mmcblk0p1/rockrobo/</p>
+<pre><code>mmcblk0p11\endpoint.bin
+    AWS address + key?
+mmcblk0p6\adb.conf
+    adb_lock=1
+mmcblk0p7\boot\zImage
+mmclbk0p7\etc\init\adbd.conf
+vinda usage
+mmcblk0p7\opt\rockrobo
+adb
+mmcblk0p7\usr\sbin\tcpdump
+mmcblk0p8\var\log\upstart\adbd.log
+    passwords
+</code></pre>
+<p>syslogs</p>
+<pre><code>Look for IPs, emails, host/domains, passwords, keys
+Check where DID and UID is used
+Dummy data to check if it’s logged
+</code></pre>
+<p>What other files were changed?</p>
+<p>compare against base ubuntu system?</p>
+<h2 id=interesting-binaries>Interesting Binaries</h2>
+<pre><code>miio
+rockrobo
+    rrlog
+ADB
+rriot
+</code></pre>
+<h3 id=adb>adb</h3>
+<p>adb custom
+<a href=https://featherbear.cc/UNSW-CSE-Thesis/posts/mmcblk0p7-usr-bin-adbd/>https://featherbear.cc/UNSW-CSE-Thesis/posts/mmcblk0p7-usr-bin-adbd/</a></p>
+</section><section>
+</section><section>
+<h1 id=relate-back-to-the-question-about--security--privacy>Relate back to the question about security / privacy</h1>
+<ul>
+<li>
+<p>Wifi password in plain text</p>
+<ul>
+<li>wpa_supplicant &ndash;> underlying linux framework
+How easy is it for someone to attack the system?</li>
+</ul>
+</li>
+<li>
+<p>netcat?</p>
+</li>
+<li>
+<p>There is an SSH server running (though restricted via iptables)</p>
+<ul>
+<li>Why?</li>
+</ul>
+</li>
+<li>
+<p>Hands-on access a system = game over</p>
+<ul>
+<li>But should it be?</li>
+</ul>
+</li>
+<li>
+<p>Some logs are encrypted locally</p>
+</li>
+</ul>
+<p>Are there any backdoors?</p>
+<p>outbound requests</p>
+<p>persistent software (install to recovery + system_a)</p>
+<p>WiFi is always scanning</p>
+</section><section>
+</section><section>
+<p><img src=proc_misc.png alt></p>
+<ul>
 <li>Can I plant software (y)</li>
 </ul>
 </section><section>
-<pre><code>--------fastboot partitions--------
--total partitions:9-
--name-        -start-       -size-      
-boot-res    : 1000000       800000      
-env         : 1800000       1000000     
-app (ro)    : 2800000       4000000     
-recovery    : 6800000       20000000    
-system_a    : 26800000      20000000    
-system_b    : 46800000      20000000    
-Download    : 66800000      21000000    
-reserve     : 87800000      1000000     
-UDISK       : 88800000      0           
------------------------------------
-</code></pre>
-</section><section>
-<pre><code>root@rockrobo:/home# fdisk -l
-
-Disk /dev/mmcblk0: 3959 MB, 3959422976 bytes
-1 heads, 16 sectors/track, 483328 cylinders, total 7733248 sectors
-Units = sectors of 1 * 512 = 512 bytes
-Sector size (logical/physical): 512 bytes / 512 bytes
-I/O size (minimum/optimal): 512 bytes / 512 bytes
-Disk identifier: 0x00000000
-
-        Device Boot      Start         End      Blocks   Id  System
-/dev/mmcblk0p1   *     4513792     7782399     1634304    b  W95 FAT32
-/dev/mmcblk0p2           73728       90111        8192    6  FAT16
-/dev/mmcblk0p3               1     4423680     2211840    5  Extended
-/dev/mmcblk0p5           90112      122879       16384   83  Linux
-/dev/mmcblk0p6          122880      253951       65536   83  Linux
-/dev/mmcblk0p7          253952     1302527      524288   83  Linux
-/dev/mmcblk0p8         1302528     2351103      524288   83  Linux
-/dev/mmcblk0p9         2351104     3399679      524288   83  Linux
-/dev/mmcblk0p10        3399680     4481023      540672   83  Linux
-/dev/mmcblk0p11        4481024     4513791       16384   83  Linux
-</code></pre>
-<pre><code>root@rockrobo:/# cat /etc/fstab
-# UNCONFIGURED FSTAB FOR BASE SYSTEM
-tmpfs /tmp tmpfs size=30m 0 0
-tmpfs /run/shm tmpfs size=100m 0 0
-/dev/mmcblk0p1      /mnt/data/              ext4  defaults 0 0
-/dev/mmcblk0p6      /mnt/default/               ext4  ro 0 0
-/dev/mmcblk0p10     /mnt/updbuf/                ext4  defaults 0 0
-/dev/mmcblk0p11     /mnt/reserve/               ext4  defaults 0 0
-</code></pre>
-<p>app (/mnt/default) is ro
-system_a -></p>
 <ul>
+<li>Why is netcat installed but not curl, wget?</li>
 <li>TODO: Check what gets cleared during a format / update</li>
 </ul>
 </section><section>
-<h1 id=behaviour>Behaviour</h1>
-<p>The battery ()</p>
+<h1 id=current-challenges>Current Challenges</h1>
+<p>Electricity is dangerous.
+Thank you Gigabyte for having ESD-protected USB ports</p>
+</section><section>
+<p>Still a lot of files</p>
+<p><img src=../../uploads/20220501-ubuntu_release_date.png alt></p>
+<p><img src=Snipaste_2022-05-01_06-43-50.jpg alt></p>
+<p>Ubuntu 14.04.3 LTS was released back in 2014</p>
 <h1 id=project-timeline>Project Timeline</h1>
 <h4 id=labelthesis-alabel><label>Thesis A</label></h4>
 <ul>
