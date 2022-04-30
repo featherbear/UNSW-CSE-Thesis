@@ -12,7 +12,12 @@ Charger output - 4.27V (open circuit)
 
 At 3.7kΩ load, charger outputs \~20.4V
 
-Device connected to charger without battery - turns off after a bit - haveged 15?  
+Device connected to charger without battery - turns off after a bit  
+`haveged: haveged Stopping due to signal 15`
+
+signal 15 -> SIGTERM
+
+  
 20\.4V, peak 140mA
 
 \--
