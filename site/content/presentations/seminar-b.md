@@ -121,6 +121,34 @@ ruby
 
 ---
 
+<label>Ports</label>
+
+```bash
+root@rockrobo:~# netstat -nltp
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 127.0.0.1:54322         0.0.0.0:*               LISTEN      991/miio_client 
+tcp        0      0 127.0.0.1:54323         0.0.0.0:*               LISTEN      991/miio_client 
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1644/sshd       
+tcp        0      0 127.0.0.1:55551         0.0.0.0:*               LISTEN      998/rriot_tuya  
+tcp        0      0 0.0.0.0:6668            0.0.0.0:*               LISTEN      998/rriot_tuya  
+tcp6       0      0 :::22                   :::*                    LISTEN      1644/sshd       
+```
+
+`tcp/22` and `tcp/6668` are exposed
+
+<!-- miio_send and miio_recv uses 54322 -->
+
+---
+
+<label>Firewall</label>
+
+iptables?
+
+<!-- TODO: Move iptables dump here, split next slide -->
+
+---
+
 {{% /section %}}
 
 ---
@@ -131,7 +159,7 @@ ruby
 <div style="flex: 1">
 
 * Why is there an SSH server running?
-* What's running on port 6665
+* What's runs on port 6665
   * `player`
   * Why not file-based IPC?
 * Can I ping the internet
@@ -140,6 +168,7 @@ ruby
   * Yes, modify `rrwatchdoge.conf`
   * Can also add remote access
     * e.g. ZeroTier
+* IPv6
 
 </div>
 </div>
@@ -191,17 +220,17 @@ done
 
 # File System Structure
 
-|partition|label|description|
-|:--------|:----|:---------|
-|mmcblk0p1 | UDISK | user data |
-|mmcblk0p2 | boot-res | bootloader stuff |
-|mmcblk0p5 | env | |
-|mmcblk0p6 | app (RO) | device data |
-|mmcblk0p7 | recovery | stock firmware |
-|mmcblk0p8 | system_a | Main OS (boot) |
-|mmcblk0p9 | system_b | Backup OS |
-|mmcblk0p10 | Download | Update temp |
-|mmcblk0p11 | reserve | blackbox??? |
+|partition|label|size|description|
+|:--------|:----|:---|:---------|
+|mmcblk0p1 | UDISK | 1.5 GB | user data |
+|mmcblk0p2 | boot-res | 8 MB | bootloader stuff |
+|mmcblk0p5 | env | 16 MB | |
+|mmcblk0p6 | app (RO) | 64 MB | device data |
+|mmcblk0p7 | recovery | 512 MB | stock firmware |
+|mmcblk0p8 | system_a | 512 MB | Main OS (boot) |
+|mmcblk0p9 | system_b | 512 MB | Backup OS |
+|mmcblk0p10 | Download | 528 MB | Update temp |
+|mmcblk0p11 | reserve | 16 MB | blackbox??? |
 
 ---
 # Recovery Reset
@@ -242,7 +271,6 @@ TODO: Recovery partition is modifiable
 {{% /section %}}
 
 ---
-
 ## Interesting Files
 
 mmcblk0p1/miio/device.token=utnevRELra5sqef3
@@ -323,6 +351,10 @@ Static binaries
 
 ---
 
+Compare against standards (i.e. Xiaomi's standard)
+
+
+---
 
 # Thesis consideration - some thoughts and discussions
 
@@ -358,12 +390,8 @@ What's Good
 
 
 Are there any backdoors?
-
 outbound requests
-
 persistent software (install to recovery + system_a)
-
-WiFi is always scanning 
 
 
 ---
@@ -386,6 +414,32 @@ WiFi is always scanning
 
 
 ---
+
+# Capturing network data during device registration
+
+* Have shell access but 
+* PolarProxy is too new for Ubuntu 14.04
+* apt update doesn't work with socks5:// or http proxies properly
+
+On the smart app side
+
+Frida nope
+windows env nope 
+https://github.com/NickstaDB/patch-apk
+https://blog.silentsignal.eu/2020/05/04/decrypting-and-analyzing-https-traffic-without-mitm/
+RoboRock app
+
+during pairing the password is transmitted in plaintext
+
+---
+
+<!-- ![APK objection failing](/uploads/Snipaste_2022-05-02_00-52-40.jpg) -->
+
+![plain text wifi auth wireshark](/uploads/Snipaste_2022-05-02_01-14-22.jpg)
+![zerotier persistence](/uploads/Snipaste_2022-05-02_01-42-29.jpg)
+
+---
+
 # Current Challenges - Equipment
 
 <style>
@@ -399,6 +453,44 @@ img[round] {
 * 👏 Thank you Gigabyte for having ESD-protected USB ports
 
 <img round src="/uploads/20220501_031636.jpg" />
+
+
+---
+# rrlogd
+
+{{% section %}}
+
+Logs are encrypted at rest (after being packed)
+
+![](Snipaste_2022-05-02_03-10-57.jpg)
+
+---
+
+Possible functionality to perform any arbitrary command?
+
+![`system()` call](/uploads/Snipaste_2022-05-02_02-34-04.jpg)
+
+
+---
+
+<div style="display: flex; flex-direction: row">
+<div><img src="/uploads/Snipaste_2022-05-02_02-37-10.jpg"/></div>
+<div><img src="/uploads/Snipaste_2022-05-02_02-46-06.jpg"/></div>
+</div>
+
+Logging program has the potential to unblock port 22?
+
+```
+iptables -I INPUT -j ACCEPT -p tcp --dport 22
+```
+
+<!-- RoCKR0B0@BEIJING . although https://github.com/Hypfer/Valetudo/issues/44 -->
+
+{{% /section %}}
+
+---
+
+
 
 
 ---
