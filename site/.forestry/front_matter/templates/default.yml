@@ -59,12 +59,15 @@ pages:
 - site/content/posts/device-actions.md
 - site/content/posts/etc-passwd.md
 - site/content/posts/etc-shadow.md
+- site/content/posts/frida-objection-https-without-mitm.md
 - site/content/posts/htop-during-factory.md
 - site/content/posts/i-am-root.md
 - site/content/posts/main-view-checks.md
 - site/content/posts/mmcblk0p7-var-log-apt-history.log.md
 - site/content/posts/mmcblk0p7.md
+- site/content/posts/netstat.md
 - site/content/posts/points-of-contact.md
+- site/content/posts/polarproxy.md
 - site/content/posts/post-login-actions.md
 - site/content/posts/project-focus.md
 - site/content/posts/recovery-mode.md
