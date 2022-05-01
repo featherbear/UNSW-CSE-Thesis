@@ -28,6 +28,8 @@
 <h5 id=an-audit-into-the-security-and-integrity-of-iot-systems>An Audit Into The Security and Integrity of IoT Systems</h5>
 <h6 id=andrew-wong--unsw-sydney>Andrew Wong | UNSW Sydney</h6>
 </section><section>
+<h1 id=todays-agenda>Today&rsquo;s Agenda</h1>
+</section><section>
 <h1 id=statement>Statement</h1>
 <blockquote>
 </blockquote>
@@ -58,16 +60,41 @@
 <h3 id=work-performed>Work Performed</h3>
 </section><section>
 <h1 id=fingerprinting>Fingerprinting</h1>
+<section data-shortcode-section>
+<p><label>System</label></p>
 <pre><code>[ 0.340]U-Boot 2011.09-rc1-dirty (Mar 25 2020 - 20:45:43) Allwinner Technology
 [ 0.000000] Linux version 3.4.39 (rockrobo@apimg) (gcc version 4.8.4 (Ubuntu/Linaro 4.8.4-2ubuntu1~14.04.1) ) #1 SMP PREEMPT Wed Mar 25 20:47:59 CST 2020
 [ 0.000000] CPU: ARMv7 Processor [410fc075] revision 5 (ARMv7), cr=10c5387d
 [ 0.000000] Machine: sun8i
 ...
 </code></pre>
-<p>CPU: Allwinner R16 (ARM Cortex-A7)<br>
+<p>CPU: Allwinner R16 (ARM Cortex-A7) - ARMv7l / armhf<br>
 ACU: STM32F103VCT6 (ARM Cortex-M3)<br>
 Roborock Firmware version: 3.5.4_1558<br>
 Operating system: Ubuntu 14.04.3 LTS</p>
+</section><section>
+<p><label>Users</label></p>
+<div style=display:flex;flex-direction:row>
+<div><img round src=../../uploads/Snipaste_2022-05-01_20-00-22.jpg></div>
+<div><img round src=../../uploads/Snipaste_2022-05-01_20-00-48.jpg></div>
+</div>
+<blockquote>
+<p>No additional users</p>
+</blockquote>
+<blockquote>
+</blockquote>
+<pre><code>root@rockrobo:~# ls /home
+ruby
+</code></pre>
+<p><code>/home/ruby</code> exists but no user <code>ruby</code>, though exists in <code>/etc/passwd~</code></p>
+</section><section>
+<p><label>Processes</label></p>
+<p>🚩 Everything is running as root</p>
+<div style=text-align:center>
+<img src=../../uploads/Snipaste_2022-05-01_19-33-46.jpg width=80%>
+</div>
+</section><section>
+</section>
 </section><section>
 <h1 id=going-wireless---establishing-ssh>Going wireless - establishing SSH</h1>
 <div style=display:flex;flex-direction:row;align-items:center>
@@ -206,76 +233,118 @@ done
 </blockquote>
 </div>
 </div>
+<p>TODO: Recovery partition is modifiable</p>
 </section><section>
 <h1 id=i-did-a-thing---commentreehttpsgithubcomfeatherbearcommentree>I did a thing - <a href=https://github.com/featherbear/commentree>Commentree</a></h1>
 <blockquote>
 <p>Plain-text annotation / commentary tool</p>
 </blockquote>
-<p><img src=commentree.png alt></p>
+<p><img src=commentree.png alt> </p>
 </section>
 </section><section>
 <h2 id=interesting-files>Interesting Files</h2>
-<p>device.token=utnevRELra5sqef3
-device.uid=1738271950
-mmcblk0p1/rockrobo/</p>
-<pre><code>mmcblk0p11\endpoint.bin
-    AWS address + key?
-mmcblk0p6\adb.conf
-    adb_lock=1
-mmcblk0p7\boot\zImage
-mmclbk0p7\etc\init\adbd.conf
-vinda usage
-mmcblk0p7\opt\rockrobo
-adb
-mmcblk0p7\usr\sbin\tcpdump
-mmcblk0p8\var\log\upstart\adbd.log
-    passwords
-</code></pre>
-<p>syslogs</p>
+<p>mmcblk0p1/miio/device.token=utnevRELra5sqef3
+mmcblk0p1/miio/device.uid=1738271950
+mmcblk0p1/rockrobo/
+mmcblk0p11\endpoint.bin - AWS address + key?
+mmcblk0p7\boot\zImage - bootloader
+vinda usage</p>
+<p>passwords
+syslogs</p>
 <pre><code>Look for IPs, emails, host/domains, passwords, keys
 Check where DID and UID is used
 Dummy data to check if it’s logged
 </code></pre>
 <p>What other files were changed?</p>
 <p>compare against base ubuntu system?</p>
-<h2 id=interesting-binaries>Interesting Binaries</h2>
-<pre><code>miio
-rockrobo
-    rrlog
-ADB
-rriot
-</code></pre>
+<p>miio
+mmcblk0p7\opt\rockrobo
+rrlog
+rriot</p>
+<p>ADB</p>
 <h3 id=adb>adb</h3>
-<p>adb custom
-<a href=https://featherbear.cc/UNSW-CSE-Thesis/posts/mmcblk0p7-usr-bin-adbd/>https://featherbear.cc/UNSW-CSE-Thesis/posts/mmcblk0p7-usr-bin-adbd/</a></p>
+<p>adb custom</p>
+<p><a href=https://featherbear.cc/UNSW-CSE-Thesis/posts/mmcblk0p7-usr-bin-adbd/>https://featherbear.cc/UNSW-CSE-Thesis/posts/mmcblk0p7-usr-bin-adbd/</a></p>
+<pre><code>mmcblk0p6\adb.conf
+
+mmcblk0p8\var\log\upstart\adbd.log
+</code></pre>
 </section><section>
+<p>/usr/sbin/tcpdump</p>
+<p><img src=../../uploads/Snipaste_2022-05-01_19-44-27.jpg alt></p>
+<p><img src=../../uploads/Snipaste_2022-05-01_19-37-08.jpg alt></p>
 </section><section>
-<h1 id=relate-back-to-the-question-about--security--privacy>Relate back to the question about security / privacy</h1>
+<p>mmcblk0p7\usr\sbin\tcpdump</p>
+<p>/var/log/apt/history.log</p>
+<pre><code>Start-Date: 2016-01-25  11:18:05
+Commandline: /usr/bin/apt-get install rsync
+Install: rsync:armhf (3.1.0-2ubuntu0.2)
+End-Date: 2016-01-25  11:18:11
+
+Start-Date: 2016-04-05  12:30:59
+Commandline: /usr/bin/apt-get install ccrypt
+Install: ccrypt:armhf (1.10-4)
+End-Date: 2016-04-05  12:31:01
+
+Start-Date: 2016-04-25  09:58:29
+Commandline: /usr/bin/apt-get install tcpdump
+Install: tcpdump:armhf (4.5.1-2ubuntu1.2), libpcap0.8:armhf (1.5.3-2, automatic)
+End-Date: 2016-04-25  09:58:33
+</code></pre>
+</section><section>
+<p>Static binaries</p>
+<p><code>./htop --sort-key=PID -C</code></p>
+</section><section>
+<h1 id=thesis-consideration---some-thoughts-and-discussions>Thesis consideration - some thoughts and discussions</h1>
+<p><small>How have manufacturers of IoT / smart home devices addressed the increasing concerns of digital privacy and product security?</small></p>
+<aside class=notes>We&rsquo;re not answering the question just yet, just some thoughts</aside>
 <ul>
 <li>
-<p>Wifi password in plain text</p>
+<p>Wireless credentials are stored in plain text</p>
 <ul>
-<li>wpa_supplicant &ndash;> underlying linux framework
-How easy is it for someone to attack the system?</li>
+<li>wpa_supplicant is part of the underlying Linux framework</li>
 </ul>
 </li>
 <li>
-<p>netcat?</p>
+<p>SSH server running (though iptables)</p>
 </li>
 <li>
-<p>There is an SSH server running (though restricted via iptables)</p>
+<p><code>player</code> exposes port 6665</p>
+</li>
+<li>
+<p>Processes are running as root</p>
 <ul>
-<li>Why?</li>
+<li>Any vulnerability in any of the programs can result in system takeover, dropping of iptables, persistence planting</li>
 </ul>
+</li>
+<li>
+<p>Recovery partition is modifiable</p>
+<ul>
+<li><code>mount /dev/mmcblk0p7 ...</code></li>
+</ul>
+</li>
+<li>
+<p>netcat, tcpdump, ccrypt?</p>
+</li>
+<li>
+<p>Easier to interface with devices (udev rules)</p>
+</li>
+</ul>
+<p>How easy is it for someone to attack the system?</p>
+<h2 id=heading></h2>
+<p>What&rsquo;s Good</p>
+<ul>
+<li>
+<p>iptables</p>
+</li>
+<li>
+<p>some logs are encrypted locally</p>
 </li>
 <li>
 <p>Hands-on access a system = game over</p>
 <ul>
 <li>But should it be?</li>
 </ul>
-</li>
-<li>
-<p>Some logs are encrypted locally</p>
 </li>
 </ul>
 <p>Are there any backdoors?</p>
@@ -294,14 +363,51 @@ How easy is it for someone to attack the system?</li>
 <li>TODO: Check what gets cleared during a format / update</li>
 </ul>
 </section><section>
-<h1 id=current-challenges>Current Challenges</h1>
-<p>Electricity is dangerous.
-Thank you Gigabyte for having ESD-protected USB ports</p>
+<h1 id=current-challenges---equipment>Current Challenges - Equipment</h1>
+<style>img[round]{border-radius:10px}</style>
+<ul>
+<li>Electricity is dangerous</li>
+<li>Using personal equipment is not a good idea for a test-bench</li>
+<li>👏 Thank you Gigabyte for having ESD-protected USB ports</li>
+</ul>
+<p><img round src=../../uploads/20220501_031636.jpg></p>
 </section><section>
-<p>Still a lot of files</p>
-<p><img src=../../uploads/20220501-ubuntu_release_date.png alt></p>
-<p><img src=Snipaste_2022-05-01_06-43-50.jpg alt></p>
-<p>Ubuntu 14.04.3 LTS was released back in 2014</p>
+<h1 id=unfinished-work>Unfinished Work</h1>
+<ul>
+<li>Still a lot of files to look at</li>
+<li>Need to figure out which files are worthwhile to inspect</li>
+</ul>
+<section data-shortcode-section>
+</section><section>
+<p><label>Approach 1 - Filter by date modified</label></p>
+<blockquote>
+<p>Ubuntu 14.04.3 LTS was released back in 2014, any changes would have a later timestamp</p>
+</blockquote>
+<div style=display:flex;flex-direction:row>
+<div><img src=../../uploads/20220501-ubuntu_release_date.png></div>
+<div><img src=../../uploads/Snipaste_2022-05-01_06-43-50.jpg alt="sort by date might give some clues"></div>
+</div>
+</section><section>
+<p><label>Approach 2 - File Comparisons</label></p>
+<div style=display:flex;flex-direction:row;align-items;center>
+<div style=width:65%><img src=../../uploads/20220501-ubuntu_14.04.3.png></div>
+<div>
+<p>Compare executable files and find<br>
+differences in binary function</p>
+<p><a href=https://www.zynamics.com/software.html>bindiff</a>, <a href=https://github.com/ReFirmLabs/binwalk>binwalk</a>, <a href=https://github.com/ssdeep-project/ssdeep>ssdeep</a>, <a href=https://github.com/sdhash/sdhash>sdhash</a></p>
+<p><small>As seen in <label>A Large-Scale Analysis of the Security of Embedded Firmwares</label> - Andrei C, Jonas Z, Aur&rsquo;elien F, Davide B</small></p>
+</div>
+</div>
+<aside class=notes><p>From literature review</p>
+</aside>
+</section>
+</section><section>
+<h1 id=retrospective>Retrospective</h1>
+<ul>
+<li>Time management / busy / other work</li>
+<li>Could have done more work</li>
+</ul>
+</section><section>
 <h1 id=project-timeline>Project Timeline</h1>
 <h4 id=labelthesis-alabel><label>Thesis A</label></h4>
 <ul>
@@ -326,12 +432,6 @@ Thank you Gigabyte for having ESD-protected USB ports</p>
 </ul>
 </section><section>
 <h1 id=static-binary-assessment>[Static] Binary assessment</h1>
-<h1 id=retrospective-of-this-term>Retrospective of this term</h1>
-<ul>
-<li>Time management</li>
-<li>Work</li>
-<li>COVID-19</li>
-</ul>
 <h1 id=in-the-mean-time>In the mean time</h1>
 <h1 id=findings>Findings</h1>
 </section><section>
