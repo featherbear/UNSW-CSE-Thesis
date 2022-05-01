@@ -113,6 +113,11 @@
         content: FINISHED REPORT A AAHHHHHHHHHH
         link: https://featherbear.cc/UNSW-CSE-Thesis/docs/report-a/20211208-thesis-a-z5206677.pdf
       }
+      {
+        title: Sunday
+        date: 01/052022
+        content: Seminar B preparation
+      }
     ]
   }
   {
@@ -142,6 +147,14 @@
         date: 29/10/2021
         link: https://featherbear.cc/UNSW-CSE-Thesis/posts/roborock-s6-teardown/#vacuum-cleaner
         content: Opened up the vacuum cleaner and inspected circuitry
+      }
+      {
+        title: Sunday
+        date: 01/052022
+        content: [
+          Did some power analysis of the charger
+          Soldered pins onto the UART wires to make a better connection
+        ]
       }
     ]
   }
@@ -196,21 +209,31 @@
         content: Working version of the Commentree app
       }
       {
-        title: "Filesystem inspection"
+        title: Filesystem inspection
         date: 19/03/2022
         link: https://featherbear.cc/UNSW-CSE-Thesis/posts/running-questions/
         content: Looked at the file system dumps for interesting data
       }
       {
-        title: "Install software"
+        title: Install software
         date: 06/04/2022
         content: Install wget, curl, htop, zerotier
       }
-
       {
-        title: "Look at adbd binary"
+        title: Look at adbd binary
         date: 07/04/2022
         content: Look at the custom adbd binary that serves the usb port
+      }
+      {
+        title: Inspection
+        date: 01/05/2021
+        link: https://featherbear.cc/UNSW-CSE-Thesis/posts/roborock-s6-teardown/#vacuum-cleaner
+        content: [
+          Accidentally factory reset the device, so redid everything
+          Installed ZeroTier, static curl, static htop
+          Tried using PolarProxy but too new (libc)
+          Abit of binary analysis
+        ]
       }
     ]
   }
