@@ -94,6 +94,22 @@ ruby
 <img src=../../uploads/Snipaste_2022-05-01_19-33-46.jpg width=80%>
 </div>
 </section><section>
+<p><label>Ports</label></p>
+<pre><code class=language-bash>root@rockrobo:~# netstat -nltp
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 127.0.0.1:54322         0.0.0.0:*               LISTEN      991/miio_client 
+tcp        0      0 127.0.0.1:54323         0.0.0.0:*               LISTEN      991/miio_client 
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1644/sshd       
+tcp        0      0 127.0.0.1:55551         0.0.0.0:*               LISTEN      998/rriot_tuya  
+tcp        0      0 0.0.0.0:6668            0.0.0.0:*               LISTEN      998/rriot_tuya  
+tcp6       0      0 :::22                   :::*                    LISTEN      1644/sshd       
+</code></pre>
+<p><code>tcp/22</code> and <code>tcp/6668</code> are exposed</p>
+</section><section>
+<p><label>Firewall</label></p>
+<p>iptables?</p>
+</section><section>
 </section>
 </section><section>
 <h1 id=going-wireless---establishing-ssh>Going wireless - establishing SSH</h1>
@@ -102,7 +118,7 @@ ruby
 <div style=flex:1>
 <ul>
 <li>Why is there an SSH server running?</li>
-<li>What&rsquo;s running on port 6665
+<li>What&rsquo;s runs on port 6665
 <ul>
 <li><code>player</code></li>
 <li>Why not file-based IPC?</li>
@@ -123,6 +139,7 @@ ruby
 </li>
 </ul>
 </li>
+<li>IPv6</li>
 </ul>
 </div>
 </div>
@@ -163,6 +180,7 @@ done
 <tr>
 <th style=text-align:left>partition</th>
 <th style=text-align:left>label</th>
+<th style=text-align:left>size</th>
 <th style=text-align:left>description</th>
 </tr>
 </thead>
@@ -170,46 +188,55 @@ done
 <tr>
 <td style=text-align:left>mmcblk0p1</td>
 <td style=text-align:left>UDISK</td>
+<td style=text-align:left>1.5 GB</td>
 <td style=text-align:left>user data</td>
 </tr>
 <tr>
 <td style=text-align:left>mmcblk0p2</td>
 <td style=text-align:left>boot-res</td>
+<td style=text-align:left>8 MB</td>
 <td style=text-align:left>bootloader stuff</td>
 </tr>
 <tr>
 <td style=text-align:left>mmcblk0p5</td>
 <td style=text-align:left>env</td>
+<td style=text-align:left>16 MB</td>
 <td style=text-align:left></td>
 </tr>
 <tr>
 <td style=text-align:left>mmcblk0p6</td>
 <td style=text-align:left>app (RO)</td>
+<td style=text-align:left>64 MB</td>
 <td style=text-align:left>device data</td>
 </tr>
 <tr>
 <td style=text-align:left>mmcblk0p7</td>
 <td style=text-align:left>recovery</td>
+<td style=text-align:left>512 MB</td>
 <td style=text-align:left>stock firmware</td>
 </tr>
 <tr>
 <td style=text-align:left>mmcblk0p8</td>
 <td style=text-align:left>system_a</td>
+<td style=text-align:left>512 MB</td>
 <td style=text-align:left>Main OS (boot)</td>
 </tr>
 <tr>
 <td style=text-align:left>mmcblk0p9</td>
 <td style=text-align:left>system_b</td>
+<td style=text-align:left>512 MB</td>
 <td style=text-align:left>Backup OS</td>
 </tr>
 <tr>
 <td style=text-align:left>mmcblk0p10</td>
 <td style=text-align:left>Download</td>
+<td style=text-align:left>528 MB</td>
 <td style=text-align:left>Update temp</td>
 </tr>
 <tr>
 <td style=text-align:left>mmcblk0p11</td>
 <td style=text-align:left>reserve</td>
+<td style=text-align:left>16 MB</td>
 <td style=text-align:left>blackbox???</td>
 </tr>
 </tbody>
@@ -295,6 +322,8 @@ End-Date: 2016-04-25  09:58:33
 <p>Static binaries</p>
 <p><code>./htop --sort-key=PID -C</code></p>
 </section><section>
+<p>Compare against standards (i.e. Xiaomi&rsquo;s standard)</p>
+</section><section>
 <h1 id=thesis-consideration---some-thoughts-and-discussions>Thesis consideration - some thoughts and discussions</h1>
 <p><small>How have manufacturers of IoT / smart home devices addressed the increasing concerns of digital privacy and product security?</small></p>
 <aside class=notes>We&rsquo;re not answering the question just yet, just some thoughts</aside>
@@ -347,10 +376,9 @@ End-Date: 2016-04-25  09:58:33
 </ul>
 </li>
 </ul>
-<p>Are there any backdoors?</p>
-<p>outbound requests</p>
-<p>persistent software (install to recovery + system_a)</p>
-<p>WiFi is always scanning</p>
+<p>Are there any backdoors?
+outbound requests
+persistent software (install to recovery + system_a)</p>
 </section><section>
 </section><section>
 <p><img src=proc_misc.png alt></p>
@@ -363,6 +391,23 @@ End-Date: 2016-04-25  09:58:33
 <li>TODO: Check what gets cleared during a format / update</li>
 </ul>
 </section><section>
+<h1 id=capturing-network-data-during-device-registration>Capturing network data during device registration</h1>
+<ul>
+<li>Have shell access but</li>
+<li>PolarProxy is too new for Ubuntu 14.04</li>
+<li>apt update doesn&rsquo;t work with socks5:// or http proxies properly</li>
+</ul>
+<p>On the smart app side</p>
+<p>Frida nope
+windows env nope
+<a href=https://github.com/NickstaDB/patch-apk>https://github.com/NickstaDB/patch-apk</a>
+<a href=https://blog.silentsignal.eu/2020/05/04/decrypting-and-analyzing-https-traffic-without-mitm/>https://blog.silentsignal.eu/2020/05/04/decrypting-and-analyzing-https-traffic-without-mitm/</a>
+RoboRock app</p>
+<p>during pairing the password is transmitted in plaintext</p>
+</section><section>
+<p><img src=../../uploads/Snipaste_2022-05-02_01-14-22.jpg alt="plain text wifi auth wireshark">
+<img src=../../uploads/Snipaste_2022-05-02_01-42-29.jpg alt="zerotier persistence"></p>
+</section><section>
 <h1 id=current-challenges---equipment>Current Challenges - Equipment</h1>
 <style>img[round]{border-radius:10px}</style>
 <ul>
@@ -371,6 +416,24 @@ End-Date: 2016-04-25  09:58:33
 <li>👏 Thank you Gigabyte for having ESD-protected USB ports</li>
 </ul>
 <p><img round src=../../uploads/20220501_031636.jpg></p>
+</section><section>
+<h1 id=rrlogd>rrlogd</h1>
+<section data-shortcode-section>
+<p>Logs are encrypted at rest (after being packed)</p>
+<p><img src=Snipaste_2022-05-02_03-10-57.jpg alt></p>
+</section><section>
+<p>Possible functionality to perform any arbitrary command?</p>
+<p><img src=../../uploads/Snipaste_2022-05-02_02-34-04.jpg alt="system() call"></p>
+</section><section>
+<div style=display:flex;flex-direction:row>
+<div><img src=../../uploads/Snipaste_2022-05-02_02-37-10.jpg></div>
+<div><img src=../../uploads/Snipaste_2022-05-02_02-46-06.jpg></div>
+</div>
+<p>Logging program has the potential to unblock port 22?</p>
+<pre><code>iptables -I INPUT -j ACCEPT -p tcp --dport 22
+</code></pre>
+</section>
+</section><section>
 </section><section>
 <h1 id=unfinished-work>Unfinished Work</h1>
 <ul>
