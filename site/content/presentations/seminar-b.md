@@ -26,6 +26,12 @@ title = "Seminar B | Andrew Wong"
 
 ---
 
+# Today's Agenda
+
+
+
+---
+
 # Statement
 
 >
@@ -66,6 +72,10 @@ How have manufacturers of IoT / smart home devices addressed the increasing conc
 
 # Fingerprinting
 
+{{% section %}}
+
+<label>System</label>
+
 ```
 [ 0.340]U-Boot 2011.09-rc1-dirty (Mar 25 2020 - 20:45:43) Allwinner Technology
 [ 0.000000] Linux version 3.4.39 (rockrobo@apimg) (gcc version 4.8.4 (Ubuntu/Linaro 4.8.4-2ubuntu1~14.04.1) ) #1 SMP PREEMPT Wed Mar 25 20:47:59 CST 2020
@@ -76,10 +86,42 @@ How have manufacturers of IoT / smart home devices addressed the increasing conc
 
 <!-- https://en.wikipedia.org/wiki/Linaro -->
 
-CPU: Allwinner R16 (ARM Cortex-A7)  
+CPU: Allwinner R16 (ARM Cortex-A7) - ARMv7l / armhf  
 ACU: STM32F103VCT6 (ARM Cortex-M3)  
 Roborock Firmware version: 3.5.4_1558  
 Operating system: Ubuntu 14.04.3 LTS  
+
+---
+
+<label>Users</label>
+
+<div style="display: flex; flex-direction: row"> 
+<div><img round src="/uploads/Snipaste_2022-05-01_20-00-22.jpg"/></div>
+<div><img round src="/uploads/Snipaste_2022-05-01_20-00-48.jpg"/></div>
+</div>
+
+> No additional users
+
+>
+
+```
+root@rockrobo:~# ls /home
+ruby
+```
+
+`/home/ruby` exists but no user `ruby`, though exists in `/etc/passwd~`
+
+---
+
+<label>Processes</label>
+
+🚩 Everything is running as root
+
+{{% center %}}<img src="/uploads/Snipaste_2022-05-01_19-33-46.jpg" width="80%"/>{{% /center %}}
+
+---
+
+{{% /section %}}
 
 ---
 # Going wireless - establishing SSH
@@ -185,13 +227,15 @@ What about the other partitions? If we want to plant malicious software, can put
 </div>
 </div>
 
+TODO: Recovery partition is modifiable
+
 ---
 
 # I did a thing - [Commentree](https://github.com/featherbear/commentree)
 
 > Plain-text annotation / commentary tool
 
-![](commentree.png)
+![](commentree.png) <!-- 20220311 -->
 
 <!-- Easy to transfer around -->
 
@@ -199,33 +243,16 @@ What about the other partitions? If we want to plant malicious software, can put
 
 ---
 
-<!-- 20220311 -->
-
 ## Interesting Files
 
-device.token=utnevRELra5sqef3
-device.uid=1738271950
+mmcblk0p1/miio/device.token=utnevRELra5sqef3
+mmcblk0p1/miio/device.uid=1738271950
 mmcblk0p1/rockrobo/
+mmcblk0p11\endpoint.bin - AWS address + key?
+mmcblk0p7\boot\zImage - bootloader
+vinda usage
 
-
-
-
-    mmcblk0p11\endpoint.bin
-        AWS address + key?
-    mmcblk0p6\adb.conf
-        adb_lock=1
-    mmcblk0p7\boot\zImage
-    mmclbk0p7\etc\init\adbd.conf
-    vinda usage
-    mmcblk0p7\opt\rockrobo
-    adb
-    mmcblk0p7\usr\sbin\tcpdump
-    mmcblk0p8\var\log\upstart\adbd.log
-        passwords
-
-
-
-
+passwords
 syslogs
 
 
@@ -239,45 +266,95 @@ What other files were changed?
 
 compare against base ubuntu system?
 
+miio
+mmcblk0p7\opt\rockrobo
+rrlog
+rriot
 
-
-## Interesting Binaries
-
-
-    miio
-    rockrobo
-        rrlog
-    ADB
-    rriot
-
-
-
+ADB
 ### adb
 
 adb custom 
+
 https://featherbear.cc/UNSW-CSE-Thesis/posts/mmcblk0p7-usr-bin-adbd/
+
+    mmcblk0p6\adb.conf
+
+    mmcblk0p8\var\log\upstart\adbd.log
 
 <!-- https://www.youtube.com/watch?v=L8jKgX04PMg -->
 
 ---
 
+/usr/sbin/tcpdump
+
+![](/uploads/Snipaste_2022-05-01_19-44-27.jpg)
+
+![](/uploads/Snipaste_2022-05-01_19-37-08.jpg)
 
 ---
 
-# Relate back to the question about  security / privacy
+mmcblk0p7\usr\sbin\tcpdump
 
 
-* Wifi password in plain text
-  * wpa_supplicant --> underlying linux framework
+/var/log/apt/history.log
+
+```
+Start-Date: 2016-01-25  11:18:05
+Commandline: /usr/bin/apt-get install rsync
+Install: rsync:armhf (3.1.0-2ubuntu0.2)
+End-Date: 2016-01-25  11:18:11
+
+Start-Date: 2016-04-05  12:30:59
+Commandline: /usr/bin/apt-get install ccrypt
+Install: ccrypt:armhf (1.10-4)
+End-Date: 2016-04-05  12:31:01
+
+Start-Date: 2016-04-25  09:58:29
+Commandline: /usr/bin/apt-get install tcpdump
+Install: tcpdump:armhf (4.5.1-2ubuntu1.2), libpcap0.8:armhf (1.5.3-2, automatic)
+End-Date: 2016-04-25  09:58:33
+```
+
+---
+Static binaries
+
+`./htop --sort-key=PID -C`
+
+---
+
+
+# Thesis consideration - some thoughts and discussions
+
+<small>How have manufacturers of IoT / smart home devices addressed the increasing concerns of digital privacy and product security?</small>
+
+{{% note %}}We're not answering the question just yet, just some thoughts{{% /note %}}
+
+* Wireless credentials are stored in plain text
+  * wpa_supplicant is part of the underlying Linux framework
+* SSH server running (though iptables)
+* `player` exposes port 6665
+* Processes are running as root
+  * Any vulnerability in any of the programs can result in system takeover, dropping of iptables, persistence planting
+* Recovery partition is modifiable
+  * `mount /dev/mmcblk0p7 ...`
+* netcat, tcpdump, ccrypt?
+
+* Easier to interface with devices (udev rules)
+
 How easy is it for someone to attack the system?
 
-* netcat?
-* There is an SSH server running (though restricted via iptables)
-  * Why?
+##
+
+What's Good
+
+* iptables
+* some logs are encrypted locally
+
+
 * Hands-on access a system = game over
   * But should it be?
 
-* Some logs are encrypted locally
 
 
 Are there any backdoors?
@@ -309,23 +386,73 @@ WiFi is always scanning
 
 
 ---
+# Current Challenges - Equipment
 
-# Current Challenges
+<style>
+img[round] {
+  border-radius: 10px;
+}
+</style>
 
-Electricity is dangerous.
-Thank you Gigabyte for having ESD-protected USB ports
+* Electricity is dangerous
+* Using personal equipment is not a good idea for a test-bench
+* 👏 Thank you Gigabyte for having ESD-protected USB ports
+
+<img round src="/uploads/20220501_031636.jpg" />
+
+
+---
+# Unfinished Work
+
+* Still a lot of files to look at
+* Need to figure out which files are worthwhile to inspect
+
+{{% section %}}
 
 ---
 
-Still a lot of files
+<label>Approach 1 - Filter by date modified</label>
 
+> Ubuntu 14.04.3 LTS was released back in 2014, any changes would have a later timestamp
 
-![](/uploads/20220501-ubuntu_release_date.png) 
+<div style="display: flex; flex-direction: row">
+<div><img src="/uploads/20220501-ubuntu_release_date.png"/></div>
+<div><img src="/uploads/Snipaste_2022-05-01_06-43-50.jpg" alt="sort by date might give some clues"/></div>
+</div>
 
-![](Snipaste_2022-05-01_06-43-50.jpg)
+<!-- Pros, Cons -->
 
-Ubuntu 14.04.3 LTS was released back in 2014
+---
 
+<label>Approach 2 - File Comparisons</label>
+
+<div style="display: flex; flex-direction: row; align-items; center">
+<div style="width: 65%"><img src="/uploads/20220501-ubuntu_14.04.3.png"/></div>
+<div>
+
+Compare executable files and find  
+differences in binary function
+
+[bindiff](https://www.zynamics.com/software.html), [binwalk](https://github.com/ReFirmLabs/binwalk), [ssdeep](https://github.com/ssdeep-project/ssdeep), [sdhash](https://github.com/sdhash/sdhash)
+
+<small>As seen in <label>A Large-Scale Analysis of the Security of Embedded Firmwares</label> - Andrei C, Jonas Z, Aur'elien F, Davide B</small>
+
+</div>
+</div>
+
+{{% note %}}
+From literature review
+{{% /note %}}
+
+{{% /section %}}
+
+---
+# Retrospective
+
+* Time management / busy / other work
+* Could have done more work
+
+---
 # Project Timeline
 
 #### <label>Thesis A</label>
@@ -354,11 +481,6 @@ Ubuntu 14.04.3 LTS was released back in 2014
 
 
 
-# Retrospective of this term
-
-* Time management
-* Work
-* COVID-19
 
 # In the mean time
 
