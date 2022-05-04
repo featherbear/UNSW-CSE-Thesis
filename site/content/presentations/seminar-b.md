@@ -70,6 +70,29 @@ How have manufacturers of IoT / smart home devices addressed the increasing conc
 
 ---
 
+# More logging
+
+Previously packet captures only logged WAN traffic... now port mirroring from a switch ([TP-Link TL-SG105E](https://www.tp-link.com/au/business-networking/easy-smart-switch/tl-sg105e/))
+
+{{% section %}}
+* Now getting all LAN data too! (port mirrored from AP)
+
+![](/uploads/Snipaste_2022-05-05_01-31-27.jpg)
+
+---
+
+<div style="display: flex; flex-direction: row"> 
+<div><img round src="/uploads/Snipaste_2022-05-05_01-32-07.jpg"/></div>
+<div><img round src="/uploads/Snipaste_2022-05-05_01-31-55.jpg"/></div>
+</div>
+
+* The switch doesn't offer true port mirroring - so also seeing sink data
+* Disabled IPv4 and (attempt to disable) IPv6 on the network adapter
+
+
+{{% /section %}}
+
+---
 # Fingerprinting
 
 {{% section %}}
@@ -126,16 +149,16 @@ ruby
 ```bash
 root@rockrobo:~# netstat -nltp
 Active Internet connections (only servers)
-Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
-tcp        0      0 127.0.0.1:54322         0.0.0.0:*               LISTEN      991/miio_client 
-tcp        0      0 127.0.0.1:54323         0.0.0.0:*               LISTEN      991/miio_client 
-tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1644/sshd       
-tcp        0      0 127.0.0.1:55551         0.0.0.0:*               LISTEN      998/rriot_tuya  
-tcp        0      0 0.0.0.0:6668            0.0.0.0:*               LISTEN      998/rriot_tuya  
-tcp6       0      0 :::22                   :::*                    LISTEN      1644/sshd       
+Proto Recv-Q Send-Q Local Address           Foreign Address      State       PID/Program name
+tcp        0      0 127.0.0.1:54322         0.0.0.0:*            LISTEN      991/miio_client 
+tcp        0      0 127.0.0.1:54323         0.0.0.0:*            LISTEN      991/miio_client 
+tcp        0      0 0.0.0.0:22              0.0.0.0:*            LISTEN      1644/sshd       
+tcp        0      0 127.0.0.1:55551         0.0.0.0:*            LISTEN      998/rriot_tuya  
+tcp        0      0 0.0.0.0:6668            0.0.0.0:*            LISTEN      998/rriot_tuya  
+tcp6       0      0 :::22                   :::*                 LISTEN      1644/sshd       
 ```
 
-`tcp/22` and `tcp/6668` are exposed
+🚩 `tcp/22` and `tcp/6668` are exposed
 
 <!-- miio_send and miio_recv uses 54322 -->
 
@@ -143,11 +166,54 @@ tcp6       0      0 :::22                   :::*                    LISTEN      
 
 <label>Firewall</label>
 
-iptables?
+🤷‍♂️ At least port 22 is blocked by `iptables`
 
-<!-- TODO: Move iptables dump here, split next slide -->
+```
+root@rockrobo:~# iptables -L
+Chain INPUT (policy ACCEPT)
+target     prot opt source           destination         
+DROP       udp  --  anywhere         anywhere           udp dpt:6665
+DROP       tcp  --  anywhere         anywhere           tcp dpt:6665
+DROP       tcp  --  anywhere         anywhere           tcp dpt:ssh
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source           destination         
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source           destination      
+```
+
+* What runs on port `6665`
+  * `player`
+  * Why not file-based IPC?
 
 ---
+
+```
+root@rockrobo:~# ip6tables -L
+Chain INPUT (policy ACCEPT)
+target     prot opt source           destination         
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source           destination         
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source           destination
+```
+
+🚩 ... except IPv6 isn't..
+
+
+> Future work: Test IPv6
+
+---
+
+<label>Other small tests</label>
+
+* Can I ping the internet?
+  * Yes
+* Can I run my own software
+  * Yes (`armhf`)
 
 {{% /section %}}
 
@@ -155,20 +221,18 @@ iptables?
 # Going wireless - establishing SSH
 
 <div style="display: flex; flex-direction: row; align-items: center">
-<img src="iptables.png" width="65%" style="flex: 1"/>
+<div style="flex: 1">
+<img round src="iptables.png" />
+<img round src="/uploads/Snipaste_2022-05-05_05-06-28.jpg" />
+</div>
 <div style="flex: 1">
 
-* Why is there an SSH server running?
-* What's runs on port 6665
-  * `player`
-  * Why not file-based IPC?
-* Can I ping the internet
-  * Yep!
+* Remove iptables rule to gain access
+  * (and so could an attacker)
 * Can I add persistent access?
   * Yes, modify `rrwatchdoge.conf`
-  * Can also add remote access
-    * e.g. ZeroTier
-* IPv6
+* Can also add remote access
+  * 👈 e.g. ZeroTier
 
 </div>
 </div>
@@ -189,13 +253,33 @@ iptables?
 
 ---
 
-> What if I unplug the battery?
+> Test: What if I unplug the battery?
 
 * No change in output during boot
 * But device will turn off after around 20 seconds
 
-See [2-wire log](https://featherbear.cc/UNSW-CSE-Thesis/posts/power/serial-dump-during-2-wire-power/), [4-wire log](https://featherbear.cc/UNSW-CSE-Thesis/posts/power/serial-dump-during-4-wire-power/)
+```
+Ubuntu 14.04.3 LTS rockrobo ttyS0
 
+rockrobo login:                                                 #### Usual login prompt
+wait-for-state stop/waiting
+haveged: haveged Stopping due to signal 15                      #### Shutdown SIGTERM 
+
+ * Stopping rsync daemon rsync                                           [ OK ] 
+ * (not running)
+ * Asking all remaining processes to terminate...                        [ OK ] 
+ * All processes ended within 1 seconds...                               [ OK ] 
+umount: /tmp: device is busy.
+        (In some cases useful info about processes that use
+         the device is found by lsof(8) or fuser(1))
+ * Unmounting temporary filesystems...                                   [fail] 
+ * Deactivating swap...                                                  [ OK ] 
+ * Unmounting local filesystems...                                       [ OK ] 
+ * Will now halt
+[   26.948171] [MCU_UART] sent ap poweroff event to mcu         #### Device turns off
+```
+
+See [2-wire log](https://featherbear.cc/UNSW-CSE-Thesis/posts/power/serial-dump-during-2-wire-power/), [4-wire log](https://featherbear.cc/UNSW-CSE-Thesis/posts/power/serial-dump-during-4-wire-power/)
 
 {{% /section %}}
 
@@ -239,7 +323,8 @@ Recovery supposedly resets `system_a`, `system_b`, `UDISK` and `Download`
 
 {{%center%}}<img src="/uploads/20220501-recovery.png" width="70%"/>{{%/center%}}
 
-What about the other partitions? If we want to plant malicious software, can put it in `recovery` and `system_a`?
+* What about the other partitions?  
+* Can we plant malicious software in `recovery`? <label>A: Yes</label> 🚩
 
 <!-- https://featherbear.cc/UNSW-CSE-Thesis/posts/recovery-mode/ -->
 
@@ -256,8 +341,6 @@ What about the other partitions? If we want to plant malicious software, can put
 </div>
 </div>
 
-TODO: Recovery partition is modifiable
-
 ---
 
 # I did a thing - [Commentree](https://github.com/featherbear/commentree)
@@ -266,66 +349,40 @@ TODO: Recovery partition is modifiable
 
 ![](commentree.png) <!-- 20220311 -->
 
-<!-- Easy to transfer around -->
+<!-- Monaco editor, easy to transfer around -->
 
 {{% /section %}}
 
 ---
 ## Interesting Files
 
-mmcblk0p1/miio/device.token=utnevRELra5sqef3
-mmcblk0p1/miio/device.uid=1738271950
-mmcblk0p1/rockrobo/
-mmcblk0p11\endpoint.bin - AWS address + key?
-mmcblk0p7\boot\zImage - bootloader
-vinda usage
+* mmcblk0p1/miio/device.token=utnevRELra5sqef3  
+* mmcblk0p1/miio/device.uid=1738271950  
+* mmcblk0p1/rockrobo/  
+* mmcblk0p11/endpoint.bin - AWS address + key?  
+* mmcblk0p7/boot/zImage - bootloader  
+
+vinda usage  
 
 passwords
 syslogs
 
+---
+
+## Look for any emails
 
     Look for IPs, emails, host/domains, passwords, keys
     Check where DID and UID is used
     Dummy data to check if it’s logged
 
-
-
 What other files were changed?
 
 compare against base ubuntu system?
 
-miio
-mmcblk0p7\opt\rockrobo
-rrlog
-rriot
-
-ADB
-### adb
-
-adb custom 
-
-https://featherbear.cc/UNSW-CSE-Thesis/posts/mmcblk0p7-usr-bin-adbd/
-
-    mmcblk0p6\adb.conf
-
-    mmcblk0p8\var\log\upstart\adbd.log
-
-<!-- https://www.youtube.com/watch?v=L8jKgX04PMg -->
-
 ---
+# Logs
 
-/usr/sbin/tcpdump
-
-![](/uploads/Snipaste_2022-05-01_19-44-27.jpg)
-
-![](/uploads/Snipaste_2022-05-01_19-37-08.jpg)
-
----
-
-mmcblk0p7\usr\sbin\tcpdump
-
-
-/var/log/apt/history.log
+> `/var/log/apt/history.log`
 
 ```
 Start-Date: 2016-01-25  11:18:05
@@ -345,6 +402,47 @@ End-Date: 2016-04-25  09:58:33
 ```
 
 ---
+
+### tcpdump
+
+/usr/sbin/tcpdump
+
+![](/uploads/Snipaste_2022-05-01_19-44-27.jpg)
+
+![](/uploads/Snipaste_2022-05-01_19-37-08.jpg)
+
+mmcblk0p7\usr\sbin\tcpdump
+
+
+---
+
+
+miio
+mmcblk0p7\opt\rockrobo
+rrlog
+rriot
+
+ADB
+
+---
+
+### adb
+
+* Custom ADB binary
+* Had a brief look [(more)](https://featherbear.cc/UNSW-CSE-Thesis/posts/mmcblk0p7-usr-bin-adbd/)
+
+* mmcblk0p6\adb.conf
+* mmcblk0p8\var\log\upstart\adbd.log
+
+<!-- https://www.youtube.com/watch?v=L8jKgX04PMg -->
+
+---
+
+
+rsync and tcpdump
+
+---
+
 Static binaries
 
 `./htop --sort-key=PID -C`
@@ -356,23 +454,66 @@ Compare against standards (i.e. Xiaomi's standard)
 
 ---
 
-# Thesis consideration - some thoughts and discussions
+# Issues, thoughts & discussions
 
 <small>How have manufacturers of IoT / smart home devices addressed the increasing concerns of digital privacy and product security?</small>
 
 {{% note %}}We're not answering the question just yet, just some thoughts{{% /note %}}
 
-* Wireless credentials are stored in plain text
-  * wpa_supplicant is part of the underlying Linux framework
-* SSH server running (though iptables)
-* `player` exposes port 6665
-* Processes are running as root
-  * Any vulnerability in any of the programs can result in system takeover, dropping of iptables, persistence planting
-* Recovery partition is modifiable
-  * `mount /dev/mmcblk0p7 ...`
+{{% section %}}
+
+> Wireless credentials are stored in plain text
+
+* Anyone with <label>physical</label> access to the machine can gain wireless credentials
+* However, takes a lot of effort to open up the device
+* Why? `wpa_supplicant` is part of the underlying Linux framework
+
+---
+
+> SSH server exposed on `tcp/22`
+
+* Why does this server exist?
+* When / where is it used?
+  * Allow rule inside the `rrlogd` binary
+* Roborock has made an attempt to protect their product with `iptables`
+* But did not fully product their product against access via IPv6
+
+---
+
+> Processes are running as `root`
+
+* Any vulnerability in any of the programs can result in elevated access
+  * Dropping of iptables restrictions
+  * Persistence planting
+  * System takeover
+* Should run as a de-privileged user
+* Why? Compatibility, perhaps ease of development
+  * i.e. `udev` rules
+
+---
+
+> Recovery partition is modifiable
+
+* Can be modified to contain malicious software that persists a factory reset
+* Mountable - `mount /dev/mmcblk0p7 ...`
+* Why? Allows easy updates of the 'factory image'
+* But the partition could somehow be encrypted 
+
+---
+
+<label>A note on hardware</label>
+
+> "Once you have access to the hardware, it's game over"
+
+
+{{% /section %}}
+
+---
+
+<!-- * `player` exposes port 6665 -->
+
 * netcat, tcpdump, ccrypt?
 
-* Easier to interface with devices (udev rules)
 
 How easy is it for someone to attack the system?
 
