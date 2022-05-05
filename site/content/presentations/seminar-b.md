@@ -89,6 +89,7 @@ Previously packet captures only logged WAN traffic... now port mirroring from a 
 * The switch doesn't offer true port mirroring - so also seeing sink data
 * Disabled IPv4 and (attempt to disable) IPv6 on the network adapter
 
+<!-- tshark -i en4 -w capture.pcap -b interval:3600 -->
 
 {{% /section %}}
 
