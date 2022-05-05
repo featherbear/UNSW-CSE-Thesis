@@ -59,6 +59,24 @@
 <br></p>
 <h3 id=work-performed>Work Performed</h3>
 </section><section>
+<h1 id=more-logging>More logging</h1>
+<p>Previously packet captures only logged WAN traffic&mldr; now port mirroring from a switch (<a href=https://www.tp-link.com/au/business-networking/easy-smart-switch/tl-sg105e/>TP-Link TL-SG105E</a>)</p>
+<section data-shortcode-section>
+<ul>
+<li>Now getting all LAN data too! (port mirrored from AP)</li>
+</ul>
+<p><img src=../../uploads/Snipaste_2022-05-05_01-31-27.jpg alt></p>
+</section><section>
+<div style=display:flex;flex-direction:row>
+<div><img round src=../../uploads/Snipaste_2022-05-05_01-32-07.jpg></div>
+<div><img round src=../../uploads/Snipaste_2022-05-05_01-31-55.jpg></div>
+</div>
+<ul>
+<li>The switch doesn&rsquo;t offer true port mirroring - so also seeing sink data</li>
+<li>Disabled IPv4 and (attempt to disable) IPv6 on the network adapter</li>
+</ul>
+</section>
+</section><section>
 <h1 id=fingerprinting>Fingerprinting</h1>
 <section data-shortcode-section>
 <p><label>System</label></p>
@@ -97,49 +115,93 @@ ruby
 <p><label>Ports</label></p>
 <pre><code class=language-bash>root@rockrobo:~# netstat -nltp
 Active Internet connections (only servers)
-Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
-tcp        0      0 127.0.0.1:54322         0.0.0.0:*               LISTEN      991/miio_client 
-tcp        0      0 127.0.0.1:54323         0.0.0.0:*               LISTEN      991/miio_client 
-tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1644/sshd       
-tcp        0      0 127.0.0.1:55551         0.0.0.0:*               LISTEN      998/rriot_tuya  
-tcp        0      0 0.0.0.0:6668            0.0.0.0:*               LISTEN      998/rriot_tuya  
-tcp6       0      0 :::22                   :::*                    LISTEN      1644/sshd       
+Proto Recv-Q Send-Q Local Address           Foreign Address      State       PID/Program name
+tcp        0      0 127.0.0.1:54322         0.0.0.0:*            LISTEN      991/miio_client 
+tcp        0      0 127.0.0.1:54323         0.0.0.0:*            LISTEN      991/miio_client 
+tcp        0      0 0.0.0.0:22              0.0.0.0:*            LISTEN      1644/sshd       
+tcp        0      0 127.0.0.1:55551         0.0.0.0:*            LISTEN      998/rriot_tuya  
+tcp        0      0 0.0.0.0:6668            0.0.0.0:*            LISTEN      998/rriot_tuya  
+tcp6       0      0 :::22                   :::*                 LISTEN      1644/sshd       
 </code></pre>
-<p><code>tcp/22</code> and <code>tcp/6668</code> are exposed</p>
+<p>🚩 <code>tcp/22</code> and <code>tcp/6668</code> are exposed</p>
 </section><section>
 <p><label>Firewall</label></p>
-<p>iptables?</p>
-</section><section>
-</section>
-</section><section>
-<h1 id=going-wireless---establishing-ssh>Going wireless - establishing SSH</h1>
-<div style=display:flex;flex-direction:row;align-items:center>
-<img src=iptables.png width=65% style=flex:1>
-<div style=flex:1>
+<p>🤷‍♂️ At least port 22 is blocked by <code>iptables</code></p>
+<pre><code>root@rockrobo:~# iptables -L
+Chain INPUT (policy ACCEPT)
+target     prot opt source           destination         
+DROP       udp  --  anywhere         anywhere           udp dpt:6665
+DROP       tcp  --  anywhere         anywhere           tcp dpt:6665
+DROP       tcp  --  anywhere         anywhere           tcp dpt:ssh
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source           destination         
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source           destination      
+</code></pre>
 <ul>
-<li>Why is there an SSH server running?</li>
-<li>What&rsquo;s runs on port 6665
+<li>What runs on port <code>6665</code>
 <ul>
 <li><code>player</code></li>
 <li>Why not file-based IPC?</li>
 </ul>
 </li>
-<li>Can I ping the internet
+</ul>
+</section><section>
+<pre><code>root@rockrobo:~# ip6tables -L
+Chain INPUT (policy ACCEPT)
+target     prot opt source           destination         
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source           destination         
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source           destination
+</code></pre>
+<p>🚩 &mldr; except IPv6 isn&rsquo;t..</p>
+<blockquote>
+<p>Future work: Test IPv6</p>
+</blockquote>
+</section><section>
+<p><label>Other small tests</label></p>
 <ul>
-<li>Yep!</li>
+<li>Can I ping the internet?
+<ul>
+<li>Yes</li>
+</ul>
+</li>
+<li>Can I run my own software
+<ul>
+<li>Yes (<code>armhf</code>)</li>
+</ul>
+</li>
+</ul>
+</section>
+</section><section>
+<h1 id=going-wireless---establishing-ssh>Going wireless - establishing SSH</h1>
+<div style=display:flex;flex-direction:row;align-items:center>
+<div style=flex:1>
+<img round src=iptables.png>
+<img round src=../../uploads/Snipaste_2022-05-05_05-06-28.jpg>
+</div>
+<div style=flex:1>
+<ul>
+<li>Remove iptables rule to gain access
+<ul>
+<li>(and so could an attacker)</li>
 </ul>
 </li>
 <li>Can I add persistent access?
 <ul>
 <li>Yes, modify <code>rrwatchdoge.conf</code></li>
+</ul>
+</li>
 <li>Can also add remote access
 <ul>
-<li>e.g. ZeroTier</li>
+<li>👈 e.g. ZeroTier</li>
 </ul>
 </li>
-</ul>
-</li>
-<li>IPv6</li>
 </ul>
 </div>
 </div>
@@ -152,12 +214,31 @@ tcp6       0      0 :::22                   :::*                    LISTEN      
 <p><img src=../../uploads/20220501_051651.jpg alt></p>
 </section><section>
 <blockquote>
-<p>What if I unplug the battery?</p>
+<p>Test: What if I unplug the battery?</p>
 </blockquote>
 <ul>
 <li>No change in output during boot</li>
 <li>But device will turn off after around 20 seconds</li>
 </ul>
+<pre><code>Ubuntu 14.04.3 LTS rockrobo ttyS0
+
+rockrobo login:                                                 #### Usual login prompt
+wait-for-state stop/waiting
+haveged: haveged Stopping due to signal 15                      #### Shutdown SIGTERM 
+
+ * Stopping rsync daemon rsync                                           [ OK ] 
+ * (not running)
+ * Asking all remaining processes to terminate...                        [ OK ] 
+ * All processes ended within 1 seconds...                               [ OK ] 
+umount: /tmp: device is busy.
+        (In some cases useful info about processes that use
+         the device is found by lsof(8) or fuser(1))
+ * Unmounting temporary filesystems...                                   [fail] 
+ * Deactivating swap...                                                  [ OK ] 
+ * Unmounting local filesystems...                                       [ OK ] 
+ * Will now halt
+[   26.948171] [MCU_UART] sent ap poweroff event to mcu         #### Device turns off
+</code></pre>
 <p>See <a href=https://featherbear.cc/UNSW-CSE-Thesis/posts/power/serial-dump-during-2-wire-power/>2-wire log</a>, <a href=https://featherbear.cc/UNSW-CSE-Thesis/posts/power/serial-dump-during-4-wire-power/>4-wire log</a></p>
 </section>
 </section><section>
@@ -247,7 +328,10 @@ done
 <div style=text-align:center>
 <img src=../../uploads/20220501-recovery.png width=70%>
 </div>
-<p>What about the other partitions? If we want to plant malicious software, can put it in <code>recovery</code> and <code>system_a</code>?</p>
+<ul>
+<li>What about the other partitions?</li>
+<li>Can we plant malicious software in <code>recovery</code>? <label>A: Yes</label> 🚩</li>
+</ul>
 </section><section>
 <div style=display:flex;flex-direction:row;align-items:center>
 <img src=../../uploads/Snipaste_2022-05-01_05-53-51.jpg width=65% style=flex:1>
@@ -260,7 +344,6 @@ done
 </blockquote>
 </div>
 </div>
-<p>TODO: Recovery partition is modifiable</p>
 </section><section>
 <h1 id=i-did-a-thing---commentreehttpsgithubcomfeatherbearcommentree>I did a thing - <a href=https://github.com/featherbear/commentree>Commentree</a></h1>
 <blockquote>
@@ -270,39 +353,29 @@ done
 </section>
 </section><section>
 <h2 id=interesting-files>Interesting Files</h2>
-<p>mmcblk0p1/miio/device.token=utnevRELra5sqef3
-mmcblk0p1/miio/device.uid=1738271950
-mmcblk0p1/rockrobo/
-mmcblk0p11\endpoint.bin - AWS address + key?
-mmcblk0p7\boot\zImage - bootloader
-vinda usage</p>
+<ul>
+<li>mmcblk0p1/miio/device.token=utnevRELra5sqef3</li>
+<li>mmcblk0p1/miio/device.uid=1738271950</li>
+<li>mmcblk0p1/rockrobo/</li>
+<li>mmcblk0p11/endpoint.bin - AWS address + key?</li>
+<li>mmcblk0p7/boot/zImage - bootloader</li>
+</ul>
+<p>vinda usage</p>
 <p>passwords
 syslogs</p>
+</section><section>
+<h2 id=look-for-any-emails>Look for any emails</h2>
 <pre><code>Look for IPs, emails, host/domains, passwords, keys
 Check where DID and UID is used
 Dummy data to check if it’s logged
 </code></pre>
 <p>What other files were changed?</p>
 <p>compare against base ubuntu system?</p>
-<p>miio
-mmcblk0p7\opt\rockrobo
-rrlog
-rriot</p>
-<p>ADB</p>
-<h3 id=adb>adb</h3>
-<p>adb custom</p>
-<p><a href=https://featherbear.cc/UNSW-CSE-Thesis/posts/mmcblk0p7-usr-bin-adbd/>https://featherbear.cc/UNSW-CSE-Thesis/posts/mmcblk0p7-usr-bin-adbd/</a></p>
-<pre><code>mmcblk0p6\adb.conf
-
-mmcblk0p8\var\log\upstart\adbd.log
-</code></pre>
 </section><section>
-<p>/usr/sbin/tcpdump</p>
-<p><img src=../../uploads/Snipaste_2022-05-01_19-44-27.jpg alt></p>
-<p><img src=../../uploads/Snipaste_2022-05-01_19-37-08.jpg alt></p>
-</section><section>
-<p>mmcblk0p7\usr\sbin\tcpdump</p>
-<p>/var/log/apt/history.log</p>
+<h1 id=logs>Logs</h1>
+<blockquote>
+<p><code>/var/log/apt/history.log</code></p>
+</blockquote>
 <pre><code>Start-Date: 2016-01-25  11:18:05
 Commandline: /usr/bin/apt-get install rsync
 Install: rsync:armhf (3.1.0-2ubuntu0.2)
@@ -319,45 +392,105 @@ Install: tcpdump:armhf (4.5.1-2ubuntu1.2), libpcap0.8:armhf (1.5.3-2, automatic)
 End-Date: 2016-04-25  09:58:33
 </code></pre>
 </section><section>
+<h3 id=tcpdump>tcpdump</h3>
+<p>/usr/sbin/tcpdump</p>
+<p><img src=../../uploads/Snipaste_2022-05-01_19-44-27.jpg alt></p>
+<p><img src=../../uploads/Snipaste_2022-05-01_19-37-08.jpg alt></p>
+<p>mmcblk0p7\usr\sbin\tcpdump</p>
+</section><section>
+<p>miio
+mmcblk0p7\opt\rockrobo
+rrlog
+rriot</p>
+<p>ADB</p>
+</section><section>
+<h3 id=adb>adb</h3>
+<ul>
+<li>
+<p>Custom ADB binary</p>
+</li>
+<li>
+<p>Had a brief look <a href=https://featherbear.cc/UNSW-CSE-Thesis/posts/mmcblk0p7-usr-bin-adbd/>(more)</a></p>
+</li>
+<li>
+<p>mmcblk0p6\adb.conf</p>
+</li>
+<li>
+<p>mmcblk0p8\var\log\upstart\adbd.log</p>
+</li>
+</ul>
+</section><section>
+<p>rsync and tcpdump</p>
+</section><section>
 <p>Static binaries</p>
 <p><code>./htop --sort-key=PID -C</code></p>
 </section><section>
 <p>Compare against standards (i.e. Xiaomi&rsquo;s standard)</p>
 </section><section>
-<h1 id=thesis-consideration---some-thoughts-and-discussions>Thesis consideration - some thoughts and discussions</h1>
+<h1 id=issues-thoughts--discussions>Issues, thoughts & discussions</h1>
 <p><small>How have manufacturers of IoT / smart home devices addressed the increasing concerns of digital privacy and product security?</small></p>
 <aside class=notes>We&rsquo;re not answering the question just yet, just some thoughts</aside>
-<ul>
-<li>
+<section data-shortcode-section>
+<blockquote>
 <p>Wireless credentials are stored in plain text</p>
+</blockquote>
 <ul>
-<li>wpa_supplicant is part of the underlying Linux framework</li>
+<li>Anyone with <label>physical</label> access to the machine can gain wireless credentials</li>
+<li>However, takes a lot of effort to open up the device</li>
+<li>Why? <code>wpa_supplicant</code> is part of the underlying Linux framework</li>
+</ul>
+</section><section>
+<blockquote>
+<p>SSH server exposed on <code>tcp/22</code></p>
+</blockquote>
+<ul>
+<li>Why does this server exist?</li>
+<li>When / where is it used?
+<ul>
+<li>Allow rule inside the <code>rrlogd</code> binary</li>
 </ul>
 </li>
-<li>
-<p>SSH server running (though iptables)</p>
-</li>
-<li>
-<p><code>player</code> exposes port 6665</p>
-</li>
-<li>
-<p>Processes are running as root</p>
+<li>Roborock has made an attempt to protect their product with <code>iptables</code></li>
+<li>But did not fully product their product against access via IPv6</li>
+</ul>
+</section><section>
+<blockquote>
+<p>Processes are running as <code>root</code></p>
+</blockquote>
 <ul>
-<li>Any vulnerability in any of the programs can result in system takeover, dropping of iptables, persistence planting</li>
+<li>Any vulnerability in any of the programs can result in elevated access
+<ul>
+<li>Dropping of iptables restrictions</li>
+<li>Persistence planting</li>
+<li>System takeover</li>
 </ul>
 </li>
-<li>
+<li>Should run as a de-privileged user</li>
+<li>Why? Compatibility, perhaps ease of development
+<ul>
+<li>i.e. <code>udev</code> rules</li>
+</ul>
+</li>
+</ul>
+</section><section>
+<blockquote>
 <p>Recovery partition is modifiable</p>
+</blockquote>
 <ul>
-<li><code>mount /dev/mmcblk0p7 ...</code></li>
+<li>Can be modified to contain malicious software that persists a factory reset</li>
+<li>Mountable - <code>mount /dev/mmcblk0p7 ...</code></li>
+<li>Why? Allows easy updates of the &lsquo;factory image&rsquo;</li>
+<li>But the partition could somehow be encrypted</li>
 </ul>
-</li>
-<li>
-<p>netcat, tcpdump, ccrypt?</p>
-</li>
-<li>
-<p>Easier to interface with devices (udev rules)</p>
-</li>
+</section><section>
+<p><label>A note on hardware</label></p>
+<blockquote>
+<p>&ldquo;Once you have access to the hardware, it&rsquo;s game over&rdquo;</p>
+</blockquote>
+</section>
+</section><section>
+<ul>
+<li>netcat, tcpdump, ccrypt?</li>
 </ul>
 <p>How easy is it for someone to attack the system?</p>
 <h2 id=heading></h2>
