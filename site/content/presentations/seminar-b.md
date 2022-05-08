@@ -5,7 +5,7 @@ outputs = ["Reveal"]
 title = "Seminar B | Andrew Wong"
 +++
 
-{{< slide background-image="/uploads/covers/0T4A9791.JPG" transition="fade" >}}
+{{< slide background-image="https://featherbear.cc/UNSW-CSE-Thesis/uploads/covers/0T4A9791.JPG" transition="fade" >}}
 
 <br />
 <br />
@@ -78,7 +78,7 @@ How have manufacturers of IoT / smart home devices addressed the increasing conc
 
 ---
 
-{{< slide background-image="/uploads/20211030_040050.jpg" transition="fade" >}}
+{{< slide background-image="https://featherbear.cc/UNSW-CSE-Thesis/uploads/20211030_040050.jpg" transition="fade" >}}
 
 <br />
 <br />
