@@ -26,9 +26,18 @@ title = "Seminar B | Andrew Wong"
 
 ---
 
+<style>
+img[round] {
+  border-radius: 10px;
+}
+</style>
+
 # Today's Agenda
 
-
+* Thesis B plan
+* Thesis B review
+* Thesis B retrospective
+* Thesis C revised plan
 
 ---
 
@@ -47,7 +56,25 @@ How have manufacturers of IoT / smart home devices addressed the increasing conc
 * Digital Privacy - Investigate the nature of network data (i.e. content, frequency, destination) and how the data is used.
 * Product Security - Investigate potential security vulnerabilities and assess the effectiveness of current security fortifications.
 
-{{%/ fragment %}}
+{{% /fragment %}}
+
+---
+
+# Original Project Timeline
+
+#### <label>Thesis B - Binary Assessment</label>
+
+* Disassembly and analysis of firmware binaries to identify vulnerabilities
+  * inc. ADB binary functionality
+* Search for unsecured secrets, logs, configurations
+
+#### <label>Thesis C - Connectivity Assessment</label>
+
+* Inspection of outbound internet traffic - security, PII, etc
+* Inspection of local network traffic
+* Inspection of interaction with nearby devices
+* Protocol analysis
+
 
 ---
 
@@ -66,15 +93,16 @@ How have manufacturers of IoT / smart home devices addressed the increasing conc
 <br />
 <br />
 
-### Work Performed
+### Thesis B in Review
 
 ---
 
 # More logging
 
-Previously packet captures only logged WAN traffic... now port mirroring from a switch ([TP-Link TL-SG105E](https://www.tp-link.com/au/business-networking/easy-smart-switch/tl-sg105e/))
+Previously packet captures only logged WAN traffic...
 
 {{% section %}}
+* Now port mirroring from a switch ([TP-Link TL-SG105E](https://www.tp-link.com/au/business-networking/easy-smart-switch/tl-sg105e/))
 * Now getting all LAN data too! (port mirrored from AP)
 
 ![](/uploads/Snipaste_2022-05-05_01-31-27.jpg)
@@ -86,14 +114,32 @@ Previously packet captures only logged WAN traffic... now port mirroring from a 
 <div><img round src="/uploads/Snipaste_2022-05-05_01-31-55.jpg"/></div>
 </div>
 
-* The switch doesn't offer true port mirroring - so also seeing sink data
+* The switch doesn't have true port mirroring - also seeing sink traffic
 * Disabled IPv4 and (attempt to disable) IPv6 on the network adapter
+* Can filter out irrelevant packets later
 
 <!-- tshark -i en4 -w capture.pcap -b interval:3600 -->
+
+---
+
+> Will later use dumps to check frequency and access
+
+{{% center %}}<img round src="/uploads/Snipaste_2022-05-05_17-23-11.jpg" width="65%">{{% /center %}}
 
 {{% /section %}}
 
 ---
+
+# Speaking of packets...
+
+> 🚩 WiFi credentials in plain text during setup
+
+{{% center %}}<img round src="/uploads/Snipaste_2022-05-02_01-14-22.jpg" width="80%">{{% /center %}}
+
+* Minor issue, only exploitable during time of setup
+
+---
+
 # Fingerprinting
 
 {{% section %}}
@@ -186,7 +232,7 @@ target     prot opt source           destination
 
 * What runs on port `6665`
   * `player`
-  * Why not file-based IPC?
+  * What about file-based IPC?
 
 ---
 
@@ -205,16 +251,16 @@ target     prot opt source           destination
 🚩 ... except IPv6 isn't..
 
 
-> Future work: Test IPv6
+> Future work: Test IPv6 lease
 
 ---
 
 <label>Other small tests</label>
 
-* Can I ping the internet?
+* Can I ping the internet / make outbound connections?
   * Yes
 * Can I run my own software
-  * Yes (`armhf`)
+  * Yes (`armhf` architecture)
 
 {{% /section %}}
 
@@ -234,6 +280,8 @@ target     prot opt source           destination
   * Yes, modify `rrwatchdoge.conf`
 * Can also add remote access
   * 👈 e.g. ZeroTier
+
+![zerotier persistence](/uploads/Snipaste_2022-05-02_01-42-29.jpg)
 
 </div>
 </div>
@@ -325,7 +373,7 @@ Recovery supposedly resets `system_a`, `system_b`, `UDISK` and `Download`
 {{%center%}}<img src="/uploads/20220501-recovery.png" width="70%"/>{{%/center%}}
 
 * What about the other partitions?  
-* Can we plant malicious software in `recovery`? <label>A: Yes</label> 🚩
+* Can we install software in the `recovery` partition? <label>A: Yes</label> 🚩
 
 <!-- https://featherbear.cc/UNSW-CSE-Thesis/posts/recovery-mode/ -->
 
@@ -355,35 +403,67 @@ Recovery supposedly resets `system_a`, `system_b`, `UDISK` and `Download`
 {{% /section %}}
 
 ---
-## Interesting Files
+# (some) Interesting Files
 
-* mmcblk0p1/miio/device.token=utnevRELra5sqef3  
-* mmcblk0p1/miio/device.uid=1738271950  
-* mmcblk0p1/rockrobo/  
+{{% section %}}
+
+## The Search
+
+* Looked for any passwords, secrets, keys, IDs, function calls, logs, ...
+* Find changed files (*)
+* See where they are used
+* See how they are used
+* Anything of general interested
+
+---
+
+* mmcblk0p1
+  * miio/device.token
+  * miio/device.uid
+  * rockrobo/  
+  * rockrobo/rrlog/ (logs are encrypted!)
+* mmcblk0p8/opt/rockrobo
+  * Binaries
+  * scripts/pipes.sh
+  * rrlog/misc.sh
 * mmcblk0p11/endpoint.bin - AWS address + key?  
-* mmcblk0p7/boot/zImage - bootloader  
-
-vinda usage  
-
-passwords
-syslogs
 
 ---
 
-## Look for any emails
+> `mmcblk0p8/opt/rockrobo/rrlog/misc.sh`
 
-    Look for IPs, emails, host/domains, passwords, keys
-    Check where DID and UID is used
-    Dummy data to check if it’s logged
+```bash
+...
 
-What other files were changed?
+#echo "=======device.conf==========" >> /dev/shm/misc.log
+#cat /mnt/default/device.conf >> /dev/shm/misc.log
 
-compare against base ubuntu system?
+...
+```
+
+> `mmcblk0p6/device.conf`
+
+```bash
+did=DDDDDDDDD                    # (9 digits)
+key=XXXXXXXXXXXXXXXX             # (16 alpha-num, case-sensitive)
+mac=64:90:C1:1D:24:C4
+vendor=roborock
+model=roborock.vacuum.s6
+```
 
 ---
-# Logs
+
+> Calls for `system`
+
+<!-- find . ! -iname "*.sh" ! -iname "*.conf" -type f -executable -exec sh -c "echo {}; nm -D {} | grep 'system\|exec\|fork'" \; -->
+
+![](/uploads/Snipaste_2022-05-09_00-34-19.jpg)
+
+---
 
 > `/var/log/apt/history.log`
+
+Installed packages that are not part of the base system
 
 ```
 Start-Date: 2016-01-25  11:18:05
@@ -402,59 +482,93 @@ Install: tcpdump:armhf (4.5.1-2ubuntu1.2), libpcap0.8:armhf (1.5.3-2, automatic)
 End-Date: 2016-04-25  09:58:33
 ```
 
+* Why does a vacuum cleaner need `rsync` or `tcpdump`?
+* No usage calls found yet
+
 ---
 
-### tcpdump
+> `mmcblk0p7/usr/sbin/tcpdump`
 
-/usr/sbin/tcpdump
-
-![](/uploads/Snipaste_2022-05-01_19-44-27.jpg)
+* External but unmodified binary
+* Only hub traffic visible (wireless)
+* (not really that interesting)
 
 ![](/uploads/Snipaste_2022-05-01_19-37-08.jpg)
 
-mmcblk0p7\usr\sbin\tcpdump
+---
 
+> `mmcblk0p8/opt/rockrobo/rrlog/rrlogd`
+
+✅ Logs are encrypted at rest (after being packed)  
+✅ Originally used to be a symmetric key, now using a public key  
+😕 Logging program has the functionality to unblock port 22?
+
+<!-- RoCKR0B0@BEIJING . although https://github.com/Hypfer/Valetudo/issues/44 -->
+
+<!-- ![](/uploads/Snipaste_2022-05-02_03-10-57.jpg) -->
+
+<!-- Possible functionality to perform any arbitrary command?
+
+![`system()` call](/uploads/Snipaste_2022-05-02_02-34-04.jpg) -->
+
+<div style="display: flex; flex-direction: row">
+<div><img src="/uploads/Snipaste_2022-05-02_02-37-10.jpg"/></div>
+<div><img src="/uploads/Snipaste_2022-05-02_02-46-06.jpg"/></div>
+</div>
+
+
+```
+iptables -I INPUT -j ACCEPT -p tcp --dport 22
+```
 
 ---
 
+> `mmcblk0p6/vinda`
 
-miio
-mmcblk0p7\opt\rockrobo
-rrlog
-rriot
+Previously... XOR this file to get the `root` password
 
-ADB
+<label>File References</label>
+
+![](/uploads/Snipaste_2022-05-09_00-56-25.jpg)
 
 ---
 
-### adb
+> `mmcblk0p7/usr/bin/adbd`
 
 * Custom ADB binary
 * Had a brief look [(more)](https://featherbear.cc/UNSW-CSE-Thesis/posts/mmcblk0p7-usr-bin-adbd/)
 
-* mmcblk0p6\adb.conf
-* mmcblk0p8\var\log\upstart\adbd.log
+```
+locksec_init_key: can not find the prefix str from adb conf file, use default
+locksec_init_key: can not find the suffix str from adb conf file, use default
+locksec_init_serial: adb read 465 bytes from /proc/cpuinfo
+locksec_init_key: locksec_init_key, rockrobo%()+-[]_8a80ab8936d76c118000:;<=>?@{}rubydevicemodel
+locksec_apply_key: locksec_apply_key, erI09cyW%()+-[]_8a80ab8936d76c118000:;<=>?@{}CzD2xuMNlwabTK7
+locksec_apply_passwd: adb source str: erI09cyW%()+-[]_8a80ab8936d76c118000:;<=>?@{}CzD2xuMNlwabTK7
+locksec_apply_passwd: locksec_apply_passwd, passwd: 0y[ad8@w
+```
+
+<label>Related files</label>
+
+* mmcblk0p6/vinda
+* mmcblk0p6/adb.conf
+* mmcblk0p8/var/log/upstart/adbd.log
 
 <!-- https://www.youtube.com/watch?v=L8jKgX04PMg -->
 
 ---
 
+## Future: the other programs
 
-rsync and tcpdump
+* cleaner
+* miio
+* rockrobo
+* rrlog
+* rriot
 
----
-
-Static binaries
-
-`./htop --sort-key=PID -C`
-
----
-
-Compare against standards (i.e. Xiaomi's standard)
-
+{{% /section %}}
 
 ---
-
 # Issues, thoughts & discussions
 
 <small>How have manufacturers of IoT / smart home devices addressed the increasing concerns of digital privacy and product security?</small>
@@ -463,7 +577,7 @@ Compare against standards (i.e. Xiaomi's standard)
 
 {{% section %}}
 
-> Wireless credentials are stored in plain text
+> 🚩 Wireless credentials are stored in plain text
 
 * Anyone with <label>physical</label> access to the machine can gain wireless credentials
 * However, takes a lot of effort to open up the device
@@ -471,7 +585,7 @@ Compare against standards (i.e. Xiaomi's standard)
 
 ---
 
-> SSH server exposed on `tcp/22`
+> ⚠️ SSH server exposed on `tcp/22`
 
 * Why does this server exist?
 * When / where is it used?
@@ -481,7 +595,7 @@ Compare against standards (i.e. Xiaomi's standard)
 
 ---
 
-> Processes are running as `root`
+> 🚩 Processes are running as `root`
 
 * Any vulnerability in any of the programs can result in elevated access
   * Dropping of iptables restrictions
@@ -493,7 +607,7 @@ Compare against standards (i.e. Xiaomi's standard)
 
 ---
 
-> Recovery partition is modifiable
+> 🚩 Recovery partition is modifiable
 
 * Can be modified to contain malicious software that persists a factory reset
 * Mountable - `mount /dev/mmcblk0p7 ...`
@@ -502,163 +616,84 @@ Compare against standards (i.e. Xiaomi's standard)
 
 ---
 
-<label>A note on hardware</label>
+<label>A note on hardware and software</label>
 
-> "Once you have access to the hardware, it's game over"
+> access to the hardware = game over?
 
+* Are there tamper-proof / tamper-evident design possibilities?
+* What about some sort of "Secure Element"
+* Or read protection?
+* Choice of OS
+* Choice of auth implementation (e.g. `vinda`)
+* Limitation on what programs are allowed to execute?
+
+---
+
+✅ <label>The Good Things</label>
+
+* An effort to restrict SSH access via `iptables`
+* AuthN / AuthZ is present within interfaces to the device
+* UART shell requires a password
+* Logs are encrypted locally
 
 {{% /section %}}
 
 ---
 
-<!-- * `player` exposes port 6665 -->
+# Current Challenges
 
-* netcat, tcpdump, ccrypt?
+{{% section %}}
 
+> Intercepting encrypted data / TLS traffic
 
-How easy is it for someone to attack the system?
-
-##
-
-What's Good
-
-* iptables
-* some logs are encrypted locally
-
-
-* Hands-on access a system = game over
-  * But should it be?
+* Ubuntu 14.04 has some issues (?)
+  * `PolarProxy` is too new (libc requirements)
+  * apt update doesn't work with socks5:// or http proxies properly???
+* Routing?
+* Hook into the encryption/decryption process somehow?
+  * Use `Frida`?
+  * Or look at the data communicated by the smartphone app?
+    * `Objection` tool didn't work with the RoboRock app
 
 
+<!-- On the smart app side -->
 
-Are there any backdoors?
-outbound requests
-persistent software (install to recovery + system_a)
-
-
----
-
-
-
----
-
-![](proc_misc.png)
-
-
-
-
-* Can I plant software (y)
-
----
-
-* Why is netcat installed but not curl, wget?
-* TODO: Check what gets cleared during a format / update
-
-
----
-
-# Capturing network data during device registration
-
-* Have shell access but 
-* PolarProxy is too new for Ubuntu 14.04
-* apt update doesn't work with socks5:// or http proxies properly
-
-On the smart app side
-
-Frida nope
-windows env nope 
-https://github.com/NickstaDB/patch-apk
-https://blog.silentsignal.eu/2020/05/04/decrypting-and-analyzing-https-traffic-without-mitm/
-RoboRock app
-
-during pairing the password is transmitted in plaintext
-
----
-
+<!-- Frida nope -->
+<!-- windows env nope  -->
 <!-- ![APK objection failing](/uploads/Snipaste_2022-05-02_00-52-40.jpg) -->
-
-![plain text wifi auth wireshark](/uploads/Snipaste_2022-05-02_01-14-22.jpg)
-![zerotier persistence](/uploads/Snipaste_2022-05-02_01-42-29.jpg)
+<!-- https://github.com/NickstaDB/patch-apk -->
+<!-- https://blog.silentsignal.eu/2020/05/04/decrypting-and-analyzing-https-traffic-without-mitm/ -->
+<!-- RoboRock app -->
 
 ---
 
-# Current Challenges - Equipment
+> Electricity is funny.
 
-<style>
-img[round] {
-  border-radius: 10px;
-}
-</style>
-
-* Electricity is dangerous
-* Using personal equipment is not a good idea for a test-bench
-* 👏 Thank you Gigabyte for having ESD-protected USB ports
+Using my main personal computer is not a good idea for a test-bench...  
+👏 Thank you Gigabyte for having ESD-protected USB ports
 
 <img round src="/uploads/20220501_031636.jpg" />
 
-
 ---
-# rrlogd
 
-{{% section %}}
+> Still a lot of files to look at
 
-Logs are encrypted at rest (after being packed)
-
-![](Snipaste_2022-05-02_03-10-57.jpg)
+Need to figure out which files are worthwhile to inspect..
 
 ---
 
-Possible functionality to perform any arbitrary command?
+<label>File Inspection Approach 1 - Filter by date modified</label>
 
-![`system()` call](/uploads/Snipaste_2022-05-02_02-34-04.jpg)
-
-
----
-
-<div style="display: flex; flex-direction: row">
-<div><img src="/uploads/Snipaste_2022-05-02_02-37-10.jpg"/></div>
-<div><img src="/uploads/Snipaste_2022-05-02_02-46-06.jpg"/></div>
-</div>
-
-Logging program has the potential to unblock port 22?
-
-```
-iptables -I INPUT -j ACCEPT -p tcp --dport 22
-```
-
-<!-- RoCKR0B0@BEIJING . although https://github.com/Hypfer/Valetudo/issues/44 -->
-
-{{% /section %}}
-
----
-
-
-
-
----
-# Unfinished Work
-
-* Still a lot of files to look at
-* Need to figure out which files are worthwhile to inspect
-
-{{% section %}}
-
----
-
-<label>Approach 1 - Filter by date modified</label>
-
-> Ubuntu 14.04.3 LTS was released back in 2014, any changes would have a later timestamp
+> Ubuntu 14.04.3 LTS was released back in 2014, any changes would have a later timestamp (hopefully)
 
 <div style="display: flex; flex-direction: row">
 <div><img src="/uploads/20220501-ubuntu_release_date.png"/></div>
 <div><img src="/uploads/Snipaste_2022-05-01_06-43-50.jpg" alt="sort by date might give some clues"/></div>
 </div>
 
-<!-- Pros, Cons -->
-
 ---
 
-<label>Approach 2 - File Comparisons</label>
+<label>File Inspection Approach 2 - Binary Comparisons</label>
 
 <div style="display: flex; flex-direction: row; align-items; center">
 <div style="width: 65%"><img src="/uploads/20220501-ubuntu_14.04.3.png"/></div>
@@ -681,67 +716,63 @@ From literature review
 {{% /section %}}
 
 ---
-# Retrospective
+# Thesis B Retrospective
 
-* Time management / busy / other work
-* Could have done more work
+* Time management - could have done more work
+  * Busy / other commitments
+  * Hardware work restricts me to only working at home
+* Project breadth / depth / scope
+  * Binary analysis takes a lot of time
+
+{{% fragment %}}
+<label>Response</label>
+
+* Schedule more focus times
+* Hardware work pretty much completed - likely able to work remotely now
+* Restrict binary analysis to the most likely binaries
+  * May consequently miss something
+
+{{% /fragment %}}
+
+{{% note %}}
+These could possibly just be excuses
+{{% /note %}}
 
 ---
-# Project Timeline
+#### <label>Thesis B Completion</label>
 
-#### <label>Thesis A</label>
-
-* Initial research and research environment setup
-* Teardown and initial hands-on of Roborock S6
-
-#### <label>Thesis B - Binary Assessment</label>
-
-* Disassembly and analysis of firmware binaries to identify vulnerabilities
-  * inc. ADB binary functionality
+* Analysis of firmware binaries to identify vulnerabilities
+  * Still in progress
 * Search for unsecured secrets, logs, configurations
+  * Completed (excluding encrypted `rrlog` files)
 
-#### <label>Thesis C - Connectivity Assessment</label>
+#### <label>Revised Thesis C Plan</label>
 
-* Inspection of outbound internet traffic - security, PII, etc
-* Inspection of local network traffic
-* Inspection of interaction with nearby devices
-* Protocol analysis
-
-
----
-
-# [Static] Binary assessment
-
-
-
-
-
-# In the mean time
-
-
-# Findings
-
-
-
+* (priority) Inspection of outbound WAN traffic - security, PII, etc
+* <s style="color: grey">Inspection of LAN traffic</s> rather, see if it is stored
+* <s style="color: grey">Inspection of interaction with nearby devices</s>
+* <s style="color: grey">Protocol analysis</s>
+* Update to a newer firmware version and look at changes
+* Check what files gets cleared during a format
+* Binary assessment
+* Verify IPv6 SSH access
 
 ---
 
-## Project Plan
+## Timeline
 
-## Revised Project Plan
+* <label>22T2 W1</label> - IPv6 SSH verification, continue binary assessment
+* <label>22T2 W2</label> - WAN traffic analysis
+  * Look at network behaviour
+  * Try view WAN data pre-encryption / post-decryption
+* <label>22T2 W4</label> - Update to latest version (and hope we don't get locked out)
+  * Do another vacuum clean, reimage, compare binaries
+* <label>22T2 W5</label> - Factory reset device, check for remnant files
+* <label>22T2 W8</label> - Demo submission
+* <label>22T2 W11</label> - Report submission
 
 ---
-
-
-# Next Steps
-
-- Dump the firmware and begin RE / forensics
-- Redo (and further investigate) live system analysis
-  - i.e. Properly capture _all_ network traffic
-
----
-
-# Any Questions?
+# Thank You
 
 <br />
 <br />
