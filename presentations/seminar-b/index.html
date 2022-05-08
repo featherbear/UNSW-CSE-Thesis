@@ -28,7 +28,14 @@
 <h5 id=an-audit-into-the-security-and-integrity-of-iot-systems>An Audit Into The Security and Integrity of IoT Systems</h5>
 <h6 id=andrew-wong--unsw-sydney>Andrew Wong | UNSW Sydney</h6>
 </section><section>
+<style>img[round]{border-radius:10px}</style>
 <h1 id=todays-agenda>Today&rsquo;s Agenda</h1>
+<ul>
+<li>Thesis B plan</li>
+<li>Thesis B review</li>
+<li>Thesis B retrospective</li>
+<li>Thesis C revised plan</li>
+</ul>
 </section><section>
 <h1 id=statement>Statement</h1>
 <blockquote>
@@ -43,6 +50,24 @@
 <li>Product Security - Investigate potential security vulnerabilities and assess the effectiveness of current security fortifications.</li>
 </ul>
 </span>
+</section><section>
+<h1 id=original-project-timeline>Original Project Timeline</h1>
+<h4 id=labelthesis-b---binary-assessmentlabel><label>Thesis B - Binary Assessment</label></h4>
+<ul>
+<li>Disassembly and analysis of firmware binaries to identify vulnerabilities
+<ul>
+<li>inc. ADB binary functionality</li>
+</ul>
+</li>
+<li>Search for unsecured secrets, logs, configurations</li>
+</ul>
+<h4 id=labelthesis-c---connectivity-assessmentlabel><label>Thesis C - Connectivity Assessment</label></h4>
+<ul>
+<li>Inspection of outbound internet traffic - security, PII, etc</li>
+<li>Inspection of local network traffic</li>
+<li>Inspection of interaction with nearby devices</li>
+<li>Protocol analysis</li>
+</ul>
 </section>
 <section data-noprocess data-shortcode-slide data-background-image=/uploads/20211030_040050.jpg data-transition=fade>
 <p><br>
@@ -57,12 +82,13 @@
 <br>
 <br>
 <br></p>
-<h3 id=work-performed>Work Performed</h3>
+<h3 id=thesis-b-in-review>Thesis B in Review</h3>
 </section><section>
 <h1 id=more-logging>More logging</h1>
-<p>Previously packet captures only logged WAN traffic&mldr; now port mirroring from a switch (<a href=https://www.tp-link.com/au/business-networking/easy-smart-switch/tl-sg105e/>TP-Link TL-SG105E</a>)</p>
+<p>Previously packet captures only logged WAN traffic&mldr;</p>
 <section data-shortcode-section>
 <ul>
+<li>Now port mirroring from a switch (<a href=https://www.tp-link.com/au/business-networking/easy-smart-switch/tl-sg105e/>TP-Link TL-SG105E</a>)</li>
 <li>Now getting all LAN data too! (port mirrored from AP)</li>
 </ul>
 <p><img src=../../uploads/Snipaste_2022-05-05_01-31-27.jpg alt></p>
@@ -72,10 +98,29 @@
 <div><img round src=../../uploads/Snipaste_2022-05-05_01-31-55.jpg></div>
 </div>
 <ul>
-<li>The switch doesn&rsquo;t offer true port mirroring - so also seeing sink data</li>
+<li>The switch doesn&rsquo;t have true port mirroring - also seeing sink traffic</li>
 <li>Disabled IPv4 and (attempt to disable) IPv6 on the network adapter</li>
+<li>Can filter out irrelevant packets later</li>
 </ul>
+</section><section>
+<blockquote>
+<p>Will later use dumps to check frequency and access</p>
+</blockquote>
+<div style=text-align:center>
+<img round src=../../uploads/Snipaste_2022-05-05_17-23-11.jpg width=65%>
+</div>
 </section>
+</section><section>
+<h1 id=speaking-of-packets>Speaking of packets&mldr;</h1>
+<blockquote>
+<p>🚩 WiFi credentials in plain text during setup</p>
+</blockquote>
+<div style=text-align:center>
+<img round src=../../uploads/Snipaste_2022-05-02_01-14-22.jpg width=80%>
+</div>
+<ul>
+<li>Minor issue, only exploitable during time of setup</li>
+</ul>
 </section><section>
 <h1 id=fingerprinting>Fingerprinting</h1>
 <section data-shortcode-section>
@@ -144,7 +189,7 @@ target     prot opt source           destination
 <li>What runs on port <code>6665</code>
 <ul>
 <li><code>player</code></li>
-<li>Why not file-based IPC?</li>
+<li>What about file-based IPC?</li>
 </ul>
 </li>
 </ul>
@@ -161,19 +206,19 @@ target     prot opt source           destination
 </code></pre>
 <p>🚩 &mldr; except IPv6 isn&rsquo;t..</p>
 <blockquote>
-<p>Future work: Test IPv6</p>
+<p>Future work: Test IPv6 lease</p>
 </blockquote>
 </section><section>
 <p><label>Other small tests</label></p>
 <ul>
-<li>Can I ping the internet?
+<li>Can I ping the internet / make outbound connections?
 <ul>
 <li>Yes</li>
 </ul>
 </li>
 <li>Can I run my own software
 <ul>
-<li>Yes (<code>armhf</code>)</li>
+<li>Yes (<code>armhf</code> architecture)</li>
 </ul>
 </li>
 </ul>
@@ -203,13 +248,14 @@ target     prot opt source           destination
 </ul>
 </li>
 </ul>
+<p><img src=../../uploads/Snipaste_2022-05-02_01-42-29.jpg alt="zerotier persistence"></p>
 </div>
 </div>
 </section><section>
 <section data-shortcode-section>
 <h1 id=trivial-power-analysis>Trivial Power Analysis</h1>
 <blockquote>
-<p>Batteries dont&rsquo;t last forever!</p>
+<p>Batteries don&rsquo;t last forever!</p>
 </blockquote>
 <p><img src=../../uploads/20220501_051651.jpg alt></p>
 </section><section>
@@ -330,7 +376,7 @@ done
 </div>
 <ul>
 <li>What about the other partitions?</li>
-<li>Can we plant malicious software in <code>recovery</code>? <label>A: Yes</label> 🚩</li>
+<li>Can we install software in the <code>recovery</code> partition? <label>A: Yes</label> 🚩</li>
 </ul>
 </section><section>
 <div style=display:flex;flex-direction:row;align-items:center>
@@ -352,30 +398,65 @@ done
 <p><img src=commentree.png alt> </p>
 </section>
 </section><section>
-<h2 id=interesting-files>Interesting Files</h2>
+<h1 id=some-interesting-files>(some) Interesting Files</h1>
+<section data-shortcode-section>
+<h2 id=the-search>The Search</h2>
 <ul>
-<li>mmcblk0p1/miio/device.token=utnevRELra5sqef3</li>
-<li>mmcblk0p1/miio/device.uid=1738271950</li>
-<li>mmcblk0p1/rockrobo/</li>
-<li>mmcblk0p11/endpoint.bin - AWS address + key?</li>
-<li>mmcblk0p7/boot/zImage - bootloader</li>
+<li>Looked for any passwords, secrets, keys, IDs, function calls, logs, &mldr;</li>
+<li>Find changed files (*)</li>
+<li>See where they are used</li>
+<li>See how they are used</li>
+<li>Anything of general interested</li>
 </ul>
-<p>vinda usage</p>
-<p>passwords
-syslogs</p>
 </section><section>
-<h2 id=look-for-any-emails>Look for any emails</h2>
-<pre><code>Look for IPs, emails, host/domains, passwords, keys
-Check where DID and UID is used
-Dummy data to check if it’s logged
+<ul>
+<li>mmcblk0p1
+<ul>
+<li>miio/device.token</li>
+<li>miio/device.uid</li>
+<li>rockrobo/</li>
+<li>rockrobo/rrlog/ (logs are encrypted!)</li>
+</ul>
+</li>
+<li>mmcblk0p8/opt/rockrobo
+<ul>
+<li>Binaries</li>
+<li>scripts/pipes.sh</li>
+<li>rrlog/misc.sh</li>
+</ul>
+</li>
+<li>mmcblk0p11/endpoint.bin - AWS address + key?</li>
+</ul>
+</section><section>
+<blockquote>
+<p><code>mmcblk0p8/opt/rockrobo/rrlog/misc.sh</code></p>
+</blockquote>
+<pre><code class=language-bash>...
+
+#echo &quot;=======device.conf==========&quot; &gt;&gt; /dev/shm/misc.log
+#cat /mnt/default/device.conf &gt;&gt; /dev/shm/misc.log
+
+...
 </code></pre>
-<p>What other files were changed?</p>
-<p>compare against base ubuntu system?</p>
+<blockquote>
+<p><code>mmcblk0p6/device.conf</code></p>
+</blockquote>
+<pre><code class=language-bash>did=DDDDDDDDD                    # (9 digits)
+key=XXXXXXXXXXXXXXXX             # (16 alpha-num, case-sensitive)
+mac=64:90:C1:1D:24:C4
+vendor=roborock
+model=roborock.vacuum.s6
+</code></pre>
 </section><section>
-<h1 id=logs>Logs</h1>
+<blockquote>
+<p>Calls for <code>system</code></p>
+</blockquote>
+<p><img src=../../uploads/Snipaste_2022-05-09_00-34-19.jpg alt></p>
+</section><section>
 <blockquote>
 <p><code>/var/log/apt/history.log</code></p>
 </blockquote>
+<p>Installed packages that are not part of the base system</p>
 <pre><code>Start-Date: 2016-01-25  11:18:05
 Commandline: /usr/bin/apt-get install rsync
 Install: rsync:armhf (3.1.0-2ubuntu0.2)
@@ -391,48 +472,79 @@ Commandline: /usr/bin/apt-get install tcpdump
 Install: tcpdump:armhf (4.5.1-2ubuntu1.2), libpcap0.8:armhf (1.5.3-2, automatic)
 End-Date: 2016-04-25  09:58:33
 </code></pre>
-</section><section>
-<h3 id=tcpdump>tcpdump</h3>
-<p>/usr/sbin/tcpdump</p>
-<p><img src=../../uploads/Snipaste_2022-05-01_19-44-27.jpg alt></p>
-<p><img src=../../uploads/Snipaste_2022-05-01_19-37-08.jpg alt></p>
-<p>mmcblk0p7\usr\sbin\tcpdump</p>
-</section><section>
-<p>miio
-mmcblk0p7\opt\rockrobo
-rrlog
-rriot</p>
-<p>ADB</p>
-</section><section>
-<h3 id=adb>adb</h3>
 <ul>
-<li>
-<p>Custom ADB binary</p>
-</li>
-<li>
-<p>Had a brief look <a href=https://featherbear.cc/UNSW-CSE-Thesis/posts/mmcblk0p7-usr-bin-adbd/>(more)</a></p>
-</li>
-<li>
-<p>mmcblk0p6\adb.conf</p>
-</li>
-<li>
-<p>mmcblk0p8\var\log\upstart\adbd.log</p>
-</li>
+<li>Why does a vacuum cleaner need <code>rsync</code> or <code>tcpdump</code>?</li>
+<li>No usage calls found yet</li>
 </ul>
 </section><section>
-<p>rsync and tcpdump</p>
+<blockquote>
+<p><code>mmcblk0p7/usr/sbin/tcpdump</code></p>
+</blockquote>
+<ul>
+<li>External but unmodified binary</li>
+<li>Only hub traffic visible (wireless)</li>
+<li>(not really that interesting)</li>
+</ul>
+<p><img src=../../uploads/Snipaste_2022-05-01_19-37-08.jpg alt></p>
 </section><section>
-<p>Static binaries</p>
-<p><code>./htop --sort-key=PID -C</code></p>
+<blockquote>
+<p><code>mmcblk0p8/opt/rockrobo/rrlog/rrlogd</code></p>
+</blockquote>
+<p>✅ Logs are encrypted at rest (after being packed)<br>
+✅ Originally used to be a symmetric key, now using a public key<br>
+😕 Logging program has the functionality to unblock port 22?</p>
+<div style=display:flex;flex-direction:row>
+<div><img src=../../uploads/Snipaste_2022-05-02_02-37-10.jpg></div>
+<div><img src=../../uploads/Snipaste_2022-05-02_02-46-06.jpg></div>
+</div>
+<pre><code>iptables -I INPUT -j ACCEPT -p tcp --dport 22
+</code></pre>
 </section><section>
-<p>Compare against standards (i.e. Xiaomi&rsquo;s standard)</p>
+<blockquote>
+<p><code>mmcblk0p6/vinda</code></p>
+</blockquote>
+<p>Previously&mldr; XOR this file to get the <code>root</code> password</p>
+<p><label>File References</label></p>
+<p><img src=../../uploads/Snipaste_2022-05-09_00-56-25.jpg alt></p>
+</section><section>
+<blockquote>
+<p><code>mmcblk0p7/usr/bin/adbd</code></p>
+</blockquote>
+<ul>
+<li>Custom ADB binary</li>
+<li>Had a brief look <a href=https://featherbear.cc/UNSW-CSE-Thesis/posts/mmcblk0p7-usr-bin-adbd/>(more)</a></li>
+</ul>
+<pre><code>locksec_init_key: can not find the prefix str from adb conf file, use default
+locksec_init_key: can not find the suffix str from adb conf file, use default
+locksec_init_serial: adb read 465 bytes from /proc/cpuinfo
+locksec_init_key: locksec_init_key, rockrobo%()+-[]_8a80ab8936d76c118000:;&lt;=&gt;?@{}rubydevicemodel
+locksec_apply_key: locksec_apply_key, erI09cyW%()+-[]_8a80ab8936d76c118000:;&lt;=&gt;?@{}CzD2xuMNlwabTK7
+locksec_apply_passwd: adb source str: erI09cyW%()+-[]_8a80ab8936d76c118000:;&lt;=&gt;?@{}CzD2xuMNlwabTK7
+locksec_apply_passwd: locksec_apply_passwd, passwd: 0y[ad8@w
+</code></pre>
+<p><label>Related files</label></p>
+<ul>
+<li>mmcblk0p6/vinda</li>
+<li>mmcblk0p6/adb.conf</li>
+<li>mmcblk0p8/var/log/upstart/adbd.log</li>
+</ul>
+</section><section>
+<h2 id=future-the-other-programs>Future: the other programs</h2>
+<ul>
+<li>cleaner</li>
+<li>miio</li>
+<li>rockrobo</li>
+<li>rrlog</li>
+<li>rriot</li>
+</ul>
+</section>
 </section><section>
 <h1 id=issues-thoughts--discussions>Issues, thoughts & discussions</h1>
 <p><small>How have manufacturers of IoT / smart home devices addressed the increasing concerns of digital privacy and product security?</small></p>
 <aside class=notes>We&rsquo;re not answering the question just yet, just some thoughts</aside>
 <section data-shortcode-section>
 <blockquote>
-<p>Wireless credentials are stored in plain text</p>
+<p>🚩 Wireless credentials are stored in plain text</p>
 </blockquote>
 <ul>
 <li>Anyone with <label>physical</label> access to the machine can gain wireless credentials</li>
@@ -441,7 +553,7 @@ rriot</p>
 </ul>
 </section><section>
 <blockquote>
-<p>SSH server exposed on <code>tcp/22</code></p>
+<p>⚠️ SSH server exposed on <code>tcp/22</code></p>
 </blockquote>
 <ul>
 <li>Why does this server exist?</li>
@@ -455,7 +567,7 @@ rriot</p>
 </ul>
 </section><section>
 <blockquote>
-<p>Processes are running as <code>root</code></p>
+<p>🚩 Processes are running as <code>root</code></p>
 </blockquote>
 <ul>
 <li>Any vulnerability in any of the programs can result in elevated access
@@ -474,7 +586,7 @@ rriot</p>
 </ul>
 </section><section>
 <blockquote>
-<p>Recovery partition is modifiable</p>
+<p>🚩 Recovery partition is modifiable</p>
 </blockquote>
 <ul>
 <li>Can be modified to contain malicious software that persists a factory reset</li>
@@ -483,108 +595,75 @@ rriot</p>
 <li>But the partition could somehow be encrypted</li>
 </ul>
 </section><section>
-<p><label>A note on hardware</label></p>
+<p><label>A note on hardware and software</label></p>
 <blockquote>
-<p>&ldquo;Once you have access to the hardware, it&rsquo;s game over&rdquo;</p>
+<p>access to the hardware = game over?</p>
 </blockquote>
+<ul>
+<li>Are there tamper-proof / tamper-evident design possibilities?</li>
+<li>What about some sort of &ldquo;Secure Element&rdquo;</li>
+<li>Or read protection?</li>
+<li>Choice of OS</li>
+<li>Choice of auth implementation (e.g. <code>vinda</code>)</li>
+<li>Limitation on what programs are allowed to execute?</li>
+</ul>
+</section><section>
+<p>✅ <label>The Good Things</label></p>
+<ul>
+<li>An effort to restrict SSH access via <code>iptables</code></li>
+<li>AuthN / AuthZ is present within interfaces to the device</li>
+<li>UART shell requires a password</li>
+<li>Logs are encrypted locally</li>
+</ul>
 </section>
 </section><section>
+<h1 id=current-challenges>Current Challenges</h1>
+<section data-shortcode-section>
+<blockquote>
+<p>Intercepting encrypted data / TLS traffic</p>
+</blockquote>
 <ul>
-<li>netcat, tcpdump, ccrypt?</li>
-</ul>
-<p>How easy is it for someone to attack the system?</p>
-<h2 id=heading></h2>
-<p>What&rsquo;s Good</p>
+<li>Ubuntu 14.04 has some issues (?)
 <ul>
-<li>
-<p>iptables</p>
-</li>
-<li>
-<p>some logs are encrypted locally</p>
-</li>
-<li>
-<p>Hands-on access a system = game over</p>
-<ul>
-<li>But should it be?</li>
+<li><code>PolarProxy</code> is too new (libc requirements)</li>
+<li>apt update doesn&rsquo;t work with socks5:// or http proxies properly???</li>
 </ul>
 </li>
-</ul>
-<p>Are there any backdoors?
-outbound requests
-persistent software (install to recovery + system_a)</p>
-</section><section>
-</section><section>
-<p><img src=proc_misc.png alt></p>
+<li>Routing?</li>
+<li>Hook into the encryption/decryption process somehow?
 <ul>
-<li>Can I plant software (y)</li>
-</ul>
-</section><section>
+<li>Use <code>Frida</code>?</li>
+<li>Or look at the data communicated by the smartphone app?
 <ul>
-<li>Why is netcat installed but not curl, wget?</li>
-<li>TODO: Check what gets cleared during a format / update</li>
+<li><code>Objection</code> tool didn&rsquo;t work with the RoboRock app</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </section><section>
-<h1 id=capturing-network-data-during-device-registration>Capturing network data during device registration</h1>
-<ul>
-<li>Have shell access but</li>
-<li>PolarProxy is too new for Ubuntu 14.04</li>
-<li>apt update doesn&rsquo;t work with socks5:// or http proxies properly</li>
-</ul>
-<p>On the smart app side</p>
-<p>Frida nope
-windows env nope
-<a href=https://github.com/NickstaDB/patch-apk>https://github.com/NickstaDB/patch-apk</a>
-<a href=https://blog.silentsignal.eu/2020/05/04/decrypting-and-analyzing-https-traffic-without-mitm/>https://blog.silentsignal.eu/2020/05/04/decrypting-and-analyzing-https-traffic-without-mitm/</a>
-RoboRock app</p>
-<p>during pairing the password is transmitted in plaintext</p>
-</section><section>
-<p><img src=../../uploads/Snipaste_2022-05-02_01-14-22.jpg alt="plain text wifi auth wireshark">
-<img src=../../uploads/Snipaste_2022-05-02_01-42-29.jpg alt="zerotier persistence"></p>
-</section><section>
-<h1 id=current-challenges---equipment>Current Challenges - Equipment</h1>
-<style>img[round]{border-radius:10px}</style>
-<ul>
-<li>Electricity is dangerous</li>
-<li>Using personal equipment is not a good idea for a test-bench</li>
-<li>👏 Thank you Gigabyte for having ESD-protected USB ports</li>
-</ul>
+<blockquote>
+<p>Electricity is funny.</p>
+</blockquote>
+<p>Using my main personal computer is not a good idea for a test-bench&mldr;<br>
+👏 Thank you Gigabyte for having ESD-protected USB ports</p>
 <p><img round src=../../uploads/20220501_031636.jpg></p>
 </section><section>
-<h1 id=rrlogd>rrlogd</h1>
-<section data-shortcode-section>
-<p>Logs are encrypted at rest (after being packed)</p>
-<p><img src=Snipaste_2022-05-02_03-10-57.jpg alt></p>
-</section><section>
-<p>Possible functionality to perform any arbitrary command?</p>
-<p><img src=../../uploads/Snipaste_2022-05-02_02-34-04.jpg alt="system() call"></p>
-</section><section>
-<div style=display:flex;flex-direction:row>
-<div><img src=../../uploads/Snipaste_2022-05-02_02-37-10.jpg></div>
-<div><img src=../../uploads/Snipaste_2022-05-02_02-46-06.jpg></div>
-</div>
-<p>Logging program has the potential to unblock port 22?</p>
-<pre><code>iptables -I INPUT -j ACCEPT -p tcp --dport 22
-</code></pre>
-</section>
-</section><section>
-</section><section>
-<h1 id=unfinished-work>Unfinished Work</h1>
-<ul>
-<li>Still a lot of files to look at</li>
-<li>Need to figure out which files are worthwhile to inspect</li>
-</ul>
-<section data-shortcode-section>
-</section><section>
-<p><label>Approach 1 - Filter by date modified</label></p>
 <blockquote>
-<p>Ubuntu 14.04.3 LTS was released back in 2014, any changes would have a later timestamp</p>
+<p>Still a lot of files to look at</p>
+</blockquote>
+<p>Need to figure out which files are worthwhile to inspect..</p>
+</section><section>
+<p><label>File Inspection Approach 1 - Filter by date modified</label></p>
+<blockquote>
+<p>Ubuntu 14.04.3 LTS was released back in 2014, any changes would have a later timestamp (hopefully)</p>
 </blockquote>
 <div style=display:flex;flex-direction:row>
 <div><img src=../../uploads/20220501-ubuntu_release_date.png></div>
 <div><img src=../../uploads/Snipaste_2022-05-01_06-43-50.jpg alt="sort by date might give some clues"></div>
 </div>
 </section><section>
-<p><label>Approach 2 - File Comparisons</label></p>
+<p><label>File Inspection Approach 2 - Binary Comparisons</label></p>
 <div style=display:flex;flex-direction:row;align-items;center>
 <div style=width:65%><img src=../../uploads/20220501-ubuntu_14.04.3.png></div>
 <div>
@@ -598,53 +677,79 @@ differences in binary function</p>
 </aside>
 </section>
 </section><section>
-<h1 id=retrospective>Retrospective</h1>
+<h1 id=thesis-b-retrospective>Thesis B Retrospective</h1>
 <ul>
-<li>Time management / busy / other work</li>
-<li>Could have done more work</li>
-</ul>
-</section><section>
-<h1 id=project-timeline>Project Timeline</h1>
-<h4 id=labelthesis-alabel><label>Thesis A</label></h4>
+<li>Time management - could have done more work
 <ul>
-<li>Initial research and research environment setup</li>
-<li>Teardown and initial hands-on of Roborock S6</li>
-</ul>
-<h4 id=labelthesis-b---binary-assessmentlabel><label>Thesis B - Binary Assessment</label></h4>
-<ul>
-<li>Disassembly and analysis of firmware binaries to identify vulnerabilities
-<ul>
-<li>inc. ADB binary functionality</li>
+<li>Busy / other commitments</li>
+<li>Hardware work restricts me to only working at home</li>
 </ul>
 </li>
-<li>Search for unsecured secrets, logs, configurations</li>
-</ul>
-<h4 id=labelthesis-c---connectivity-assessmentlabel><label>Thesis C - Connectivity Assessment</label></h4>
+<li>Project breadth / depth / scope
 <ul>
-<li>Inspection of outbound internet traffic - security, PII, etc</li>
-<li>Inspection of local network traffic</li>
-<li>Inspection of interaction with nearby devices</li>
-<li>Protocol analysis</li>
-</ul>
-</section><section>
-<h1 id=static-binary-assessment>[Static] Binary assessment</h1>
-<h1 id=in-the-mean-time>In the mean time</h1>
-<h1 id=findings>Findings</h1>
-</section><section>
-<h2 id=project-plan>Project Plan</h2>
-<h2 id=revised-project-plan>Revised Project Plan</h2>
-</section><section>
-<h1 id=next-steps>Next Steps</h1>
-<ul>
-<li>Dump the firmware and begin RE / forensics</li>
-<li>Redo (and further investigate) live system analysis
-<ul>
-<li>i.e. Properly capture <em>all</em> network traffic</li>
+<li>Binary analysis takes a lot of time</li>
 </ul>
 </li>
 </ul>
+<span class=fragment><p><label>Response</label></p>
+<ul>
+<li>Schedule more focus times</li>
+<li>Hardware work pretty much completed - likely able to work remotely now</li>
+<li>Restrict binary analysis to the most likely binaries
+<ul>
+<li>May consequently miss something</li>
+</ul>
+</li>
+</ul>
+</span>
+<aside class=notes><p>These could possibly just be excuses</p>
+</aside>
 </section><section>
-<h1 id=any-questions>Any Questions?</h1>
+<h4 id=labelthesis-b-completionlabel><label>Thesis B Completion</label></h4>
+<ul>
+<li>Analysis of firmware binaries to identify vulnerabilities
+<ul>
+<li>Still in progress</li>
+</ul>
+</li>
+<li>Search for unsecured secrets, logs, configurations
+<ul>
+<li>Completed (excluding encrypted <code>rrlog</code> files)</li>
+</ul>
+</li>
+</ul>
+<h4 id=labelrevised-thesis-c-planlabel><label>Revised Thesis C Plan</label></h4>
+<ul>
+<li>(priority) Inspection of outbound WAN traffic - security, PII, etc</li>
+<li><s style=color:grey>Inspection of LAN traffic</s> rather, see if it is stored</li>
+<li><s style=color:grey>Inspection of interaction with nearby devices</s></li>
+<li><s style=color:grey>Protocol analysis</s></li>
+<li>Update to a newer firmware version and look at changes</li>
+<li>Check what files gets cleared during a format</li>
+<li>Binary assessment</li>
+<li>Verify IPv6 SSH access</li>
+</ul>
+</section><section>
+<h2 id=incoming-timeline>Incoming Timeline</h2>
+<ul>
+<li><label>22T2 W1</label> - IPv6 SSH verification, continue binary assessment</li>
+<li><label>22T2 W2</label> - WAN traffic analysis
+<ul>
+<li>Look at network behaviour</li>
+<li>Try view WAN data pre-encryption / post-decryption</li>
+</ul>
+</li>
+<li><label>22T2 W4</label> - Update to latest version (and hope we don&rsquo;t get locked out)
+<ul>
+<li>Do another vacuum clean, reimage, compare binaries</li>
+</ul>
+</li>
+<li><label>22T2 W5</label> - Factory reset device, check for remnant files</li>
+<li><label>22T2 W8</label> - Demo submission</li>
+<li><label>22T2 W11</label> - Report submission</li>
+</ul>
+</section><section>
+<h1 id=thank-you>Thank You</h1>
 <p><br>
 <br>
 <br>
