@@ -293,7 +293,7 @@ target     prot opt source           destination
 {{% section %}}
 # Trivial Power Analysis
 
-> Batteries dont't last forever!
+> Batteries don't last forever!
 
 ![](/uploads/20220501_051651.jpg)
 
@@ -759,7 +759,7 @@ These could possibly just be excuses
 
 ---
 
-## Timeline
+## Incoming Timeline
 
 * <label>22T2 W1</label> - IPv6 SSH verification, continue binary assessment
 * <label>22T2 W2</label> - WAN traffic analysis
