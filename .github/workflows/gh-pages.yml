@@ -33,6 +33,14 @@ jobs:
         ls -1 *.md | grep "^[^_]" | xargs -L1 -I {}  sh -c 'echo "\n\n## References\n\n" >> {}; pandoc {} -t gfm --citeproc --bibliography bib.bib --csl ref_format.cls -s -o {}'
       working-directory: ./site/content/docs/report-a
 
+    - name: Update citations for Report C
+      run: |
+        wget https://github.com/jgm/pandoc/releases/download/2.16.2/pandoc-2.16.2-1-amd64.deb -O /tmp/pandoc.deb
+        sudo dpkg -i /tmp/pandoc.deb
+        echo Citing entries for report C...
+        ls -1 *.md | grep "^[^_]" | xargs -L1 -I {}  sh -c 'echo "\n\n## References\n\n" >> {}; pandoc {} -t gfm --citeproc --bibliography bib.bib --csl ref_format.cls -s -o {}'
+      working-directory: ./site/content/docs/report-c
+
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v2.4.13
       with:
