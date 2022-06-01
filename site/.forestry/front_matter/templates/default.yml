@@ -63,6 +63,7 @@ pages:
 - site/content/posts/frida-objection-https-without-mitm.md
 - site/content/posts/htop-during-factory.md
 - site/content/posts/i-am-root.md
+- site/content/posts/initialisation-pairing-process.md
 - site/content/posts/main-view-checks.md
 - site/content/posts/mmcblk0p7-var-log-apt-history.log.md
 - site/content/posts/mmcblk0p7.md
@@ -77,5 +78,6 @@ pages:
 - site/content/posts/seminar-a-preparation.md
 - site/content/posts/state-of-the-art.md
 - site/content/posts/system-imaging.md
+- site/content/posts/thesis-c-report-structure-notes.md
 - site/content/posts/thesis-tasks.md
 - site/content/posts/xiaomi-cyber-security-baseline-for-consumer-internet-of-things.md
