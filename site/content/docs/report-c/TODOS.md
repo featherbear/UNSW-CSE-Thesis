@@ -8,36 +8,72 @@ TODO: Write this at the end
 ---
 # ToC
 
-TODO: Is a list of figures / tables necessary?
+FIXME: Is a list of figures / tables necessary?
 
 ---
 
 # Abbreviations
 
-TODO: Put in appendix or?
+FIXME: Put this in appendix or?
 
 ---
 # Introduction
+
+TODO: Consolidate Report A introduction
+
+
+FIXME: Privacy AND Security
 
 ---
 
 # Background
 
-+ definitions, context
-+ history of research on the topic
++ TODO: definitions, context
++ TODO: history of research on the topic
 
+TODO: Insert assessment scope diagram -> ![](20220602-assessment-scope-diagram.png)
 
-assessment scope diagram
-
-
-Device
-Cloud Endpoint
-Cloud Gateway
-App
-Local Network
-Internet
 * Not looking at the IoT cloud functions
 * Just looking at local comms
+
+        Nearby Devices
+        Bluetooth Devices
+
+        Will check for interaction with Bluetooth devices (if any)
+        Connected WiFi Network
+        During Initialisation
+
+        Activity during pairing
+        During Operation
+
+        Activity during general power-on and running operation
+        Connected Wired Network
+
+            Connectivity and activity assessment from/to a wired device on a network.
+            Unlikely to see any data due to Ethernet switch behaviour
+
+        Smartphone Application
+
+            Not investigating the interaction between the smartphone application and the device
+
+        Roborock S6
+
+            Analysis of internal behaviour
+            Analysis of interaction and capture of sensory data
+                e.g. mapping data, camera feed, microphone, location
+
+        Xiaomi Cloud
+
+            Will not be looking at internal cloud functions or cloud vulnerabilities
+
+        Requests transmitted to the cloud endpoint, and the responses received.
+        Tuya Cloud
+
+            Not investigating this network as my device was configured for Xiaomi's Cloud servers
+
+        Internet
+
+        Overall network activity. Quantity, destination, time, duration, frequency
 
 
 ## Threat Modelling - STRIDE
@@ -52,39 +88,53 @@ Internet
 * Elevation of Privilege
 
 > Model the Roborock device against the STRIDE model
+> FIXME: PROSPECTIVE or PRODUCED?
 
-* Spoof
-* Tampering
-* Repudiation
-* Information Disclosure
-* Denial of Service
-* Elevation of Privilege
-
+* Spoof -> 
+* Tampering -> Vendor backdoor, access vulnerability
+* Repudiation -> Out of scope ***************
+* Information Disclosure -> Pairing procedure, captured activity, map data, mic, camera
+* Denial of Service -> Out of scope *************** anything jamming related, DNS block, etc. ====> Can the device work without internet?
+* Elevation of Privilege -> Devices
 
 spoofing, modification of firmware, hijack, denial of service, jamming, faking the data source, insecure communication, manipulation of configurations, targetted attacks, 
 OWASP: Access control, crypto vulns , injection, insecure design, misconfiguratoin, outdated vuln components, id/auth failure, integrity failure, logging failure, ssrf
 
 ## Threat Scenarios
 
-TM
+TODO: Something something describe why we are listing descriptions of different scenarios
 
+### TS0 - No threat
 
-1. Attacker planting persistence
-2. Attacker far away
-3. Attacker within proximity
-4. Attacker with device physically compromised
+The "Null Case" where no perceived threat or adversary is present.
 
-* Backdoor / supply chain
-* Someone trying to MITM
-* I paid for the device, don't lock me out
+For a legitimate device owner, issues about data visibility, ownership
+### TS1 - Local (physical) access
 
-* device is shipped out and backdoored
-* device is in house and someone with network access nearby is able to alter
-* someone with network access far away
-* I have physical access
+* i.e. Malicious actor has access to the physical device for a period of time
+* i.e. Supply chain: transport logistics, manufacturer, retailer, second-hand vendor
 
+Attacker planting persistence
+Extraction of data
 
-atacker power
+### TS2 - Remote (proximal) access to a device
+
+* i.e. On the network, wired
+* i.e. On the network, wireless
+* i.e. On the network, MITM
+* i.e. Not on the network, promiscious
+
+* MITM
+* Fingerprinting
+
+### TS3 - Remote (distal) access to a device
+
+* Access to device or data
+* Backdoor
+
+### Out of scope threats
+
+Data stored on cloud server is compromised or accessed inappropriately
 
 ---
 # Literature Review
@@ -106,14 +156,15 @@ https://github.com/MiSecurity/Cyber-Security-Baseline-for-Consumer-Internet-of-T
 
 
 ---
-
-# Evaluation
+# Assessment
 
 > What did you do
 > What did you find
 > What does it mean
 > What does it lead to
 > How does it affect the threat scenarios
+
+
 
 TODO: How much depth
 TODO: Should I talk about challenges faced; or moreso the results
@@ -135,6 +186,8 @@ Plain text broadcast
 Give mention to https://k4czp3r.xyz/reverse-engineering/tp-link/tapo/2020/10/15/reverse-engineering-tp-link-tapo.html
 
 
+
+#
 
 Evaluation: Should I use this device?
 
