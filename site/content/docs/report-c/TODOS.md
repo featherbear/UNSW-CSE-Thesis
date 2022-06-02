@@ -1,5 +1,7 @@
 # Abstract
 
+TODO: Write this at the end
+
 ---
 # Acknowledgements
 
@@ -10,6 +12,11 @@ TODO: Is a list of figures / tables necessary?
 
 ---
 
+# Abbreviations
+
+TODO: Put in appendix or?
+
+---
 # Introduction
 
 ---
@@ -19,32 +26,43 @@ TODO: Is a list of figures / tables necessary?
 + definitions, context
 + history of research on the topic
 
-[Some diagram to show scope]
+
+assessment scope diagram
+
+
+Device
+Cloud Endpoint
+Cloud Gateway
+App
+Local Network
+Internet
 * Not looking at the IoT cloud functions
 * Just looking at local comms
 
 
 ## Threat Modelling - STRIDE
 
+> Talk about the STRIDE model
 
-STRIDE
+* Spoof
+* Tampering
+* Repudiation
+* Information Disclosure
+* Denial of Service
+* Elevation of Privilege
 
-Spoof
-Tampering
-Repudiation
-Information Disclosure
-Denial of Service
-Elevation of Privilege?
+> Model the Roborock device against the STRIDE model
 
-
+* Spoof
+* Tampering
+* Repudiation
+* Information Disclosure
+* Denial of Service
+* Elevation of Privilege
 
 
 spoofing, modification of firmware, hijack, denial of service, jamming, faking the data source, insecure communication, manipulation of configurations, targetted attacks, 
-
 OWASP: Access control, crypto vulns , injection, insecure design, misconfiguratoin, outdated vuln components, id/auth failure, integrity failure, logging failure, ssrf
-
-
-
 
 ## Threat Scenarios
 
@@ -74,14 +92,16 @@ atacker power
 >> Feedback from Report A
 > Would be good to give more detailed threat modelling - eg what is potentially at stake here and why including more on the the cleaner as a potential insider and what trust is required in the company and some consideration of that.  Privacy and security assessments contain good (and impressive) description of work done but need more assessment - eg summary and reflection on what was found to assess the security and privacy for the reader.
 
+TODO: Put existing literature review and update the commentary + active voice and action (if taken)
 
-
-Threat Models for an IoT System
+TODO:: Add threat Models for an IoT System
 - https://arxiv.org/pdf/2201.09493.pdf
 - Going to ignore any wireless contention issues
 - ... this paper is not very in depth
 
-xiaomi standards
+TODO: Reference to Xiaomi standards
+FIXME: Perhaps put this in evaluation/conclusion; making mention that Xiaomi is proactive in their ecosystem security 
+::: See if they enforce?
 https://github.com/MiSecurity/Cyber-Security-Baseline-for-Consumer-Internet-of-Things
 
 
@@ -93,8 +113,10 @@ https://github.com/MiSecurity/Cyber-Security-Baseline-for-Consumer-Internet-of-T
 > What did you find
 > What does it mean
 > What does it lead to
-> How does it affect the TS'
+> How does it affect the threat scenarios
 
+TODO: How much depth
+TODO: Should I talk about challenges faced; or moreso the results
 
 persistence
 -> zerotier
