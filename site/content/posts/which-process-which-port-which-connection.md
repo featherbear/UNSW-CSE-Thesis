@@ -102,3 +102,9 @@ sshd      1668 root    3u  IPv4   8136      0t0  TCP *:22 (LISTEN)
 sshd      1668 root    4u  IPv6   8138      0t0  TCP *:22 (LISTEN)
 sshd      4533 root    3u  IPv4  14828      0t0  TCP 10.147.20.251:22->10.147.20.87:1422 (ESTABLISHED)
 ```
+
+---
+
+# ss
+
+`ss -pl`
