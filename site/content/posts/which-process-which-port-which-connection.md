@@ -17,7 +17,6 @@ toc = true
 # netstat
 
 ```
--bash: auditctl: command not found
 root@rockrobo:/tmp# netstat -anp
 Active Internet connections (servers and established)
 Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
@@ -79,3 +78,27 @@ unix  3      [ ]         STREAM     CONNECTED     1316     228/upstart-udev-br
 ***
 
 # lsof
+
+```
+root@rockrobo:~# lsof -nPi
+COMMAND    PID USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+AppProxy   983 root   34u  IPv4   7879      0t0  TCP 127.0.0.1:37830->127.0.0.1:54322 (ESTABLISHED)
+AppProxy   983 root   35u  IPv4   7880      0t0  TCP 127.0.0.1:59387->127.0.0.1:55551 (ESTABLISHED)
+miio_clie  990 root    8u  IPv4   2741      0t0  UDP *:54321 
+miio_clie  990 root   10u  IPv4   2742      0t0  TCP 127.0.0.1:54322 (LISTEN)
+miio_clie  990 root   12u  IPv4   2743      0t0  TCP 127.0.0.1:54323 (LISTEN)
+miio_clie  990 root   17u  IPv4   4841      0t0  TCP 127.0.0.1:54322->127.0.0.1:37830 (ESTABLISHED)
+miio_clie  990 root   19u  IPv4   9342      0t0  TCP 127.0.0.1:54322->127.0.0.1:37840 (ESTABLISHED)
+rriot_tuy  997 root   15u  IPv4   2751      0t0  TCP 127.0.0.1:55551 (LISTEN)
+rriot_tuy  997 root   18u  IPv4   4843      0t0  TCP 127.0.0.1:55551->127.0.0.1:59387 (ESTABLISHED)
+rriot_tuy  997 root   19u  IPv4   9428      0t0  TCP 192.168.2.206:49788->3.122.217.21:8883 (ESTABLISHED)
+rriot_tuy  997 root   20u  IPv4   9474      0t0  TCP *:6668 (LISTEN)
+rriot_tuy  997 root   21u  IPv4  10242      0t0  UDP 192.168.2.206:45895 
+miio_recv 1492 root    8u  IPv4   4962      0t0  TCP 127.0.0.1:37840->127.0.0.1:54322 (ESTABLISHED)
+dhclient  1611 root   20u  IPv4   8343      0t0  UDP *:39190 
+dhclient  1611 root   21u  IPv6   8344      0t0  UDP *:55551 
+dhclient  1611 root   23u  IPv4   8359      0t0  UDP *:68 
+sshd      1668 root    3u  IPv4   8136      0t0  TCP *:22 (LISTEN)
+sshd      1668 root    4u  IPv6   8138      0t0  TCP *:22 (LISTEN)
+sshd      4533 root    3u  IPv4  14828      0t0  TCP 10.147.20.251:22->10.147.20.87:1422 (ESTABLISHED)
+```
