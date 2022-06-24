@@ -1,0 +1,214 @@
+<!doctype html><html lang=en><meta charset=utf-8>
+<meta name=viewport content="width=device-width">
+<title>5. Preliminary Results | Report A | CSE Thesis Musings</title>
+<meta name=generator content="Hugo Eureka 0.8.2">
+<link rel=stylesheet href=../../../css/eureka.min.css>
+<script defer src=../../../js/eureka.min.js></script>
+<link rel=preconnect href=https://fonts.gstatic.com crossorigin>
+<link rel=preload href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" as=style onload="this.onload=null,this.rel='stylesheet'">
+<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/styles/solarized-light.min.css media=print onload="this.media='all',this.onload=null" crossorigin>
+<script defer src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/highlight.min.js crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/languages/dart.min.js crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js integrity="sha256-uNYoXefWRqv+PsIF/OflNmwtKM4lStn9yrz2gVl6ymo=" crossorigin></script>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css integrity=sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X media=print onload="this.media='all',this.onload=null" crossorigin>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js integrity=sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4 crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js integrity=sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa crossorigin></script>
+<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}]})})</script>
+<script defer src=https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js integrity="sha256-Zmpaaj+GXFsPF5WdPArSrnW3b30dovldeKsW00xBVwE=" crossorigin></script>
+<link rel=preconnect href=https://www.google-analytics.com crossorigin>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107434487-2"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-107434487-2')</script>
+<script>(function(e,b,f,c,a,d){b[c]=b[c]||function(){(b[c].q=b[c].q||[]).push(arguments)},a=e.createElement('script'),d=e.getElementsByTagName('script')[0],a.async=1,a.src=f,a.id='fathom-script',d.parentNode.insertBefore(a,d)})(document,window,'//ss.featherbear.cc/tracker.js','fathom'),fathom('set','siteId','NEQTU'),fathom('trackPageview')</script>
+<style>html.dark{--color-primary-bg:#232327 !important}div#sidebar-toc>ul.pl-6{margin-left:1em}</style>
+<meta name=description content="Preliminary Results Privacy Assessment Network Setup An isolated wireless network was set up to securely observe the wireless network activity of the vacuum cleaner.
+A DHCP server was set up to serve address leases on the 10.10.10.0/24 network, where the IPv4 address of the vacuum cleaner is dynamically issued to simulate a general home network.">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Docs","item":"/docs/"},{"@type":"ListItem","position":2,"name":"Report A","item":"/docs/report-c/"},{"@type":"ListItem","position":3,"name":"5. Preliminary Results","item":"/docs/report-c/progress/"}]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/docs/report-c/progress/"},"headline":"5. Preliminary Results | Report A | CSE Thesis Musings","wordCount":588,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Preliminary Results Privacy Assessment Network Setup An isolated wireless network was set up to securely observe the wireless network activity of the vacuum cleaner.\nA DHCP server was set up to serve address leases on the 10.10.10.0\/24 network, where the IPv4 address of the vacuum cleaner is dynamically issued to simulate a general home network."}</script><meta property="og:title" content="5. Preliminary Results | Report A | CSE Thesis Musings">
+<meta property="og:type" content="article">
+<meta property="og:url" content="/docs/report-c/progress/">
+<meta property="og:description" content="Preliminary Results Privacy Assessment Network Setup An isolated wireless network was set up to securely observe the wireless network activity of the vacuum cleaner.
+A DHCP server was set up to serve address leases on the 10.10.10.0/24 network, where the IPv4 address of the vacuum cleaner is dynamically issued to simulate a general home network.">
+<meta property="og:locale" content="en">
+<meta property="og:site_name" content="CSE Thesis Musings">
+<meta property="article:section" content="docs">
+<body class="flex flex-col min-h-screen">
+<header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
+<div class="w-full max-w-screen-xl mx-auto"><script>let storageColorScheme=localStorage.getItem("lightDarkMode");((storageColorScheme=='Auto'||storageColorScheme==null)&&window.matchMedia("(prefers-color-scheme: dark)").matches||storageColorScheme=="Dark")&&document.getElementsByTagName('html')[0].classList.add('dark')</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+<a href=../../../ class="mr-6 text-primary-text text-xl font-bold">CSE Thesis Musings</a>
+<button id=navbar-btn class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+<i class="fas fa-bars"></i>
+</button>
+<div id=target class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+<div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
+<a href=../../../#about class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">About</a>
+<a href=../../../posts/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">Posts</a>
+<a href=../../../docs/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 selected-menu-item mr-4">Docs</a>
+<a href=../../../tldr/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">Progress Log</a>
+</div>
+<div class=flex>
+<div class="relative pt-4 md:pt-0">
+<div class="cursor-pointer hover:text-eureka" id=lightDarkMode>
+<i class="fas fa-adjust"></i>
+</div>
+<div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id=is-open>
+</div>
+<div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40" id=lightDarkOptions>
+<span class="px-4 py-1 hover:text-eureka" name=Light>Light</span>
+<span class="px-4 py-1 hover:text-eureka" name=Dark>Dark</span>
+<span class="px-4 py-1 hover:text-eureka" name=Auto>Auto</span>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id=is-open-mobile>
+</div>
+</nav>
+<script>let element=document.getElementById('lightDarkMode');storageColorScheme==null||storageColorScheme=='Auto'?document.addEventListener('DOMContentLoaded',()=>{window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change',switchDarkMode)}):storageColorScheme=="Light"?(element.firstElementChild.classList.remove('fa-adjust'),element.firstElementChild.setAttribute("data-icon",'sun'),element.firstElementChild.classList.add('fa-sun')):storageColorScheme=="Dark"&&(element.firstElementChild.classList.remove('fa-adjust'),element.firstElementChild.setAttribute("data-icon",'moon'),element.firstElementChild.classList.add('fa-moon')),document.addEventListener('DOMContentLoaded',()=>{getcolorscheme(),switchBurger()})</script>
+</div>
+</header>
+<main class="flex-grow pt-16">
+<div class=pl-scrollbar>
+<div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
+<div class=lg:pt-12>
+<div class="flex flex-col md:flex-row bg-secondary-bg rounded">
+<div class="md:w-1/4 lg:w-1/5 border-r">
+<div class="sticky top-16 pt-6">
+<div id=sidebar-title class="md:hidden mx-4 px-2 pt-4 pb-2 md:border-b text-tertiary-text md:text-primary-text">
+<span class=font-semibold>Table of Contents</span>
+<i class="fas fa-caret-right ml-1"></i>
+</div>
+<div id=sidebar-toc class="hidden md:block overflow-y-auto mx-6 md:mx-0 pr-6 pt-2 md:max-h-doc-sidebar bg-primary-bg md:bg-transparent">
+<div class="flex flex-wrap ml-4 -mr-2 p-2 bg-secondary-bg md:bg-primary-bg rounded">
+<a class=hover:text-eureka href=../../../docs/report-c/>Report A</a>
+</div>
+<ul class=pl-6>
+<li class=py-2>
+<div>
+<a class=hover:text-eureka href=../../../docs/report-c/acronyms/>Glossary of Acronyms</a>
+</div>
+</li>
+<li class=py-2>
+<div>
+<a class=hover:text-eureka href=../../../docs/report-c/introduction/>1. Introduction</a>
+</div>
+</li>
+<li class=py-2>
+<div>
+<a class=hover:text-eureka href=../../../docs/report-c/background/>2. Background</a>
+</div>
+</li>
+<li class=py-2>
+<div>
+<a class=hover:text-eureka href=../../../docs/report-c/literature-review/>3. Literature Review</a>
+</div>
+</li>
+<li class=py-2>
+<div>
+<a class=hover:text-eureka href=../../../docs/report-c/proposal/>4. Thesis Plan</a>
+</div>
+</li>
+<li class=py-2>
+<div>
+<a class="text-eureka hover:text-eureka" href=../../../docs/report-c/progress/>5. Preliminary Results</a>
+</div>
+</li>
+<li class=py-2>
+<div>
+<a class=hover:text-eureka href=../../../docs/report-c/conclusion/></a>
+</div>
+</li>
+<li class=py-2>
+<div>
+<a class=hover:text-eureka href=../../../docs/report-c/todos/></a>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="w-full md:w-3/4 lg:w-4/5 pb-8 pt-2 md:pt-8">
+<div class="w-full lg:w-3/4 pl-6 ml-0 mr-auto">
+<h1 class="font-bold text-3xl text-primary-text">5. Preliminary Results</h1>
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+</div>
+</div>
+<div class=flex>
+<div class="w-full lg:w-3/4 px-6">
+<div class=content>
+<h1 id=preliminary-results>Preliminary Results</h1>
+<h2 id=privacy-assessment>Privacy Assessment</h2>
+<h3 id=network-setup>Network Setup</h3>
+<p><img src=../../../uploads/Snipaste_2021-12-08_19-14-32.jpg alt></p>
+<p>An isolated wireless network was set up to securely observe the wireless network activity of the vacuum cleaner.<br>
+A DHCP server was set up to serve address leases on the <code>10.10.10.0/24</code> network, where the IPv4 address of the vacuum cleaner is dynamically issued to simulate a general home network. A TP-LINK TL-SG105E switch was configured to port mirror any data sent and received through the wireless access point to the Roborock S6.</p>
+<p>An Android smartphone with the Xiaomi Cloud application was also connected to the isolated network so that intra-device connectivity could be observed. This phone was configured to relay all of its connections through a MITM SSL proxy, so that HTTPS payloads could be decoded.</p>
+<h3 id=network-activity>Network Activity</h3>
+<p>Initial network observations indicated a high volume of network activity between the Xiaomi Cloud application to their IoT servers.<br>
+It was also observed that the Roborock S6 periodically replied to an incoming request roughly every 2 seconds - this is presumably either a keep-alive / command and control mechanism. Detailed payload analysis has not yet been attempted.</p>
+<p>It is worthwhile to note that the network was initially set up incorrectly when packet logging took place. As a result of port mirroring being set up on the router instead of on the network switch, only inbound and outbound WAN packets were being forwarded. This misconfiguration had prevented the logging of LAN packets transmitted between the Xioami Cloud smartphone application and the Roborock S6 whilst remote control operation was in place. The correct networking monitoring environment will be provisioned for future network activity monitoring.</p>
+<h2 id=security-assessment>Security Assessment</h2>
+<p>Prior to starting the firmware security analysis, the firmware image first had to be be obtained. However as there are no public images of the firmware available online, physical disassembly of the vacuum cleaner was required in order expose the UART pins, as outlined by @{DennisGiese-2019}.</p>
+<p><img src=../../../uploads/20211029-20211030_021507-uart-highlighted.jpg alt></p>
+<p>Once the circuit board was removed from the vacuum cleaner chassis, UART pins could be attached to test pads <code>TPA15</code>, <code>TPA16</code> and <code>TPA18</code>. When the vacuum cleaner was powered on and a serial connection was established a baud rate of <code>115200</code>, the bootloader and system serial interfaces were able to be interacted with.</p>
+<p><img src=../../../uploads/20211029-snipaste_2021-10-30_03-26-11.jpg alt></p>
+<p>Through research into the bootloader source code<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup>, it was revealed that the injection of the <code>s</code> character during boot would trigger the bootloader to enter a shell. Which granted access to read and decrypt the root password that was encrypted in a file called <code>vinda</code>. No attempts to further to explore the file system nor to create an image of the firmware has yet been performed</p>
+<h2 id=plans-for-future-research>Plans for Future Research</h2>
+<p>Preliminary security assessment results were satisfactory, as obtaining root access was a critical step prerequisite to analysing the Roborock S6&rsquo;s firmware without expensive equipment like a flash chip programmer - which would have its own inherent risks at outlined in Chapter 3. Moving forwards, the next steps in carrying out the product security assessment will involve the dumping of the flash chip content into an image that can externally analysed offline. It will also be worthwhile to also perform live system forensics, as dynamic behaviours will be hard to detect during a static analysis.</p>
+<p>Whilst not the immediate focus for Thesis B, a reconfiguration of the network monitoring setup is required to properly begin the privacy assessment of the product. Additionally, network activity during initial device pairing as well as general network activity will require to be recaptured to observe the LAN packets that were previously omitted during network capture.</p>
+<section class=footnotes role=doc-endnotes>
+<hr>
+<ol>
+<li id=fn:1 role=doc-endnote>
+<p><a href=https://github.com/allwinner-zh/bootloader/blob/master/u-boot-2011.09/board/sunxi/board_common.c#L843-L847>https://github.com/allwinner-zh/bootloader/blob/master/u-boot-2011.09/board/sunxi/board_common.c#L843-L847</a>&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+</div>
+<div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
+<div>
+<span class="block font-bold">Previous</span>
+<a href=../../../docs/report-c/proposal/ class=block>4. Thesis Plan</a>
+</div>
+<div class="md:text-right mt-4 md:mt-0">
+<span class="block font-bold">Next</span>
+<a href=../../../docs/report-c/conclusion/ class=block></a>
+</div>
+</div>
+</div>
+<div class="hidden lg:block lg:w-1/4">
+<div class="sticky top-16 z-10 hidden lg:block px-6 py-4 bg-secondary-bg pt-16 -mt-16">
+<span class="text-lg font-semibold">On This Page</span>
+</div>
+<div class="sticky-toc hidden lg:block px-6 pb-6 pt-10 -mt-10 border-l">
+<nav id=TableOfContents>
+<ul>
+<li><a href=#privacy-assessment>Privacy Assessment</a>
+<ul>
+<li><a href=#network-setup>Network Setup</a></li>
+<li><a href=#network-activity>Network Activity</a></li>
+</ul>
+</li>
+<li><a href=#security-assessment>Security Assessment</a></li>
+<li><a href=#plans-for-future-research>Plans for Future Research</a></li>
+</ul>
+</nav>
+</div>
+<script>window.addEventListener('DOMContentLoaded',()=>{enableStickyToc()})</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>document.addEventListener('DOMContentLoaded',()=>{hljs.initHighlightingOnLoad(),changeSidebarHeight(),switchDocToc()})</script>
+</div>
+</div>
+</main>
+<footer class=pl-scrollbar>
+<div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
+<p class="text-sm text-tertiary-text">&copy; 2021 <a href=https://featherbear.cc>Andrew Wong (z5206677)</a>
+&#183; Powered by the <a href=https://github.com/wangchucheng/hugo-eureka class=hover:text-eureka>Eureka</a> theme for <a href=https://gohugo.io class=hover:text-eureka>Hugo</a></p>
+</div></div>
+</footer>
+</body>
+</html>

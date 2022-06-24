@@ -1,0 +1,385 @@
+<!doctype html><html lang=en><meta charset=utf-8>
+<meta name=viewport content="width=device-width">
+<title>CSE Thesis Musings</title>
+<meta name=generator content="Hugo Eureka 0.8.2">
+<link rel=stylesheet href=../../../css/eureka.min.css>
+<script defer src=../../../js/eureka.min.js></script>
+<link rel=preconnect href=https://fonts.gstatic.com crossorigin>
+<link rel=preload href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" as=style onload="this.onload=null,this.rel='stylesheet'">
+<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/styles/solarized-light.min.css media=print onload="this.media='all',this.onload=null" crossorigin>
+<script defer src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/highlight.min.js crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/languages/dart.min.js crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js integrity="sha256-uNYoXefWRqv+PsIF/OflNmwtKM4lStn9yrz2gVl6ymo=" crossorigin></script>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css integrity=sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X media=print onload="this.media='all',this.onload=null" crossorigin>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js integrity=sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4 crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js integrity=sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa crossorigin></script>
+<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}]})})</script>
+<script defer src=https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js integrity="sha256-Zmpaaj+GXFsPF5WdPArSrnW3b30dovldeKsW00xBVwE=" crossorigin></script>
+<link rel=preconnect href=https://www.google-analytics.com crossorigin>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107434487-2"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-107434487-2')</script>
+<script>(function(e,b,f,c,a,d){b[c]=b[c]||function(){(b[c].q=b[c].q||[]).push(arguments)},a=e.createElement('script'),d=e.getElementsByTagName('script')[0],a.async=1,a.src=f,a.id='fathom-script',d.parentNode.insertBefore(a,d)})(document,window,'//ss.featherbear.cc/tracker.js','fathom'),fathom('set','siteId','NEQTU'),fathom('trackPageview')</script>
+<style>html.dark{--color-primary-bg:#232327 !important}div#sidebar-toc>ul.pl-6{margin-left:1em}</style>
+<meta name=description content="Abstract TODO: Write this at the end
+ Acknowledgements  ToC FIXME: Is a list of figures / tables necessary?
+ Abbreviations FIXME: Put this in appendix or?
+ Introduction TODO: Consolidate Report A introduction
+FIXME: Privacy AND Security
+ Background  TODO: definitions, context TODO: history of research on the topic  TODO: Insert assessment scope diagram ->   Not looking at the IoT cloud functions">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Docs","item":"/docs/"},{"@type":"ListItem","position":2,"name":"Report A","item":"/docs/report-c/"},{"@type":"ListItem","position":3,"name":"","item":"/docs/report-c/todos/"}]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/docs/report-c/todos/"},"headline":"CSE Thesis Musings","wordCount":877,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Abstract TODO: Write this at the end\n Acknowledgements  ToC FIXME: Is a list of figures \/ tables necessary?\n Abbreviations FIXME: Put this in appendix or?\n Introduction TODO: Consolidate Report A introduction\nFIXME: Privacy AND Security\n Background  TODO: definitions, context TODO: history of research on the topic  TODO: Insert assessment scope diagram -\u0026gt;   Not looking at the IoT cloud functions"}</script><meta property="og:title" content="CSE Thesis Musings">
+<meta property="og:type" content="article">
+<meta property="og:url" content="/docs/report-c/todos/">
+<meta property="og:description" content="Abstract TODO: Write this at the end
+ Acknowledgements  ToC FIXME: Is a list of figures / tables necessary?
+ Abbreviations FIXME: Put this in appendix or?
+ Introduction TODO: Consolidate Report A introduction
+FIXME: Privacy AND Security
+ Background  TODO: definitions, context TODO: history of research on the topic  TODO: Insert assessment scope diagram ->   Not looking at the IoT cloud functions">
+<meta property="og:locale" content="en">
+<meta property="og:site_name" content="CSE Thesis Musings">
+<meta property="article:section" content="docs">
+<body class="flex flex-col min-h-screen">
+<header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
+<div class="w-full max-w-screen-xl mx-auto"><script>let storageColorScheme=localStorage.getItem("lightDarkMode");((storageColorScheme=='Auto'||storageColorScheme==null)&&window.matchMedia("(prefers-color-scheme: dark)").matches||storageColorScheme=="Dark")&&document.getElementsByTagName('html')[0].classList.add('dark')</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+<a href=../../../ class="mr-6 text-primary-text text-xl font-bold">CSE Thesis Musings</a>
+<button id=navbar-btn class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+<i class="fas fa-bars"></i>
+</button>
+<div id=target class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+<div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
+<a href=../../../#about class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">About</a>
+<a href=../../../posts/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">Posts</a>
+<a href=../../../docs/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 selected-menu-item mr-4">Docs</a>
+<a href=../../../tldr/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">Progress Log</a>
+</div>
+<div class=flex>
+<div class="relative pt-4 md:pt-0">
+<div class="cursor-pointer hover:text-eureka" id=lightDarkMode>
+<i class="fas fa-adjust"></i>
+</div>
+<div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id=is-open>
+</div>
+<div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40" id=lightDarkOptions>
+<span class="px-4 py-1 hover:text-eureka" name=Light>Light</span>
+<span class="px-4 py-1 hover:text-eureka" name=Dark>Dark</span>
+<span class="px-4 py-1 hover:text-eureka" name=Auto>Auto</span>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id=is-open-mobile>
+</div>
+</nav>
+<script>let element=document.getElementById('lightDarkMode');storageColorScheme==null||storageColorScheme=='Auto'?document.addEventListener('DOMContentLoaded',()=>{window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change',switchDarkMode)}):storageColorScheme=="Light"?(element.firstElementChild.classList.remove('fa-adjust'),element.firstElementChild.setAttribute("data-icon",'sun'),element.firstElementChild.classList.add('fa-sun')):storageColorScheme=="Dark"&&(element.firstElementChild.classList.remove('fa-adjust'),element.firstElementChild.setAttribute("data-icon",'moon'),element.firstElementChild.classList.add('fa-moon')),document.addEventListener('DOMContentLoaded',()=>{getcolorscheme(),switchBurger()})</script>
+</div>
+</header>
+<main class="flex-grow pt-16">
+<div class=pl-scrollbar>
+<div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
+<div class=lg:pt-12>
+<div class="flex flex-col md:flex-row bg-secondary-bg rounded">
+<div class="md:w-1/4 lg:w-1/5 border-r">
+<div class="sticky top-16 pt-6">
+<div id=sidebar-title class="md:hidden mx-4 px-2 pt-4 pb-2 md:border-b text-tertiary-text md:text-primary-text">
+<span class=font-semibold>Table of Contents</span>
+<i class="fas fa-caret-right ml-1"></i>
+</div>
+<div id=sidebar-toc class="hidden md:block overflow-y-auto mx-6 md:mx-0 pr-6 pt-2 md:max-h-doc-sidebar bg-primary-bg md:bg-transparent">
+<div class="flex flex-wrap ml-4 -mr-2 p-2 bg-secondary-bg md:bg-primary-bg rounded">
+<a class=hover:text-eureka href=../../../docs/report-c/>Report A</a>
+</div>
+<ul class=pl-6>
+<li class=py-2>
+<div>
+<a class=hover:text-eureka href=../../../docs/report-c/acronyms/>Glossary of Acronyms</a>
+</div>
+</li>
+<li class=py-2>
+<div>
+<a class=hover:text-eureka href=../../../docs/report-c/introduction/>1. Introduction</a>
+</div>
+</li>
+<li class=py-2>
+<div>
+<a class=hover:text-eureka href=../../../docs/report-c/background/>2. Background</a>
+</div>
+</li>
+<li class=py-2>
+<div>
+<a class=hover:text-eureka href=../../../docs/report-c/literature-review/>3. Literature Review</a>
+</div>
+</li>
+<li class=py-2>
+<div>
+<a class=hover:text-eureka href=../../../docs/report-c/proposal/>4. Thesis Plan</a>
+</div>
+</li>
+<li class=py-2>
+<div>
+<a class=hover:text-eureka href=../../../docs/report-c/progress/>5. Preliminary Results</a>
+</div>
+</li>
+<li class=py-2>
+<div>
+<a class=hover:text-eureka href=../../../docs/report-c/conclusion/></a>
+</div>
+</li>
+<li class=py-2>
+<div>
+<a class="text-eureka hover:text-eureka" href=../../../docs/report-c/todos/></a>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="w-full md:w-3/4 lg:w-4/5 pb-8 pt-2 md:pt-8">
+<div class="w-full lg:w-3/4 pl-6 ml-0 mr-auto">
+<h1 class="font-bold text-3xl text-primary-text"></h1>
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+</div>
+</div>
+<div class=flex>
+<div class="w-full lg:w-3/4 px-6">
+<div class=content>
+<h1 id=abstract>Abstract</h1>
+<p>TODO: Write this at the end</p>
+<hr>
+<h1 id=acknowledgements>Acknowledgements</h1>
+<hr>
+<h1 id=toc>ToC</h1>
+<p>FIXME: Is a list of figures / tables necessary?</p>
+<hr>
+<h1 id=abbreviations>Abbreviations</h1>
+<p>FIXME: Put this in appendix or?</p>
+<hr>
+<h1 id=introduction>Introduction</h1>
+<p>TODO: Consolidate Report A introduction</p>
+<p>FIXME: Privacy AND Security</p>
+<hr>
+<h1 id=background>Background</h1>
+<ul>
+<li>TODO: definitions, context</li>
+<li>TODO: history of research on the topic</li>
+</ul>
+<p>TODO: Insert assessment scope diagram -> <img src=20220602-assessment-scope-diagram.png alt></p>
+<ul>
+<li>
+<p>Not looking at the IoT cloud functions</p>
+</li>
+<li>
+<p>Just looking at local comms</p>
+<pre><code>  Nearby Devices
+  Bluetooth Devices
+
+  Will check for interaction with Bluetooth devices (if any)
+  Connected WiFi Network
+  During Initialisation
+
+  Activity during pairing
+  During Operation
+
+  Activity during general power-on and running operation
+  Connected Wired Network
+
+      Connectivity and activity assessment from/to a wired device on a network.
+      Unlikely to see any data due to Ethernet switch behaviour
+
+  Smartphone Application
+
+      Not investigating the interaction between the smartphone application and the device
+
+  Roborock S6
+
+      Analysis of internal behaviour
+      Analysis of interaction and capture of sensory data
+          e.g. mapping data, camera feed, microphone, location
+
+  Xiaomi Cloud
+
+      Will not be looking at internal cloud functions or cloud vulnerabilities
+
+  Requests transmitted to the cloud endpoint, and the responses received.
+  Tuya Cloud
+
+      Not investigating this network as my device was configured for Xiaomi's Cloud servers
+
+  Internet
+
+  Overall network activity. Quantity, destination, time, duration, frequency
+</code></pre>
+</li>
+</ul>
+<h2 id=threat-modelling---stride>Threat Modelling - STRIDE</h2>
+<blockquote>
+<p>Talk about the STRIDE model</p>
+</blockquote>
+<ul>
+<li>Spoof</li>
+<li>Tampering</li>
+<li>Repudiation</li>
+<li>Information Disclosure</li>
+<li>Denial of Service</li>
+<li>Elevation of Privilege</li>
+</ul>
+<blockquote>
+<p>Model the Roborock device against the STRIDE model
+FIXME: PROSPECTIVE or PRODUCED?</p>
+</blockquote>
+<ul>
+<li>Spoof -></li>
+<li>Tampering -> Vendor backdoor, access vulnerability</li>
+<li>Repudiation -> Out of scope ***************</li>
+<li>Information Disclosure -> Pairing procedure, captured activity, map data, mic, camera</li>
+<li>Denial of Service -> Out of scope *************** anything jamming related, DNS block, etc. ====> Can the device work without internet?</li>
+<li>Elevation of Privilege -> Devices</li>
+</ul>
+<p>spoofing, modification of firmware, hijack, denial of service, jamming, faking the data source, insecure communication, manipulation of configurations, targetted attacks,
+OWASP: Access control, crypto vulns , injection, insecure design, misconfiguratoin, outdated vuln components, id/auth failure, integrity failure, logging failure, ssrf</p>
+<h2 id=threat-scenarios>Threat Scenarios</h2>
+<p>TODO: Something something describe why we are listing descriptions of different scenarios</p>
+<h3 id=ts0---no-threat>TS0 - No threat</h3>
+<p>The &ldquo;Null Case&rdquo; where no perceived threat or adversary is present.</p>
+<p>For a legitimate device owner, issues about data visibility, ownership</p>
+<h3 id=ts1---local-physical-access>TS1 - Local (physical) access</h3>
+<ul>
+<li>i.e. Malicious actor has access to the physical device for a period of time</li>
+<li>i.e. Supply chain: transport logistics, manufacturer, retailer, second-hand vendor</li>
+</ul>
+<p>Attacker planting persistence
+Extraction of data</p>
+<h3 id=ts2---remote-proximal-access-to-a-device>TS2 - Remote (proximal) access to a device</h3>
+<ul>
+<li>
+<p>i.e. On the network, wired</p>
+</li>
+<li>
+<p>i.e. On the network, wireless</p>
+</li>
+<li>
+<p>i.e. On the network, MITM</p>
+</li>
+<li>
+<p>i.e. Not on the network, promiscious</p>
+</li>
+<li>
+<p>MITM</p>
+</li>
+<li>
+<p>Fingerprinting</p>
+</li>
+</ul>
+<h3 id=ts3---remote-distal-access-to-a-device>TS3 - Remote (distal) access to a device</h3>
+<ul>
+<li>Access to device or data</li>
+<li>Backdoor</li>
+</ul>
+<h3 id=out-of-scope-threats>Out of scope threats</h3>
+<p>Data stored on cloud server is compromised or accessed inappropriately</p>
+<hr>
+<h1 id=literature-review>Literature Review</h1>
+<blockquote>
+<blockquote>
+<p>Feedback from Report A
+Would be good to give more detailed threat modelling - eg what is potentially at stake here and why including more on the the cleaner as a potential insider and what trust is required in the company and some consideration of that. Privacy and security assessments contain good (and impressive) description of work done but need more assessment - eg summary and reflection on what was found to assess the security and privacy for the reader.</p>
+</blockquote>
+</blockquote>
+<p>TODO: Put existing literature review and update the commentary + active voice and action (if taken)</p>
+<p>TODO:: Add threat Models for an IoT System</p>
+<ul>
+<li><a href=https://arxiv.org/pdf/2201.09493.pdf>https://arxiv.org/pdf/2201.09493.pdf</a></li>
+<li>Going to ignore any wireless contention issues</li>
+<li>&mldr; this paper is not very in depth</li>
+</ul>
+<p>TODO: Reference to Xiaomi standards
+FIXME: Perhaps put this in evaluation/conclusion; making mention that Xiaomi is proactive in their ecosystem security
+::: See if they enforce?
+<a href=https://github.com/MiSecurity/Cyber-Security-Baseline-for-Consumer-Internet-of-Things>https://github.com/MiSecurity/Cyber-Security-Baseline-for-Consumer-Internet-of-Things</a></p>
+<hr>
+<h1 id=assessment>Assessment</h1>
+<blockquote>
+<p>What did you do
+What did you find
+What does it mean
+What does it lead to
+How does it affect the threat scenarios</p>
+</blockquote>
+<p>TODO: How much depth
+TODO: Should I talk about challenges faced; or moreso the results</p>
+<p>persistence
+-> zerotier
+-> see if patched</p>
+<ul>
+<li>Try bad usb?</li>
+</ul>
+<p>TODO: Create Proof of Concepts
+e.g Persistence planting via recovery image</p>
+<ul>
+<li>one command</li>
+</ul>
+<p>Pairing process<br>
+<a href=https://featherbear.cc/UNSW-CSE-Thesis/uploads/Snipaste_2022-05-02_01-14-22.jpg>https://featherbear.cc/UNSW-CSE-Thesis/uploads/Snipaste_2022-05-02_01-14-22.jpg</a>
+Plain text broadcast
+Give mention to <a href=https://k4czp3r.xyz/reverse-engineering/tp-link/tapo/2020/10/15/reverse-engineering-tp-link-tapo.html>https://k4czp3r.xyz/reverse-engineering/tp-link/tapo/2020/10/15/reverse-engineering-tp-link-tapo.html</a></p>
+<h1 id=heading></h1>
+<p>Evaluation: Should I use this device?</p>
+<hr>
+<h1 id=summary-and-future-works>Summary and Future Works</h1>
+<p>Look at newer models, older models, other firmware, Tuya server, cloud servers</p>
+<hr>
+<h1 id=references>References</h1>
+<hr>
+<p>Thesis C Report Research Thesis C 90% 10/8/2022 -
+Thesis C Demo Research Thesis C 10% 24/7/2022 -</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>Research direction is excellent but would benefit from a more precise statement of a specific research question.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>Good document layout and presentation. Would benefit from more linking structure so the reader understands the implications of each section and how they fit together. Language good but need to avoid passive voice and make clearer who is the actor - e.g. which things did you do and which things did someone else do and you are just reporting on them.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>&ldquo;Through research into the bootloader source code, it was revealed that the injection of the s character during boot would trigger the bootloader to enter a shell. Which granted access to read and decrypt the root password that was encrypted in a file called vinda&rdquo;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>Which things did you yourself actually do here (I know, but the reader doesn&rsquo;t, and it is impressive so you should make sure the reader does know), and which are you just reporting on others having done?</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</div>
+<div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
+<div>
+<span class="block font-bold">Previous</span>
+<a href=../../../docs/report-c/conclusion/ class=block></a>
+</div>
+<div class="md:text-right mt-4 md:mt-0">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>document.addEventListener('DOMContentLoaded',()=>{hljs.initHighlightingOnLoad(),changeSidebarHeight(),switchDocToc()})</script>
+</div>
+</div>
+</main>
+<footer class=pl-scrollbar>
+<div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
+<p class="text-sm text-tertiary-text">&copy; 2021 <a href=https://featherbear.cc>Andrew Wong (z5206677)</a>
+&#183; Powered by the <a href=https://github.com/wangchucheng/hugo-eureka class=hover:text-eureka>Eureka</a> theme for <a href=https://gohugo.io class=hover:text-eureka>Hugo</a></p>
+</div></div>
+</footer>
+</body>
+</html>

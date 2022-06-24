@@ -1,0 +1,412 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.12.8)  8 DEC 2021 20:57
+entering extended mode
+**./sample-thesis.tex
+(sample-thesis.tex
+LaTeX2e <2021-06-01> patch level 1
+L3 programming layer <2021-08-27> (unswthesis.cls
+Document Class: unswthesis 2015/04/30 v2.0.1 Faculty of Engineering, University
+ of NSW Thesis Class
+(C:\Users\Andrew\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
+Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and foote
+rs
+\f@nch@headwidth=\skip47
+\f@nch@O@elh=\skip48
+\f@nch@O@erh=\skip49
+\f@nch@O@olh=\skip50
+\f@nch@O@orh=\skip51
+\f@nch@O@elf=\skip52
+\f@nch@O@erf=\skip53
+\f@nch@O@olf=\skip54
+\f@nch@O@orf=\skip55
+) (C:\Users\Andrew\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.st
+y
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+(C:\Users\Andrew\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(C:\Users\Andrew\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.
+cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(C:\Users\Andrew\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.de
+f
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+)) (C:\Users\Andrew\AppData\Local\Programs\MiKTeX\tex/latex/units\units.sty
+Package: units 1998/08/04 v0.9b Typesetting units
+
+(C:\Users\Andrew\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(C:\Users\Andrew\AppData\Local\Programs\MiKTeX\tex/latex/units\nicefrac.sty
+Package: nicefrac 1998/08/04 v0.9b Nice fractions
+\L@UnitsRaiseDisplaystyle=\skip56
+\L@UnitsRaiseTextstyle=\skip57
+\L@UnitsRaiseScriptstyle=\skip58
+))
+(C:\Users\Andrew\AppData\Local\Programs\MiKTeX\tex/latex/base\book.cls
+Document Class: book 2021/02/12 v1.4n Standard LaTeX document class
+(C:\Users\Andrew\AppData\Local\Programs\MiKTeX\tex/latex/base\bk11.clo
+File: bk11.clo 2021/02/12 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count182
+\c@chapter=\count183
+\c@section=\count184
+\c@subsection=\count185
+\c@subsubsection=\count186
+\c@paragraph=\count187
+\c@subparagraph=\count188
+\c@figure=\count189
+\c@table=\count190
+\abovecaptionskip=\skip59
+\belowcaptionskip=\skip60
+\bibindent=\dimen138
+)
+(C:\Users\Andrew\AppData\Local\Programs\MiKTeX\tex/latex/sauerj\collect.sty
+Package: collect 2004/09/12 v0.9 collect the contents of an environment
+\CE@tmp@out=\write3
+)
+\CE@@@bstract@out=\write4
+
+(C:\Users\Andrew\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(C:\Users\Andrew\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(C:\Users\Andrew\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(C:\Users\Andrew\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+\Gm@cnth=\count191
+\Gm@cntv=\count192
+\c@Gm@tempcnt=\count193
+\Gm@bindingoffset=\dimen139
+\Gm@wd@mp=\dimen140
+\Gm@odd@mp=\dimen141
+\Gm@even@mp=\dimen142
+\Gm@layoutwidth=\dimen143
+\Gm@layoutheight=\dimen144
+\Gm@layouthoffset=\dimen145
+\Gm@layoutvoffset=\dimen146
+\Gm@dimlist=\toks17
+
+(C:\Users\Andrew\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)
+)
+\botmargin=\skip61
+)
+\@input{definitions.aux}
+\openout2 = `definitions.aux'.
+
+(definitions.tex)
+(C:\Users\Andrew\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pd
+ftex.def
+File: l3backend-pdftex.def 2021-08-04 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count194
+\l__pdf_internal_box=\box50
+) (sample-thesis.aux (abstract.aux) (acknowledgements.aux)
+(abbreviations.aux) (introduction.aux) (background.aux) (mywork.aux)
+(evaluation.aux) (conclusion.aux) (appendix1.aux) (appendix2.aux))
+\openout1 = `sample-thesis.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+
+(C:\Users\Andrew\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.m
+kii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count195
+\scratchdimen=\dimen147
+\scratchbox=\box51
+\nofMPsegments=\count196
+\nofMParguments=\count197
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count198
+\MPscratchDim=\dimen148
+\MPnumerator=\count199
+\makeMPintoPDFobject=\count266
+\everyMPtoPDFconversion=\toks19
+)
+(C:\Users\Andrew\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-
+base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(C:\Users\Andrew\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.
+cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(71.70166pt, 418.25368pt, 107.55254pt)
+* v-part:(T,H,B)=(101.40665pt, 591.5302pt, 152.11pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=412.56497pt
+* \textheight=629.33034pt
+* \oddsidemargin=41.54103pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-1.1381pt
+* \headheight=25.0pt
+* \headsep=20.0pt
+* \topskip=11.0pt
+* \footskip=42.67912pt
+* \marginparwidth=71.13188pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+\@tmpb@x=\box52
+\@titlewidth=\dimen149
+LaTeX Font Info:    Trying to load font information for OT1+phv on input line 3
+9.
+(C:\Users\Andrew\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1phv.fd
+File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
+)
+<crest.pdf, id=1, 147.27522pt x 154.20912pt>
+File: crest.pdf Graphic file (type pdf)
+<use crest.pdf>
+Package pdftex.def Info: crest.pdf  used on input line 39.
+(pdftex.def)             Requested size: 147.27486pt x 154.20872pt.
+LaTeX Font Info:    Calculating math sizes for size <14> on input line 39.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14> on input line 39.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9.79996> on input line 39.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 39.
+
+[1
+
+
+
+
+
+
+{C:/Users/Andrew/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <./crest.pdf>]
+\openout2 = `abstract.aux'.
+
+ (abstract.tex
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 5.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 5.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 5.
+) [2
+
+
+]
+\openout2 = `acknowledgements.aux'.
+
+ (acknowledgements.tex) [3
+
+
+
+
+]
+\openout2 = `abbreviations.aux'.
+
+ (abbreviations.tex) [4
+
+
+
+
+]
+(sample-thesis.toc [5
+
+
+
+])
+\tf@toc=\write5
+\openout5 = `sample-thesis.toc'.
+
+ [6] (sample-thesis.lof)
+\tf@lof=\write6
+\openout6 = `sample-thesis.lof'.
+
+ [7
+
+] (sample-thesis.lot)
+\tf@lot=\write7
+\openout7 = `sample-thesis.lot'.
+
+
+[8
+
+]
+\openout2 = `introduction.aux'.
+
+ (introduction.tex
+Chapter 1.
+) [1
+
+
+
+
+]
+\openout2 = `background.aux'.
+
+ (background.tex
+Chapter 2.
+
+LaTeX Warning: Citation `Noo05' on page 2 undefined on input line 9.
+
+
+LaTeX Warning: Citation `She05' on page 2 undefined on input line 10.
+
+
+LaTeX Warning: Citation `GRS14' on page 2 undefined on input line 15.
+
+) [2
+
+
+
+
+]
+\openout2 = `mywork.aux'.
+
+ (mywork.tex
+Chapter 3.
+
+LaTeX Warning: Citation `Noo05' on page 3 undefined on input line 4.
+
+[3
+
+
+
+
+] [4] [5]
+Chapter 4.
+
+LaTeX Warning: Citation `Sid99' on page 6 undefined on input line 67.
+
+
+LaTeX Warning: Citation `StrWhi79' on page 6 undefined on input line 67.
+
+
+LaTeX Warning: Citation `Coo64' on page 6 undefined on input line 67.
+
+
+LaTeX Warning: Citation `GRS14' on page 6 undefined on input line 67.
+
+
+LaTeX Warning: Citation `NieLeh03' undefined on input line 72.
+
+
+LaTeX Warning: Citation `HasLehKwo05' undefined on input line 72.
+
+[6
+
+]) [7]
+\openout2 = `evaluation.aux'.
+
+ (evaluation.tex
+Chapter 5.
+) [8
+
+
+
+
+]
+\openout2 = `conclusion.aux'.
+
+ (conclusion.tex
+Chapter 6.
+) [9
+
+
+
+
+]
+No file sample-thesis.bbl.
+\openout2 = `appendix1.aux'.
+
+(appendix1.tex
+Overfull \hbox (2.16803pt too wide) in paragraph at lines 10--23
+[] [] 
+ []
+
+
+Underfull \vbox (badness 5637) has occurred while \output is active []
+
+ [10
+
+
+
+
+
+]
+[11] [12]) [13]
+\openout2 = `appendix2.aux'.
+
+ (appendix2.tex [14
+
+
+
+
+]) [15] (sample-thesis.aux (abstract.aux)
+(acknowledgements.aux) (abbreviations.aux) (introduction.aux) (background.aux)
+(mywork.aux) (evaluation.aux) (conclusion.aux) (appendix1.aux) (appendix2.aux))
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 2373 strings out of 478927
+ 38558 string characters out of 2852061
+ 347365 words of memory out of 3000000
+ 20141 multiletter control sequences out of 15000+600000
+ 417464 words of font info for 59 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 72i,14n,80p,561b,356s stack positions out of 5000i,500n,10000p,200000b,80000s
+ <C:\Users\Andrew\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcr
+m1095.pk>{C:/Users/Andrew/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r
+.enc}<C:/Users/Andrew/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
+/cm/cmbx10.pfb><C:/Users/Andrew/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/amsfonts/cm/cmbx12.pfb><C:/Users/Andrew/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmbx8.pfb><C:/Users/Andrew/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Andrew/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Andrew/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Andrew/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/User
+s/Andrew/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/
+Users/Andrew/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb>
+
+Output written on sample-thesis.pdf (23 pages, 319230 bytes).
+PDF statistics:
+ 167 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+
