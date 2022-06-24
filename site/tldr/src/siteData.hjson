@@ -115,8 +115,18 @@
       }
       {
         title: Sunday
-        date: 01/052022
+        date: 01/05/2022
         content: Seminar B preparation
+      }
+      {
+        title: Thursday
+        date: 09/05/2022
+        content: Complete Seminar B
+      }
+      {
+        title: Thursday
+        date: 02/06/2022
+        content: Created entity scope for analysis
       }
     ]
   }
@@ -150,10 +160,18 @@
       }
       {
         title: Sunday
-        date: 01/052022
+        date: 01/05/2022
         content: [
           Did some power analysis of the charger
           Soldered pins onto the UART wires to make a better connection
+        ]
+      }
+      {
+        title: Friday
+        date: 24/06/2022
+        content: [
+          Reassemble unit
+          Extend power connectors and UART cables
         ]
       }
     ]
@@ -226,7 +244,7 @@
       }
       {
         title: Inspection
-        date: 01/05/2021
+        date: 01/05/2022
         link: https://featherbear.cc/UNSW-CSE-Thesis/posts/roborock-s6-teardown/#vacuum-cleaner
         content: [
           Accidentally factory reset the device, so redid everything
@@ -234,6 +252,16 @@
           Tried using PolarProxy but too new (libc)
           Abit of binary analysis
         ]
+      }
+      {
+        title: IPv6
+        date: 23/06/2022
+        content: Checked if IPv6 leases were given out (A: no)
+      }
+      {
+        title: Ports and Processes
+        date: 23/06/2022
+        content: Began to check which processes contacted what address
       }
     ]
   }
