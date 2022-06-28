@@ -1198,620 +1198,74 @@ efe17a31624de9f9cf4bda6260502e77  /usr/sbin/vcstime
 ```
 /usr/sbin/ntpdate 006a0967281c9a061362086b638a21a4 122890cbbaff8ca98f9664add64492bd
 
-/bin/fuser (not found in base)
-/sbin/crda (not found in base)
-/sbin/dhcpcd-bin (not found in base)
-/sbin/dhcpcd3 (not found in base)
-/sbin/fatlabel (not found in base)
-/sbin/fsck.fat (not found in base)
-/sbin/iptables-apply (not found in base)
-/sbin/iw (not found in base)
-/sbin/mkfs.fat (not found in base)
-/sbin/regdbdump (not found in base)
-/sbin/wpa_action (not found in base)
-/sbin/wpa_cli (not found in base)
-/sbin/wpa_supplicant (not found in base)
-/sbin/xtables-multi (not found in base)
-/usr/bin/adbd (not found in base)
-/usr/bin/adbd.bndb (not found in base)
-/usr/bin/bootring (not found in base)
-/usr/bin/ccguess (not found in base)
-/usr/bin/ccrypt (not found in base)
-/usr/bin/create_ap (not found in base)
-/usr/bin/c_rehash (not found in base)
-/usr/bin/killall (not found in base)
-/usr/bin/logrotate.sh (not found in base)
-/usr/bin/lsof (not found in base)
-/usr/bin/openssl (not found in base)
-/usr/bin/peekfd (not found in base)
-/usr/bin/pigz (not found in base)
-/usr/bin/pmount (not found in base)
-/usr/bin/prtstat (not found in base)
-/usr/bin/pstree (not found in base)
-/usr/bin/pumount (not found in base)
-/usr/bin/qemu-arm-static (not found in base)
-/usr/bin/rr_try_mount (not found in base)
-/usr/bin/rsync (not found in base)
-/usr/bin/scp (not found in base)
-/usr/bin/sftp (not found in base)
-/usr/bin/ssh (not found in base)
-/usr/bin/ssh-add (not found in base)
-/usr/bin/ssh-agent (not found in base)
-/usr/bin/ssh-argv0 (not found in base)
-/usr/bin/ssh-copy-id (not found in base)
-/usr/bin/ssh-keygen (not found in base)
-/usr/bin/ssh-keyscan (not found in base)
-/usr/bin/unpigz (not found in base)
-/usr/bin/wpa_passphrase (not found in base)
-/usr/bin/xauth (not found in base)
-/usr/sbin/dnsmasq (not found in base)
-/usr/sbin/haveged (not found in base)
-/usr/sbin/hostapd (not found in base)
-/usr/sbin/hostapd_cli (not found in base)
-/usr/sbin/iptables-apply (not found in base)
-/usr/sbin/nfnl_osf (not found in base)
-/usr/sbin/safe_finger (not found in base)
-/usr/sbin/sshd (not found in base)
-/usr/sbin/tcpd (not found in base)
-/usr/sbin/tcpdchk (not found in base)
-/usr/sbin/tcpdmatch (not found in base)
-/usr/sbin/tcpdump (not found in base)
-/usr/sbin/try-from (not found in base)
-/usr/sbin/update-ca-certificates (not found in base)
+/bin/fuser (not found in base) 73b744ea98518b3b238e7a17d9356a50
+/sbin/crda (not found in base) c6ccce7de9420eda06cf411bb31eeca1
+/sbin/dhcpcd-bin (not found in base) 36f27f551c9b0710459c5b7261cb053a
+/sbin/dhcpcd3 (not found in base) 2d6a61a6873a6bd2a2475f66a0564d06
+/sbin/fatlabel (not found in base) 4c795c3f37c9b895afcd3cb862e85346
+/sbin/fsck.fat (not found in base) 725bc854ed410d2bf5a0c43b07bc4651
+/sbin/iptables-apply (not found in base) bfa7ecc3aac4cb208f32c19e6503a082
+/sbin/iw (not found in base) 9b625d8eee80b5dd49843e86f0cbe51d
+/sbin/mkfs.fat (not found in base) 323b9a49df09450240fc2b512f8cd5bb
+/sbin/regdbdump (not found in base) b594b7a4f1507a0a8353b700da0a99ee
+/sbin/wpa_action (not found in base) 51c21d89182521c79453b20f99125fa1
+/sbin/wpa_cli (not found in base) 86707e0c9d5f006a2b26b5ffc0dbea59
+/sbin/wpa_supplicant (not found in base) 37ee1c9ca2d563ae28892abee4601a39
+/sbin/xtables-multi (not found in base) d49bad0a9e3f098cc3913a8ee75fd73d
+/usr/bin/adbd (not found in base) 110b25922d0cf121deeb5b72342b93c8
+/usr/bin/bootring (not found in base) bf8f440f6fe7e1cbbdaafa491442a4a9
+/usr/bin/ccguess (not found in base) 438e1519d06cca1a91c93a83450213aa
+/usr/bin/ccrypt (not found in base) dc2adb7a044a7062ab2d4740dfc72cd7
+/usr/bin/create_ap (not found in base) fa856af527e32d1822784b1cae2dddde
+/usr/bin/c_rehash (not found in base) c73fa0868ce1f8cb607535e9b822895e
+/usr/bin/killall (not found in base) b3ef77ba9aa62c011d24cf03208ee922
+/usr/bin/logrotate.sh (not found in base) 8129d3de3d967e2887447409ee84fb16
+/usr/bin/lsof (not found in base) ca39db5daa1e61276680c3f12c51791a
+/usr/bin/openssl (not found in base) 97fe9fe716f6246a21c20b9b82138c0f
+/usr/bin/peekfd (not found in base) 8d2f2dbb777b852b59b5b53038925b5c
+/usr/bin/pigz (not found in base) bee97da5b9ee965590af32e10d5933c3
+/usr/bin/pmount (not found in base) 47bc39282350d98ee4fa150faba31491
+/usr/bin/prtstat (not found in base) f92a8a0889e3894e3566caafb27b453a
+/usr/bin/pstree (not found in base) e90ceb7b3b9280c3dfd1562b9c931850
+/usr/bin/pumount (not found in base) 44662f72b22fc7a847faf150c435e6df
+/usr/bin/qemu-arm-static (not found in base) 4a183d05ce4c2ade1732e4ab937acb1f
+/usr/bin/rr_try_mount (not found in base) aef34ac426e24ecfa7090104660289bf
+/usr/bin/rsync (not found in base) 512ba4abb7b0202f6574864a3cd24617
+/usr/bin/scp (not found in base) 354d5bef5c9f5d02f316d6840351a0cd
+/usr/bin/sftp (not found in base) 935094af6142d4abccb2e70c6301b8f1
+/usr/bin/ssh (not found in base) e26376e8c766369c0f55b14b70be0a3c
+/usr/bin/ssh-add (not found in base) 7bb444cd561441b96c0683917bfafec9
+/usr/bin/ssh-agent (not found in base) ee747c3e15201d67798e9c6925722cd4
+/usr/bin/ssh-argv0 (not found in base) bb40f6cb60ce75974b8738bc02b30809
+/usr/bin/ssh-copy-id (not found in base) 5ca9ed4378459b01a795289a54323940
+/usr/bin/ssh-keygen (not found in base) 610488105a3891731b73a4b03c645296
+/usr/bin/ssh-keyscan (not found in base) 900e70e7fdb859ec107709e49ccdef64
+/usr/bin/unpigz (not found in base) bee97da5b9ee965590af32e10d5933c3
+/usr/bin/wpa_passphrase (not found in base) f41559f5faa8e7d35fa1285b65351a61
+/usr/bin/xauth (not found in base) d03d106b3bfee2fdff090eb45173c165
+/usr/sbin/dnsmasq (not found in base) 4036b0dbc14e55edef2a5ff3c6fe8569
+/usr/sbin/haveged (not found in base) 2ce982d29ee5c3d8071f82a8a882cfee
+/usr/sbin/hostapd (not found in base) 666417d2dc29cf52915bb2a873cf09a3
+/usr/sbin/hostapd_cli (not found in base) 19f12aef82030e3f79fd6fc2fde1ede5
+/usr/sbin/iptables-apply (not found in base) bfa7ecc3aac4cb208f32c19e6503a082
+/usr/sbin/nfnl_osf (not found in base) 0f8c4e6983614b80a1299a0fd220047e
+/usr/sbin/safe_finger (not found in base) 7d659ca42ea347335454480da9f070d2
+/usr/sbin/sshd (not found in base) 67a24424efeabc897171e5f47c85fac3
+/usr/sbin/tcpd (not found in base) cb12f7cb8d6faa876f0f505527f4a82a
+/usr/sbin/tcpdchk (not found in base) 4a63dcc874c4313c026ba667d5dea56b
+/usr/sbin/tcpdmatch (not found in base) e8998ab020cf0dbbf48aefe10ddae8cc
+/usr/sbin/tcpdump (not found in base) 50f2ed1f9707873bbd13bde776c9cff7
+/usr/sbin/try-from (not found in base) ea1bd16a749775d1da19277ffbbb665f
+/usr/sbin/update-ca-certificates (not found in base) 33459711bf0dd5b5a92754e9702a943d
 
-/usr/bin/lsb_release (not found in device)
-/usr/bin/py3compile (not found in device)
-/usr/bin/python3.4 (not found in device)
-/usr/bin/pyvenv-3.4 (not found in device)
-/usr/bin/pygettext3.4 (not found in device)
-/usr/bin/2to3-3.4 (not found in device)
-/usr/bin/py3clean (not found in device)
-/usr/bin/python3.4m (not found in device)
-/usr/bin/pydoc3.4 (not found in device)
-/usr/sbin/ntpdate-debian (not found in device)
+/usr/bin/lsb_release (not found in device) 6b28a645e2502966f8f3e77488e35724
+/usr/bin/py3compile (not found in device) 5c3c78d70ba8b03314dc98a2d1c1c6b2
+/usr/bin/python3.4 (not found in device) 4e8b150a58d4f3966d1b853d37bce91d
+/usr/bin/pyvenv-3.4 (not found in device) c66287822f05ba4b738554498a6fdeb4
+/usr/bin/pygettext3.4 (not found in device) d828a0383763162e6212f5309627b2e6
+/usr/bin/2to3-3.4 (not found in device) 615317d1a8961920aa23c1117d257e70
+/usr/bin/py3clean (not found in device) 8b4bc5f46dc11e299dcbb33103ddf9ae
+/usr/bin/python3.4m (not found in device) 4e8b150a58d4f3966d1b853d37bce91d
+/usr/bin/pydoc3.4 (not found in device) 0125215b0550cf3ca117c2c996e98f4d
+/usr/sbin/ntpdate-debian (not found in device) 6aa46cfba91964f25fb1eb02e071a8c3
 ```
-<!--
----
-
-# `/bin/
-
-## Base 
-
-```
-6553d3232d065ffef4a822dfc7315245  bash
-d9bd478d30b8296996f691611f612250  bunzip2
-d9bd478d30b8296996f691611f612250  bzcat
-e786fc0d18a8c8679897afec7dc20f81  bzcmp
-e786fc0d18a8c8679897afec7dc20f81  bzdiff
-2b11565d85da178b3a1942a22d20c624  bzegrep
-10a5a0be2ad3f47fff12daaf1c0256c5  bzexe
-2b11565d85da178b3a1942a22d20c624  bzfgrep
-2b11565d85da178b3a1942a22d20c624  bzgrep
-d9bd478d30b8296996f691611f612250  bzip2       
-8c67ae6cd79ae9cbedbdc7e5d2c41070  bzip2recover
-e243255b6cf3b9403df53cb9cd6176e1  bzless
-e243255b6cf3b9403df53cb9cd6176e1  bzmore
-ab672723793609e5dec2af80e3f0c2da  cat
-e9b60663148d72ec3a6b668cd1943301  chgrp
-00131fe7c4835dda1a8bb02fc7922364  chmod
-2fa55f966295a7a46d30ebdeae7fbc46  chown
-ecb69125fe3adea5b82cea026954c85f  chvt
-b4ab609553139a4afbcc3a3bf032965c  cp
-b6a8161aa0fc83b616fcf5fd822f8c12  cpio
-8b5a4d6c711aafaab39b14c6ef8668d4  dash
-a969e776166d932ee8c9fea63bb97651  date
-70efc37e6afb7f5be6c4cf76afd3965b  dd  
-8e1258d2c1fb39e01d54b43c90613c43  df  
-e5d457d763e698fd476e6f4654d2a9c3  dir
-b7acec29291d678c6ac2f20f249a4f0e  dmesg        
-6f767bafb38bd9e88163aa8dfc5209e3  dnsdomainname
-6f767bafb38bd9e88163aa8dfc5209e3  domainname   
-8f22c23485e71c9d61039ad0b727c09a  dumpkeys
-69f14c55e10acd636fea8d5f7c0113a5  echo
-3792bed265bb60401629ab6bdde666d4  egrep
-4c1c644b1d43e9cb126421478c545ec1  false
-a6102c28f733c5cc42fd2679cbf96b46  fgconsole
-eebcfad8efc18852f77be5eb74931a03  fgrep
-230791c5c3857867f3e6a60982b0e3ea  findmnt
-455f52f94d97d12b3be8baab07391f69  grep
-ccfad9cbfee0c140afa126ad7323f03e  gunzip
-496ff119e59b9f70a9b2bd00da0bdde9  gzexe
-c06831acf063e94b6a5d4fb898c9586a  gzip
-6f767bafb38bd9e88163aa8dfc5209e3  hostname
-9974d0dd6a83ecc422d31dd1ad6731e0  ip
-ba207a0907b5460c65561ff8a35edd26  kbd_mode
-2ec66ffc191327adcf58ac5445b6eaae  kill    
-44a6d2566cca9e2658fe8f5c8a67e18d  kmod
-6a2dae6550d40fcf04abdbf5cf89acfa  less
-7dc5abfd22bd6a1a2e30e023d208ecc5  lessecho
-6a5d60fd91bb040416c47c449d789a6b  lessfile
-0b4f3b64f5e3e9ed60a88aea73735382  lesskey
-6a5d60fd91bb040416c47c449d789a6b  lesspipe
-23df90f0b83255fd97d80a72ada2096e  ln      
-03bc02934492eac997443906862f4610  loadkeys
-f3cad707185a22923f6add6e08c01ee6  login
-89dceb38e1d9b08b699303bca77ec00d  ls
-0bb43304bf01531455291a08f4ce90d4  lsblk
-44a6d2566cca9e2658fe8f5c8a67e18d  lsmod
-86742b0a21aef39045392bf7202ddee8  mkdir
-72ce292bbd7b7de98cb4d500506234c7  mknod
-5d08b766ddd16e6912fda1abe84cc270  mktemp
-eb71a4a464eaf4b8311192a52c90c356  more
-b3d49b1195974dcc48bc00ef09ad12cd  mount
-8d86f0079ea0b3c888bcb5878b3ec128  mountpoint
-746038071c1f5ba13d7cf4f4adeab3cf  mt    
-8453b7a9644400aa8b93994d76336c9a  mt-gnu
-68ab4450fdc0b51ae182cb16e0d68098  mv
-a89d71deddd93f407f9915575e2a833b  nc
-cdc0766e58c837c684db36a2a670c703  nc.openbsd
-a89d71deddd93f407f9915575e2a833b  netcat
-a2f179a0be8a8adf71eb52a9d1021284  netstat
-6f767bafb38bd9e88163aa8dfc5209e3  nisdomainname
-8f2e4c5cdfdb2068988a93622369d453  open
-8f2e4c5cdfdb2068988a93622369d453  openvt
-f58f67968fc50f1497f9ea9e9c22b6e8  pidof
-4c9dd3538e5fb6ce982edacc63035797  ping
-86f2eb7b79d2548b284418f959858225  ping6
-edee9e9cbcdab8f12bee3e48bcb96513  plymouth
-6bb6e4800712a99b28d54d73e89c1508  plymouth-upstart-bridge
-1b8b1306d513a6d6e1beed472ff33ca1  ps
-72cbddb14596b65783db2405d5c737d9  pwd
-6553d3232d065ffef4a822dfc7315245  rbash
-43f9b2ca525585fcfe5681e8899b31c3  readlink
-4e01cc2d3fcf5c6d5d3ace5e450e527f  rm
-aaad82e4569e13eda32b91e9ef87d0ec  rmdir
-273e24c2c370ddd762f554cc0dc806e7  run-parts
-456713162e2471cb60f4330be6218141  running-in-container
-6be1c261fb30d002c1552cfc58685fe0  sed
-41fffa135ea6581043227d4d5b2b4bb9  setfont
-41ce35ea1c14db128eccc8b4c3c7243a  setupcon
-8b5a4d6c711aafaab39b14c6ef8668d4  sh
-8b5a4d6c711aafaab39b14c6ef8668d4  sh.distrib
-7da5abdc5b0edca47b2d7e0fba13da71  sleep
-6c1c7862061cfe5dc8d7a2375a43a5c3  ss
-9360ece6904332ae0d8ea70d81339d64  stty
-f42805a6b9fdd4e695ede2841a7c3ef1  su
-d1f939c2e6e5857c3866b72d41d4babe  sync
-f56567f0ce69207c4ec33b04be9563ea  tailf
-30e4067a03cfe4ba8fc3963c0f8ba616  tar
-ba8de3cd811315a786cabd2c85b6440b  tempfile
-6aa4b4c83e7cd2414ac063ad20e45006  touch
-6504cedf0d26ace4fb6d7f036b0d902c  true
-e7daa6414679d7f57cf64b23554b7724  udevadm
-f92980b7e84fc96e6ac4d58e10eb27c8  umount
-aa180605fcc6d18c97d8b48d166ce142  uname
-ccfad9cbfee0c140afa126ad7323f03e  uncompress
-74cc360b19fc2a94ea620ef5803a381b  unicode_start
-341f74b56fb3081cac5162bfb4394bea  vdir
-e942f154ef9d9974366551d2d231d936  which
-6bd52a2139680d8c345240ba78086246  whiptail
-6f767bafb38bd9e88163aa8dfc5209e3  ypdomainname
-18cb262c4578777fe8b40f1a33cb3d2f  zcat
-e3c02b0c9880f73de59de5a034d91279  zcmp
-148dd83c24e8de4377d1ecfa17d10617  zdiff
-ed70ca83dc1aac21ce26355fd1bb9325  zegrep
-f60447901653b1ddcc698d644b9675c8  zfgrep
-b3be5f13ee3c82035b23f5f2606b2d85  zforce
-501c59e1ba85f6307137dec33ce95b8c  zgrep
-5092afe6ad610356f3f9bb67cea577ad  zless
-709f7901342ed6d0d09c1e21f6c7796b  zmore
-8567381fa3c964ce0cc1d3d844115609  znew
-```
-
-## Device
-
-```
-6553d3232d065ffef4a822dfc7315245  bash
-d9bd478d30b8296996f691611f612250  bunzip2
-d9bd478d30b8296996f691611f612250  bzcat
-e786fc0d18a8c8679897afec7dc20f81  bzcmp
-e786fc0d18a8c8679897afec7dc20f81  bzdiff
-2b11565d85da178b3a1942a22d20c624  bzegrep
-10a5a0be2ad3f47fff12daaf1c0256c5  bzexe
-2b11565d85da178b3a1942a22d20c624  bzfgrep
-2b11565d85da178b3a1942a22d20c624  bzgrep
-d9bd478d30b8296996f691611f612250  bzip2
-8c67ae6cd79ae9cbedbdc7e5d2c41070  bzip2recover
-e243255b6cf3b9403df53cb9cd6176e1  bzless
-e243255b6cf3b9403df53cb9cd6176e1  bzmore
-ab672723793609e5dec2af80e3f0c2da  cat
-e9b60663148d72ec3a6b668cd1943301  chgrp
-00131fe7c4835dda1a8bb02fc7922364  chmod
-2fa55f966295a7a46d30ebdeae7fbc46  chown
-ecb69125fe3adea5b82cea026954c85f  chvt
-b4ab609553139a4afbcc3a3bf032965c  cp
-b6a8161aa0fc83b616fcf5fd822f8c12  cpio
-8b5a4d6c711aafaab39b14c6ef8668d4  dash
-a969e776166d932ee8c9fea63bb97651  date
-70efc37e6afb7f5be6c4cf76afd3965b  dd
-8e1258d2c1fb39e01d54b43c90613c43  df
-e5d457d763e698fd476e6f4654d2a9c3  dir
-b7acec29291d678c6ac2f20f249a4f0e  dmesg
-6f767bafb38bd9e88163aa8dfc5209e3  dnsdomainname
-6f767bafb38bd9e88163aa8dfc5209e3  domainname
-8f22c23485e71c9d61039ad0b727c09a  dumpkeys
-69f14c55e10acd636fea8d5f7c0113a5  echo
-3792bed265bb60401629ab6bdde666d4  egrep
-4c1c644b1d43e9cb126421478c545ec1  false
-a6102c28f733c5cc42fd2679cbf96b46  fgconsole
-eebcfad8efc18852f77be5eb74931a03  fgrep
-230791c5c3857867f3e6a60982b0e3ea  findmnt
-73b744ea98518b3b238e7a17d9356a50  fuser
-455f52f94d97d12b3be8baab07391f69  grep
-ccfad9cbfee0c140afa126ad7323f03e  gunzip
-496ff119e59b9f70a9b2bd00da0bdde9  gzexe
-c06831acf063e94b6a5d4fb898c9586a  gzip
-6f767bafb38bd9e88163aa8dfc5209e3  hostname
-9974d0dd6a83ecc422d31dd1ad6731e0  ip
-ba207a0907b5460c65561ff8a35edd26  kbd_mode
-2ec66ffc191327adcf58ac5445b6eaae  kill
-44a6d2566cca9e2658fe8f5c8a67e18d  kmod
-6a2dae6550d40fcf04abdbf5cf89acfa  less
-7dc5abfd22bd6a1a2e30e023d208ecc5  lessecho
-6a5d60fd91bb040416c47c449d789a6b  lessfile
-0b4f3b64f5e3e9ed60a88aea73735382  lesskey
-6a5d60fd91bb040416c47c449d789a6b  lesspipe
-23df90f0b83255fd97d80a72ada2096e  ln
-03bc02934492eac997443906862f4610  loadkeys
-f3cad707185a22923f6add6e08c01ee6  login
-89dceb38e1d9b08b699303bca77ec00d  ls
-0bb43304bf01531455291a08f4ce90d4  lsblk
-44a6d2566cca9e2658fe8f5c8a67e18d  lsmod
-86742b0a21aef39045392bf7202ddee8  mkdir
-72ce292bbd7b7de98cb4d500506234c7  mknod
-5d08b766ddd16e6912fda1abe84cc270  mktemp
-eb71a4a464eaf4b8311192a52c90c356  more
-b3d49b1195974dcc48bc00ef09ad12cd  mount
-8d86f0079ea0b3c888bcb5878b3ec128  mountpoint
-8453b7a9644400aa8b93994d76336c9a  mt
-8453b7a9644400aa8b93994d76336c9a  mt-gnu
-68ab4450fdc0b51ae182cb16e0d68098  mv
-cdc0766e58c837c684db36a2a670c703  nc
-cdc0766e58c837c684db36a2a670c703  nc.openbsd
-cdc0766e58c837c684db36a2a670c703  netcat
-a2f179a0be8a8adf71eb52a9d1021284  netstat
-6f767bafb38bd9e88163aa8dfc5209e3  nisdomainname
-8f2e4c5cdfdb2068988a93622369d453  open
-8f2e4c5cdfdb2068988a93622369d453  openvt
-73863d79612c16d88f7bedbacb89190a  pidof
-4c9dd3538e5fb6ce982edacc63035797  ping
-86f2eb7b79d2548b284418f959858225  ping6
-edee9e9cbcdab8f12bee3e48bcb96513  plymouth
-6bb6e4800712a99b28d54d73e89c1508  plymouth-upstart-bridge
-1b8b1306d513a6d6e1beed472ff33ca1  ps
-72cbddb14596b65783db2405d5c737d9  pwd
-6553d3232d065ffef4a822dfc7315245  rbash
-43f9b2ca525585fcfe5681e8899b31c3  readlink
-4e01cc2d3fcf5c6d5d3ace5e450e527f  rm
-aaad82e4569e13eda32b91e9ef87d0ec  rmdir
-273e24c2c370ddd762f554cc0dc806e7  run-parts
-456713162e2471cb60f4330be6218141  running-in-container
-6be1c261fb30d002c1552cfc58685fe0  sed
-41fffa135ea6581043227d4d5b2b4bb9  setfont
-41ce35ea1c14db128eccc8b4c3c7243a  setupcon
-8b5a4d6c711aafaab39b14c6ef8668d4  sh
-8b5a4d6c711aafaab39b14c6ef8668d4  sh.distrib
-7da5abdc5b0edca47b2d7e0fba13da71  sleep
-6c1c7862061cfe5dc8d7a2375a43a5c3  ss
-9360ece6904332ae0d8ea70d81339d64  stty
-f42805a6b9fdd4e695ede2841a7c3ef1  su
-d1f939c2e6e5857c3866b72d41d4babe  sync
-f56567f0ce69207c4ec33b04be9563ea  tailf
-30e4067a03cfe4ba8fc3963c0f8ba616  tar
-ba8de3cd811315a786cabd2c85b6440b  tempfile
-6aa4b4c83e7cd2414ac063ad20e45006  touch
-6504cedf0d26ace4fb6d7f036b0d902c  true
-e7daa6414679d7f57cf64b23554b7724  udevadm
-f92980b7e84fc96e6ac4d58e10eb27c8  umount
-aa180605fcc6d18c97d8b48d166ce142  uname
-ccfad9cbfee0c140afa126ad7323f03e  uncompress
-74cc360b19fc2a94ea620ef5803a381b  unicode_start
-341f74b56fb3081cac5162bfb4394bea  vdir
-e942f154ef9d9974366551d2d231d936  which
-6bd52a2139680d8c345240ba78086246  whiptail
-6f767bafb38bd9e88163aa8dfc5209e3  ypdomainname
-18cb262c4578777fe8b40f1a33cb3d2f  zcat
-e3c02b0c9880f73de59de5a034d91279  zcmp
-148dd83c24e8de4377d1ecfa17d10617  zdiff
-ed70ca83dc1aac21ce26355fd1bb9325  zegrep
-f60447901653b1ddcc698d644b9675c8  zfgrep
-b3be5f13ee3c82035b23f5f2606b2d85  zforce
-501c59e1ba85f6307137dec33ce95b8c  zgrep
-5092afe6ad610356f3f9bb67cea577ad  zless
-709f7901342ed6d0d09c1e21f6c7796b  zmore
-8567381fa3c964ce0cc1d3d844115609  znew
-```
-
----
-
-# `/sbin`
-
-## Base
-
-```
-fc7564f055c4523a8978b7c1fe40f77b  MAKEDEV
-4bfef0b42dde2a1e84fa9dbcfb5936d7  agetty
-67d5f0f637b06cc8ec61baa042db64e3  badblocks
-dbc10f0d000a05f2d69357e15b405e00  blkid
-02f3311be7cf778d256cd5e04c944649  blockdev
-e62942746048312496948a5b64cea56d  bridge
-0c83adcf447344e83223dcd3b524cb8d  capsh
-e907e461ae7abd0f1fa0a8c6706bd0d4  cfdisk
-ffa6ecd5b550899bb291176f8deae263  ctrlaltdel
-2571172fc64d8e35b4acb5d226bbbd81  debugfs
-0b44462b1a40df8039d6d61cfff7ea84  depmod
-ca6c31f9b70e3b55817a04253f1b0b05  dhclient
-c6c2a86f30179ec4181d094e0d2d5efc  dhclient-script
-b16d2b7278d1aefbc4f094ff2fcaaada  dmsetup
-5e70447e6a2a958e8e3bf723f3959b59  dumpe2fs
-ffb7fd4c47b2e8aa3cc8825d9e9a3918  e2fsck
-bff392b795883a68f97311b2a2239b65  e2image
-9cba9f98ebee505de2060654958b9ce9  e2label
-2e32ada0c1cd1dec64486758febf39ab  e2undo
-79fa4a9222c3ca15c5d9a10095d81e0a  fdisk
-d70f2149029c4fb1d7e0decba80b312e  findfs
-7236832d8bc2b221452508ee72770f1d  fsck
-74081800a5fd9000028508b3cf4dbf60  fsck.cramfs
-ffb7fd4c47b2e8aa3cc8825d9e9a3918  fsck.ext2
-ffb7fd4c47b2e8aa3cc8825d9e9a3918  fsck.ext3
-ffb7fd4c47b2e8aa3cc8825d9e9a3918  fsck.ext4
-ffb7fd4c47b2e8aa3cc8825d9e9a3918  fsck.ext4dev
-3965493a8195b203e7a9ececb0e00be2  fsck.minix
-982a8ab75a85d43e66b4c883c27bfddd  fsck.nfs
-2510fa561a642ea95f3e3a564afb8799  fsfreeze
-5a9e76c7133b04214aa1520304c02205  fstab-decode
-e64592e7e148f443e0e13c2522a44902  fstrim
-b9212cee6228c9f869e5c9afdd5504d1  fstrim-all
-bae1a49f4ad123f61425b35061faed1c  getcap
-f02b55b437fa91d644147a1c3849de33  getpcaps
-4bfef0b42dde2a1e84fa9dbcfb5936d7  getty
-489768d0bb7970ca7b392492ad355cfa  halt
-f7184433ed72f81b924262f951b2f71c  hwclock
-da9386333337ae49fb8b5a06cc200d6d  ifconfig
-32156c45747d6148b561a5a5bce07e04  ifdown
-32156c45747d6148b561a5a5bce07e04  ifquery
-32156c45747d6148b561a5a5bce07e04  ifup
-962f677e73040fdcc4179d71f8f34e17  init
-e5a38c7815b8076843bf99e6b2ba4f53  initctl
-0b44462b1a40df8039d6d61cfff7ea84  insmod
-2ded75b8025106d313faad3e85d2056a  installkernel
-cd92bd28c8337a4dc4e8b3433befe7e2  ip
-395abe3f4470ccf065ca739ccd060bac  ipmaddr
-452a74bd0f3395119a6b11f644f51181  iptunnel
-1c16e2e5f78dd9bd7dac3ae74f1830b5  isosize
-782a94836c1017fc01f85a730a5a5534  kbdrate
-73863d79612c16d88f7bedbacb89190a  killall5
-85e9e2c4a9c0a7af309c906516aa4548  ldconfig
-0dc3219be0c361b51bbb8d404c870387  ldconfig.real
-6c1a1d1cd0e3a811c7de0ff177c1247d  logsave
-ec0ce9196b34179d92565420cd84fe94  losetup
-0b44462b1a40df8039d6d61cfff7ea84  lsmod
-9cebace2371335c80ca97f80762510ba  mii-tool
-46747e533e25641bb14eeaf4a60040bd  mke2fs
-e9efb5f8c7d874a4c829589021ffc871  mkfs
-5a9bed4fafe0cc0f00a40628fa92cc24  mkfs.bfs
-4ce6f2cf22a49ff71c7f1b137f9087b3  mkfs.cramfs
-46747e533e25641bb14eeaf4a60040bd  mkfs.ext2
-46747e533e25641bb14eeaf4a60040bd  mkfs.ext3
-46747e533e25641bb14eeaf4a60040bd  mkfs.ext4
-46747e533e25641bb14eeaf4a60040bd  mkfs.ext4dev
-a61a15b2b40622cd0c83f7ac420a412e  mkfs.minix
-58f3aa2a2ddb9dc9144b8c02a9bf5f93  mkhomedir_helper
-a8cb4ec37af92facce13971eaba81856  mkswap
-11a9db044fa4aa56a99c3181677576ce  mntctl
-0b44462b1a40df8039d6d61cfff7ea84  modinfo
-0b44462b1a40df8039d6d61cfff7ea84  modprobe
-07242caa97682d92c2de551a7dd18b7d  mountall
-ccfe6d811cc56e53ff8dcbd05386d153  nameif
-0cb691c0916222ce81c6651469b30646  pam_tally
-5542fc4a7391d0a39132bb14367d2e95  pam_tally2
-f611844a31d694d50302dae797360f17  pivot_root
-51ce27b3e6302ef028b493a572bbcb42  plipconfig
-ae70f215c9b10fdccd2af6d8adb0efb4  plymouthd
-489768d0bb7970ca7b392492ad355cfa  poweroff
-caff4f1cf0796cd875aebe9c6f1d6986  rarp
-9fb37124a2da2ea64f2125b93fb251d0  raw
-489768d0bb7970ca7b392492ad355cfa  reboot
-e5a38c7815b8076843bf99e6b2ba4f53  reload
-7b40b81456e347d7a470501a181a6e87  resize2fs
-d2dc02339370f5c84225e77f10498f85  resolvconf
-e5a38c7815b8076843bf99e6b2ba4f53  restart
-0b44462b1a40df8039d6d61cfff7ea84  rmmod
-7564dd14d171f7fde8c73ec8dc869ae6  route
-b3ddddb004746a3c4096ade863a41178  rtacct
-6c92158b511540fbf6880ccf2bae2f87  rtmon
-438316179420d9a13cd4f43c91619b6d  runlevel
-84a997280908941d7c2b7c0299a7cdda  setcap
-c412247eb6db07ce26d796c74123c219  setvtrgb
-4be8b1920259204f416dfcfb7d66b2ca  sfdisk
-649162e17b14c068cf80d5e3557cd8a2  shadowconfig
-e583369a2efcbc9baf4bbbf71ec0632f  shutdown
-d8377689e10559864873488d1688e20a  slattach
-e5a38c7815b8076843bf99e6b2ba4f53  start
-c6c29d8d14d6eaf73b3a68559171bcc9  start-stop-daemon
-bb7a452c34587dd6f84cf0925612b113  startpar
-141bc78731e2ca779c533654b3074480  startpar-upstart-inject
-e5a38c7815b8076843bf99e6b2ba4f53  status
-e5a38c7815b8076843bf99e6b2ba4f53  stop
-77d4c5c0cc57b9c087b912e37d50a447  sulogin
-f7982a00fd2714bb4c708d07c2de4fb1  swaplabel
-cb097abb85071c9dca31c22aeb22ad99  swapoff
-cb097abb85071c9dca31c22aeb22ad99  swapon
-20a5316bfa9d2b984c504a0192158bc7  switch_root
-dbe4d0f55c9820e948cc133963211287  sysctl
-dd888ab03375d7b9953fc5614a27f900  tc
-a23276ffb11474d2a477c6162bfb4c0a  telinit
-9cba9f98ebee505de2060654958b9ce9  tune2fs
-fdccb362d7742105c3af0d4ab019e259  udevadm
-eaaa3b6d8deb329ef3ab008eb4ade82a  udevd
-5c34df1210ac42be3445b9e69ea2bb81  unix_chkpwd
-d1e77c21960de09be3e6d8bd393541bf  unix_update
-9a44d02f8a83e2c8ad2ff0ade257d2d8  upstart-dbus-bridge
-2d81c205b9e8081fa8de09644239022b  upstart-event-bridge
-382fcbd1cbb092bfbeb2818817dfa5ea  upstart-file-bridge
-5788fffff45406a252b6c647c6447192  upstart-local-bridge
-bfb5e9eb2811ec4ea6a1f4b26544c01b  upstart-socket-bridge
-34ca387a6e1f6fe63f1cdaa380507b5f  upstart-udev-bridge
-03399a44417ebfd776b5574d95250f5c  ureadahead
-9d94c6aeae8126492e9b6734a140e14e  wipefs
-```
-
-## Device
-
-```
-fc7564f055c4523a8978b7c1fe40f77b  MAKEDEV
-4bfef0b42dde2a1e84fa9dbcfb5936d7  agetty
-67d5f0f637b06cc8ec61baa042db64e3  badblocks
-dbc10f0d000a05f2d69357e15b405e00  blkid
-02f3311be7cf778d256cd5e04c944649  blockdev
-e62942746048312496948a5b64cea56d  bridge
-0c83adcf447344e83223dcd3b524cb8d  capsh
-e907e461ae7abd0f1fa0a8c6706bd0d4  cfdisk
-c6ccce7de9420eda06cf411bb31eeca1  crda
-ffa6ecd5b550899bb291176f8deae263  ctrlaltdel
-2571172fc64d8e35b4acb5d226bbbd81  debugfs
-44a6d2566cca9e2658fe8f5c8a67e18d  depmod
-ca6c31f9b70e3b55817a04253f1b0b05  dhclient
-c6c2a86f30179ec4181d094e0d2d5efc  dhclient-script
-2d6a61a6873a6bd2a2475f66a0564d06  dhcpcd
-36f27f551c9b0710459c5b7261cb053a  dhcpcd-bin
-2d6a61a6873a6bd2a2475f66a0564d06  dhcpcd3
-b16d2b7278d1aefbc4f094ff2fcaaada  dmsetup
-725bc854ed410d2bf5a0c43b07bc4651  dosfsck
-4c795c3f37c9b895afcd3cb862e85346  dosfslabel
-5e70447e6a2a958e8e3bf723f3959b59  dumpe2fs
-ffb7fd4c47b2e8aa3cc8825d9e9a3918  e2fsck
-bff392b795883a68f97311b2a2239b65  e2image
-9cba9f98ebee505de2060654958b9ce9  e2label
-2e32ada0c1cd1dec64486758febf39ab  e2undo
-4c795c3f37c9b895afcd3cb862e85346  fatlabel
-79fa4a9222c3ca15c5d9a10095d81e0a  fdisk
-d70f2149029c4fb1d7e0decba80b312e  findfs
-7236832d8bc2b221452508ee72770f1d  fsck
-74081800a5fd9000028508b3cf4dbf60  fsck.cramfs
-ffb7fd4c47b2e8aa3cc8825d9e9a3918  fsck.ext2
-ffb7fd4c47b2e8aa3cc8825d9e9a3918  fsck.ext3
-ffb7fd4c47b2e8aa3cc8825d9e9a3918  fsck.ext4
-ffb7fd4c47b2e8aa3cc8825d9e9a3918  fsck.ext4dev
-725bc854ed410d2bf5a0c43b07bc4651  fsck.fat
-3965493a8195b203e7a9ececb0e00be2  fsck.minix
-725bc854ed410d2bf5a0c43b07bc4651  fsck.msdos
-982a8ab75a85d43e66b4c883c27bfddd  fsck.nfs
-725bc854ed410d2bf5a0c43b07bc4651  fsck.vfat
-2510fa561a642ea95f3e3a564afb8799  fsfreeze
-5a9e76c7133b04214aa1520304c02205  fstab-decode
-e64592e7e148f443e0e13c2522a44902  fstrim
-b9212cee6228c9f869e5c9afdd5504d1  fstrim-all
-bae1a49f4ad123f61425b35061faed1c  getcap
-f02b55b437fa91d644147a1c3849de33  getpcaps
-4bfef0b42dde2a1e84fa9dbcfb5936d7  getty
-489768d0bb7970ca7b392492ad355cfa  halt
-f7184433ed72f81b924262f951b2f71c  hwclock
-da9386333337ae49fb8b5a06cc200d6d  ifconfig
-32156c45747d6148b561a5a5bce07e04  ifdown
-32156c45747d6148b561a5a5bce07e04  ifquery
-32156c45747d6148b561a5a5bce07e04  ifup
-962f677e73040fdcc4179d71f8f34e17  init
-e5a38c7815b8076843bf99e6b2ba4f53  initctl
-44a6d2566cca9e2658fe8f5c8a67e18d  insmod
-2ded75b8025106d313faad3e85d2056a  installkernel
-9974d0dd6a83ecc422d31dd1ad6731e0  ip
-d49bad0a9e3f098cc3913a8ee75fd73d  ip6tables
-bfa7ecc3aac4cb208f32c19e6503a082  ip6tables-apply
-d49bad0a9e3f098cc3913a8ee75fd73d  ip6tables-restore
-d49bad0a9e3f098cc3913a8ee75fd73d  ip6tables-save
-395abe3f4470ccf065ca739ccd060bac  ipmaddr
-d49bad0a9e3f098cc3913a8ee75fd73d  iptables
-bfa7ecc3aac4cb208f32c19e6503a082  iptables-apply
-d49bad0a9e3f098cc3913a8ee75fd73d  iptables-restore
-d49bad0a9e3f098cc3913a8ee75fd73d  iptables-save
-452a74bd0f3395119a6b11f644f51181  iptunnel
-1c16e2e5f78dd9bd7dac3ae74f1830b5  isosize
-9b625d8eee80b5dd49843e86f0cbe51d  iw
-782a94836c1017fc01f85a730a5a5534  kbdrate
-73863d79612c16d88f7bedbacb89190a  killall5
-85e9e2c4a9c0a7af309c906516aa4548  ldconfig
-0dc3219be0c361b51bbb8d404c870387  ldconfig.real
-6c1a1d1cd0e3a811c7de0ff177c1247d  logsave
-ec0ce9196b34179d92565420cd84fe94  losetup
-44a6d2566cca9e2658fe8f5c8a67e18d  lsmod
-9cebace2371335c80ca97f80762510ba  mii-tool
-323b9a49df09450240fc2b512f8cd5bb  mkdosfs
-46747e533e25641bb14eeaf4a60040bd  mke2fs
-e9efb5f8c7d874a4c829589021ffc871  mkfs
-5a9bed4fafe0cc0f00a40628fa92cc24  mkfs.bfs
-4ce6f2cf22a49ff71c7f1b137f9087b3  mkfs.cramfs
-46747e533e25641bb14eeaf4a60040bd  mkfs.ext2
-46747e533e25641bb14eeaf4a60040bd  mkfs.ext3
-46747e533e25641bb14eeaf4a60040bd  mkfs.ext4
-46747e533e25641bb14eeaf4a60040bd  mkfs.ext4dev
-323b9a49df09450240fc2b512f8cd5bb  mkfs.fat
-a61a15b2b40622cd0c83f7ac420a412e  mkfs.minix
-323b9a49df09450240fc2b512f8cd5bb  mkfs.msdos
-323b9a49df09450240fc2b512f8cd5bb  mkfs.vfat
-58f3aa2a2ddb9dc9144b8c02a9bf5f93  mkhomedir_helper
-a8cb4ec37af92facce13971eaba81856  mkswap
-11a9db044fa4aa56a99c3181677576ce  mntctl
-44a6d2566cca9e2658fe8f5c8a67e18d  modinfo
-44a6d2566cca9e2658fe8f5c8a67e18d  modprobe
-07242caa97682d92c2de551a7dd18b7d  mountall
-ccfe6d811cc56e53ff8dcbd05386d153  nameif
-0cb691c0916222ce81c6651469b30646  pam_tally
-5542fc4a7391d0a39132bb14367d2e95  pam_tally2
-f611844a31d694d50302dae797360f17  pivot_root
-51ce27b3e6302ef028b493a572bbcb42  plipconfig
-ae70f215c9b10fdccd2af6d8adb0efb4  plymouthd
-489768d0bb7970ca7b392492ad355cfa  poweroff
-caff4f1cf0796cd875aebe9c6f1d6986  rarp
-9fb37124a2da2ea64f2125b93fb251d0  raw
-489768d0bb7970ca7b392492ad355cfa  reboot
-b594b7a4f1507a0a8353b700da0a99ee  regdbdump
-e5a38c7815b8076843bf99e6b2ba4f53  reload
-7b40b81456e347d7a470501a181a6e87  resize2fs
-d2dc02339370f5c84225e77f10498f85  resolvconf
-e5a38c7815b8076843bf99e6b2ba4f53  restart
-44a6d2566cca9e2658fe8f5c8a67e18d  rmmod
-7564dd14d171f7fde8c73ec8dc869ae6  route
-b3ddddb004746a3c4096ade863a41178  rtacct
-6c92158b511540fbf6880ccf2bae2f87  rtmon
-438316179420d9a13cd4f43c91619b6d  runlevel
-84a997280908941d7c2b7c0299a7cdda  setcap
-c412247eb6db07ce26d796c74123c219  setvtrgb
-4be8b1920259204f416dfcfb7d66b2ca  sfdisk
-649162e17b14c068cf80d5e3557cd8a2  shadowconfig
-e583369a2efcbc9baf4bbbf71ec0632f  shutdown
-d8377689e10559864873488d1688e20a  slattach
-e5a38c7815b8076843bf99e6b2ba4f53  start
-c6c29d8d14d6eaf73b3a68559171bcc9  start-stop-daemon
-bb7a452c34587dd6f84cf0925612b113  startpar
-141bc78731e2ca779c533654b3074480  startpar-upstart-inject
-e5a38c7815b8076843bf99e6b2ba4f53  status
-e5a38c7815b8076843bf99e6b2ba4f53  stop
-77d4c5c0cc57b9c087b912e37d50a447  sulogin
-f7982a00fd2714bb4c708d07c2de4fb1  swaplabel
-cb097abb85071c9dca31c22aeb22ad99  swapoff
-cb097abb85071c9dca31c22aeb22ad99  swapon
-20a5316bfa9d2b984c504a0192158bc7  switch_root
-dbe4d0f55c9820e948cc133963211287  sysctl
-dd888ab03375d7b9953fc5614a27f900  tc
-a23276ffb11474d2a477c6162bfb4c0a  telinit
-9cba9f98ebee505de2060654958b9ce9  tune2fs
-e7daa6414679d7f57cf64b23554b7724  udevadm
-26d79ac878cab388ca59a2855d837428  udevd
-5c34df1210ac42be3445b9e69ea2bb81  unix_chkpwd
-d1e77c21960de09be3e6d8bd393541bf  unix_update
-9a44d02f8a83e2c8ad2ff0ade257d2d8  upstart-dbus-bridge
-2d81c205b9e8081fa8de09644239022b  upstart-event-bridge
-382fcbd1cbb092bfbeb2818817dfa5ea  upstart-file-bridge
-5788fffff45406a252b6c647c6447192  upstart-local-bridge
-bfb5e9eb2811ec4ea6a1f4b26544c01b  upstart-socket-bridge
-34ca387a6e1f6fe63f1cdaa380507b5f  upstart-udev-bridge
-03399a44417ebfd776b5574d95250f5c  ureadahead
-9d94c6aeae8126492e9b6734a140e14e  wipefs
-51c21d89182521c79453b20f99125fa1  wpa_action
-86707e0c9d5f006a2b26b5ffc0dbea59  wpa_cli
-37ee1c9ca2d563ae28892abee4601a39  wpa_supplicant
-d49bad0a9e3f098cc3913a8ee75fd73d  xtables-multi
-```
-
--->
