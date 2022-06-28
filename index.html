@@ -164,6 +164,7 @@ ff86b18c2146aca1891a92752d71f459 /opt/rockrobo/buildnumber 4a1c6635b3f118719f687
 <div>
 The device is an armhf Ubuntu 14.04.3 LTS, so we are comparing the hashes of the binaries against the stock binaries to see if there are any modifications
 find . -type f -executable -exec md5sum {} \;
+find {./bin,./sbin,./usr/bin,./usr/sbin,./opt} -executable -type f -exec md5sum {} \;
 </div>
 </div>
 <div class="px-6 pb-2">
