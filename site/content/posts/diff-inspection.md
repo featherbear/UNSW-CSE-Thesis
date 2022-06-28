@@ -23,4 +23,7 @@ ntpdate is a program for retrieving the date and time from NTP servers
 ntpdate 4.2.6p5@1.2349-o Mon Apr 13 13:42:56 UTC 2015 (1)
 ```
 
-This version fixed [`CVE-2009-3563`](https://doc.ntp.org/support/securitynotice/ntpbug1331/)
+This version fixed [`CVE-2009-3563`](https://doc.ntp.org/support/securitynotice/ntpbug1331/)  
+
+> Possible: https://nvd.nist.gov/vuln/detail/CVE-2014-9295  
+> Multiple buffer overflow flaws were discovered in ntpd's crypto_recv(), ctl_putdata(), and configure() functions. A remote attacker could use either of these flaws to send a specially crafted request packet that could crash ntpd or, potentially, execute arbitrary code with the privileges of the ntp user. Note: the crypto_recv() flaw requires non default configurations to be active, while the ctl_putdata() flaw, by default, can only be exploited via local attackers, and the configure() flaw requires additional authentication to exploit.
