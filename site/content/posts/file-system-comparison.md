@@ -794,7 +794,6 @@ bfb5e9eb2811ec4ea6a1f4b26544c01b  /sbin/upstart-socket-bridge
 d49bad0a9e3f098cc3913a8ee75fd73d  /sbin/xtables-multi
 26adda56c04cbe829eb0def4e09e65c1  /usr/bin/a2p
 110b25922d0cf121deeb5b72342b93c8  /usr/bin/adbd
-e1c1b0bc8a4e4e8e08f6a10d1f8ce82a  /usr/bin/adbd.bndb
 c79738ee3fc73fbf8a61d8aa6e9c25a6  /usr/bin/addpart
 931ebd17c8572c514349202cd0420ee4  /usr/bin/apt
 06571c17d1e7ac38ed18ace7b1fb5d37  /usr/bin/apt-cache
