@@ -64,6 +64,7 @@ pages:
 - site/content/posts/etc-passwd.md
 - site/content/posts/etc-shadow.md
 - site/content/posts/file-system-comparison.md
+- site/content/posts/files-in-device-that-are-missing-from-base.md
 - site/content/posts/frida-objection-https-without-mitm.md
 - site/content/posts/htop-during-factory.md
 - site/content/posts/i-am-root.md
