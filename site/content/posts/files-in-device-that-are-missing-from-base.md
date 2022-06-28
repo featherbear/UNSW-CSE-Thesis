@@ -85,4 +85,8 @@ toc = true
 * Checks every 5s
 * Will call
   * `/usr/sbin/logrotate /etc/logrotate.conf`
+    * `/var/log/wtmp`
+    * `/var/log/btmp`
+    * `/var/log/*`
+      * ish
   * or `/usr/sbin/logrotate -f /etc/logrotate.d/upstart`
