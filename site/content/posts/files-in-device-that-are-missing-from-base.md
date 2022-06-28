@@ -74,5 +74,15 @@ toc = true
     /usr/sbin/try-from ea1bd16a749775d1da19277ffbbb665f 
     /usr/sbin/update-ca-certificates 33459711bf0dd5b5a92754e9702a943d
 
----
+***
 
+# /usr/bin/logrotate.sh
+
+* `/etc/init/logrotate.conf`
+  * init script to launch
+* Makes backups of `/var/log/syslog`, `/var/log/kern.log` when larger than 5242880 (bytes?)
+* Makes backups of `/var/log/upstart/*` if any file is larger than 1048576 (bytes?)
+* Checks every 5s
+* Will call
+  * `/usr/sbin/logrotate /etc/logrotate.conf`
+  * or `/usr/sbin/logrotate -f /etc/logrotate.d/upstart`
