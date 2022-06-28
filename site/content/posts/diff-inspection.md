@@ -10,6 +10,8 @@ toc = true
 +++
 # /usr/sbin/ntpdate
 
+ntpdate is a program for retrieving the date and time from NTP servers
+
 > device md5: 006a0967281c9a061362086b638a21a4
 
     28 Jun 16:28:29 ntpdate[7790]: ntpdate 4.2.6p5@1.2349 Tue Jun 21 08:19:00 UTC 2016 (6)
@@ -20,3 +22,5 @@ toc = true
 ```
 ntpdate 4.2.6p5@1.2349-o Mon Apr 13 13:42:56 UTC 2015 (1)
 ```
+
+This version fixed [`CVE-2009-3563`](https://doc.ntp.org/support/securitynotice/ntpbug1331/)
