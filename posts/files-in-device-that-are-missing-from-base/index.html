@@ -1,0 +1,168 @@
+<!doctype html><html lang=en><meta charset=utf-8>
+<meta name=viewport content="width=device-width">
+<title>Files in device that are missing from base | CSE Thesis Musings</title>
+<meta name=generator content="Hugo Eureka 0.8.2">
+<link rel=stylesheet href=../../css/eureka.min.css>
+<script defer src=../../js/eureka.min.js></script>
+<link rel=preconnect href=https://fonts.gstatic.com crossorigin>
+<link rel=preload href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" as=style onload="this.onload=null,this.rel='stylesheet'">
+<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/styles/solarized-light.min.css media=print onload="this.media='all',this.onload=null" crossorigin>
+<script defer src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/highlight.min.js crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/languages/dart.min.js crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js integrity="sha256-uNYoXefWRqv+PsIF/OflNmwtKM4lStn9yrz2gVl6ymo=" crossorigin></script>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css integrity=sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X media=print onload="this.media='all',this.onload=null" crossorigin>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js integrity=sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4 crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js integrity=sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa crossorigin></script>
+<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}]})})</script>
+<script defer src=https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js integrity="sha256-Zmpaaj+GXFsPF5WdPArSrnW3b30dovldeKsW00xBVwE=" crossorigin></script>
+<link rel=preconnect href=https://www.google-analytics.com crossorigin>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107434487-2"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-107434487-2')</script>
+<script>(function(e,b,f,c,a,d){b[c]=b[c]||function(){(b[c].q=b[c].q||[]).push(arguments)},a=e.createElement('script'),d=e.getElementsByTagName('script')[0],a.async=1,a.src=f,a.id='fathom-script',d.parentNode.insertBefore(a,d)})(document,window,'//ss.featherbear.cc/tracker.js','fathom'),fathom('set','siteId','NEQTU'),fathom('trackPageview')</script>
+<style>html.dark{--color-primary-bg:#232327 !important}div#sidebar-toc>ul.pl-6{margin-left:1em}</style>
+<meta name=description content="Of Interest  Low Initial Interest /bin/fuser 73b744ea98518b3b238e7a17d9356a50 /sbin/crda c6ccce7de9420eda06cf411bb31eeca1 /sbin/dhcpcd-bin 36f27f551c9b0710459c5b7261cb053a /sbin/dhcpcd3 2d6a61a6873a6bd2a2475f66a0564d06 /sbin/fatlabel 4c795c3f37c9b895afcd3cb862e85346 /sbin/fsck.fat 725bc854ed410d2bf5a0c43b07bc4651 /sbin/iptables-apply bfa7ecc3aac4cb208f32c19e6503a082 /sbin/iw 9b625d8eee80b5dd49843e86f0cbe51d /sbin/mkfs.fat 323b9a49df09450240fc2b512f8cd5bb /sbin/regdbdump b594b7a4f1507a0a8353b700da0a99ee /sbin/wpa_action 51c21d89182521c79453b20f99125fa1 /sbin/wpa_cli 86707e0c9d5f006a2b26b5ffc0dbea59 /sbin/wpa_supplicant 37ee1c9ca2d563ae28892abee4601a39 /sbin/xtables-multi d49bad0a9e3f098cc3913a8ee75fd73d /usr/bin/adbd 110b25922d0cf121deeb5b72342b93c8 /usr/bin/bootring bf8f440f6fe7e1cbbdaafa491442a4a9 /usr/bin/ccguess 438e1519d06cca1a91c93a83450213aa /usr/bin/ccrypt dc2adb7a044a7062ab2d4740dfc72cd7 /usr/bin/create_ap fa856af527e32d1822784b1cae2dddde /usr/bin/c_rehash c73fa0868ce1f8cb607535e9b822895e /usr/bin/killall b3ef77ba9aa62c011d24cf03208ee922 /usr/bin/logrotate.">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"Files in device that are missing from base","item":"/posts/files-in-device-that-are-missing-from-base/"}]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/files-in-device-that-are-missing-from-base/"},"headline":"Files in device that are missing from base | CSE Thesis Musings","datePublished":"2022-06-28T17:07:59+00:00","dateModified":"2022-06-28T17:07:59+00:00","wordCount":123,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Of Interest  Low Initial Interest \/bin\/fuser 73b744ea98518b3b238e7a17d9356a50 \/sbin\/crda c6ccce7de9420eda06cf411bb31eeca1 \/sbin\/dhcpcd-bin 36f27f551c9b0710459c5b7261cb053a \/sbin\/dhcpcd3 2d6a61a6873a6bd2a2475f66a0564d06 \/sbin\/fatlabel 4c795c3f37c9b895afcd3cb862e85346 \/sbin\/fsck.fat 725bc854ed410d2bf5a0c43b07bc4651 \/sbin\/iptables-apply bfa7ecc3aac4cb208f32c19e6503a082 \/sbin\/iw 9b625d8eee80b5dd49843e86f0cbe51d \/sbin\/mkfs.fat 323b9a49df09450240fc2b512f8cd5bb \/sbin\/regdbdump b594b7a4f1507a0a8353b700da0a99ee \/sbin\/wpa_action 51c21d89182521c79453b20f99125fa1 \/sbin\/wpa_cli 86707e0c9d5f006a2b26b5ffc0dbea59 \/sbin\/wpa_supplicant 37ee1c9ca2d563ae28892abee4601a39 \/sbin\/xtables-multi d49bad0a9e3f098cc3913a8ee75fd73d \/usr\/bin\/adbd 110b25922d0cf121deeb5b72342b93c8 \/usr\/bin\/bootring bf8f440f6fe7e1cbbdaafa491442a4a9 \/usr\/bin\/ccguess 438e1519d06cca1a91c93a83450213aa \/usr\/bin\/ccrypt dc2adb7a044a7062ab2d4740dfc72cd7 \/usr\/bin\/create_ap fa856af527e32d1822784b1cae2dddde \/usr\/bin\/c_rehash c73fa0868ce1f8cb607535e9b822895e \/usr\/bin\/killall b3ef77ba9aa62c011d24cf03208ee922 \/usr\/bin\/logrotate."}</script><meta property="og:title" content="Files in device that are missing from base | CSE Thesis Musings">
+<meta property="og:type" content="article">
+<meta property="og:url" content="/posts/files-in-device-that-are-missing-from-base/">
+<meta property="og:description" content="Of Interest  Low Initial Interest /bin/fuser 73b744ea98518b3b238e7a17d9356a50 /sbin/crda c6ccce7de9420eda06cf411bb31eeca1 /sbin/dhcpcd-bin 36f27f551c9b0710459c5b7261cb053a /sbin/dhcpcd3 2d6a61a6873a6bd2a2475f66a0564d06 /sbin/fatlabel 4c795c3f37c9b895afcd3cb862e85346 /sbin/fsck.fat 725bc854ed410d2bf5a0c43b07bc4651 /sbin/iptables-apply bfa7ecc3aac4cb208f32c19e6503a082 /sbin/iw 9b625d8eee80b5dd49843e86f0cbe51d /sbin/mkfs.fat 323b9a49df09450240fc2b512f8cd5bb /sbin/regdbdump b594b7a4f1507a0a8353b700da0a99ee /sbin/wpa_action 51c21d89182521c79453b20f99125fa1 /sbin/wpa_cli 86707e0c9d5f006a2b26b5ffc0dbea59 /sbin/wpa_supplicant 37ee1c9ca2d563ae28892abee4601a39 /sbin/xtables-multi d49bad0a9e3f098cc3913a8ee75fd73d /usr/bin/adbd 110b25922d0cf121deeb5b72342b93c8 /usr/bin/bootring bf8f440f6fe7e1cbbdaafa491442a4a9 /usr/bin/ccguess 438e1519d06cca1a91c93a83450213aa /usr/bin/ccrypt dc2adb7a044a7062ab2d4740dfc72cd7 /usr/bin/create_ap fa856af527e32d1822784b1cae2dddde /usr/bin/c_rehash c73fa0868ce1f8cb607535e9b822895e /usr/bin/killall b3ef77ba9aa62c011d24cf03208ee922 /usr/bin/logrotate.">
+<meta property="og:locale" content="en">
+<meta property="og:site_name" content="CSE Thesis Musings">
+<meta property="article:published_time" content="2022-06-28T17:07:59+00:00">
+<meta property="article:modified_time" content="2022-06-28T17:07:59+00:00">
+<meta property="article:section" content="posts">
+<body class="flex flex-col min-h-screen">
+<header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
+<div class="w-full max-w-screen-xl mx-auto"><script>let storageColorScheme=localStorage.getItem("lightDarkMode");((storageColorScheme=='Auto'||storageColorScheme==null)&&window.matchMedia("(prefers-color-scheme: dark)").matches||storageColorScheme=="Dark")&&document.getElementsByTagName('html')[0].classList.add('dark')</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+<a href=../../ class="mr-6 text-primary-text text-xl font-bold">CSE Thesis Musings</a>
+<button id=navbar-btn class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+<i class="fas fa-bars"></i>
+</button>
+<div id=target class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+<div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
+<a href=../../#about class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">About</a>
+<a href=../../posts/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 selected-menu-item mr-4">Posts</a>
+<a href=../../docs/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">Docs</a>
+<a href=../../tldr/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">Progress Log</a>
+</div>
+<div class=flex>
+<div class="relative pt-4 md:pt-0">
+<div class="cursor-pointer hover:text-eureka" id=lightDarkMode>
+<i class="fas fa-adjust"></i>
+</div>
+<div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id=is-open>
+</div>
+<div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40" id=lightDarkOptions>
+<span class="px-4 py-1 hover:text-eureka" name=Light>Light</span>
+<span class="px-4 py-1 hover:text-eureka" name=Dark>Dark</span>
+<span class="px-4 py-1 hover:text-eureka" name=Auto>Auto</span>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id=is-open-mobile>
+</div>
+</nav>
+<script>let element=document.getElementById('lightDarkMode');storageColorScheme==null||storageColorScheme=='Auto'?document.addEventListener('DOMContentLoaded',()=>{window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change',switchDarkMode)}):storageColorScheme=="Light"?(element.firstElementChild.classList.remove('fa-adjust'),element.firstElementChild.setAttribute("data-icon",'sun'),element.firstElementChild.classList.add('fa-sun')):storageColorScheme=="Dark"&&(element.firstElementChild.classList.remove('fa-adjust'),element.firstElementChild.setAttribute("data-icon",'moon'),element.firstElementChild.classList.add('fa-moon')),document.addEventListener('DOMContentLoaded',()=>{getcolorscheme(),switchBurger()})</script>
+</div>
+</header>
+<main class="flex-grow pt-16">
+<div class=pl-scrollbar>
+<div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
+<div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
+<div class="col-span-2 lg:col-start-2 lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+<h1 class="font-bold text-3xl text-primary-text">Files in device that are missing from base</h1>
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+<div class="mr-6 my-2">
+<i class="fas fa-calendar mr-1"></i>
+<span>2022-06-28</span>
+</div>
+</div>
+<div class=content>
+<h1 id=of-interest>Of Interest</h1>
+<pre><code></code></pre>
+<h1 id=low-initial-interest>Low Initial Interest</h1>
+<pre><code>/bin/fuser 73b744ea98518b3b238e7a17d9356a50 
+/sbin/crda c6ccce7de9420eda06cf411bb31eeca1 
+/sbin/dhcpcd-bin 36f27f551c9b0710459c5b7261cb053a
+/sbin/dhcpcd3 2d6a61a6873a6bd2a2475f66a0564d06
+/sbin/fatlabel 4c795c3f37c9b895afcd3cb862e85346
+/sbin/fsck.fat 725bc854ed410d2bf5a0c43b07bc4651
+/sbin/iptables-apply bfa7ecc3aac4cb208f32c19e6503a082
+/sbin/iw 9b625d8eee80b5dd49843e86f0cbe51d 
+/sbin/mkfs.fat 323b9a49df09450240fc2b512f8cd5bb
+/sbin/regdbdump b594b7a4f1507a0a8353b700da0a99ee
+/sbin/wpa_action 51c21d89182521c79453b20f99125fa1
+/sbin/wpa_cli 86707e0c9d5f006a2b26b5ffc0dbea59
+/sbin/wpa_supplicant 37ee1c9ca2d563ae28892abee4601a39
+/sbin/xtables-multi d49bad0a9e3f098cc3913a8ee75fd73d
+/usr/bin/adbd 110b25922d0cf121deeb5b72342b93c8
+/usr/bin/bootring bf8f440f6fe7e1cbbdaafa491442a4a9
+/usr/bin/ccguess 438e1519d06cca1a91c93a83450213aa
+/usr/bin/ccrypt dc2adb7a044a7062ab2d4740dfc72cd7
+/usr/bin/create_ap fa856af527e32d1822784b1cae2dddde
+/usr/bin/c_rehash c73fa0868ce1f8cb607535e9b822895e
+/usr/bin/killall b3ef77ba9aa62c011d24cf03208ee922
+/usr/bin/logrotate.sh 8129d3de3d967e2887447409ee84fb16 
+/usr/bin/lsof ca39db5daa1e61276680c3f12c51791a
+/usr/bin/openssl 97fe9fe716f6246a21c20b9b82138c0f
+/usr/bin/peekfd 8d2f2dbb777b852b59b5b53038925b5c
+/usr/bin/pigz bee97da5b9ee965590af32e10d5933c3
+/usr/bin/pmount 47bc39282350d98ee4fa150faba31491 
+/usr/bin/prtstat f92a8a0889e3894e3566caafb27b453a 
+/usr/bin/pstree e90ceb7b3b9280c3dfd1562b9c931850 
+/usr/bin/pumount 44662f72b22fc7a847faf150c435e6df 
+/usr/bin/qemu-arm-static 4a183d05ce4c2ade1732e4ab937acb1f 
+/usr/bin/rr_try_mount aef34ac426e24ecfa7090104660289bf 
+/usr/bin/rsync 512ba4abb7b0202f6574864a3cd24617 
+/usr/bin/scp 354d5bef5c9f5d02f316d6840351a0cd 
+/usr/bin/sftp 935094af6142d4abccb2e70c6301b8f1 
+/usr/bin/ssh e26376e8c766369c0f55b14b70be0a3c 
+/usr/bin/ssh-add 7bb444cd561441b96c0683917bfafec9 
+/usr/bin/ssh-agent ee747c3e15201d67798e9c6925722cd4 
+/usr/bin/ssh-argv0 bb40f6cb60ce75974b8738bc02b30809 
+/usr/bin/ssh-copy-id 5ca9ed4378459b01a795289a54323940 
+/usr/bin/ssh-keygen 610488105a3891731b73a4b03c645296 
+/usr/bin/ssh-keyscan 900e70e7fdb859ec107709e49ccdef64 
+/usr/bin/unpigz bee97da5b9ee965590af32e10d5933c3 
+/usr/bin/wpa_passphrase f41559f5faa8e7d35fa1285b65351a61 
+/usr/bin/xauth d03d106b3bfee2fdff090eb45173c165 
+/usr/sbin/dnsmasq 4036b0dbc14e55edef2a5ff3c6fe8569 
+/usr/sbin/haveged 2ce982d29ee5c3d8071f82a8a882cfee 
+/usr/sbin/hostapd 666417d2dc29cf52915bb2a873cf09a3 
+/usr/sbin/hostapd_cli 19f12aef82030e3f79fd6fc2fde1ede5 
+/usr/sbin/iptables-apply bfa7ecc3aac4cb208f32c19e6503a082 
+/usr/sbin/nfnl_osf 0f8c4e6983614b80a1299a0fd220047e 
+/usr/sbin/safe_finger 7d659ca42ea347335454480da9f070d2 
+/usr/sbin/sshd 67a24424efeabc897171e5f47c85fac3 
+/usr/sbin/tcpd cb12f7cb8d6faa876f0f505527f4a82a 
+/usr/sbin/tcpdchk 4a63dcc874c4313c026ba667d5dea56b 
+/usr/sbin/tcpdmatch e8998ab020cf0dbbf48aefe10ddae8cc 
+/usr/sbin/tcpdump 50f2ed1f9707873bbd13bde776c9cff7 
+/usr/sbin/try-from ea1bd16a749775d1da19277ffbbb665f 
+/usr/sbin/update-ca-certificates 33459711bf0dd5b5a92754e9702a943d 
+</code></pre>
+</div>
+<div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
+<div>
+</div>
+<div class="md:text-right mt-4 md:mt-0">
+<span class="block font-bold">Next</span>
+<a href=../../posts/diff-inspection/ class=block>Diff Inspection</a>
+</div>
+</div>
+</div>
+</div>
+<script>document.addEventListener('DOMContentLoaded',()=>{hljs.initHighlightingOnLoad()})</script>
+</div>
+</div>
+</main>
+<footer class=pl-scrollbar>
+<div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
+<p class="text-sm text-tertiary-text">&copy; 2021 <a href=https://featherbear.cc>Andrew Wong (z5206677)</a>
+&#183; Powered by the <a href=https://github.com/wangchucheng/hugo-eureka class=hover:text-eureka>Eureka</a> theme for <a href=https://gohugo.io class=hover:text-eureka>Hugo</a></p>
+</div></div>
+</footer>
+</body>
+</html>
