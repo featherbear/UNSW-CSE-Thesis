@@ -263,6 +263,11 @@
         date: 23/06/2022
         content: Began to check which processes contacted what address
       }
+      {
+      title: Base OS comparison
+      date: 29/06/2022
+      content: Did a MD5 compare of the device's executable files vs the Ubuntu 14.04.3 LTS base. In the future we should also look at configuration files too
+      }
     ]
   }
 ]
