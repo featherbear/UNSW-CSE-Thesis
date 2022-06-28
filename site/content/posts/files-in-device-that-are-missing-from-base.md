@@ -76,6 +76,11 @@ toc = true
 
 ***
 
+# /usr/bin/adbd
+
+* `/etc/init/adbd.conf`
+  * `echo 1 > /sys/class/android_usb/android0/enable`
+
 # /usr/bin/logrotate.sh
 
 * `/etc/init/logrotate.conf`
@@ -90,3 +95,16 @@ toc = true
     * `/var/log/*`
       * ish
   * or `/usr/sbin/logrotate -f /etc/logrotate.d/upstart`
+
+# /usr/bin/rr_try_mount
+
+* `/etc/init/mountall.conf`
+  * Mounts file-systems on boot
+* Logs get collected via rrlog (`/opt/roborock/rrlog`)
+
+# /usr/bin/bootring
+
+* `/etc/init/bootring.conf`
+  * `exec /usr/bin/bootring /opt/rockrobo/resources/sounds/power_on.wav 80`
+
+🤡
