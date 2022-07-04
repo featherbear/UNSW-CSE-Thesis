@@ -23,7 +23,7 @@
 <meta name=description content="Capturing and reading encrypted outbound network packets in transit is somewhat difficult, especially when there are asymmetric keys at work. Instead though&mldr; we could hook into the encryption routine, and dump the message somewhere to read later.
 When it comes to decryption, we can just wait for the decryption to finish, and then dump the decrypted message somewhere as well!">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"Pre-Encryption and Post-Decryption Hooks","item":"/posts/pre-encryption-and-post-decryption-hooks/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/pre-encryption-and-post-decryption-hooks/"},"headline":"Pre-Encryption and Post-Decryption Hooks | CSE Thesis Musings","datePublished":"2022-07-04T15:31:25+00:00","dateModified":"2022-07-04T15:31:25+00:00","wordCount":145,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Capturing and reading encrypted outbound network packets in transit is somewhat difficult, especially when there are asymmetric keys at work. Instead though\u0026hellip; we could hook into the encryption routine, and dump the message somewhere to read later.\nWhen it comes to decryption, we can just wait for the decryption to finish, and then dump the decrypted message somewhere as well!"}</script><meta property="og:title" content="Pre-Encryption and Post-Decryption Hooks | CSE Thesis Musings">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/pre-encryption-and-post-decryption-hooks/"},"headline":"Pre-Encryption and Post-Decryption Hooks | CSE Thesis Musings","datePublished":"2022-07-04T15:31:25+00:00","dateModified":"2022-07-04T15:31:25+00:00","wordCount":293,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Capturing and reading encrypted outbound network packets in transit is somewhat difficult, especially when there are asymmetric keys at work. Instead though\u0026hellip; we could hook into the encryption routine, and dump the message somewhere to read later.\nWhen it comes to decryption, we can just wait for the decryption to finish, and then dump the decrypted message somewhere as well!"}</script><meta property="og:title" content="Pre-Encryption and Post-Decryption Hooks | CSE Thesis Musings">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/posts/pre-encryption-and-post-decryption-hooks/">
 <meta property="og:description" content="Capturing and reading encrypted outbound network packets in transit is somewhat difficult, especially when there are asymmetric keys at work. Instead though&mldr; we could hook into the encryption routine, and dump the message somewhere to read later.
@@ -100,6 +100,60 @@ When it comes to decryption, we can just wait for the decryption to finish, and 
 </ul>
 </li>
 </ul>
+<hr>
+<h1 id=binary-ninja>Binary Ninja</h1>
+<blockquote>
+<p>We can compile C code in Binary Ninja (though we must override main&mldr; and I don&rsquo;t know if there&rsquo;s a way to keep the existing program body</p>
+</blockquote>
+<p>Right click a function and then go <code>[Patch]</code> -> <code>[Compile C Source]</code></p>
+<pre><code class=language-c>/* Send test to 10.251.252.253:28422 */
+int main() {
+  int sock = create_udp4_connection(IPV4_ADDR(10,251,252,253), 28422);
+  char *buf = &quot;test&quot;;
+  send(sock, (void*) buf,  4, 0);
+}
+</code></pre>
+<hr>
+<h1 id=full-code>Full Code</h1>
+<pre><code class=language-c>#include &lt;arpa/inet.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+#include &lt;sys/socket.h&gt;
+#include &lt;unistd.h&gt;
+
+static int doIt();
+
+int main(void) {
+    return doIt();
+}
+
+static int doIt() {
+    struct sockaddr_in server_addr;
+    char client_message[] = &quot;Hello&quot;;
+
+    int socket_desc;
+    socket_desc = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP);
+
+    if (socket_desc &lt; 0) {
+        printf(&quot;Error while creating socket\n&quot;);
+        return -1;
+    }
+
+    server_addr.sin_family = AF_INET;
+    server_addr.sin_port = htons(28422);
+    server_addr.sin_addr.s_addr = inet_addr(&quot;10.251.252.253&quot;);
+
+    if (sendto(socket_desc, client_message, strlen(client_message), 0,
+               (struct sockaddr*)&amp;server_addr, sizeof server_addr) &lt; 0) {
+        printf(&quot;Unable to send message\n&quot;);
+        return -1;
+    }
+
+    close(socket_desc);
+
+    return 0;
+}
+</code></pre>
 </div>
 <div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
 <div>
