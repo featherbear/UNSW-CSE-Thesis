@@ -26,6 +26,8 @@ Compression is given low [priority](https://linux.die.net/man/1/nice): `nice -n 
 
 > Nicenesses range from **-20** (most favorable scheduling) to 19 (least favorable).
 
+* Could patch the binary to remove the source log deletes, although we _can_ see that they're located in `/var/shm`
+
 # Interesting
 
 * `rockrobo/noupload`
