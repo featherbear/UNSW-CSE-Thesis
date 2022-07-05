@@ -230,8 +230,7 @@ xx.ot.io.mi.com:8053 xx.ott.io.mi.com:80 Both give a HTTP 400 Bad Request [20220
 <a href=./posts/opt-rockrobo-rriot-rriot_tuya/ class=hover:text-eureka>/opt/rockrobo/rriot/rriot_tuya</a>
 </div>
 <div>
-Library Imports curl network mbedtls (PolarSSL) Strings /mnt/data/rriot/tuya_db /mnt/default/roborock/device.json tuya_iot_impl_upload_file https://%siot.roborock.com/fwapi/tuyakey rr_write_callback Notes Handles output Program has output logging
-MQTT connection TODO: See if this is logged anywhere, else we’ll redirect it ourselves
+Library Imports curl network mbedtls (PolarSSL) Strings /mnt/data/rriot/tuya_db /mnt/default/roborock/device.json tuya_iot_impl_upload_file https://%siot.roborock.com/fwapi/tuyakey rr_write_callback Notes Handles output Program is spawned by WatchDoge Program doesn’t have any stdout log destinations, so we can edit /opt/rockrobo/watchdog/ProcessList.conf Modify: rriot_tuya,setsid rriot_tuya >> /mnt/data/z5206677/rriot_tuya.
 </div>
 </div>
 <div class="px-6 pb-2">

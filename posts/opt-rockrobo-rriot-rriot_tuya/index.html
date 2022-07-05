@@ -20,14 +20,12 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-107434487-2')</script>
 <script>(function(e,b,f,c,a,d){b[c]=b[c]||function(){(b[c].q=b[c].q||[]).push(arguments)},a=e.createElement('script'),d=e.getElementsByTagName('script')[0],a.async=1,a.src=f,a.id='fathom-script',d.parentNode.insertBefore(a,d)})(document,window,'//ss.featherbear.cc/tracker.js','fathom'),fathom('set','siteId','NEQTU'),fathom('trackPageview')</script>
 <style>html.dark{--color-primary-bg:#232327 !important}div#sidebar-toc>ul.pl-6{margin-left:1em}</style>
-<meta name=description content="Library Imports  curl network mbedtls (PolarSSL)  Strings  /mnt/data/rriot/tuya_db /mnt/default/roborock/device.json tuya_iot_impl_upload_file https://%siot.roborock.com/fwapi/tuyakey rr_write_callback  Notes  Handles output  Program has output logging
-MQTT connection  TODO: See if this is logged anywhere, else we&rsquo;ll redirect it ourselves">
+<meta name=description content="Library Imports  curl network mbedtls (PolarSSL)  Strings  /mnt/data/rriot/tuya_db /mnt/default/roborock/device.json tuya_iot_impl_upload_file https://%siot.roborock.com/fwapi/tuyakey rr_write_callback  Notes  Handles output Program is spawned by WatchDoge  Program doesn&rsquo;t have any stdout log destinations, so we can edit /opt/rockrobo/watchdog/ProcessList.conf Modify: rriot_tuya,setsid rriot_tuya >> /mnt/data/z5206677/rriot_tuya.">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"/opt/rockrobo/rriot/rriot_tuya","item":"/posts/opt-rockrobo-rriot-rriot_tuya/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/opt-rockrobo-rriot-rriot_tuya/"},"headline":"\/opt\/rockrobo\/rriot\/rriot_tuya | CSE Thesis Musings","datePublished":"2022-07-05T08:23:32+00:00","dateModified":"2022-07-05T08:23:32+00:00","wordCount":113,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Library Imports  curl network mbedtls (PolarSSL)  Strings  \/mnt\/data\/rriot\/tuya_db \/mnt\/default\/roborock\/device.json tuya_iot_impl_upload_file https:\/\/%siot.roborock.com\/fwapi\/tuyakey rr_write_callback  Notes  Handles output  Program has output logging\nMQTT connection  TODO: See if this is logged anywhere, else we\u0026rsquo;ll redirect it ourselves"}</script><meta property="og:title" content="/opt/rockrobo/rriot/rriot_tuya | CSE Thesis Musings">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/opt-rockrobo-rriot-rriot_tuya/"},"headline":"\/opt\/rockrobo\/rriot\/rriot_tuya | CSE Thesis Musings","datePublished":"2022-07-05T08:23:32+00:00","dateModified":"2022-07-05T08:23:32+00:00","wordCount":132,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Library Imports  curl network mbedtls (PolarSSL)  Strings  \/mnt\/data\/rriot\/tuya_db \/mnt\/default\/roborock\/device.json tuya_iot_impl_upload_file https:\/\/%siot.roborock.com\/fwapi\/tuyakey rr_write_callback  Notes  Handles output Program is spawned by WatchDoge  Program doesn\u0026rsquo;t have any stdout log destinations, so we can edit \/opt\/rockrobo\/watchdog\/ProcessList.conf Modify: rriot_tuya,setsid rriot_tuya \u0026gt;\u0026gt; \/mnt\/data\/z5206677\/rriot_tuya."}</script><meta property="og:title" content="/opt/rockrobo/rriot/rriot_tuya | CSE Thesis Musings">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/posts/opt-rockrobo-rriot-rriot_tuya/">
-<meta property="og:description" content="Library Imports  curl network mbedtls (PolarSSL)  Strings  /mnt/data/rriot/tuya_db /mnt/default/roborock/device.json tuya_iot_impl_upload_file https://%siot.roborock.com/fwapi/tuyakey rr_write_callback  Notes  Handles output  Program has output logging
-MQTT connection  TODO: See if this is logged anywhere, else we&rsquo;ll redirect it ourselves">
+<meta property="og:description" content="Library Imports  curl network mbedtls (PolarSSL)  Strings  /mnt/data/rriot/tuya_db /mnt/default/roborock/device.json tuya_iot_impl_upload_file https://%siot.roborock.com/fwapi/tuyakey rr_write_callback  Notes  Handles output Program is spawned by WatchDoge  Program doesn&rsquo;t have any stdout log destinations, so we can edit /opt/rockrobo/watchdog/ProcessList.conf Modify: rriot_tuya,setsid rriot_tuya >> /mnt/data/z5206677/rriot_tuya.">
 <meta property="og:locale" content="en">
 <meta property="og:site_name" content="CSE Thesis Musings">
 <meta property="article:published_time" content="2022-07-05T08:23:32+00:00">
@@ -99,8 +97,13 @@ MQTT connection  TODO: See if this is logged anywhere, else we&rsquo;ll redirect
 <h1 id=notes>Notes</h1>
 <ul>
 <li>Handles output</li>
+<li>Program is spawned by WatchDoge
+<ul>
+<li>Program doesn&rsquo;t have any stdout log destinations, so we can edit <code>/opt/rockrobo/watchdog/ProcessList.conf</code></li>
+<li>Modify: <code>rriot_tuya,setsid rriot_tuya >> /mnt/data/z5206677/rriot_tuya.log 2>&1&,0,3,0</code></li>
 </ul>
-<p>Program has output logging</p>
+</li>
+</ul>
 <h2 id=mqtt-connection>MQTT connection</h2>
 <blockquote>
 <p>TODO: See if this is logged anywhere, else we&rsquo;ll redirect it ourselves</p>
