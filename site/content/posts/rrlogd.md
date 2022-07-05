@@ -74,3 +74,19 @@ Compression is given low [priority](https://linux.die.net/man/1/nice): `nice -n 
     -----END PUBLIC KEY-----
 
 ## AES Encryption
+
+Generated if some seed isn't provided
+
+![](/uploads/20220705-snipaste_2022-07-05_20-35-00.jpg)
+
+***
+
+# Compress/Crypt Scope
+
+![](/uploads/20220705-snipaste_2022-07-05_20-36-52.jpg) ![](/uploads/20220705-snipaste_2022-07-05_20-37-49.jpg)
+
+***
+
+# Calls to `system`
+
+![](/uploads/20220705-snipaste_2022-07-05_20-33-03.jpg)
