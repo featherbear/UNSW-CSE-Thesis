@@ -24,7 +24,7 @@
   Possibly works with logrotate.sh (system logs)  Libraries  Protobuf curl mbedtls (Polar SSL)  Note Compression is given low priority: nice -n 19 tar zcf ...
  Nicenesses range from -20 (most favorable scheduling) to 19 (least favorable).">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"rrlogd","item":"/posts/rrlogd/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/rrlogd/"},"headline":"rrlogd | CSE Thesis Musings","datePublished":"2022-07-05T09:31:13+00:00","dateModified":"2022-07-05T09:31:13+00:00","wordCount":198,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Responsible for compressing, (encrypting and) upload log files\n  Possibly works with logrotate.sh (system logs)  Libraries  Protobuf curl mbedtls (Polar SSL)  Note Compression is given low priority: nice -n 19 tar zcf ...\n Nicenesses range from -20 (most favorable scheduling) to 19 (least favorable)."}</script><meta property="og:title" content="rrlogd | CSE Thesis Musings">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/rrlogd/"},"headline":"rrlogd | CSE Thesis Musings","datePublished":"2022-07-05T09:31:13+00:00","dateModified":"2022-07-05T09:31:13+00:00","wordCount":200,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Responsible for compressing, (encrypting and) upload log files\n  Possibly works with logrotate.sh (system logs)  Libraries  Protobuf curl mbedtls (Polar SSL)  Note Compression is given low priority: nice -n 19 tar zcf ...\n Nicenesses range from -20 (most favorable scheduling) to 19 (least favorable)."}</script><meta property="og:title" content="rrlogd | CSE Thesis Musings">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/posts/rrlogd/">
 <meta property="og:description" content="Responsible for compressing, (encrypting and) upload log files
@@ -174,7 +174,10 @@ oxI+9D/1bE6CFBYrwmGIgBMCAwEAAQ==
 <p>Only one function that calls <code>recv</code> / <code>recvfrom</code> which is at <code>0x1d6d8</code></p>
 <ul>
 <li>Can arbitrary files be request to be uploaded?
-*</li>
+<ul>
+<li>Don&rsquo;t think so..</li>
+</ul>
+</li>
 </ul>
 <h2 id=some-sort-of-curl>Some sort of <code>curl</code></h2>
 <blockquote>
