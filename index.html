@@ -27,7 +27,7 @@
 <meta property="og:description" content="Musings of a CSE Thesis">
 <meta property="og:locale" content="en">
 <meta property="og:site_name" content="CSE Thesis Musings">
-<meta property="og:updated_time" content="2022-07-05T09:31:13+00:00">
+<meta property="og:updated_time" content="2022-07-05T12:29:33+00:00">
 <meta property="article:section" content>
 <link rel=alternate type=application/rss+xml href=./index.xml title="CSE Thesis Musings">
 <body class="flex flex-col min-h-screen">
@@ -137,6 +137,28 @@ I make stuff, and occasionally break stuff&mldr; mainly the lattter
 <div class="bg-secondary-bg rounded overflow-hidden border hover:shadow-lg transition ease-in-out duration-200">
 <div class="px-6 pt-6">
 <div class="font-bold text-xl text-primary-text mb-2">
+<a href=./posts/devtest.conf/ class=hover:text-eureka>devtest.conf</a>
+</div>
+<div>
+Found some file existence check for /opt/rockrobo/rrlog/devtest.conf inside of the rrlogd program. Did a touch… we should hopefully expect to see some extra files?
+</div>
+</div>
+<div class="px-6 pb-2">
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+<div class="mr-6 my-2">
+<i class="fas fa-calendar mr-1"></i>
+<span>2022-07-05</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=item>
+<div class=grid-content>
+<div class="bg-secondary-bg rounded overflow-hidden border hover:shadow-lg transition ease-in-out duration-200">
+<div class="px-6 pt-6">
+<div class="font-bold text-xl text-primary-text mb-2">
 <a href=./posts/rrlogd/ class=hover:text-eureka>rrlogd</a>
 </div>
 <div>
@@ -217,29 +239,6 @@ $> ldd --version ldd ldd (Ubuntu EGLIBC 2.19-0ubuntu6.6) 2.19 Copyright (C) 2014
 <div class="mr-6 my-2">
 <i class="fas fa-calendar mr-1"></i>
 <span>2022-07-05</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class=item>
-<div class=grid-content>
-<div class="bg-secondary-bg rounded overflow-hidden border hover:shadow-lg transition ease-in-out duration-200">
-<div class="px-6 pt-6">
-<div class="font-bold text-xl text-primary-text mb-2">
-<a href=./posts/pre-encryption-and-post-decryption-hooks/ class=hover:text-eureka>Pre-Encryption and Post-Decryption Hooks</a>
-</div>
-<div>
-Capturing and reading encrypted outbound network packets in transit is somewhat difficult, especially when there are asymmetric keys at work. Instead though… we could hook into the encryption routine, and dump the message somewhere to read later.
-When it comes to decryption, we can just wait for the decryption to finish, and then dump the decrypted message somewhere as well!
-</div>
-</div>
-<div class="px-6 pb-2">
-<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
-<div class="mr-6 my-2">
-<i class="fas fa-calendar mr-1"></i>
-<span>2022-07-04</span>
 </div>
 </div>
 </div>
