@@ -24,7 +24,7 @@
   Possibly works with logrotate.sh (system logs)  Libraries  Protobuf curl mbedtls (Polar SSL)  Note Compression is given low priority: nice -n 19 tar zcf ...
  Nicenesses range from -20 (most favorable scheduling) to 19 (least favorable).">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"rrlogd","item":"/posts/rrlogd/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/rrlogd/"},"headline":"rrlogd | CSE Thesis Musings","datePublished":"2022-07-05T09:31:13+00:00","dateModified":"2022-07-05T09:31:13+00:00","wordCount":184,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Responsible for compressing, (encrypting and) upload log files\n  Possibly works with logrotate.sh (system logs)  Libraries  Protobuf curl mbedtls (Polar SSL)  Note Compression is given low priority: nice -n 19 tar zcf ...\n Nicenesses range from -20 (most favorable scheduling) to 19 (least favorable)."}</script><meta property="og:title" content="rrlogd | CSE Thesis Musings">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/rrlogd/"},"headline":"rrlogd | CSE Thesis Musings","datePublished":"2022-07-05T09:31:13+00:00","dateModified":"2022-07-05T09:31:13+00:00","wordCount":183,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Responsible for compressing, (encrypting and) upload log files\n  Possibly works with logrotate.sh (system logs)  Libraries  Protobuf curl mbedtls (Polar SSL)  Note Compression is given low priority: nice -n 19 tar zcf ...\n Nicenesses range from -20 (most favorable scheduling) to 19 (least favorable)."}</script><meta property="og:title" content="rrlogd | CSE Thesis Musings">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/posts/rrlogd/">
 <meta property="og:description" content="Responsible for compressing, (encrypting and) upload log files
@@ -178,9 +178,9 @@ oxI+9D/1bE6CFBYrwmGIgBMCAwEAAQ==
 <p>aka internally: <code>perform_curl</code></p>
 <p><img src=../../uploads/20220705-snipaste_2022-07-05_21-37-51.jpg alt></p>
 <ul>
-<li>Looks like PUT request to Amazon (FDS / S3?)&mldr; thought it was Firehose
+<li>Looks like PUT request <s>to Amazon (Kinesis Firehose? / S3?)</s>
 <ul>
-<li>Nevermind it&rsquo;s some <a href=http://docs.api.xiaomi.com/en/fds/>Xiaomi Galaxy FDS</a></li>
+<li>Nevermind it&rsquo;s some <a href=http://docs.api.xiaomi.com/en/fds/>Xiaomi Galaxy File Data Storage</a></li>
 </ul>
 </li>
 <li><code>Authorization: Galaxy-V2 %s:%s</code></li>
