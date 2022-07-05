@@ -116,7 +116,7 @@ Generated if some seed isn't provided
 Only one function that calls `recv` / `recvfrom` which is at `0x1d6d8`
 
 * Can arbitrary files be request to be uploaded?
-  * 
+  * Don't think so..
 
 ## Some sort of `curl`
 
