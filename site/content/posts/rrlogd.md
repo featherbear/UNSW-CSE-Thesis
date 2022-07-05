@@ -90,3 +90,7 @@ Generated if some seed isn't provided
 # Calls to `system`
 
 ![](/uploads/20220705-snipaste_2022-07-05_20-33-03.jpg)
+
+# iptables
+
+![](/uploads/20220705-snipaste_2022-07-05_20-53-02.jpg)
