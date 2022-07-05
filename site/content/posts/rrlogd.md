@@ -33,3 +33,10 @@ Compression is given low [priority](https://linux.die.net/man/1/nice): `nice -n 
 * @0x25c18: `"rm -rf %s/*;mkdir -p %s/rockrobo/rrlog;mv %s/rrlog.log %s/rockrobo/rrlog/rrlog.log;reboot"`
 * Call to `system` in function at `0x15b6c`
 * @0x28ca: `"iptables -I INPUT -j ACCEPT -p tcp --dport 22"`
+* `/dev/shm/`
+* `/dev/shm/endpoint.bin`
+* IPC
+* `Authorization: Galaxy-V2 %s:%s`
+* `User-Agent: python-requests/2.9.1`
+* Cryptography - public keys
+* `mbedtls_pk_encrypt`
