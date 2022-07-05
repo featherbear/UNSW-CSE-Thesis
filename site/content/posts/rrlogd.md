@@ -112,3 +112,9 @@ Generated if some seed isn't provided
 ![](/uploads/20220705-snipaste_2022-07-05_21-34-32.jpg)
 
 * Can arbitrary files be request to be uploaded?
+
+## Some sort of `curl`
+
+> Location: 0x1bad0
+
+![](/uploads/20220705-snipaste_2022-07-05_21-37-51.jpg)
