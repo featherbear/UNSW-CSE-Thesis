@@ -89,6 +89,8 @@ Generated if some seed isn't provided
 
 # Calls to `system`
 
+* Didn't see any remotely controlled system inputs
+
 ![](/uploads/20220705-snipaste_2022-07-05_20-33-03.jpg)
 
 # iptables
@@ -108,3 +110,5 @@ Generated if some seed isn't provided
 # Network Handler
 
 ![](/uploads/20220705-snipaste_2022-07-05_21-34-32.jpg)
+
+* Can arbitrary files be request to be uploaded?
