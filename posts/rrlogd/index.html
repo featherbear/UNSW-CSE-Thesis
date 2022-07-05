@@ -24,7 +24,7 @@
   Possibly works with logrotate.sh (system logs)  Libraries  Protobuf curl mbedtls (Polar SSL)  Note Compression is given low priority: nice -n 19 tar zcf ...
  Nicenesses range from -20 (most favorable scheduling) to 19 (least favorable).">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"rrlogd","item":"/posts/rrlogd/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/rrlogd/"},"headline":"rrlogd | CSE Thesis Musings","datePublished":"2022-07-05T09:31:13+00:00","dateModified":"2022-07-05T09:31:13+00:00","wordCount":94,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Responsible for compressing, (encrypting and) upload log files\n  Possibly works with logrotate.sh (system logs)  Libraries  Protobuf curl mbedtls (Polar SSL)  Note Compression is given low priority: nice -n 19 tar zcf ...\n Nicenesses range from -20 (most favorable scheduling) to 19 (least favorable)."}</script><meta property="og:title" content="rrlogd | CSE Thesis Musings">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/rrlogd/"},"headline":"rrlogd | CSE Thesis Musings","datePublished":"2022-07-05T09:31:13+00:00","dateModified":"2022-07-05T09:31:13+00:00","wordCount":115,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Responsible for compressing, (encrypting and) upload log files\n  Possibly works with logrotate.sh (system logs)  Libraries  Protobuf curl mbedtls (Polar SSL)  Note Compression is given low priority: nice -n 19 tar zcf ...\n Nicenesses range from -20 (most favorable scheduling) to 19 (least favorable)."}</script><meta property="og:title" content="rrlogd | CSE Thesis Musings">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/posts/rrlogd/">
 <meta property="og:description" content="Responsible for compressing, (encrypting and) upload log files
@@ -123,12 +123,29 @@
 <blockquote>
 <p>Location: 0x19448</p>
 </blockquote>
-<p><img src=../../uploads/20220705-snipaste_2022-07-05_20-06-37.jpg alt></p>
-<h2 id=actual-encryption>Actual Encryption</h2>
+<p><img src=../../uploads/20220705-snipaste_2022-07-05_20-19-23.jpg alt></p>
+<h2 id=rsa-encryption>RSA Encryption</h2>
 <blockquote>
 <p>Location: 0x19304</p>
 </blockquote>
-<p><img src=../../uploads/20220705-snipaste_2022-07-05_20-04-51.jpg alt></p>
+<p><img src=../../uploads/20220705-snipaste_2022-07-05_20-20-34.jpg alt></p>
+<h3 id=key>Key</h3>
+<pre><code>-----BEGIN PUBLIC KEY-----
+MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAwWA83A+GTpWYtPaGzSY/
+T9qljcHS3M6SwtV/z1irxlZAOIWFRPgnEWk1J5PhovX9q/MRYSpZg7Rst2OiA//F
+MnZphgCILa+OBun2VBpMoG/NErjqigS5oVTXe6wyPCeVf33B15W5WsWj0wqUGkAg
+oQZf2xw1Eu0Ylh137mtwBoaSzeAn1X5tm9zdRJYn+r4S2U5P7MxzjiOyTWG4JjWy
+xx+oKJj+RhYxnmJ9LF7M5HIFhjcWJ5deIblWOM0Wql2MX63WAAiQJOfgaH1sqnED
+B9fm09RD3aKElm3k7V01lTD9g/1gkhqLVRtH3sjwtnFcHxzsKUDrvIy6YhJz/H8W
+2umAU8XZcREMRErmnCd+XAOMBj9WMihNBWDoT0k4i/W+E0iNe6uWL+dSYozBY7jZ
+hsjWnPR7FBQJ1kzaK4m0GMdn9SriA2RfydHctyHcOQHN53lFoRKqkJxgCNuCdES1
+HcwkxBOysLQDZDH0+hw2SAZclTtsY+l/pz6buBrZxJEEnMoPYJAaE+OR6b1MfjNC
+8Vj+thp7a0Wf+xW782NXgctI2FQ4wkC+F9u0rwF91qcfAN1Ei6t6edsecK8QfRkP
+NDqBMoqexwz9N+ye4ZEgFpaRLfsH85ZfHUOwvWYsllfsTgj2bz+kTqDc7MN1+4Oe
+oxI+9D/1bE6CFBYrwmGIgBMCAwEAAQ==
+-----END PUBLIC KEY-----
+</code></pre>
+<h2 id=aes-encryption>AES Encryption</h2>
 </div>
 <div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
 <div>
@@ -147,7 +164,12 @@
 <nav id=TableOfContents>
 <ul>
 <li><a href=#wrapper>Wrapper</a></li>
-<li><a href=#actual-encryption>Actual Encryption</a></li>
+<li><a href=#rsa-encryption>RSA Encryption</a>
+<ul>
+<li><a href=#key>Key</a></li>
+</ul>
+</li>
+<li><a href=#aes-encryption>AES Encryption</a></li>
 </ul>
 </nav>
 </div>
