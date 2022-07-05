@@ -140,7 +140,9 @@ I make stuff, and occasionally break stuff&mldr; mainly the lattter
 <a href=./posts/rrlogd/ class=hover:text-eureka>rrlogd</a>
 </div>
 <div>
-Responsible for compressing the files Compresses Uploads Possibly works with logrotate.sh (system logs) Uploads
+Responsible for compressing, (encrypting and) upload log files
+Possibly works with logrotate.sh (system logs) Libraries Protobuf curl mbedtls (Polar SSL) Note Compression is given low priority: nice -n 19 tar zcf ...
+Nicenesses range from -20 (most favorable scheduling) to 19 (least favorable).
 </div>
 </div>
 <div class="px-6 pb-2">
