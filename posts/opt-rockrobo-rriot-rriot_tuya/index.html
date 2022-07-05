@@ -20,14 +20,14 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-107434487-2')</script>
 <script>(function(e,b,f,c,a,d){b[c]=b[c]||function(){(b[c].q=b[c].q||[]).push(arguments)},a=e.createElement('script'),d=e.getElementsByTagName('script')[0],a.async=1,a.src=f,a.id='fathom-script',d.parentNode.insertBefore(a,d)})(document,window,'//ss.featherbear.cc/tracker.js','fathom'),fathom('set','siteId','NEQTU'),fathom('trackPageview')</script>
 <style>html.dark{--color-primary-bg:#232327 !important}div#sidebar-toc>ul.pl-6{margin-left:1em}</style>
-<meta name=description content="Library Imports  curl network mbedtls (PolarSSL)  Strings  /mnt/data/rriot/tuya_db /mnt/default/roborock/device.json tuya_iot_impl_upload_file https://%siot.roborock.com/fwapi/tuyakey rr_write_callback  Notes Program has output logging
-MQTT connection \[01-01 18:12:15 TUYA Debug\]\[mqc_app.c:490\] MQTT Protocol URL:ms.tuyaeu.com Port:8883 \[01-01 18:12:15 TUYA Debug\]\[mqc_app.c:502\] TLS in not disable. disable mqtt time check \[01-01 18:12:15 TUYA Debug\]\[mqc_app.">
+<meta name=description content="Library Imports  curl network mbedtls (PolarSSL)  Strings  /mnt/data/rriot/tuya_db /mnt/default/roborock/device.json tuya_iot_impl_upload_file https://%siot.roborock.com/fwapi/tuyakey rr_write_callback  Notes  Handles output  Program has output logging
+MQTT connection  TODO: See if this is logged anywhere, else we&rsquo;ll redirect it ourselves">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"/opt/rockrobo/rriot/rriot_tuya","item":"/posts/opt-rockrobo-rriot-rriot_tuya/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/opt-rockrobo-rriot-rriot_tuya/"},"headline":"\/opt\/rockrobo\/rriot\/rriot_tuya | CSE Thesis Musings","datePublished":"2022-07-05T08:23:32+00:00","dateModified":"2022-07-05T08:23:32+00:00","wordCount":99,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Library Imports  curl network mbedtls (PolarSSL)  Strings  \/mnt\/data\/rriot\/tuya_db \/mnt\/default\/roborock\/device.json tuya_iot_impl_upload_file https:\/\/%siot.roborock.com\/fwapi\/tuyakey rr_write_callback  Notes Program has output logging\nMQTT connection \\[01-01 18:12:15 TUYA Debug\\]\\[mqc_app.c:490\\] MQTT Protocol URL:ms.tuyaeu.com Port:8883 \\[01-01 18:12:15 TUYA Debug\\]\\[mqc_app.c:502\\] TLS in not disable. disable mqtt time check \\[01-01 18:12:15 TUYA Debug\\]\\[mqc_app."}</script><meta property="og:title" content="/opt/rockrobo/rriot/rriot_tuya | CSE Thesis Musings">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/opt-rockrobo-rriot-rriot_tuya/"},"headline":"\/opt\/rockrobo\/rriot\/rriot_tuya | CSE Thesis Musings","datePublished":"2022-07-05T08:23:32+00:00","dateModified":"2022-07-05T08:23:32+00:00","wordCount":113,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Library Imports  curl network mbedtls (PolarSSL)  Strings  \/mnt\/data\/rriot\/tuya_db \/mnt\/default\/roborock\/device.json tuya_iot_impl_upload_file https:\/\/%siot.roborock.com\/fwapi\/tuyakey rr_write_callback  Notes  Handles output  Program has output logging\nMQTT connection  TODO: See if this is logged anywhere, else we\u0026rsquo;ll redirect it ourselves"}</script><meta property="og:title" content="/opt/rockrobo/rriot/rriot_tuya | CSE Thesis Musings">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/posts/opt-rockrobo-rriot-rriot_tuya/">
-<meta property="og:description" content="Library Imports  curl network mbedtls (PolarSSL)  Strings  /mnt/data/rriot/tuya_db /mnt/default/roborock/device.json tuya_iot_impl_upload_file https://%siot.roborock.com/fwapi/tuyakey rr_write_callback  Notes Program has output logging
-MQTT connection \[01-01 18:12:15 TUYA Debug\]\[mqc_app.c:490\] MQTT Protocol URL:ms.tuyaeu.com Port:8883 \[01-01 18:12:15 TUYA Debug\]\[mqc_app.c:502\] TLS in not disable. disable mqtt time check \[01-01 18:12:15 TUYA Debug\]\[mqc_app.">
+<meta property="og:description" content="Library Imports  curl network mbedtls (PolarSSL)  Strings  /mnt/data/rriot/tuya_db /mnt/default/roborock/device.json tuya_iot_impl_upload_file https://%siot.roborock.com/fwapi/tuyakey rr_write_callback  Notes  Handles output  Program has output logging
+MQTT connection  TODO: See if this is logged anywhere, else we&rsquo;ll redirect it ourselves">
 <meta property="og:locale" content="en">
 <meta property="og:site_name" content="CSE Thesis Musings">
 <meta property="article:published_time" content="2022-07-05T08:23:32+00:00">
@@ -97,8 +97,14 @@ MQTT connection \[01-01 18:12:15 TUYA Debug\]\[mqc_app.c:490\] MQTT Protocol URL
 <li>rr_write_callback</li>
 </ul>
 <h1 id=notes>Notes</h1>
+<ul>
+<li>Handles output</li>
+</ul>
 <p>Program has output logging</p>
 <h2 id=mqtt-connection>MQTT connection</h2>
+<blockquote>
+<p>TODO: See if this is logged anywhere, else we&rsquo;ll redirect it ourselves</p>
+</blockquote>
 <pre><code>\[01-01 18:12:15 TUYA Debug\]\[mqc_app.c:490\] MQTT Protocol URL:ms.tuyaeu.com Port:8883
 \[01-01 18:12:15 TUYA Debug\]\[mqc_app.c:502\] TLS in not disable. disable mqtt time check
 \[01-01 18:12:15 TUYA Debug\]\[mqc_app.c:413\] TLS Mode is NOT TLS_DISABLE:4 .set username = gwid
@@ -108,8 +114,7 @@ MQTT connection \[01-01 18:12:15 TUYA Debug\]\[mqc_app.c:490\] MQTT Protocol URL
 \[01-01 18:12:15 TUYA Debug\]\[mqtt_client.c:208\] user_name:bf7e9b4aacf4f733d8o3zz
 \[01-01 18:12:15 TUYA Debug\]\[mqtt_client.c:209\] passwd:595239d12a6bb9db
 \[01-01 18:12:15 TUYA Debug\]\[mqc_app.c:542\] mqtt send topic:smart/device/out/bf7e9b4aacf4f733d8o3zz
-\[01-01 18:12:15 TUYA Debug\]\[mqc_app.c:544\] mqtt-media send topic:d/m/o/bf7e9b4aacf4f733d8o3zz
-</code></pre>
+\[01-01 18:12:15 TUYA Debug\]\[mqc_app.c:544\] mqtt-media send topic:d/m/o/bf7e9b4aacf4f733d8o3zz</code></pre>
 </div>
 <div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
 <div>
