@@ -40,3 +40,4 @@ Compression is given low [priority](https://linux.die.net/man/1/nice): `nice -n 
 * `User-Agent: python-requests/2.9.1`
 * Cryptography - public keys
 * `mbedtls_pk_encrypt`
+* `rr_get_logserver`
