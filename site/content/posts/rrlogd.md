@@ -120,3 +120,8 @@ Generated if some seed isn't provided
 aka internally: `perform_curl`
 
 ![](/uploads/20220705-snipaste_2022-07-05_21-37-51.jpg)
+
+* Looks like PUT request to Amazon (FDS / S3?)... thought it was Firehose
+* `Authorization: Galaxy-V2 %s:%s`
+* `User-Agent: python-requests/2.9.1`
+  * I mean...
