@@ -25,8 +25,9 @@ toc = true
 # Notes
 
 * Handles output
-
-Program has output logging
+* Program is spawned by WatchDoge
+  * Program doesn't have any stdout log destinations, so we can edit `/opt/rockrobo/watchdog/ProcessList.conf`
+  * Modify: `rriot_tuya,setsid rriot_tuya >> /mnt/data/z5206677/rriot_tuya.log 2>&1&,0,3,0`
 
 ## MQTT connection
 
