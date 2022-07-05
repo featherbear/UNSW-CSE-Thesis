@@ -102,3 +102,9 @@ Generated if some seed isn't provided
 > Location: 0x1545a
 
 ![](/uploads/20220705-snipaste_2022-07-05_20-57-36.jpg) ![](/uploads/20220705-snipaste_2022-07-05_20-58-04.jpg)
+
+***
+
+# Network Handler
+
+![](/uploads/20220705-snipaste_2022-07-05_21-34-32.jpg)
