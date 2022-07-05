@@ -121,8 +121,8 @@ aka internally: `perform_curl`
 
 ![](/uploads/20220705-snipaste_2022-07-05_21-37-51.jpg)
 
-* Looks like PUT request to Amazon (FDS / S3?)... thought it was Firehose
-  * Nevermind it's some [Xiaomi Galaxy FDS](http://docs.api.xiaomi.com/en/fds/)
+* Looks like PUT request <s>to Amazon (Kinesis Firehose? / S3?)</s>
+  * Nevermind it's some [Xiaomi Galaxy File Data Storage](http://docs.api.xiaomi.com/en/fds/)
 * `Authorization: Galaxy-V2 %s:%s`
 * `User-Agent: python-requests/2.9.1`
   * I mean...
