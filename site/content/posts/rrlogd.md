@@ -41,3 +41,9 @@ Compression is given low [priority](https://linux.die.net/man/1/nice): `nice -n 
 * Cryptography - public keys
 * `mbedtls_pk_encrypt`
 * `rr_get_logserver`
+
+# Encryption Routine
+
+> Location: 0x19304
+
+![](/uploads/20220705-snipaste_2022-07-05_20-04-51.jpg)
