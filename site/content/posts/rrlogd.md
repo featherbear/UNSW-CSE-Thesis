@@ -93,4 +93,12 @@ Generated if some seed isn't provided
 
 # iptables
 
+## Version Check
+
 ![](/uploads/20220705-snipaste_2022-07-05_20-53-02.jpg)
+
+## Allow-list
+
+> Location: 0x1545a
+
+![](/uploads/20220705-snipaste_2022-07-05_20-57-36.jpg) ![](/uploads/20220705-snipaste_2022-07-05_20-58-04.jpg)
