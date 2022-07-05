@@ -137,3 +137,5 @@ aka internally: `perform_curl`
 # Other
 
 * Some existence of `/opt/rockrobo/rrlog/devtest.conf`
+
+![](/uploads/20220705-snipaste_2022-07-05_22-26-06.jpg)
