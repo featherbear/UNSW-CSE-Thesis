@@ -13,3 +13,6 @@ toc = true
 * RRLDR
 * /dev/shm/endpoint.bin
 * libroboipc.so
+* /opt/rockrobo/rrlog/devtest.conf
+* bootring
+* rriot_tuya logging
