@@ -22,3 +22,9 @@ toc = true
 # rriot_tuya
 
 [See here](../opt-rockrobo-rriot-rriot_tuya/)
+
+***
+
+TODO: Get ALL ips from Wireshark
+
+Then figure out where they came from, and what they contain
