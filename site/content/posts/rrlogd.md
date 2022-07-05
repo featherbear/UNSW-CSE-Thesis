@@ -131,3 +131,9 @@ aka internally: `perform_curl`
 * `Authorization: Galaxy-V2 %s:%s`
 * `User-Agent: python-requests/2.9.1`
   * I mean...
+
+***
+
+# Other
+
+* Some existence of `/opt/rockrobo/rrlog/devtest.conf`
