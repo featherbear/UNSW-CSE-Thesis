@@ -109,9 +109,14 @@ Generated if some seed isn't provided
 
 # Network Handler
 
+> Location: 0x1d6d8
+
 ![](/uploads/20220705-snipaste_2022-07-05_21-34-32.jpg)
 
+Only one function that calls `recv` / `recvfrom` which is at `0x1d6d8`
+
 * Can arbitrary files be request to be uploaded?
+  * 
 
 ## Some sort of `curl`
 
