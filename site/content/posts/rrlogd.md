@@ -44,6 +44,14 @@ Compression is given low [priority](https://linux.die.net/man/1/nice): `nice -n 
 
 # Encryption Routine
 
+## Wrapper
+
+> Location: 0x19448
+
+![](/uploads/20220705-snipaste_2022-07-05_20-06-37.jpg)
+
+## Actual Encryption
+
 > Location: 0x19304
 
 ![](/uploads/20220705-snipaste_2022-07-05_20-04-51.jpg)
