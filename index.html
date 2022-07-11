@@ -27,7 +27,7 @@
 <meta property="og:description" content="Musings of a CSE Thesis">
 <meta property="og:locale" content="en">
 <meta property="og:site_name" content="CSE Thesis Musings">
-<meta property="og:updated_time" content="2022-07-05T13:52:57+00:00">
+<meta property="og:updated_time" content="2022-07-11T13:44:33+00:00">
 <meta property="article:section" content>
 <link rel=alternate type=application/rss+xml href=./index.xml title="CSE Thesis Musings">
 <body class="flex flex-col min-h-screen">
@@ -137,6 +137,28 @@ I make stuff, and occasionally break stuff&mldr; mainly the lattter
 <div class="bg-secondary-bg rounded overflow-hidden border hover:shadow-lg transition ease-in-out duration-200">
 <div class="px-6 pt-6">
 <div class="font-bold text-xl text-primary-text mb-2">
+<a href=./posts/upgrade-notes/ class=hover:text-eureka>Upgrade Notes</a>
+</div>
+<div>
+Firmware is upgraded incrementally rather than straight to the latest version Probably because of dependencies, etc Process Download to blk10 Flash blk10 to blk9 Boot into blk9 (new) Flash blk10 to blk8 Changes The original firmware that was on the device was 01.
+</div>
+</div>
+<div class="px-6 pb-2">
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+<div class="mr-6 my-2">
+<i class="fas fa-calendar mr-1"></i>
+<span>2022-07-11</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=item>
+<div class=grid-content>
+<div class="bg-secondary-bg rounded overflow-hidden border hover:shadow-lg transition ease-in-out duration-200">
+<div class="px-6 pt-6">
+<div class="font-bold text-xl text-primary-text mb-2">
 <a href=./posts/bootring/ class=hover:text-eureka>Bootring</a>
 </div>
 <div>
@@ -207,30 +229,6 @@ mbedtls_pk_encrypt /opt/rockrobo/rrlog/devtest.conf RRLDR /dev/shm/endpoint.bin 
 </div>
 <div>
 Found some file existence check for /opt/rockrobo/rrlog/devtest.conf inside of the rrlogd program. Did a touch… we should hopefully expect to see some extra files?
-</div>
-</div>
-<div class="px-6 pb-2">
-<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
-<div class="mr-6 my-2">
-<i class="fas fa-calendar mr-1"></i>
-<span>2022-07-05</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class=item>
-<div class=grid-content>
-<div class="bg-secondary-bg rounded overflow-hidden border hover:shadow-lg transition ease-in-out duration-200">
-<div class="px-6 pt-6">
-<div class="font-bold text-xl text-primary-text mb-2">
-<a href=./posts/rrlogd/ class=hover:text-eureka>rrlogd</a>
-</div>
-<div>
-Responsible for compressing, (encrypting and) upload log files
-Possibly works with logrotate.sh (system logs) Libraries Protobuf curl mbedtls (Polar SSL) Note Compression is given low priority: nice -n 19 tar zcf ...
-Nicenesses range from -20 (most favorable scheduling) to 19 (least favorable).
 </div>
 </div>
 <div class="px-6 pb-2">
