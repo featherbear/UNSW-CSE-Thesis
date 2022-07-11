@@ -23,7 +23,7 @@
 <meta name=description content="The old firmware stores the root password in the vinda file (mmcblk0p6), however newer firmware versions (supposedly after June 2020) don&rsquo;t seem to respect the contents of the file; with the existing password no longer working
   Initial Shell Access Firstly, get access to the UBoot shell (spam the s key during power on)">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"Upgraded - Accessing the shell","item":"/posts/upgraded-accessing-the-shell/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/upgraded-accessing-the-shell/"},"headline":"Upgraded - Accessing the shell | CSE Thesis Musings","datePublished":"2022-07-11T13:54:25+00:00","dateModified":"2022-07-11T13:54:25+00:00","wordCount":383,"publisher":{"@type":"Person","name":"A. Wong"},"description":"The old firmware stores the root password in the vinda file (mmcblk0p6), however newer firmware versions (supposedly after June 2020) don\u0026rsquo;t seem to respect the contents of the file; with the existing password no longer working\n  Initial Shell Access Firstly, get access to the UBoot shell (spam the s key during power on)"}</script><meta property="og:title" content="Upgraded - Accessing the shell | CSE Thesis Musings">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/upgraded-accessing-the-shell/"},"headline":"Upgraded - Accessing the shell | CSE Thesis Musings","datePublished":"2022-07-11T13:54:25+00:00","dateModified":"2022-07-11T13:54:25+00:00","wordCount":411,"publisher":{"@type":"Person","name":"A. Wong"},"description":"The old firmware stores the root password in the vinda file (mmcblk0p6), however newer firmware versions (supposedly after June 2020) don\u0026rsquo;t seem to respect the contents of the file; with the existing password no longer working\n  Initial Shell Access Firstly, get access to the UBoot shell (spam the s key during power on)"}</script><meta property="og:title" content="Upgraded - Accessing the shell | CSE Thesis Musings">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/posts/upgraded-accessing-the-shell/">
 <meta property="og:description" content="The old firmware stores the root password in the vinda file (mmcblk0p6), however newer firmware versions (supposedly after June 2020) don&rsquo;t seem to respect the contents of the file; with the existing password no longer working
@@ -147,7 +147,8 @@ mdev -s
 <p>This will cause <code>ttyS0</code> connections to be handled by <code>/bin/login</code> (which respects our <code>/etc/passwd</code></p>
 <hr>
 <h1 id=ssh>SSH</h1>
-<p>Dropbear is used instead of the OpenSSH server</p>
+<p>Dropbear is used instead of the OpenSSH server. It&rsquo;s very old and supports outdated key exchange algorithms which are not enabled by default on OpenSSH clients.</p>
+<p>You&rsquo;ll need to SSH with some options: <code>ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 root@[host]</code></p>
 <p>You can attempt to patch out the iptable drop commands located in <code>/etc/init/rrwatchdoge.conf</code> and <code>/etc/init/S04wdgenv</code>&mldr;</p>
 <p><img src=../../uploads/20220711-snipaste_2022-07-12_01-35-49.jpg alt></p>
 <p>However the <code>WatchDoge</code> process will reinstate it&mldr;<br>
