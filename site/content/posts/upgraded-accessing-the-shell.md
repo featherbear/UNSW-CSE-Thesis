@@ -101,3 +101,7 @@ Literally, it's the first instruction!
 ![](/uploads/20220711-snipaste_2022-07-12_01-25-43.jpg)
 
 > At least they're blocking IPv6 now!
+
+\--> Might need to force `iptables -I INPUT -j ACCEPT -p tcp --dport 22` somewhere?
+
+***
