@@ -14,6 +14,17 @@ toc = true
 
 ***
 
+# Pre-Reset
+
 > `find / -type d -exec sh -c "echo reset-{} > {}/z5206677.was.here.reset" \;`
 
 ***
+
+# Reset Results
+
+Note: Back on the old Linux device
+
+    root@rockrobo:/# find / -type f -name "z5206677.was.here.reset"
+    /mnt/reserve/rriot/z5206677.was.here.reset
+    /mnt/reserve/z5206677.was.here.reset
+    /mnt/reserve/lost+found/z5206677.was.here.reset
