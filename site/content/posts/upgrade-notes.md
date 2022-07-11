@@ -41,3 +41,4 @@ Once upgraded, there was another upgrade to go to `01.19.98`
 * Dropbear is used as the SSH server
   * The `WatchDoge` process will re-run the iptables SSH drop rule, rendering simple conf commenting void
   * Have to patch the `WatchDoge` process
+* The `rrlogd` process has been upgraded to drop SSH (iptables) if the system model version check enters the false branch
