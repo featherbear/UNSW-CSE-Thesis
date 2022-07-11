@@ -89,7 +89,15 @@ This will cause `ttyS0` connections to be handled by `/bin/login` (which respect
 
 # SSH
 
-Dropbear is used, however the `WatchDoge` process will reinstate it...  
+Dropbear is used instead of the OpenSSH server
+
+You can attempt to patch out the iptable drop commands located in `/etc/init/rrwatchdoge.conf` and `/etc/init/S04wdgenv`...
+
+![](/uploads/20220711-snipaste_2022-07-12_01-35-49.jpg)
+
+However the `WatchDoge` process will reinstate it...  
 Literally, it's the first instruction!
 
 ![](/uploads/20220711-snipaste_2022-07-12_01-25-43.jpg)
+
+> At least they're blocking IPv6 now!
