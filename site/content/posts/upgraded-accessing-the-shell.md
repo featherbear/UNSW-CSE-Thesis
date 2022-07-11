@@ -12,7 +12,29 @@ toc = true
 
 ***
 
-# Initial Shell Access
+# TL;DR - Get access to serial shell
+
+```
+# Hold 's' during power on to enter UBoot's shell
+setenv setargs_mmc ${setargs_mmc} init=/bin/bash
+boot
+
+# When you access the /bin/bash shell, enter in:
+echo 'V' > /dev/watchdog
+
+# Edit the /etc/inittab file
+# Prepend a # to ::respawn:/sbin/rr_login -d /dev/ttyS0 -b 115200 -p vt100
+# Append ttyS0::respawn:/bin/login
+
+# Reboot
+
+# Login with root and previous password
+
+```
+
+***
+
+# Initial Shell Access with Normal System Functional
 
 Firstly, get access to the UBoot shell (spam the `s` key during power on)
 
