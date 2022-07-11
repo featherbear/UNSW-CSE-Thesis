@@ -31,3 +31,7 @@ In `v02.29.02`, `tcpdump` gets called!
 * Contains `netstat -anp` as `netstat.txt`
 * Contains `ifconfig` as `ifconfig.txt`
 * Contains packet capture (as `network_packet.pcap`)
+
+# /opt/rockrobo/rrlog/rrlogd
+
+![](/uploads/20220711-snipaste_2022-07-12_04-14-11.jpg)
