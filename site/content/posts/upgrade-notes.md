@@ -46,6 +46,13 @@ Once upgraded, there was another upgrade to go to `01.19.98`
 * IPv6 is blocked with `ip6tables`
 * Dropbear is used as the SSH server
   * The `WatchDoge` process will re-run the iptables SSH drop rule, rendering simple conf commenting void
-  * Have to patch the `WatchDoge` process
+  * Have to patch `WatchDoge` to null the iptables command
 * The `rrlogd` process has been upgraded to drop SSH (iptables) if the system model version check enters the false branch
+  * Also need to patch `rrlogd` to null the iptables command
 * `/opt/rockrobo/wlan/wlanmgr` has the ability to call `tcpdump` during debug mode
+
+> Supposedly _Giese_ realised this in 2020 as well oop
+>
+> [https://www.youtube.com/watch?v=r_04K5SPEXI](https://www.youtube.com/watch?v=r_04K5SPEXI "https://www.youtube.com/watch?v=r_04K5SPEXI")
+
+![](/uploads/20220711-snipaste_2022-07-12_05-00-23.jpg)
