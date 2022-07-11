@@ -89,7 +89,9 @@ This will cause `ttyS0` connections to be handled by `/bin/login` (which respect
 
 # SSH
 
-Dropbear is used instead of the OpenSSH server
+Dropbear is used instead of the OpenSSH server. It's very old and supports outdated key exchange algorithms which are not enabled by default on OpenSSH clients.
+
+You'll need to SSH with some options: `ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 root@[host]`
 
 You can attempt to patch out the iptable drop commands located in `/etc/init/rrwatchdoge.conf` and `/etc/init/S04wdgenv`...
 
