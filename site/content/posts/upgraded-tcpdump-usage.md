@@ -10,7 +10,15 @@ toc = true
 +++
 In `v02.29.02`, `tcpdump` gets called!
 
+# /opt/rockrobo/wlan/wlanmgr
+
 ![](/uploads/20220711-snipaste_2022-07-12_03-58-09.jpg)
+
+> `tcpdump -i any -s 0 -C %lu -W %d -Z root -w %s/%s/%s &`
+
+## wifi\_debug\_do
+
+
 
 # /mnt/data/debug
 
