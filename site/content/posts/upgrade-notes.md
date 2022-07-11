@@ -48,3 +48,4 @@ Once upgraded, there was another upgrade to go to `01.19.98`
   * The `WatchDoge` process will re-run the iptables SSH drop rule, rendering simple conf commenting void
   * Have to patch the `WatchDoge` process
 * The `rrlogd` process has been upgraded to drop SSH (iptables) if the system model version check enters the false branch
+* `/opt/rockrobo/wlan/wlanmgr` has the ability to call `tcpdump` during debug mode
