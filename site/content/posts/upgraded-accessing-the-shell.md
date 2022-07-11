@@ -58,6 +58,7 @@ Then start all of the basic required services
 Try reset the password with `passwd root` (or `passwd -d root` to clear)
 
 * Note - this seems to affect the SSH login though :)
+* Note - also affects `/bin/login`
 
 ***
 
@@ -76,5 +77,7 @@ We can see that the serial connection is handled by `/sbin/rr_login`.
 
 > The SSH server is replaced with `dropbear`, and additionally no longer runs by default.  
 > `dropbear -B` - Start SSH server (-B allows empty password)
+
+### Fix
 
 We can comment out the `rr_login` line, and replace it with `ttyS0::respawn:/bin/login`
