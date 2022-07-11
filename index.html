@@ -141,8 +141,9 @@ I make stuff, and occasionally break stuff&mldr; mainly the lattter
 </div>
 <div>
 In v02.29.02, tcpdump gets called!
-/mnt/data/debug /opt/rockrobo/wlan/wifi_debug_collect.sh
-Contains /etc/resolv.conf Contains netstat -anp as netstat.txt Contains ifconfig as ifconfig.txt Contains packet capture (as network_packet.pcap)
+/opt/rockrobo/wlan/wlanmgr tcpdump -i any -s 0 -C %lu -W %d -Z root -w %s/%s/%s &
+wifi_debug_do /mnt/data/debug /opt/rockrobo/wlan/wifi_debug_collect.sh
+Contains /etc/resolv.conf Contains netstat -anp as netstat.txt Contains ifconfig as ifconfig.txt Contains packet capture (as network_packet.
 </div>
 </div>
 <div class="px-6 pb-2">
