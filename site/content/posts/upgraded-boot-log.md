@@ -2,7 +2,6 @@
 categories = []
 date = 2022-07-11T13:54:06Z
 description = ""
-draft = true
 series = []
 tags = []
 title = "Upgraded - Boot Log"
