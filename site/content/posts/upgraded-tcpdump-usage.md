@@ -15,3 +15,8 @@ In `v02.29.02`, `tcpdump` gets called!
 # /mnt/data/debug
 
 > `/opt/rockrobo/wlan/wifi_debug_collect.sh`
+
+* Contains `/etc/resolv.conf`
+* Contains `netstat -anp` as `netstat.txt`
+* Contains `ifconfig` as `ifconfig.txt`
+* Contains packet capture (as `network_packet.pcap`)
