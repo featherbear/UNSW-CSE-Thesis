@@ -84,3 +84,12 @@ We can see that the serial connection is handled by [`/sbin/rr_login`](../sbin-r
 We can comment out the `rr_login` line, and replace it with `ttyS0::respawn:/bin/login`
 
 This will cause `ttyS0` connections to be handled by `/bin/login` (which respects our `/etc/passwd`
+
+***
+
+# SSH
+
+Dropbear is used, however the `WatchDoge` process will reinstate it...  
+Literally, it's the first instruction!
+
+![](/uploads/20220711-snipaste_2022-07-12_01-25-43.jpg)
