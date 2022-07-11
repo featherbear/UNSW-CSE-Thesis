@@ -27,7 +27,7 @@
 <meta property="og:description" content="Musings of a CSE Thesis">
 <meta property="og:locale" content="en">
 <meta property="og:site_name" content="CSE Thesis Musings">
-<meta property="og:updated_time" content="2022-07-11T15:34:35+00:00">
+<meta property="og:updated_time" content="2022-07-11T15:51:06+00:00">
 <meta property="article:section" content>
 <link rel=alternate type=application/rss+xml href=./index.xml title="CSE Thesis Musings">
 <body class="flex flex-col min-h-screen">
@@ -137,6 +137,31 @@ I make stuff, and occasionally break stuff&mldr; mainly the lattter
 <div class="bg-secondary-bg rounded overflow-hidden border hover:shadow-lg transition ease-in-out duration-200">
 <div class="px-6 pt-6">
 <div class="font-bold text-xl text-primary-text mb-2">
+<a href=./posts/updated-opt-rockrobo-rrlog-rrlogd/ class=hover:text-eureka>Updated - /opt/rockrobo/rrlog/rrlogd</a>
+</div>
+<div>
+The updated rrlogd now runs iptables to drop SSH on the false branch of the version check.
+If ver > 1 (e.g. 2 or 3) - allow
+Else drop
+See old version
+</div>
+</div>
+<div class="px-6 pb-2">
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+<div class="mr-6 my-2">
+<i class="fas fa-calendar mr-1"></i>
+<span>2022-07-11</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=item>
+<div class=grid-content>
+<div class="bg-secondary-bg rounded overflow-hidden border hover:shadow-lg transition ease-in-out duration-200">
+<div class="px-6 pt-6">
+<div class="font-bold text-xl text-primary-text mb-2">
 <a href=./posts/upgrade-upgrade-persistence/ class=hover:text-eureka>Upgrade - Upgrade Persistence</a>
 </div>
 <div>
@@ -211,28 +236,6 @@ bash-4.3# cat rr-info A.01.0014-V2902 bash-4.3# cat OS_VERSION ro.product.device
 <div>
 The old firmware stores the root password in the vinda file (mmcblk0p6), however newer firmware versions (supposedly after June 2020) don’t seem to respect the contents of the file; with the existing password no longer working
 Initial Shell Access Firstly, get access to the UBoot shell (spam the s key during power on)
-</div>
-</div>
-<div class="px-6 pb-2">
-<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
-<div class="mr-6 my-2">
-<i class="fas fa-calendar mr-1"></i>
-<span>2022-07-11</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class=item>
-<div class=grid-content>
-<div class="bg-secondary-bg rounded overflow-hidden border hover:shadow-lg transition ease-in-out duration-200">
-<div class="px-6 pt-6">
-<div class="font-bold text-xl text-primary-text mb-2">
-<a href=./posts/upgraded-boot-log/ class=hover:text-eureka>Upgraded - Boot Log</a>
-</div>
-<div>
--boot0 version : 4.0.0 fel_flag = 0x00000000 rtc[0] value = 0x00000000 rtc[1] value = 0x00000000 rtc[2] value = 0x00000000 rtc[3] value = 0x00000000 DRAM DRIVE INFO: V1.7 DRAM Type =3 (2:DDR2,3:DDR3,6:LPDDR2,7:LPDDR3) DRAM zq value: 00003bbbDRAM CLK =552 MHZ ID CHECK VERSION: V0.
 </div>
 </div>
 <div class="px-6 pb-2">
