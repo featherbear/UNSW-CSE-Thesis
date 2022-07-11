@@ -76,3 +76,5 @@ We can see that the serial connection is handled by `/sbin/rr_login`.
 
 > The SSH server is replaced with `dropbear`, and additionally no longer runs by default.  
 > `dropbear -B` - Start SSH server (-B allows empty password)
+
+We can comment out the `rr_login` line, and replace it with `ttyS0::respawn:/bin/login`
