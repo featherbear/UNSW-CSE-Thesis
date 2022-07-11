@@ -23,7 +23,7 @@
 <meta name=description content="The old firmware stores the root password in the vinda file (mmcblk0p6), however newer firmware versions (supposedly after June 2020) don&rsquo;t seem to respect the contents of the file; with the existing password no longer working
   Shell Access Firstly, get access to the UBoot shell (spam the s key during power on)">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"Upgraded - Accessing the shell","item":"/posts/upgraded-accessing-the-shell/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/upgraded-accessing-the-shell/"},"headline":"Upgraded - Accessing the shell | CSE Thesis Musings","datePublished":"2022-07-11T13:54:25+00:00","dateModified":"2022-07-11T13:54:25+00:00","wordCount":257,"publisher":{"@type":"Person","name":"A. Wong"},"description":"The old firmware stores the root password in the vinda file (mmcblk0p6), however newer firmware versions (supposedly after June 2020) don\u0026rsquo;t seem to respect the contents of the file; with the existing password no longer working\n  Shell Access Firstly, get access to the UBoot shell (spam the s key during power on)"}</script><meta property="og:title" content="Upgraded - Accessing the shell | CSE Thesis Musings">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/upgraded-accessing-the-shell/"},"headline":"Upgraded - Accessing the shell | CSE Thesis Musings","datePublished":"2022-07-11T13:54:25+00:00","dateModified":"2022-07-11T13:54:25+00:00","wordCount":286,"publisher":{"@type":"Person","name":"A. Wong"},"description":"The old firmware stores the root password in the vinda file (mmcblk0p6), however newer firmware versions (supposedly after June 2020) don\u0026rsquo;t seem to respect the contents of the file; with the existing password no longer working\n  Shell Access Firstly, get access to the UBoot shell (spam the s key during power on)"}</script><meta property="og:title" content="Upgraded - Accessing the shell | CSE Thesis Musings">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/posts/upgraded-accessing-the-shell/">
 <meta property="og:description" content="The old firmware stores the root password in the vinda file (mmcblk0p6), however newer firmware versions (supposedly after June 2020) don&rsquo;t seem to respect the contents of the file; with the existing password no longer working
@@ -120,8 +120,12 @@ mdev -s
 <h1 id=root>Root</h1>
 <blockquote>
 <p>I have no idea what the root password is.. it&rsquo;s not matching the XOR&rsquo;d <code>vinda</code> file anymore</p>
+<p>I tried nulling out the <code>/etc/passwd</code> file (aka setting <code>root❌</code> to <code>root::</code> but local access still didn&rsquo;t work</p>
 </blockquote>
 <p>Try reset the password with <code>passwd root</code> (or <code>passwd -d root</code> to clear)</p>
+<ul>
+<li>Note - this seems to affect the SSH login though :)</li>
+</ul>
 <hr>
 <h1 id=local-shell>Local Shell</h1>
 <p>Inside of <code>/etc/inittab</code> (SysV)</p>
@@ -143,7 +147,7 @@ mdev -s
 </div>
 <div class="md:text-right mt-4 md:mt-0">
 <span class="block font-bold">Next</span>
-<a href=../../posts/upgrade-notes/ class=block>Upgrade Notes</a>
+<a href=../../posts/upgraded-boot-log/ class=block>Upgraded - Boot Log</a>
 </div>
 </div>
 </div>
