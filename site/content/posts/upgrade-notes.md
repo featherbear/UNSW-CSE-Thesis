@@ -30,6 +30,12 @@ Once upgraded, there was another upgrade to go to `01.19.98`
 
 > I think I got locked out at this point, because the UART shell didn't accept my root credentials
 
+## Files That Are There?
+
+* /usr/sbin/tcpdump
+  * Call to tcpdump in /opt/rockrobo/wlan/wlanmgr
+* /usr/bin/scp
+
 ## Notice
 
 * Newer versions no longer use the `vinda` file, and use <s>an embedded linux OS rather than Ubuntu 14. Now uses</s> busybox.
