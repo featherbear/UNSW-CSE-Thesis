@@ -16,9 +16,12 @@ In `v02.29.02`, `tcpdump` gets called!
 
 > `tcpdump -i any -s 0 -C %lu -W %d -Z root -w %s/%s/%s &`
 
-## wifi\_debug\_do
+## wifi_debug_do(i)
 
-
+* `i=0` - Cleanup
+* `i=1` - Do capture
+* `i=2` - Stop capture
+* `i=3` - `wifi_debug_collect.sh`
 
 # /mnt/data/debug
 
