@@ -21,13 +21,13 @@
 <script>(function(e,b,f,c,a,d){b[c]=b[c]||function(){(b[c].q=b[c].q||[]).push(arguments)},a=e.createElement('script'),d=e.getElementsByTagName('script')[0],a.async=1,a.src=f,a.id='fathom-script',d.parentNode.insertBefore(a,d)})(document,window,'//ss.featherbear.cc/tracker.js','fathom'),fathom('set','siteId','NEQTU'),fathom('trackPageview')</script>
 <style>html.dark{--color-primary-bg:#232327 !important}div#sidebar-toc>ul.pl-6{margin-left:1em}</style>
 <meta name=description content="The old firmware stores the root password in the vinda file (mmcblk0p6), however newer firmware versions (supposedly after June 2020) don&rsquo;t seem to respect the contents of the file; with the existing password no longer working
-  Shell Access Firstly, get access to the UBoot shell (spam the s key during power on)">
+  Initial Shell Access Firstly, get access to the UBoot shell (spam the s key during power on)">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"Upgraded - Accessing the shell","item":"/posts/upgraded-accessing-the-shell/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/upgraded-accessing-the-shell/"},"headline":"Upgraded - Accessing the shell | CSE Thesis Musings","datePublished":"2022-07-11T13:54:25+00:00","dateModified":"2022-07-11T13:54:25+00:00","wordCount":304,"publisher":{"@type":"Person","name":"A. Wong"},"description":"The old firmware stores the root password in the vinda file (mmcblk0p6), however newer firmware versions (supposedly after June 2020) don\u0026rsquo;t seem to respect the contents of the file; with the existing password no longer working\n  Shell Access Firstly, get access to the UBoot shell (spam the s key during power on)"}</script><meta property="og:title" content="Upgraded - Accessing the shell | CSE Thesis Musings">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/upgraded-accessing-the-shell/"},"headline":"Upgraded - Accessing the shell | CSE Thesis Musings","datePublished":"2022-07-11T13:54:25+00:00","dateModified":"2022-07-11T13:54:25+00:00","wordCount":326,"publisher":{"@type":"Person","name":"A. Wong"},"description":"The old firmware stores the root password in the vinda file (mmcblk0p6), however newer firmware versions (supposedly after June 2020) don\u0026rsquo;t seem to respect the contents of the file; with the existing password no longer working\n  Initial Shell Access Firstly, get access to the UBoot shell (spam the s key during power on)"}</script><meta property="og:title" content="Upgraded - Accessing the shell | CSE Thesis Musings">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/posts/upgraded-accessing-the-shell/">
 <meta property="og:description" content="The old firmware stores the root password in the vinda file (mmcblk0p6), however newer firmware versions (supposedly after June 2020) don&rsquo;t seem to respect the contents of the file; with the existing password no longer working
-  Shell Access Firstly, get access to the UBoot shell (spam the s key during power on)">
+  Initial Shell Access Firstly, get access to the UBoot shell (spam the s key during power on)">
 <meta property="og:locale" content="en">
 <meta property="og:site_name" content="CSE Thesis Musings">
 <meta property="article:published_time" content="2022-07-11T13:54:25+00:00">
@@ -86,7 +86,7 @@
 <p>The old firmware stores the root password in the <code>vinda</code> file (<code>mmcblk0p6</code>), however newer firmware versions (supposedly after June 2020) don&rsquo;t seem to respect the contents of the file; with the existing password no longer working</p>
 </blockquote>
 <hr>
-<h1 id=shell-access>Shell Access</h1>
+<h1 id=initial-shell-access>Initial Shell Access</h1>
 <p>Firstly, get access to the UBoot shell (spam the <code>s</code> key during power on)</p>
 <pre><code>setenv setargs_mmc ${setargs_mmc} init=/bin/bash
 boot
@@ -106,8 +106,7 @@ ln -s /run/shm /dev/shm
 echo /sbin/mdev &gt; /proc/sys/kernel/hotplug
 mdev -s
 
-# Source: https://valetudo.cloud/pages/general/rooting-instructions.html
-# Source: https://builder.dontvacuum.me/s5e-cheatsheet.txt
+# Source: /etc/init/rcS
 </code></pre>
 <p>Then start all of the basic required services</p>
 <pre><code>/etc/init/S01logging start
@@ -119,9 +118,10 @@ mdev -s
 <hr>
 <h1 id=root>Root</h1>
 <blockquote>
-<p>I have no idea what the root password is.. it&rsquo;s not matching the XOR&rsquo;d <code>vinda</code> file anymore</p>
+<p>After getting the UART shell&mldr; I have no idea what the root password is.. it&rsquo;s not matching the XOR&rsquo;d <code>vinda</code> file anymore</p>
 <p>I tried nulling out the <code>/etc/passwd</code> file (aka setting <code>root❌</code> to <code>root::</code> but local access still didn&rsquo;t work</p>
 </blockquote>
+<p><strong>UPDATE - BECAUSE of** </strong><code>rr_login</code>**<a href=../sbin-rr_login/></a></p>
 <p>Try reset the password with <code>passwd root</code> (or <code>passwd -d root</code> to clear)</p>
 <ul>
 <li>Note - this seems to affect the SSH login though :)</li>
@@ -137,13 +137,14 @@ mdev -s
 ::respawn:/usr/sbin/dropbear -F
 ::respawn:/sbin/rr_login -d /dev/ttyS0 -b 115200 -p vt100
 </code></pre>
-<p>We can see that the serial connection is handled by <code>/sbin/rr_login</code>.</p>
+<p>We can see that the serial connection is handled by <a href=../sbin-rr_login/><code>/sbin/rr_login</code></a>.</p>
 <blockquote>
 <p>The SSH server is replaced with <code>dropbear</code>, and additionally no longer runs by default.<br>
 <code>dropbear -B</code> - Start SSH server (-B allows empty password)</p>
 </blockquote>
 <h3 id=fix>Fix</h3>
 <p>We can comment out the <code>rr_login</code> line, and replace it with <code>ttyS0::respawn:/bin/login</code></p>
+<p>This will cause <code>ttyS0</code> connections to be handled by <code>/bin/login</code> (which respects our <code>/etc/passwd</code></p>
 </div>
 <div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
 <div>
