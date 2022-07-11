@@ -1,6 +1,6 @@
 <!doctype html><html lang=en><meta charset=utf-8>
 <meta name=viewport content="width=device-width">
-<title>Upgraded - Accessing the shell | CSE Thesis Musings</title>
+<title>Upgraded - Versioning and Fingerprinting | CSE Thesis Musings</title>
 <meta name=generator content="Hugo Eureka 0.8.2">
 <link rel=stylesheet href=../../css/eureka.min.css>
 <script defer src=../../js/eureka.min.js></script>
@@ -20,18 +20,16 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-107434487-2')</script>
 <script>(function(e,b,f,c,a,d){b[c]=b[c]||function(){(b[c].q=b[c].q||[]).push(arguments)},a=e.createElement('script'),d=e.getElementsByTagName('script')[0],a.async=1,a.src=f,a.id='fathom-script',d.parentNode.insertBefore(a,d)})(document,window,'//ss.featherbear.cc/tracker.js','fathom'),fathom('set','siteId','NEQTU'),fathom('trackPageview')</script>
 <style>html.dark{--color-primary-bg:#232327 !important}div#sidebar-toc>ul.pl-6{margin-left:1em}</style>
-<meta name=description content="The old firmware stores the root password in the vinda file (mmcblk0p6), however newer firmware versions (supposedly after June 2020) don&rsquo;t seem to respect the contents of the file; with the existing password no longer working
-  Shell Access Firstly, get access to the UBoot shell (spam the s key during power on)">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"Upgraded - Accessing the shell","item":"/posts/upgraded-accessing-the-shell/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/upgraded-accessing-the-shell/"},"headline":"Upgraded - Accessing the shell | CSE Thesis Musings","datePublished":"2022-07-11T13:54:25+00:00","dateModified":"2022-07-11T13:54:25+00:00","wordCount":286,"publisher":{"@type":"Person","name":"A. Wong"},"description":"The old firmware stores the root password in the vinda file (mmcblk0p6), however newer firmware versions (supposedly after June 2020) don\u0026rsquo;t seem to respect the contents of the file; with the existing password no longer working\n  Shell Access Firstly, get access to the UBoot shell (spam the s key during power on)"}</script><meta property="og:title" content="Upgraded - Accessing the shell | CSE Thesis Musings">
+<meta name=description content="bash-4.3# cat rr-info A.01.0014-V2902 bash-4.3# cat OS_VERSION ro.product.device=TANOS_V2902-2022042802REL_M3.5.8_T4.1.4-2_RELEASE_20220428-202811 ro.build.display.id=TANOS_MP_R16_RELEASE_20220428-202811 ro.sys.cputype=R16.STM32.A3.G1 ro.build.version.release=V2902 ro.build.date.utc=1651148891 uname -a Linux rockrobo 3.4.39 #1 SMP PREEMPT Thu Apr 28 20:27:25 CST 2022 armv7l GNU/Linux ::sysinit:/etc/init/rcS S start ::shutdown:/etc/init/rcS K stop ::respawn:WatchDoge $RR_ROOT/watchdog >> $RR_UDATA/rockrobo/rrlog/watchdog.log 2>&1 ::respawn:/usr/bin/adbd ::respawn:/usr/sbin/dropbear -F ::respawn:/sbin/rr_login -d /dev/ttyS0 -b 115200 -p vt100 $ /usr/bin/rr_try_mount Read Conf Dir:/tmp, blk_device:tmpfs, Type:tmpfs, opt:size=30m ignore Dir:/tmp, blk_device:tmpfs, because not '/dev/mmcblk0p*' Read Conf Dir:/run/shm, blk_device:tmpfs, Type:tmpfs, opt:size=100m ignore Dir:/run/shm, blk_device:tmpfs, because not '/dev/mmcblk0p*' Read Conf Dir:/mnt/data/, blk_device:/dev/mmcblk0p1, Type:ext4, opt:defaults Check /mnt/data/ Check /dev/mmcblk0p1 Info:/dev/mmcblk0p1 File type block device.">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"Upgraded - Versioning and Fingerprinting","item":"/posts/upgraded-versioning-and-fingerprinting/"}]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/upgraded-versioning-and-fingerprinting/"},"headline":"Upgraded - Versioning and Fingerprinting | CSE Thesis Musings","datePublished":"2022-07-11T14:05:05+00:00","dateModified":"2022-07-11T14:05:05+00:00","wordCount":194,"publisher":{"@type":"Person","name":"A. Wong"},"description":"bash-4.3# cat rr-info A.01.0014-V2902 bash-4.3# cat OS_VERSION ro.product.device=TANOS_V2902-2022042802REL_M3.5.8_T4.1.4-2_RELEASE_20220428-202811 ro.build.display.id=TANOS_MP_R16_RELEASE_20220428-202811 ro.sys.cputype=R16.STM32.A3.G1 ro.build.version.release=V2902 ro.build.date.utc=1651148891 uname -a Linux rockrobo 3.4.39 #1 SMP PREEMPT Thu Apr 28 20:27:25 CST 2022 armv7l GNU\/Linux ::sysinit:\/etc\/init\/rcS S start ::shutdown:\/etc\/init\/rcS K stop ::respawn:WatchDoge $RR_ROOT\/watchdog \u0026gt;\u0026gt; $RR_UDATA\/rockrobo\/rrlog\/watchdog.log 2\u0026gt;\u0026amp;1 ::respawn:\/usr\/bin\/adbd ::respawn:\/usr\/sbin\/dropbear -F ::respawn:\/sbin\/rr_login -d \/dev\/ttyS0 -b 115200 -p vt100 $ \/usr\/bin\/rr_try_mount Read Conf Dir:\/tmp, blk_device:tmpfs, Type:tmpfs, opt:size=30m ignore Dir:\/tmp, blk_device:tmpfs, because not \u0027\/dev\/mmcblk0p*\u0027 Read Conf Dir:\/run\/shm, blk_device:tmpfs, Type:tmpfs, opt:size=100m ignore Dir:\/run\/shm, blk_device:tmpfs, because not \u0027\/dev\/mmcblk0p*\u0027 Read Conf Dir:\/mnt\/data\/, blk_device:\/dev\/mmcblk0p1, Type:ext4, opt:defaults Check \/mnt\/data\/ Check \/dev\/mmcblk0p1 Info:\/dev\/mmcblk0p1 File type block device."}</script><meta property="og:title" content="Upgraded - Versioning and Fingerprinting | CSE Thesis Musings">
 <meta property="og:type" content="article">
-<meta property="og:url" content="/posts/upgraded-accessing-the-shell/">
-<meta property="og:description" content="The old firmware stores the root password in the vinda file (mmcblk0p6), however newer firmware versions (supposedly after June 2020) don&rsquo;t seem to respect the contents of the file; with the existing password no longer working
-  Shell Access Firstly, get access to the UBoot shell (spam the s key during power on)">
+<meta property="og:url" content="/posts/upgraded-versioning-and-fingerprinting/">
+<meta property="og:description" content="bash-4.3# cat rr-info A.01.0014-V2902 bash-4.3# cat OS_VERSION ro.product.device=TANOS_V2902-2022042802REL_M3.5.8_T4.1.4-2_RELEASE_20220428-202811 ro.build.display.id=TANOS_MP_R16_RELEASE_20220428-202811 ro.sys.cputype=R16.STM32.A3.G1 ro.build.version.release=V2902 ro.build.date.utc=1651148891 uname -a Linux rockrobo 3.4.39 #1 SMP PREEMPT Thu Apr 28 20:27:25 CST 2022 armv7l GNU/Linux ::sysinit:/etc/init/rcS S start ::shutdown:/etc/init/rcS K stop ::respawn:WatchDoge $RR_ROOT/watchdog >> $RR_UDATA/rockrobo/rrlog/watchdog.log 2>&1 ::respawn:/usr/bin/adbd ::respawn:/usr/sbin/dropbear -F ::respawn:/sbin/rr_login -d /dev/ttyS0 -b 115200 -p vt100 $ /usr/bin/rr_try_mount Read Conf Dir:/tmp, blk_device:tmpfs, Type:tmpfs, opt:size=30m ignore Dir:/tmp, blk_device:tmpfs, because not '/dev/mmcblk0p*' Read Conf Dir:/run/shm, blk_device:tmpfs, Type:tmpfs, opt:size=100m ignore Dir:/run/shm, blk_device:tmpfs, because not '/dev/mmcblk0p*' Read Conf Dir:/mnt/data/, blk_device:/dev/mmcblk0p1, Type:ext4, opt:defaults Check /mnt/data/ Check /dev/mmcblk0p1 Info:/dev/mmcblk0p1 File type block device.">
 <meta property="og:locale" content="en">
 <meta property="og:site_name" content="CSE Thesis Musings">
-<meta property="article:published_time" content="2022-07-11T13:54:25+00:00">
-<meta property="article:modified_time" content="2022-07-11T13:54:25+00:00">
+<meta property="article:published_time" content="2022-07-11T14:05:05+00:00">
+<meta property="article:modified_time" content="2022-07-11T14:05:05+00:00">
 <meta property="article:section" content="posts">
 <body class="flex flex-col min-h-screen">
 <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
@@ -73,8 +71,8 @@
 <div class=pl-scrollbar>
 <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
 <div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
-<div class="col-span-2 lg:col-start-2 lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
-<h1 class="font-bold text-3xl text-primary-text">Upgraded - Accessing the shell</h1>
+<div class="col-span-2 lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+<h1 class="font-bold text-3xl text-primary-text">Upgraded - Versioning and Fingerprinting</h1>
 <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
 <div class="mr-6 my-2">
 <i class="fas fa-calendar mr-1"></i>
@@ -82,76 +80,102 @@
 </div>
 </div>
 <div class=content>
-<blockquote>
-<p>The old firmware stores the root password in the <code>vinda</code> file (<code>mmcblk0p6</code>), however newer firmware versions (supposedly after June 2020) don&rsquo;t seem to respect the contents of the file; with the existing password no longer working</p>
-</blockquote>
-<hr>
-<h1 id=shell-access>Shell Access</h1>
-<p>Firstly, get access to the UBoot shell (spam the <code>s</code> key during power on)</p>
-<pre><code>setenv setargs_mmc ${setargs_mmc} init=/bin/bash
-boot
-</code></pre>
-<p>When you enter the shell, immediately enter in <code>echo 'V' > /dev/watchdog</code> to prevent the system from rebooting</p>
-<p>After, set up the linux filesystem structure</p>
-<pre><code>mount -n -t proc none /proc 
-mount -n -t tmpfs none /run
-mkdir -p /run/shm
-mount -n -t tmpfs tmpfs /var -o size=30m
-mkdir -p /var/tmp /var/log /var/modules /var/lib/misc/ /var/lib/dhcp
-ln -s /run /var/run
-mkdir -p /dev/pts
-mount -n -t devpts none /dev/pts
-mount -n -t sysfs none /sys
-ln -s /run/shm /dev/shm
-echo /sbin/mdev &gt; /proc/sys/kernel/hotplug
-mdev -s
+<pre><code>bash-4.3# cat rr-info 
+A.01.0014-V2902
 
-# Source: https://valetudo.cloud/pages/general/rooting-instructions.html
-# Source: https://builder.dontvacuum.me/s5e-cheatsheet.txt
-</code></pre>
-<p>Then start all of the basic required services</p>
-<pre><code>/etc/init/S01logging start
-/etc/init/S02hostname start
-/etc/init/S02network start
-/etc/init/S03mountall start    
-/opt/rockrobo/wlan/wifi_start.sh
-</code></pre>
-<hr>
-<h1 id=root>Root</h1>
-<blockquote>
-<p>I have no idea what the root password is.. it&rsquo;s not matching the XOR&rsquo;d <code>vinda</code> file anymore</p>
-<p>I tried nulling out the <code>/etc/passwd</code> file (aka setting <code>root❌</code> to <code>root::</code> but local access still didn&rsquo;t work</p>
-</blockquote>
-<p>Try reset the password with <code>passwd root</code> (or <code>passwd -d root</code> to clear)</p>
-<ul>
-<li>Note - this seems to affect the SSH login though :)</li>
-</ul>
-<hr>
-<h1 id=local-shell>Local Shell</h1>
-<p>Inside of <code>/etc/inittab</code> (SysV)</p>
-<pre><code>::sysinit:/etc/init/rcS S start
+bash-4.3# cat OS_VERSION 
+ro.product.device=TANOS_V2902-2022042802REL_M3.5.8_T4.1.4-2_RELEASE_20220428-202811
+ro.build.display.id=TANOS_MP_R16_RELEASE_20220428-202811
+ro.sys.cputype=R16.STM32.A3.G1
+ro.build.version.release=V2902
+ro.build.date.utc=1651148891
+
+uname -a
+Linux rockrobo 3.4.39 #1 SMP PREEMPT Thu Apr 28 20:27:25 CST 2022 armv7l GNU/Linux
+
+::sysinit:/etc/init/rcS S start
 ::shutdown:/etc/init/rcS K stop
 ::respawn:WatchDoge $RR_ROOT/watchdog &gt;&gt; $RR_UDATA/rockrobo/rrlog/watchdog.log 2&gt;&amp;1
 ::respawn:/usr/bin/adbd
 ::respawn:/usr/sbin/dropbear -F
 ::respawn:/sbin/rr_login -d /dev/ttyS0 -b 115200 -p vt100
+
+$ /usr/bin/rr_try_mount
+Read Conf Dir:/tmp, blk_device:tmpfs, Type:tmpfs, opt:size=30m
+        ignore Dir:/tmp, blk_device:tmpfs, because not '/dev/mmcblk0p*'
+
+
+Read Conf Dir:/run/shm, blk_device:tmpfs, Type:tmpfs, opt:size=100m
+        ignore Dir:/run/shm, blk_device:tmpfs, because not '/dev/mmcblk0p*'
+
+
+Read Conf Dir:/mnt/data/, blk_device:/dev/mmcblk0p1, Type:ext4, opt:defaults
+        Check /mnt/data/
+        Check /dev/mmcblk0p1
+        Info:/dev/mmcblk0p1 File type block device....OK
+Running /sbin/e2fsck on /dev/mmcblk0p1
+sh: /sbin/e2fsck: not found
+Result----Success!
+
+
+Read Conf Dir:/mnt/default/, blk_device:/dev/mmcblk0p6, Type:ext4, opt:ro
+        Check /mnt/default/
+        Check /dev/mmcblk0p6
+        Info:/dev/mmcblk0p6 File type block device....OK
+Running /sbin/e2fsck on /dev/mmcblk0p6
+sh: /sbin/e2fsck: not found
+Result----Success!
+
+
+Read Conf Dir:/mnt/updbuf/, blk_device:/dev/mmcblk0p10, Type:ext4, opt:defaults
+        Check /mnt/updbuf/
+        Check /dev/mmcblk0p10
+        Info:/dev/mmcblk0p10 File type block device....OK
+Running /sbin/e2fsck on /dev/mmcblk0p10
+sh: /sbin/e2fsck: not found
+Result----Success!
+
+
+Read Conf Dir:/mnt/reserve/, blk_device:/dev/mmcblk0p11, Type:ext4, opt:defaults
+        Check /mnt/reserve/
+        Check /dev/mmcblk0p11
+        Info:/dev/mmcblk0p11 File type block device....OK
+Running /sbin/e2fsck on /dev/mmcblk0p11
+sh: /sbin/e2fsck: not found
 </code></pre>
-<p>We can see that the serial connection is handled by <code>/sbin/rr_login</code>.</p>
-<blockquote>
-<p>The SSH server is replaced with <code>dropbear</code>, and additionally no longer runs by default.<br>
-<code>dropbear -B</code> - Start SSH server (-B allows empty password)</p>
-</blockquote>
+<hr>
+<ul>
+<li>SSH Server - dropbear</li>
+<li>Utils - BusyBox v1.24.1 (2019-11-15 15:22:50 CST) built-in shell (ash)</li>
+</ul>
+<hr>
+<h1 id=autorun--startup>Autorun / Startup</h1>
+<p>SSH (dropbear) - NO</p>
+<h1 id=secrets>Secrets</h1>
+<h2 id=etcshadow>/etc/shadow</h2>
+<p><code>root:$6$mptOwWOW$DpR0O/CdKUfpapA3rEGl/4m6WZOkRYC5LSaCJSYKj9iHuZp2PUzfolgrGVeHW5tMtRSYlBWSlonusy67027JF/::0:99999:7:::</code></p>
 </div>
 <div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
 <div>
-<span class="block font-bold">Previous</span>
-<a href=../../posts/upgraded-versioning-and-fingerprinting/ class=block>Upgraded - Versioning and Fingerprinting</a>
 </div>
 <div class="md:text-right mt-4 md:mt-0">
 <span class="block font-bold">Next</span>
-<a href=../../posts/upgraded-boot-log/ class=block>Upgraded - Boot Log</a>
+<a href=../../posts/upgraded-accessing-the-shell/ class=block>Upgraded - Accessing the shell</a>
 </div>
 </div>
+</div>
+<div class=col-span-2>
+<div class="sticky top-16 z-10 hidden lg:block px-6 py-4 bg-primary-bg">
+<span class="text-lg font-semibold">On This Page</span>
+</div>
+<div class="sticky-toc hidden lg:block px-6 pb-6">
+<nav id=TableOfContents>
+<ul>
+<li><a href=#etcshadow>/etc/shadow</a></li>
+</ul>
+</nav>
+</div>
+<script>window.addEventListener('DOMContentLoaded',()=>{enableStickyToc()})</script>
 </div>
 </div>
 <script>document.addEventListener('DOMContentLoaded',()=>{hljs.initHighlightingOnLoad()})</script>
