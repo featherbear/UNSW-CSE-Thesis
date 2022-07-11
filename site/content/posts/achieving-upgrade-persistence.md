@@ -8,6 +8,8 @@ title = "Achieving Upgrade Persistence"
 toc = true
 
 +++
+![](/uploads/20220711-snipaste_2022-07-12_04-24-24.jpg)
+
 # Issue
 
 > Upgrading will reflash the `mmcblk0p8` and `mmcblk0p9` from `mmcblk0p10` (extracted upgrade firmware), rather than `mmcblk0p7` (recovery).
