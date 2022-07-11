@@ -12,7 +12,7 @@ toc = true
 
 ***
 
-# Shell Access
+# Initial Shell Access
 
 Firstly, get access to the UBoot shell (spam the `s` key during power on)
 
@@ -36,8 +36,7 @@ After, set up the linux filesystem structure
     echo /sbin/mdev > /proc/sys/kernel/hotplug
     mdev -s
     
-    # Source: https://valetudo.cloud/pages/general/rooting-instructions.html
-    # Source: https://builder.dontvacuum.me/s5e-cheatsheet.txt
+    # Source: /etc/init/rcS
 
 Then start all of the basic required services
 
@@ -51,9 +50,11 @@ Then start all of the basic required services
 
 # Root
 
-> I have no idea what the root password is.. it's not matching the XOR'd `vinda` file anymore
+> After getting the UART shell... I have no idea what the root password is.. it's not matching the XOR'd `vinda` file anymore
 >
 > I tried nulling out the `/etc/passwd` file (aka setting `root:x:` to `root::` but local access still didn't work
+
+**UPDATE - BECAUSE of** [**`rr_login`**](../sbin-rr_login/)
 
 Try reset the password with `passwd root` (or `passwd -d root` to clear)
 
@@ -73,7 +74,7 @@ Inside of `/etc/inittab` (SysV)
     ::respawn:/usr/sbin/dropbear -F
     ::respawn:/sbin/rr_login -d /dev/ttyS0 -b 115200 -p vt100
 
-We can see that the serial connection is handled by `/sbin/rr_login`.
+We can see that the serial connection is handled by [`/sbin/rr_login`](../sbin-rr_login/).
 
 > The SSH server is replaced with `dropbear`, and additionally no longer runs by default.  
 > `dropbear -B` - Start SSH server (-B allows empty password)
@@ -81,3 +82,5 @@ We can see that the serial connection is handled by `/sbin/rr_login`.
 ### Fix
 
 We can comment out the `rr_login` line, and replace it with `ttyS0::respawn:/bin/login`
+
+This will cause `ttyS0` connections to be handled by `/bin/login` (which respects our `/etc/passwd`

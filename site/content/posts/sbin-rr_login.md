@@ -16,3 +16,7 @@ toc = true
 
 Tries to access `/mnt/default/shadow` and `/mnt/default/shadow.sign` both which do not exist.  
 Probably because old version?
+
+***
+
+Since those files don't exist on my device... I'll never get UART access
