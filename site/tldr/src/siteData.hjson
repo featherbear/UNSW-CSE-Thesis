@@ -296,6 +296,12 @@ New versions use rr_login which prevents root login
 New versions use busybox
 ]
 }
+{
+title: Wednesday
+date: 13/07/2022
+content: Thought about getting access to the device via MIIO OTA on device init
+link: https://featherbear.cc/UNSW-CSE-Thesis/posts/13-07-2022-progress-update/
+}
     ]
   }
 ]
