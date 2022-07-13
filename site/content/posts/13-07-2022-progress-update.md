@@ -63,3 +63,5 @@ This modified version of `adbd` has an auth challenge to prevent public access t
 If we don't modify the `vinda` value (i.e. less tamper evidence) then this provides easy access to the device (via the ADB USB port), without ever having to open up the device.
 
 > Though, I do think there is a dynamically generated key that changes over time!
+>
+> In anycase, getting access just _once_ gives you the ability to then plant persistence
