@@ -22,7 +22,7 @@
 <style>html.dark{--color-primary-bg:#232327 !important}div#sidebar-toc>ul.pl-6{margin-left:1em}</style>
 <meta name=description content="Today I was having a look at the Valetudo source code to see how the firmware upgrade was being built. I would assume that Giese is keeping copies of the original firmware (e.g. here) and is then modifying it (e.g. here), which is provided as the DustBuilder service.">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"13/07/2022 Progress Update","item":"/posts/13-07-2022-progress-update/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/13-07-2022-progress-update/"},"headline":"13\/07\/2022 Progress Update | CSE Thesis Musings","datePublished":"2022-07-13T13:38:30+00:00","dateModified":"2022-07-13T13:38:30+00:00","wordCount":527,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Today I was having a look at the Valetudo source code to see how the firmware upgrade was being built. I would assume that Giese is keeping copies of the original firmware (e.g. here) and is then modifying it (e.g. here), which is provided as the DustBuilder service."}</script><meta property="og:title" content="13/07/2022 Progress Update | CSE Thesis Musings">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/13-07-2022-progress-update/"},"headline":"13\/07\/2022 Progress Update | CSE Thesis Musings","datePublished":"2022-07-13T13:38:30+00:00","dateModified":"2022-07-13T13:38:30+00:00","wordCount":541,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Today I was having a look at the Valetudo source code to see how the firmware upgrade was being built. I would assume that Giese is keeping copies of the original firmware (e.g. here) and is then modifying it (e.g. here), which is provided as the DustBuilder service."}</script><meta property="og:title" content="13/07/2022 Progress Update | CSE Thesis Musings">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/posts/13-07-2022-progress-update/">
 <meta property="og:description" content="Today I was having a look at the Valetudo source code to see how the firmware upgrade was being built. I would assume that Giese is keeping copies of the original firmware (e.g. here) and is then modifying it (e.g. here), which is provided as the DustBuilder service.">
@@ -128,6 +128,7 @@
 <p>If we don&rsquo;t modify the <code>vinda</code> value (i.e. less tamper evidence) then this provides easy access to the device (via the ADB USB port), without ever having to open up the device.</p>
 <blockquote>
 <p>Though, I do think there is a dynamically generated key that changes over time!</p>
+<p>In anycase, getting access just <em>once</em> gives you the ability to then plant persistence</p>
 </blockquote>
 </div>
 <div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
