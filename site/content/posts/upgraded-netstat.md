@@ -2,13 +2,15 @@
 categories = []
 date = 2022-07-13T10:55:08Z
 description = ""
-draft = true
 series = []
 tags = []
 title = "Upgraded - netstat"
 toc = true
 
 +++
+> Compare to: [netstat](../netstat)  
+> Compare to: [Which Process, Which Port, Which Connection](../which-process-which-port-which-connection)
+
 ```
 [root@rockrobo z5206677]# netstat -pa
 Active Internet connections (servers and established)
