@@ -106,6 +106,7 @@ pages:
 - site/content/posts/upgrade-upgrade-persistence.md
 - site/content/posts/upgraded-accessing-the-shell.md
 - site/content/posts/upgraded-boot-log.md
+- site/content/posts/upgraded-netstat.md
 - site/content/posts/upgraded-tcpdump-usage.md
 - site/content/posts/upgraded-versioning-and-fingerprinting.md
 - site/content/posts/which-process-which-port-which-connection.md
