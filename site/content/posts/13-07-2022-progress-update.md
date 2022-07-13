@@ -60,4 +60,6 @@ This modified version of `adbd` has an auth challenge to prevent public access t
 
 ![](/uploads/20220713-snipaste_2022-07-13_23-59-16.jpg)
 
-If we don't modify the `vinda` value (i.e. less tamper evidence) then this provides easy access to the device (via the ADB USB port), without ever having to open up the device
+If we don't modify the `vinda` value (i.e. less tamper evidence) then this provides easy access to the device (via the ADB USB port), without ever having to open up the device.
+
+> Though, I do think there is a dynamically generated key that changes over time!
