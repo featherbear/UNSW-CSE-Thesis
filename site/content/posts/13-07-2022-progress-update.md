@@ -64,4 +64,6 @@ If we don't modify the `vinda` value (i.e. less tamper evidence) then this provi
 
 > Though, I do think there is a dynamically generated key that changes over time!
 >
-> In anycase, getting access just _once_ gives you the ability to then plant persistence
+> In anycase, getting access just _once_ gives you the ability to then plant persistence.
+>
+> **Keep in mind that a firmware upgrade could remove modifications to the filesystem**
