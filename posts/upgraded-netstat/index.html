@@ -1,6 +1,6 @@
 <!doctype html><html lang=en><meta charset=utf-8>
 <meta name=viewport content="width=device-width">
-<title>Upgraded - tcpdump usage | CSE Thesis Musings</title>
+<title>Upgraded - netstat | CSE Thesis Musings</title>
 <meta name=generator content="Hugo Eureka 0.8.2">
 <link rel=stylesheet href=../../css/eureka.min.css>
 <script defer src=../../js/eureka.min.js></script>
@@ -20,20 +20,20 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-107434487-2')</script>
 <script>(function(e,b,f,c,a,d){b[c]=b[c]||function(){(b[c].q=b[c].q||[]).push(arguments)},a=e.createElement('script'),d=e.getElementsByTagName('script')[0],a.async=1,a.src=f,a.id='fathom-script',d.parentNode.insertBefore(a,d)})(document,window,'//ss.featherbear.cc/tracker.js','fathom'),fathom('set','siteId','NEQTU'),fathom('trackPageview')</script>
 <style>html.dark{--color-primary-bg:#232327 !important}div#sidebar-toc>ul.pl-6{margin-left:1em}</style>
-<meta name=description content="In v02.29.02, tcpdump gets called!
-/opt/rockrobo/wlan/wlanmgr  tcpdump -i any -s 0 -C %lu -W %d -Z root -w %s/%s/%s &
- wifi_debug_do(i)  i=0 - Cleanup i=1 - Do capture i=2 - Stop capture i=3 - wifi_debug_collect.sh  /mnt/data/debug  /opt/rockrobo/wlan/wifi_debug_collect.">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"Upgraded - tcpdump usage","item":"/posts/upgraded-tcpdump-usage/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/upgraded-tcpdump-usage/"},"headline":"Upgraded - tcpdump usage | CSE Thesis Musings","datePublished":"2022-07-11T17:59:43+00:00","dateModified":"2022-07-11T17:59:43+00:00","wordCount":54,"publisher":{"@type":"Person","name":"A. Wong"},"description":"In v02.29.02, tcpdump gets called!\n\/opt\/rockrobo\/wlan\/wlanmgr  tcpdump -i any -s 0 -C %lu -W %d -Z root -w %s\/%s\/%s \u0026amp;\n wifi_debug_do(i)  i=0 - Cleanup i=1 - Do capture i=2 - Stop capture i=3 - wifi_debug_collect.sh  \/mnt\/data\/debug  \/opt\/rockrobo\/wlan\/wifi_debug_collect."}</script><meta property="og:title" content="Upgraded - tcpdump usage | CSE Thesis Musings">
+<meta name=description content="Compare to: netstat
+Compare to: Which Process, Which Port, Which Connection
+ [root@rockrobo z5206677]# netstat -pa Active Internet connections (servers and established) Proto Recv-Q Send-Q Local Address Foreign Address State PID/Program name tcp 0 0 0.0.0.0:ssh 0.0.0.0:* LISTEN 372/dropbear tcp 0 0 localhost:55551 0.">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"Upgraded - netstat","item":"/posts/upgraded-netstat/"}]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/upgraded-netstat/"},"headline":"Upgraded - netstat | CSE Thesis Musings","datePublished":"2022-07-13T10:55:08+00:00","dateModified":"2022-07-13T10:55:08+00:00","wordCount":296,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Compare to: netstat\nCompare to: Which Process, Which Port, Which Connection\n [root@rockrobo z5206677]# netstat -pa Active Internet connections (servers and established) Proto Recv-Q Send-Q Local Address Foreign Address State PID\/Program name tcp 0 0 0.0.0.0:ssh 0.0.0.0:* LISTEN 372\/dropbear tcp 0 0 localhost:55551 0."}</script><meta property="og:title" content="Upgraded - netstat | CSE Thesis Musings">
 <meta property="og:type" content="article">
-<meta property="og:url" content="/posts/upgraded-tcpdump-usage/">
-<meta property="og:description" content="In v02.29.02, tcpdump gets called!
-/opt/rockrobo/wlan/wlanmgr  tcpdump -i any -s 0 -C %lu -W %d -Z root -w %s/%s/%s &
- wifi_debug_do(i)  i=0 - Cleanup i=1 - Do capture i=2 - Stop capture i=3 - wifi_debug_collect.sh  /mnt/data/debug  /opt/rockrobo/wlan/wifi_debug_collect.">
+<meta property="og:url" content="/posts/upgraded-netstat/">
+<meta property="og:description" content="Compare to: netstat
+Compare to: Which Process, Which Port, Which Connection
+ [root@rockrobo z5206677]# netstat -pa Active Internet connections (servers and established) Proto Recv-Q Send-Q Local Address Foreign Address State PID/Program name tcp 0 0 0.0.0.0:ssh 0.0.0.0:* LISTEN 372/dropbear tcp 0 0 localhost:55551 0.">
 <meta property="og:locale" content="en">
 <meta property="og:site_name" content="CSE Thesis Musings">
-<meta property="article:published_time" content="2022-07-11T17:59:43+00:00">
-<meta property="article:modified_time" content="2022-07-11T17:59:43+00:00">
+<meta property="article:published_time" content="2022-07-13T10:55:08+00:00">
+<meta property="article:modified_time" content="2022-07-13T10:55:08+00:00">
 <meta property="article:section" content="posts">
 <body class="flex flex-col min-h-screen">
 <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
@@ -75,64 +75,68 @@
 <div class=pl-scrollbar>
 <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
 <div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
-<div class="col-span-2 lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
-<h1 class="font-bold text-3xl text-primary-text">Upgraded - tcpdump usage</h1>
+<div class="col-span-2 lg:col-start-2 lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+<h1 class="font-bold text-3xl text-primary-text">Upgraded - netstat</h1>
 <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
 <div class="mr-6 my-2">
 <i class="fas fa-calendar mr-1"></i>
-<span>2022-07-11</span>
+<span>2022-07-13</span>
 </div>
 </div>
 <div class=content>
-<p>In <code>v02.29.02</code>, <code>tcpdump</code> gets called!</p>
-<h1 id=optrockrobowlanwlanmgr>/opt/rockrobo/wlan/wlanmgr</h1>
-<p><img src=../../uploads/20220711-snipaste_2022-07-12_03-58-09.jpg alt></p>
 <blockquote>
-<p><code>tcpdump -i any -s 0 -C %lu -W %d -Z root -w %s/%s/%s &</code></p>
+<p>Compare to: <a href=../netstat>netstat</a><br>
+Compare to: <a href=../which-process-which-port-which-connection>Which Process, Which Port, Which Connection</a></p>
 </blockquote>
-<h2 id=wifi_debug_doi>wifi_debug_do(i)</h2>
-<ul>
-<li><code>i=0</code> - Cleanup</li>
-<li><code>i=1</code> - Do capture</li>
-<li><code>i=2</code> - Stop capture</li>
-<li><code>i=3</code> - <code>wifi_debug_collect.sh</code></li>
-</ul>
-<h1 id=mntdatadebug>/mnt/data/debug</h1>
-<blockquote>
-<p><code>/opt/rockrobo/wlan/wifi_debug_collect.sh</code></p>
-</blockquote>
-<ul>
-<li>Contains <code>/etc/resolv.conf</code></li>
-<li>Contains <code>netstat -anp</code> as <code>netstat.txt</code></li>
-<li>Contains <code>ifconfig</code> as <code>ifconfig.txt</code></li>
-<li>Contains packet capture (as <code>network_packet.pcap</code>)</li>
-</ul>
-<h1 id=optrockroborrlogrrlogd>/opt/rockrobo/rrlog/rrlogd</h1>
-<p><img src=../../uploads/20220711-snipaste_2022-07-12_04-14-11.jpg alt></p>
+<pre><code>[root@rockrobo z5206677]# netstat -pa
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 0.0.0.0:ssh             0.0.0.0:*               LISTEN      372/dropbear
+tcp        0      0 localhost:55551         0.0.0.0:*               LISTEN      559/rriot_tuya
+tcp        0      0 localhost:55552         0.0.0.0:*               LISTEN      561/rriot_rr
+tcp        0      0 0.0.0.0:6668            0.0.0.0:*               LISTEN      559/rriot_tuya
+tcp        0      0 localhost:47944         localhost:55551         ESTABLISHED 555/AppProxy
+tcp        0      0 localhost:55551         localhost:47944         ESTABLISHED 559/rriot_tuya
+tcp        0      0 10.10.10.8:46455        ec2-52-58-249-45.eu-central-1.compute.amazonaws.com:8883 ESTABLISHED 559/rriot_tuya
+tcp        0      0 :::ssh                  :::*                    LISTEN      372/dropbear
+udp        0      0 0.0.0.0:55559           0.0.0.0:*                           561/rriot_rr
+udp        0      0 10.10.10.8:42021        0.0.0.0:*                           559/rriot_tuya
+Active UNIX domain sockets (servers and established)
+Proto RefCnt Flags       Type       State         I-Node PID/Program name    Path
+unix  5      [ ]         DGRAM                      4130 99/syslogd          /dev/log
+unix  10     [ ]         DGRAM                      2766 432/rrlogd          /var/run/rrlogd
+unix  4      [ ]         DGRAM                      3060 730/wpa_supplicant  /var/run/wpa_supplicant/wlan0
+unix  2      [ ]         DGRAM                      3062 557/wlanmgr         /tmp/wifiman.sock.1
+unix  2      [ ]         DGRAM                      3064 557/wlanmgr         /tmp/wifiman.sock.2
+unix  2      [ ]         DGRAM                      6191 757/udhcpc          
+unix  3      [ ]         STREAM     CONNECTED       3067 557/wlanmgr         
+unix  3      [ ]         STREAM     CONNECTED       3066 557/wlanmgr         
+unix  2      [ ]         DGRAM                      3007 370/WatchDoge       
+unix  2      [ ]         DGRAM                      1272 555/AppProxy        
+unix  2      [ ]         DGRAM                      2992 559/rriot_tuya      
+unix  2      [ ]         DGRAM                      5287 561/rriot_rr        
+unix  2      [ ]         DGRAM                      5065 553/RoboController  
+unix  2      [ ]         DGRAM                      2966 557/wlanmgr         
+unix  2      [ ]         DGRAM                      5053 526/rr_loader       
+unix  2      [ ]         DGRAM                      2768 432/rrlogd          
+unix  2      [ ]         DGRAM                      4501 372/dropbear        
+unix  3      [ ]         STREAM     CONNECTED       1231 371/adbd            
+unix  3      [ ]         STREAM     CONNECTED       1230 371/adbd            
+unix  3      [ ]         STREAM     CONNECTED       1229 371/adbd            
+unix  3      [ ]         STREAM     CONNECTED       1228 371/adbd            
+unix  3      [ ]         STREAM     CONNECTED       1227 371/adbd            
+unix  3      [ ]         STREAM     CONNECTED       1226 371/adbd            
+unix  2      [ ]         DGRAM                      2305 102/klogd           
+</code></pre>
 </div>
 <div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
 <div>
-<span class="block font-bold">Previous</span>
-<a href=../../posts/upgraded-netstat/ class=block>Upgraded - netstat</a>
 </div>
 <div class="md:text-right mt-4 md:mt-0">
 <span class="block font-bold">Next</span>
-<a href=../../posts/achieving-upgrade-persistence/ class=block>Achieving Upgrade Persistence</a>
+<a href=../../posts/upgraded-tcpdump-usage/ class=block>Upgraded - tcpdump usage</a>
 </div>
 </div>
-</div>
-<div class=col-span-2>
-<div class="sticky top-16 z-10 hidden lg:block px-6 py-4 bg-primary-bg">
-<span class="text-lg font-semibold">On This Page</span>
-</div>
-<div class="sticky-toc hidden lg:block px-6 pb-6">
-<nav id=TableOfContents>
-<ul>
-<li><a href=#wifi_debug_doi>wifi_debug_do(i)</a></li>
-</ul>
-</nav>
-</div>
-<script>window.addEventListener('DOMContentLoaded',()=>{enableStickyToc()})</script>
 </div>
 </div>
 <script>document.addEventListener('DOMContentLoaded',()=>{hljs.initHighlightingOnLoad()})</script>
