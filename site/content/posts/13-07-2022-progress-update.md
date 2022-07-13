@@ -16,6 +16,10 @@ Having a look at how the this firmware would then be installed - i.e. through th
 
 That's how the [`valetudo-helper-miioota`](https://github.com/Hypfer/valetudo-helper-miioota) script works - when connected to the cleaner's AP (during initial pairing), you would upload the Valetudo-patched firmware.
 
+> Note: Device must not be initialised yet... If you were malicious, I guess you could 'accidentally' reset someone's vacuum cleaner... It's not like there is any personal data on the machine.
+>
+> As a third-party / distributor.. this method would greatly increase the speed at which you could modify the systems since you don't need to open up the device to get access to the UART.
+
 Knowing that we can inject our own firmware, we could likely inject malware from the get-go. This would greatly reduce the time required to gain root access.
 
 ## Why?
