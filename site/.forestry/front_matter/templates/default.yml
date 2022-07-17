@@ -68,6 +68,7 @@ pages:
 - site/content/posts/device-actions.md
 - site/content/posts/devtest.conf.md
 - site/content/posts/diff-inspection.md
+- site/content/posts/download-file-from-bash-without-wget-curl.md
 - site/content/posts/etc-passwd.md
 - site/content/posts/etc-shadow.md
 - site/content/posts/file-system-comparison.md
