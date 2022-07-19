@@ -47,6 +47,27 @@ The AppProxy should reply with something (here it seems it's because it knows it
 
 ![](/uploads/20220719-snipaste_2022-07-20_02-54-06.jpg)
 
+```
+miio client - MIIO OT protocol implementation
+Copyright (C) 2015-2016 Xiaomi
+Author: Yin Kangkai <yinkangkai@xiaomi.com>
+Version: miio-client 3.3.9
+Build time: 18:05:32 Jun 20 2017
+
+Usage: ./c
+        [-D --daemonize]
+        [-H --host=<host>] enture mutual exclusion with -C,you can only use -C or -H at the same time
+        [-p --port=<port>]
+        [-i --interval=<int> ms] set sync interval of _otc.info
+        [-l --loglevel=<level>] set loglevel (0-4), bigger = more verbose
+        [-L --logfile=file] output log into file instead of stdout
+        [-d --datadir=<path>] set miio data dir path, ending with '/'
+        [-e --enckey] key(s) are encrypted saved
+        [-E --encdata] data communication are encrypted
+        [-C --dcountry] set the country domain where the device locates in,ignore if it in China
+        [-h --help]
+```
+
 ***
 
 > Also confirmed by Dennis - [date >= 2019-11 (ver >= 2008)](https://twitter.com/dgi_DE/status/1273742178783805441)
