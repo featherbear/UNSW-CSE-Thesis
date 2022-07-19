@@ -39,6 +39,8 @@ Install toolchain. e.g. Ubuntu: `sudo apt-get install gcc-arm-linux-gnueabihf`
 >
 > `arm-linux-gnueabihf-gcc program.c`
 
+REMEMBER TO CHECK SYSTEM'S LIBC VERSION (ahem 2.19 on stock firmware)
+
 ***
 
 [http://doppioandante.github.io/2015/07/10/Simple-ARM-programming-on-linux.html](http://doppioandante.github.io/2015/07/10/Simple-ARM-programming-on-linux.html "http://doppioandante.github.io/2015/07/10/Simple-ARM-programming-on-linux.html")
