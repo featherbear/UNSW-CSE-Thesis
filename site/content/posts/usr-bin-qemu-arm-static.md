@@ -8,28 +8,25 @@ title = "/usr/bin/qemu-arm-static"
 toc = true
 
 +++
-> It's an x86 binary for debugging the ARM files
-
-`/usr/sbin/qemu-arm-static`
-
-***
-
-You can also install your own version of qemu.
-
 # qemu TL;DR
+
+The file located at `/usr/sbin/qemu-arm-static` is an x86 binary for debugging the ARM files.  
+You can also install your own version of `qemu-arm-static`
 
 > `LD_LIBRARY_PATH=./lib/arm-linux-gnueabihf/ ./usr/bin/qemu-arm-static ./lib/ld-linux-armhf.so.3 [PROGRAM]`
 
----
+***
 
 # gdb TL;DR
 
-Install `gdb-multiarch`: `sudo apt install gdb-multiarch`
+Install `gdb-multiarch` on your host machine. e.g Ubuntu: `sudo apt install gdb-multiarch`
 
-Add parameter `-g [PORT]` to the qemu line.
+1. Add parameter `-g [PORT]` to the qemu line.
 
 > `LD_LIBRARY_PATH=./lib/arm-linux-gnueabihf/ ./usr/bin/qemu-arm-static -g 1234 ./lib/ld-linux-armhf.so.3 [PROGRAM]`
 
-Then on your host computer,
+2. Then on your host computer,
 
 > `gdb-multiarch -ex="target remote:1234" [PROGRAM]`
+
+***
