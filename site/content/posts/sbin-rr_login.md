@@ -24,3 +24,9 @@ Since those files don't exist on my device... I'll never get UART shell access
 ![](/uploads/20220719-snipaste_2022-07-19_22-24-51.jpg)
 
 ![](/uploads/20220719-snipaste_2022-07-19_22-51-42.jpg)
+
+***
+
+Also the `libuart_api.so` file has the public key in a funky format
+
+![](/uploads/20220719-snipaste_2022-07-19_22-55-52.jpg)
