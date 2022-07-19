@@ -18,7 +18,9 @@ If you ever wanted some older stock image... [https://vacuumz.info/download/s6/s
 
 # MiIO Client 3.5.4
 
-Looks like the miIO client was patched - and a set of commands were removed; though remnants existed here and there
+Looks like the miIO client was patched - <s>and a set of commands were removed; though remnants existed here and there</s> they added code to handle and drop an OTA update
+
+![](/uploads/20220719-snipaste_2022-07-20_03-23-53.jpg)
 
 ![](/uploads/20220719-snipaste_2022-07-20_03-11-19.png)  
 Instead of being handled by the broadcast routine (yellow), it just prints out "Recv OTA CMD!!!" and then that's it...
