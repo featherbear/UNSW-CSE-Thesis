@@ -18,4 +18,18 @@ You can also install your own version of qemu.
 
 # qemu TL;DR
 
-> `LD_LIBRARY_PATH=./lib/arm-linux-gnueabihf/ ./usr/bin/qemu-arm-static ./lib/ld-linux-armhf.so.3 {PROGRAM}`
+> `LD_LIBRARY_PATH=./lib/arm-linux-gnueabihf/ ./usr/bin/qemu-arm-static ./lib/ld-linux-armhf.so.3 [PROGRAM]`
+
+---
+
+# gdb TL;DR
+
+Install `gdb-multiarch`: `sudo apt install gdb-multiarch`
+
+Add parameter `-g [PORT]` to the qemu line.
+
+> `LD_LIBRARY_PATH=./lib/arm-linux-gnueabihf/ ./usr/bin/qemu-arm-static -g 1234 ./lib/ld-linux-armhf.so.3 [PROGRAM]`
+
+Then on your host computer,
+
+> `gdb-multiarch -ex="target remote:1234" [PROGRAM]`
