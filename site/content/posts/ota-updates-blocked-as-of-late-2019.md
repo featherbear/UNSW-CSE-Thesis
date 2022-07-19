@@ -13,7 +13,8 @@ Unfortunately this means that MiIO OTA updates are blocked.
 
 If you ever wanted some older stock image... [https://vacuumz.info/download/s6/stock/](https://vacuumz.info/download/s6/stock/ "https://vacuumz.info/download/s6/stock/")
 
-* [https://github.com/zvldz/vacuum/blob/master/custom-script/custom_enable_local_ota.sh](https://github.com/zvldz/vacuum/blob/master/custom-script/custom_enable_local_ota.sh "https://github.com/zvldz/vacuum/blob/master/custom-script/custom_enable_local_ota.sh")
+* 
+* [https://github.com/featherbear/zvldz-vacuum/blob/master/custom-script/custom_enable_local_ota.sh](https://github.com/featherbear/zvldz-vacuum/blob/master/custom-script/custom_enable_local_ota.sh "https://github.com/featherbear/zvldz-vacuum/blob/master/custom-script/custom_enable_local_ota.sh")
 
 # MiIO Client
 
