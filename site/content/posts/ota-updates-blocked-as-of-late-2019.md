@@ -27,9 +27,17 @@ Likely the miIO client was patched - and a set of commands were removed; though 
     Version: miio-client 3.5.4
     Build time: 12:34:47 Aug  1 2019
 
-This is what we _should_ see, but nope, not with the patched version
+## Old Version
+
+![](/uploads/20220719-snipaste_2022-07-20_03-04-38.png)
+
+> FYI - I renamed the subroutine `broadcast`
+
+When the handler parses the packet, after going through the other handlers, it then passes the message to be broadcasted (locally)
 
 ![](/uploads/20220719-snipaste_2022-07-20_02-55-45.jpg)
+
+The AppProxy should reply with something (here it seems it's because it knows it's not connected to the internet?)
 
 ![](/uploads/20220719-snipaste_2022-07-20_02-54-06.jpg)
 
