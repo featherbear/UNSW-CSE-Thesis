@@ -16,7 +16,7 @@ If you ever wanted some older stock image... [https://vacuumz.info/download/s6/s
 * 
 * [https://github.com/featherbear/zvldz-vacuum/blob/master/custom-script/custom_enable_local_ota.sh](https://github.com/featherbear/zvldz-vacuum/blob/master/custom-script/custom_enable_local_ota.sh "https://github.com/featherbear/zvldz-vacuum/blob/master/custom-script/custom_enable_local_ota.sh")
 
-# MiIO Client
+# MiIO Client 3.5.4
 
 Looks like the miIO client was patched - and a set of commands were removed; though remnants existed here and there
 
@@ -33,7 +33,7 @@ Instead of being handled by the broadcast routine (yellow), it just prints out "
     Version: miio-client 3.5.4
     Build time: 12:34:47 Aug  1 2019
 
-## Old Version
+## Old Version - 3.3.9
 
 ![](/uploads/20220719-snipaste_2022-07-20_03-04-38.png)
 
