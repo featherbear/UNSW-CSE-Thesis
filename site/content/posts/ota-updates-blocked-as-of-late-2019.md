@@ -27,6 +27,10 @@ Likely the miIO client was patched - and a set of commands were removed; though 
     Version: miio-client 3.5.4
     Build time: 12:34:47 Aug  1 2019
 
+This is what we _should_ see, but nope, not with the patched version
+
+![](/uploads/20220719-snipaste_2022-07-20_02-54-06.jpg)
+
 ***
 
 > Also confirmed by Dennis - [date >= 2019-11 (ver >= 2008)](https://twitter.com/dgi_DE/status/1273742178783805441)
