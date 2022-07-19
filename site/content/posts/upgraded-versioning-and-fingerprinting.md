@@ -89,43 +89,35 @@ SSH (dropbear) - NO
 
 > Binaries in this version (v02.29.02) match base version (v01.15.58)
 >
-> `/bin`
->
+> ✅ `/bin`  
 > ✅ `/sbin`
 >
+> 🟨 `/usr/bin`  
 > ✅ `/usr/sbin`
->
-> 🟨 `/usr/bin`
 
-## /bin
+## ✅ /bin
 
-```
-6553d3232d065ffef4a822dfc7315245  bash
-00131fe7c4835dda1a8bb02fc7922364  chmod
-2fa55f966295a7a46d30ebdeae7fbc46  chown
-70efc37e6afb7f5be6c4cf76afd3965b  dd
-73863d79612c16d88f7bedbacb89190a  pidof
-30e4067a03cfe4ba8fc3963c0f8ba616  tar
-```
+    6553d3232d065ffef4a822dfc7315245  bash
+    00131fe7c4835dda1a8bb02fc7922364  chmod
+    2fa55f966295a7a46d30ebdeae7fbc46  chown
+    70efc37e6afb7f5be6c4cf76afd3965b  dd
+    73863d79612c16d88f7bedbacb89190a  pidof
+    30e4067a03cfe4ba8fc3963c0f8ba616  tar
 
+## ✅ /sbin
 
-## /sbin
+    d49bad0a9e3f098cc3913a8ee75fd73d  ip6tables
+    d49bad0a9e3f098cc3913a8ee75fd73d  iptables
+    9b625d8eee80b5dd49843e86f0cbe51d  iw
+    85e9e2c4a9c0a7af309c906516aa4548  ldconfig
+    0dc3219be0c361b51bbb8d404c870387  ldconfig.real
+    46747e533e25641bb14eeaf4a60040bd  mkfs.ext4
+    96bf1f1e1a2c745ea85d7db0fa59a952  rr_login
+    cedf096ec580ff1dd66ea1b5b326f08d  wpa_cli
+    18ae34458be1593946dc9f885ba275dc  wpa_supplicant
+    d49bad0a9e3f098cc3913a8ee75fd73d  xtables-multi
 
-```
-d49bad0a9e3f098cc3913a8ee75fd73d  ip6tables
-d49bad0a9e3f098cc3913a8ee75fd73d  iptables
-9b625d8eee80b5dd49843e86f0cbe51d  iw
-85e9e2c4a9c0a7af309c906516aa4548  ldconfig
-0dc3219be0c361b51bbb8d404c870387  ldconfig.real
-46747e533e25641bb14eeaf4a60040bd  mkfs.ext4
-96bf1f1e1a2c745ea85d7db0fa59a952  rr_login
-cedf096ec580ff1dd66ea1b5b326f08d  wpa_cli
-18ae34458be1593946dc9f885ba275dc  wpa_supplicant
-d49bad0a9e3f098cc3913a8ee75fd73d  xtables-multi
-```
-
-
-## /usr/bin
+## 🟨 /usr/bin
 
 * `/usr/bin/rr_try_mount`
   * MD5: f820524e196df94d6299d75033d51b3c
@@ -174,7 +166,7 @@ d49bad0a9e3f098cc3913a8ee75fd73d  xtables-multi
     ad6192b206d3bef7996f13f0cb5e53e716a9fe9e  wpa_passphrase
     ebf5471495c95c4c826d63dd5836d057322ad32d  xz
 
-## /usr/sbin
+## ✅ /usr/sbin
 
 * `/usr/sbin/chpasswd`
   * MD5: c88953805d7fde675be9bb06050a5fa5
@@ -207,4 +199,7 @@ d49bad0a9e3f098cc3913a8ee75fd73d  xtables-multi
   * libpcap version 1.5.3
   * MD5: 50f2ed1f9707873bbd13bde776c9cff7
   * SHA-1: b41f74a66ce1116f8352700529848f25455dc1d5
+
+***
+
 * Utils - BusyBox v1.24.1 (2019-11-15 15:22:50 CST) built-in shell (ash)
