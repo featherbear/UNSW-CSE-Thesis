@@ -248,7 +248,13 @@ SSH (dropbear) - NO
 
 # Possible Leads
 
-## WPA - [CVE-2014-3686](https://bugzilla.redhat.com/show_bug.cgi?id=1151259)
+## 🙏 WPA - [CVE-2014-3686](https://bugzilla.redhat.com/show_bug.cgi?id=1151259)
+
+> ✅ Safe
+>
+> Doesn't use the same binary, no call to `system` inside of `wpa_cli`
+>
+> `/sbin/wpa_action` doesn't exist in latest new firmware
 
 [https://www.openwall.com/lists/oss-security/2014/10/09/28](https://www.openwall.com/lists/oss-security/2014/10/09/28 "https://www.openwall.com/lists/oss-security/2014/10/09/28")
 
