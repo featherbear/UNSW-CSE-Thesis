@@ -81,3 +81,7 @@ The AppProxy should reply with something (here it seems it's because it knows it
 ![](/uploads/20220719-snipaste_2022-07-20_03-19-53.jpg)
 
 ![](/uploads/20220719-snipaste_2022-07-20_03-18-51.jpg)
+
+![](/uploads/20220719-snipaste_2022-07-20_03-21-11.jpg)
+
+![](/uploads/20220719-snipaste_2022-07-20_03-22-25.jpg)
