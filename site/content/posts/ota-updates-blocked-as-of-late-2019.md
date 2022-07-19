@@ -13,8 +13,23 @@ Unfortunately this means that MiIO OTA updates are blocked.
 
 If you ever wanted some older stock image... [https://vacuumz.info/download/s6/stock/](https://vacuumz.info/download/s6/stock/ "https://vacuumz.info/download/s6/stock/")
 
-* 
 * [https://github.com/featherbear/zvldz-vacuum/blob/master/custom-script/custom_enable_local_ota.sh](https://github.com/featherbear/zvldz-vacuum/blob/master/custom-script/custom_enable_local_ota.sh "https://github.com/featherbear/zvldz-vacuum/blob/master/custom-script/custom_enable_local_ota.sh")
+
+# What the OTA payload looks like
+
+```
+{
+  "method": "miIO.ota",
+  "params": {
+    "mode": "normal",
+    "install": "1",
+    "app_url": "http://192.168.8.110:8322/firmware",
+    "file_md5": "6e24b0454b170f67676693b759fba742",
+    "proc": "dnld install"
+  },
+  "id": 474627483
+}
+```
 
 # MiIO Client 3.5.4
 
