@@ -18,7 +18,12 @@ If you ever wanted some older stock image... [https://vacuumz.info/download/s6/s
 
 # MiIO Client
 
-Likely the miIO client was patched - and a set of commands were removed; though remnants existed here and there
+Looks like the miIO client was patched - and a set of commands were removed; though remnants existed here and there
+
+![](/uploads/20220719-snipaste_2022-07-20_03-11-19.png)  
+Instead of being handled by the broadcast routine (yellow), it just prints out "Recv OTA CMD!!!" and then that's it...
+
+> Below: Replies to the request with nothing in the reply
 
 ![](/uploads/20220719-snipaste_2022-07-20_02-33-16.jpg)
 
