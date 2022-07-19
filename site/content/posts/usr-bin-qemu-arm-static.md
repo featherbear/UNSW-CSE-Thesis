@@ -38,6 +38,9 @@ Install toolchain. e.g. Ubuntu: `sudo apt-get install gcc-arm-linux-gnueabihf`
 > `CC=arm-linux-gnueabihf-gcc make`
 >
 > `arm-linux-gnueabihf-gcc program.c`
+>
+>   
+> `./configure --host arm-linux-gnueabihf`
 
 REMEMBER TO CHECK SYSTEM'S LIBC VERSION (ahem 2.19 on stock firmware)
 
