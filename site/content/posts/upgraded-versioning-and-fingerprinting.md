@@ -87,6 +87,13 @@ SSH (dropbear) - NO
 
 # Software
 
+> Binaries in this version (v02.29.02) match base version (v01.15.58)
+>
+>   
+> ✅ `/sbin`
+>
+> ✅ `/usr/sbin`
+
 * `/usr/sbin/chpasswd`
   * MD5: c88953805d7fde675be9bb06050a5fa5
   * SHA-1: 83c0cb04a54409035f90c152442960ef10b6832d
@@ -118,6 +125,5 @@ SSH (dropbear) - NO
   * libpcap version 1.5.3
   * MD5: 50f2ed1f9707873bbd13bde776c9cff7
   * SHA-1: b41f74a66ce1116f8352700529848f25455dc1d5
-
 
 * Utils - BusyBox v1.24.1 (2019-11-15 15:22:50 CST) built-in shell (ash)
