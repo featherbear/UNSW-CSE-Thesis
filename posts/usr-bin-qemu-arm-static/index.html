@@ -21,12 +21,18 @@
 <script>(function(e,b,f,c,a,d){b[c]=b[c]||function(){(b[c].q=b[c].q||[]).push(arguments)},a=e.createElement('script'),d=e.getElementsByTagName('script')[0],a.async=1,a.src=f,a.id='fathom-script',d.parentNode.insertBefore(a,d)})(document,window,'//ss.featherbear.cc/tracker.js','fathom'),fathom('set','siteId','NEQTU'),fathom('trackPageview')</script>
 <style>html.dark{--color-primary-bg:#232327 !important}div#sidebar-toc>ul.pl-6{margin-left:1em}</style>
 <meta name=description content=" It&rsquo;s an x86 binary for debugging the ARM files
+ /usr/sbin/qemu-arm-static
+ You can also install your own version of qemu.
+qemu TL;DR  LD_LIBRARY_PATH=./lib/arm-linux-gnueabihf/ ./usr/bin/qemu-arm-static ./lib/ld-linux-armhf.so.3 {PROGRAM}
  ">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"/usr/bin/qemu-arm-static","item":"/posts/usr-bin-qemu-arm-static/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/usr-bin-qemu-arm-static/"},"headline":"\/usr\/bin\/qemu-arm-static | CSE Thesis Musings","datePublished":"2022-07-19T07:12:49+00:00","dateModified":"2022-07-19T07:12:49+00:00","wordCount":9,"publisher":{"@type":"Person","name":"A. Wong"},"description":" It\u0026rsquo;s an x86 binary for debugging the ARM files\n "}</script><meta property="og:title" content="/usr/bin/qemu-arm-static | CSE Thesis Musings">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/usr-bin-qemu-arm-static/"},"headline":"\/usr\/bin\/qemu-arm-static | CSE Thesis Musings","datePublished":"2022-07-19T07:12:49+00:00","dateModified":"2022-07-19T07:12:49+00:00","wordCount":25,"publisher":{"@type":"Person","name":"A. Wong"},"description":" It\u0026rsquo;s an x86 binary for debugging the ARM files\n \/usr\/sbin\/qemu-arm-static\n You can also install your own version of qemu.\nqemu TL;DR  LD_LIBRARY_PATH=.\/lib\/arm-linux-gnueabihf\/ .\/usr\/bin\/qemu-arm-static .\/lib\/ld-linux-armhf.so.3 {PROGRAM}\n "}</script><meta property="og:title" content="/usr/bin/qemu-arm-static | CSE Thesis Musings">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/posts/usr-bin-qemu-arm-static/">
 <meta property="og:description" content=" It&rsquo;s an x86 binary for debugging the ARM files
+ /usr/sbin/qemu-arm-static
+ You can also install your own version of qemu.
+qemu TL;DR  LD_LIBRARY_PATH=./lib/arm-linux-gnueabihf/ ./usr/bin/qemu-arm-static ./lib/ld-linux-armhf.so.3 {PROGRAM}
  ">
 <meta property="og:locale" content="en">
 <meta property="og:site_name" content="CSE Thesis Musings">
@@ -84,6 +90,13 @@
 <div class=content>
 <blockquote>
 <p>It&rsquo;s an x86 binary for debugging the ARM files</p>
+</blockquote>
+<p><code>/usr/sbin/qemu-arm-static</code></p>
+<hr>
+<p>You can also install your own version of qemu.</p>
+<h1 id=qemu-tldr>qemu TL;DR</h1>
+<blockquote>
+<p><code>LD_LIBRARY_PATH=./lib/arm-linux-gnueabihf/ ./usr/bin/qemu-arm-static ./lib/ld-linux-armhf.so.3 {PROGRAM}</code></p>
 </blockquote>
 </div>
 <div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
