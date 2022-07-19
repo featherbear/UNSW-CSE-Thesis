@@ -27,7 +27,7 @@
 <meta property="og:description" content="Musings of a CSE Thesis">
 <meta property="og:locale" content="en">
 <meta property="og:site_name" content="CSE Thesis Musings">
-<meta property="og:updated_time" content="2022-07-19T06:01:12+00:00">
+<meta property="og:updated_time" content="2022-07-19T07:12:49+00:00">
 <meta property="article:section" content>
 <link rel=alternate type=application/rss+xml href=./index.xml title="CSE Thesis Musings">
 <body class="flex flex-col min-h-screen">
@@ -137,6 +137,28 @@ I make stuff, and occasionally break stuff&mldr; mainly the lattter
 <div class="bg-secondary-bg rounded overflow-hidden border hover:shadow-lg transition ease-in-out duration-200">
 <div class="px-6 pt-6">
 <div class="font-bold text-xl text-primary-text mb-2">
+<a href=./posts/usr-bin-qemu-arm-static/ class=hover:text-eureka>/usr/bin/qemu-arm-static</a>
+</div>
+<div>
+It’s an x86 binary for debugging the ARM files
+</div>
+</div>
+<div class="px-6 pb-2">
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+<div class="mr-6 my-2">
+<i class="fas fa-calendar mr-1"></i>
+<span>2022-07-19</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=item>
+<div class=grid-content>
+<div class="bg-secondary-bg rounded overflow-hidden border hover:shadow-lg transition ease-in-out duration-200">
+<div class="px-6 pt-6">
+<div class="font-bold text-xl text-primary-text mb-2">
 <a href=./posts/disclosures/ class=hover:text-eureka>Disclosures</a>
 </div>
 <div>
@@ -217,30 +239,6 @@ Not really adopted?
 <div class="mr-6 my-2">
 <i class="fas fa-calendar mr-1"></i>
 <span>2022-07-19</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class=item>
-<div class=grid-content>
-<div class="bg-secondary-bg rounded overflow-hidden border hover:shadow-lg transition ease-in-out duration-200">
-<div class="px-6 pt-6">
-<div class="font-bold text-xl text-primary-text mb-2">
-<a href=./posts/download-file-from-bash-without-wget-curl/ class=hover:text-eureka>Download file from bash without wget/curl</a>
-</div>
-<div>
-https://unix.stackexchange.com/questions/83926/how-to-download-a-file-using-just-bash-and-nothing-else-no-curl-wget-perl-et
-download http://website.com/file > dest
-function download() { : ${DEBUG:=0} local URL=$1 local tag="Connection: close" local mark=0 if [ -z "${URL}" ]; then printf "Usage: %s \"URL\" [e.g.: %s http://www.google.com/]" \ "${FUNCNAME[0]}" "${FUNCNAME[0]}" return 1; fi read proto server path &lt;&lt;&lt;$(echo ${URL//// }) DOC=/${path// //} HOST=${server//:*} PORT=${server//*:} [[ x"${HOST}" == x"${PORT}" ]] && PORT=80 [[ $DEBUG -eq 1 ]] && echo "HOST=$HOST" [[ $DEBUG -eq 1 ]] && echo "PORT=$PORT" [[ $DEBUG -eq 1 ]] && echo "DOC =$DOC" exec 3&lt;>/dev/tcp/${HOST}/$PORT echo -en "GET ${DOC} HTTP/1.
-</div>
-</div>
-<div class="px-6 pb-2">
-<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
-<div class="mr-6 my-2">
-<i class="fas fa-calendar mr-1"></i>
-<span>2022-07-17</span>
 </div>
 </div>
 </div>
