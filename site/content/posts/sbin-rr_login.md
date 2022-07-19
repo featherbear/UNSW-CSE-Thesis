@@ -19,4 +19,8 @@ Probably because old version?
 
 ***
 
-Since those files don't exist on my device... I'll never get UART access
+Since those files don't exist on my device... I'll never get UART shell access
+
+![](/uploads/20220719-snipaste_2022-07-19_22-24-51.jpg)
+
+![](/uploads/20220719-snipaste_2022-07-19_22-51-42.jpg)
