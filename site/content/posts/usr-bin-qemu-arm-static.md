@@ -37,6 +37,8 @@ Install toolchain. e.g. Ubuntu: `sudo apt-get install gcc-arm-linux-gnueabihf`
 
 * Configure against ARM platform
   * `./configure --host arm-linux-gnueabihf`
+  * May need to pass `LDFLAGS='-static -pthread'` as an arg
+    * e.g. `./configure --host arm-linux-gnueabihf LDFLAGS='-static -pthread'` 
 * Compile directly with `gcc`
   * `arm-linux-gnueabihf-gcc program.c`
 * Compile with `make`
