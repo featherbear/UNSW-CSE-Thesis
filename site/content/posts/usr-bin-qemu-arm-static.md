@@ -25,7 +25,7 @@ Install `gdb-multiarch` on your host machine. e.g Ubuntu: `sudo apt install gdb-
 
 > `LD_LIBRARY_PATH=./lib/arm-linux-gnueabihf/ ./usr/bin/qemu-arm-static -g 1234 ./lib/ld-linux-armhf.so.3 [PROGRAM]`
 
-2. Then on your host computer,
+1. Then on your host computer,
 
 > `gdb-multiarch -ex="target remote:1234" [PROGRAM]`
 
@@ -35,14 +35,16 @@ Install `gdb-multiarch` on your host machine. e.g Ubuntu: `sudo apt install gdb-
 
 Install toolchain. e.g. Ubuntu: `sudo apt-get install gcc-arm-linux-gnueabihf`
 
-> `CC=arm-linux-gnueabihf-gcc make`
->
-> `arm-linux-gnueabihf-gcc program.c`
->
->   
-> `./configure --host arm-linux-gnueabihf`
+* Configure against ARM platform
+  * `./configure --host arm-linux-gnueabihf`
+* Compile directly with `gcc`
+  * `arm-linux-gnueabihf-gcc program.c`
+* Compile with `make`
+  * `CC=arm-linux-gnueabihf-gcc make`
 
-REMEMBER TO CHECK SYSTEM'S LIBC VERSION (ahem 2.19 on stock firmware)
+> REMEMBER TO CHECK SYSTEM'S LIBC VERSION (ahem 2.19 on stock firmware)
+>
+> Else, statically compile?
 
 ***
 
