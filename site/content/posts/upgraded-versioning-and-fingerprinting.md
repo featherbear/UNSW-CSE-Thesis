@@ -260,8 +260,8 @@ SSH (dropbear) - NO
 * `/etc/wpa_supplicant/ifupdown.sh`
   * Sources `/etc/wpa_supplicant/functions.sh`
     * `-a env:WPA_ACTION_SCRIPT`
+    * `WPA_ACTION_SCRIPT=/sbin/wpa_action`
 * What even calls `ifupdown.sh`???
-
 * 
 * 
 * 
