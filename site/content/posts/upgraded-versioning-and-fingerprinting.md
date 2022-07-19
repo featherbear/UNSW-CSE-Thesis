@@ -108,7 +108,7 @@ SSH (dropbear) - NO
 * `/bin/dd`
   * dd (coreutils) 8.21
 * `/bin/pidof`
-  * -
+  * .
 * `/bin/tar`
   * tar (GNU tar) 1.27.1
 
@@ -140,7 +140,7 @@ SSH (dropbear) - NO
 * `/sbin/wpa_supplicant`
   * wpa_supplicant v2.0-devel_rtw_r25669.20171213
 * `/sbin/xtables-multi`
-  * -
+  * .
 
     d49bad0a9e3f098cc3913a8ee75fd73d  ip6tables
     d49bad0a9e3f098cc3913a8ee75fd73d  iptables
@@ -161,7 +161,7 @@ SSH (dropbear) - NO
 * `/usr/bin/base64`
   * base64 (GNU coreutils) 8.21
 * `/usr/bin/bootring`
-  * -
+  * different
 * `/usr/bin/create_ap`
   * version 0.1
 * `/usr/bin/iconv`
@@ -171,7 +171,7 @@ SSH (dropbear) - NO
 * `/usr/bin/ldd`
   * ldd (Ubuntu EGLIBC 2.19-0ubuntu6.6) 2.19
 * `/usr/bin/logrotate.sh`
-  * -
+  * no ver
 * `/usr/bin/nohup`
   * nohup (GNU coreutils) 8.21
 * `/usr/bin/openssl`
@@ -179,17 +179,17 @@ SSH (dropbear) - NO
 * `/usr/bin/pkill`
   * pkill from procps-ng 3.3.9
 * `/usr/bin/qemu-arm-static`
-  * -
+  * different
 * `/usr/bin/rr_try_mount`
-  * -
+  * different
 * `/usr/bin/scp`
-  * 
+  * no ver
 * `/usr/bin/top`
   * procps-ng version 3.3.9
 * `/usr/bin/uart_test`
-  * -
+  * different
 * `/usr/bin/wpa_passphrase`
-  * 
+  * no ver
 * `/usr/bin/xz`
   * Original version does not use
 
@@ -235,9 +235,7 @@ SSH (dropbear) - NO
   * MD5: 19f12aef82030e3f79fd6fc2fde1ede5
   * SHA-1: ad1a62e6a39b12da7dc3c559cb6ab85a4e46acba
 * `/usr/sbin/ntpdate`
-  * ntpdate 4.2.6p5@1.2349 Tue Jun 21 08:19:0
-
-    0 UTC 2016 (6)
+  * ntpdate 4.2.6p5@1.2349 Tue Jun 21 08:19:00 UTC 2016 (6)
   * MD5: 006a0967281c9a061362086b638a21a4
   * SHA-1: a2b23a0c461719a2828c0202b50c19ba14cd8d23
 * `/usr/sbin/tcpdump`
