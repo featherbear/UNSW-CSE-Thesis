@@ -10,6 +10,7 @@ toc = true
 +++
 * [https://iotanalytics.unsw.edu.au/mudprofiles](https://iotanalytics.unsw.edu.au/mudprofiles "https://iotanalytics.unsw.edu.au/mudprofiles")
 * [https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-mud](https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-mud "https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-mud")
+  * [https://datatracker.ietf.org/doc/rfc8520/](https://datatracker.ietf.org/doc/rfc8520/ "https://datatracker.ietf.org/doc/rfc8520/")
 * [https://developer.cisco.com/site/mud/](https://developer.cisco.com/site/mud/ "https://developer.cisco.com/site/mud/")
 * [https://developer.cisco.com/codeexchange/github/repo/CiscoDevNet/MUD-URL-Validator](https://developer.cisco.com/codeexchange/github/repo/CiscoDevNet/MUD-URL-Validator "https://developer.cisco.com/codeexchange/github/repo/CiscoDevNet/MUD-URL-Validator")
 * [https://iotanalytics.unsw.edu.au/mud/amazonEchoMud.json](https://iotanalytics.unsw.edu.au/mud/amazonEchoMud.json "https://iotanalytics.unsw.edu.au/mud/amazonEchoMud.json")
