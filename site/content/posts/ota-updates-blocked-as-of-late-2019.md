@@ -11,9 +11,19 @@ toc = true
 The device that I had was manufactured in June 2020 (06/2020).  
 Unfortunately this means that MiIO OTA updates are blocked.
 
+# MiIO Client
+
 Likely the miIO client was patched - and a set of commands were removed; though remnants existed here and there
 
 ![](/uploads/20220719-snipaste_2022-07-20_02-33-16.jpg)
+
+    miio client - MIIO OT protocol implementation
+    Copyright (C) 2015-2016 Xiaomi
+    Author: Yin Kangkai <yinkangkai@xiaomi.com>
+    Version: miio-client 3.5.4
+    Build time: 12:34:47 Aug  1 2019
+
+l
 
 ***
 
