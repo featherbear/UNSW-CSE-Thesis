@@ -83,6 +83,7 @@ pages:
 - site/content/posts/mmcblk0p7-var-log-apt-history.log.md
 - site/content/posts/mmcblk0p7.md
 - site/content/posts/mnt-data-rockrobo-rrlog-miio.log.md
+- site/content/posts/mud.md
 - site/content/posts/netstat.md
 - site/content/posts/opt-roborock-md5-hashes.md
 - site/content/posts/opt-rockrobo-rriot-rriot_tuya.md
@@ -92,6 +93,7 @@ pages:
 - site/content/posts/power-notes.md
 - site/content/posts/pre-encryption-and-post-decryption-hooks.md
 - site/content/posts/project-focus.md
+- site/content/posts/readings.md
 - site/content/posts/recovery-mode.md
 - site/content/posts/report-a-preparation.md
 - site/content/posts/roborock-s6-teardown.md
