@@ -97,6 +97,21 @@ SSH (dropbear) - NO
 
 ## ✅ /bin
 
+* `/bin/bash`
+  * GNU bash, version 4.3.11(1)-release (arm-unknown-linux-
+
+    gnueabihf)
+* `/bin/chmod`
+  * chmod (GNU coreutils) 8.21
+* `/bin/chown`
+  * chown (GNU coreutils) 8.21
+* `/bin/dd`
+  * dd (coreutils) 8.21
+* `/bin/pidof`
+  * -
+* `/bin/tar`
+  * tar (GNU tar) 1.27.1
+
     6553d3232d065ffef4a822dfc7315245  bash
     00131fe7c4835dda1a8bb02fc7922364  chmod
     2fa55f966295a7a46d30ebdeae7fbc46  chown
@@ -105,6 +120,27 @@ SSH (dropbear) - NO
     30e4067a03cfe4ba8fc3963c0f8ba616  tar
 
 ## ✅ /sbin
+
+* `/sbin/ip6tables`
+  * ip6tables v1.4.21
+* `/sbin/iptables`
+  * iptables v1.4.21
+* `/sbin/iw`
+  * iw version 3.4
+* `/sbin/ldconfig`
+  * ldconfig (Ubuntu EGLIBC 2.19-0ubuntu6.6) 2.19
+* `/sbin/ldconfig.real`
+  * ldconfig (Ubuntu EGLIBC 2.19-0ubuntu6.6) 2.19
+* `/sbin/mkfs.ext4`
+  * mke2fs 1.42.9 (4-Feb-2014)
+  * EXT2FS Library version 1.42.9
+* `/sbin/rr_login`
+* `/sbin/wpa_cli`
+  * wpa_cli v2.0-devel_rtw_r25669.20171213
+* `/sbin/wpa_supplicant`
+  * wpa_supplicant v2.0-devel_rtw_r25669.20171213
+* `/sbin/xtables-multi`
+  * -
 
     d49bad0a9e3f098cc3913a8ee75fd73d  ip6tables
     d49bad0a9e3f098cc3913a8ee75fd73d  iptables
@@ -119,12 +155,43 @@ SSH (dropbear) - NO
 
 ## 🟨 /usr/bin
 
+* `/usr/bin/adbd`
+  * Probably moved logs to stderr?
+  * Old version went to stdout
+* `/usr/bin/base64`
+  * base64 (GNU coreutils) 8.21
+* `/usr/bin/bootring`
+  * -
+* `/usr/bin/create_ap`
+  * version 0.1
+* `/usr/bin/iconv`
+  * iconv (Ubuntu EGLIBC 2.19-0ubuntu6.6) 2.19
+* `/usr/bin/ionice`
+  * ionice from util-linux 2.20.1
+* `/usr/bin/ldd`
+  * ldd (Ubuntu EGLIBC 2.19-0ubuntu6.6) 2.19
+* `/usr/bin/logrotate.sh`
+  * -
+* `/usr/bin/nohup`
+  * nohup (GNU coreutils) 8.21
+* `/usr/bin/openssl`
+  * OpenSSL 1.0.1f 6 Jan 2014
+* `/usr/bin/pkill`
+  * pkill from procps-ng 3.3.9
+* `/usr/bin/qemu-arm-static`
+  * -
 * `/usr/bin/rr_try_mount`
-  * MD5: f820524e196df94d6299d75033d51b3c
+  * -
+* `/usr/bin/scp`
+  * 
+* `/usr/bin/top`
+  * procps-ng version 3.3.9
 * `/usr/bin/uart_test`
-  * eh
-
-## md5
+  * -
+* `/usr/bin/wpa_passphrase`
+  * 
+* `/usr/bin/xz`
+  * Original version does not use
 
     4e567a306e1569e7fd633331affa3e12  adbd
     67dc1de09b22238b155dcafc2d1a5c3c  base64
@@ -144,27 +211,6 @@ SSH (dropbear) - NO
     c5bbf0b4a9a09bfb1e1d46ccfe594bc5  uart_test
     18b02d8d26edb6d1ec204543baf81524  wpa_passphrase
     372e8fc127f8abb05c417387b2ba9a6c  xz
-
-### sha1
-
-    d78841398e4375c453829843a9724e92c089d903  adbd
-    4cb5af749c93028cd07ce8c93d868c117a8f54f5  base64
-    e1ca667ac07a367cf4fa2798c5c689690e1e07dc  bootring
-    e19e9e11acf7b22c85dd1ccd88f98c6f2f3d6f44  create_ap
-    36bb58738309bf64006b125648c25d92f7d6542a  iconv
-    1cfcf017601364bd8a1b2bdc623963851698413b  ionice
-    53c472a3f92101f9da98ebbf80eef57dadc7925b  ldd
-    77f936fb2599a4e7ffeee806ed9c530ea140c79e  logrotate.sh
-    665eda6309e3a80f4a42ad75b6cdc2435833741a  nohup
-    ea8ef23c12d20d0ad27086bb0dae667c905b5275  openssl
-    8ace7448bb7906751d2ce372df767dbf672d8122  pkill
-    9aba8bf7fa0d8e85c8c2f26fd4d4722cf38318cc  qemu-arm-static
-    10b21ee77c540ca55322d5b5c7c9f25128afd311  rr_try_mount
-    7366c17d4d58a94782711172ad36d56fddfb4f25  scp
-    b353a3e5b05e4a134d00ab62f86eea1f76f99892  top
-    4cf9e43f0ba49abef5da167223bb94bb1564a699  uart_test
-    ad6192b206d3bef7996f13f0cb5e53e716a9fe9e  wpa_passphrase
-    ebf5471495c95c4c826d63dd5836d057322ad32d  xz
 
 ## ✅ /usr/sbin
 
