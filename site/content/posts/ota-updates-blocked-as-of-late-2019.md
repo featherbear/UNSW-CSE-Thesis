@@ -50,7 +50,7 @@ Instead of being handled by the broadcast routine (yellow), it just prints out "
     Version: miio-client 3.5.4
     Build time: 12:34:47 Aug  1 2019
 
-## Old Version - 3.3.9
+# Old Version - 3.3.9
 
 ![](/uploads/20220719-snipaste_2022-07-20_03-04-38.png)
 
