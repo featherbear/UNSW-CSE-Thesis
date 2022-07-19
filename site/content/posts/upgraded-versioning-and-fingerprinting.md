@@ -89,11 +89,15 @@ SSH (dropbear) - NO
 
 > Binaries in this version (v02.29.02) match base version (v01.15.58)
 >
+> `/bin`
+>
 > ✅ `/sbin`
 >
 > ✅ `/usr/sbin`
 >
 > 🟨 `/usr/bin`
+
+## /bin
 
 ## /sbin
 
@@ -101,7 +105,8 @@ SSH (dropbear) - NO
 
 * `/usr/bin/rr_try_mount`
   * MD5: f820524e196df94d6299d75033d51b3c
-  * 
+* `/usr/bin/uart_test`
+  * eh
 
 ## md5
 
