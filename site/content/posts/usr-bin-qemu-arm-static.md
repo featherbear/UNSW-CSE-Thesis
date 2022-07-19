@@ -30,3 +30,15 @@ Install `gdb-multiarch` on your host machine. e.g Ubuntu: `sudo apt install gdb-
 > `gdb-multiarch -ex="target remote:1234" [PROGRAM]`
 
 ***
+
+# Cross-compilation TL;DR
+
+Install toolchain. e.g. Ubuntu: `sudo apt-get install gcc-arm-linux-gnueabihf`
+
+> `CC=arm-linux-gnueabihf-gcc make`
+>
+> `arm-linux-gnueabihf-gcc program.c`
+
+***
+
+[http://doppioandante.github.io/2015/07/10/Simple-ARM-programming-on-linux.html](http://doppioandante.github.io/2015/07/10/Simple-ARM-programming-on-linux.html "http://doppioandante.github.io/2015/07/10/Simple-ARM-programming-on-linux.html")
