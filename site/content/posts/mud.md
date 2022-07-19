@@ -21,3 +21,7 @@ toc = true
   * Though it _was_ labelled a beta program
 
     ***
+
+Not really adopted?
+
+Only used in Cisco catalyst switches
