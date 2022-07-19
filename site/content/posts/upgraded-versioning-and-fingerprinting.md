@@ -257,6 +257,13 @@ SSH (dropbear) - NO
 >     cases where wpa_cli or hostapd_cli is used to run action scripts (-a
 >     command line option)
 
-***
+* `/etc/wpa_supplicant/ifupdown.sh`
+  * Sources `/etc/wpa_supplicant/functions.sh`
+    * `-a env:WPA_ACTION_SCRIPT`
+* What even calls `ifupdown.sh`???
 
+* 
+* 
+* 
+* 
 * Utils - BusyBox v1.24.1 (2019-11-15 15:22:50 CST) built-in shell (ash)
