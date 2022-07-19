@@ -246,4 +246,17 @@ SSH (dropbear) - NO
 
 ***
 
+# Possible Leads
+
+## WPA - [CVE-2014-3686](https://www.cvedetails.com/cve/CVE-2014-3686/)
+
+[https://www.openwall.com/lists/oss-security/2014/10/09/28](https://www.openwall.com/lists/oss-security/2014/10/09/28 "https://www.openwall.com/lists/oss-security/2014/10/09/28")
+
+>     wpa_cli is a component distributed with wpa_supplicant and hostapd_cli
+>     is a component distributed with hostapd. The vulnerability affects only
+>     cases where wpa_cli or hostapd_cli is used to run action scripts (-a
+>     command line option)
+
+***
+
 * Utils - BusyBox v1.24.1 (2019-11-15 15:22:50 CST) built-in shell (ash)
