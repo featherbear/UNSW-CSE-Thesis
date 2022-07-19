@@ -23,7 +23,7 @@
 <meta name=description content="bash-4.3# cat rr-info A.01.0014-V2902
 bash-4.3# cat OS_VERSION ro.product.device=TANOS_V2902-2022042802REL_M3.5.8_T4.1.4-2_RELEASE_20220428-202811 ro.build.display.id=TANOS_MP_R16_RELEASE_20220428-202811 ro.sys.cputype=R16.STM32.A3.G1 ro.build.version.release=V2902 ro.build.date.utc=1651148891 uname -a Linux rockrobo 3.4.39 #1 SMP PREEMPT Thu Apr 28 20:27:25 CST 2022 armv7l GNU/Linux ::sysinit:/etc/init/rcS S start ::shutdown:/etc/init/rcS K stop ::respawn:WatchDoge $RR_ROOT/watchdog >> $RR_UDATA/rockrobo/rrlog/watchdog.log 2>&1 ::respawn:/usr/bin/adbd ::respawn:/usr/sbin/dropbear -F ::respawn:/sbin/rr_login -d /dev/ttyS0 -b 115200 -p vt100 $ /usr/bin/rr_try_mount Read Conf Dir:/tmp, blk_device:tmpfs, Type:tmpfs, opt:size=30m ignore Dir:/tmp, blk_device:tmpfs, because not '/dev/mmcblk0p*' Read Conf Dir:/run/shm, blk_device:tmpfs, Type:tmpfs, opt:size=100m ignore Dir:/run/shm, blk_device:tmpfs, because not '/dev/mmcblk0p*' Read Conf Dir:/mnt/data/, blk_device:/dev/mmcblk0p1, Type:ext4, opt:defaults Check /mnt/data/ Check /dev/mmcblk0p1 Info:/dev/mmcblk0p1 File type block device.">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"Upgraded - Versioning and Fingerprinting","item":"/posts/upgraded-versioning-and-fingerprinting/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/upgraded-versioning-and-fingerprinting/"},"headline":"Upgraded - Versioning and Fingerprinting | CSE Thesis Musings","datePublished":"2022-07-11T14:05:05+00:00","dateModified":"2022-07-11T14:05:05+00:00","wordCount":353,"publisher":{"@type":"Person","name":"A. Wong"},"description":"bash-4.3# cat rr-info A.01.0014-V2902\nbash-4.3# cat OS_VERSION ro.product.device=TANOS_V2902-2022042802REL_M3.5.8_T4.1.4-2_RELEASE_20220428-202811 ro.build.display.id=TANOS_MP_R16_RELEASE_20220428-202811 ro.sys.cputype=R16.STM32.A3.G1 ro.build.version.release=V2902 ro.build.date.utc=1651148891 uname -a Linux rockrobo 3.4.39 #1 SMP PREEMPT Thu Apr 28 20:27:25 CST 2022 armv7l GNU\/Linux ::sysinit:\/etc\/init\/rcS S start ::shutdown:\/etc\/init\/rcS K stop ::respawn:WatchDoge $RR_ROOT\/watchdog \u0026gt;\u0026gt; $RR_UDATA\/rockrobo\/rrlog\/watchdog.log 2\u0026gt;\u0026amp;1 ::respawn:\/usr\/bin\/adbd ::respawn:\/usr\/sbin\/dropbear -F ::respawn:\/sbin\/rr_login -d \/dev\/ttyS0 -b 115200 -p vt100 $ \/usr\/bin\/rr_try_mount Read Conf Dir:\/tmp, blk_device:tmpfs, Type:tmpfs, opt:size=30m ignore Dir:\/tmp, blk_device:tmpfs, because not \u0027\/dev\/mmcblk0p*\u0027 Read Conf Dir:\/run\/shm, blk_device:tmpfs, Type:tmpfs, opt:size=100m ignore Dir:\/run\/shm, blk_device:tmpfs, because not \u0027\/dev\/mmcblk0p*\u0027 Read Conf Dir:\/mnt\/data\/, blk_device:\/dev\/mmcblk0p1, Type:ext4, opt:defaults Check \/mnt\/data\/ Check \/dev\/mmcblk0p1 Info:\/dev\/mmcblk0p1 File type block device."}</script><meta property="og:title" content="Upgraded - Versioning and Fingerprinting | CSE Thesis Musings">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/upgraded-versioning-and-fingerprinting/"},"headline":"Upgraded - Versioning and Fingerprinting | CSE Thesis Musings","datePublished":"2022-07-11T14:05:05+00:00","dateModified":"2022-07-11T14:05:05+00:00","wordCount":385,"publisher":{"@type":"Person","name":"A. Wong"},"description":"bash-4.3# cat rr-info A.01.0014-V2902\nbash-4.3# cat OS_VERSION ro.product.device=TANOS_V2902-2022042802REL_M3.5.8_T4.1.4-2_RELEASE_20220428-202811 ro.build.display.id=TANOS_MP_R16_RELEASE_20220428-202811 ro.sys.cputype=R16.STM32.A3.G1 ro.build.version.release=V2902 ro.build.date.utc=1651148891 uname -a Linux rockrobo 3.4.39 #1 SMP PREEMPT Thu Apr 28 20:27:25 CST 2022 armv7l GNU\/Linux ::sysinit:\/etc\/init\/rcS S start ::shutdown:\/etc\/init\/rcS K stop ::respawn:WatchDoge $RR_ROOT\/watchdog \u0026gt;\u0026gt; $RR_UDATA\/rockrobo\/rrlog\/watchdog.log 2\u0026gt;\u0026amp;1 ::respawn:\/usr\/bin\/adbd ::respawn:\/usr\/sbin\/dropbear -F ::respawn:\/sbin\/rr_login -d \/dev\/ttyS0 -b 115200 -p vt100 $ \/usr\/bin\/rr_try_mount Read Conf Dir:\/tmp, blk_device:tmpfs, Type:tmpfs, opt:size=30m ignore Dir:\/tmp, blk_device:tmpfs, because not \u0027\/dev\/mmcblk0p*\u0027 Read Conf Dir:\/run\/shm, blk_device:tmpfs, Type:tmpfs, opt:size=100m ignore Dir:\/run\/shm, blk_device:tmpfs, because not \u0027\/dev\/mmcblk0p*\u0027 Read Conf Dir:\/mnt\/data\/, blk_device:\/dev\/mmcblk0p1, Type:ext4, opt:defaults Check \/mnt\/data\/ Check \/dev\/mmcblk0p1 Info:\/dev\/mmcblk0p1 File type block device."}</script><meta property="og:title" content="Upgraded - Versioning and Fingerprinting | CSE Thesis Musings">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/posts/upgraded-versioning-and-fingerprinting/">
 <meta property="og:description" content="bash-4.3# cat rr-info A.01.0014-V2902
@@ -160,7 +160,25 @@ sh: /sbin/e2fsck: not found
 <p>🟨 <code>/usr/bin</code></p>
 </blockquote>
 <h2 id=bin>/bin</h2>
+<pre><code>6553d3232d065ffef4a822dfc7315245  bash
+00131fe7c4835dda1a8bb02fc7922364  chmod
+2fa55f966295a7a46d30ebdeae7fbc46  chown
+70efc37e6afb7f5be6c4cf76afd3965b  dd
+73863d79612c16d88f7bedbacb89190a  pidof
+30e4067a03cfe4ba8fc3963c0f8ba616  tar
+</code></pre>
 <h2 id=sbin>/sbin</h2>
+<pre><code>d49bad0a9e3f098cc3913a8ee75fd73d  ip6tables
+d49bad0a9e3f098cc3913a8ee75fd73d  iptables
+9b625d8eee80b5dd49843e86f0cbe51d  iw
+85e9e2c4a9c0a7af309c906516aa4548  ldconfig
+0dc3219be0c361b51bbb8d404c870387  ldconfig.real
+46747e533e25641bb14eeaf4a60040bd  mkfs.ext4
+96bf1f1e1a2c745ea85d7db0fa59a952  rr_login
+cedf096ec580ff1dd66ea1b5b326f08d  wpa_cli
+18ae34458be1593946dc9f885ba275dc  wpa_supplicant
+d49bad0a9e3f098cc3913a8ee75fd73d  xtables-multi
+</code></pre>
 <h2 id=usrbin>/usr/bin</h2>
 <ul>
 <li><code>/usr/bin/rr_try_mount</code>
