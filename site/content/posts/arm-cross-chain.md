@@ -4,7 +4,7 @@ date = 2022-07-19T07:12:49Z
 description = ""
 series = []
 tags = []
-title = "/usr/bin/qemu-arm-static"
+title = "Working with ARM code on your personal computer"
 toc = true
 
 +++
