@@ -29,6 +29,8 @@ Likely the miIO client was patched - and a set of commands were removed; though 
 
 This is what we _should_ see, but nope, not with the patched version
 
+![](/uploads/20220719-snipaste_2022-07-20_02-55-45.jpg)
+
 ![](/uploads/20220719-snipaste_2022-07-20_02-54-06.jpg)
 
 ***
