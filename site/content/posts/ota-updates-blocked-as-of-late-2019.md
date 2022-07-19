@@ -11,6 +11,8 @@ toc = true
 The device that I had was manufactured in June 2020 (06/2020).  
 Unfortunately this means that MiIO OTA updates are blocked.
 
+If you ever wanted some older stock image... [https://vacuumz.info/download/s6/stock/](https://vacuumz.info/download/s6/stock/ "https://vacuumz.info/download/s6/stock/")
+
 # MiIO Client
 
 Likely the miIO client was patched - and a set of commands were removed; though remnants existed here and there
@@ -22,8 +24,6 @@ Likely the miIO client was patched - and a set of commands were removed; though 
     Author: Yin Kangkai <yinkangkai@xiaomi.com>
     Version: miio-client 3.5.4
     Build time: 12:34:47 Aug  1 2019
-
-l
 
 ***
 
