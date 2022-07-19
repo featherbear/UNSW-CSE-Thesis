@@ -248,7 +248,7 @@ SSH (dropbear) - NO
 
 # Possible Leads
 
-## WPA - [CVE-2014-3686](https://www.cvedetails.com/cve/CVE-2014-3686/)
+## WPA - [CVE-2014-3686](https://bugzilla.redhat.com/show_bug.cgi?id=1151259)
 
 [https://www.openwall.com/lists/oss-security/2014/10/09/28](https://www.openwall.com/lists/oss-security/2014/10/09/28 "https://www.openwall.com/lists/oss-security/2014/10/09/28")
 
