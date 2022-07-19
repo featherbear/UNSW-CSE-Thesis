@@ -89,10 +89,60 @@ SSH (dropbear) - NO
 
 > Binaries in this version (v02.29.02) match base version (v01.15.58)
 >
->   
 > ✅ `/sbin`
 >
 > ✅ `/usr/sbin`
+>
+> 🟨 `/usr/bin`
+
+## /sbin
+
+## /usr/bin
+
+* `/usr/bin/rr_try_mount`
+  * a
+
+    # md5
+    4e567a306e1569e7fd633331affa3e12  adbd
+    67dc1de09b22238b155dcafc2d1a5c3c  base64
+    bf8f440f6fe7e1cbbdaafa491442a4a9  bootring
+    fa856af527e32d1822784b1cae2dddde  create_ap
+    f75a585effc29768ea74bf36ca74be1b  iconv
+    b13dbb5753fef064dfeb89b024bdf0ec  ionice
+    a719dd374725a76f64161c2346df99cd  ldd
+    8129d3de3d967e2887447409ee84fb16  logrotate.sh
+    db2b65aed02b801746f8597d9a63f97d  nohup
+    97fe9fe716f6246a21c20b9b82138c0f  openssl
+    16601b3eace3dfd544d6f1ad5b3fd6b2  pkill
+    fa7add6bcd5a30ce2072646248fd87ef  qemu-arm-static
+    f820524e196df94d6299d75033d51b3c  rr_try_mount
+    354d5bef5c9f5d02f316d6840351a0cd  scp
+    411b32fa0ebd4aadf42f6dc0d755dcfc  top
+    c5bbf0b4a9a09bfb1e1d46ccfe594bc5  uart_test
+    18b02d8d26edb6d1ec204543baf81524  wpa_passphrase
+    372e8fc127f8abb05c417387b2ba9a6c  xz
+
+    # sha1
+    d78841398e4375c453829843a9724e92c089d903  adbd
+    4cb5af749c93028cd07ce8c93d868c117a8f54f5  base64
+    e1ca667ac07a367cf4fa2798c5c689690e1e07dc  bootring
+    e19e9e11acf7b22c85dd1ccd88f98c6f2f3d6f44  create_ap
+    36bb58738309bf64006b125648c25d92f7d6542a  iconv
+    1cfcf017601364bd8a1b2bdc623963851698413b  ionice
+    53c472a3f92101f9da98ebbf80eef57dadc7925b  ldd
+    77f936fb2599a4e7ffeee806ed9c530ea140c79e  logrotate.sh
+    665eda6309e3a80f4a42ad75b6cdc2435833741a  nohup
+    ea8ef23c12d20d0ad27086bb0dae667c905b5275  openssl
+    8ace7448bb7906751d2ce372df767dbf672d8122  pkill
+    9aba8bf7fa0d8e85c8c2f26fd4d4722cf38318cc  qemu-arm-static
+    10b21ee77c540ca55322d5b5c7c9f25128afd311  rr_try_mount
+    7366c17d4d58a94782711172ad36d56fddfb4f25  scp
+    b353a3e5b05e4a134d00ab62f86eea1f76f99892  top
+    4cf9e43f0ba49abef5da167223bb94bb1564a699  uart_test
+    ad6192b206d3bef7996f13f0cb5e53e716a9fe9e  wpa_passphrase
+    ebf5471495c95c4c826d63dd5836d057322ad32d  xz
+
+## /usr/sbin
 
 * `/usr/sbin/chpasswd`
   * MD5: c88953805d7fde675be9bb06050a5fa5
@@ -125,5 +175,4 @@ SSH (dropbear) - NO
   * libpcap version 1.5.3
   * MD5: 50f2ed1f9707873bbd13bde776c9cff7
   * SHA-1: b41f74a66ce1116f8352700529848f25455dc1d5
-
 * Utils - BusyBox v1.24.1 (2019-11-15 15:22:50 CST) built-in shell (ash)
