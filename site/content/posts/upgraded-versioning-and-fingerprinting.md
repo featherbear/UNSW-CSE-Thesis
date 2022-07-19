@@ -99,7 +99,31 @@ SSH (dropbear) - NO
 
 ## /bin
 
+```
+6553d3232d065ffef4a822dfc7315245  bash
+00131fe7c4835dda1a8bb02fc7922364  chmod
+2fa55f966295a7a46d30ebdeae7fbc46  chown
+70efc37e6afb7f5be6c4cf76afd3965b  dd
+73863d79612c16d88f7bedbacb89190a  pidof
+30e4067a03cfe4ba8fc3963c0f8ba616  tar
+```
+
+
 ## /sbin
+
+```
+d49bad0a9e3f098cc3913a8ee75fd73d  ip6tables
+d49bad0a9e3f098cc3913a8ee75fd73d  iptables
+9b625d8eee80b5dd49843e86f0cbe51d  iw
+85e9e2c4a9c0a7af309c906516aa4548  ldconfig
+0dc3219be0c361b51bbb8d404c870387  ldconfig.real
+46747e533e25641bb14eeaf4a60040bd  mkfs.ext4
+96bf1f1e1a2c745ea85d7db0fa59a952  rr_login
+cedf096ec580ff1dd66ea1b5b326f08d  wpa_cli
+18ae34458be1593946dc9f885ba275dc  wpa_supplicant
+d49bad0a9e3f098cc3913a8ee75fd73d  xtables-multi
+```
+
 
 ## /usr/bin
 
