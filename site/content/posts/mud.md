@@ -16,4 +16,8 @@ toc = true
 * [https://iotanalytics.unsw.edu.au/mud/amazonEchoMud.json](https://iotanalytics.unsw.edu.au/mud/amazonEchoMud.json "https://iotanalytics.unsw.edu.au/mud/amazonEchoMud.json")
 * YANG Data Model
 * [https://resources.infosecinstitute.com/topic/how-to-mitigate-iot-attacks-using-manufacturer-usage-description-mud/](https://resources.infosecinstitute.com/topic/how-to-mitigate-iot-attacks-using-manufacturer-usage-description-mud/ "https://resources.infosecinstitute.com/topic/how-to-mitigate-iot-attacks-using-manufacturer-usage-description-mud/")
-* 
+* CISCO doesn't seem to really pursue themselves?
+  * [https://mudmaker.testing.devnetcloud.com/login](https://mudmaker.testing.devnetcloud.com/login "https://mudmaker.testing.devnetcloud.com/login") is down
+  * Though it _was_ labelled a beta program
+
+    ***
