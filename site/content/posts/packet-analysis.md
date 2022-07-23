@@ -146,6 +146,21 @@ Every now and then - ms.tuyaeu.com - {'3.121.141.195', '3.122.208.21', '3.122.21
 }
 ```
 
+```json
+{
+  "id": 1437,
+  "method": "app_rc_move",
+  "params": [
+    {
+      "duration": 1500,
+      "omega": 0,
+      "seqnum": 133,
+      "velocity": -0.29
+    }
+  ]
+}
+```
+
 * tells rrlogd to use awsde0.fds.api.xiaomi.com
 * `a2.tuyaeu.com`
   * 
