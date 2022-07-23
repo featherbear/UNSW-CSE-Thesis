@@ -370,5 +370,57 @@ Excluding log upload activity (i.e. to Hadoop), we can see that at 3am (local ti
 
 ---
 
-# Conclusions
+## Conclusions
 
+### Version v01.15.58
+
+* miio_client
+	* Frequent DNS requests to xx.ot[t].io.mi.com
+    	* Error 400 - Bad Request
+        * China
+    * China
+* Logs - awsde0.fds.api.xiaomi.com
+  * 3am (though could be because log sizes rotate at this time)
+* Control / Checks - a2.tuyaeu.com
+	* Pretty frequent
+    * 3am peak
+    * Upgrade
+    * Status
+* Responses (MQTT) - ms.tuyaeu.com
+    * 3am peak
+* !! Frequent activity at 3am
+	* 3am AEDT = 12am BJT ???
+* DHCP request every 5 minutes
+* SSDP
+* rriot_tuya
+	* Discovery every 5 seconds
+
+### Version v02.29.02
+
+* MQTT at m2.tuyaeu.com
+* Logs at awsde0.fds.api.xiaomi.com
+* Control at a2.tuyaeu.com
+* DHCP request every 5 minutes
+
+
+---
+
+### Changes
+
+* miio_client no longer used
+  	* No more DNS requests to xx.ot[t].io.mi.com
+* m2.tuyaeu.com used in place of ms.tuyaeu.com
+* No SSDP
+
+---
+
+### Summary
+
+* MQTT at [ms|m2].tuyaeu.com
+* Control at a2.tuyaeu.com
+* Used to use Mi IO for `gslb`
+  * Likely stands for "Global Server Load Balancing"
+* Ubuntu artifacts (SSDP)
+* DHCP request
+* 3am and 3pm activity
+* Connections to America, Germany, China
