@@ -108,7 +108,11 @@ Some didn't work, some were too slow...
 
 ### Version v02.29.02
 
-`rriot_tuya`
+#### DNS
+
+![](/uploads/20220723-2_dns_2_snipaste_2022-07-23_20-30-10.jpg)
+
+#### rriot_tuya
 
 * Receives `(rr_down_stream_msg_handler##724): {"id":363,"method":"set_fds_endpoint","params":["awsde0.fds.api.xiaomi.com"]}`
 * `awsde0.fds.api.xiaomi.com`
@@ -117,6 +121,8 @@ Some didn't work, some were too slow...
     * 3.65.97.228
     * 3.124.106.160
     * 18.184.67.79
+  * ![](/uploads/20220723-snipaste_2022-07-23_21-43-24.jpg)  
+  * ![](/uploads/20220723-2_ssl_snipaste_2022-07-23_20-36-41.jpg)
 * Every 5 seconds
   * 255.255.255.255 broadcast to udp/6667
   * Tuya discovery packet
@@ -135,24 +141,20 @@ Some didn't work, some were too slow...
 
 > Trace: `bf7e9b4aacf4f733d8o3zz`
 
-```
-# rriot_tuya
-
-[01-01 18:12:15 TUYA Debug][gw_intf.c:2910] dev bf7e9b4aacf4f733d8o3zz bind schema [{"mode":"rw","property":{"type":"bool"},"id":2,"type":"obj"},{"mode":"rw","property":{"range":["auto","samrt","super","manual"],"type":"enum"},"id":5,"type":"obj"},{"mode":"ro","property":{"min":0,"max":100,"scale":0,"step":1,"type":"value"},"id":12,"type":"obj"},{"mode":"rw","property":{"min":0,"max":100,"scale":0,"step":1,"type":"value"},"id":16,"type":"obj"},{"mode":"rw","id":101,"type":"raw"},{"mode":"rw","id":102,"type":"raw"},{"mode":"rw","id":103,"type":"raw"},{"mode":"rw","property":{"min":0,"max":2147483647,"scale":0,"step":1,"type":"value"},"id":104,"type":"obj"},{"mode":"rw","id":105,"type":"raw"},{"mode":"rw","id":106,"type":"raw"},{"mode":"rw","id":107,"type":"raw"},{"mode":"rw","id":108,"type":"raw"},{"mode":"rw","id":109,"type":"raw"},{"mode":"rw","id":110,"type":"raw"},{"mode":"ro","property":{"min":0,"max":100000,"scale":1,"step":1,"type":"value"},"id":111,"type":"obj"}]
-[01-01 18:12:15 TUYA Debug][gw_intf.c:3305] Bind Dev Attach Success bf7e9b4aacf4f733d8o3zz 1
-```
+    # rriot_tuya
+    
+    [01-01 18:12:15 TUYA Debug][gw_intf.c:2910] dev bf7e9b4aacf4f733d8o3zz bind schema [{"mode":"rw","property":{"type":"bool"},"id":2,"type":"obj"},{"mode":"rw","property":{"range":["auto","samrt","super","manual"],"type":"enum"},"id":5,"type":"obj"},{"mode":"ro","property":{"min":0,"max":100,"scale":0,"step":1,"type":"value"},"id":12,"type":"obj"},{"mode":"rw","property":{"min":0,"max":100,"scale":0,"step":1,"type":"value"},"id":16,"type":"obj"},{"mode":"rw","id":101,"type":"raw"},{"mode":"rw","id":102,"type":"raw"},{"mode":"rw","id":103,"type":"raw"},{"mode":"rw","property":{"min":0,"max":2147483647,"scale":0,"step":1,"type":"value"},"id":104,"type":"obj"},{"mode":"rw","id":105,"type":"raw"},{"mode":"rw","id":106,"type":"raw"},{"mode":"rw","id":107,"type":"raw"},{"mode":"rw","id":108,"type":"raw"},{"mode":"rw","id":109,"type":"raw"},{"mode":"rw","id":110,"type":"raw"},{"mode":"ro","property":{"min":0,"max":100000,"scale":1,"step":1,"type":"value"},"id":111,"type":"obj"}]
+    [01-01 18:12:15 TUYA Debug][gw_intf.c:3305] Bind Dev Attach Success bf7e9b4aacf4f733d8o3zz 1
 
 > Trace: `mjae49buaskri74f`
 
-```
-# rriot_tuya
-
-[01-01 18:12:15 TUYA Debug][simplekv.c:1211] find key:2 gw_di
-[01-01 18:12:15 TUYA Debug][simplekv.c:1240] key:gw_di find value.Len:352
-[01-01 18:12:15 TUYA Debug][tuya_ws_db.c:320] read buf:{"abi":0,"id":"bf7e9b4aacf4f733d8o3zz","swv":"02.29.02","bv":"30.04","pv":"2.2","lpv":"3.3","pk":"mjae49buaskri74f","firmk":null,"cadv":"1.0.2","cdv":"1.0.0","dev_swv":"02.29.02","s_id":"0000002urc","dtp":0,"sync":0,"attr_num":0,"mst_tp_0":0,"mst_ver_0":null,"mst_tp_1":0,"mst_ver_1":null,"mst_tp_2":0,"mst_ver_2":null,"mst_tp_3":0,"mst_ver_3":null }
-[01-01 18:12:15 TUYA Debug][tuya_ws_db.c:766] gw_di read success
-[01-01 18:12:15 TUYA Notice][gw_intf.c:2667] gw_cntl.gw_if.abi:0 input:0
-[01-01 18:12:15 TUYA Notice][gw_intf.c:2668] gw_cntl.gw_if.product_key:mjae49buaskri74f, input:mjae49buaskri74f
-[01-01 18:12:15 TUYA Notice][gw_intf.c:2669] gw_cntl.gw_if.tp:0, input:0
-[01-01 18:12:15 TUYA Debug][simplekv.c:1171] read key:gw_ai isFuzzy:0 skipCnt:0
-```
+    # rriot_tuya
+    
+    [01-01 18:12:15 TUYA Debug][simplekv.c:1211] find key:2 gw_di
+    [01-01 18:12:15 TUYA Debug][simplekv.c:1240] key:gw_di find value.Len:352
+    [01-01 18:12:15 TUYA Debug][tuya_ws_db.c:320] read buf:{"abi":0,"id":"bf7e9b4aacf4f733d8o3zz","swv":"02.29.02","bv":"30.04","pv":"2.2","lpv":"3.3","pk":"mjae49buaskri74f","firmk":null,"cadv":"1.0.2","cdv":"1.0.0","dev_swv":"02.29.02","s_id":"0000002urc","dtp":0,"sync":0,"attr_num":0,"mst_tp_0":0,"mst_ver_0":null,"mst_tp_1":0,"mst_ver_1":null,"mst_tp_2":0,"mst_ver_2":null,"mst_tp_3":0,"mst_ver_3":null }
+    [01-01 18:12:15 TUYA Debug][tuya_ws_db.c:766] gw_di read success
+    [01-01 18:12:15 TUYA Notice][gw_intf.c:2667] gw_cntl.gw_if.abi:0 input:0
+    [01-01 18:12:15 TUYA Notice][gw_intf.c:2668] gw_cntl.gw_if.product_key:mjae49buaskri74f, input:mjae49buaskri74f
+    [01-01 18:12:15 TUYA Notice][gw_intf.c:2669] gw_cntl.gw_if.tp:0, input:0
+    [01-01 18:12:15 TUYA Debug][simplekv.c:1171] read key:gw_ai isFuzzy:0 skipCnt:0
