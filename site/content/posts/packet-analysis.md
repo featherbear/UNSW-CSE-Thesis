@@ -130,10 +130,11 @@ Some didn't work, some were too slow...
 * `m2.tuyaeu.com`
   * Many IPs
 * `a2.tuyaeu.com`
-  * 35.157.101.18
-  * 3.125.199.146
-  * 3.125.234.101
-  * 3.121.210.75
+  * Many IPs
+* ![](/uploads/20220723-snipaste_2022-07-23_22-07-12.jpg)
+
+#### Tuya Discovery (rr_iot)
+
 * Every 5 seconds
   * 255.255.255.255 broadcast to udp/6667
   * Tuya discovery packet
