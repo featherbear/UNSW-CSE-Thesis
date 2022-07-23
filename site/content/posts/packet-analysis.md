@@ -174,6 +174,12 @@ Every now and then - ms.tuyaeu.com - {'3.121.141.195', '3.122.208.21', '3.122.21
     * `3.125.199.146`
     * 
 
+#### a2.tuyaeu.com
+
+> Control requests
+
+
+
 ```
 [07-09 20:51:49 TUYA Debug][iot_httpc.c:883] Post Data: {"devId":"bf7e9b4aacf4f733d8o3zz","lastFetchTime":"0","t":1657363909}
 [07-09 20:51:49 TUYA Debug][iot_httpc.c:894] Post URL: https://a2.tuyaeu.com/d.json?a=tuya.device.timer.count&devId=bf7e9b4aacf4f733d8o3zz&et=1&t=1657363909&v=4.0&sign=04f90848341607585ff064f82437c91c
