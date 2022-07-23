@@ -94,4 +94,26 @@ Some didn't work, some were too slow...
 
 ### Version v01.15.58
 
+* `miio_client`
+  * [`dns.io.mi.com`](https://whois.ipip.net/AS59019)
+    * `110.43.0.83`
+    * `110.43.0.83`
+* `rriot_tuya`
+  * `a2.tuyaeu.com`
+    * `3.125.199.146`
+
+`35.209.96.245`
+
+`35.209.9.241`
+
 ### Version v02.29.02
+
+`rriot_tuya`
+
+* Receives `(rr_down_stream_msg_handler##724): {"id":363,"method":"set_fds_endpoint","params":["awsde0.fds.api.xiaomi.com"]}`
+
+`awsde0.fds.api.xiaomi.com`
+
+* 3.124.106.160
+* 3.65.97.228
+* 18.184.67.79
