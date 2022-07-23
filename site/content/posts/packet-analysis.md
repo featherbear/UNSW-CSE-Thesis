@@ -129,12 +129,15 @@ Some didn't work, some were too slow...
   * ![](/uploads/20220723-snipaste_2022-07-23_21-44-48.jpg)
 * `m2.tuyaeu.com`
   * Many IPs
-  * MQTT?
+  * MQTT
+  * TCP/8883
 * `a2.tuyaeu.com`
   * Many IPs
+  * TCP/443
+
 * ![](/uploads/20220723-snipaste_2022-07-23_22-07-12.jpg)
 
-#### Tuya Discovery (rr_iot)
+#### Tuya Discovery (rriot_tuya)
 
 * Every 5 seconds
   * 255.255.255.255 broadcast to udp/6667
