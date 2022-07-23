@@ -54,4 +54,25 @@ We could just whitelist packets to/from our target.
 
     find . -iname "*.pcap*" -exec sh -c "tshark -r '{}' -Y \"(eth.src == 64:90:c1:1d:24:c4 || eth.dst == 64:90:c1:1d:24:c4)\" -w \"\$(dirname {})/clean.\$(basename {})\""  \;
 
-pain.
+***
+
+# Filtering ZeroTier
+
+```
+!((ip.src == 195.181.173.159) || (ip.dst == 195.181.173.159) || (ip.src == 50.7.73.34) || (ip.dst == 50.7.73.34) || (ip.src == 103.195.103.66) || (ip.dst == 103.195.103.66) || (ip.src ==  50.7.252.138) || (ip.dst ==  50.7.252.138) || (ip.src == 107.170.197.14) || (ip.dst == 107.170.197.14))
+```
+
+https://zerotier.atlassian.net/wiki/spaces/SD/pages/7241732/Root+Server+IP+Addresses
+
+```
+root-ams-01.zerotier.com has address 195.181.173.159
+root-ams-01.zerotier.com has IPv6 address 2a02:6ea0:c024::
+root-sea-01.zerotier.com has address 50.7.73.34
+root-sea-01.zerotier.com has IPv6 address 2001:49f0:d002:6::2
+root-mia-01.zerotier.com has address 103.195.103.66
+root-mia-01.zerotier.com has IPv6 address 2605:9880:400:c3:254:f2bc:a1f7:19
+root-sgp-01.zerotier.com has address 50.7.252.138
+root-sgp-01.zerotier.com has IPv6 address 2001:49f0:d0db:2::2
+root-alice-sfo-01.zerotier.com has address 107.170.197.14
+root-alice-sfo-01.zerotier.com has IPv6 address 2604:a880:1:20::200:e001
+```
