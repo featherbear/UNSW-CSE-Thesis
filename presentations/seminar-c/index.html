@@ -1,0 +1,222 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Final Thesis Presentation | Andrew Wong</title>
+<meta name=description content="Musings of a CSE Thesis">
+<meta name=apple-mobile-web-app-capable content="yes">
+<meta name=apple-mobile-web-app-status-bar-style content="black-translucent">
+<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<link rel=stylesheet href=../../reveal-js/css/reset.css>
+<link rel=stylesheet href=../../reveal-js/css/reveal.css>
+<link rel=stylesheet href=../../_.min.a230c4a7a1567dd6102968d8163a8141477da8488849428e390a8cd00a44c5a7.css id=theme><link rel=stylesheet href=../../highlight-js/default.min.css>
+</head>
+<body>
+<div class=reveal>
+<div class=slides>
+<section data-noprocess data-shortcode-slide data-background-image=https://featherbear.cc/UNSW-CSE-Thesis/uploads/covers/0T4A9791.JPG data-transition=fade>
+<p><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br></p>
+<h3 id=smart-vacuum-cleaners>&ldquo;Smart&rdquo; Vacuum Cleaners</h3>
+<h5 id=an-audit-into-the-security-and-integrity-of-iot-systems>An Audit Into The Security and Integrity of IoT Systems</h5>
+<h6 id=andrew-wong--unsw-sydney>Andrew Wong | UNSW Sydney</h6>
+</section><section>
+<style>img[round]{border-radius:10px}</style>
+<h1 id=todays-agenda>Today&rsquo;s Agenda</h1>
+<ul>
+<li>Thesis B plan</li>
+<li>Thesis B review</li>
+<li>Thesis B retrospective</li>
+<li>Thesis C revised plan</li>
+</ul>
+</section><section>
+<h1 id=statement>Statement</h1>
+<blockquote>
+</blockquote>
+<p>How have manufacturers of IoT / smart home devices addressed the increasing concerns of digital privacy and product security?</p>
+<blockquote>
+</blockquote>
+<span class=fragment><p> <br>
+ </p>
+<ul>
+<li>Digital Privacy - Investigate the nature of network data (i.e. content, frequency, destination) and how the data is used.</li>
+<li>Product Security - Investigate potential security vulnerabilities and assess the effectiveness of current security fortifications.</li>
+</ul>
+</span>
+</section><section>
+<p>Talk about threat models</p>
+<p>Talk about thesis A
+talk about thesis b
+Talk about thesis c</p>
+<p>threat models</p>
+<p>work done in thesis c</p>
+<p>hooking into code..</p>
+<p>Network analysis</p>
+<ul>
+<li>MQTT at [ms|m2].tuyaeu.com</li>
+<li>Control at a2.tuyaeu.com</li>
+<li>Used to use Mi IO for <code>gslb</code>
+<ul>
+<li>Likely stands for &ldquo;Global Server Load Balancing&rdquo;</li>
+</ul>
+</li>
+<li>Ubuntu artifacts (SSDP)</li>
+<li>DHCP request</li>
+<li>3am and 3pm activity</li>
+<li>Connections to America, Germany, China</li>
+<li>UNSW Elec - MUD - they could do this to heighten security
+<ul>
+<li>note - doesn&rsquo;t prevent them from being malicious from within their own C2 server, but will mitigate modified devices</li>
+</ul>
+</li>
+</ul>
+<p>adb &mdash; touched though didn&rsquo;t crack</p>
+<p>rrlogd can trigger wlanmgr to do a tcpdump (makes sense kinda) - MSG_LOG_DEBUG_ENABLE - MSG_LOG_DEBUG_UPLOAD_DATA
+wlanmgr can also call tcpdump during debug</p>
+<p>no ipv6</p>
+<p>photorec no because flashing</p>
+<p>Compare against stock OS</p>
+<p>&ndash; upgrade</p>
+<ul>
+<li>ipv6 blocked!
+<ul>
+<li>also no longer pings fds AAAA</li>
+</ul>
+</li>
+<li>no longer use default Ubuntu</li>
+<li>no apt, dpkg</li>
+<li>dropbear (SSH)
+<ul>
+<li>also not started by default</li>
+<li>very old, only uses diffie for key exch</li>
+</ul>
+</li>
+<li>rr_login - root only
+<ul>
+<li>used to be getty</li>
+<li>new way to get shell</li>
+</ul>
+</li>
+<li>applications check /mnt/default/shadow (non-existent)
+<ul>
+<li>dropbear</li>
+<li>rr_login</li>
+</ul>
+</li>
+<li>several processes re-run iptables block
+<ul>
+<li>rrlogd, watchdoge</li>
+</ul>
+</li>
+<li>busybox</li>
+<li>persistence
+<ul>
+<li>/mnt/data</li>
+<li>/mnt/reserve</li>
+</ul>
+</li>
+<li>malware persistence idea</li>
+<li>need new way to transfer files / cross-compile</li>
+</ul>
+<p>reset persistence</p>
+<ul>
+<li>/mnt/reserve kept</li>
+<li>patch the recovery partition mmcblk0p7</li>
+</ul>
+<p>talk about miIO vuln
+miIO ota - patched</p>
+<p>Response to disclosures
+tuya and roborock only have one disclosure listed on their site?
+Hard to find</p>
+<p>Takeaway
+Summary (answer main point)</p>
+<p>tldr
+Who
+What
+When
+Why
+Where
+How</p>
+<h4 id=labelthesis-b-completionlabel><label>Thesis B Completion</label></h4>
+<ul>
+<li>Analysis of firmware binaries to identify vulnerabilities
+<ul>
+<li>Still in progress</li>
+</ul>
+</li>
+<li>Search for unsecured secrets, logs, configurations
+<ul>
+<li>Completed (excluding encrypted <code>rrlog</code> files)</li>
+</ul>
+</li>
+</ul>
+<h4 id=labelrevised-thesis-c-planlabel><label>Revised Thesis C Plan</label></h4>
+<ul>
+<li>(priority) Inspection of outbound WAN traffic - security, PII, etc</li>
+<li><s style=color:grey>Inspection of LAN traffic</s> rather, see if it is stored</li>
+<li><s style=color:grey>Inspection of interaction with nearby devices</s></li>
+<li><s style=color:grey>Protocol analysis</s></li>
+<li>Update to a newer firmware version and look at changes</li>
+<li>Check what files gets cleared during a format</li>
+<li>Binary assessment</li>
+<li>Verify IPv6 SSH access</li>
+</ul>
+</section><section>
+<h2 id=incoming-timeline>Incoming Timeline</h2>
+<ul>
+<li><label>22T2 W1</label> - IPv6 SSH verification, continue binary assessment</li>
+<li><label>22T2 W2</label> - WAN traffic analysis
+<ul>
+<li>Look at network behaviour</li>
+<li>Try view WAN data pre-encryption / post-decryption</li>
+</ul>
+</li>
+<li><label>22T2 W4</label> - Update to latest version (and hope we don&rsquo;t get locked out)
+<ul>
+<li>Do another vacuum clean, reimage, compare binaries</li>
+</ul>
+</li>
+<li><label>22T2 W5</label> - Factory reset device, check for remnant files</li>
+<li><label>22T2 W8</label> - Demo submission</li>
+<li><label>22T2 W11</label> - Report submission</li>
+</ul>
+</section><section>
+<h1 id=thank-you>Thank You</h1>
+<p><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br></p>
+<hr>
+<p>Andrew Wong</p>
+<sub>
+<p>w: <a href=https://featherbear.cc/UNSW-CSE-Thesis>featherbear.cc/UNSW-CSE-Thesis</a></p>
+<p>e: <script>document.write(atob('YW5kcmV3Lmoud29uZ0BzdHVkZW50LnVuc3cuZWR1LmF1'))</script></p>
+</sub></section>
+</div>
+</div>
+<script type=text/javascript src=../../reveal-hugo/object-assign.js></script>
+<a href=../../reveal-js/css/print/ id=print-location style=display:none></a>
+<script type=text/javascript>var printLocationElement=document.getElementById('print-location'),link=document.createElement('link');link.rel='stylesheet',link.type='text/css',link.href=printLocationElement.href+(window.location.search.match(/print-pdf/gi)?'pdf.css':'paper.css'),document.getElementsByTagName('head')[0].appendChild(link)</script>
+<script type=application/json id=reveal-hugo-site-params>{"center":false,"custom_theme":"presentations/theme.scss","custom_theme_compile":true,"dependencies":[{"src":"../plugins/capsLockKeymod.js"}],"history":true,"pdf_separate_fragments":true,"slide_number":true,"width":1024}</script>
+<script type=application/json id=reveal-hugo-page-params>null</script>
+<script src=../../reveal-js/js/reveal.js></script>
+<script type=text/javascript>var revealHugoDefaults,revealHugoSiteParams,revealHugoPageParams,options;function camelize(a){return a&&Object.keys(a).forEach(function(b){newK=b.replace(/(\_\w)/g,function(a){return a[1].toUpperCase()}),newK!=b&&(a[newK]=a[b],delete a[b])}),a}revealHugoDefaults={center:!0,controls:!0,history:!0,progress:!0,transition:"slide"},revealHugoSiteParams=JSON.parse(document.getElementById('reveal-hugo-site-params').innerHTML),revealHugoPageParams=JSON.parse(document.getElementById('reveal-hugo-page-params').innerHTML),options=Object.assign({},camelize(revealHugoDefaults),camelize(revealHugoSiteParams),camelize(revealHugoPageParams)),Reveal.initialize(options)</script>
+<script type=text/javascript src=../../reveal-js/plugin/markdown/marked.js></script>
+<script type=text/javascript src=../../reveal-js/plugin/markdown/markdown.js></script>
+<script type=text/javascript src=../../reveal-js/plugin/highlight/highlight.js></script>
+<script type=text/javascript src=../../reveal-js/plugin/zoom-js/zoom.js></script>
+<script type=text/javascript src=../../reveal-js/plugin/notes/notes.js></script>
+<script type=text/javascript>for(let a of document.querySelectorAll(".reveal .slides > section"))a.dataset.transition||(a.dataset.transition="fade-out slide-in");document.querySelectorAll('p img').forEach(b=>{if(b.alt!='center')return;let a=b;while(a.tagName!='P')a=a.parentNode;a.style.textAlign='center'})</script>
+</body>
+</html>
