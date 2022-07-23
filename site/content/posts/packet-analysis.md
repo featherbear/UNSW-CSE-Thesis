@@ -228,6 +228,25 @@ Every now and then - ms.tuyaeu.com - {'3.121.141.195', '3.122.208.21', '3.122.21
 
 ![](/uploads/20220723-snipaste_2022-07-24_00-13-23.jpg)
 
+#### DHCP
+
+Request every 5 minutes
+
+#### Tuya Discovery
+
+See below
+
+#### miio_client
+
+HTTP GET `/gslb?tver=%d&id=%s&dm=%s&timestamp=%d&sign=%s`
+
+* 110.43.0.83
+* 110.43.0.85
+
+Every 10 seconds
+
+IPs are hardcoded in the `miio_client` binary, but seem to translate to [`dns.io.mi.com`](https://whois.ipip.net/AS59019)
+
 ### Version v02.29.02
 
 #### Wireshark Filter
