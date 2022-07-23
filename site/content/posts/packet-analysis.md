@@ -109,6 +109,12 @@ Some didn't work, some were too slow...
 
 ### Version v02.29.02
 
+#### DHCP
+
+Every 5 minutes, DHCP lease requested
+
+![](/uploads/20220723-snipaste_2022-07-23_22-24-23.jpg)
+
 #### DNS
 
 ![](/uploads/20220723-2_dns_2_snipaste_2022-07-23_20-30-10.jpg)
@@ -123,7 +129,7 @@ Some didn't work, some were too slow...
     * 3.65.97.228
     * 3.124.106.160
     * 18.184.67.79
-  * ![](/uploads/20220723-snipaste_2022-07-23_21-43-24.jpg)  
+  * ![](/uploads/20220723-snipaste_2022-07-23_21-43-24.jpg)
   * ![](/uploads/20220723-2_ssl_snipaste_2022-07-23_20-36-41.jpg)
   * ![](/uploads/20220723-snipaste_2022-07-23_21-44-48.jpg)
   * ![](/uploads/20220723-snipaste_2022-07-23_21-44-48.jpg)
@@ -134,7 +140,6 @@ Some didn't work, some were too slow...
 * `a2.tuyaeu.com`
   * Many IPs
   * tcp/443
-
 * ![](/uploads/20220723-snipaste_2022-07-23_22-07-12.jpg)
 
 #### Tuya Discovery (rriot_tuya)
