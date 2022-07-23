@@ -49,6 +49,7 @@ fields:
   description: "<em>i.e. for Part 1 and Part 2 posts</em>"
 pages:
 - site/content/posts/05-07-2022-further-points-of-contact.md
+- site/content/posts/13-07-2022-progress-update.md
 - site/content/posts/20211025-progress.md
 - site/content/posts/20211026-progress.md
 - site/content/posts/20211029-progress.md
@@ -59,6 +60,7 @@ pages:
 - site/content/posts/assessment-scope-diagram.md
 - site/content/posts/boot-persistence.md
 - site/content/posts/bootring.md
+- site/content/posts/but-can-we-photorec.md
 - site/content/posts/capture-log.md
 - site/content/posts/capturing-network-activity-securely.md
 - site/content/posts/capturing-packets-on-android.md
@@ -66,6 +68,8 @@ pages:
 - site/content/posts/device-actions.md
 - site/content/posts/devtest.conf.md
 - site/content/posts/diff-inspection.md
+- site/content/posts/disclosures.md
+- site/content/posts/download-file-from-bash-without-wget-curl.md
 - site/content/posts/etc-passwd.md
 - site/content/posts/etc-shadow.md
 - site/content/posts/file-system-comparison.md
@@ -80,19 +84,25 @@ pages:
 - site/content/posts/mmcblk0p7-var-log-apt-history.log.md
 - site/content/posts/mmcblk0p7.md
 - site/content/posts/mnt-data-rockrobo-rrlog-miio.log.md
+- site/content/posts/mud.md
 - site/content/posts/netstat.md
 - site/content/posts/opt-roborock-md5-hashes.md
 - site/content/posts/opt-rockrobo-rriot-rriot_tuya.md
+- site/content/posts/ota-updates-blocked-as-of-late-2019.md
+- site/content/posts/packet-analysis.md
 - site/content/posts/points-of-contact.md
 - site/content/posts/polarproxy.md
 - site/content/posts/post-login-actions.md
 - site/content/posts/power-notes.md
 - site/content/posts/pre-encryption-and-post-decryption-hooks.md
 - site/content/posts/project-focus.md
+- site/content/posts/psa-don-t-combine-program-arguments.md
+- site/content/posts/readings.md
 - site/content/posts/recovery-mode.md
 - site/content/posts/report-a-preparation.md
 - site/content/posts/roborock-s6-teardown.md
 - site/content/posts/rrlogd.md
+- site/content/posts/sankey-diagrams.md
 - site/content/posts/sbin-rr_login.md
 - site/content/posts/seminar-a-preparation.md
 - site/content/posts/state-of-the-art.md
@@ -106,7 +116,9 @@ pages:
 - site/content/posts/upgrade-upgrade-persistence.md
 - site/content/posts/upgraded-accessing-the-shell.md
 - site/content/posts/upgraded-boot-log.md
+- site/content/posts/upgraded-netstat.md
 - site/content/posts/upgraded-tcpdump-usage.md
 - site/content/posts/upgraded-versioning-and-fingerprinting.md
+- site/content/posts/vinda.c.md
 - site/content/posts/which-process-which-port-which-connection.md
 - site/content/posts/xiaomi-cyber-security-baseline-for-consumer-internet-of-things.md

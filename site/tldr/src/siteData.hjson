@@ -128,6 +128,15 @@
         date: 02/06/2022
         content: Created entity scope for analysis
       }
+      {
+        title: Tuesday
+        date: 19/07/2022
+        content: [
+          Read up on Cisco's MUD specification
+          Looked at some of UNSW Elec Eng IOT research group's papers
+          Looked at Sankey diagrams for visualising flow
+        ]
+      }
     ]
   }
   {
@@ -264,9 +273,59 @@
         content: Began to check which processes contacted what address
       }
       {
-      title: Base OS comparison
-      date: 29/06/2022
-      content: Did a MD5 compare of the device's executable files vs the Ubuntu 14.04.3 LTS base. In the future we should also look at configuration files too
+        title: Base OS comparison
+        date: 29/06/2022
+        content: Did a MD5 compare of the device's executable files vs the Ubuntu 14.04.3 LTS base. In the future we should also look at configuration files too
+      }
+      {
+        title: Binary Analysis
+        date: 05/07/2022
+        content: Inspection and RE of binaries
+      }
+      {
+        title: Binary Patching
+        date: 05/07/2022
+        content: Tested how to hook into functions, though realised that the required functions printed their outputs anyway
+      }
+      {
+        title: Reset Tests
+        date: 11/07/2022
+        content: [
+          Test reset persistence and made POC for payload persistence
+        ]
+      }
+      {
+        title: Upgrade Tests
+        date: 11/07/2022
+        content: [
+          Upgraded to latest version (April 2022) - v02.29.02
+          Test upgrade persistence (didn't really work)
+          Dumped upgrade versions
+          New versions use rr_login which prevents root login
+          New versions use busybox
+        ]
+      }
+      {
+        title: Wednesday
+        date: 13/07/2022
+        content: Thought about getting access to the device via MIIO OTA on device init
+        link: https://featherbear.cc/UNSW-CSE-Thesis/posts/13-07-2022-progress-update/
+      }
+      {
+        title: Monday
+        date: 18/07/2022
+        content: Yoo I found this cursed downloader function for bash scripts... because I couldn't get curl on the machine haha!
+      }
+      {
+        title: Tuesday
+        date: 19/07/2022
+        content: [
+          Explored MiIO OTA update, but found it didn't work on my June 2020 manufactured device as it had a version of miio_client that was too new, and had code to handle and drop the request without it being broadcasted to AppProxy
+          Figured out that the dropbear binary didn't handle combining argument flags, so to do -FE you had to do -F -E
+          Confirmed that the dropbear binary was failing to read the non-existent /mnt/default/shadow file so it would never log in
+          Figured out how to use qemu and GDB with ARM, also did some cross-compilation
+          Read up and tested potential vulnerabilities
+        ]
       }
     ]
   }

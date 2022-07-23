@@ -14,23 +14,21 @@ toc = true
 
 # TL;DR - Get access to serial shell
 
-```
-# Hold 's' during power on to enter UBoot's shell
-setenv setargs_mmc ${setargs_mmc} init=/bin/bash
-boot
-
-# When you access the /bin/bash shell, enter in:
-echo 'V' > /dev/watchdog
-
-# Edit the /etc/inittab file
-# Prepend a # to ::respawn:/sbin/rr_login -d /dev/ttyS0 -b 115200 -p vt100
-# Append ttyS0::respawn:/bin/login
-
-# Reboot
-
-# Login with root and previous password
-
-```
+    # Hold 's' during power on to enter UBoot's shell
+    setenv setargs_mmc ${setargs_mmc} init=/bin/bash
+    boot
+    
+    # When you access the /bin/bash shell, enter in:
+    echo 'V' > /dev/watchdog
+    
+    # Edit the /etc/inittab file
+    # Prepend a # to ::respawn:/sbin/rr_login -d /dev/ttyS0 -b 115200 -p vt100
+    # Append ttyS0::respawn:/bin/login
+    
+    # Reboot
+    
+    # Login with root and previous password
+    
 
 ***
 
@@ -110,6 +108,10 @@ This will cause `ttyS0` connections to be handled by `/bin/login` (which respect
 ***
 
 # SSH
+
+> UPDATE: In later versions, Dropbear verifies against a non-existent (at least in my system) `[default]/shadow` file and so will always fail
+>
+> ![](/uploads/20220719-snipaste_2022-07-19_22-24-51.jpg)  
 
 Dropbear is used instead of the OpenSSH server. It's very old and supports outdated key exchange algorithms which are not enabled by default on OpenSSH clients.
 

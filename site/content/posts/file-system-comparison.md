@@ -8,6 +8,8 @@ title = "File System Comparison"
 toc = true
 
 +++
+Comparison against stock Ubuntu 14.04.03 LTS
+
 The device is an `armhf` Ubuntu 14.04.3 LTS, so we are comparing the hashes of the binaries against the stock binaries to see if there are any modifications
 
 > `find . -type f -executable -exec md5sum {} \;`  
