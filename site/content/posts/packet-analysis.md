@@ -94,6 +94,24 @@ Some didn't work, some were too slow...
 
 ### Version v01.15.58
 
+#### DNS
+
+![](/uploads/20220723-snipaste_2022-07-23_23-08-00.jpg)
+
+![](/uploads/20220723-snipaste_2022-07-23_23-08-53.jpg)
+
+![](/uploads/20220723-snipaste_2022-07-23_23-09-13.jpg)
+
+Every 10 seconds - xx.ott.io.mi.com
+
+Two times every second - xx.ot.io.mi.com
+
+\[upload\] Every 2-5 seconds - (A, AAAA) awsde0.fds.api.xiaomi.com': {'18.184.67.79', '3.124.106.160', '52.28.1.106', '3.67.19.121', '3.65.97.228', '18.156.26.16'}}
+
+Every now and then - a2.tuyaeu.com - {'3.125.199.146', '35.157.101.18', '3.125.234.101'}
+
+Every now and then - ms.tuyaeu.com - {'3.121.141.195', '3.122.208.21', '3.122.217.21'}
+
 * `miio_client`
   * [`dns.io.mi.com`](https://whois.ipip.net/AS59019)
     * `110.43.0.83`
@@ -139,7 +157,6 @@ Every 5 minutes, DHCP lease requested
 * awsde0.fds.api.xiaomi.com {'3.124.106.160', '52.28.1.106', '3.65.97.228', '18.184.67.79'}
 * a2.tuyaeu.com {'35.157.101.18', '3.125.234.101', '3.125.199.146'}
 * m2.tuyaeu.com {'3.67.242.33', '35.156.44.172', '18.184.31.90', '3.124.225.12', '18.185.218.106', '52.58.249.45', '18.185.31.196', '52.57.38.165', '3.121.210.75', '3.66.126.37', '3.120.92.134', '3.65.95.68', '18.192.43.219', '3.64.85.28', '35.156.42.116'}
-
 
 #### rriot_tuya
 
