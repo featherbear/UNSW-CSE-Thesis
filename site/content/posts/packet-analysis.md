@@ -115,6 +115,7 @@ Some didn't work, some were too slow...
 #### rriot_tuya
 
 * Receives `(rr_down_stream_msg_handler##724): {"id":363,"method":"set_fds_endpoint","params":["awsde0.fds.api.xiaomi.com"]}`
+* Instructs `rrlogd` where to upload the logs to
 * `awsde0.fds.api.xiaomi.com`
   * CNAME: `lb-hadoop-fds-awsde0-eco-tcp-825301548.eu-central-1.elb.amazonaws.com`
     * 3.124.106.160
