@@ -109,6 +109,25 @@ Some didn't work, some were too slow...
 
 ### Version v02.29.02
 
+#### Wireshark Filter
+
+```
+!arp
+&& !dns
+&& !dhcp
+&& !(tcp.srcport == 8883 || tcp.dstport == 8883)
+&& !((ip.src == 3.125.234.101 || ip.dst == 3.125.234.101) || (ip.src == 3.125.199.146 || ip.dst == 3.125.199.146) || (ip.src == 35.157.101.18 || ip.dst == 35.157.101.18)) 
+&& !((ip.src == 3.124.225.12 || ip.dst == 3.124.225.12) || (ip.src == 18.185.31.196 || ip.dst == 18.185.31.196) || (ip.src == 52.58.249.45 || ip.dst == 52.58.249.45) || (ip.src == 3.66.126.37 || ip.dst == 3.66.126.37) || (ip.src == 3.65.95.68 || ip.dst == 3.65.95.68) || (ip.src == 3.121.210.75 || ip.dst == 3.121.210.75) || (ip.src == 35.156.44.172 || ip.dst == 35.156.44.172) || (ip.src == 18.185.218.106 || ip.dst == 18.185.218.106) || (ip.src == 3.67.242.33 || ip.dst == 3.67.242.33) || (ip.src == 18.184.31.90 || ip.dst == 18.184.31.90))
+&& !((ip.src == 3.124.106.160 || ip.dst == 3.124.106.160) || (ip.src == 52.28.1.106 || ip.dst == 52.28.1.106) || (ip.src == 3.65.97.228 || ip.dst == 3.65.97.228) || (ip.src == 18.184.67.79 || ip.dst == 18.184.67.79) )
+```
+
+* arp
+* dhcp
+* mqtt (m2.tuyaeu.com)
+* a2.tuyaeu.com
+* m2.tuyaeu.com
+* awsde0.fds.api.xiaomi.com
+
 #### DHCP
 
 Every 5 minutes, DHCP lease requested
