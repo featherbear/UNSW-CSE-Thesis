@@ -129,6 +129,7 @@ Some didn't work, some were too slow...
   * ![](/uploads/20220723-snipaste_2022-07-23_21-44-48.jpg)
 * `m2.tuyaeu.com`
   * Many IPs
+  * MQTT?
 * `a2.tuyaeu.com`
   * Many IPs
 * ![](/uploads/20220723-snipaste_2022-07-23_22-07-12.jpg)
