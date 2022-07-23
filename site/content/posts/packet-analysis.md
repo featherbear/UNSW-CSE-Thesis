@@ -161,7 +161,9 @@ Every 5 minutes, DHCP lease requested
 
 #### Activity
 
-Excluding log upload activity (i.e. to Hadoop), we can see that at 3am (not sure what timezone...) there is some regular activity
+Excluding log upload activity (i.e. to Hadoop), we can see that at 3am (local time) there is some regular activity.
+
+> Also very possible that I was just awake at 3am.
 
 ![](/uploads/20220723-snipaste_2022-07-23_22-50-40.jpg)
 
