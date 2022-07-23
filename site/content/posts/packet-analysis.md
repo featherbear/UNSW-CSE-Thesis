@@ -114,8 +114,41 @@ Every now and then - ms.tuyaeu.com - {'3.121.141.195', '3.122.208.21', '3.122.21
 
 #### rriot_tuya
 
-* ms.tuyaeu.com
+* `ms.tuyaeu.com`
   * MQTT (tcp/8883)
+  * Device info (i.e. brush life)
+
+```json
+{
+  "id": 889,
+  "result": [
+    {
+      "msg_ver": 2,
+      "msg_seq": 275,
+      "state": 8,
+      "battery": 100,
+      "clean_time": 0,
+      "clean_area": 0,
+      "error_code": 3,
+      "map_present": 1,
+      "in_cleaning": 0,
+      "in_returning": 0,
+      "in_fresh_state": 1,
+      "lab_status": 0,
+      "water_box_status": 0,
+      "fan_power": 102,
+      "dnd_enabled": 0,
+      "map_status": 1,
+      "lock_status": 0,
+      "events": []
+    }
+  ]
+}
+```
+
+* tells rrlogd to use awsde0.fds.api.xiaomi.com
+* `a2.tuyaeu.com`
+  * 
 
 * `miio_client`
   * [`dns.io.mi.com`](https://whois.ipip.net/AS59019)
@@ -125,6 +158,42 @@ Every now and then - ms.tuyaeu.com - {'3.121.141.195', '3.122.208.21', '3.122.21
   * `a2.tuyaeu.com`
     * `3.125.199.146`
     * 
+
+```
+[07-09 20:51:49 TUYA Debug][iot_httpc.c:883] Post Data: {"devId":"bf7e9b4aacf4f733d8o3zz","lastFetchTime":"0","t":1657363909}
+[07-09 20:51:49 TUYA Debug][iot_httpc.c:894] Post URL: https://a2.tuyaeu.com/d.json?a=tuya.device.timer.count&devId=bf7e9b4aacf4f733d8o3zz&et=1&t=1657363909&v=4.0&sign=04f90848341607585ff064f82437c91c
+[07-09 20:51:49 TUYA Debug][httpc.c:742] Connect: a2.tuyaeu.com Port: 443  -->>
+[07-09 20:51:49 TUYA Debug][httpc.c:744] Connect: a2.tuyaeu.com Port: 443  --<<
+[07-09 20:51:49 TUYA Debug][tuya_tls.c:792] TUYA_TLS Begin Connect a2.tuyaeu.com:443  CustomNet:TRUE Enable_Cert:TRUE Default:TRUE 
+[07-09 20:51:49 TUYA Debug][tuya_tls.c:893] socket fd is set. set to inner send/recv to handshake
+[07-09 20:51:50 TUYA Debug][tuya_tls.c:920] handshake finish for a2.tuyaeu.com. set send/recv to user set
+[07-09 20:51:50 TUYA Debug][tuya_tls.c:932] TUYA_TLS Success Connect a2.tuyaeu.com:443  CustomNet:TRUE Suit:TLS-ECDHE-RSA-WITH-AES-128-CBC-SHA256
+[07-09 20:51:51 TUYA Debug][iot_httpc.c:570] chunked:0.
+[07-09 20:51:51 TUYA Debug][iot_httpc.c:534] Malloc Buffer Size:208
+[07-09 20:51:51 TUYA Debug][iot_httpc.c:660] Decode Rev:{"result":{"devId":"bf7e9b4aacf4f733d8o3zz","count":0,"lastFetchTime":0},"t":1657363911,"success":true}									
+[07-09 20:51:51 TUYA Debug][tuya_tls.c:1015] TUYA_TLS Disconnect Success
+[07-09 20:51:51 TUYA Debug][timer_task.c:261] timer query time equal. skip:0
+```
+
+```
+[07-09 21:21:07 TUYA Debug][iot_httpc.c:883] Post Data: {"subId":null,"t":1657365667}
+[07-09 21:21:07 TUYA Debug][iot_httpc.c:894] Post URL: https://a2.tuyaeu.com/d.json?a=tuya.device.upgrade.silent.get&devId=bf7e9b4aacf4f733d8o3zz&et=1&t=1657365667&v=4.3&sign=d220fd3f6fb2d42233491de6cf301834
+[07-09 21:21:07 TUYA Debug][httpc.c:742] Connect: a2.tuyaeu.com Port: 443  -->>
+[07-09 21:21:08 TUYA Debug][httpc.c:744] Connect: a2.tuyaeu.com Port: 443  --<<
+[07-09 21:21:08 TUYA Debug][tuya_tls.c:792] TUYA_TLS Begin Connect a2.tuyaeu.com:443  CustomNet:TRUE Enable_Cert:TRUE Default:TRUE 
+[07-09 21:21:08 TUYA Debug][tuya_tls.c:893] socket fd is set. set to inner send/recv to handshake
+[07-09 21:21:09 TUYA Debug][tuya_tls.c:920] handshake finish for a2.tuyaeu.com. set send/recv to user set
+[07-09 21:21:09 TUYA Debug][tuya_tls.c:932] TUYA_TLS Success Connect a2.tuyaeu.com:443  CustomNet:TRUE Suit:TLS-ECDHE-RSA-WITH-AES-128-CBC-SHA256
+[07-09 21:21:10 TUYA Debug][iot_httpc.c:570] chunked:0.
+[07-09 21:21:10 TUYA Debug][iot_httpc.c:534] Malloc Buffer Size:100
+[07-09 21:21:10 TUYA Debug][iot_httpc.c:660] Decode Rev:{"t":1657365670,"success":true}
+[07-09 21:21:10 TUYA Debug][tuya_tls.c:1015] TUYA_TLS Disconnect Success
+[07-09 21:21:10 TUYA Debug][gw_intf.c:4020] silent get gw firmware,no firmware available
+[07-09 21:21:10 TUYA Debug][gw_intf.c:4100] silent get gw firmware finish
+```
+
+
+
 
 `35.209.96.245`
 
