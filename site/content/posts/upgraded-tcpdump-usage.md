@@ -35,3 +35,7 @@ In `v02.29.02`, `tcpdump` gets called!
 # /opt/rockrobo/rrlog/rrlogd
 
 ![](/uploads/20220711-snipaste_2022-07-12_04-14-11.jpg)
+
+Debug for 8 hours
+
+![](/uploads/20220723-snipaste_2022-07-24_01-54-33.jpg)
