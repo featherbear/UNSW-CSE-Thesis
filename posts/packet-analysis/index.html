@@ -24,7 +24,7 @@
 MAC: 64:90:c1:1d:24:c4 MAC OUI (64:90:C1) - Beijing Xiaomi Mobile Software Co, Ltd
   Filtering the data  We have a &lsquo;lot&rsquo; of network traffic that isn&rsquo;t related to the operation of the device - such as STP, SSDP, DHCP, ARP and other traffic that occurs - even without the presence of the device, so let&rsquo;s remove these.">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"Packet Analysis","item":"/posts/packet-analysis/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/packet-analysis/"},"headline":"Packet Analysis | CSE Thesis Musings","datePublished":"2022-07-23T03:31:46+00:00","dateModified":"2022-07-23T03:31:46+00:00","wordCount":553,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Target  IP: 10.10.10.8\nMAC: 64:90:c1:1d:24:c4 MAC OUI (64:90:C1) - Beijing Xiaomi Mobile Software Co, Ltd\n  Filtering the data  We have a \u0026lsquo;lot\u0026rsquo; of network traffic that isn\u0026rsquo;t related to the operation of the device - such as STP, SSDP, DHCP, ARP and other traffic that occurs - even without the presence of the device, so let\u0026rsquo;s remove these."}</script><meta property="og:title" content="Packet Analysis | CSE Thesis Musings">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/packet-analysis/"},"headline":"Packet Analysis | CSE Thesis Musings","datePublished":"2022-07-23T03:31:46+00:00","dateModified":"2022-07-23T03:31:46+00:00","wordCount":712,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Target  IP: 10.10.10.8\nMAC: 64:90:c1:1d:24:c4 MAC OUI (64:90:C1) - Beijing Xiaomi Mobile Software Co, Ltd\n  Filtering the data  We have a \u0026lsquo;lot\u0026rsquo; of network traffic that isn\u0026rsquo;t related to the operation of the device - such as STP, SSDP, DHCP, ARP and other traffic that occurs - even without the presence of the device, so let\u0026rsquo;s remove these."}</script><meta property="og:title" content="Packet Analysis | CSE Thesis Musings">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/posts/packet-analysis/">
 <meta property="og:description" content="Target  IP: 10.10.10.8
@@ -200,6 +200,23 @@ Some didn&rsquo;t work, some were too slow&mldr;</p>
 <p><code>35.209.96.245</code></p>
 <p><code>35.209.9.241</code></p>
 <h3 id=version-v022902>Version v02.29.02</h3>
+<h4 id=wireshark-filter>Wireshark Filter</h4>
+<pre><code>!arp
+&amp;&amp; !dns
+&amp;&amp; !dhcp
+&amp;&amp; !(tcp.srcport == 8883 || tcp.dstport == 8883)
+&amp;&amp; !((ip.src == 3.125.234.101 || ip.dst == 3.125.234.101) || (ip.src == 3.125.199.146 || ip.dst == 3.125.199.146) || (ip.src == 35.157.101.18 || ip.dst == 35.157.101.18)) 
+&amp;&amp; !((ip.src == 3.124.225.12 || ip.dst == 3.124.225.12) || (ip.src == 18.185.31.196 || ip.dst == 18.185.31.196) || (ip.src == 52.58.249.45 || ip.dst == 52.58.249.45) || (ip.src == 3.66.126.37 || ip.dst == 3.66.126.37) || (ip.src == 3.65.95.68 || ip.dst == 3.65.95.68) || (ip.src == 3.121.210.75 || ip.dst == 3.121.210.75) || (ip.src == 35.156.44.172 || ip.dst == 35.156.44.172) || (ip.src == 18.185.218.106 || ip.dst == 18.185.218.106) || (ip.src == 3.67.242.33 || ip.dst == 3.67.242.33) || (ip.src == 18.184.31.90 || ip.dst == 18.184.31.90))
+&amp;&amp; !((ip.src == 3.124.106.160 || ip.dst == 3.124.106.160) || (ip.src == 52.28.1.106 || ip.dst == 52.28.1.106) || (ip.src == 3.65.97.228 || ip.dst == 3.65.97.228) || (ip.src == 18.184.67.79 || ip.dst == 18.184.67.79) )
+</code></pre>
+<ul>
+<li>arp</li>
+<li>dhcp</li>
+<li>mqtt (m2.tuyaeu.com)</li>
+<li>a2.tuyaeu.com</li>
+<li>m2.tuyaeu.com</li>
+<li>awsde0.fds.api.xiaomi.com</li>
+</ul>
 <h4 id=dhcp>DHCP</h4>
 <p>Every 5 minutes, DHCP lease requested</p>
 <p><img src=../../uploads/20220723-snipaste_2022-07-23_22-24-23.jpg alt></p>
@@ -308,6 +325,7 @@ Some didn&rsquo;t work, some were too slow&mldr;</p>
 <li><a href=#version-v011558>Version v01.15.58</a></li>
 <li><a href=#version-v022902>Version v02.29.02</a>
 <ul>
+<li><a href=#wireshark-filter>Wireshark Filter</a></li>
 <li><a href=#dhcp>DHCP</a></li>
 <li><a href=#dns>DNS</a></li>
 <li><a href=#rriot_tuya>rriot_tuya</a></li>
