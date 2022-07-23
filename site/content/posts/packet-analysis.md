@@ -101,6 +101,7 @@ Some didn't work, some were too slow...
 * `rriot_tuya`
   * `a2.tuyaeu.com`
     * `3.125.199.146`
+    * 
 
 `35.209.96.245`
 
@@ -126,6 +127,13 @@ Some didn't work, some were too slow...
   * ![](/uploads/20220723-2_ssl_snipaste_2022-07-23_20-36-41.jpg)
   * ![](/uploads/20220723-snipaste_2022-07-23_21-44-48.jpg)
   * ![](/uploads/20220723-snipaste_2022-07-23_21-44-48.jpg)
+* `m2.tuyaeu.com`
+  * Many IPs
+* `a2.tuyaeu.com`
+  * 35.157.101.18
+  * 3.125.199.146
+  * 3.125.234.101
+  * 3.121.210.75
 * Every 5 seconds
   * 255.255.255.255 broadcast to udp/6667
   * Tuya discovery packet
