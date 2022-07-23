@@ -1,0 +1,15 @@
+20220629 12.59am - SSH to figure out OS version
+20220629 3.40am - Finished for the day
+2022070? -- Robot seemed to actually be off?
+20220705 @ 5:05pm - tshark seemed to crash?
+20220705 @ 5:30pm - Restarted logging
+20220705 @ 5:30pm - Going to see if we can get Frida going
+20220711 @ 6:00pm - Doing a system image (inc changes for whatever we've done)
+20220711 @ 6:37pm - Connect to Roborock from smartphone
+<--> looks the device was off?  Forgot to reconnect it to the charger
+
+13/07
+capture_00029_20220713110000 was when my 4601 lecture was..
+6pm the recorder seemed to have rebooted?
+
+15/07/2022 - 3:29pm connected to power [I believe it's now doing a sync]
