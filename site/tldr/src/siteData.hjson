@@ -137,6 +137,12 @@
           Looked at Sankey diagrams for visualising flow
         ]
       }
+      {
+      title: Saturday
+      date: 23/07/2022
+      content: Begin preparation for final presentation
+      
+      }
     ]
   }
   {
@@ -325,6 +331,13 @@
           Confirmed that the dropbear binary was failing to read the non-existent /mnt/default/shadow file so it would never log in
           Figured out how to use qemu and GDB with ARM, also did some cross-compilation
           Read up and tested potential vulnerabilities
+        ]
+      }
+            {
+        title: Saturday
+        date: 23/07/2022
+        content: [
+          Network packet analysis
         ]
       }
     ]
