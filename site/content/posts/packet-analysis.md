@@ -87,7 +87,8 @@ Some didn't work, some were too slow...
 ## Tools
 
 * [CapAnalysis](https://www.capanalysis.net/ca/)
-  * [http://sourceforge.net/projects/capanalysis/files/version%201.2.2/capanalysis_1.2.2_amd64.deb/download](http://sourceforge.net/projects/capanalysis/files/version%201.2.2/capanalysis_1.2.2_amd64.deb/download "http://sourceforge.net/projects/capanalysis/files/version%201.2.2/capanalysis_1.2.2_amd64.deb/download")
+  * Note - Instructions on website point to an old version (1.2.2) which has a bug
+  * [https://sourceforge.net/projects/capanalysis/files/version%201.2.3/capanalysis_1.2.3_amd64.deb/download](https://sourceforge.net/projects/capanalysis/files/version%201.2.3/capanalysis_1.2.3_amd64.deb/download "https://sourceforge.net/projects/capanalysis/files/version%201.2.3/capanalysis_1.2.3_amd64.deb/download")
 
 ## Results
 
