@@ -233,15 +233,10 @@ Some didn&rsquo;t work, some were too slow&mldr;</p>
 }
 </code></pre>
 <ul>
-<li>
-<p>tells rrlogd to use awsde0.fds.api.xiaomi.com</p>
-</li>
-<li>
-<p><code>a2.tuyaeu.com</code>
-*</p>
-</li>
-<li>
-<p><code>miio_client</code></p>
+<li>tells rrlogd to use awsde0.fds.api.xiaomi.com</li>
+<li><code>a2.tuyaeu.com</code>
+*</li>
+<li><code>miio_client</code>
 <ul>
 <li><a href=https://whois.ipip.net/AS59019><code>dns.io.mi.com</code></a>
 <ul>
@@ -251,8 +246,7 @@ Some didn&rsquo;t work, some were too slow&mldr;</p>
 </li>
 </ul>
 </li>
-<li>
-<p><code>rriot_tuya</code></p>
+<li><code>rriot_tuya</code>
 <ul>
 <li><code>a2.tuyaeu.com</code>
 <ul>
@@ -267,6 +261,9 @@ Some didn&rsquo;t work, some were too slow&mldr;</p>
 <blockquote>
 <p>Control requests</p>
 </blockquote>
+<p><img src=../../uploads/20220723-snipaste_2022-07-24_00-08-53.jpg alt></p>
+<p><img src=../../uploads/20220723-snipaste_2022-07-24_00-10-16.jpg alt></p>
+<p><img src=../../uploads/20220723-snipaste_2022-07-24_00-10-33.jpg alt></p>
 <pre><code>[07-09 20:51:49 TUYA Debug][iot_httpc.c:883] Post Data: {&quot;devId&quot;:&quot;bf7e9b4aacf4f733d8o3zz&quot;,&quot;lastFetchTime&quot;:&quot;0&quot;,&quot;t&quot;:1657363909}
 [07-09 20:51:49 TUYA Debug][iot_httpc.c:894] Post URL: https://a2.tuyaeu.com/d.json?a=tuya.device.timer.count&amp;devId=bf7e9b4aacf4f733d8o3zz&amp;et=1&amp;t=1657363909&amp;v=4.0&amp;sign=04f90848341607585ff064f82437c91c
 [07-09 20:51:49 TUYA Debug][httpc.c:742] Connect: a2.tuyaeu.com Port: 443  --&gt;&gt;
@@ -280,8 +277,8 @@ Some didn&rsquo;t work, some were too slow&mldr;</p>
 [07-09 20:51:51 TUYA Debug][iot_httpc.c:660] Decode Rev:{&quot;result&quot;:{&quot;devId&quot;:&quot;bf7e9b4aacf4f733d8o3zz&quot;,&quot;count&quot;:0,&quot;lastFetchTime&quot;:0},&quot;t&quot;:1657363911,&quot;success&quot;:true}									
 [07-09 20:51:51 TUYA Debug][tuya_tls.c:1015] TUYA_TLS Disconnect Success
 [07-09 20:51:51 TUYA Debug][timer_task.c:261] timer query time equal. skip:0
-</code></pre>
-<pre><code>[07-09 21:21:07 TUYA Debug][iot_httpc.c:883] Post Data: {&quot;subId&quot;:null,&quot;t&quot;:1657365667}
+
+[07-09 21:21:07 TUYA Debug][iot_httpc.c:883] Post Data: {&quot;subId&quot;:null,&quot;t&quot;:1657365667}
 [07-09 21:21:07 TUYA Debug][iot_httpc.c:894] Post URL: https://a2.tuyaeu.com/d.json?a=tuya.device.upgrade.silent.get&amp;devId=bf7e9b4aacf4f733d8o3zz&amp;et=1&amp;t=1657365667&amp;v=4.3&amp;sign=d220fd3f6fb2d42233491de6cf301834
 [07-09 21:21:07 TUYA Debug][httpc.c:742] Connect: a2.tuyaeu.com Port: 443  --&gt;&gt;
 [07-09 21:21:08 TUYA Debug][httpc.c:744] Connect: a2.tuyaeu.com Port: 443  --&lt;&lt;
@@ -296,8 +293,14 @@ Some didn&rsquo;t work, some were too slow&mldr;</p>
 [07-09 21:21:10 TUYA Debug][gw_intf.c:4020] silent get gw firmware,no firmware available
 [07-09 21:21:10 TUYA Debug][gw_intf.c:4100] silent get gw firmware finish
 </code></pre>
-<p><code>35.209.96.245</code></p>
-<p><code>35.209.9.241</code></p>
+<h4 id=awsde0fdsapixiaomicom>awsde0.fds.api.xiaomi.com</h4>
+<p><img src=../../uploads/20220723-snipaste_2022-07-24_00-12-11.jpg alt></p>
+<p><img src=../../uploads/20220723-snipaste_2022-07-24_00-12-48.jpg alt></p>
+<p><img src=../../uploads/20220723-snipaste_2022-07-24_00-11-17.jpg alt></p>
+<h4 id=mstuyaeucom>ms.tuyaeu.com</h4>
+<p><img src=../../uploads/20220723-snipaste_2022-07-24_00-13-08.jpg alt></p>
+<p><img src=../../uploads/20220723-snipaste_2022-07-24_00-13-40.jpg alt></p>
+<p><img src=../../uploads/20220723-snipaste_2022-07-24_00-13-23.jpg alt></p>
 <h3 id=version-v022902>Version v02.29.02</h3>
 <h4 id=wireshark-filter>Wireshark Filter</h4>
 <pre><code>!arp
@@ -438,6 +441,8 @@ Some didn&rsquo;t work, some were too slow&mldr;</p>
 <li><a href=#dns>DNS</a></li>
 <li><a href=#rriot_tuya>rriot_tuya</a></li>
 <li><a href=#a2tuyaeucom>a2.tuyaeu.com</a></li>
+<li><a href=#awsde0fdsapixiaomicom>awsde0.fds.api.xiaomi.com</a></li>
+<li><a href=#mstuyaeucom>ms.tuyaeu.com</a></li>
 </ul>
 </li>
 <li><a href=#version-v022902>Version v02.29.02</a>
