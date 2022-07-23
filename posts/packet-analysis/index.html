@@ -24,7 +24,7 @@
 MAC: 64:90:c1:1d:24:c4 MAC OUI (64:90:C1) - Beijing Xiaomi Mobile Software Co, Ltd
   Filtering the data  We have a &lsquo;lot&rsquo; of network traffic that isn&rsquo;t related to the operation of the device - such as STP, SSDP, DHCP, ARP and other traffic that occurs - even without the presence of the device, so let&rsquo;s remove these.">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"Packet Analysis","item":"/posts/packet-analysis/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/packet-analysis/"},"headline":"Packet Analysis | CSE Thesis Musings","datePublished":"2022-07-23T03:31:46+00:00","dateModified":"2022-07-23T03:31:46+00:00","wordCount":544,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Target  IP: 10.10.10.8\nMAC: 64:90:c1:1d:24:c4 MAC OUI (64:90:C1) - Beijing Xiaomi Mobile Software Co, Ltd\n  Filtering the data  We have a \u0026lsquo;lot\u0026rsquo; of network traffic that isn\u0026rsquo;t related to the operation of the device - such as STP, SSDP, DHCP, ARP and other traffic that occurs - even without the presence of the device, so let\u0026rsquo;s remove these."}</script><meta property="og:title" content="Packet Analysis | CSE Thesis Musings">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/packet-analysis/"},"headline":"Packet Analysis | CSE Thesis Musings","datePublished":"2022-07-23T03:31:46+00:00","dateModified":"2022-07-23T03:31:46+00:00","wordCount":546,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Target  IP: 10.10.10.8\nMAC: 64:90:c1:1d:24:c4 MAC OUI (64:90:C1) - Beijing Xiaomi Mobile Software Co, Ltd\n  Filtering the data  We have a \u0026lsquo;lot\u0026rsquo; of network traffic that isn\u0026rsquo;t related to the operation of the device - such as STP, SSDP, DHCP, ARP and other traffic that occurs - even without the presence of the device, so let\u0026rsquo;s remove these."}</script><meta property="og:title" content="Packet Analysis | CSE Thesis Musings">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/posts/packet-analysis/">
 <meta property="og:description" content="Target  IP: 10.10.10.8
@@ -204,9 +204,14 @@ Some didn&rsquo;t work, some were too slow&mldr;</p>
 <p><img src=../../uploads/20220723-2_dns_2_snipaste_2022-07-23_20-30-10.jpg alt></p>
 <h4 id=rriot_tuya>rriot_tuya</h4>
 <ul>
-<li>Receives <code>(rr_down_stream_msg_handler##724): {"id":363,"method":"set_fds_endpoint","params":["awsde0.fds.api.xiaomi.com"]}</code></li>
-<li>Instructs <code>rrlogd</code> where to upload the logs to</li>
-<li><code>awsde0.fds.api.xiaomi.com</code>
+<li>
+<p>Receives <code>(rr_down_stream_msg_handler##724): {"id":363,"method":"set_fds_endpoint","params":["awsde0.fds.api.xiaomi.com"]}</code></p>
+</li>
+<li>
+<p>Instructs <code>rrlogd</code> where to upload the logs to</p>
+</li>
+<li>
+<p><code>awsde0.fds.api.xiaomi.com</code></p>
 <ul>
 <li>CNAME: <code>lb-hadoop-fds-awsde0-eco-tcp-825301548.eu-central-1.elb.amazonaws.com</code>
 <ul>
@@ -222,20 +227,26 @@ Some didn&rsquo;t work, some were too slow&mldr;</p>
 <li><img src=../../uploads/20220723-snipaste_2022-07-23_21-44-48.jpg alt></li>
 </ul>
 </li>
-<li><code>m2.tuyaeu.com</code>
+<li>
+<p><code>m2.tuyaeu.com</code></p>
 <ul>
 <li>Many IPs</li>
-<li>MQTT?</li>
+<li>MQTT</li>
+<li>TCP/8883</li>
 </ul>
 </li>
-<li><code>a2.tuyaeu.com</code>
+<li>
+<p><code>a2.tuyaeu.com</code></p>
 <ul>
 <li>Many IPs</li>
+<li>TCP/443</li>
 </ul>
 </li>
-<li><img src=../../uploads/20220723-snipaste_2022-07-23_22-07-12.jpg alt></li>
+<li>
+<p><img src=../../uploads/20220723-snipaste_2022-07-23_22-07-12.jpg alt></p>
+</li>
 </ul>
-<h4 id=tuya-discovery-rr_iot>Tuya Discovery (rr_iot)</h4>
+<h4 id=tuya-discovery-rriot_tuya>Tuya Discovery (rriot_tuya)</h4>
 <ul>
 <li>Every 5 seconds
 <ul>
@@ -305,7 +316,7 @@ Some didn&rsquo;t work, some were too slow&mldr;</p>
 <ul>
 <li><a href=#dns>DNS</a></li>
 <li><a href=#rriot_tuya>rriot_tuya</a></li>
-<li><a href=#tuya-discovery-rr_iot>Tuya Discovery (rr_iot)</a></li>
+<li><a href=#tuya-discovery-rriot_tuya>Tuya Discovery (rriot_tuya)</a></li>
 </ul>
 </li>
 </ul>
