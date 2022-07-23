@@ -112,6 +112,11 @@ Every now and then - a2.tuyaeu.com - {'3.125.199.146', '35.157.101.18', '3.125.2
 
 Every now and then - ms.tuyaeu.com - {'3.121.141.195', '3.122.208.21', '3.122.217.21'}
 
+#### rriot_tuya
+
+* ms.tuyaeu.com
+  * MQTT (tcp/8883)
+
 * `miio_client`
   * [`dns.io.mi.com`](https://whois.ipip.net/AS59019)
     * `110.43.0.83`
