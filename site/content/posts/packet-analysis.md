@@ -76,3 +76,9 @@ root-sgp-01.zerotier.com has IPv6 address 2001:49f0:d0db:2::2
 root-alice-sfo-01.zerotier.com has address 107.170.197.14
 root-alice-sfo-01.zerotier.com has IPv6 address 2604:a880:1:20::200:e001
 ```
+
+Also, remove packets to/from `udp/9993`
+
+```
+!((udp.srcport == 9993) || (udp.dstport == 9993))
+```
