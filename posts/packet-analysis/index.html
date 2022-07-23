@@ -24,7 +24,7 @@
 MAC: 64:90:c1:1d:24:c4 MAC OUI (64:90:C1) - Beijing Xiaomi Mobile Software Co, Ltd
   Filtering the data  We have a &lsquo;lot&rsquo; of network traffic that isn&rsquo;t related to the operation of the device - such as STP, SSDP, DHCP, ARP and other traffic that occurs - even without the presence of the device, so let&rsquo;s remove these.">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"Packet Analysis","item":"/posts/packet-analysis/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/packet-analysis/"},"headline":"Packet Analysis | CSE Thesis Musings","datePublished":"2022-07-23T03:31:46+00:00","dateModified":"2022-07-23T03:31:46+00:00","wordCount":768,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Target  IP: 10.10.10.8\nMAC: 64:90:c1:1d:24:c4 MAC OUI (64:90:C1) - Beijing Xiaomi Mobile Software Co, Ltd\n  Filtering the data  We have a \u0026lsquo;lot\u0026rsquo; of network traffic that isn\u0026rsquo;t related to the operation of the device - such as STP, SSDP, DHCP, ARP and other traffic that occurs - even without the presence of the device, so let\u0026rsquo;s remove these."}</script><meta property="og:title" content="Packet Analysis | CSE Thesis Musings">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/packet-analysis/"},"headline":"Packet Analysis | CSE Thesis Musings","datePublished":"2022-07-23T03:31:46+00:00","dateModified":"2022-07-23T03:31:46+00:00","wordCount":814,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Target  IP: 10.10.10.8\nMAC: 64:90:c1:1d:24:c4 MAC OUI (64:90:C1) - Beijing Xiaomi Mobile Software Co, Ltd\n  Filtering the data  We have a \u0026lsquo;lot\u0026rsquo; of network traffic that isn\u0026rsquo;t related to the operation of the device - such as STP, SSDP, DHCP, ARP and other traffic that occurs - even without the presence of the device, so let\u0026rsquo;s remove these."}</script><meta property="og:title" content="Packet Analysis | CSE Thesis Musings">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/posts/packet-analysis/">
 <meta property="og:description" content="Target  IP: 10.10.10.8
@@ -175,6 +175,15 @@ Some didn&rsquo;t work, some were too slow&mldr;</p>
 </ul>
 <h2 id=results>Results</h2>
 <h3 id=version-v011558>Version v01.15.58</h3>
+<h4 id=dns>DNS</h4>
+<p><img src=../../uploads/20220723-snipaste_2022-07-23_23-08-00.jpg alt></p>
+<p><img src=../../uploads/20220723-snipaste_2022-07-23_23-08-53.jpg alt></p>
+<p><img src=../../uploads/20220723-snipaste_2022-07-23_23-09-13.jpg alt></p>
+<p>Every 10 seconds - xx.ott.io.mi.com</p>
+<p>Two times every second - xx.ot.io.mi.com</p>
+<p>[upload] Every 2-5 seconds - (A, AAAA) awsde0.fds.api.xiaomi.com': {&lsquo;18.184.67.79&rsquo;, &lsquo;3.124.106.160&rsquo;, &lsquo;52.28.1.106&rsquo;, &lsquo;3.67.19.121&rsquo;, &lsquo;3.65.97.228&rsquo;, &lsquo;18.156.26.16&rsquo;}}</p>
+<p>Every now and then - a2.tuyaeu.com - {&lsquo;3.125.199.146&rsquo;, &lsquo;35.157.101.18&rsquo;, &lsquo;3.125.234.101&rsquo;}</p>
+<p>Every now and then - ms.tuyaeu.com - {&lsquo;3.121.141.195&rsquo;, &lsquo;3.122.208.21&rsquo;, &lsquo;3.122.217.21&rsquo;}</p>
 <ul>
 <li><code>miio_client</code>
 <ul>
@@ -220,7 +229,7 @@ Some didn&rsquo;t work, some were too slow&mldr;</p>
 <h4 id=dhcp>DHCP</h4>
 <p>Every 5 minutes, DHCP lease requested</p>
 <p><img src=../../uploads/20220723-snipaste_2022-07-23_22-24-23.jpg alt></p>
-<h4 id=dns>DNS</h4>
+<h4 id=dns-1>DNS</h4>
 <p><img src=../../uploads/20220723-2_dns_2_snipaste_2022-07-23_20-30-10.jpg alt></p>
 <ul>
 <li>awsde0.fds.api.xiaomi.com {&lsquo;3.124.106.160&rsquo;, &lsquo;52.28.1.106&rsquo;, &lsquo;3.65.97.228&rsquo;, &lsquo;18.184.67.79&rsquo;}</li>
@@ -334,12 +343,16 @@ Some didn&rsquo;t work, some were too slow&mldr;</p>
 <li><a href=#tools>Tools</a></li>
 <li><a href=#results>Results</a>
 <ul>
-<li><a href=#version-v011558>Version v01.15.58</a></li>
+<li><a href=#version-v011558>Version v01.15.58</a>
+<ul>
+<li><a href=#dns>DNS</a></li>
+</ul>
+</li>
 <li><a href=#version-v022902>Version v02.29.02</a>
 <ul>
 <li><a href=#wireshark-filter>Wireshark Filter</a></li>
 <li><a href=#dhcp>DHCP</a></li>
-<li><a href=#dns>DNS</a></li>
+<li><a href=#dns-1>DNS</a></li>
 <li><a href=#rriot_tuya>rriot_tuya</a></li>
 <li><a href=#activity>Activity</a></li>
 <li><a href=#tuya-discovery-rriot_tuya>Tuya Discovery (rriot_tuya)</a></li>
