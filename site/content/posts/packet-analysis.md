@@ -8,13 +8,24 @@ title = "Packet Analysis"
 toc = true
 
 +++
+# Target
+
+> IP: 10.10.10.8  
+> MAC: 64:90:c1:1d:24:c4
+> MAC OUI (64:90:C1) - Beijing Xiaomi Mobile Software Co, Ltd
+
+---
+
 # Filtering the data
 
 > We have a 'lot' of network traffic that isn't related to the operation of the device - such as STP, SSDP, DHCP, ARP and other traffic that occurs - even without the presence of the device, so let's remove these.
 
 ![](/uploads/20220723-snipaste_2022-07-23_13-32-10.jpg)
 
-## Exclude
+We could either blacklist - though this will require a lot of (probably) exclusions.  
+A whitelist of just packets to/from our target could work - but will ignore any 'spoofs' / etc?
+
+## Blacklist?
 
 * `ARP` requests to/from the access point
 * `CDP` packets - Cisco Discovery Protocol
@@ -30,3 +41,7 @@ toc = true
 ```
 ((((((((((((!stp) && !(arp.src.hw_mac == 00:27:22:fc:8f:93)) && !(arp.dst.hw_mac == 00:27:22:fc:8f:93)) && !(cdp)) && !(mndp)) && !(lldp)) && !(eth.addr == 18:c0:4d:3b:66:d2))) && !(arp.src.hw_mac == 60:a4:b7:7a:b0:c3)) && !(eth.src == 32:bc:cf:2d:96:ce)) && !(eth.src == 00:0c:42:cf:36:20)) && !(ip.src == 10.10.10.4)) && !(ip.dst == 10.10.10.4)
 ```
+
+## Whitelist?
+
+We could just whit
