@@ -20,12 +20,12 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-107434487-2')</script>
 <script>(function(e,b,f,c,a,d){b[c]=b[c]||function(){(b[c].q=b[c].q||[]).push(arguments)},a=e.createElement('script'),d=e.getElementsByTagName('script')[0],a.async=1,a.src=f,a.id='fathom-script',d.parentNode.insertBefore(a,d)})(document,window,'//ss.featherbear.cc/tracker.js','fathom'),fathom('set','siteId','NEQTU'),fathom('trackPageview')</script>
 <style>html.dark{--color-primary-bg:#232327 !important}div#sidebar-toc>ul.pl-6{margin-left:1em}</style>
-<meta name=description content="Musings of a CSE Thesis">
+<meta name=description content="Filtering the data  We have a &lsquo;lot&rsquo; of network traffic that isn&rsquo;t related to the operation of the device - such as STP, SSDP, DHCP, ARP and other traffic that occurs - even without the presence of the device, so let&rsquo;s remove these.">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"Packet Analysis","item":"/posts/packet-analysis/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/packet-analysis/"},"headline":"Packet Analysis | CSE Thesis Musings","datePublished":"2022-07-23T03:31:46+00:00","dateModified":"2022-07-23T03:31:46+00:00","publisher":{"@type":"Person","name":"A. Wong"},"description":"Musings of a CSE Thesis"}</script><meta property="og:title" content="Packet Analysis | CSE Thesis Musings">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/packet-analysis/"},"headline":"Packet Analysis | CSE Thesis Musings","datePublished":"2022-07-23T03:31:46+00:00","dateModified":"2022-07-23T03:31:46+00:00","wordCount":144,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Filtering the data  We have a \u0026lsquo;lot\u0026rsquo; of network traffic that isn\u0026rsquo;t related to the operation of the device - such as STP, SSDP, DHCP, ARP and other traffic that occurs - even without the presence of the device, so let\u0026rsquo;s remove these."}</script><meta property="og:title" content="Packet Analysis | CSE Thesis Musings">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/posts/packet-analysis/">
-<meta property="og:description" content>
+<meta property="og:description" content="Filtering the data  We have a &lsquo;lot&rsquo; of network traffic that isn&rsquo;t related to the operation of the device - such as STP, SSDP, DHCP, ARP and other traffic that occurs - even without the presence of the device, so let&rsquo;s remove these.">
 <meta property="og:locale" content="en">
 <meta property="og:site_name" content="CSE Thesis Musings">
 <meta property="article:published_time" content="2022-07-23T03:31:46+00:00">
@@ -71,7 +71,7 @@
 <div class=pl-scrollbar>
 <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
 <div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
-<div class="col-span-2 lg:col-start-2 lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+<div class="col-span-2 lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
 <h1 class="font-bold text-3xl text-primary-text">Packet Analysis</h1>
 <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
 <div class="mr-6 my-2">
@@ -80,6 +80,29 @@
 </div>
 </div>
 <div class=content>
+<h1 id=filtering-the-data>Filtering the data</h1>
+<blockquote>
+<p>We have a &lsquo;lot&rsquo; of network traffic that isn&rsquo;t related to the operation of the device - such as STP, SSDP, DHCP, ARP and other traffic that occurs - even without the presence of the device, so let&rsquo;s remove these.</p>
+</blockquote>
+<p><img src=../../uploads/20220723-snipaste_2022-07-23_13-32-10.jpg alt></p>
+<h2 id=exclude>Exclude</h2>
+<ul>
+<li><code>ARP</code> requests to/from the access point</li>
+<li><code>CDP</code> packets - Cisco Discovery Protocol</li>
+<li><code>STP</code> packets - Spanning Tree Protocol</li>
+<li><code>MNDP</code> packets - Mikrotik Neighbor Discovery Protocol</li>
+<li><code>LLDP</code> packets - Link Layer Discovery Protocol</li>
+<li>Packets from <code>10.10.10.9</code> / <code>18:c0:4d:3b:66:d2</code> - My computer
+<ul>
+<li>Wasn&rsquo;t completely on monitor mode</li>
+</ul>
+</li>
+<li>Packets from <code>60:a4:b7:7a:b0:c3</code> - Managed switch</li>
+<li>Packets from <code>32:bc:cf:2d:96:ce</code> - ?</li>
+<li>Packets from <code>00:0c:42:cf:36:20</code> - Router</li>
+</ul>
+<pre><code>((((((((((((!stp) &amp;&amp; !(arp.src.hw_mac == 00:27:22:fc:8f:93)) &amp;&amp; !(arp.dst.hw_mac == 00:27:22:fc:8f:93)) &amp;&amp; !(cdp)) &amp;&amp; !(mndp)) &amp;&amp; !(lldp)) &amp;&amp; !(eth.addr == 18:c0:4d:3b:66:d2))) &amp;&amp; !(arp.src.hw_mac == 60:a4:b7:7a:b0:c3)) &amp;&amp; !(eth.src == 32:bc:cf:2d:96:ce)) &amp;&amp; !(eth.src == 00:0c:42:cf:36:20)) &amp;&amp; !(ip.src == 10.10.10.4)) &amp;&amp; !(ip.dst == 10.10.10.4)
+</code></pre>
 </div>
 <div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
 <div>
@@ -89,6 +112,19 @@
 <a href=../../posts/ota-updates-blocked-as-of-late-2019/ class=block>OTA Updates blocked as of late-2019</a>
 </div>
 </div>
+</div>
+<div class=col-span-2>
+<div class="sticky top-16 z-10 hidden lg:block px-6 py-4 bg-primary-bg">
+<span class="text-lg font-semibold">On This Page</span>
+</div>
+<div class="sticky-toc hidden lg:block px-6 pb-6">
+<nav id=TableOfContents>
+<ul>
+<li><a href=#exclude>Exclude</a></li>
+</ul>
+</nav>
+</div>
+<script>window.addEventListener('DOMContentLoaded',()=>{enableStickyToc()})</script>
 </div>
 </div>
 <script>document.addEventListener('DOMContentLoaded',()=>{hljs.initHighlightingOnLoad()})</script>
