@@ -123,6 +123,8 @@ Some didn't work, some were too slow...
     * 18.184.67.79
   * ![](/uploads/20220723-snipaste_2022-07-23_21-43-24.jpg)  
   * ![](/uploads/20220723-2_ssl_snipaste_2022-07-23_20-36-41.jpg)
+  * ![](/uploads/20220723-snipaste_2022-07-23_21-44-48.jpg)
+  * ![](/uploads/20220723-snipaste_2022-07-23_21-44-48.jpg)
 * Every 5 seconds
   * 255.255.255.255 broadcast to udp/6667
   * Tuya discovery packet
