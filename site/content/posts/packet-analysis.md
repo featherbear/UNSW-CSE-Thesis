@@ -82,3 +82,11 @@ Also, remove packets to/from `udp/9993`
 ```
 !((udp.srcport == 9993) || (udp.dstport == 9993))
 ```
+
+---
+
+# Analysis
+
+Not gonna lie, I spent around 3 hours trying to figure out how to analyse the PCAP files...  
+Some didn't work, some were too slow...
+
