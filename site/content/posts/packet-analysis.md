@@ -47,5 +47,15 @@ A whitelist of just packets to/from our target could work - but will ignore any 
 We could just whitelist packets to/from our target.
 
 ```
-!(eth.src == 64:90:c1:1d:24:c4 || eth.dst == 64:90:c1:1d:24:c4)
+(eth.src == 64:90:c1:1d:24:c4 || eth.dst == 64:90:c1:1d:24:c4)
 ```
+
+---
+
+## Command
+
+```
+find . -iname "*.pcap*" -exec sh -c "tshark -r '{}' -Y \"(eth.src == 64:90:c1:1d:24:c4 || eth.dst == 64:90:c1:1d:24:c4)\" -w \"\$(dirname {})/clean.\$(basename {})\""  \;
+```
+
+pain.
