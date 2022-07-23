@@ -220,6 +220,8 @@ Every now and then - ms.tuyaeu.com - {'3.121.141.195', '3.122.208.21', '3.122.21
 
 ![](/uploads/20220723-snipaste_2022-07-24_00-11-17.jpg)
 
+![](/uploads/20220723-snipaste_2022-07-24_00-42-14.jpg)
+
 #### ms.tuyaeu.com
 
 ![](/uploads/20220723-snipaste_2022-07-24_00-13-08.jpg)
@@ -227,6 +229,8 @@ Every now and then - ms.tuyaeu.com - {'3.121.141.195', '3.122.208.21', '3.122.21
 ![](/uploads/20220723-snipaste_2022-07-24_00-13-40.jpg)
 
 ![](/uploads/20220723-snipaste_2022-07-24_00-13-23.jpg)
+
+![](/uploads/20220723-snipaste_2022-07-24_00-41-49.jpg)
 
 #### DHCP
 
@@ -246,6 +250,12 @@ HTTP GET `/gslb?tver=%d&id=%s&dm=%s&timestamp=%d&sign=%s`
 Every 10 seconds
 
 IPs are hardcoded in the `miio_client` binary, but seem to translate to [`dns.io.mi.com`](https://whois.ipip.net/AS59019)
+
+![](/uploads/20220723-snipaste_2022-07-24_00-40-33.jpg)
+
+![](/uploads/20220723-snipaste_2022-07-24_00-41-05.jpg)
+
+![](/uploads/20220723-snipaste_2022-07-24_00-41-20.jpg)
 
 ### Version v02.29.02
 
