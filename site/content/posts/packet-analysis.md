@@ -11,7 +11,7 @@ toc = true
 # Target
 
 > IP: 10.10.10.8  
-> MAC: 64:90:c1:1d:24:c4
+> MAC: 64:90:c1:1d:24:c4  
 > MAC OUI (64:90:C1) - Beijing Xiaomi Mobile Software Co, Ltd
 
 ***
