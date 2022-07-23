@@ -130,10 +130,10 @@ Some didn't work, some were too slow...
 * `m2.tuyaeu.com`
   * Many IPs
   * MQTT
-  * TCP/8883
+  * tcp/8883
 * `a2.tuyaeu.com`
   * Many IPs
-  * TCP/443
+  * tcp/443
 
 * ![](/uploads/20220723-snipaste_2022-07-23_22-07-12.jpg)
 
