@@ -89,6 +89,7 @@ pages:
 - site/content/posts/opt-roborock-md5-hashes.md
 - site/content/posts/opt-rockrobo-rriot-rriot_tuya.md
 - site/content/posts/ota-updates-blocked-as-of-late-2019.md
+- site/content/posts/packet-analysis.md
 - site/content/posts/points-of-contact.md
 - site/content/posts/polarproxy.md
 - site/content/posts/post-login-actions.md
@@ -118,7 +119,6 @@ pages:
 - site/content/posts/upgraded-netstat.md
 - site/content/posts/upgraded-tcpdump-usage.md
 - site/content/posts/upgraded-versioning-and-fingerprinting.md
-- site/content/posts/usr-bin-qemu-arm-static.md
 - site/content/posts/vinda.c.md
 - site/content/posts/which-process-which-port-which-connection.md
 - site/content/posts/xiaomi-cyber-security-baseline-for-consumer-internet-of-things.md
