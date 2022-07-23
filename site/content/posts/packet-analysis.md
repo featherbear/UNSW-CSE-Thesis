@@ -8,3 +8,25 @@ title = "Packet Analysis"
 toc = true
 
 +++
+# Filtering the data
+
+> We have a 'lot' of network traffic that isn't related to the operation of the device - such as STP, SSDP, DHCP, ARP and other traffic that occurs - even without the presence of the device, so let's remove these.
+
+![](/uploads/20220723-snipaste_2022-07-23_13-32-10.jpg)
+
+## Exclude
+
+* `ARP` requests to/from the access point
+* `CDP` packets - Cisco Discovery Protocol
+* `STP` packets - Spanning Tree Protocol
+* `MNDP` packets - Mikrotik Neighbor Discovery Protocol
+* `LLDP` packets - Link Layer Discovery Protocol
+* Packets from `10.10.10.9` / `18:c0:4d:3b:66:d2` - My computer
+  * Wasn't completely on monitor mode
+* Packets from `60:a4:b7:7a:b0:c3` - Managed switch
+* Packets from `32:bc:cf:2d:96:ce` - ?
+* Packets from `00:0c:42:cf:36:20` - Router
+
+```
+((((((((((((!stp) && !(arp.src.hw_mac == 00:27:22:fc:8f:93)) && !(arp.dst.hw_mac == 00:27:22:fc:8f:93)) && !(cdp)) && !(mndp)) && !(lldp)) && !(eth.addr == 18:c0:4d:3b:66:d2))) && !(arp.src.hw_mac == 60:a4:b7:7a:b0:c3)) && !(eth.src == 32:bc:cf:2d:96:ce)) && !(eth.src == 00:0c:42:cf:36:20)) && !(ip.src == 10.10.10.4)) && !(ip.dst == 10.10.10.4)
+```
