@@ -257,6 +257,12 @@ IPs are hardcoded in the `miio_client` binary, but seem to translate to [`dns.io
 
 ![](/uploads/20220723-snipaste_2022-07-24_00-41-20.jpg)
 
+#### SSDP
+
+Every 5 minutes
+
+![](/uploads/20220723-snipaste_2022-07-24_00-56-08.jpg)
+
 ### Version v02.29.02
 
 #### Wireshark Filter
@@ -360,3 +366,9 @@ Excluding log upload activity (i.e. to Hadoop), we can see that at 3am (local ti
     [01-01 18:12:15 TUYA Notice][gw_intf.c:2668] gw_cntl.gw_if.product_key:mjae49buaskri74f, input:mjae49buaskri74f
     [01-01 18:12:15 TUYA Notice][gw_intf.c:2669] gw_cntl.gw_if.tp:0, input:0
     [01-01 18:12:15 TUYA Debug][simplekv.c:1171] read key:gw_ai isFuzzy:0 skipCnt:0
+
+
+---
+
+# Conclusions
+
