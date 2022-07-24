@@ -343,6 +343,8 @@ Excluding log upload activity (i.e. to Hadoop), we can see that at 3am (local ti
 
 #### m2.tuyaeu.com
 
+* Poll every minute?
+
 ![](/uploads/20220724-snipaste_2022-07-25_07-15-33.jpg)
 
 ![](/uploads/20220724-snipaste_2022-07-25_07-16-26.jpg)
