@@ -20,16 +20,16 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-107434487-2')</script>
 <script>(function(e,b,f,c,a,d){b[c]=b[c]||function(){(b[c].q=b[c].q||[]).push(arguments)},a=e.createElement('script'),d=e.getElementsByTagName('script')[0],a.async=1,a.src=f,a.id='fathom-script',d.parentNode.insertBefore(a,d)})(document,window,'//ss.featherbear.cc/tracker.js','fathom'),fathom('set','siteId','NEQTU'),fathom('trackPageview')</script>
 <style>html.dark{--color-primary-bg:#232327 !important}div#sidebar-toc>ul.pl-6{margin-left:1em}</style>
-<meta name=description content="Comparison against stock Ubuntu 14.04.03 LTS
-The device is an armhf Ubuntu 14.04.3 LTS, so we are comparing the hashes of the binaries against the stock binaries to see if there are any modifications
- find . -type f -executable -exec md5sum {} \;">
+<meta name=description content="Comparison of the device firmware (MI1558_TANOS_MP_S2020032500REL_M3.3.0_RELEASE_20200325-204847) against stock Ubuntu 14.04.03 LTS
+Note that the Roborock S6 was first released in June 2019, but our device was manufactured June 2020 - so has newer firmware than the absolute original version.
+The device is an armhf Ubuntu 14.">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"File System Comparison","item":"/posts/file-system-comparison/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/file-system-comparison/"},"headline":"File System Comparison | CSE Thesis Musings","datePublished":"2022-06-28T15:31:44+00:00","dateModified":"2022-06-28T15:31:44+00:00","wordCount":2811,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Comparison against stock Ubuntu 14.04.03 LTS\nThe device is an armhf Ubuntu 14.04.3 LTS, so we are comparing the hashes of the binaries against the stock binaries to see if there are any modifications\n find . -type f -executable -exec md5sum {} \\;"}</script><meta property="og:title" content="File System Comparison | CSE Thesis Musings">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/file-system-comparison/"},"headline":"File System Comparison | CSE Thesis Musings","datePublished":"2022-06-28T15:31:44+00:00","dateModified":"2022-06-28T15:31:44+00:00","wordCount":2848,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Comparison of the device firmware (MI1558_TANOS_MP_S2020032500REL_M3.3.0_RELEASE_20200325-204847) against stock Ubuntu 14.04.03 LTS\nNote that the Roborock S6 was first released in June 2019, but our device was manufactured June 2020 - so has newer firmware than the absolute original version.\nThe device is an armhf Ubuntu 14."}</script><meta property="og:title" content="File System Comparison | CSE Thesis Musings">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/posts/file-system-comparison/">
-<meta property="og:description" content="Comparison against stock Ubuntu 14.04.03 LTS
-The device is an armhf Ubuntu 14.04.3 LTS, so we are comparing the hashes of the binaries against the stock binaries to see if there are any modifications
- find . -type f -executable -exec md5sum {} \;">
+<meta property="og:description" content="Comparison of the device firmware (MI1558_TANOS_MP_S2020032500REL_M3.3.0_RELEASE_20200325-204847) against stock Ubuntu 14.04.03 LTS
+Note that the Roborock S6 was first released in June 2019, but our device was manufactured June 2020 - so has newer firmware than the absolute original version.
+The device is an armhf Ubuntu 14.">
 <meta property="og:locale" content="en">
 <meta property="og:site_name" content="CSE Thesis Musings">
 <meta property="article:published_time" content="2022-06-28T15:31:44+00:00">
@@ -84,13 +84,15 @@ The device is an armhf Ubuntu 14.04.3 LTS, so we are comparing the hashes of the
 </div>
 </div>
 <div class=content>
-<p>Comparison against stock Ubuntu 14.04.03 LTS</p>
+<p>Comparison of the device firmware (<code>MI1558_TANOS_MP_S2020032500REL_M3.3.0_RELEASE_20200325-204847</code>) against stock Ubuntu 14.04.03 LTS</p>
+<p>Note that the Roborock S6 was first released in June 2019, but our device was manufactured June 2020 - so has newer firmware than the absolute original version.</p>
 <p>The device is an <code>armhf</code> Ubuntu 14.04.3 LTS, so we are comparing the hashes of the binaries against the stock binaries to see if there are any modifications</p>
 <blockquote>
 <p><code>find . -type f -executable -exec md5sum {} \;</code><br>
 <code>find {./bin,./sbin,./usr/bin,./usr/sbin,./opt} -executable -type f -exec md5sum {} \;</code></p>
 </blockquote>
-<h2 id=base>Base</h2>
+<h2 id=md5-sums>md5 sums</h2>
+<h3 id=base>Base</h3>
 <pre><code>aaad82e4569e13eda32b91e9ef87d0ec  /bin/rmdir
 b3be5f13ee3c82035b23f5f2606b2d85  /bin/zforce
 b7acec29291d678c6ac2f20f249a4f0e  /bin/dmesg
@@ -651,7 +653,7 @@ e2ef6ee43bd8b30d92c36886a8beefed  /usr/sbin/groupadd
 3c40fbfa9ef9a90de425326b67cc4956  /usr/sbin/fdformat
 eb05ba89545a33b039eca1ab7a7e9579  /usr/sbin/deluser
 </code></pre>
-<h2 id=device>Device</h2>
+<h3 id=device>Device</h3>
 <pre><code>6553d3232d065ffef4a822dfc7315245  /bin/bash
 d9bd478d30b8296996f691611f612250  /bin/bunzip2
 d9bd478d30b8296996f691611f612250  /bin/bzcat
@@ -1262,7 +1264,7 @@ efe17a31624de9f9cf4bda6260502e77  /usr/sbin/vcstime
 8eb7c733c891727e760aa2feb9df95c3  /usr/sbin/zic
 </code></pre>
 <hr>
-<h1 id=diff>Diff</h1>
+<h2 id=diff>Diff</h2>
 <pre><code># file    device md5    base_md5
 
 /usr/sbin/ntpdate 006a0967281c9a061362086b638a21a4 122890cbbaff8ca98f9664add64492bd
@@ -1338,6 +1340,9 @@ efe17a31624de9f9cf4bda6260502e77  /usr/sbin/vcstime
 /usr/bin/pydoc3.4 (not found in device) 0125215b0550cf3ca117c2c996e98f4d
 /usr/sbin/ntpdate-debian (not found in device) 6aa46cfba91964f25fb1eb02e071a8c3
 </code></pre>
+<ul>
+<li>See <a href=../diff-inspection>/usr/sbin/ntpdate</a></li>
+</ul>
 </div>
 <div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
 <div>
@@ -1357,8 +1362,13 @@ efe17a31624de9f9cf4bda6260502e77  /usr/sbin/vcstime
 <div class="sticky-toc hidden lg:block px-6 pb-6">
 <nav id=TableOfContents>
 <ul>
+<li><a href=#md5-sums>md5 sums</a>
+<ul>
 <li><a href=#base>Base</a></li>
 <li><a href=#device>Device</a></li>
+</ul>
+</li>
+<li><a href=#diff>Diff</a></li>
 </ul>
 </nav>
 </div>
