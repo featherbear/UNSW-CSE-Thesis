@@ -12,7 +12,7 @@ toc = true
 
 ![](/uploads/20220724-snipaste_2022-07-25_00-54-46.jpg)
 
-Check for the existence of `/dev/shm/.migrate_to_rriot`
+Check for the existence of `/dev/shm/.migrate_to_rriot` then migrate
 
 # Strings
 
