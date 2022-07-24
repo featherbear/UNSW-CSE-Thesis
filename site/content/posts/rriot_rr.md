@@ -10,6 +10,10 @@ toc = true
 +++
 ![](/uploads/20220724-snipaste_2022-07-25_00-45-55.jpg)
 
+![](/uploads/20220724-snipaste_2022-07-25_00-54-46.jpg)
+
+Check for the existence of `/dev/shm/.migrate_to_rriot`
+
 # Strings
 
 `/dev/shm/.migrate_to_rriot`
