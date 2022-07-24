@@ -321,7 +321,7 @@ Every 5 minutes, DHCP lease requested
   * tcp/443
 * ![](/uploads/20220723-snipaste_2022-07-23_22-07-12.jpg)
 
-#### (ignore this tbh) Activity
+#### Activity (exc FDS)
 
 Excluding log upload activity (i.e. to Hadoop), we can see that at 3am (local time) there is some regular activity.
 
@@ -332,6 +332,8 @@ Excluding log upload activity (i.e. to Hadoop), we can see that at 3am (local ti
 ![](/uploads/20220723-snipaste_2022-07-23_22-50-40.jpg)
 
 ![](/uploads/20220723-snipaste_2022-07-23_22-51-56.jpg)
+
+![](/uploads/20220724-m2-a2-geomap.png)
 
 #### a2.tuyaeu.com
 
