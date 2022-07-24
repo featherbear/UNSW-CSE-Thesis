@@ -198,7 +198,7 @@ Every now and then - ms.tuyaeu.com - {'3.121.141.195', '3.122.208.21', '3.122.21
     [07-09 20:51:51 TUYA Debug][iot_httpc.c:660] Decode Rev:{"result":{"devId":"bf7e9b4aacf4f733d8o3zz","count":0,"lastFetchTime":0},"t":1657363911,"success":true}									
     [07-09 20:51:51 TUYA Debug][tuya_tls.c:1015] TUYA_TLS Disconnect Success
     [07-09 20:51:51 TUYA Debug][timer_task.c:261] timer query time equal. skip:0
-
+    
     [07-09 21:21:07 TUYA Debug][iot_httpc.c:883] Post Data: {"subId":null,"t":1657365667}
     [07-09 21:21:07 TUYA Debug][iot_httpc.c:894] Post URL: https://a2.tuyaeu.com/d.json?a=tuya.device.upgrade.silent.get&devId=bf7e9b4aacf4f733d8o3zz&et=1&t=1657365667&v=4.3&sign=d220fd3f6fb2d42233491de6cf301834
     [07-09 21:21:07 TUYA Debug][httpc.c:742] Connect: a2.tuyaeu.com Port: 443  -->>
@@ -321,7 +321,7 @@ Every 5 minutes, DHCP lease requested
   * tcp/443
 * ![](/uploads/20220723-snipaste_2022-07-23_22-07-12.jpg)
 
-#### Activity
+#### (ignore this tbh) Activity
 
 Excluding log upload activity (i.e. to Hadoop), we can see that at 3am (local time) there is some regular activity.
 
@@ -330,6 +330,36 @@ Excluding log upload activity (i.e. to Hadoop), we can see that at 3am (local ti
 ![](/uploads/20220723-snipaste_2022-07-23_22-50-40.jpg)
 
 ![](/uploads/20220723-snipaste_2022-07-23_22-51-56.jpg)
+
+#### a2.tuyaeu.com
+
+![](/uploads/20220724-snipaste_2022-07-25_07-18-16.jpg)
+
+![](/uploads/20220724-snipaste_2022-07-25_07-17-28.jpg)
+
+![](/uploads/20220724-snipaste_2022-07-25_07-18-26.jpg)
+
+![](/uploads/20220724-snipaste_2022-07-25_07-17-39.jpg)
+
+#### m2.tuyaeu.com
+
+![](/uploads/20220724-snipaste_2022-07-25_07-15-33.jpg)
+
+![](/uploads/20220724-snipaste_2022-07-25_07-16-26.jpg)
+
+![](/uploads/20220724-snipaste_2022-07-25_07-16-18.jpg)
+
+![](/uploads/20220724-snipaste_2022-07-25_07-15-55.jpg)
+
+#### awsde0.fds.api.xiaomi.com
+
+![](/uploads/20220724-snipaste_2022-07-25_07-19-48.jpg)
+
+![](/uploads/20220724-snipaste_2022-07-25_07-19-26.jpg)
+
+![](/uploads/20220724-snipaste_2022-07-25_07-19-54.jpg)
+
+![](/uploads/20220724-snipaste_2022-07-25_07-19-34.jpg)
 
 #### Tuya Discovery (rriot_tuya)
 
@@ -369,33 +399,32 @@ Excluding log upload activity (i.e. to Hadoop), we can see that at 3am (local ti
     [01-01 18:12:15 TUYA Notice][gw_intf.c:2669] gw_cntl.gw_if.tp:0, input:0
     [01-01 18:12:15 TUYA Debug][simplekv.c:1171] read key:gw_ai isFuzzy:0 skipCnt:0
 
-
----
+***
 
 ## Conclusions
 
 ### Version v01.15.58
 
 * miio_client
-	* Frequent DNS requests to xx.ot[t].io.mi.com
-    	* Error 400 - Bad Request
-        * China
+  * Frequent DNS requests to xx.ot\[t\].io.mi.com
+    * Error 400 - Bad Request
     * China
+  * China
 * Logs - awsde0.fds.api.xiaomi.com
   * 3am (though could be because log sizes rotate at this time)
 * Control / Checks - a2.tuyaeu.com
-	* Pretty frequent
-    * 3am peak
-    * Upgrade
-    * Status
+  * Pretty frequent
+  * 3am peak
+  * Upgrade
+  * Status
 * Responses (MQTT) - ms.tuyaeu.com
-    * 3am peak
+  * 3am peak
 * !! Frequent activity at 3am
-	* 3am AEDT = 12am BJT ???
+  * 3am AEDT = 12am BJT ???
 * DHCP request every 5 minutes
 * SSDP
 * rriot_tuya
-	* Discovery every 5 seconds
+  * Discovery every 5 seconds
 
 ### Version v02.29.02
 
@@ -404,21 +433,20 @@ Excluding log upload activity (i.e. to Hadoop), we can see that at 3am (local ti
 * Control at a2.tuyaeu.com
 * DHCP request every 5 minutes
 
-
----
+***
 
 ### Changes
 
 * miio_client no longer used
-  	* No more DNS requests to xx.ot[t].io.mi.com
+  * No more DNS requests to xx.ot\[t\].io.mi.com
 * m2.tuyaeu.com used in place of ms.tuyaeu.com
 * No SSDP
 
----
+***
 
 ### Summary
 
-* MQTT at [ms|m2].tuyaeu.com
+* MQTT at \[ms|m2\].tuyaeu.com
 * Control at a2.tuyaeu.com
 * Used to use Mi IO for `gslb`
   * Likely stands for "Global Server Load Balancing"
