@@ -31,40 +31,329 @@ img[round] {
   border-radius: 10px;
 }
 </style>
+## Today's Agenda
 
-# Today's Agenda
+* <label>Topic Recap</label>
+  * The world of IOT devices
+  * Thesis statement
+* <label>Where we left off</label>
+  * Previous results and findings
+* <label>New progress</label>
+* <label>Discussion</label>
+* <label>Conclusion</label>
 
-* Thesis B plan
-* Thesis B review
-* Thesis B retrospective
-* Thesis C revised plan
+---
+
+<style>
+.marquee-parent {
+  position: relative;
+  width: 100vw;
+  max-width: 100%;
+  height: 200px;
+  overflow-x: hidden;
+  border-radius: 10px;
+}
+
+.marquee-child {
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  max-width: unset !important;
+  max-height: 100% !important;
+  animation: marquee 360s linear infinite;
+}
+
+.marquee-child:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-87.5%); }
+}
+
+</style>
+
+<br />
+<div class="marquee-parent"><img src="/uploads/20211115-lightbulbs-marquee.png" class="marquee-child" ></div>
+</br>
+{{% section %}}
+
+_...so there are a lot of IOT devices and IOT brands out there..._
+
+{{% note %}}
+Smart watches, smart washing machines, smart flip-flop shoes...
+{{% /note %}}
+
+---
+
+🕵️‍♂️ Are competing products looking suspiciously similar to you?  
+Most are <u>white-labelled</u> products, the biggest ecosystem vendor being <span style="display: inline-table; vertical-align: middle;"><img src="/uploads/tuya_logo.png" height="40px" alt="Tuya" ></span>
+
+<label>Pros</label>
+
+👨‍💻 Use someone else's code  
+💹 Fast profit turnaround
+
+<label>Cons</label>  
+
+⚠️ Use someone else's code  
+🐱‍💻 Potentially security vulnerabilities
+
+{{% note %}}
+FYI not here to tell you whether or not IOT devices are good or not... that's for you to judge. My research is on whether these big players have been doing their part (as providers) to keep us safe
+{{% /note %}}
+
+---
+
+IOT ecosystems often have a centralised system to manage their fleet <span style='font-size: 18px'> (devices)</span>.
+
+<label>Pros</label>
+
+A centralised management is <u><i>so</i></u> much simpler/easier/faster/cheaper/'better' than a decentralised one.
+
+<label>Cons</label>  
+
+⚠️ Device functionality dependent on system availability  
+⚠️ Little transparency about what/where/when/why data is transmitted
+
+{{% /section %}}
 
 ---
 
 # Statement
 
+{{% section %}}
+
 >
 
+<div>
 How have manufacturers of IoT / smart home devices addressed the increasing concerns of digital privacy and product security?
+<div style="text-align: right; font-size: 20px;">(Specifically Roborock / Xiaomi / Tuya)</span>
+</div>
 
 > 
 
-{{% fragment %}}
-&nbsp;  
-&nbsp;  
+<br />
+<br />
 
-* Digital Privacy - Investigate the nature of network data (i.e. content, frequency, destination) and how the data is used.
-* Product Security - Investigate potential security vulnerabilities and assess the effectiveness of current security fortifications.
-
-{{% /fragment %}}
+* Digital Privacy
+    * Investigate the nature of network data
+    * i.e. content, frequency, destination, usage
+* Product Security
+    * Investigate security vulnerabilities
+    * Assess the effectiveness of security fortifications
 
 ---
 
-Talk about threat models
+<div style="display: flex; flex-direction: row">
+
+<div>
+Our device in scope: <label>Roborock S6</label> (2019)
+
+A smart vacuum cleaner, with integrations to both <span style="display: inline-table; vertical-align: middle;"><img src="/uploads/tuya_logo.png" height="40px" alt="Tuya" ></span> and <span style="display: inline-table; vertical-align: middle;"><img src="/uploads/xiaomi_smartlife_logo.webp" height="40px" alt="Mijia (Xiaomi)" ></span> (depending on model)
+</div>
+
+<img src="/uploads/20211103-s6-pure-banner.webp" width="500px">
+</div>
+
+> It works pretty (very) well, according to reviews.  
+But is it safe to connect to your home?  
+
+{{% /section %}}
+
+---
+
 
 Talk about thesis A
 talk about thesis b
 Talk about thesis c
+
+---
+
+{{% section %}}
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+# Thesis B | Results
+
+---
+
+{{< slide transition="fade" >}}
+
+Thesis B - Inspection of system (privileged processes)
+
+<iframe style="border: 2px solid white; border-radius: 10px; pointer-events: none;" width=1280 height=720 src="../seminar-b/?noControls#/7/2"></iframe>
+
+---
+
+{{< slide transition="fade" >}}
+
+Thesis B - Recovery partition manipulation (see [proof of concept](https://www.youtube.com/watch?v=eABmzUfZ22A))
+
+<iframe style="border: 2px solid white; border-radius: 10px; pointer-events: none;" width=1280 height=720 src="../seminar-b/?noControls#/12/3"></iframe>
+
+---
+
+{{< slide transition="fade" >}}
+
+Thesis B - Capture of device traffic (port-mirroring)
+
+<iframe style="border: 2px solid white; border-radius: 10px; pointer-events: none;" width=1280 height=720 src="../seminar-b/?noControls#/6"></iframe>
+
+---
+
+{{< slide transition="fade" >}}
+
+Thesis B - Inspection of system services (`netstat`, `iptables`, `ip6tables`)
+
+<iframe style="border: 2px solid white; border-radius: 10px; pointer-events: none;" width=1280 height=720 src="../seminar-b/?noControls#/7/3"></iframe>
+
+---
+
+
+{{< slide transition="fade" >}}
+
+Thesis B - Remote access persistence (see [proof of concept](https://www.youtube.com/watch?v=om2yzYHU1A0))
+<iframe style="border: 2px solid white; border-radius: 10px; pointer-events: none;" width=1280 height=720 src="../seminar-b/?noControls#/8"></iframe>
+
+{{% /section %}}
+
+---
+
+{{% section %}}
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+# Thesis B | Observations
+
+---
+
+Thesis B - Investigating `tcpdump`
+
+<iframe style="border: 2px solid white; border-radius: 10px; pointer-events: none;" width=1280 height=720 src="../seminar-b/?noControls#/11/4"></iframe>
+
+---
+
+{{< slide transition="fade" >}}
+
+Thesis B - Investigating `rrlogd`
+
+<iframe style="border: 2px solid white; border-radius: 10px; pointer-events: none;" width=1280 height=720 src="../seminar-b/?noControls#/11/6"></iframe>
+
+---
+
+{{< slide transition="fade" >}}
+
+Thesis B - Investigating `adbd`
+
+<iframe style="border: 2px solid white; border-radius: 10px; pointer-events: none;" width=1280 height=720 src="../seminar-b/?noControls#/11/8"></iframe>
+
+{{% /section %}}
+
+---
+
+{{% section %}}
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+# Thesis B | Future Challenges
+
+---
+
+{{< slide transition="fade" >}}
+
+Thesis B - Comparing files
+
+<iframe style="border: 2px solid white; border-radius: 10px; pointer-events: none;" width=1280 height=720 src="../seminar-b/?noControls#/13/4"></iframe>
+
+---
+
+{{< slide transition="fade" >}}
+
+Thesis B - Hooking into pre-encryption / post-decryption routines
+
+<iframe style="border: 2px solid white; border-radius: 10px; pointer-events: none;" width=1280 height=720 src="../seminar-b/?noControls#/13"></iframe>
+
+{{% /section %}}
+
+---
+
+#### <label>Thesis B Completion</label>
+
+* Analysis of firmware binaries to identify vulnerabilities
+  * Still in progress
+* Search for unsecured secrets, logs, configurations
+  * Completed (excluding encrypted `rrlog` files)
+
+#### <label>Revised Thesis C Plan</label>
+
+* WAN - security, PII
+* LAN - traffic? (tcpdump)
+* Firmware upgrade
+* Update to a newer firmware version and look at changes
+* Check what files gets cleared during a format
+* Binary assessment
+* Verify IPv6 SSH access
+
+# The IPv6 World
+
+
+
+---
+
+## Incoming Timeline
+
+* <label>22T2 W1</label> - IPv6 SSH verification, continue binary assessment
+* <label>22T2 W2</label> - WAN traffic analysis
+  * Look at network behaviour
+  * Try view WAN data pre-encryption / post-decryption
+* <label>22T2 W4</label> - Update to latest version (and hope we don't get locked out)
+  * Do another vacuum clean, reimage, compare binaries
+* <label>22T2 W5</label> - Factory reset device, check for remnant files
+* <label>22T2 W8</label> - Demo submission
+* <label>22T2 W11</label> - Report submission
+
+
+# Let's Talk Threats
+
+> Talk about threat models
+
+---
+
+What files?
+- compare against stock
+- lots of hash matches
+
+
+
 
 threat models
 
@@ -145,40 +434,17 @@ Where
 How
 
 
+---
 
 
-
-#### <label>Thesis B Completion</label>
-
-* Analysis of firmware binaries to identify vulnerabilities
-  * Still in progress
-* Search for unsecured secrets, logs, configurations
-  * Completed (excluding encrypted `rrlog` files)
-
-#### <label>Revised Thesis C Plan</label>
-
-* (priority) Inspection of outbound WAN traffic - security, PII, etc
-* <s style="color: grey">Inspection of LAN traffic</s> rather, see if it is stored
-* <s style="color: grey">Inspection of interaction with nearby devices</s>
-* <s style="color: grey">Protocol analysis</s>
-* Update to a newer firmware version and look at changes
-* Check what files gets cleared during a format
-* Binary assessment
-* Verify IPv6 SSH access
+Address the statement
 
 ---
 
-## Incoming Timeline
+# Thesis in a Year
 
-* <label>22T2 W1</label> - IPv6 SSH verification, continue binary assessment
-* <label>22T2 W2</label> - WAN traffic analysis
-  * Look at network behaviour
-  * Try view WAN data pre-encryption / post-decryption
-* <label>22T2 W4</label> - Update to latest version (and hope we don't get locked out)
-  * Do another vacuum clean, reimage, compare binaries
-* <label>22T2 W5</label> - Factory reset device, check for remnant files
-* <label>22T2 W8</label> - Demo submission
-* <label>22T2 W11</label> - Report submission
+![](/uploads/screely-1658645824986.png)
+
 
 ---
 # Thank You

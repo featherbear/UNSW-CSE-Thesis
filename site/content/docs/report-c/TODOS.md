@@ -9,12 +9,15 @@ TODO: Write this at the end
 # ToC
 
 FIXME: Is a list of figures / tables necessary?
+---> Y
 
 ---
 
 # Abbreviations
 
 FIXME: Put this in appendix or?
+
+
 
 ---
 # Introduction
@@ -78,6 +81,9 @@ TODO: Insert assessment scope diagram -> ![](20220602-assessment-scope-diagram.p
 
 ## Threat Modelling - STRIDE
 
+
+TODO: Table??
+
 > Talk about the STRIDE model
 
 * Spoof
@@ -88,7 +94,7 @@ TODO: Insert assessment scope diagram -> ![](20220602-assessment-scope-diagram.p
 * Elevation of Privilege
 
 > Model the Roborock device against the STRIDE model
-> FIXME: PROSPECTIVE or PRODUCED?
+yes.
 
 * Spoof -> 
 * Tampering -> Vendor backdoor, access vulnerability
