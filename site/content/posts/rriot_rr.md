@@ -24,6 +24,12 @@ Check for the existence of `/dev/shm/.migrate_to_rriot` then migrate
 * rriot_rr
 * AppProxy
 
+***
+
+Looks like `rriot_tuya` instructs `AppProxy` to create the file
+
+***
+
 # Strings
 
 `/dev/shm/.migrate_to_rriot`
