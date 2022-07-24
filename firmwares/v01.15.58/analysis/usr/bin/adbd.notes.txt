@@ -1,0 +1,44 @@
+libnss
+/etc/nsswitch.conf
+
+
+
+passwd
+networks
+shadow
+ethers
+
+Keld simonsen
+
+
+locksec_apply_passwd
+locksec_apply_key
+locksec_init_key
+locksec_init_serial
+
+/mnt/reserve/rrBkBox.csv
+/var/log
+/mnt/data/rockrobo/devtest
+/mnt/data/rockrobo/noupload
+
+sys_passwd and adb_passwd check pass
+
+not support /adb shell/ in unlock state
+not support /adb shell adb_passwd/ in unlock state
+
+* ADB LOCK?
+
+fetch dynamic key
+
+/mnt/default/vinda
+
+/mnt/default/adb.conf
+
+adb_check_unlock(_v2)
+adb_check_unlock_level[0,4]
+
+/dev/android_adb_enable
+
+
+
+rockrobo_ruby_init

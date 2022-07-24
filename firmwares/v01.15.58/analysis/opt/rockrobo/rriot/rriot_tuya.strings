@@ -1,0 +1,14327 @@
+/lib/ld-linux-armhf.so.3
+H,wM
+R@A"
+Y8rB
+M$+#
+fII"rt,
+||L\t,2@
+| bd
+(! 1
+pGX7
+libcurl.so.4
+__gmon_start__
+_Jv_RegisterClasses
+_ITM_deregisterTMCloneTable
+_ITM_registerTMCloneTable
+curl_free
+curl_easy_init
+curl_easy_setopt
+curl_easy_escape
+curl_easy_cleanup
+curl_easy_perform
+libpthread.so.0
+sigaction
+recvfrom
+pthread_join
+pthread_create
+sendto
+__errno_location
+accept
+recvmsg
+pthread_detach
+sendmsg
+recv
+fcntl
+librrlog.so
+_rrlog
+_fini
+fsync
+pthread_attr_init
+pthread_attr_setdetachstate
+pthread_attr_destroy
+pthread_self
+connect
+send
+pthread_mutex_init
+pthread_mutex_lock
+pthread_mutex_unlock
+pthread_mutex_destroy
+sem_init
+sem_wait
+sem_post
+sem_destroy
+libm.so.6
+floor
+raise
+libc.so.6
+socket
+fflush
+strcpy
+__printf_chk
+exit
+sprintf
+fopen
+strncmp
+perror
+__isoc99_sscanf
+ftell
+inet_ntop
+strncpy
+__stack_chk_fail
+daemon
+unlink
+putchar
+listen
+select
+mkdir
+abort
+tolower
+popen
+strtol
+feof
+fgets
+strlen
+prctl
+memset
+strstr
+bind
+fseek
+memcmp
+getopt
+shutdown
+vsnprintf
+poll
+stdout
+inet_addr
+fputs
+memcpy
+fclose
+rand
+__vsnprintf_chk
+setsockopt
+malloc
+strcat
+strcasecmp
+remove
+__ctype_b_loc
+getenv
+system
+gethostbyname
+__snprintf_chk
+__memset_chk
+freeifaddrs
+strncasecmp
+getifaddrs
+fileno
+pclose
+usleep
+fwrite
+fread
+__memcpy_chk
+atof
+clock_gettime
+atoi
+atol
+__fread_chk
+strchr
+__poll_chk
+__xstat
+memmove
+access
+pipe2
+strcmp
+strerror
+__libc_start_main
+ferror
+ld-linux-armhf.so.3
+__stack_chk_guard
+_edata
+__bss_start
+__bss_start__
+__bss_end__
+__end__
+_end
+/var/lib/jenkins/workspace/Tanos_FULL_REL/build/temp/arm/common/rrlog
+Free
+uni_log_output
+mbedtls_eckeydh_info
+mbedtls_cipher_definitions
+mbedtls_ripemd160_info
+SEC_PER_HR
+ez_head
+tp_chg
+mbedtls_free
+mbedtls_sha1_info
+mbedtls_calloc
+unw_errno_trans
+mbedtls_cipher_supported
+mbedtls_x509_crt_profile_suiteb
+SEC_PER_MT
+cloud_ctx_arr
+cur_posix_time
+mbedtls_rsa_info
+base64char
+mbedtls_ecdsa_info
+mbedtls_sha256_info
+mbedtls_rsa_alt_info
+thing_config
+thing_config_mqc_handle
+mbedtls_x509_crt_profile_default
+mbedtls_hmac_drbg_random
+mbedtls_sha224_info
+SEC_PER_YR
+Malloc
+mbedtls_sha384_info
+mbedtls_eckey_info
+ak_lan_rev_active_task
+SEC_PER_DY
+mbedtls_md5_info
+mbedtls_sha512_info
+code_check_state
+GLIBC_2.4
+CURL_OPENSSL_3
+GLIBC_2.9
+GLIBC_2.16
+GLIBC_2.17
+GLIBC_2.7
+	"F)F8F
+"F)F8FO
+"6IC
+"1IW C
+3h F
+ta0F
+0Fzh+h
+"FB#
+HpGH
+F!F0F
+"!Ff A
+#x-"3
+F3hG
+D8FAFA
+B8F!F
+""IO
+Ci(F3`$
+ #hjF
+s/`!Fn`
++ze+
+V 4h
+3h F
+.}0FB
+N !FB
+")FB
+F F'
+")FO
+F F'
+")FO
+F F'
+")FO
+F F'
+")FO
+F0F'
+*F9F@F
+4#KI
+PC6)
+hSF'x
+kc4h
+@#9F
+9FKFBFPF
+y !F
+9FHF&
+9F "	
+;F9F8F&
+p)FB
+BF)FB
+"#IO
+"IF@
+#3t&
+ !FB
+".I@
+HHHH++
+s2FB
+tq F
+|q F
+F F$
+F F$
+KHEQN
+Cif+a
+F F&
+F0F&
+|q8F
+$!0F
+*F9F@F
+4!0F
+*F9F@F
+*F9F
+HF1"
+h18F"
+ F+h
+r#hXH
+<$#h
+"CI@
+"+I@
+i!!C
+"<I<h@
+F(F#
+F(F#
+F(F#
+F0F#
+F0F#
+F0F#
+F0F#
+F0F#
+;F*F
+p1FB
+p1FA
+r1F F
+; BE
+9F0F
++`<`
+(qiq
+) 9F
+ pG0
+Fd"#h
+F3hG
+"(I@
+< CF1F
+!F8F
+")F@
+Xp3hG
+p:q{q
+"3hG
+F;`B
+I%h@
+%3hG
+"!F@
++h F
+8F!F
+6AF0D*F
++h F
+"P!@F
+"@!@F
+,	!F
+MHFC
+zq F$
+ (F"
+q F#rcr
+"3IT A
+W#,J
+I; C
+rpGp
+"&hC
+(a(F
+4a(F
+$q@F
+0;	+
+,q(F
+"X C
+"!F0 A
+"!F( A
+HpGd
+HpGd
+HpGd
+hpGN
+|b)F
+!KFRF
+SFJFC
+#FAEO
+hh(`
+jb#F
+"F1F(F
+)FHF
+$#h0F
+"!FA
+"!FC
+2F)Fxn
+"!FC
+ F@#@
+!FHF
+YF F!
+tq F
+h1 F
+*F!FO
+2uCj
+AF F!
+t!PF
+*F!F@
+*F!F@
+*F!F@
+*F!F@
+"]I@
+!FHF
+h )i
+h0Zk
+*F!FCi
+8N[#
+1F_ 
+)jch
+3c`#
+";FQF
+b@FB
+"!IC
+!n F
+n"FG
+ah F
+!#FG
+3h(F
+3c`@
+")FA
+3#f`n
+3cf`h
+3c`U 
+q4hC
+(F3h
+hF@"
+9FjF)
+ #hjF
+ #hjF
+pgh3FkI
+ah(F
+1ZF@F
+"KI@
+".I@
+!JF F
+!0`*F!t !
+``Fat
+a!b(!!`
+"!IO
+=#yD-
+]I]4pqp^
+pup1p
+o .V
+@KAJ{D-
+X#h#
+@	}D:F
+(F#h
+@	CF:F0F
+uX"1F(F
+uX"1F(F
+X +F
+JF1F@F
+X +F
+JF1F@F
+HxDpG
+XpG	J
+XpG	J
+CxD+	
+F'HxD
+%H!FxD
+cxH+	
+H!FxD
+H!FxD
+H!FxD
+H!FxD
+jIh@h
+8Fcj
+ppGJ
+[i@h
+F+F0
+G{D5L
+hFmF
+F{i1Fhh
+iAFhh
+FAI{D
+^X3h
+8F@!
+F"F6!@FDD
++h\! F
+IF FCF
++hhh
++hAFhh\i
++hRFIFhh[i
+hh9F
+[i@h]
+ppGO
+$K%J{D-
+i@h9F
+#h`h
+#h9F`h_i
+#h)F`h
+#h)F`h\i
+"M|D
+!FhF
+:F1FhF
+IFhF
+@hpG
+`C`pG
+G```
+&`(Fp
+ppGL
+ pG-
+`h:F
+`h:F
+@`GO
+@`GO
+#FIh@h0
+ppGL
+ pG-
+JF9F F
+ppGL
+XhpG
+HxDpG
+HxDpG
+J	K0
+`J`Ha
+@	pG
+@	pG
+#%hYF
+F0`(F
+O`G-
+ hSF
+G`GK
+(` F
+ ;F<
+)F F
+IF(F
+BF9F(FO
+3h F
+'K(J{D-
+h h;h
+ "*!
+4$;h
+*F0F
+ 	6O
+F|D0#JF
+F'h	
+#JF1F(F
+)h;F
+/hJF
+#1F8D(`(F
+*h@F
+BF(F0#
+#BFYF(F
+BFYF(F&D
+BFYF(F&D
+BFYF(F&D
+#YF(F&D
+JFYF(F
+JFYF(F
+(FJFYF
+F|DjF
+hFAF
+J{D-
+h(F"F
++`YF
+0#YF(FBF
+#.hBF(F
+I8FyD
+1F(F
+)h F
+9F0F	
+0#BFYF(F
+BF(Fq
+(F7D/`
+(F7D/`
+D+`+h
+#BFYF(F
+0*hPF1F
+)h0F
+0YF(F
+D2F+`
+G{DsL
+D0F:F0#
+#:FIF0F
+#:FIF0F
+#:F0F
+@FRF
+QF@F
+!F0F
+@F!F
+!F@F
+G{DCL
+D(F2F0#
+IF(FSF
+2FIF(F
+PFyh
+D|D#FdY
+F0#2F(F
+[F(F
+DRF9F
+2F9F(F
+;x0+
+9F@F
++F2F
+:h#h
+TyD8h
+#h(F
+!h8h
+F|D0#jF
+KF0F
+jF9F0FmF
+ 9F0F
+QFHF
+F0FeY#F
+F+h	
+:FIF
+:F!F@F
+|J0F|I
+:FIF@F
+:FIF
+:FIF
+KF>I0F
+yD<J
+0F#J#I
+zDyD
+zDyD
+O{DRL
+Y(F3h	
+>I(F
+yDKF
+DzhE
+AF(F
+:FAF(F
+zDyD
+aZ`pG
+Fc@f
+r@%D
+|Lh@O
+FDK@
+j_Dh
+D_Dc@
+7gUF
+,Dp@
+XTDO
+.Dy@FD
+uE\D
+KDFD
+#DCD8
+{[BD
+rbsD
+	uDKDeD
+	`D!FHD
+	<DW
+DLDO
+PeDO
+T2Dh
+	YFB
+D[DO
+DCDG
+>FVDl@
+DeDg
+xHKD
+)DZ@
+_DU@
+1D\@
+XN@	
+>^.D
+ Du@
+cD`@CDRD
+D1DO
+ D<D
+uU;DEa
+3C`;
+#BE8
+)F0F
+@<@5
+	BF	
+IF0F
+"F8D)F
+zD:M
+(h7*O
+ FyD
+q#i3r#i
+rci3sci
+:F1FhF
+AFhF
+OyD8M
+KY|D6H
+YF:F F
+"1F8F
+*FQF
+YF:F F
+2F9F
+pTp2F
+)F@F
+E0F]F(
+QF0F
+"IF0F
+AF0F
+F@F@!
+CF9F0F
+0FBF
+!F(F	
+F:F1F
+CF9F0F
+RFIF8F
+ZF)F
+IFPF
+2F)F F
+@hpGp
+4)F F
+1F F
+u(Fp
+(F:F
+C{D-L
+1F(F
+(F1F
+)F(F
+2F9F(F
+U|D>
+1F FZh
+1F FZh
+!F8F
+FHF,3!F
+83!F	
+SFJF8F
+ZF0F9F
+!F F
+!F F
+"PF,3
+"XF83
+BFQF
+BFYF
+!FHF
+IF F
+!FHF
+IF F
+!FHF
+!F F
+!F F
+FPF{
+#F#X
+FBF(F
++pYF
+IF8F
+8F*F)F
+"IF0F
+8FRFYF
+BFAF
+RFYF
+CF2F)F
+tMxH
+$+F+X
+IF F2F
+@F@!
+KFZF
+9FCFXF
+;FZF
+MaM|D
+qF*F
+kx F,x
+#F#X
+QF2F
+2FQF
+3F8D
+#@;p
+AF(F
+(F:F9F
+(F2F1F
+JFAF3F(F
+RF9F(F
+0F9F
+1F"F
+8CDR
+.F%F
+YF8F
+3F8F
+&p*xT
+*F!F8F
+8F!F
+RF!F
+XF2F
+2F)F
+F!F0F
+!F@F
+0F!F
+RFIFXF
+"IF F
+;FIF0F
+2F!F(F
+"!F F
+"1F0F
+2F!F(F
+2F!FPF
+FSF*F
+"!F F
+1F F
+"1F0F
+2F!F
+3F\3
+3FP3
+3FD3p` F
+J{D-
+F)F0F
+!(FzD
+F*F0F
+!(FzD
+F+F0F
+!(FzD
+!(FzD
+YF0F
+YF0F
+:hPF
+IF0F
+IF0F
+:hPFYF
+!XFRF
++HxD
+"F0F
+!F0F
+,	}D
+1F F
+1FXF
+!FZFHF
+"IFHF
+2FQF8F
+3FJFQFPF
+"QFPF
+RFQFPF
+2FQFPF
+"QFPF
+2FQF8F
+1F8F
+!F;F2F@F
+!F8F
+AFHF
+ZFIF(F
+ZFIFHF
+F+FJFHF
+9F(FJF
+"1F F
+9FJF(F
+"F)F(F
+"AF F
+JFQF(F
+"F)F(F
+"!F F
+2F!F F
+RFAF(F
+IF(F
+IF@F
+IFPF
+")F(F
+2F)F(F
+")F(F
+2F)F(F
+ #F(F
+"9F(F
+0F*FIF
+"AF(F
+IFPF*F
+:FAFXF
+aZ`pG
+|3CC
+`w@O
+a^@O
+j1DO
+`3@O
+"D:D
+#D3D
+b~@	
+GFP@
+bD D
+Db@cDFF
+Z@`D
+	dDO
+B@aD
+aSDO
+TDw@O
+ADw@
+~V@O
+[DV@
+i_@O
+TDF@tD
+sD;D
+'FtF
+F3C	
+l CL
+b$cD
+J@7F
+'D1D
+8D^@
+M@BD
+*Ds@
+|ADU@
+,F*a
+3C`;
+#BE8
+)F0F
+@<@5
+	BF	
+IF0F
+"F8D)F
+#h1Ffh FZ
+z+pc
+|+rc
+kr#i
+ksci
+~+tc
+1F F
+F8"0F
+:F1FhF
+AFhF
+FKGJ-
+X(FBN
+$ 9F(F
+(FYF
+|$PF
+zra!
+zrQF(F
+`C`Q
+aCa@
+aCaE
+(h2F[
+\FJx
+FIh,F
+|bYD
+U%D:@(DZ@^
+,&D@
+zbMD
+u2`D
+oB{DgF
+F:D2D
+FL@8
+L@@DO
+|4DO
+(`BD
+sa'C)D[
+,0/@
+uh>DO
+(0aD
+<'DO
+,0rD
+<WD[
+"%Dp@
+3F(D
+qeTD
+W[E:D
+3C`;
+#BE8
+)F0F
+@<@5
+(	BF	
+IF0F
+"F8D)F
+#h1Ffh FZ
+z*pb
+|*rb
+jr"i
+jsbi
+~*tb
+# *vb
+jv"j
+'0+w
+kwcj
+1F F
+F8"0F
+F|DhF
+Y"FmF3h
+QFhF
+3h F
+BF9FhF
+IFhF
+![J-
+{D(F
+AF(F
+(F!F
+ FIF
+ yDR
+zra!0F
+zr1F(F
+|6*)
+g&3g
+T@]@
+#B@K@
+#F,F
+#F0F,F
+!F*F
+SFYF
+VAFK@
+[$h@
+]FTF
+@q@"F+F
+D@M@ F)F^
+UFCF"
+PFQF
+"@+@^
+#`@i@2C;C
+BFKF2C;C
+FCFO
+rKFK
+LFBFC
+	DFMF
+	0F9F
+,#b@k@
+0xiA
+7F.F^
+	WFC
+t]F_A
+[F5F[
+6#V@_@
+#YFD
+@HFE
+5p@y@
+VF_F?
+{@GFF
+@FOAIF
+}ABF&FKF/F
+:ED@M@PFYFP@Y@
+5F>FTFC
+	DFMF
+#B@K@
+IF"C
++CGFMF
+AF>F
+50FI
+,F5F
+[Fy@
+#HFA
+t@}@&F/F\F]F
+t_AD
+#P@Y@
+PFYF
+KF_@D
+SFBF
+[#QFZF
+1@:@V
+b@KFk@VF_F
+iABF
+@2F;F
+gF@O@0F9FB
+TFQF
+j@s@UF_
+WFAF
+RF[F
+DFIF
+2F;F
+FRFD
+F[F3C
+#B@K@
+OF[Fm
+@0Fp
+BF9F
+VF}AF@_FO@0Fr
+y@p@
+M@IF
+D@@F
+k@b@HFQF
+#DE8
+)F0F
+P	)FBF	
+IF0F
+"F8D)F
+'chO
+	"hI
+jpbi
+|*qb
+jq"i
+~*sb
+' *t
+jtbj
+# *ub
+ju"j
+/ *v
++ *wb
+! bk
+" bk
+% "k
+& "k
+10cl
+20cl
+50#l
+60#l
+1F F
+Fp"0F
+F|DhF
+Y"FmF3h7
+QFhF
+3h F
+BF9FhF
+IFhF
+![J-
+{D(F
+AF(F
+(F!F
+ FIF
+zra!0F
+zr1F(F
+#|DjF
+FdY%h
+"2`;`
+#~DjF
+)`"`
+#|DjF
+FdY%h
+8F1h
+DjF0#
+*F;F1F FB
+"hkh
+F|DjF0#
+	(FB
+3IFB
+(F+`
+*h{h
+OkF}D
+ F !
+i F+`
+*F1F
+9F2F
+8F1F
+$zh3h
+!F8F
+hkFnF
+`n` `
+;ha`
+ah(F
+rB#h
+3#`+h
+`+` Fp
+O	Ch
+FpG[
+)F0F
+kh|	
+;hh!
+pGJhR
+&@3F
+*F@F
+PF!F
+#F@F@F
+pGJhR
+PBpG@B
+#;`u
+)F8F
+)F8F
+C{D)M
+FHF]Y
+hFnF
+IF F
+##`P
+AFhF
+*F1F8F
+2F)F8F
+dB<`
+"F)F8F
+*F!F8F
+vB>`
+%FCL{D
+9F@F
+9FXF
+-cX"F
+2FIF@F
+ AFHF
+*"F	
+A{D6M
+!hF+h
+BFhF@
+hFlF
+9F0F
+F#FcY
+l	(F
+1FXF
+YF(F
+1F8F
+:F)F(F^
+9F(F
+33Q3Y
+XHFS`2Y
+X0`HFS
+ r`S
+XFaFl
+9FHF
+)FJF(F
+F3`a
+9FHF
+JF)F(F
+2F+F!F
+*F!F
+)F F
+*F!F
+]IF,
+D Fl
+D Fl
+F#I{D
+_X;h
+F*FhF
+F+F2F0F
+"h73
+"h03
+)F0F"F
+*FmX
+IF@F
+>`@F
+QFHF"F@
+8FCFJF
+5CF F
+I#F:F
+"F)F8F
+!F(F
+FbY#F
+b)F0F
+@& $
+9FBF
+7F&F
+%>F'F
+>F'F
+4F>F
+O{DPL
+YF(F
+AF0F
+F(FAF
+AF0F
+1F(F
+2F)F(F
+*F1F0F
+AF0F
+HF1F
+o|DeY"F*h
+2F8FIF
+FYY F
+IF F
+[FRF(F
+!F(F
+!F(F
+[FRF(F
+!F(F
+!(F	
+*F)F8F
+JF9F(F
+!F(F
+3F!F(F	
+!(F	
+*F F
+)F@F
+BF9F8F
+*FYFXF
+!F0F
+"F1F0F
+:FQFPF
+ZFIFHF
+<F7F
+*F!F F
+F>F'F
+BFQFPF
+*FIFHF
+3F>F'F,F
+F!F8F
+"F9F8F
+2F!F F
+RF9F8F
+JFYFXF
+!]YhFO
+AFhF
+:F1FhF
+3F*F9F F
+	 BE
+2F)F F
+"!F F
+"9F8F
+2F)F F
+2F)F8F
+"!F F
+AF8F
+!(FzD
+!0FzD
+2F!F8F
+!@FzD
+AF8F
+3F"FIF8F
+!@FzD
+!PFzD
+AF8F
+3F"FIF8F
+!@FzD
+QFHF
+*F!F8F
+!@FzD
+AF8F
+2F!F8F
+!@FzD
+AF8F
+F&F,F
+F)h8F
+ihHF
+JF9F0F
+%F4FFF
+QHxD
+AF8F
+QFHF
+GK{D
+3F*F!F8F
+!@FzD
+AF8F
+2F!F8F
+!@FzD
+AF8F
+'HxD
+%F4FFF
+%F4FFF
+L50F)F
+*F1F0F
+F"X#Fqm(
+SF"FIF0F
+BF!F(F
+AFXF
+ZFIFHF
+BFIF8F
+9F8F
+BF9F8F
+F~D	
+IF"FXF
+4X@FS
+:FAF0F
+1F0F
+:FQF(F
+)F(F
+2F!F
+!F F
+QF F
+@F"F)F
+AFPF	
+*FAFPF	
+DAFPFJF	
+AFPF0"	
+:FJDXF
+1F@F0#
+"F1F@F
+;h@F
+@F*F1F
+kn F
+*F!F`
+)F F
+*F!F
+FKGJ{D-
+!(F#h
+2F1F@F
+9F@F
+BFQFPF
+9FPF
+0BFQFPF
+9FPF
+02FQFPF
+9FPF
+!(FzD
+"FhF
+yh3h F
+JFIF(F
+QF(F
+")F F
+:F!F F
+9F F
+:F1F0F
+9F0F
+2FIF(F
+QF(F
+!(FzD
+:F)F(F
+9F(F
+1F2F@F
+QF@F
+!@FzD
+:FAF@F
+9F@F
+0F"F!F
+:F1F0F
+QF(F
+*F;hIF0F
+:F1F0F
+9F0F
+*FIF@F
+:FAF@F
+QF(F
+")F F
+:F!F F
+9F F
+QF(F
+K*F)F
+QF(F
+*F!F F3h
+:F!F F
+9F F
+:F1F0F
+:F)F(F
+"F)F(F
+QF(F
+BF)F(F
+:F)F(F
+QF@F
+!@FzD
+9F@F
+:FAF@F
+I{D[X
+PF1h
+AFHF
+FtNuM
+QF F
+AF F
+,QF3hPF
+AFPF
+33`"F!F8F
+AF8F
+:F+h
+:F+h
+"F+h
+QF F
+ZF$5
+HxDpG
+%.F(D
+o$5`o
+ F|!
+"F!F(F
+K"F)F
+2F)F(F;h
+(F3h
+2F)F(F
+F9F8F
+2F9F8F
+!F*F
+L*F)F@F|D#h
+#h*FAFPF
+#hAF
+"AF(F
+1F(F
+2F)F(F
+9F:FHF
+^L*FIFHF|D#h
+2FIFHF
+RFIFHF
+2FIFHF
+JFAF@F
+2FAF@F
+,LQF
+PF|D#h
+#hRFAFXF
+2FYFXF
+T	|D
+ZFYF(F
+#@DAF
+D(F$5
+p%FO
+)FHF
+XF#F3D
+1F8F
+:FAF@F
+@F)F
+N:F9FPF~D3h
+)FPF
+RF3h
+3h:FQFPF
+)FPF
+01F0F
+0F)F
+:F9F(F
+SFBFYF(F
+[F:F9F(F
+9F(F
+2F)F
+9D"F
+9F"F
+:F)D
+ppGK
+`%xM
+`2Fp
++h3p+h
+ppGK
+{K|J{D-
+!F@F
+	(FIF
+IF@F
+BFAFPF
+ F;h
+1FPF
+GL*F)FXF|D#h
+1FXF
+YFXF
+JFYFXF
+IFXF
+*FYFXF
+1FXF
+YFXF|D#h
+JFYFXF
+IFXF
+YFPF
+"YFXF
+JFYFXF
+!gY#F
+FYFHF
+ F;h
+AFHF
+ZFQFHF
+AF F
+JF!F F
+IF F
++F2F
+!FHF
+4XF{D
+"FXF1F
+ZF F
+*F!F F
+)F F
+!F"F
+1F"FXF
+1F2F0F
+IF0F
+IF0F
+IFXF
+;hZF
+)FXF
+*FYFXF
+PF;h
+*FQFPF
+QFRF
+*F9F8F
+IFPF
+AF2F
+)F8F
+*F9F8F
+AF2F
+*F9F8F
+IF@F
+AFBF@F;h
+IF@F
+*F1F0F
+ZFXF
+IFXF
+"F3F
+1F(F
+*F(F
+1F(F
+ZF1F(F
+SFJFAF(F
+CF2FAF(F
+AF(F
+KFBF1F F
+= F%
+KFBF1F F
+7K8J{D-
+h3h+
+!F(F
+QF(F
+9FPF
+O|D 
+2F9F(F
+J0F{DzD
+cc`#`
+2FIF(F
+<0[E@
+2FAF(F
+LF{D
+2FAF(F
+9HxD
+2F9F(F
+0HxD
+!0FzD
+2FAF(F
+"K#I{DBh
+FH#8F
+hF	!nF
+2F!F F
+GJHIzDCh-
+ 2h#
+<#8F
+)F(FjFlF
+BF)F(F
+BF!F F
+"F)F(F
+.K/I{DBh-
+"9F8F
+:F!F F
+F+h3D+`<h
+PMDN
+EDEE,
+P5DH
+P5DN
+icDUi
+EDUaEE,
+`#h3DN
+#fE,
+^mrD
+9R	RB
+> FC
+DQEO
+YKZJ{D-
+h,#O
+	AFJF@F
+BF!F F
+JFAF@F
+BF!F F
+`XhI
+eEbD
+ .DE
+> FE
+pBVD
+3h	$
+bjh	*
+ 3	"
+>(FD
+DbEO
+XKYJ{D-
+h,#O
+	AFJF@F
+BF!F F
+JFAF@F
+BF!F F
+YKZJ{D-
+h,#O
+	AFJF@F
+BF!F F
+JFAF@F
+BF!F F
+T%{D-
+5hFoF{Dcf
+cgfe`
+bec%ded
+`"b"e
+|t{DyD
+ge!c
+Ht{DyD
+1gf 
+{DzD
+3`e 
+bec%ded
+`!b!e
+O{DyD
+1gf 
+%{De`yD
+c`e!c%a 
+bec%ded
+`ba=
+"{De`yD
+"{De`yD
+{DcfzD
+O{DzD
+e`ge"c
+c%aea
+bec%ded
+H{DzD
+TNxD
+t@e``b
+C`e 
+c%aea
+bec%ded
+O{DzD
+2gf 
+"AF@F
+"AF@F
+"@FO
+!hFzD
+jFAF@F
+"9F8F
+F}D.h
+ ,`p
+O{D/M
+AF F
+*FAF F
+*F1F F
+1F F
+*F1F F
+"IF F
+ZFQF F
+BF9F(F
+F#H{D
+JF1F
+RF1F F
+9F*F
+(F2F
+#e F
+0#$# %
+AepG
+epG-
+RFYF0F
+ME0F,F(
+JFAF0F
+AF0F
+8F"FAF
+0FRFYF
+RFYF0F
+ Fd!
+F(F;hyDA
+r F1F
+/K0J{D-
+0yDC
+"@FO
+*FAF8F
+1F8F
+tKuJ{D-
+mOAFmK(F
+zD<`
+8F3h
+bJbKAFzD
+`(F_JzD
+9FP"(F
+P"9F(F
+P"8F
+AFzD(F
+"F!F(F
+P"9F(F
+P"9F(F
+7I8FP"yD
+/HxD
+9FP"(F
+$HxD
+AFzD(F
+FZ`pG
+xG@i
+jwliK
+VsB@
+3D'D,i
+2F.i
+D"@NiwDB@
+jtDV@I
+sc<D
+O?p@gD
+D:@Z@
+p`bD
+BD{@D
+@vDG@
+/a^@A
+D"!D
+D3@:D{@N
+00vD
+rD#D
+70vDPD
+:D1@N
+GqD'D
+qrsD"D:D
+007D
+DqDC@C
+1qVDK@
+21D:D
+`7K@
+gsD_D
+pFX@
+D7DH@
+DX@Y@
+DA@C@
+D;DH@I
+3CJDX@
+D0DY@G
+p GDA@
+D.X@
+)N8D
+7Dp@E
+[RJD
+\DK@
+SsJD
+sDT@	
+GDT@#D
+jaAD
+3C`;
+#BE8
+)F0F
+@<@5
+	BF	
+IF0F
+"F8D)F
+#h1Ffh FZ
+q#i+r#i
+rci+sci
+1F F
+F8"0F
+:F1F F
+AF F
+3J4IzD-
+YFJF F
+")FHF
+2FQF
+YFJF F
+FEh	"	L	H|DxD
+#i;`
+8txD
+#i;`
+VtxD
+ *`#`8
+M|D}D
+`pGo
+FEh	"
+rtxD
+#i;`
+M|D}D
+M	#}D
+#i;`
+M|D}D
+#i;`
+DTxD
+#i;`
+M|D}D
+#i;`
+bhBE
+"ici:`3`
+gzDO
+1F(F
+"9F(F
+(FYF
+"YF(F
+YF(F
+JF@FYF
+JF0F
+;h F
+1F(F
+ZF(F
+F1FV
+BF)F F
+ F)F
+3h8F
+)F8F
+#\ D +
+BF+F
++FBFQF
+"(FyD
+"(FyD
+"(FyD
+"(FyD
+"(FyD
+"(FyD
+"(FyD
+:F(F
+)F F
+"(FyD
+'F!F
+KFBF8F
+	@.4FQF@F(
+#FbY@(
+"F9F(F
+ELF0FYF(
+,F&D"F
+EDFHFQF(
+)F@F
++F2F)F8F
+(F@!
+FXF)F(
+,+FO
+r+`k`@F
+9FXF
+DCF4
+XFkhJF9FsD
+#Flh
+F(FO
+ FKF
+BF9F(F
+F"FbY
+h9F0F
+!F@F
+0F !
+1F@F
+"i9F@F
+SFYF
+"F@FQD
+ZFQF(F
+IF(F
+@#:FIF@F
+ZFQF(F
+:FAF(F
+AF(F
+;F0F
+F}DDh
+0h0*N
+!F8F
+1F@F
+CF!F8F*F
+1F(F
+1F@F+D
+1F@F
+1F@F*F
+!F8F
+[FIF8F
+TKUJ-
+FFK}D
+*FAFXF
+%RX1F
+F,F+F
+<h>F	
+!@K@
+#|D!
+$0N@
+Z@c@C
+mA;C2CL@
+0b	AF
+i 3W
+lJ@P
+ar@ZaQ@
+(p!D
+`B@Z`J@
+D>FYi
+n4DV
+(Pb@
+`E@S
+,l@X`
+aYaCE
+O{DMM
+F[Y@F
+:F1F@Fc`
+0caE
+eFtFT
+2F)F F
+2F)F F
+e@n@
+0	a@
+0UJ@
+0Qa@
+05e@B@]@
+( 6i
+si2F
+C,qO
+(nc@
+(^P@
+	c"D
+D.p1
+*sip
+!"F@F
+0`q`
++F*FQF@F
+(hih
+<0`q`
+<FEF@F9F
+CFBF
+99F8F
+GF@F
+9F8F
+1]EE
+3F2F
+3]EE
+3F2F
++F+X
+6ihNE
+h `a`
+#F"F
+;F:F
+RFKF
+%F{D
+H7{D
+##`c`
+*FYF0F
+#F"F9F0F
+*FYF0F
+FyDzD
+<6{D*F
+0;`{`
+`#`c`
+1FHF
+5{D-
+FNF8
+(%{D
+4{DRF
+RFYFHF
+)F@"@F
+4{D:F
+:FYFPF
+)F@" F
+F{D	
+JzD	
+"YF@F
+*F@# F1D
+*F1F F
+JzD	
+1F " F
+[HxD
+YK{D
+*F@# F1D
+FHxD
+?K{Di
+>HxD
+=HxD
+;HxD
+:JzD
+9HxD
+8JzD0
+~#F8F
+&F+D
+.\4D
+0K1J{D-
+!KF8F
+KpGo
+FpG8
+F)`8F
+"F1F(F
+1F(F
+1F(F
+"F1F(F
+1F(F
+FCF:F1F(F
+D1F(F"F
+1F(F0"
+)F F
+"F1F(F
+1F(F
+"F1F(F
+1F(F
+"F8`
+AF8`8F
+AF8F
+"F1F(F
+1F(F
+*F1F`i
+ga%a
+BFIF
+%a)F
+;h<`
+97FE
+I{DyD
+`{D]
+XZhR
+XehU
+YchS
+G F@!
+1F*F
+ppG(
+FpGO
+ppGp
+2F)F
+"hI*z
+i[FJF
++hj4
+(DIF
+ CDkb
+QF@F`
+(D.FIF"F
+SD;`hb
+QF@F`
+;hCD;`5
+#hH;
+zj@F
+9h;i
+i*F0F
+ppGO
+apGO
+ppGI
+F@")F
+4`0F)F
+F"hI*
+ppG.K
+F.I{D
+\X#h
+)F.D=F
+AF;F
+1h(F
+"hI*F
+%hI-W
+ppGO
+ppGO
+1K@a@
+ F)F+F"F
+ F#F
+]Y!F+ha
+F]Y F+ha
+]Y!F+ha
+F]Y F+ha
+x&CG
+&'CyKG
+31N@
+7~@O@O
+\y@^
+34a@
+ h[Fah*F
+!F@F
+8`y`
+*F)F@F
+>:`{`
+35k@
+1K@i@O
+lO@\
+,N@W
+4c@a@*FO
+34a@
+ h[Fah*F
+!F@F
+8`y`
+*F)F@F
+>:`{`
+KzD{D
+ "3"
+"F!F
+" FyD
+ "3"
+I8FyD
+I8FyD
+I@FyD
+}I@FyD
+zIPFyD
+9F@F
+" FyD
+cIPFyD
+OI@FyD
+LI@FyD
+IIPFyD
+" FyD
+?HxD
+&HxD
+#b@k@
+#b@k@
+#B@K@
+T@]@
+B@K@
+`@i@J
+s9p!
+9qxq
+r9s{s
+9FPF
+"F1F
+)F+F
+$aF:CO
+80sF
+0>F(
+:F9F@F
+O+xc@
+:F9F0F
+1CF(
+BFAF0F
+3F3X
+FXF%D
++F"F9F0F
+JFAF0F
+8FIF
+{DRX
+|4{D
+h4{D
+BF!F(F
+ !+F"FPF
+ !+FPF2F
+ 2PF
+(FnI
+"FAF+FPF
+!F+F
+=HxD
+;I[F
+6HxD
+4I[F
+/H0NxD
+-I~D[F	
+)HxD
+)P&DP
+pGDK-
+G{DCL
+-2F9F(F
+i2F9F(F
+"dcd
+Tx}D;N
++FSy
+$2hC
+.zpO
+jh+hT@
+Fah+F"F
+8`y`
++F*FQF@F
+*hkh
+:`{`
+1]EE
+3F2F
+3]EE
+3F2F
+RFCF
+AKhFh
+hs@ H
+CThC
+3AH@
+1#\@T`
+F@"HF
+a;"O
+0FOF
+bgEC
+2F8F
+:F0F
+ <S@A
+:F0F
+(F2F
+*F0F
+@B@*a$
+@B@ja%
+@B@*a$
+@B@ja%
+sHrFxD`D
+lOuF
+@B@*a$
+@B@ja%
+RIrFyDaD
+vFFM
+@B@2a$
+@B@ra%
+/IyDaD
+#D D
+G{D3N
+Y(F3hG
+BF9F(F
+3h@F
+}DlN	
+#M@B
+\@J@
+ k@4
+*F!F0F
+}ps@
+s>rO
+#>sO
+>qzq
+!"F@F
+0`q`
++F*FQF@F
+(hih
+<0`q`
+1]EE
+3F2F
+3]EE
+3F2F
+RFCF
+!F0F
+h.DYh
+0hqh
+RF9F[F
+"AFXF
+5 4 -
+ #(F
+%zD	
+0hqh
+"9FKF
+"AFXF
+a@#:F FAD
+:FAD F
+hJzD
+@#:F FAD
+9K{D
+2K{D2I
+/HxD
+.K{D
+'HxD
+%K{D
+JzDX
+#"F@F
+@FIF
+)D#D
+#"F@F
+@FIF
+AFKF
+/>FQFO
+&@F2F
+@FIF
+"IFXF
+!F(F
+2F9F(F
+ F@!
+0FIF
+aKbJ{D-
+@F"F
+FMF	
+(48F!F
+*FQF8F
+7Dx@
+5EF@
+vfb@
+3Cb@
+CFZ@sF^@
+	|@+D
+rb^@O
+gi<F
+F*D}k&D
+`Z`B
+aJhZa
+bJiZb
+bpGo
+DbcZh
+@#(F
+!F(F
+*k+FPFYF
+F|DhF
+9FhF
+#h8F
+JFAFhF
+[F2FQFhF
+#=I-
+QX|D9H
+xD	hO
+KF9F
+JF!FPF
+F"J{D
+0F@!
+F@"0F
+3F2F@!@F
+*F1F
+2F;F)F F
+*F9F
+;F2F)F F
+(PJ{D-
+9FHF
+1FHF
+2F)F F
+KFBF9F F
+QF F
+(M|D
+#FdY
+RF+F1FHF
+HF9F
+(F1F
+RKSJ{D-
+NM F
+ F}D)F
+>M@Fr"}D
+3HxD
+(F3h
+ }DyD
+ F)F
++j@h*
+J*FJ
+%3F/F
+^A*F@
+NA(F
+uA F
+IF@F
+BFKF
+	BFKF
+p@ `^h
+i"aZiba
+i%beb
+ed(Fp
+F@lh
+#(FAF
+ld"F
+:F40
+	2FJ
+!sGF&r	
+3F9F
+9F(F
+3h F
+JFAF(F
+QF(F
+1J2IzD-
+BF;F)F	
+"FYF
+"JK{D
+"EK{D
+"@K{D
+";K{D
+"6K{D
+"1K{D
+",K{D
+"'K{D
+""K{D
+x`zhH
+IyDQ
+x`{h
+{h[h;+
+{h[i
+{h[i
+{h[i
+x`{h
+!	K{D
+x`:L|D{h
+3{a{h[i
+lr{i
+{h[i
+3{a{h
+`{hZh
+x`9`bL|D
+rZa;h[i
+;h[i
+`;h[iZ
+;hZa
+;h[i
+F;hZ`
+;h[i
+a;h[i
+lr;hZa;h
+x`xh
+x`{h
+#{c{h
+x,+@
+x:+<
+yj{h
+D{bzj{h
+x0;O
+x0;d!
+b9j{h
+D;b:j{h
+x +@
+h{h	3
+x:+<
+yj{h
+D{bzj{h	3
+D{b9j{h
+D;b:j{h
+x0;O
+x0;d!
+{kzh
+3{c{kzh
+x:+<
+"=IyD
+D{bzj
+D;b:j
+4	K{D
+@M}D
+`?K{D
+;K{D
+4K{D
+`$K{D
+WK{D{`O
+4TK{D
+PK{D
+HK{D
+F7Kxh
+`3K{D
+4.Kzh
+SF\F[
+CFLF[
++F4F
+F!F$7
+x`9`O
+4[K{D
+WK{D
+SK{D
+4OK{D
+OK{D
+A#MJzD
+@FIFZ
+FBK{D
+DAJzD
+(F1FZ
+F7K{D
+D6JzD
+F'K{D
+x`9`
+a+!xh
+xa{i
+-!xh
+xa{i
+8a;i
+hZB;h
+x`yh
+x`9`;h
+x`9`
+DZh;h
+DZh{h
+ac{`{h
+x`9`{h
+zh;h
+3{`;h
+3;`{h
+K{Dzh
+`zhRh
+{h[h
+x`xh
+	K{D
+Gx`{h
+G	K{D
+h{`{h
+x`9`O
+3;`;h
+3;`;h
+k;hZ
+x.+/
+x/+*
+x9+%
+k;hZ
+xE+*
+3;`;h
+F;hZ
+*{hZa{h
+x`{h
+4{h[i
+BK{D
+Gxa{i
+{h[i
+F=K{D
+;K{D
+Gxa{i
+#'IyDxi
+IyDxi
+IyDxi
+3{`{h
+3{`{h
+3{`{h
+x`9`;h
+#{a;h
+x"+	
+3{a{i
+x\+@
+xu+@
+#{a;i
+#{a{i
+#{a{h
+_K{D
+FZK{D
+3{a{i
+JK{D
+x`{h
+3{`{h
+xa{i
+xa{i
+	K{D
+x`{h
+x`9`;h
+"6K{D
+"/K{D
+"(K{D
+"Za;h
+9hxh
+x/+	
+9hxh
+9hxh
+9hxh
+x`9`;h
+7K{D
+8`;h
+8`;h
+8`;h
+sK{D
+Gxc{k
+{koJzD
+lK{D
+xa;jZ
+IK{D
+Gxc{k
+=K{D
+3;b:j{j
+6K{D
+{k["
+3;c;k
+#;b6
+D;c{jZ
+:c,"
+:c "
+3;b:j{j
+G;kZ
+:c]"
+p;kZ
+x`9`;h
+]K{D
+8`;h
+8`;h
+>K{D
+8`;h
+8`;h
+8`;h
+D{c:
+xa{i#`;kZ
+8a;i#`{i
+F#Dzh
+#;b;j
+#;c$
+xK{D
+qK{D
+3;c:k{j
+iK{D
+GhK{D
+#;ct
+c{jZ
+p,K{D
+G(K{D
+3;c:k{j
+!K{D
+x`{h
+x`9`{h
+x`9`{h
+x`9`{h:h
+`;hzhZ`
+("yh
+x`9`{h
+{h:h
+`z`{h
+x`9`8h
+`z`xh
+x`9`{h
+hRhZ`{h
+x`9`9hxh
+x`9`
+x`9`9hxh
+`{iZh{hZ`{h
+hzhZ`
+{h[hzh
+"Z`{iZh{i
+3{a;i
+h;a;i
+bzhyi
+x`{h
+x`{h
+x`{h
+x`{h
+x`{h
+x`9`
+h;a{i
+zi;h
+x`9`
+h;a{i
+zi;h
+x`9`
+h;a{i
+zi;h
+x`9`
+h;a{i
+zi;h
+x`{h
+x`{h
+x`{h
+x`9`9hxh
+x`9`
+#;a{h
+`{hZi
+hZa{h
+h{a 
+h:iZ`
+h;a{i
+h{a{i
+x`{h
+3{`}
+3{`u
+3{`m
+3{`{h
+3{`{h
+3{`9
+x"+-
+`zhQ
+`zhQ
+`zhQ
+`zhQ
+`zhQ
+8K{D
+F2K{D
+`2K{D
+/K{D
+a-K{D
+xa{i
+)K{D
+&K{D
+h%JzD
+2Z`$K{D
+h#JzD
+`"K{D
+h!JzD
+` K{D
+xa{i
+x`9`{h
+*K{D
+'K{D
+h	K{D
+x`{h
+x`9`/K{D
+&K{D
+h	K{D
+x`9`
+x`9`
+`z`;`
+#;e	
+}K{D
+sK{D
+pK{D
+#{c{h
+xc{k
+xc{k
+#;cVK{D
+UK{D
+iyi8iPL|D%F
+$@=h
+sFHJzDaF0F
+8c;k
+;k{d@K{D
+>K{D
+8c;k
+zl;k
+D{d3K{D
+0K{D
+;{d.K{D
+p+K{D
+w(K{D
+3{d#K{D
+`z`;`
+;a;i
+;hzh
+x`9`
+F;hzh
+8a;i
+;`9h8i
+x`	K{D
+6K{D
+4K{D
+`+K{D
+(K{D
+h[h{`'K{D
+#K{D
+3;`;h
+3;a:i{h
+3{a-
+#{a$
+{a{i
+x`9`
+3{`;h
+3;`{h
+`z`{h
+#;a-
+u;i[
+p;i[
+3;a:i{h
+#{a;iZ
+;{a{i
+x`{h
+3;a;i
+3{a{i
+3{`{h
+`z`{h
+x`9`;hzhZ`{h:h
+x`{h
+x`9`;h
+F9hxh
+x`9`;h[h:h
+x`9`{h
+h{azi{h
+{h[h;a;h
+`{i:hZ`;hzi
+h:iZ`
+x`{hZh{h
+x`{hZh{h
+{hzh
+`{hzhZ`
+#;p;F
+x`{h
+x`9`
+!K{D
+!K{D
+x`9`{h
+!K{D
+ K{D
+x`9`9hxh
+`z`zh
+x`9`;h
+YK{D
+#;f{nZ
+\,zn;n
+CIyD
+\{n[
+BHxD
+@K{D
+h|nJ
+\,zn;n
+D{f;n
+3;f;nyn
+F;f0K{D
+3/JzD
+"*IyD
+"&IyD
+x`9`
+HK{D
+GK{D
+m#FJzD
+;K{D
+:K{D
+x#9JzD
+2K{D
+2K{D
+~#1JzD
+*K{D
+)K{D
+#(JzD
+!K{D
+!K{D
+# JzD
+x`xh
+`z`;`
+`z`;`	K{D
+x`	K{D
+	K{D
+x`	K{D
+	K{D
+`z`;`
+s	K{D
+	K{D
+`z`;`
+	K{D
+x`	K{D
+	K{D
+x`9`
+	K{D
+x`	K{D
+	K{D
+`z`	K{D
+	K{D
+x`	K{D
+	K{D
+x`	K{D
+	K{D
+xa{i
+xa;i
+`z`;`
+;hzh
+`z`;`
+x`9`9hxh
+x`9`9hxh
+x`9`9hxh
+x`9`9hxh
+`z`;`;~
+;hzh
+`z`;`
+`z`zh
+x`{h
+"K{D
+!K{D
+# JzD
+{hzh
+x`9`
+x`{h
+x`{h
+MK{D
+LK{D
+3KJzD
+AK{D
+@K{D
+Is?JzD
+h;JzD
+h7JzD
+2K{D
+1K{D
+*30JzD
+h(JzD
+h JzD
+{hzh	2
+x`xh
+#{`#
+x`{h
+x`{h
+x`{h
+x`{h
+F;hR
+3;`;h
+#;`I
+F;hR
+x`{h
+yK{D
+yK{D
+#xJzD
+uK{D
+F;hR
+sK{D
+x`{h
+jK{D
+jK{D
+#iJzD
+3;`;h
+#;`)
+bK{D
+DXh_K{D
+F;hR
+x`{h
+WK{D
+WK{D
+#VJzD
+3;`;h
+PK{D
+#;` 
+LK{D
+F;hR
+HK{D
+F;hR
+DK{D
+F;hR
+3;`;h
+<K{D
+F;hR
+8K{D
+F;hR
+3;`;h
+2K{D[i
+0K{D[i
+.K{D
+#Sa{h
+`z`;`
+|&zD
+xa{i
+DZx{i
+D[hzi
+D[hzi
+3{bzj{h
+@4{D
+<4{D
+4$zD
+#{b\
+8a;i
+DZx;i
+FpIyD
+h"F]IyD
+FFIyD
+3{bzj{h
+7K{D
+6K{D
+s5JzD
+(K{D
+'K{D
+s&JzD
+x`{h[h{a{i[h;a{i
+cK{D
+bK{D
+#aJzD
+#{b^K{D
+8b;j
+ZK{D
+8b;j
+wJK{D
+8b;j
+;j[i
+BK{D
+BK{D
+#@JzD
+:K{D
+8b;j
+(K{D
+(K{D
+#&JzD
+x#K{D
+{h[h
+#{d{h
+xd{l
+c@ )
+xb{j
+8b;j
+06{D
+,6{D
+$&zD
+#p{k
+?0{k
+h{c{k
+p5{D
+l5{D
+d%zD
+kzhZ`
+xa{i
+{izhZ`{i
+{Zp{i
+Gxi)
+k#F[
+iZi{k[i
+? {kYi
+? {k
+hzkRi
+? {kYi
+?0{k
+h{c{k
+Fyjxl
+Fyjxl
+8d;l
+UK{D
+UK{D
+3SJzD
+Fyjxl
+Fyjxl
+8d;l
+!K{D
+!K{D
+8a;i
+xa{i
+{iZi
+1K{D
+1K{D
+WC/JzD
+xc{k
+x;c9k
+#{bxk
+xbxk
+\K{D
+[K{D
+CZJzD
+cxj(
+MK{D
+MK{D
+CKJzD
+a<j;j
+<K{D
+<K{D
+c:JzD
+0K{D
+/K{D
+c.JzD
+#K{D
+"K{D
+C!JzD
+K{D[i
+a	K{D[i
+xa{i
+)K{D
+(K{D
+S'JzD
+hZ`{i
+"xi!
+8a;i
+{h:i
+x`9`{h
+(K{D
+'K{D
+c&JzD
+]K{D
+\K{D
+/c[JzD
+PK{D
+OK{D
+;cNJzD
+CK{D
+CK{D
+cAJzD
+=K{D
+<K{D
+Ec;JzD
+5K{D
+8a;i
+*K{D
+*K{D
+Kc(JzD
+$K{D
+#K{D
+c"JzD
+x`9`;h
+`z`;`
+iK{D
+iK{D
+sgJzD
+]K{D
+]K{D
+s[JzD
+SK{D
+;hzh
+HK{D
+HK{D
+sFJzD
+/K{D
+.K{D
+)s-JzD
+`z`;`;h
+xb{j
+{j[n
+k:hyhxj
+8b;j
+8b;j
+s~JzD
+#;a|i{i
+8b{i
+oK{D
+oK{D
+smJzD
+iK{D
+iK{D
+cgJzD
+8b;j
+^K{D
+]K{D
+s\JzD
+lzl9l
+8b;i
+CK{D
+CK{D
+sAJzD
+<K{D
+;K{D
+s:JzD
+x`9`{h
+`z`;`
+PK{D
+OK{D
+sNJzD
+EK{D
+EK{D
+sCJzD
+@K{D
+@K{D
+>JzD
+5K{D
+4K{D
+3JzD
+/K{D
+.K{D
+-JzD
+{i;`{i
+axi;h#JzDyh
+x`9`
+x`9`{h
+x`9`{h
+#{a{h
+`z`;`
+vK{D
+uK{D
+tJzD
+mK{D
+mK{D
+kJzD
+UK{D
+UK{D
+SJzD
+JK{D
+IK{D
+cHJzD
+CK{D
+CK{D
+AJzD
+7K{D
+6K{D
+5JzD
+2K{D
+1K{D
+0JzD
++K{D
++K{D
+)JzD
+`z`;`
+hZi{h[i
+{hZi
+j{h[i
+#{av
+#{a2
+hzhRi
+{h[i
+j{h[i
+#{a	
+#{a 
+`z`;`{h
+oK{D
+oK{D
+mJzD
+cK{D
+cK{D
+aJzD
+MK{D
+MK{D
+KJzD
+xa{i
+8a;i
+3{c'K{D
+&K{D
+%JzD
+!K{D
+ K{D
+#{c;l
+`z`;`
+#;a{i
+;hzh
+8a{i
+`z`;`
+#;a{i
+;hzh
+8a{i
+`z`;`
+#;c)
+aK{D
+`K{D
+7#_JzD
+XK{D
+XK{D
+>#VJzD
+MK{D
+LK{D
+E#KJzD
+9K{D
+8K{D
+V#7JzD
+3K{D
+2K{D
+Z#1JzD
+%K{D
+$K{D
+d##JzD
+8b;j
+xayi8j
+8a;i
+3K{D
+2K{D
+}#1JzD
+;i[x
+(K{D
+(K{D
+#&JzD
+h{b-
+h{b{j
+?K{D
+?K{D
+*c=JzD
+8a;i
+3K{D
+3K{D
+#1JzD
+-K{D
+(K{D
+(K{D
+#&JzD
+ K{D
+z{hyi
+8a;i
+y;hyi
+`z`;`
+iK{D
+iK{D
+#gJzD
+xa{i
+SK{D
+SK{D
+#QJzD
+hAIyD
+h:IyD
+3K{D
+2K{D
+31JzD
+Dzh*IyD
+"K{D
+"K{D
+3 JzD
+;hzi
+x`9`;h
+xK{D
+xK{D
+u3vJzD
+xa{i
+8a;i
+lK{D
+lK{D
+|3jJzD
+zi;iZ`{i
+aK{D
+`K{D
+3_JzD
+FQK{D
+LK{D
+DK{D
+DK{D
+3BJzD
+;K{D
+;K{D
+39JzD
+&K{D
+%K{D
+3$JzD
+	K{D
+`z`;`
+r:hJ
+xa{i
+$K{D
+#K{D
+3"JzD
+Fxh9
+IyDxi
+8axi%
+`z`;`;j
+xa{i
+`.K{DO"
+p-K{DX"Zp,K{DL"
+p+K{Dv"
+p*K{Ds"
+q)K{Dl"Zq(K{DC"
+q'K{Dv"
+q&K{DU"
+r%K{Dx"Zr$K{Dc"
+r#K{DT"
+r"K{DP"
+s!K{DL"Zs K{DG"
+K{DO"
+`.K{Dy"
+p-K{DG"Zp,K{DA"
+p+K{Dd"
+p*K{Dl"
+q)K{Do"Zq(K{Dp"
+q'K{Do"
+q&K{DP"
+r%K{DV"Zr$K{Dl"
+r#K{Dd"
+r"K{DA"
+s!K{DB"Zs K{Df"
+K{Dn"
+`.K{DW"
+p-K{Dz"Zp,K{DY"
+p+K{Dw"
+p*K{DF"
+q)K{Dx"Zq(K{DI"
+q'K{DU"
+q&K{Db"
+r%K{Di"Zr$K{DF"
+r#K{Dh"
+r"K{DM"
+s!K{Dm"Zs K{DN"
+K{DJ"
+8b;j
+8b;j
+~K{D
+}JzD
+zK{D
+!xK{D
+8b;j
+tK{D
+#{b%
+nK{D
+F{jR
+8b;j
+iK{D
+F{jR
+fK{D
+8b;j
+3{b{j
+\K{D
+[K{D
+ZJzD
+#{b 
+SK{D
+F{jR
+NK{D
+F{jR
+JK{D
+F{jR
+3{b{j
+DK{D
+AK{D
+>K{D
+<K{D
+9K{D
+7K{D
+6K{D
+4K{D
+4K{D
+s2JzD
+#{` 
+-K{D
+F{hR
+(K{D
+F{hR
+$K{D
+F{hR
+3{`{h
+t4{D
+p4{D
+h$zD
+@4{D
+<4{D
+4$zD
+(4{D
+3;c;k
+F8k3
+D{b{j[h
+{j[h
+D{j[h
+D{j[h
+{j[h
+{j[h
+D{j[h
+D{j[h
+8b;j
+a}K{D
+i{a{i
+wK{D
+wK{D
+suJzD
+crK{D
+oK{D
+jK{D
+fK{D
+eK{D
+dJzD
+#;aaK{D
+YK{D
+XK{D
+#WJzD
+TK{D
+TK{D
+#RJzD
+FK{D
+EK{D
+#DJzD
+BK{D
+=K{D
+=K{D
+#;JzD
+x`|K{D
+|K{D
+#zJzD
+vK{D
+uK{D
+stJzD
+pK{D
+oK{D
+nK{D
+"#mJzD
+FgK{D
+`gK{D
+eK{D
+eK{D
+)#cJzD
+`K{D
+1\K{D
+XK{D
+WK{D
+/#VJzD
+aQK{D
+GK{D
+FK{D
+sEJzD
+AK{D
+!?K{D
+>K{D
+?#=JzD
+;K{D
+8K{D
+4K{D
+/K{D
+/K{D
+E#-JzD
+*K{D
+(K{D
++K{D
+)K{D
+)K{D
+]#'JzD
+%K{D
+#{`!K{D
+x`{h
+`z`;`
+#{a;j
+;hzh
+xa{i
+	K{D
+#{fO
+8e;m
+;f:m
+ `a`
+FvK{D
+FoK{D
+aIyD
+\K{D
+[K{D
+#ZJzD
+d8m$
+EK{D
+DK{D
+#CJzD
+3{d?K{D
+1K{D
+0K{D
+#/JzD
+-K{D
+*K{D
+LK{D
+KK{D
+3JJzD
+@K{D
+?K{D
+3>JzD
+0K{D
+0K{D
+3.JzD
+&K{D
+%K{D
+Hs$JzD
+4;{D
+0;{D
+(+zD
+ ;{D
+L:{D
+,:{D
+ 0XB
+d9{D
+`9{D
+X)zD
+D9{D
+@9{D
+8)zD
+$9{D
+ 9{D
+!0YB
+l8{D
+h8{D
+`(zD
+T8{D
+(8{D
+d7{D
+`7{D
+X'zD
+!0YB
+|6{D
+l6{D
+h83O
+@6{D
+<6{D
+4&zD
+(6{D
+,5{D
+(5{D
+ %zD
+`4{D
+\4{D
+T$zD
+41[h
+41[h
+41[h
+41[h
+41[h
+41[h
+41[h
+41[h
+D	++
+81[h
+81[h
+81[h
+81[h
++F"F
+H1nK{D
+bK{D
+\1[K{D
+ZK{D
+<CYJzD
+5K{D
+4K{D
+BC3JzD
+1K{D
+.K{D
+,K{D
+)K{D
+#{`'
+&K{D
+"K{D
+hZh{h
+x`aK{D
+^K{D
+h[hzh
+[K{D
+[K{D
+WCYJzD
+WK{D
+SK{D
+" {h
+`MK{D
+JK{D
+GK{D
+DK{D
+?K{D
+?K{D
+jC=JzD
+;K{D
+7K{D
+4K{D
+.K{D
+:,IyD	h
+(K{D
+'K{D
+` K{D
+x`?K{D
+<K{D
+h[hzh
+9K{D
+9K{D
+C7JzD
+4K{D
+3K{D
+C2JzD
+0K{D
+,K{D
+" {h
+'K{D
+&K{D
+C%JzD
+`!K{D
+x`9`4K{D
+0K{D
+h[hzh
+.K{D
+-K{D
+C,JzD
+(K{D
+(K{D
+c&JzD
+$K{D
+"K{D
+h!JzD
+2yhC
+D:hZ`
+x`9`8K{D
+4K{D
+h[hzh
+2K{D
+1K{D
+C0JzD
+,K{D
+,K{D
+C*JzD
+(K{D
+$K{D
+" {h
+D:hZ`
+x`VK{D
+aSK{D
+OK{D
+D[hzh
+HK{D
+DK{D
+D[hzh
+?K{D
+<K{D
+a7JzD
+a/K{D
+-K{D
+)K{D
+(K{D
+C'JzD
+h[h{`
+7K{D
+#{`3K{D
+1K{D
+h[h{`{h
+.K{D
+(K{D
+`2K{D
+.K{D
+" {h
+`)K{D
+%K{D
+#K{D
+`z`;`;k
+3{bxj"
+8b;j
+RK{D
+QK{D
+cPJzD
+3:k9h
+F8j1
+q{kzj
+`z`;`
+zK{D
+yK{D
+cxJzD
+oK{D
+oK{D
+oSmJzD
+Fyl8l
+UIyD
+yl8l
+OK{D
+OK{D
+SMJzD
+IK{D
+IK{D
+SGJzD
+yi;i
+F:hyh
+;l:hyh
+5K{D
+4K{D
+S3JzD
+!K{D
+!K{D
+x`{h
+SK{D
+RK{D
+SQJzD
+IK{D
+HK{D
+SGJzD
+?K{D
+>K{D
+S=JzD
+x`{h
+4K{D
+3K{D
+S2JzD
+/K{D
+F FB
+x`{h
+$K{D
+#K{D
+S"JzD
+x`{h
+x`9`
+`z`;`
+'K{D
+'K{D
+S%JzD
+{i}"
+zi;h
+`z`;`
+aLK{D
+FK{D
+FK{D
+cDJzD
+AK{D
+@K{D
+c?JzD
+.K{D
+.K{D
+c,JzD
+(K{D
+j#JzD8h
+ffffff
+`z`;`;n
+P8{D
+L8{D
+D(zD
+;hzh
+x7{D
+L7{D
+H7{D
+@'zD
+07{D
+`6{D
+\6{D
+T&zD
+(6{D
+$6{D
+xc{k
+xd{l
+x5{D
+t5{D
+l%zD
+\5{D
+8c;k
+,5{D
+(5{D
+ %zD
+|4{D
+t$zD
+`4{D
+H4{D
+(4{D
+F[i{b{j
+zj9l
+G8b;j
+}K{D
+wK{D
+wK{D
+RsuJzD
+jK{D
+iK{D
+shJzD
+x`{h[h;b;j
+EK{D
+EK{D
+sCJzD
+xa8j
+0K{D
+/K{D
+s.JzD
+*K{D
+)K{D
+s(JzD
+#{b&
+xa{i
+3{bzj
+x`9`
+:hyh
+`z`;`
+a8K{D
+7K{D
+7K{D
+s5JzD
+xa{i
+0K{D
+0K{D
+c.JzD
+x`9`{h
+D[h=!
+0[xZ
+F#D="
+"lIyD
+FPK{D
+p{h[h
+Fxh!
+`z`;`
+h{b{j
+F;b;j
+;jzj
+39jzj
+x`9`
+#{aO
+dK{D
+dK{D
+sbJzD
+VK{D
+VK{D
+TJzD
+hxh!
+8a;i
+3{a{i
+?K{D
+?K{D
+s=JzD
+3K{D
+2K{D
+s1JzD
+x`9`{h[h
+3;a{h[h
+,K{D
+,K{D
+#*JzD
+9izi
+D{a{hZh{i
+{hZh{i
+x`9`{h
+9hxh
+9hxh
+`z`{h
+JzD(!
+FuK{D
+`K{D
+`K{D
+y#^JzD
+TK{D
+SK{D
+#RJzD
+'K{D
+'K{D
+%s%JzD
+`DK{D
+=K{D
+7K{D
+0K{D
+*K{D
+#K{D
+x`{h
+xa{i
+yK{D
+yK{D
+#wJzD
+pK{D
+pK{D
+#nJzD
+cK{D
+bK{D
+#aJzD
+a]K{D
+8a;i
+;i[i
+VK{D
+8a;i
+OK{D
+8a;i
+FK{D
+FK{D
+3DJzD
+iAJzD
+i:JzD
+i2JzD
+&K{D
+8a{h
+`z`;`
+xc{k
+hxk!
+Fxk!
+Fxk!
+Fxk!
+Fxk!
+Fxk!
+Fxk!
+Fxk!
+9mxk
+uK{D
+tK{D
+c3sJzD
+F;klJzD
+gK{D
+gK{D
+[seJzD
+;k_JzD !
+\K{D
+[K{D
+s3ZJzD
+QK{D
+PK{D
+y3OJzD
+KK{D
+JK{D
+~3IJzD
+}j{j
+F*F<IyD F 
+8K{D
+7K{D
+as6JzD
+exk 
+`z`;`
+OK{D
+OK{D
+NK{D
+3MJzD
+HK{D
+GK{D
+GK{D
+3EJzD
+@K{D
+@K{D
+?K{D
+3>JzD
+9K{D
+8K{D
+8K{D
+hs6JzD
+xa{i
+/K{D
+/K{D
+3-JzD
+;j%JzD
+#;a{j
+8axi 
+`z`;`
+NK{D
+NK{D
+MK{D
+3LJzD
+GK{D
+FK{D
+FK{D
+3DJzD
+?K{D
+?K{D
+>K{D
+3=JzD
+8K{D
+7K{D
+7K{D
+os5JzD
+xa{i
+.K{D
+.K{D
+3,JzD
+;h%JzD
+#;a;j
+8axi 
+`z`;`
+eK{D
+eK{D
+dK{D
+uscJzD
+^K{D
+]K{D
+]K{D
+3[JzD
+VK{D
+VK{D
+UK{D
+3TJzD
+OK{D
+NK{D
+NK{D
+3LJzD
+GK{D
+GK{D
+FK{D
+vsEJzD
+@K{D
+?K{D
+?K{D
+3=JzD
+xa{i
+6K{D
+6K{D
+34JzD
+;h-JzD
+#;a{j
+h#JzD#IyD
+8axi 
+`z`;`
+YK{D
+YK{D
+XK{D
+|sWJzD
+RK{D
+QK{D
+QK{D
+3OJzD
+JK{D
+JK{D
+IK{D
+3HJzD
+CK{D
+BK{D
+BK{D
+3@JzD
+;K{D
+;K{D
+:K{D
+}s9JzD
+xa{i
+2K{D
+1K{D
+30JzD
+;h)JzD
+#;a;j
+# JzD IyD
+8axi
+x`9`{h
+{h[j
+8a;i
+i{h[jzh
+jyh	lxh
++F"F
+IyD8i
+xa{h
+{i:i
+{i:i
+D{a{h
+xb8i
+s;b{h
+3;b{h[k
+{h[k
+3;b;j
+}K{D
+|K{D
+GC{JzD
+jyhIj
+FlIyD
+a{h[h
+{h[h
+FdK{D
+F[K{D
+a{h[i
+{h[i
+{h[i
+FPK{D
+FHK{D
+a{h[k
+{h[k
+F?K{D
+":IyD
+F1IyD
+k:j9h
+#F%JzD%IyD
+/K{D
+.K{D
+.K{D
+c,JzD
+'K{D
+'K{D
+&K{D
+C%JzD
+ K{D
+xa{i
+MK{D
+MK{D
+LK{D
+cKJzD
+FK{D
+EK{D
+EK{D
+CCJzD
+>K{D
+>K{D
+=K{D
+C<JzD
+7K{D
+6K{D
+6K{D
+C4JzD
+xa{i
+-K{D
+-K{D
+c+JzD
+x%JzD@!xi
+#;a;j
+8axi
+DK{D
+CK{D
+CK{D
+CAJzD
+<K{D
+<K{D
+;K{D
+C:JzD
+5K{D
+4K{D
+4K{D
+C2JzD
+xa{i
++K{D
++K{D
+C)JzD
+F!JzD
+8axi
+`z`;`
+RK{D
+RK{D
+QK{D
+CPJzD
+KK{D
+JK{D
+JK{D
+CHJzD
+CK{D
+CK{D
+BK{D
+CAJzD
+<K{D
+;K{D
+;K{D
+C9JzD
+.K{D
+-K{D
+C,JzD
+i;h$JzD
+`z`;`
+ZK{D
+ZK{D
+YK{D
+CXJzD
+SK{D
+RK{D
+RK{D
+CPJzD
+KK{D
+KK{D
+JK{D
+cIJzD
+DK{D
+CK{D
+CK{D
+CAJzD
+<K{D
+<K{D
+;K{D
+C:JzD
+xa{i
+3K{D
+2K{D
+C1JzD
+;h)JzD
+#;a{j
+8axi
+`z`;`
+PK{D
+PK{D
+OK{D
+SNJzD
+IK{D
+HK{D
+HK{D
+SFJzD
+AK{D
+AK{D
+@K{D
+S?JzD
+:K{D
+9K{D
+9K{D
+S7JzD
+xa{i
+0K{D
+0K{D
+S.JzD
+;h%JzD
+8axi
+`z`;`
+~K{D
+}K{D
+}K{D
+/S{JzD
+vK{D
+vK{D
+uK{D
+ctJzD
+oK{D
+nK{D
+nK{D
+1SlJzD
+gK{D
+gK{D
+fK{D
+2SeJzD
+]K{D
+]K{D
+7S[JzD
+aTK{D
+a;hSJzDO
+#;b&
+F@IyD F
+D{b;j
+3;b:j{l
+k6IyD
+D{b{j
+#"JzD
+x`{h
+;iZi;i
+:iQi:i
+Gxa{i
+~K{D
+S}JzD
+yK{D
+xK{D
+SwJzD
+`;i\h;i
+3F*F
+eK{D
+eK{D
+ScJzD
+]K{D
+\K{D
+S[JzD
+b{hZh
+8K{D
+8K{D
+S6JzD
+2K{D
+1K{D
+S0JzD
+{hZh
+{h[h
+(K{D
+'K{D
+c&JzD
+!K{D
+!K{D
+`z`;`
+c}JzD
+mzhZ`
+gK{D
+gK{D
+#ceJzD
+#;fj
+TK{D
+TK{D
+-cRJzD
+FKIyD
+xf{n
+HK{D
+GK{D
+2cFJzD
+@K{D
+?K{D
+9c>JzD
+#9IyD
+3;f;n
+oxo2
+`z`;`
+:K{D
+:K{D
+9K{D
+^c8JzD
+3K{D
+2K{D
+2K{D
+_c0JzD
++K{D
++K{D
+*K{D
+c)JzD
+$K{D
+#K{D
+#K{D
+ac!JzD
+#{a;h
+xa{i
+`z`;`
+MK{D
+MK{D
+LK{D
+ncKJzD
+FK{D
+EK{D
+EK{D
+ocCJzD
+>K{D
+>K{D
+=K{D
+c<JzD
+7K{D
+6K{D
+6K{D
+qc4JzD
+xa{i
+-K{D
+-K{D
+vc+JzD
+;h%JzD
+8axi
+`z`;`
+QK{D
+QK{D
+PK{D
+cOJzD
+JK{D
+IK{D
+IK{D
+cGJzD
+BK{D
+BK{D
+AK{D
+c@JzD
+;K{D
+:K{D
+:K{D
+c8JzD
+.K{D
+-K{D
+c,JzD
+i;h$JzD
+`z`;`
+VK{D
+VK{D
+UK{D
+cTJzD
+OK{D
+NK{D
+NK{D
+cLJzD
+GK{D
+GK{D
+FK{D
+cEJzD
+@K{D
+?K{D
+?K{D
+c=JzD
+xa{i
+6K{D
+6K{D
+c4JzD
+{i,JzD
+ `a`
+{h&JzD
+8axi
+`z`;`
+[K{D
+[K{D
+ZK{D
+cYJzD
+TK{D
+SK{D
+SK{D
+cQJzD
+LK{D
+LK{D
+KK{D
+cJJzD
+EK{D
+DK{D
+DK{D
+cBJzD
+=K{D
+=K{D
+<K{D
+s;JzD
+2K{D
+2K{D
+s0JzD
+i;h)JzD
+# JzD IyD
+`z`;`
+UK{D
+UK{D
+TK{D
+sSJzD
+NK{D
+MK{D
+MK{D
+sKJzD
+FK{D
+FK{D
+EK{D
+sDJzD
+?K{D
+>K{D
+>K{D
+s<JzD
+4K{D
+3K{D
+#s2JzD
+i)JzD
+i&JzD
+`z`;`
+OK{D
+OK{D
+NK{D
+9sMJzD
+HK{D
+GK{D
+GK{D
+:sEJzD
+@K{D
+@K{D
+?K{D
+;s>JzD
+9K{D
+8K{D
+8K{D
+<s6JzD
+.K{D
+-K{D
+Bs,JzD
+i%JzD
+`z`;`
+Ws~JzD
+yK{D
+xK{D
+xK{D
+cvJzD
+qK{D
+qK{D
+pK{D
+YsoJzD
+jK{D
+iK{D
+iK{D
+ZsgJzD
+bK{D
+bK{D
+aK{D
+[s`JzD
+[K{D
+ZK{D
+ZK{D
+\sXJzD
+SK{D
+SK{D
+RK{D
+]sQJzD
+>K{D
+=K{D
+cs<JzD
+;h0JzD
+#'JzD'IyD
+`z`;`
+:K{D
+:K{D
+9K{D
+s8JzD
+3K{D
+2K{D
+2K{D
+s0JzD
++K{D
++K{D
+*K{D
+s)JzD
+$K{D
+#K{D
+#K{D
+s!JzD
+xa{i
+`z`;`
+}K{D
+}K{D
+|K{D
+s{JzD
+vK{D
+uK{D
+uK{D
+ssJzD
+nK{D
+nK{D
+mK{D
+slJzD
+gK{D
+fK{D
+fK{D
+sdJzD
+_K{D
+_K{D
+^K{D
+c]JzD
+TK{D
+SK{D
+sRJzD
+jKJzD@!
+EK{D
+EK{D
+cCJzD
+j8JzDO
+#{a;k
+/K{D
+#.JzD.IyD
+`z`;`
+:K{D
+:K{D
+9K{D
+s8JzD
+3K{D
+2K{D
+2K{D
+s0JzD
++K{D
++K{D
+*K{D
+s)JzD
+$K{D
+#K{D
+#K{D
+s!JzD
+xa{i
+`z`;`
+:K{D
+:K{D
+9K{D
+8JzD
+3K{D
+2K{D
+2K{D
+0JzD
++K{D
++K{D
+*K{D
+)JzD
+$K{D
+#K{D
+#K{D
+!JzD
+#{a;h
+xa{i
+`z`;`
+MK{D
+MK{D
+LK{D
+KJzD
+FK{D
+EK{D
+EK{D
+CJzD
+>K{D
+>K{D
+=K{D
+<JzD
+7K{D
+6K{D
+6K{D
+4JzD
+xa{i
+-K{D
+-K{D
++JzD
+;h%JzD
+#;a;j
+8axi
+`z`;`
+:K{D
+:K{D
+9K{D
+8JzD
+3K{D
+2K{D
+2K{D
+0JzD
++K{D
++K{D
+*K{D
+)JzD
+$K{D
+#K{D
+#K{D
+!JzD
+#{a;h
+xa{i
+`z`;`
+`z`;`
+ K{D
+ K{D
+x`{h
+	K{D
+x`{h
+	K{D
+	K{D
+x`9`
+8a;i
+8a;i
+8`;h
+|$zD
+l4{D
+`$zD
+P4{D
+D$zD
+44{D
+,4{D
+3;a{i63
+6$;h
+Nt;h
+<T;h
+:D;h
+>d;h
+{K{D
+zK{D
+yJzD
+uK{D
+tK{D
+sJzD
+oK{D
+nK{D
+mJzD
+iK{D
+hK{D
+gJzD
+cK{D
+bK{D
+aJzD
+]K{D
+\K{D
+[JzD
+WK{D
+VK{D
+UJzD
+;hKJzD
+x`{h
+Icyh
+x`{h
+`z`O
+LK{D
+iCJzD
+F	"5IyD
+IyD F
+`z`O
+8b;j
+{h:j
+m63{e
+m[h;b
+s;c+K{D{c+K{D
+#;d{m{d
+x`9`O
+hNJzD
+#{a{i
+"EIyD
+D{a{i
+>IyD
+=IyD
+=IyD
+D{a{h
+	"4IyD
+D{a{h
+#;a(
+yh:i
+IyD F
+D{a;i
+3;a{h
+#{`;
+`z`;`
+;hzh
+xa{i
+#;`{h
+6#>JzD
+(`i`
+(aia#
+#5JzD
+(`i`
+(aia
+a#x+w{h
+Ns-JzD
+(`i`
+(aia
+a#x+w{h
+3%JzD
+ `a`
+x#s{h
+ `a`
+(`i`
+`#x+t{h
+(`i`
+(aia
+8a;i
+F*F!F0F
+8`;h
+x`9`	
+x`9`	
+x`9`	
+`z`;`	
+8a;i
+xaxh
+F 3;a;i
+xaxh
+F 3;a;i
+x`{h
+7K{D
+6K{D
+35JzD
+`z`;`
+"JzD
+x`9`	
+`z`;`
+h{axi
+{iZi
+{iZh;h
+h{azh
+`z`;`
+h{a;hzh
+x`{h
+`z`{h
+xa{i
+{hzi
+8a;i
+`z`;`
+xa{i
+;hzhyi
+8a;i
+`z`{h
+xa{i
+{hzi
+8a;i
+`z`;`
+#{bh
+3;bM
+3;bB
+3;b0
+3;b{j
+3;b{j
+3{bzj
+#{b_
+DzJzD
+DsJzD
+h{a{i
+DhJzD
+F^K{D
+DUJzD
+DNJzD
+5K{D
+4K{D
+n#3JzD
+D-JzD
+3{bzj
+#;bD
+s{b0
+h{a{i
+3;a;j
+3{bE
+3;b:j{h
+`z`;`;hzh
+x`xh
+`z`zh
+%K{D
+$K{D
+s#JzD
+'K{D
+'K{D
+s%JzD
+`z`zh
+`z`zh
+`z`zh
+xa{i
+	K{D
+`z`zh
+`z`zh
+x`xh
+x`xh
+x`xh
+x`{h
+DK{D
+CK{D
+sBJzD
+>K{D
+#;t{h{a
+;K{D
+ 0{h
+3{b!#;
+6K{D
+00{h;3{c!#;
+2K{D
+@0{h\3{dA#
+H0-K{D
+P0{h
+X0(K{D
+`0{h
+F K{D
+x`{h
+DK{D
+CK{D
+BJzD
+>K{D
+#;t{h{a
+;K{D
+ 0{h
+3{b!#;
+6K{D
+00{h;3{c!#;
+2K{D
+@0{h\3{dA#
+H0-K{D
+P0{h
+X0(K{D
+`0{h
+F K{D
+T1d#
+F F.
+F F.
+xJzD
+oJzD
+fJzD
+\JzD
+SJzD
+IJzD
+?JzD
+4JzD
+F&K{D
+ K{D
+ K{D
+T1d#
+yJzD
+pJzD
+fJzD
+\JzD
+QJzD
+FDK{D
+>K{D
+=K{D
+f#<JzD
+8K{D
+8K{D
+i#6JzD
+h#3A"
+\$zD
+4$zD
+xJzD
+mJzD
+bJzD
+WJzD
+LJzD
+AJzD
+F3K{D
+-K{D
+-K{D
+#+JzD
+(K{D
+'K{D
+#&JzD
+l5{D
+h5{D
+`%zD
+L%zD
+(%zD
+`$zD
+8$zD
+tJzD
+iJzD
+F[K{D
+UK{D
+UK{D
+#SJzD
+DK{D
+CK{D
+#BJzD
+3K{D
+3K{D
+#1JzD
+.K{D
+-K{D
+=s,JzD
+x`{h
+}K{D
+#;t{h{a
+zK{D
+ 0{h
+uK{D
+00{h"3{c
+qK{D
+@0{h
+H0lK{D
+P0{h
+X0fK{D
+`0{h
+h0aK{D
+p0{h
+x0[K{D
+0UK{D
+0OK{D
+0HK{D
+0BK{D
+0;K{D
+04K{D
+F*K{D
+$K{D
+$K{D
+3"JzD
+x`{h
+}K{D
+#;t{h{a
+zK{D
+ 0{h
+uK{D
+00{h"3{c
+qK{D
+@0{h
+H0lK{D
+P0{h
+X0fK{D
+`0{h
+h0aK{D
+p0{h
+x0[K{D
+0UK{D
+0OK{D
+0HK{D
+0BK{D
+0;K{D
+04K{D
+F*K{D
+$K{D
+$K{D
+W3"JzD
+wJzD
+lJzD
+aJzD
+VJzD
+KJzD
+@JzD
+4JzD !
+)K{D
+(K{D
+3'JzD
+#K{D
+#K{D
+3!JzD
+@4{D
+<4{D
+4$zD
+$ ;F
+4 ;F
+D ;F
+T ;F
+d ;F
+t ;F
+vJzD
+kJzD
+`JzD
+UJzD
+	hCHxD
+=K{D
+=K{D
+3;JzD
+,K{D
++K{D
+3*JzD
+&K{D
+&K{D
+3$JzD
+x`{h
+x`{h
+'K{D
+&K{D
+zs%JzD
+{h JzD !
+x`9`{h
+%K{D
+$K{D
+c#JzD
+F9hxh
+x`9`{h
+&K{D
+%K{D
+#C$JzD
+F9hxh
+x`{h
+#K{D
+"K{D
+9C!JzD
+x`9`{h
+`:hyh
+YC	JzD
+x`9`{h
+`:hyh
+oC	JzD
+#{a0
+zi{h
+3K{D
+0-K{D
++K{D
++K{D
+s)JzD
+%K{D
+%K{D
+#JzD
+0vK{D
+tK{D
+lK{D
+kK{D
+sjJzD
+gK{D
+eK{D
+]K{D
+]K{D
+s[JzD
+YK{D
+WK{D
+WK{D
+sUJzD
+SK{D
+NK{D
+NK{D
+LJzD
+CK{D
+AK{D
+?K{D
+=K{D
+ ;K{D
+q 9K{D
+-!8K{D
+3K{D
+.K{D
+&K{D
+%K{D
+$JzD
+	K{D
+` K{D
+h#3A"
+9h;h
+p;hd3
+xa{i
+#;aBK{D
+-K{D
+,K{D
++JzD
+hf3	"
+hf3$JzD
+8a;i
++K{D
++K{D
+)JzD
+#;a K{D
+8a;i
+8a;i
+	K{D
+`1K{D
+0K{D
+0K{D
+.JzD
+,K{D
++K{D
+)K{D
+)K{D
+s'JzD
+%K{D
+ K{D
+!K{D
+ K{D
+8K{D
+8K{D
+#6JzD
+4K{D
+3K{D
+2K{D
+#1JzD
+/K{D
+-K{D
+,K{D
++K{D
+#*JzD
+(K{D
+"K{D
+"K{D
+s JzD
+#{`{h
+F#~JzD
+pK{D
+pK{D
+M#nJzD
+kK{D
+jK{D
+O#iJzD
+`K{D
+`K{D
+q#^JzD
+ZK{D
+YK{D
+v#XJzD
+SK{D
+LK{D
+LK{D
+z#JJzD
+HK{D
+EK{D
+EK{D
+ sCJzD
+AK{D
+:K{D
+:K{D
+#8JzD
+6K{D
+/K{D
+/K{D
+#-JzD
+~K{D
+#}JzD
+`yK{D
+FyK{D
+uK{D
+FuK{D
+kK{D
+jK{D
+*siJzD
+fK{D
+dK{D
+]K{D
+]K{D
+#[JzD
+YK{D
+UK{D
+RK{D
+RK{D
+#PJzD
+NK{D
+LK{D
+FK{D
+DK{D
+DK{D
+#BJzD
+@K{D
+:K{D
+8K{D
+7K{D
+#6JzD
+3K{D
+-K{D
++K{D
++K{D
+#)JzD
+sZK{D
+FK{D
+y {h
+e :}{h
+$K{D
+"Zp&
+"Zp#
+{h[x
+{h[x
+x`{h[h
+x K{D
+`{h[h
+pK{D
+hnK{D
+hnK{D
+F)F F
+iK{D
+! dK{D
+cK{D
+\K{D
+h[K{D
+F)F F
+VK{D
+QK{D
+hOK{D
+FLK{D
+IK{D
+! EK{D
+>K{D
+F;K{D
+8K{D
+h	"2IyD
+F IyD
+x`9`{h
+ K{D
+xa{i
+{i"3
+c {id3yh
+8a;i
+@K{D
+@K{D
+ts>JzD
+;K{D
+:K{D
+8K{D
+8K{D
+36JzD
+4K{D
+8a;i
+/K{D
+.K{D
+vs-JzD
++K{D
+8a;i
+%K{D
+%K{D
+ws#JzD
+8axi
+vK{D
+vK{D
+CtJzD
+rK{D
+pK{D
+gK{D
+bK{D
+aK{D
+/C`JzD
+#{a{h
+tYK{D
+|IK{D
+DK{D
+CK{D
+FCBJzD
+?K{D
+!:K{D
+!7K{D
+5K{D
+,!4K{D
+-1	"
+!1K{D
+!.K{D
+!+K{D
+)K{D
+$K{D
+#K{D
+ZC"JzD
+#;a{h[h
+8a{h[h
+	K{D
+#;a{h[h
+8a{h[h
+	K{D
+x`{h[h;a
+xa{i
+~K{D
+~K{D
+S|JzD
+xK{D
+xK{D
+SvJzD
+mK{D
+mK{D
+"SkJzD
+eK{D
+eK{D
+#ScJzD
+`^K{D
+\K{D
+XK{D
+XK{D
+*SVJzD
+SK{D
+QK{D
+NK{D
+LK{D
+G{h[h
+{h[h
+JzDO
+sF^JzD@!0F
+JK{D
+"FIyD-
+?K{D
+>K{D
+{S=JzD
+7K{D
+7K{D
+S5JzD
+x`xh
+^K{D
+]K{D
+S\JzD
+zqxh
+VK{D
+TK{D
+SK{D
+SRJzD
+LK{D
+LK{D
+cJJzD
+DK{D
+BK{D
+pBK{D
+zqxh
+=K{D
+;K{D
+p:K{D
+8K{D
+4K{D
+2K{D
+-K{D
+'K{D
+&K{D
+S%JzD
+ K{D
+zqxh
+zqxh
+|'zD
+`7{D
+\7{D
+T'zD
+L7{D
+(7{D
+$7{D
+zqxh
+p&zD
+\&zD
+L6{D
+H6{D
+@&zD
+p%zD
+T5{D
+@5{D
+<5{D
+4%zD
+|4{D
+t$zD
+h4{D
+X$zD
+D$zD
+44{D
+04{D
+($zD
+~K{D
+}K{D
+c|JzD
+xK{D
+pK{D
+oK{D
+cnJzD
+zqxh
+/K{D
+/K{D
+c-JzD
+&K{D
+&K{D
+c$JzD
+zqxh
+AK{D
+#{a8h
+xa{i
+#;aO
+8a;i
+'K{D
+'K{D
+s%JzD
+xa{io
+xa{i
+`z`;`
+!kK{D
+hiK{D
+yhcK{D
+aK{D
+`JzD
+`_K{D
+`[K{D
+sZJzD
+XK{D
+WJzD
+UK{D
+sTJzD
+9hRK{D
+PK{D
+@1NK{D
+2LK{D
+9jHK{D
+FK{D
+1CK{D
+#{a/
+s;JzD
+x0K{D
+3{azi
+&K{D
+#;a$K{D
+8a;i
+ K{D
+8`;h
+#{`:h,K{D
+(K{D
+$K{D
+ K{D
+\ ;h
+x`{h
+#;`'
+F;hR
+x`{h
+F;hR
+x`{h
+3;`;h
+F;hR
+x`{h
+3;`;h
+~K{D
+x`zK{D
+ yK{D
+wK{D
+#uJzD
+sK{D
+qK{D
+x`mK{D
+ lK{D
+jK{D
+#hJzD
+-1{h
+eK{D
+cK{D
+aK{D
+_K{D
+^K{D
+\K{D
+x`{h
+VK{D
+x`{h
+#;` 
+GK{D
+F;hR
+CK{D
+F;hR
+?K{D
+F;hR
+3;`;h
+7K{D
+F;hR
+3K{D
+F;hR
+3;`;h
+`z`;`
+lM|D
+X={D
+T={D
+L-zD
+F;jR
+3;b;j
+p,zD
+h<{D
+`<{D
+H<{D
+D<{D
+<,zD
+#;b2
+3;b:j{l
++zDSa
+xb{j
+xb{j
+t;{D
+p;{D
+h+zD
+L;{D
+D;{D
+<;{D
+8;{D
+0+zD
+ ;{D
+xb{j
+"ZtO
+s{b{j
+"ZtO
+:{DZ`
+|:{D[h
+x:{D
+t:{D
+l*zD
+`:{D
+\:{D
+L:{D
+H:{D
+8:{D
+4:{D
+$:{D
+ :{D
+xb{j
+x9{D
+t9{D
+l)zD
+`9{D
+X9{D
+T9{D
+L)zD
+D9{D
+<9{D
+49{D
+(9{D
+ 9{D
+xb{j
+|8{D
+x8{D
+p(zD
+`8{D
+T8{D
+P8{D
+H(zD
+88{D
+08{D
+,8{D
+$(zD
+|7{D
+t'zD
+h7{D
+\7{D
+H7{D
+<7{D
+87{D
+0'zD
+ 7{D
+#;bH
+d6{D
+`6{D
+X&zD
+D6{D
+86{D
+xb{j
+ 6{D
+|5{D
+t%zD
+h5{D
+d5{D
+T5{D
+P5{D
+<5{D
+,5{D
+(5{D
+xb{j
+p4{D
+d4{D
+`$zD
+T4{D
+P$zD
+D4{D
+<4{D
+04{D
+$4{D
+#;b@
+xa{i
+xb;izi
+~K{D
+}JzD
+vK{D
+uK{D
+tJzD
+xb{j
+jK{D
+iK{D
+hJzD
+aK{D
+`K{D
+_JzD
+[K{D
+ZK{D
+YJzD
+xb{j
+TK{D
+QK{D
+PK{D
+OJzD
+;hzh
+EK{D
+zEK{D
+xb{j
+@K{D
+>K{D
+xb{j
+9K{D
+4K{D
+4K{D
+2JzD
+0K{D
+.K{D
+,K{D
+*K{D
+'K{D
+8e;m
+t:{D
+X:{D
+T:{D
+L*zD
+#;fO
+$:{D
+ :{D
+xd{l
+8d;l
+|9{D
+x9{D
+p)zD
+`9{D
+3{c{k<"
+8f;n
+<8{D
+88{D
+0(zD
+8c;k
+s{f}
+;k[i
+8c;k
+s{fH
+l'zD
+P7{D
+8c;k
+8c;k
+8c;k
+8c;k
+l&zD
+D6{D
+8c;k
+46{D
+06{D
+(&zD
+s{fn
+s{fL
+p5{D
+l5{D
+d%zD
+h$zD
+P4{D
+@4{D
+<4{D
+4$zD
+s{fF
+s{f(
+#{eD
+xb{j
+kZh{m
+kZh{m
+3{ezm
+8b;j
+x`9`{h
+jK{D
+jK{D
+3hJzD
+cK{D
+\K{D
+[K{D
+3ZJzD
+VK{D
+OK{D
+OK{D
+3MJzD
+JK{D
+ >K{D
+6K{D
+6K{D
+34JzD
+1K{D
+-K{D
+`+K{D
+7)K{D
+3'JzD
+%K{D
+{h"JzD
+ K{D
+x`9`{h
+&K{D
+&K{D
+C$JzD
+`{h%3
+{h%3
+x`{h
+VK{D
+UK{D
+7CTJzD
+OK{D
+OK{D
+;CMJzD
+`JK{D
+xa{i
+h;a;i
+ =K{D
+9K{D
+;8JzD
+77K{D
+xa{i
+0K{D
+/K{D
+GC.JzD
+,K{D
+*K{D
+*K{D
+IC(JzD
+%K{D
+%K{D
+LC#JzD
+ K{D
+x`{h
+xa{i
+h;a;i
+)K{D
+{`'K{D
+!K{D
+	K{D
+x`9`{h
+F	K{D
+`	K{D
+x`{h
+CK{D[|
+xa{i
+6K{D
+0K{D
+)K{D
+xa{i
+x`9`
+.8:hyh
+x` "yh
+	K{D
+K{D[|
+x`9`;h
+!K{D
+ K{D
+F!F(F
+`z`;`
+{hd"
+{ib"
+8a.K{D
+F)K{D
+1a+1
+%K{D
+#K{D
+{i\h{i
+;hzh
+x`{h
+xe{m
+~K{D
+c}JzD
+,AnK{D
+jK{D
+lgJzD1F(F
+xe{m
+aK{D
+`K{D
+&c_JzD
+ZK{D
+ZK{D
+)cXJzD
+VK{D
+VK{D
+*cTJzD
+FMK{D
+3;e;m
+HK{D
+9K{D
+9K{D
+5c7JzD
+3K{D
+3K{D
+8c1JzD
+"K{D
+`z`;`
+QK{D
+xa{i
+HK{D
+{izj
+`{izhZ`{i:j
+`{i:h
+a{iO
+{i9JzD
+a{i 3O
+#;a{i
+Fyi K{D
+8a;i
+7;i#
+8a;i
+}K{D
+}K{D
+c{JzD
+xK{D
+vK{D
+vK{D
+ctJzD
+rK{D
+qK{D
+pK{D
+coJzD
+mK{D
+kK{D
+9hgK{D
+bK{D
+aK{D
+`K{D
+c_JzD
+9h\K{D
+ZK{D
+2XK{D
+VK{D
+9hRK{D
+NK{D
+LK{D
+LK{D
+lcJJzD
+9hHK{D
+FK{D
+9hBK{D
+=K{D
+<K{D
+;K{D
+c:JzD
+9h7K{D
+5K{D
+23K{D
+1K{D
+x`{h
+:K{D
+9K{D
+oc8JzD
+8a;i
+-K{D
+,K{D
+c+JzD
+$K{D
+#K{D
+c"JzD
+#{ayhxi
+8a;i
+x`{h
+-K{D
+,K{D
+s+JzD
+8a;i
+ K{D
+#{ayhxi
+8a;i
+x`{h
+#K{D
+"K{D
+Os!JzD
+OK{D
+NK{D
+zsMJzD
+JK{D
+IK{D
+{sHJzD
+EK{D
+DK{D
+|sCJzD
+:K{D
+2K{D
++K{D
++K{D
+s)JzD
+i#3A"
+xa{i
+x4{D
+t4{D
+l$zD
+xa{i
+D4{D
+@4{D
+8$zD
+$4{D
+ 4{D
+8a;i
+T!;i
+`}K{D
+{K{D
+wK{D
+wK{D
+suJzD
+rK{D
+pK{D
+lK{D
+eK{D
+dK{D
+cK{D
+sbJzD
+`K{D
+_K{D
+s^JzD
+[K{D
+UK{D
+SK{D
+SK{D
+QJzD
+OK{D
+OK{D
+MJzD
+7K{D
+1K{D
+/K{D
+/K{D
+-JzD
+'K{D
+&K{D
+%JzD
+#K{D
+xa{i
+~K{D
+}JzD
+{K{D
+8a;i
+!mK{D
+9ijK{D
+hK{D
+eK{D
+cK{D
+cK{D
+aJzD
+_K{D
+^K{D
+]JzD
+[K{D
+hXJzD
+SK{D
+RK{D
+QJzD
+KK{D
+JK{D
+IJzD
+FK{D
+FK{D
+DJzD
+x`bK{D
+bK{D
+D#`JzD
+^K{D
+\K{D
+aZK{D
+aSK{D
+hPJzD
+#{aS
+xa{i
+WK{D
+VK{D
+#UJzD
+IK{D
+HIyD
+`;+|
+GK{D
+`EK{D
+EK{D
+#CJzD
+@K{D
+@K{D
+#>JzD
+xa{i
+9K{D
+3;a;i
+6K{D
+5K{D
+#4JzD
+;i#3
+xa{i
+&K{D
+&K{D
+S$JzD
+!K{D
+ K{D
+x`{h
+BK{D
+BK{D
+]C@JzD
+F{d{l
+7K{D
+6K{D
+cC5JzD
+8d;l
+K{D[i
+	K{D
+|K{D;b
+"RIyD
+F1K{D
+`z`;`
+xc{k
+_K{D
+^K{D
+#]JzD
+XK{D
+XK{D
+#WJzD
+:K{D
+:K{D
+#9JzD
+xc{k
+'K{D
+&K{D
+#%JzD
+`z`;`
+svJzD
+rK{D
+rK{D
+#qJzD
+siJzD
+fK{D
+eK{D
+#dJzD
+s]JzD
+YK{D
+YK{D
+#XJzD
+PK{D
+OK{D
+#NJzD
+HJzD
+DK{D
+DK{D
+#CJzD
+;JzD
+8K{D
+7K{D
+6JzD
+.K{D
+-K{D
+,JzD
+'K{D
+'K{D
+%JzD
+`z`:F
+|4{D
+IyD F
+K{D;b
+"YIyD
+F8K{D
+`z`;`
+F(3;c;k
+IyD F
+sK{D
+rK{D
+qJzD
+#D{a
+`z`;`
+#}JzD
+;hzh
+stJzD
+pK{D
+pK{D
+#nJzD
+;hzh
+seJzD
+aK{D
+aK{D
+!#_JzD
+;hzh
+UK{D
+UK{D
+%#SJzD
+MJzD
+IK{D
+IK{D
+sGJzD
+;hzh
+>JzD
+:K{D
+:K{D
+s8JzD
+;hzh
+.K{D
+.K{D
+s,JzD
+(K{D
+'K{D
+:#&JzD
+x`9`)K{D
+'K{D
+%K{D
+%K{D
+t#$JzD
+ K{D
+DzhZ`
+x`-K{D
+-K{D
+#,JzD
+*K{D
+xa'K{D
+$K{D
+#K{D
+#"JzD
+#;r{i
+8a;i
+x`8K{D
+8K{D
+#7JzD
+5K{D
+`1K{D
+-K{D
+i*JzD
+'K{D
+&K{D
+#%JzD
+ K{D
+x`	K{D
+	K{D
+x`8K{D
+8K{D
+#7JzD
+5K{D
+xa2K{D
+8a;i
+.K{D
+.K{D
+#-JzD
+\E|D
+@5{D
+<5{D
+4%zD
+$5{D
+h4{D
+d4{D
+\$zD
+H4{D
+,4{D
+(4{D
+ $zD
+HxD/0
+K{D/3
+zK{D
+yK{D
+	sxJzD
+uK{D
+sK{D
+qK{D
+oK{D
+mK{D
+kK{D
+iK{D
+eK{D
+heJzD
+^K{D
+]K{D
+[K{D
+`YK{D
+WK{D
+UK{D
+!QK{D
+x`9`RK{D
+MK{D
+IK{D
+DZh{h
+DK{D
+@K{D
+;K{D
+`7K{D
+`2K{D
+/K{D
+,K{D
+0+JzD
+DzhZ`)K{D
+0(JzD
+`%K{D
+x`*K{D
+(K{D
+x`9`
+8f;n
+|K{D
+uK{D
+erK{D
+nK{D
+mK{D
+#lJzD
+iK{D
+xe{m
+;m_JzD@!
+UK{D
+QK{D
+PK{D
+#OJzD
+MK{D
+HK{D
+fBK{D
+?K{D
+;K{D
+8K{D
+7K{D
+#6JzD
+3K{D
+2K{D
+9s1JzD
+	K{D
+RK{D
+QK{D
+3PJzD
+xa{i
+DK{D
+CK{D
+CsBJzD
+xa{i
+:K{D
+:K{D
+38JzD
+3K{D
+2K{D
+31JzD
+xa{i
+)K{D
+)K{D
+3'JzD
+"K{D
+!K{D
+3 JzD
+xK{D
+xK{D
+LsvJzD
+pK{D
+pK{D
+23nJzD
+#;`;F
+eK{D
+dK{D
+;3cJzD
+\K{D
+[K{D
+>3ZJzD
+TK{D
+TK{D
+A3RJzD
+KK{D
+KK{D
+QsIJzD
+EK{D
+DK{D
+G3CJzD
+h?JzD
+<K{D
+;K{D
+N3:JzD
+3K{D
+h1JzD
+F.K{D
++K{D
+*K{D
+*K{D
+V3(JzD
+x`{h
+;F "
+`z`;`
+#;a{i
+8a;i
+1K{D
+0K{D
+3/JzD
+$K{D
+#K{D
+is"JzD
+x`{h
+PK{D
+OK{D
+psNJzD
+xa{i
+FK{D
+FK{D
+3DJzD
+>K{D
+:K{D
+:K{D
+ss8JzD
+2K{D
+T!-K{D
+8a;i
+&K{D
+x`9`{h
+8K{D
+8K{D
+}s6JzD
+"&IyD
+ivJzD
+FhK{D
+ieJzD
+aK{D
+8a;i
+]K{D
+\K{D
+*C[JzD
+UK{D
+TK{D
+-CSJzD
+JK{D
+IK{D
+cHJzD
+xa{i
+-K{D
+-K{D
+c+JzD
+%K{D
+%K{D
+DC#JzD
+x`9`{h
+<K{D
+;K{D
+RC:JzD
+3K{D
+2K{D
+c1JzD
+`{h0"
+p;h	"
+x`9`{h
+8F	JzD	IyD
+x`9`
+#:hxh
+`z`;`
+LK{D
+KK{D
+CJJzD
+AK{D
+AK{D
+C?JzD
+{h9JzD
+4K{D
+3K{D
+F*IyD
+'K{D
+&K{D
+C%JzD
+)3;b8j
+#D{a
+`z`;`
+jK{D
+jK{D
+&ShJzD
+dK{D
+bK{D
+bK{D
+*S`JzD
+]K{D/3
+\K{D
+[K{D
+.SZJzD
+VK{D
+UK{D
+/STJzD
+PK{D
+OK{D
+cNJzD
+JK{D
+JK{D
+1SHJzD
+DK{D
+DK{D
+2SBJzD
+>K{D
+=K{D
+3S<JzD
+1K{D
+0K{D
+9S/JzD
+,K{D
+"%IyD/1
+#{a;
+8a;i
+UK{D
+UK{D
+LSSJzD
+q;i:
+6K{D
+6K{D
+aS4JzD
+$K{D
+$K{D
+c"JzD
+xa{i
+#;a{i
+xa{i
+x`9`;h
+x`9`
+K{DP3
+JzD9hxh
+K{D[m
+	K{D
+x`{h
+4K{D
+4K{D
+Y#3JzD
+.K{DZh
++K{DZh
+'K{DZh
+K{DXh
+K{D[h
+F[i{c{k
+#;pvK{D
+{prK{D
+pnK{D
+pjK{D
+fK{D
+rbK{D
+r^K{D
+3{b{j
+LK{D
+KK{D
+#JJzD
+HK{D
+8b;j
+BK{D
+F{`{h
+0K{D
+0K{D
+#/JzD
+8a~K{DZh
+FsK{D
+FkK{D
+FcK{D
+F[K{D
+FSK{D
+FKK{D
+FEK{D
+F>K{D
+9ixi
+a7K{D
+zi4K{D
+.K{D
+.K{D
+#-JzD
+h&K{D
+x`{h
+"K{D
+!K{D
+# JzD
+xe{m
+3;e;m
+xd{l
+8d;l
+p4{D
+i;l[i
+d4{D
+`4{D
+\4{D
+T$zD
+H4{D
+@4{D
+04{D
+i:lRi
+$4{D
+ 4{D
+;l[i
+xd{l
+8c;k
+i{b{j
+`kK{D
+8b8j
+XK{D
+3{a{i
+F{`{h
+{hzi
+;K{D
+9K{D
+#Sa7K{D
+5K{D
+#Sa3K{D
+x`{h
+s	JzD
+x`{h
+FK{D
+EK{D
+DJzD
+xb{h
+8b:j=K{D
+7K{D
+7K{D
+s5JzD
+{h[h
+F/K{D
+F'K{D
+i#K{D
+#;s{j;a
+xa{i
+x`{h
+s{h[h
+{h[h
+;	JzD
+8K{D
+h7K{D
+x`{h
+2K{D
+h2JzD
+0K{D
+0K{D
+s.JzD
++K{D
+h*JzD
+)K{D
+(K{D
+'JzD
+%K{D
+h$K{D
+ K{DYh K{D
+K{D[h
+F{hS`
+x`2K{D
+h2K{D
+8a;i
+#{a.
+*K{DZh{i
+$K{D
+$K{D
+"JzD
+K{D[i
+~K{D
+uK{D
+tK{D
+#sJzD
+pK{D
+iK{DZh{k
+D;c;k
+lr{j
+;k[x
+F;k[x
+EK{D
+DK{D
+#CJzD
+;k[x
+h:kRx
+&K{D
+&K{D
+##$JzD
+x`PK{D
+!MK{D
+FHK{DZ`HK{D[h
+EK{D
+EK{D
+sCJzD
+@K{DXh{h
+`;K{D
+!:K{D
+5K{D
+5K{D
+E#3JzD
+0K{D
+*K{D
+'K{D
+'K{D
+J#%JzD
+"K{D
+` K{D
+xa{i
+{izh
+#{azh
+`z`;`
+#{a;hzh
+x`{h
+x`9`;h
+e#	JzD
+x`{h
+	K{D
+x`{h
+x`{h
+_K{D
+^K{D
+#]JzD
+RK{D
+QK{D
+#PJzD
+xa{i
+FK{D
+EK{D
+#DJzD
+3@JzD
+8a;i
+:K{D
+:K{D
+#9JzD
+)K{D
+(K{D
+#'JzD
+x`{h
+xa{i
+=K{D
+<K{D
+#;JzD
+37JzD
+8a;i
+1K{D
+1K{D
+#0JzD
+x`9`{h
+:K{D
+:K{D
+#9JzD
+{a{h
+3{a{i
+4#F;a;i
+'K{D
+'K{D
+#&JzD
+h:iZa
+x`zhE
+"Z`{h
+x`{h
+`z`;`
+#;g{o
+F;g:o;h
+zK{D
+yK{D
+sxJzD
+:hyh
+eK{D
+eK{D
+scJzD
+]K{D
+]K{D
+[JzD
+xf{n
+IK{D
+IK{D
+GJzD
+EK{D
+DK{D
+CJzD
+?K{D
+>K{D
+s=JzD
+x`{h
+*K{D
+*K{D
+s(JzD
+i{h[i
+izhRi
+x`{h
+xb{j
+8b;j
+#{cp
+s~JzD
+tK{D
+tK{D
+#rJzD
+jK{D
+iK{D
+!#hJzD
+3;c:k
+_K{D
+^K{D
+&#]JzD
+FK{D
+FK{D
+.#DJzD
+/K{D
+/K{D
+5#-JzD
+x`{h
+x`{h
+"Z`xh
+xb{j
+kK{D
+kK{D
+#iJzD
+F{b{j
+SK{D
+RK{D
+#QJzD
+HK{D
+GK{D
+#FJzD
+xc{k
+"Z`xh
+xc{k
+8K{D
+7K{D
+#6JzD
+0K{D
+0K{D
+.s.JzD
+8c;k
+|6{D
+t&zD
+X6{D
+T6{D
+L&zD
+86{D
+46{D
+,&zD
+l5{D
+X5{D
+D5{D
+<5{D
+85{D
+0%zD
+$5{D
+ 5{D
+t4{D
+p4{D
+l$zD
+F#`$
+\4{D
+X4{D
+P$zD
+@4{D
+<4{D
+8$zD
+(4{D
+ 4{D
+8a;i
+8a;i
+8a;i
+8a;i
+8a;i
+8a;i
+~K{D
+{K{D
+yK{D
+ K{D
+`z`;`
+F9hxh
+zi;i
+`z`;`
+#{bq
+3;bzj
+yK{D
+xK{D
+3wJzD
+gK{D
+gK{D
+3eJzD
+LK{D
+KK{D
+3JJzD
+0K{D
+/K{D
+C.JzD
+`z`;`{h
+xb{j
+&K{D
+&K{D
+c$JzD
+zi{h
+`{i:i
+%K{D
+$K{D
+#K{D
+4C"JzD
+xa{i
+|4{D
+t$zD
+1{d #;d{l
+<4{D
+84{D
+0$zD
+@+C#`
+#{eP
+#;e>
+{m:l
+{m:l
+}K{D
+}K{D
+c{JzD
+{m:l
+3;e:m;l
+3{ezm
+_K{D
+_K{D
+C]JzD
+8c;k
+XK{D
+WK{D
+CVJzD
+SK{D
+SK{D
+cQJzD
+HK{D
+HK{D
+CFJzD
+x`{h
+x`{h
+`z`;`
+ K{D
+;hzh
+xa{i
+x`{h
+EK{D
+CK{D
+CK{D
+SAJzD
+>K{D
+=K{D
+	S<JzD
+:K{D
+7K{D
+3K{D
+1K{D
+.K{D
+)K{D
+(K{D
+S'JzD
+%K{D
+!K{D
+~K{D
+|K{D
+|K{D
+*SzJzD
+xK{D
+wK{D
+vK{D
++SuJzD
+sK{D
+oK{D
+oK{D
+.SmJzD
+jK{D
+iK{D
+/ShJzD
+dK{D
+dK{D
+cbJzD
+_K{D
+^K{D
+1S]JzD
+YK{D
+YK{D
+2SWJzD
+TK{D
+SK{D
+3SRJzD
+NK{D
+NK{D
+4SLJzD
+JK{D
+JK{D
+6SHJzD
+D{`{h
+j|h$
+%F|hdk
+4K{D
+4K{D
+<S2JzD
+`/K{D
+=K{D
+;K{D
+;K{D
+FS9JzD
+6K{D
+3K{D
+1K{D
+.K{D
+x`{h
+*K{D
+'K{D
+'K{D
+SS%JzD
+#K{D
+x`{h
+`z`;`
+#{a{h
+xa{i
+`{i:h
+x`{h
+x`{h
+{h[h
+x`{h
+{h[h
+x`%K{D
+`$K{D
+"K{D
+"K{D
+#!JzD
+;K{D
+9K{D
+9K{D
+@#8JzD
+`4K{D
+`2K{D
+`1K{D
+-K{D
+-K{D
+K#,JzD
+#{`O
+'K{D
+`&K{D
+$K{D
+!#HxD
+ K{D
+`z`6K{D
+5K{D
+4K{D
+r#3JzD
+-K{D
+,K{D
+y#+JzD
+(K{D
+xa{i
+"K{D
+"K{D
+#!JzD
+xa{i
+xa{i
+>K{D
+<K{D
+<K{D
+:JzD
+7K{D
+`5K{D
+x`3K{D
+/K{D
+.K{D
+s-JzD
+*K{D
+*K{D
+(JzD
+&K{D
+x`$K{D
+ K{D
+{pG~
++K{D
+)K{D
+)K{D
+#(JzD
+!K{D
+!K{D
+# JzD
+HxD'
+x`{h
+x`9`!K{D
+h:hyh
+x` K{D
+x`{h
+@K{D
+?K{D
++#>JzD
+5K{D
+4K{D
+4#3JzD
+'K{D
+'K{D
+?#&JzD
+hZ`{h
+`z`;`
+xa{i
+xa{i
+Fz`{
+xa{i
+i;a;i
+xa{i
+{h:i
+xa{i
+x`9`{h
+`{h;a;i
+;hzi
+x`9`{h
+x`9`{h
+x`{h
+{h;a;i
+#{a	
+3{a{i	+
+;i[i
+`z`;`
+;hzh
+xa{i
+h;a;i
+xa{i
+`z`;`
+;hzh
+xa{i
+h;a;i
+xa{i
+x`9`{h
+9hxh
+Fz`{
+{iZi{
+{iZi{
+hZi{
+hZi{
+x`{h
+{h;a;i
+#{a;i
+;iZi
+h{a;i
+x`9`{h
+{h;a;iZ
+;iYi;i[
+;i[i
+hZa;i
+;iZi{i
+3{a;i
+x`9`;h
+x`{h[h
+`z`;`
+x`{h
+x`{h
+{hZh{h
+Fz`{
+i{a{i
+{hzi
+x`{h
+hZ`{h
+`z`{
+i[h{a{i
+i{a{i
+xa{i
+{izh
+jZb{i
+"Za{i
+8a;i
+8a;i
+{h{a{i
+8a;i
+8a;i
+8a;i
+`z`;`
+h{b{j
+8b;j
+8b;j
+"Za{j
+8b;j
+xa{i
+{h{a{i
+8a;i
+8a;i
+"Za{i
+8a;i
+x`{h
+xa{i
+h{bz
+{j;b;j
+;j[i
+"Za\
+xa{i
+F;jZj
+x`9`{h
+x`9`{h
+x`{h
+{h{a{i
+8a{i
+x`{h
+{h{a{i
+8a;i
+#{`	K{D
+x`{h
+#{`O
+!	HxD&
+`z`zh
+x`xh&
+x`xh&
+(K{D
+x`{h
+"K{D
+!K{D
+D# JzD
+zh{h
+`zh{hZ`
+#;`{h
+8`;h
+x`{h
+"Z`{h$3
+x`{h
+<K{D
+#{`9K{D
+6K{D
+6K{D
+|#5JzD
+3K{D
+h$;{`{h[h
+-K{D
+-K{D
+#,JzD
+(K{D
+'K{D
+#&JzD
+h;`{h$3
+`z`;`TK{D
+RK{D
+RK{D
+#QJzD
+KK{D
+JK{D
+#IJzD
+BK{D
+BK{D
+#AJzD
+kzhZa
+k JzD
+@K{D
+?K{D
+#>JzD
+9K{D
+9K{D
+#8JzD
+`0K{D
+`,K{D
+#K{D
+#K{D
+#"JzD
+x`{h
+x`{h
+$K{D
+#K{D
+"JzD
+x`{h
+x`9`{h
+#{`;F
+x`zhD
+`zhD
+x`xh
+x`xh
+{pGZ
+F{hR
+3 ;h
+3{`{h
+`z`;`
+a:kD
+	{a:kD
+;hzh
+x`{h
+x`9`{h
+x`xh
+x`9`9hxh
+`z`{h
+x`9`{h
+9hxh
+xb{j
+`z`;`;
+;h;b
+`z`;`
+zh;h
+xa{i
+`z`;`
+xb{j
+h;a{h
+x`{h
+x`{h
+x`{h
+x`0K{D
+,K{D
+'K{D
+F!Fxh
+!	K{D
+x`9`
+#{aO
+3;aTK{D
+#{aE
+QK{D
+{i;a2
+GJzD
+DJzD
+F!Fxh
+=K{D
+`7K{D
+3{a{i
+.K{D
+3?"yh
+x`{h
+`z`;`
+h;b{h
+a;k{a
+C{b{j
+x`9`;h
+x`{h
+x`{h
+x`{h
+x`{h
+x`{h
+x`{h
+h{a{i
+8a;i
+*K{D
+)K{D
+N#(JzD
+ K{D
+ K{D
+xa{i
+x`{h
+x`{h
+x`{h
+x`9`{h
+9hxh
+x`9`{h
+`0K{D
+/K{D
++K{D
++K{D
+d#*JzD
+'K{D
+9hxh
+x`{h
+x`{h
+x`9`
+`9hxh
+x`9`;h
+`9hxh
+x`9`;h
+`9hxh
+x`9`;h
+`9hxh
+x`{h
+x`9`{h
+`9hxh
+x`{h
+x`{h
+x`{h
+x`{h
+x`{h
+x`9`{h
+p;hZ
+K{Dc"
+}K{D
+tK{D
+Z@^K{D
+# [K{D
+;FZj;F
+;FZk;F
+x`{h
+h:iZ`
+#{a&
+3{a{hZ	{i
+#{aT
+FziP
+" J@9i
+1	h	
+HxDA\Q@:i
+Q@:i
+Q@:i
+3{a;i
+3;a{i	+
+#{ah
+FziP
+" J@9i
+1	h	
+HxDA\Q@:i
+Q@:i
+Q@:i
+`;i 3:i
+`;i$3:i
+h:i 2
+`;i(3:i
+h:i$2
+`;i,3:i
+h:i(2
+3{a;i
+3;a{i
+;i 3:i
+h^JzD
+FziP
+" J@9i
+1	h	
+YHxDA\Q@:i
+UHxD
+Q@:i
+RHxD
+Q@:i
+NHxD
+`;i$3:i
+h:i 2
+`;i(3:i
+h:i$2
+`;i,3:i
+h:i(2
+`;i03:i
+h9i,1	h
+9HxDA\Q@:i,2
+5HxD
+Q@:i,2
+1HxD
+Q@:i,2
+.HxD
+`;i43:i
+h:i02
+`;i83:i
+h:i42
+`;i<3:i
+h:i82
+3{a;i 3;a{i
+4!Z`:
+01 ;
+IIyD
+FHJzDR
+DHxD
+FCJzDR
+2bQ@
+>HxD
+F=JzDR
+2BQ@
+9HxD
+F8JzDR
+2"J@
+01 ;
+h[h;c
+C{b;k
+hzjS@{b
+C;b;k
+h:jS@;b
+;{ce
+#0Z@
+3cZ@{j
+3CZ@;j
+3#S@
+#0Z@{j
+3cZ@;j
+3CZ@
+3#S@
+#0Z@;j
+3cZ@
+3CZ@
+3#S@{a;k
+#0Z@
+3cZ@
+3CZ@{j
+3#S@;a;k
+#0Z@
+3cZ@{i
+3CZ@;i
+3#S@
+#0Z@{i
+3cZ@;i
+3CZ@
+3#S@
+#0Z@;i
+3cZ@
+3CZ@
+IyDQ
+3#S@{b;k
+IyDQ
+#0Z@
+IyDQ
+3cZ@
+IyDQ
+3CZ@{i
+IyDQ
+3#S@;b{k
+;{c{k
+IyDQ
+#0Z@
+IyDQ
+3cZ@{j
+IyDQ
+3CZ@;j
+IyDQ
+3#S@
+IyDQ
+#0Z@{j
+IyDQ
+3cZ@;j
+IyDQ
+3CZ@
+IyDQ
+3#S@
+IyDQ
+#0Z@;j
+IyDQ
+3cZ@
+IyDQ
+3CZ@
+IyDQ
+3#S@{a;k
+IyDQ
+#0Z@
+IyDQ
+3cZ@
+IyDQ
+3CZ@{j
+IyDQ
+3#S@;a;k
+Z@{i
+Z@;i
+\Z@{i
+Z@;i
+\Z@;i
+S@{b;k
+zIyD
+xIyD
+uIyD
+Z@{i
+rIyD
+S@;b
+p{h	3zj
+h[h;c
+C{b;k
+hzjS@{b
+C;b;k
+h:jS@;b
+;{ce
+#0Z@;j
+3cZ@{j
+3CZ@
+3#S@
+#0Z@
+3cZ@;j
+3CZ@{j
+3#S@
+#0Z@
+3cZ@
+3CZ@;j
+3#S@{a;k
+#0Z@{j
+3cZ@
+3CZ@
+3#S@;a;k
+#0Z@;i
+3cZ@{i
+3CZ@
+3#S@
+#0Z@
+3cZ@;i
+3CZ@{i
+3#S@
+#0Z@
+3cZ@
+3CZ@;i
+IyDQ
+3#S@{b;k
+IyDQ
+#0Z@{i
+IyDQ
+3cZ@
+IyDQ
+3CZ@
+IyDQ
+3#S@;b{k
+;{c{k
+IyDQ
+#0Z@;j
+IyDQ
+3cZ@{j
+IyDQ
+3CZ@
+IyDQ
+3#S@
+IyDQ
+#0Z@
+IyDQ
+3cZ@;j
+IyDQ
+3CZ@{j
+IyDQ
+3#S@
+IyDQ
+#0Z@
+IyDQ
+3cZ@
+IyDQ
+3CZ@;j
+IyDQ
+3#S@{a;k
+IyDQ
+#0Z@{j
+IyDQ
+3cZ@
+IyDQ
+3CZ@
+IyDQ
+3#S@;a;k
+\Z@;i
+Z@{i
+Z@;i
+Z@{i
+Z@;i
+S@{b;k
+zIyD
+\Z@{i
+xIyD
+uIyD
+rIyD
+S@;b
+p{h	3zj
+`z`;`
+:hyh
+:hyh
+`z`;`{h
+xzj8h
+3{b{j
+(`i`
+;{`{h
+xzj8h
+3{b{j
+;{`{h
+x`9`;h
+zh;h
+x`9`9hxh
+x`{h
+`z`;`
+xa{jzi
+;hzhyi
+8a;i
+`z`;`
+;hzh
+xa{i
+`z`;`
+xa;hzi
+h;jyi
+8a;i
+`z`;`
+xa{i
+`z`;`
+xa{jzi
+;hzhyi
+8a;i
+`z`;`
+;hzh
+xa{i
+x`{h
+x`9`{h
+'K{D
+&K{D
+'K{D[h
+&K{D\h;
+h;F:
+h;F:
+,K{D
+F'K{D
+`'K{D
+$K{D
+!K{D
+h JzD
+x`{h
+^K{D
+#;b{h
+xb{j
+8b;j
+?K{D
+zj<K{D
+9K{D
+h{a;j
+D;jZ`;j
+hZa;j
+{h:j
+x`9`{h
+{h[i
+`{h[iZ
+{hZa;h
+x`9`
+9hxh
+x`9`{h
+{hZi{h
+`{h:h
+`{h[iZ
+{hZa
+x`9`{h
+9hxh
+x`{h
+0K{D
+/K{D
+,K{D
+$K{D
+x`9`
+x`9`9hxh
+,K{D
+*K{D
+'K{D
+h{`{h
+$K{D
+x`9`
+#;a8K{D
+3K{D
+.K{D
+,K{D
+h[h{a5
+hZi{h
+8a;i
+x`#K{D
+ K{D
+h[h{a
+{i;a;i
+`4K{D
+2K{D
+0K{D
+h,K{D
+F(K{D
+F%K{D
+F"K{D
+{h[i
+	K{D
+GL|D
+BK{D
+AK{D
+,#@JzD
+7K{D
+7K{D
+2#6JzD
+/K{D
+.K{D
+8#-JzD
+&K{D
+&K{D
+>#%JzD
+"K{D
+`z`zh
+`z`;`
+8d;l
+|K{D
+|K{D
+.#{JzD
+{kzh
+8d;l
+nK{D
+mK{D
+5#lJzD
+#{d{h
+#{d{kzl
+8d;l
+[K{D
+ZK{D
+A#YJzD
+8d;l
+FK{D
+EK{D
+O#DJzD
+;k[k
+;k[i
+;k[i4JzD
+;k[k:k
+h9kIi
+,K{D
+,K{D
+[#+JzD
+k{a;k[k
+K{D;b{m{b;k
+`z`;`
+a;h;c
+`z`;`
+a{h;b;h{b
+`z`;`
+a{h;b;h{b
+`z`;`
+a{h;b;h{b
+`z`;`
+8a;i
+;iZ`;i
+x`xh
+x`9`{h
+{h[h9h
+{h[hzh
+D{hZ`
+h[h/JzD
+h[hZ
+h JzD
+h;a;iZx;i
+;i[xZ
+:iQp
+hZh9i
+hZh{i
+`z`;`
+b;h;c
+`z`;`
+#{a;h
+h8i!
+xa{i
+{h{a
+h8i!
+xa{i
+x`{h
+hZk{hZ`
+h{hZa
+x`{h
+x`{h
+`.K{D
+-K{D
+#,JzD
+ K{D
+x`9`;h
+#	JzD
+x`9`;h
+;k[h
+xa{i
+;k[h
+ {i:
+ {izh
+F#`{i
+FyiCK{D
+Fyi=K{D
+Fyi7K{D
+zi;k[h
+xi;k
+{i<!
+{i$JzDZ`{i
+h{a{izh
+`z`;`
+h{a{i
+ {izh
+ {i:h
+ {i:j
+ {izj
+x`9`{h
+a;h{aO
+x`{h
+x`9`{h
+{h:h
+x`{h
+xa{i
+`z`;`
+xa{i
+`z`zh
++K{D
+*K{D
+#)JzD
+h;a;i
+#{a;i
+xa;i
+`z`;`
+xa{i
+zi;h
+;hzh
+x`{h
+HK{D
+HK{D
+6#FJzD
+`5K{D
+5K{D
+B#3JzD
+x`{h
+x`{h
+VK{D
+UK{D
+&sTJzD
+:K{D
+9K{D
+#8JzD
+*K{D
+)K{D
+#K{D
+"K{D
+#!JzD
+x`{h
+'K{D
+'K{D
+#%JzD
+qK{D
+qK{D
+#oJzD
+eK{D
+dK{D
+#cJzD
+GK{D
+FK{D
+#EJzD
+4K{D
+3K{D
+#2JzD
+/K{D
+.K{D
+#-JzD
+x`{h
+)0{h
+xc{k
+#;a{
+D{c{k
+#0@+
+wK{D
+vK{D
+C3uJzD
+a{h:
+hK{D
+gK{D
+J3fJzD
+9K{D
+8K{D
+i37JzD
+x`{h
+d5{D
+`5{D
+\5{D
+T%zD
+Gxa{i
+05{D
+,5{D
+$%zD
+x$zD
+X4{D
+T4{D
+L$zD
+{K{D
+zK{D
+syJzD
+iK{D
+iK{D
+CgJzD
+YK{D
+XK{D
+CWJzD
+zs;b:jI
+8K{D
+7K{D
+"C6JzD
+x`{h
+7s;a
+F{iZB
+9izi
+8izi
+=K{D
+=K{D
+MC;JzD
+9izi
+9izi
+h9izi
+{iYB
+3{a{i
+8b;j
+sK{D
+rK{D
+|CqJzD
+7s{a
+F{jZB
+3{b{j
+PK{D
+OK{D
+CNJzD
+{jYB
+8b;j
+x`{h
+x`9`{h{a
+4K{D
+4K{D
+C2JzD
+-K{D
+,K{D
+C+JzD
+xi{i
+8a;i
+8a;i
+3{`{h
+x`{h
+{s{h
+{{/+D
+{{0+(
+F{r{z
+x`9`
+x`9`
+F{s{{
+x`9`
+x`9`
+#{s;{
+C{s:{{{
+3{s{h
+3{s{{zh
+x`9`{hO
+z {h
+x {h
+{h:3)"
+{hc3
+32"9h
+h:3("
+{pG-
+x`kF
+70{h
+{h:3
+{hc3
+70{h
+#{sM#
+sI#;ts#{td#
+70{u{h
+3`3F
+3;b;j
+) Zp
+;jZp;j[xc
+;jZp
+;j2F
+ `a`
+{h:3
+{hc3z
+{h[hzh
+#{s{h[hzh
+#{s{h[hzh
+x {h
+`z`{
+8b;j
+8a;i
+-0:i
+@#;s
+#{s{
+s{h[hzh
+b#;s
+#{s{
+s{h[hzh
+xa9a
+ 0{i
+;c3F
+y`yhA
+Rqy`
+;`3F
+{w3F
+3{b{j2F
+{i[hzi
+hyj2F
+xa9a
+ 0{i
+;c3F
+y`yhA
+Rqy`
+;`3F
+{w3F
+3{b{j2F
+{i[hzi
+hyj2F
+x`9`{h
+`;h@
+x`9`;h
+h{azh
+`z`;`
+i:h	IyD	HxD
+x`9`{h:h
+x`xh
+F#D@
+F{a@
+;{`zh
+x`9`{h
+p;hZ
+x`{h
+`z`;`
+`z`;`{h
+;hyh
+;hyh
+h{a{i
+~K{D
+h}K{D
+(`i`
+(`i`
+x`{h
+#	JzD
+`z`;`
+8c;k
+h4{D
+d4{D
+\$zD
+<4{D
+4$zD
+0$zD
+$$zD
+ $zD
+8b;j
+8b;j
+{i:i
+8b;j
+8b;j
+8b;j
+;kzm
+JzD9k
+uK{D
+uK{D
+3sJzD
+8b;j
+lK{D
+kK{D
+fsjJzD
+^K{D
+^K{D
+3\JzD
+XK{D
+VK{D
+UK{D
+PK{D
+OK{D
+isNJzD
+2K{D
+1K{D
+30JzD
+i{aO
+8a;i
+xa{i
+x`{h
+{h{a{i;a{i
+x`9`	K{D	J
+x`{h
+x`{h
+x`{h[l
+{h[l
+{h[l
+{h[i
+x`9`{h
+p;hZ
+x`9`{h
+x`{h
+x`9`#L|Dxh
+l"9hxh
+`z`;`
+`z`;`;j
+X%zD
+1,30"
+$sB!
+5F#F
+s 3 "
+`$zD0!
+x`9`
+{h[l
+3F*F!F
+xd{l
+;e{h
+0{e{h
+{h[i
+izhRi
+G8d;l
+0{e{h
+8d;l
+30{h
+40{h
+#;g{h[k
+#{g{h
+3F*F!F
+xe{m
+0;e{h
+d{h[k
+3zhQo
+30{h
+40{h
+3{g{h
+lYi{o
+#;g{h
+#;f{h
+;{d{h
+@;g{h
+@;g{l:o
+@;f{h
+zn{o
+@;g:o
+@{g{h
+#;d{h
+;d:o
+@;d{h
+{h[o
+e;lZ
+x`9`{h
+nzhRo
+FzhRn
+k{hZo{h
+{h[i
+kzhQozh
+x`{h[j
+#D;a{h[jzh
+#{a{h
+0;a{h
+{h[l
+{h[l
+<2zh
+:ixh
+j{h[i
+0;a{h
+x`{h
+x`{h
+{h[l
+{h[l
+<2zh
+x`{h[o
+ {h[i
+F{h[o
+{h[i
+FyhInA
+FyhInA
+x`{h
+x`{h
+x`{h
+x`("
+{h[i
+s{a{h[m
+h;a;i
+{h[i
+{h[i
+xa{i
+E|DH
+b{h[m
+h{a{h[i
+{b{i
+{h[i
+{h[l
+{h[l
+1{b{h[i
+a{h[i
+C;a{h
+{h[l
+{h[l
+a{h[l
+{h[i[l
+a{h[i
+m{h[i
+l`2yhIiIkxh@i
+m{h[i
+l`3yi
+x`{h
+x`xh
+{hZm{h
+l{hZc{h
+o{h[m
+h{h[m
+x`9`;h
+{h[l
+{pG]
+x`{h[l
+L|D{h[l
+hzhRl
+"Zd{h
+G{hZm{h
+x`#L|D{h[l
+d{h[i[j
+{h[i[jzhRi
+x`{h
+ {h[m
+h{h[m
+ {h[l
+D2zh
+zhRi
+p{h[l
+{h[i
+a{h[i
+{hZm{h
+x`{h[l
+D2zhRi
+{h[l
+{h[i
+a{h[i
+<"{h
+{hP3
+{h83
+{hD3
+x`l"
+x`CL|D{h[m
+{h[m
+{h[l
+{h[l
+{h[m
+F{hZe{h
+d{h[l
+F{hZd{h[l
+{h[m
+hzhRl
+hzhRm
+"Zd{h
+"Ze{h
+{h[m
+{h[l
+x`9`SL|D;h{b{j
+;b{h
+{h[n
+{hYn{h
+hzhRn
+F{h[n
+a{h[o
+F{h[n
+{a{h
+F{h[n
+;a{h
+F{h[n
+F{h[n
+iZf{h:j
+f{hzj
+f{hZn
+g{hZn{i
+D{hZg{hZn;i
+g{hZn
+g{hZn
+iZf{h:j
+f{hzj
+f{hZn{h
+g{h[n
+{hZg{h[n
+g{h[n
+g{h[n
+x`9`4L|D;h{a{i
+;a{h
+ {h:i
+ {hzi
+x`9`?L|D{h:hZa{h
+"Zf{h
+{h[n
+hzhRn
+"ZfO
+ {hZn{h
+g{h[n
+{hZg{h[n
+g{h[n
+g{h[n
+x`9`KL|D{h
+ {h[n
+{hXn{h
+x`9`;h
+x`9`;h
+x`9`;h
+hzhZa
+`z`;`
+hzhZb
+x`9`{h:h
+`z`;`
+`z`;`
+h:hZb
+x`9`{h
+{h[i
+{h[l
+x`9`{h:h
+`{h:hZ`{h:h
+`{h:h
+`z`;`{h
+x`9`{h:h
+G8a;i
+`;izhZ`;i
+h{a{i
+{i:i
+h@3zh
+h[lzh
+x`9`{h[l:h
+xa{i
+h`3zh
+xa{i
+`z`;`
+hT3zh
+xa{i
+h`3:j9h
+xa{i
+x`9`{h
+{hT3
+{h`3
+x`9`{h:h
+x`9`{h:h
+x`9`{h:h
+x`9`0L|D
+t {h
+v {h
+JzDR
+{pGr
+x`9`;h
+x`{h
+x`{h
+x`{h
+x`{h
+x`{h
+	K{D
+	K{D
+x`{h
+x`{h[i
+K{DS
+K{DS
+K{DS
+{pG.
+x`{h
+x`9`{h
+{h[i
+{h[i
+{h[i
+`{h[i
+{h[i
+xa{i
+xa{i
+xa{i
+xa{i
+xazh{i
+{i{`
+8a;i
+8a;i
+xa{i
+xa{i
+x`{h
+{h[i
+x`{h
+{hP3
+{h83
+{hD3
+L|D{h
+L|D{h
+:qxh
+L|D{h
+Gl!xh
+L|D{h
+x`QL|D{h
+ {h[n
+{hZn{h
+hzhRn
+G{h[l
+{h[l
+{h[m
+hzhRl
+hzhRm
+x`{h
+x`|"
+cJzD
+hCJzD
+h3JzD
+h1JzD
+x`{hT3
+{h`3
+|!xh
+x`{h
+x`9`;h
+{h[h
+hzhZ`
+x`9`{h:h
+`{h:hZ`
+x`{h
+x`9`{h[i
+{h[i
+x`9`{h[i
+{h[i
+`z`;`
+K{D{a
+K{D{a
+#;a:iyi
+`z`;`
+`z`;`;h
+x`9`{h
+{h[l
+{pGa
+`z`;`
+#{b8k
+xb{j
+xb{j
+xb{j
+:hyh
+xb{j
+xb{j
+x`9`{h
+p;hZ
+x`9`{h
+x`9`{h[h:h
+x`9`8h
+xa{i
+xa{i
+`z`;`
+xa{i
+xa{i
+xa{i
+`z`;`
+xa{i
+h{h[h
+`z`;`{h
+xa{i
+xa{i
+xa{i
+xa{i
+8b;j
+3{bzi{j
+xa{i
+`z`PL|D{h{b
+8b;j
+8b;j
+h{b{j
+`z`{h
+xc{k
+xc{k
+xc{k
+xc{k
+xc{k
+xc{k
+xc{k
+xc{k
+xc{k
+xc{k
+xc{k
+xD|D
+h{c{h
+0#9l
+xd{l
+;lzk
+F{czk
+D{czk
+k;dzk
+0#9l
+xd{l
+D;d;l
+xd{l
+xd{l
+xd{l
+xd{l
+0#9l
+xd{l
+xd{l
+xd{l
+0#9l
+xd{l
+xd{l
+xd{l
+xd{l
+xd{l
+xd{l
+zk;l
+xd{l
+;kyj
+xd{l
+zk;l
+`z`4L|D
+xa{i
+a.K{D{a
+#;aC
+iZh;i
+iZh;i
+ayizj
+3{bzj;i
+iZh{j
+K{D{a
+K{D{a
+8a;i
+K{D{a
+8a;i
+avK{D{a
+{isJzD
+8a;i
+afK{D{a
+{icJzD
+8a;i
+aVK{D{a
+{iSJzD
+8a;i
+aFK{D{a
+{iCJzD
+8a;i
+a6K{D{a
+{i3JzD
+8a;i
+a&K{D{a
+{i#JzD
+8a;i
+K{D{a
+K{D{a{h
+8a;i
+K{D{a{h
+8a;i
+K{D{a{h
+8a;i
+axK{D{a{h
+{iuJzD
+8a;i
+ahK{D{a{h
+{ieJzD
+8a;i
+aXK{D{a{h
+{iUJzD
+8a;i
+aHK{D{a{h
+{iEJzD
+8a;i
+a8K{D{a{h
+{i5JzD
+8a;i
+a(K{D{a{h
+{i%JzD
+8a;i
+K{D{a
+h;b{h
+a!K{D
+K{D;a;i
+JzDyj8j
+xa{i
+zi{j
+{izj
+{b{i:j
+xa9a
+b;i;c
+0&zD
+xc{k
+zk;k
+:k{k
+b;k:i
+xc{k
+zk;k
+:k{k
+xc{k
+zk;k
+:k{k
+xc{k
+zk;k
+:k{k
+H%zD
+xc{k
+zk;k
+:k{k
+xc{k
+zk;k
+:k{k
+xc{k
+zk;k
+:k{k
+xc{k
+zk;k
+:k{k
+j;k{`
+8$zDyh0F
+xc{k
+zk;k
+:k{k
+j;k{`
+JzDyh0F
+xc{k
+zk;k
+:k{k
+xc{k
+zk;k
+:k{k
++F"F
+xc{k
+zk;k
+:k{k
+xc{k
+JzD)F F
+xc{k
+zk;k
+:k{k
+xc{k
+zk;k
+:k{k
+xc{k
+zk;k
+:k{k
+xc{k
+zk;k
+:k{k
+xc{k
+hgJzD
+xc{k
+zk;k
+:k{k
+xc{k
+hNJzD
+xc{k
+zk;k
+:k{k
+xc{k
+h6JzD
+xc{k
+zk;k
+:k{k
+xc{k
+j9k!JzD
+xc{k
+zk;k
+:k{k
+b;k:i
+`z`;`
+h{a/K{D
+{h(JzDyi
+8a;i
+:i{i
+;izi
+{a;i
+F;hS@;`
+JzDyi
+8a;i
+:i{i
+;izi
+{a;i
+x`9`H
+{a{h
+@;a{h
+:h{i
+s{a-
+{i;a;iZh{h
+;i[h
+h;i[h
+h{a{i
+x`9`
+#;axh
+`;h[h
+zh{i
+{i;a
+3{azi
+;h[h
+zh;i
+;h[h
+x`9`{h
+{hZh;h[h
+h;h[h
+{hZh;h[h
+h;h[h
+x`9`A
+{hZh;h[h
+h;h[h
+i{`;h
+i;`{h
+(1{`xk
+{h2F)F F
+#{a{h
+#{a{i
+`z`;`
+h{aA
+zhyi
+F:h;j
+{i;a
+41{a{i
+;i{a{i
+`z`;`{h
+xa{i
+x`9`{h
+{hl3
+{hZh
+h{h[h
+`z`;`
+h{b{k
+xa{i
+{jl3
+yixj
+`{i{b
+#{a;i;bA
+hZh{h
+`z`;`{h
+D[h{a;h
+<h8k
+`z`;`
+JzD;j
+`z`;`
+#;a;h
+xfyn8h
+;hzh
+x`QL|D{h
+a !8i
+a !8i
+x`9`{h
+p;hZ
+`z`{h
+8a;i
+x`9`
+xb{j
+xb{j
+x`|"
+xa{i
+xa{i
+h43zh
+xa{i
+xa{i
+`z`;`
+xb{j
+xb{j
+xb{j
+xb{j
+xa{h;a
+xb{j
+p;iZ
+xb{j
+p;iZ
+xb{j
+:azi
+p;iZ
+:azi
+p:i{i
+D;a:i{h
+xa{i
+xa{i
+h43zh
+xa{i
+`z`;`
+xa{i
+xa{i
+xa{i
+xa{i
+h(3:hyh
+xa{i
+xa{i
+xa{i
+xa{i
+xa{i
+xa{i
+xa{i
+xa{i
+xa{i
+xa{i
+xa{i
+xa{i
+`z`;`
+zk9k
+x`{hp3
+{hd3
+{hX3
+{hL3
+{h@3
+{h43
+{h(3
+|!xh
+h;b:j{h
+:j{j
+x`{h
+`	K{D
+h[hyh
+x`xh
+x`xh
+x`{h
+x`{h
+x`{h
+x`{h
+x`{h
+x`{h[l
+{h[l
+{h[l
+{h[i
+x`{h[l
+{h[l
+{h[l
+{h[i
+F{i	3
+3{a{h
+3{b;j
+3;b;j
+zbzi
+F#p{jZ
+zbzi
+3;b;j
+#{b{h
+8a;i
+3{b;j
+3;b;j
+8a{jZ
+zbzi
+p{jZ
+zbzi
+3;b;j
+D;a{h
+`:i{i
+:i{i
+p{iZ
+p{iZ
+p{iZ
+p{iZ
+p{iZ
+D;a{h
+:i{i
+:i{i
+p{iZ
+p{iZ
+p{iZ
+p{iZ
+D;a{h
+:i{i
+:i{i
+p{iZ
+p{iZ
+p{iZ
+D;a{h
+:i{i
+:i{i
+p{iZ
+p{iZ
+p{iZ
+x`{h[l
+`{h[i
+izhRi
+`{h[i
+izhRi
+`z`;`
+b{h[i
+{h[i
+a{h[i
+b{h[i
+0{b{j
+b{h[i
+F{h[i
+F{h[i
+8b;j
+{h[l
+h;c;k
+;k +
+{h[l
+3{czk;k
+{h[izh
+#{c5
+xa{h[i
+F{h[i
+u0yhxi
+3{c{k
+3;c{h[i
+8b;j
+`z`{h
+x{a{iZ
+h[l:i
+;{a;i
+3;a{i
+0{bxh
+8b;j
+D{b{h
+{h[i
+izhRi
+jzhRi
+izhRi
+jzhRi
+{h[l
+{j"3
+i +	
+i&3zj
+i'2yj
+C;c;k
+#;c	
+i#3zj
+i$2yj
+i%3zj
+{h\mxk
+F#`{h[m
+{h[m
+{h[l
+{j#3
+a{h[l
+~Z`{h
+{j#3
+8b;j
+#{c{h[izh
+" {k
+{h[izh
+" {kY
+xa{h
+jyhxi
+i(3zj
+8b;j
+8b;j
+8b;j
+8b;j
+8b;j
+{h[i
+x`{h[l
+{h[l
+`z`H
+xa{i
+`z`;`;h
+x`{h[m
+xf{n
+F#D;e{h
+F#D;f;m
+m:nxh
+xf{n
+{m"F
+xf{n
+a{h[m
+xa{i
+0;a{h
+x;b;j{b{h
+3{bxh
+D{b{h
+x`xh
+x`{h[m
+h{a{i
+#;a{h[l
+{h[i
+izhRi
+zs"F
+{h[l
+{h[l
+q{h[l
+$t{h[i
+izhRi
+s;e{h[m
+#{exh
+8e;m
+{h[l
+{h[m
+#{e{h
+#{e{h
+DzhRi
+iyhIi
+;lzlym
+8e;m
+8e;m
+{h[l
+{h[i
+"Zdxh
+JzDR
+{pG&8
+x`{h
+x`{h
+x`{h
+`{h[h
+x`9`;h
+hZ`;hzh
+`:h{hZ`
+ K{D
+Gxa{i
+h{iZ`{i	
+x`9`
+JzDR
+{pG*
+x`9`8h
+`{h[h
+izhZ`
+x`9`9hxh
+F;a{h
+h{a{i
+8a;i
+;iZh{h
+;{axi
+D{axi
+#;b{i
+;j[h
+h{b{j
+x`{h
+x`{h
+x`9`{h
+"Z`;h
+`zhJ
+`zhO
+azhO
+OSSazhE
+azhF
+azhM
+bzhL
+3Sb/
+`zhM
+`zhM
+azhE
+sSazh@
+azhA
+azhH
+bzhD
+cSb{h:h
+Z`;F
+Za;F
+Zb;F
+Zc;F
+scZ@
+s3Z@
+scZ@
+s3Z@
+scZ@
+s3Z@
+scZ@
+ 1Y@
+ 1K@
+s3Z@
+scZ@
+$1Y@
+$1K@
+s3Z@
+scZ@
+(1Y@
+(1K@
+s3Z@
+scZ@
+,1Y@
+,1K@
+s3Z@
+scZ@
+s3Z@
+scZ@
+s3Z@
+scZ@
+s3Z@
+scZ@
+s3Z@
+scZ@
+ 1Y@
+ 1K@
+s3Z@
+scZ@
+$1Y@
+$1K@
+s3Z@
+scZ@
+(1Y@
+(1K@
+s3Z@
+scZ@
+,1Y@
+,1K@
+s3Z@
+scZ@
+s3Z@
+scZ@
+s3Z@
+scZ@
+s3Z@
+scZ@
+s3Z@
+scZ@
+ 1Y@
+ 1K@
+s3Z@
+scZ@
+$1Y@
+$1K@
+s3Z@
+scZ@
+(1Y@
+(1K@
+s3Z@
+scZ@
+,1Y@
+,1K@
+s3Z@
+scZ@
+s3Z@
+scZ@
+s3Z@
+scZ@
+s3Z@
+scZ@
+s3Z@
+scZ@
+ 1Y@
+ 1K@
+s3Z@
+scZ@
+$1Y@
+$1K@
+s3Z@
+scZ@
+(1Y@
+(1K@
+s3Z@
+scZ@
+,1Y@
+,1K@
+s3Z@
+scZ@
+s3Z@
+scZ@
+s3Z@
+scZ@
+s3Z@
+scZ@
+s3Z@
+scZ@
+ 1Y@
+ 1K@
+s3Z@
+scZ@
+$1Y@
+$1K@
+s3Z@
+scZ@
+(1Y@
+(1K@
+s3Z@
+scZ@
+,1Y@
+,1K@
+s3Z@
+scZ@
+s3Z@
+scZ@
+s3Z@
+scZ@
+s3Z@
+scZ@
+s3Z@
+scZ@
+ 1Y@
+ 1K@
+s3Z@
+scZ@
+$1Y@
+$1K@
+s3Z@
+scZ@
+(1Y@
+(1K@
+s3Z@
+scZ@
+,1Y@
+,1K@
+s3Z@
+scZ@
+s3Z@
+scZ@
+s3Z@
+scZ@
+s3Z@
+scZ@
+s3Z@
+scZ@
+ 1Y@
+ 1K@
+s3Z@
+scZ@
+$1Y@
+$1K@
+s3Z@
+scZ@
+(1Y@
+(1K@
+s3Z@
+scZ@
+,1Y@
+,1K@
+s3Z@
+scZ@
+s3Z@
+scZ@
+s3Z@
+scZ@
+s3Z@
+scZ@
+s3Z@
+scZ@
+ 1Y@
+ 1K@
+s3Z@
+scZ@
+$1Y@
+$1K@
+s3Z@
+scZ@
+(1Y@
+(1K@
+s3Z@
+scZ@
+,1Y@
+,1K@
+s3Z@
+scZ@
+s3Z@
+hZa;
+`z`{h
+{a{i
+h[hZ
+hZ`{i
+zh;i
+`zh;i
+#{a	
+`{h@;{`{h?+
+x`9`{h
+{h[h
+{a{i7+
+;a:ivK{D
+p;h	3zh
+3zhRi
+3zhRi
+3zhRi
+3zhRi
+3zhRj
+3zhRj
+3zhRj
+3zhRj
+`z`:F
+`z`;`{h@+
+;hyh
+ #{`
+hh3@"6!
+3@"\!
+#{c$
+3{czk{h
+hh3@"
+`z`zh
+x`9`{h
+9hxh
+x`{h
+{hh3@"
+`z`:F
+zra!
+zK{D
+uK{D
+FUK{D
+CJzD
+BK{D
+D9JzD
+8K{D
+'JzD
+`z`dK{D
+DZIYX
+DLI[X
+D7IYX
+D)I[X
+{pGbK
+x`9`eL|D
+x{iyh
+x=+9
+3{a{izh
+x`{h
+"Z`zhB
+`zhJ
+`zhM
+azhE
+h[hZ
+hZh{h[
+hZ`zh{i
+x`9`
+#;a{h
+{a{i7+
+;ayh
+#;a3
+3{a;i
+3;a:i{h
+#;a%
+3{a;i
+3;a:i{h
+$CO;
+ls;b
+JzDR
+IyDQ
+" 9jxi<i
+JzD@!xh
+x`{h[i
+{h[i
+	K{D
+h4{D
+$zDO
+JzDO
+JzDO
+JzDO
+F"F !
+#LJzD !
+#AJzD !
+|$zD
+L$zD
+$zDO
+JzDO
+JzDO
+JzDO
+JzDO
+JzDO
+3FeJzD@!
+8`JzD
+FQIyD
+JJzD
+F7JzDO
+83K{D3JzD
+8.JzD
+8)JzD
+8"JzD
+x`{h
+#	JzD
+x`9`
+#;a{h
+P5{D
+L5{D
+H%zD
+45{D
+05{D
+(%zD
+ 5{D
+#{aY
+F{iO
+F{iO
+F{iO
+3{a{i
+p4{D
+l4{D
+d$zD
+X4{D
+H4{D
+ 4{D
+F{iO
+F{iO
+F{iO
+F{iO
+F{iO
+F{iO
+`{iO
+F{iO
+`{iO
+#;a(
+F{iO
+F{iO
+F;iO
+:i{i
+F;iO
+F{iO
+F;iO
+F{iO
+F;iO
+F;iO
+F{iO
+h|K{D
+F;iO
+rJzD
+DqJzD
+F:iO
+iK{D
+iK{D
+sgJzD
+eK{D
+F;iO
+_K{D
+F;iO
+`YK{D
+F;iO
+`TK{D
+F;iO
+`;iO
+LJzD
+3;a;i
+DK{D
+`*K{D
+'K{D
+!K{D
+xa{i
+`z`;`
+xa;h
+xa9a
+3;c{i
+s{c{i
+ s;d{i
+@s{d{i
+xg{o
+|K{D
+_K{D
+^K{D
+]JzD
+LK{D
+LK{D
+JJzD
+F{`xi
+ t}i
+e~i{i
+xe{m
+3;a{h
+s{a{h
+ s;b{h
+@s{b{h
+xe{m
+}K{D
+|K{D
+&#{JzD
+P,{m
+ljJzD
+fK{D
+xe{m
+UK{D
+UK{D
+sSJzD
+CK{D
+CK{D
+>#AJzD
+X,{m
+3;`zh
+ t}h
+e~h{h
+~K{D
+~K{D
+g#|JzD
+tK{D
+sK{D
+n#rJzD
+hFJzDO
+<K{D
+<K{D
+#:JzD
+13JzDO
+#K{D
+4!!IyD
+D1[h
+hVJzDO
+NK{D
+MK{D
+-sLJzD
+,1EJzDO
+D1Zh
+!K{D!IyD
+JzDO
+htJzDO
+oK{D
+oK{D
+3mJzD
+hK{D
+hK{D
+3fJzD
+_K{D
+^K{D
+3]JzD
+\1VJzDO
+hHJzD
+<K{D
+t!:IyD
+1K{D
+t!/IyD
+*K{D
+)K{D
++3(JzD
+uK{D
+uK{D
+w3sJzD
+aK{D
+aK{D
+`s_JzD
+h\JzD
+!OIyD
+BIyD
+4K{D
+4K{D
+32JzD
+`z`;`
+:K{D
+:K{D
+4#9JzD
+1K{D
+1K{D
+9#0JzD
+*K{D
+)K{D
+=#(JzD
+ 3:h
+ 3:h
+x`9`zh
+x`{h
+sK{D
+sK{D
+f#rJzD
+lK{D
+lK{D
+i#kJzD
+xa{i
+^K{D
+]K{D
+p#\JzD
+3WJzD
+VK{DVJzDxi
+#{b(
+FCJzD(F
+D5JzD
+2K{D
+1K{D
+|#0JzD
+8b;j
+$K{D
+$K{D
+##JzD
+#{ag
+3{azi{h
+`z`;`
+(K{D{`;h
+&K{D;`O
+;nzn
+JzDO
+l%zD !(F
+8%zD !
+$zDO
+ $zDO
+JzDO
+JzDO
+ds(;
+dr(:
+Ts,;
+ds(;
+Ts,;
+JzDO
+F"F !
+#QJzD !
+#FJzD !
+F#K{D
+ E|D
+X4{D
+T4{D
+L$zD
+JzD@!0F
+MeY(D
+JzDO
+JzDO
+rxIaX
+arH X
+"tIyD(F
+"s]J
+bWIaX
+0QMeY(D
+sFNJzDO
+IK{D
+IK{D
+GJzD
+7K{D
+7K{D
+s5JzD
+&K{D
+%K{D
+s$JzD
+F{h@
+{pG6
+`zL|D
+gK{D
+gK{D
+seJzD
+GK{D
+FK{D
+sEJzD
+"s0J
+F3JzDO
+*K{D
+)K{D
+s(JzD
+`z`;`eL|D
+\K{D
+\K{D
+sZJzD
+SK{D
+RK{D
+QJzD
+xa{i
+JK{D
+JK{D
+sHJzD
+{h:h<IyD
+xa{i
+8K{D
+7K{D
+s6JzD
+xa{i
+!K{D
+!K{D
+`z`;`bL|D
+[K{D
+ZK{D
+YJzD
+RK{D
+RK{D
+sPJzD
+xa{i
+JK{D
+IK{D
+HJzD
+{h:h<IyD
+xa{i
+8K{D
+8K{D
+6JzD
+xa{i
+"K{D
+!K{D
+ JzD
+`z`;`
+^K{D
+^K{D
+\JzD
+TK{D
+TK{D
+RJzD
+LK{D
+KK{D
+JJzD
+GK{D
+BK{D
+AK{D
+s@JzD
+7K{D
+6K{D
+s5JzD
+k{gxo
+8g;o
+*K{D
+*K{D
+(JzD
+0:hyh
+`z`;`;h
+DK{D
+DK{D
+BJzD
+3K{D
+3K{D
+#1JzD
+Fzh*IyD
+'K{D
+&K{D
+#%JzD
+x`9`;h
+&K{D
+&K{D
+#$JzD
+h(3yh
+`z`;`
+xa{i
+7K{D
+6K{D
+s5JzD
+*K{D
+*K{D
+s(JzD
+{h:i
+#:h"IyD
+xa{i
+h;i:j@
+`z`;`
+GK{D
+GK{D
+U#EJzD
+BK{D
+=K{D
+<K{D
+s;JzD
+2K{D
+1K{D
+s0JzD
+xg{o
+%K{D
+%K{D
+g##JzD
+{h:oyo
+{k{f{n
+xa{i
+{izh
+VJzD
+OK{D
+OK{D
+#MJzD
+;FIJzD
+AK{D
+@K{D
+#?JzD
+7K{D
+6K{D
+'s5JzD
+h8IyD
+h*IyD
+)K{D
+`z`;`
+;hzh
+`z`;`
+;hzh
+`z`;`
+x`9`9hxh
+`z`zh
+`z`zh
+x`xh
+x`xh
+x`xh
+`z`;`;hzh
+x`xh
+`z`zh
+x`xh
+x`xh
+x`xh
+x`xh
+`z`zh
+`z`;`;hzh
+`z`zh
+`z`;`;hzh
+x`xh
+`z`;`
+;hzh
+x`xh
+x`xh
+x`9`6K{D
+r2K{D
+/K{D
+p-K{D
+x,K{D
+*K{D
+p(K{D
+h(JzD
+r%K{D
+x`*K{D
+*K{D
+i#)JzD
+`&K{D
+!K{D
+ K{D
+x`{h
+.K{D
+-K{D
++K{D
+(K{D
+&K{D
+$K{D
+"K{D
+`z`{
+ujK{D
+aK{D
+aK{D
+#`JzD
+]K{D
+ZK{D
+XK{D
+SK{D
+NK{D
+JK{D
+FK{D
+?K{D
+;K{D
+-K{D
+%K{D
+`z`{
+xa{i
+`VK{D
+OK{D
+NK{D
+sMJzD
+JK{D
+DK{D
+CK{D
+sBJzD
+?K{D
+x{hYh{h
+x{hYh{h
+-K{D
+x{hYh{h
+"K{D
+x{hYh{h
+{Zt{h
+~K{D
+h~JzD
+xZtyK{D
+xK{D
+wK{D
+svJzD
+aqK{D
+mK{D
+k{akK{D
+cK{D
+hZ|{i
+_K{D
+^K{D
+s]JzD
+[K{D
+XK{D
+WK{D
+VK{D
+UJzD
+h{a{i
+NK{D
+#;aKK{D
+8a;i
+FK{D
+FK{D
+DJzD
+@K{D
+=K{D
+:K{D
+6K{D
+h6JzD
+2Za4K{D
+~K{D
+}JzD
+xK{D
+pK{D
+jK{D
+acK{D
+a`K{D
+xa{i
+LK{D
+LK{D
+sJJzD
+`?K{D
+=K{D
+5K{D
+2K{D
+a-K{D
+*K{D
+&K{D
+p#K{D
+t K{D
+xa{i
+xa{i
+xa{i
+fK{D
+eK{D
+dJzD
+xa{i
+F9K{D
+xa{i
+1HxD
+xa{i
+*HxD
+xa{i
+&K{D&JzD&IyD&HxD
+xa{i
+xa{i
+xa{i
+x`{h
+/K{D
+F*K{D
+`)K{D
+&K{D
+#K{D
+h"K{D
+F!K{D
+aza{
+D<3(F
+D>1	x
+L0,"
+rK{D
+qK{D
+#pJzD
+mK{D
+lK{D
+#kJzD
+'0zi
+1K{D
+1K{D
+#0JzD
+L0,"
+`z`{
+40,"
+40,"
+40,"
+;}z}
+ZK{D
+ZK{D
+XJzD
+x`{h
+QK{D
+PK{D
+sOJzD
+AK{D
+@K{D
+s?JzD
+,K{D
+,K{D
+s*JzD
+`z`{
+DZ3z
+D$3[
+D0,"
+D0,"
++F"F
+~K{D
+s}JzD
+{1@+
+iK{D
+hK{D
+sgJzD
+]K{D
+]K{D
+s[JzD
+EK{D
+DK{D
+sCJzD
+6K{D
+5K{D
+s4JzD
+91 +
+`z`{
+40,"
+40,"
+40,"
+p;}z}
+}<~}~
+QK{D
+QK{D
+sOJzD
+1K{D
+1K{D
+V#/JzD
+"K{D
+!K{D
+Z# JzD
+`z`{
+8a;i
+p;iZ
+8a;i
+8a;i
+8a;i
+~K{D
+~K{D
+3|JzD
+yK{D
+yK{D
+3wJzD
+#{b^
+UK{D
+UK{D
+%3SJzD
+3{b{j
+3{b{j
+F{p{h
+h{a{i[x
+h{a{i[x
+3{a;
+	K{D
+x`9`{h
+hzhZf
+q2K{D
++K{D
+(K{D
+3{a{i
+qDK{D
+BK{D
+@K{D
+h?K{D
+8K{D
+` 4K{D
+2K{D
+` 0K{D
+-K{D
+a *K{D
+#{a(
+$K{D
+h{iZ
+3;a;i
+3{a{i
+`z`{
+vL|D
+xw+@
+pK{D
+uaK{D
+3YIaX
+TIaX
+RK{D
+hRJzD
+}KJzD
+IK{D
+HK{D
+GJzD
+EK{D
+AK{D
+AK{D
+s?JzD
+9K{D
+7K{D
+x>+)
+(K{D
+(K{D
+s&JzD
+$K{D
+`z`{
+30_+
+p4{D
+L4{D
+30@+
+3{c{k
+#{c=
+3{c{k
+~K{D
+h}JzD
+ zK{D
+yK{D
+btK{D
+oK{D
+hoJzD
+ lK{D
+bcK{D
+aK{D
+F[JzD
+XK{D
+WK{D
+VJzD
+F;b{j:j
+bLK{D
+GK{D
+CK{D
+3yj:j
+@K{D
+;K{D
+:K{D
+9JzD
+7K{D
+3K{D
+`z`{
+>K{D
+#{a1K{D
+xa{i
+&K{D
+p{i<
+xa{i
+ JzD
+D	3!F
+`z`;`xK{DzhR
+"zuzh
+"zuzh
+}QteJ
+3;a3
+hs3;a$
+QK{D
+QK{D
+p#PJzD
+a#;t3#{tc#
+t7#;u9#{u4#
+ui#;vu#{v8#
+v6#;wt#{w5#
+xc{k
+@K{D
+?K{D
+#>JzD
+8c;k
+0K{D
+/K{D
+#.JzD
+8cxk
+F"Fyh
+F{q>L|D>K
+F+`7K
+5K{D
+4K{D
+#3JzD
+F*IyD
+xb!K
+8b;j
+F1F(F
+h}K{D
+hwK{D
+qK{D
+pK{D
+mK{D
+kK{D
+jK{D
+hgK{D
+haK{D
+h\K{D
+VK{D
+TK{D
+QK{D
+OK{D
+NK{D
+hKK{D
+hFK{D
+h@K{D
+:K{D
+9K{D
+5K{D
+4K{D
++K{D
+)K{D
+x`?L|D
+<!:K
+#[	O
+&K{D
+&K{D
+s$JzD
+x`9`
+L|D{h
+}K{D
+}K{D
+{JzD
+tK{D
+sK{D
+rJzD
+cK{D
+bK{D
+aJzD
+]K{D
+]K{D
+s[JzD
+h#3zh
+!HK{D
+EK{D
+DK{D
+sCJzD
+"Z`4K{D
+4K{D
+s2JzD
+0K{D
+*L|D*K{D
+)K{D
+(JzD
+&K{D
+x`RK{D
+`PK{D
+LK{D
+LK{D
+JJzD
+HK{D
+iEJzD
+BK{D
+>K{D
+>K{D
+s<JzD
+:K{D
+7K{D
+6K{D
+5JzD
+3K{D
+2K{D
+s1JzD
+/K{D
+i,K{D
+&K{D
+i#JzD
+ K{D
+8a;i
+3{a{i	+
+x`9`OK{D
+xa{i
+8a;i
+:iCK{D
+F>K{D
+F:K{D
+5K{D
+4K{D
+X#3JzD
+.K{D
+-K{D
+x`{h
+#;`xh
+8`;h
+x`TK{D
+TK{D
+#SJzD
+xa{i
+KK{D
+KK{D
+#JJzD
+8a;i
+?K{D
+?K{D
+#>JzD
+:K{D
+"9ixi
+.K{D
+-K{D
+#,JzD
+")K{D
+"$IyD
+" IyD
+ K{D
+aza{
+D@3(F
+DB1	x
+L0,"
+rK{D
+qK{D
+#pJzD
+mK{D
+lK{D
+#kJzD
+'0zi
+1K{D
+1K{D
+s/JzD
+L0,"
+`z`{
+,0,"
+,0,"
+,0,"
+;}z}
+hH3[
+hH3[
+hH3[
+iH3[
+hH3[
+iH3[
+hH3[
+`z`{
+40,"
+40,"
+40,"
+;}z}
+`z`{
+D^3z
+D$3[
+L0,"
+L0,"
+7 ;k
+.0z}
+rK{D
+qK{D
+spJzD
+L0,"
+QK{D
+QK{D
+#OJzD
+`z`{
+8a;i
+p;i\
+8a;i
+8a;i
+8a;i
+#}JzD
+zK{D
+zK{D
+8sxJzD
+#{b^
+UK{D
+UK{D
+#SJzD
+3{b{j
+3{b{j
+F{p{h
+h{a{i[x
+h{a{i[x
+xa{i
+p{iZ
+xa{i
+xa{i
+xa{i
+	K{D
+`z`;`
+xc{k
+jZ`:h
+#;cW
+xc{k
+;k8JzD8IyD
+)K{D
+xc{k
+xa{i
+`{izh
+x`9`{h
+{h;a
+h{a:i{i
+x`{h
+x`{h
+x`{h
+x`{h
+`z`;`
+xa{i
+8a;i
+8a;i
+xi;h
+K{Dzh
+8a;i
+{i[h
+`z`;`
+h{a{iXhy
+;hzh
+`z`;`
+xa{i
+:hyhxi
+;hzi
+`z`;`
+h{a{iXhy
+;hzh
+`z`;`
+xa{i
+:hyhxi
+;hzi
+Fz`{
+h{a{i[hy
+h[hz
+x`9`{h
+h[h9h
+`z`;`
+h{a{iXh;hzh
+`z`zh
+x`xh
+x`xh
+L|Dyh
+{hXB
+`z`;`{h
+`1zh
+8a;i
+`1zh
+h{a{i[h
+{i[h
+YK{D
+XK{D
+#WJzD
+LK{D
+KK{D
+#JJzD
+1zhEIyD
+xazi
+T!{i`
+xazi{h
+zh{i
+8a;i
+*K{D
+*K{D
+(JzD
+zh{i
+T!zi;i
+xa{i
+T!{i
+xa{i
+T!{i
+x`{h
+s{a@
+aGK{D
+FK{D
+EJzD
+i;a{i
+D(JzD
+iZ`{i
+`z`;`
+;hzh
+#K{D
+#K{D
+!JzD
+{azi{h
+bK{D
+aK{D
+`JzD
+F{a;h
+JK{D
+IK{D
+sHJzD
+9K{D
+9K{D
+7JzD
+2K{D
+2K{D
+0JzD
+%K{D
+$K{D
+s#JzD
+x`{h
+"Z`{h
+x`{h
+`!{h
+x`9`{h
+#;a;hP"
+`~K{D
+xa{i
+xK{D
+wK{D
+svJzD
+pK{D
+pK{D
+snJzD
+XK{D
+XK{D
+sVJzD
+3{a{i
+FPK{D
+LK{D
+KK{D
+U#JJzD
+#;a;h
+DK{D
+CK{D
+Z#BJzD
+?K{D
+?K{D
+s=JzD
+;h[h
+xa{i
+Fyi F
+(K{D
+'K{D
+v#&JzD
+;hzi
+"K{D
+!K{D
+y# JzD
+`z`;`
+*K{D
+*K{D
+!s(JzD
+&K{D
+&K{D
+#$JzD
+3{azi{h
+h{a{i
+h;b;j
+#{bu
+xa{i
+3{b{j
+>K{D
+=K{D
+#<JzD
+3{b{j
+0K{D
+0K{D
++s.JzD
+$K{D
+$K{D
+#"JzD
+8a;i
+`z`;`
+~K{D
+}K{D
+#|JzD
+zK{D
+yK{D
+#xJzD
+lK{D
+lK{D
+#jJzD
+{iZJzD
+VK{D
+VK{D
+8sTJzD
+KK{D
+KK{D
+#IJzD
+@K{D
+@K{D
+:s>JzD
+/K{D
+.K{D
+xb{j
+x`{h
+3	JzD
+x`{h
+K{D'
+K{D$
+K{D!
+x`9`
+`zh;h
+JzD !
+`z`{h
+`z`;`
+{i[h
+:hyhxi
+x`9`$K{D
+i{c{k
+h[j{b
+#{a{j[hzj
+G8b;j
+}K{D
+}K{D
+3{JzD
+#;cQ
+nK{D
+nK{D
+islJzD
+hK{D
+gK{D
+3fJzD
+]K{D
+\K{D
+3[JzD
+D;c:k{k
+G8b;j
+MK{D
+LK{D
+3KJzD
+:k{k
+EK{D
+DK{D
+3CJzD
+=K{D
+=K{D
+3;JzD
+2K{D
+1K{D
+30JzD
+8b;j
+"Z`O
+"Z`O
+"Z`O
+yK{D
+i:jwIyD
+FuK{D
+pK{D
+FpK{D
+kK{D
+FkK{D
+bK{D
+FbK{D
+]K{D
+F]K{D
+XK{D
+FWK{D
+SK{D
+FRK{D
+i{b{j
+;K{D
+:K{D
+C9JzD
+"Z`O
+Dzj1IyD
+F(K{D
+{i[h
+{i[h
+{i[h
+{i[h
+h{aJK{D
+JK{D
+cHJzD
+{i[h
+AK{D
+AK{D
+KC?JzD
+!{iO
+\!{h
+(K{D
+'K{D
+WC&JzD
+8a;i
+"Z`;i
+"Z`;i
+x`9`UK{D
+QK{D
+QK{D
+oCOJzD
+MK{D
+MK{D
+cKJzD
+"Zb~
+;h(3
+FFK{D
+BK{D
+AK{D
+c@JzD
+"Zb_
+:K{D
+:K{D
+}C8JzD
+6K{D
+x`{h
+2K{D
+2K{D
+c0JzD
+"Zb2
+;h,3
+F+K{D
+'K{D
+&K{D
+C%JzD
+`z`;`{h
+8b;j
+8b;j
+C}JzD
+D{atK{D
+;hziZaoK{D
+;hzi
+ajK{D
+acK{D
+;hzi
+a^K{D
+[K{D
+WK{D
+WK{D
+CUJzD
+"Zb"
+;h[j
+OK{D
+OK{D
+CMJzD
+KK{D
+KK{D
+CIJzD
+"ZbFK{D
+9hxi
+@K{D
+F;hZc8K{D
+;hzi
+b3K{D
+0K{D
+`z`;`
+S~JzD
+i{b{j
+mK{D
+mK{D
+SkJzD
+hK{D
+"Z`.
+bK{D
+"Z`]K{D
+]K{D
+c[JzD
+WK{D
+WK{D
++SUJzD
+i;b;j
+FK{D
+EK{D
+7SDJzD
+a8K{D
+xa{i
+;a:i;h
+"K{D
+"K{D
+BS JzD
+x`{h
+\!{h
+x`9`{h
+OK{D
+NK{D
+gSMJzD
+BK{D
+AK{D
+nS@JzD
+(K{D
+(K{D
+S&JzD
+`z`;`
+#{a5
+`{hzi
+3{azi
+`z`;`
++K{D
++K{D
+S)JzD
+D:iZ`
+xizj
+:i{h
+)K{D
+(K{D
+c'JzD
+{i[h
+{i[h
+{i[h
+{i[h
+8a;i
+,K{D
++K{D
+Dc*JzD
+{i[h
+{i[h
+{i[h
+{i[h
+8a;i
+9K{D
+9K{D
+ic7JzD
+F{a{i
+(K{D
+'K{D
+rc&JzD
+8a;i
+"Z`;i
+\!;i
+"Z`;i
+#;cJ
+=K{D
+=K{D
+c;JzD
+0K{D
+/K{D
+c.JzD
+#{c;k
+3;c;k
+;k +
+ K{D
+ K{D
+&K{D
+%K{D
+c$JzD
+{bzj{h
+F;b{j
+wK{D
+vK{D
+suJzD
+sK{D
+rK{D
+sqJzD
+xa{i
+\K{D
+[K{D
+sZJzD
+T!{io
+EK{D
+EK{D
+cCJzD
+T!{i
+=K{D
+<K{D
+.s;JzD
+5K{D
+4K{D
+c3JzD
+.K{D
+-K{D
+3s,JzD
+SK{D
+RK{D
+=sQJzD
+?K{D
+>K{D
+Is=JzD
+xa{i
+1K{D
+1K{D
+Us/JzD
+,K{D
++K{D
+Vs*JzD
+!K{D
+ K{D
+x`{h
+h{a{i[h
+{i[h
+"Z`zh
+h{a{i[h
+{i[h
+"Z`{h
+x`{h
+x`{h
+x`{h[l
+{h[l
+{h[l
+{h[i
+C{a{i
+G8a;i
+`z`{h
+3{b'
+xa{i
+h[lzi
+3{bzj;j
+`z`?JzD
+C{b{j
+3;b;j
+#;b%K
+xa{i
+;;b{j
+x{a{iZ
+h[l:i
+;{a;i
+3;a{i
+`z`{h
+`z`{h
+`z`{h
+x`9`
+#{a8h
+8a{h[l
+{h[l
+{h[i
+i[h9i
+{h[l
+xa{i
+8a;i
+h[l9i
+{hzi
+8d;l
+{h[o
+{h[i
+8d;l
+c{h[l
+{h[i
+{h[lzh
+"{h[lzh
+izhRi
+jzhRi
+izhRi
+{h[i
+a{h[i
+jzhRi
+{h[i
+b{h[l
+x{c{k +
+{k#3;c
+x{b{j
+{h[i
+8d;l
+8d;l
+8d;l
+8d;l
+{h[lzhRl
+8d;l
+8d;l
+8d;l
+8d;l
+#;f;k
+D{e 
+jzhRi
+3;f{m
+3{e:n
+#{dylxh
+#{d{h[lyl
+#;f;k
+3;f{m
+3{e:n
+{h[i
+#{f{h[izh
+"0{a
+#;fD
+D{e5
+#{f;n
+8d;l
+3;f;n
+`{h[m:i
+xa{i
+{i[h
+p{iZ
+p{iZ
+p{iZ
+p{iZ
+p{iZ
+p{iZ
+p{iZ
+p{iZ
+p{iZ
+p{iZ
+p{iZ
+p{iZ
+p{iZ
+p{iZ
+p{iZ
+p{iZ
+a{h[i
+0{a{i
+j{h[i
+a{h[i
+izhRi
+G8a;i
+a{h[i
+izhRi
+G8a;i
+a{h[l
+{h[l
+{h[i
+{h[i
+jzhRi
+{h[l
+"{h[l
+`{h[i
+izhRi
+G8a;i
+8a;i
+8a;i
+s{b{h[m
+h;b{h
+a{h[l
+{h[l
+{h[i
+#{a{iZ
+p{iZ
+pzk{i
+{h[i
+D{c{k
+c{h[i
+{h[l
+{h[l
+1;c;
+{h[i[l;c6
+;k[l
+p{kZ
+41;c;k
+xb{j
+g{h[m
+h;f{h
+#;g8n
+f{h[i
+{h[l
+{h[l
+{h[l
+D{h[i
+izhRi
+o{g;m;g;m
+xe{h
+{h[lym
+xf{n
+#{f{n
+;ozoxh
+3zhRi
+iyhIi
+Fyn F
+x`{h
+x`{h[m
+h{axh
+8a;i
+{h[l
+8a;i
+{h[l
+{h[l
+q{h[l
+$t{h[i
+izhRi
+8a;i
+8a;i
+{e{h[m
+8e;m
+8e;m
+xd{l
+{h[l
+;lzmyl
+8e;m
+{h[l
+`z`;`
+;hzh
+`z`;`
+xc{k
+{h:h
+xc{k
+xc{k
+x`{h
+{h|3
+`z`;`
+;hzh
+xa{i
+xa{i
+xa{i
+xa{i
+xa{i
+`z`;`
+xa{i
+xa{i
+`z`;`
+xa{i
+xa{i
+h{h[h
+`z`zh
+xa{i
+`z`;`;hzh
+xa{i
+x`9`{h
+i{h[h
+8b;j
+8b;j
+8b;j
+`z`;`
+h;c:k
+:k{k
+{j	+
+FYK{D
+:k{k
+:hyk
+:k{k
+:k{k
+h{i[h
+`z`0L|D
+`z`{h
+x0;zh
+{h[i
+{h[i;+
+{h[h
+`z`;`{h
+xa{i
+lr;h
+xa{i
+xa{i
+xa{i
+xa{i
+xa{i
+xa{i
+xa{i
+9i{h
+`zi{hZ`
+`z`;`+L|D
+:hyh
+xa{i
+G8a;i
+:i;i
+xa{i
+`z`;`
+xa{i
+h{h[h
+xa{i
+{K{D
+zK{D
+1_JzD
+[K{D
+$JzD
+h;b{h[h +
+{h[h
+#{b>
+)K{D
+)K{D
+F(JzD9j
+xa{i
+zi;j
+{i:j
+;b{i
+3{bzj
+{hZh
+xa{i
+zi;j
+{i:j
+;b{i
+`z`;`
+8K{D
+{i4JzD
+D{b;h
+{l;b8l
+F;j[h
+xa{i
+!0Z@
+!0Z@
+d1O+
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+X1Y@
+T1K@
+hZ`;
+x`9`
+;`{h;a
+#{a 
+x;s;i[x{s;i
+3;a{i
+3{azi;h
+x`zhB
+`zhJ
+sS`zhM
+`zhE
+`zhN
+"Za{h
+hZi{h
+hZi{h
+i{h[
+{azi{h
+{h{a
+zh{i
+m@+-
+`{h@;{`
+{h?+
+`z`zh
+x`9`;h[i{a;h
+i;a{i
+;h:iZe;hzi
+/0{h
+nK{D
+mK{D
+4#lJzD
+D{a{i
+cK{D
+bK{D
+:#aJzD
+{i[x
+WK{D
+WK{D
+B#VJzD
+SK{D
+JK{D
+"+K{D
+'K{D
+&K{D
+zj9j
+""K{D
+Fzj9j
+`z`;`
+xa{i
+xa{i
+x`{h
+`	K{D
+@BpG
+@BpG8
+@BpG
+pG@Ba
+pGRBc
+pGRBc
+;JFAF8F
+rr_iot_tuya_config_parser_init
+rr_iot_tuya_config_valid
+rr_iot_save_tuya_config_to_file
+RR_IOT_FUNC_ENTRY:   %s L#%d 
+fopen %s failed
+RR_IOT_FUNC_EXIT:   %s L#%d Return Code : %d 
+fread error
+cJSON_Parse error
+product_id
+device_id
+device_secret
+/mnt/data/rriot/tuya_db/
+   "product_id": "%s",
+   "device_id": "%s",
+   "device_secret": "%s"
+fopen error
+rr_get_ssid
+rr_get_sw_ver
+rr_json_get_string_val
+rr_json_get_int_val
+rr_get_station_stat
+%s_miap
+rr_get_ssid snprintf ret error
+ssid is truncated
+/opt/rockrobo/rr-release
+/etc/os-release
+ROBOROCK_VERSION=
+ROBOROCK_VERSION=%s
+invalid version
+%02u.%c%c.%c%c
+modprobe 8189es > /dev/null 2>&1
+ifdown wlan0 > /dev/null 2>&1
+ifconfig wlan0 down > /dev/null 2>&1
+killall hostapd >/dev/null 2>&1
+iw mon.wlan0 del >/dev/null 2>&1
+create_ap --stop wlan0 > /dev/null 2>&1
+killall wpa_supplicant >/dev/null 2>&1
+killall dhclient >/dev/null 2>&1
+killall dnsmasq >/dev/null 2>&1
+invalid json format: %s
+cannot parse %s from %s
+val type of %s is not string
+val buf too small, req=%d fact=%d
+not valid json format: %s
+val type of %s is not int
+wlan0
+wpa_cli status -i %s
+wpa_cli status failed
+wpa_state=
+wpa_state=%s
+DISCONNECTED
+INTERFACE_DISABLED
+INACTIVE
+SCANNING
+AUTHENTICATING
+ASSOCIATING
+ASSOCIATED
+4WAY_HANDSHAKE
+GROUP_HANDSHAKE
+COMPLETED
+ip_address=
+tuya_iot_impl_set_down_stream_unbind_handler
+tuya_iot_impl_set_down_stream_message_handler
+__soc_dev_raw_dp_cmd_cb
+__soc_dev_status_changed_cb
+tuya_iot_impl_get_location
+tuya_iot_impl_report_upgrade_failure
+tuya_iot_impl_get_server_time
+tuya_iot_impl_upload_file
+tuya_iot_impl_up_stream_default
+tuya_iot_impl_up_stream_upgrade
+tuya_iot_impl_up_stream_error
+tuya_iot_impl_up_stream_result
+tuya_iot_impl_up_stream_prop
+__soc_dev_obj_dp_cmd_cb
+tuya_iot_impl_destroy
+rr_create_wifi_configuration_listen_server
+rr_timeout_handler
+tuya_iot_impl_init
+rr_tuya_sdk_init
+rr_unlink_tuya_wifi_config_file
+rr_replay_tuya_wifi_configing_msg_thread_func
+__soc_dev_dp_query_cb
+tuya_iot_impl_unbind
+__soc_dev_net_status_cb
+tuya_iot_impl_up_stream_event
+tuya_iot_impl_up_stream_method
+rr_roborock_config_handler
+__soc_dev_restart_req_cb
+__soc_dev_rev_upgrade_info_cb
+func_Sniffer
+rr_local_config_wifi
+rr_tuya_config_handler
+rr_wifi_configuration_listen_thread_func
+rr_tuya_iot_get_comm_instance
+hwl_wf_station_connect
+hwl_wf_all_ap_scan
+hwl_wf_sniffer_set
+hwl_wf_wk_mode_set
+hwl_wf_get_ip
+hwl_wf_wk_mode_get
+hwl_wf_station_disconnect
+hwl_wf_station_get_conn_ap_rssi
+hwl_wf_ap_start
+hwl_wf_ap_stop
+hwl_wf_set_country_code
+hwl_lowpower_enable
+hwl_lowpower_disable
+tuya downstream msg size too long: %d
+RR_IOT_FUNC_EXIT:   %s L#%d 
+SOC TUYA-Cloud Status: %d
+tuya_iot_get_location_info error
+country_code buf too small
+ip buf too small
+http_gw_update_upgrade_status_v41 %u %u
+http_gw_update_upgrade_status_v41 error
+WA: restart tuya sdk in case of upgrade failure
+uni_time_init error
+uni_time_check_time_sync error
+UTC SYNC: %u
+dev_report_dp_raw_sync op_ret: %d
+report_upgrade_failure error
+SOC Rev DP Obj Cmd t1:%d t2:%d CNT:%u
+soc not have cid.%s
+idx:%d dpid:%d type:%d ts:%u
+bool value:%d
+INT value:%d
+str value:%s
+enum value:%u
+bits value:0x%X
+idx:%d dpid:%d type:%d ts:%u is invalid
+dev_report_dp_json_async op_ret:%d
+socket error: %s
+bind error: %s
+/mnt/default/roborock/device.json
+roborock file does not exist
+https://%siot.roborock.com/fwapi/tuyakey
+/mnt/reserve/rriot/tuya.json
+TUYA key has persisted to %s. exit...
+trying to fetch tuya key arrives at max times, exit...
+cannot create tuya config dir: %s
+/mnt/reserve/rriot
+TUYA config valid. start normal mode
+cannot read version
+IOT SDK Version: %s 
+USER_SW_VER: %s 
+tuya_iot_init err:%d PATH:%s
+tuya_iot_init success
+tuya_iot_set_wf_gw_prod_info err:%d
+tuya_iot_set_wf_gw_prod_info success
+tuya_iot_wf_soc_dev_init err:%d
+tuya_iot_wf_soc_dev_init success
+tuya_iot_reg_get_wf_nw_stat_cb err:%d
+tuya_iot_reg_get_wf_nw_stat_cb success
+TUYA config invalid. start fetching key mode
+unlink %s
+/tmp/tuya_cfg_wifi.dat
+unlink error: %s
+tuya wifi configuration file exists
+fread return 0 byte
+sendto error
+SOC Rev DP Query Cmd
+soc rev all dp query
+soc rev dp query cnt:%d
+rev dp query:%d
+reset wifi. tuya sdk not init yet, exit directly...
+network status:%d
+cloud_retry
+{"id":1, "method": "local.status", "params": "%s"}
+cloud_connected
+event
+method
+event.
+cannot parse event name
+invalid params
+error_code
+invalid err code
+consume_material_notify
+invalid consume_material_notify param
+robot_timed_started
+invalid robot_timed_started param
+robot_timed_ended
+bin_full
+clean_complete
+low_power_back
+back_to_dock_nearby
+back_to_origin_succ
+back_to_origin_fail
+zoned_clean_partial_done
+zoned_clean_succ
+fan_power_reduced
+water_box_in_too_long
+segment_clean_partial_done
+segment_clean_succ
+start_without_map
+start_with_disable_map
+zoned_clean_failed
+segment_clean_failed
+dev_report_dp_json_async error
+dev_report_dp_json_async ok: DP_VAL=%d
+invalid RR_DP_NOTIFY dp val
+get_ota_progress
+get_ota_state
+props
+read error: %s
+config_wifi
+method error
+params error
+ssid
+ssid error
+password
+password error
+timezone
+timezone error
+region error
+uid error
+{"result":"ok", "params":{"sdk_version": "tuya"}}
+waiting for TUYA config packet...
+SOC Rev Restart Req: type=%d
+GW_RESET_DATA_FACTORY: not deal
+http_gw_chk_upgd_info error
+http_gw_chk_upgd_info url_tok error
+http://
+https
+http_gw_chk_upgd_info md5_tok error
+{"id":1, "method":"local.ota", "params":{"app_url":"%s", "file_md5":"%s", "install":"1", "proc":"dnld install", "mode":"normal"}}
+ota file path too long
+Sniffer Thread Create
+Sniffer Socket Alloc Fails %d 
+Sniffer Socket Alloc
+Sniffer Proc Finish
+local.config_wifi
+passwd
+fwrite error
+TUYA wifi configuration packet is saved: %s
+UDP server thread will exit...
+poll error: %s
+UDP server thread exited!
+ignore config wifi msg since invalid uid
+iw wlan0 scan -u|egrep '\bBSS|SSID|signal|DS Parameter set'
+BSS 
+ Reach Max Record 
+%x:%x:%x:%x:%x:%x
+signal: 
+channel 
+SSID: 
+WIFI Scan AP Begin
+WIFI Scan AP End
+index:%d channel:%d bssid:%02X-%02X-%02X-%02X-%02X-%02X RSSI:%d SSID:%s
+iw %s set channel %d
+iw wlan0 link
+freq: 
+Enable Sniffer
+switch wifi mode to: %u
+Disable Sniffer
+IP: %s, mask: %s, gw: %s
+ifconfig wlan0
+HWaddr 
+iw wlan0 info
+type 
+monitor
+WIFI Get Mode:%d
+Disconnect WIFI Conn
+iw %s disconnect
+Get Conn AP RSSI:%d
+TUYA wifi config packet is detected, replay it...
+pthread_create error
+open roborock config listening port for receiving ssid/pwd/timezone/region
+Stop Ap Mode
+/var/lib/jenkins/workspace/Tanos_FULL_REL/build/daemon/rriot/tuya_solution/src/rr_tuya_comm.c
+Set Country Code:%s
+Enable Low Power ..
+Disble Low Power ..
+rr_write_callback
+rr_request_tuya_key_sync
+http resp too long
+did=%s&pid=%s
+snprintf error: buf too small; need %d
+RR_DEFAULT
+%s/roborock/device.key
+/mnt/default/roborock/device.key
+malloc error
+mbedtls_base64_encode error
+%s?did=%s&pid=%s&signature=%s
+curl_easy_perform error
+data
+cJSON_GetObjectItem error
+product_id error
+uuid
+device_id error
+tuyakey
+device_secret error
+rr_sha1_rsa_digist error
+rr_map_upload_thread_func
+rr_consume_queue
+rr_do_map_upload
+rr_start_map_upload_thread
+rr_request_upload_map
+map uploader thread start...
+pipe2 failed. errno=%d
+read pipe: %s
+read pipe error: errno=%d
+map to be uploading: %s
+start to upload map: %s
+upload map done: %s
+ppoll ret=%d: errno=%d
+map upload thread exit
+pthread_create failed. errno=%d
+map upload thread id=%08x
+request upload map: %s
+map file path too long
+write failed. errno=%d
+rr_print_logo
+main
+show_usage
+parse_program_opt
+install_signal_handler
+*************RRIOT_TUYA***********
+Usage: %s [OPTIONS]
+	-h    show this help
+	-D or -d   run as daemon
+daemon error
+sigaction failed
+rriot_tuya process will exit: %s
+rriot_tuya process exit
+rr_iot_roborock_config_parser_init
+rr_iot_roborock_config_valid
+certificate
+model
+fix 24296: read model from /mnt/default/device.conf
+fopen error: /mnt/default/device.conf
+fail to read model from /mnt/default/device.conf
+model=
+success: model=%s
+fail to read model(invalid) from /mnt/default/device.conf
+"did":
+secret
+(%s##%d): %s
+rr_remove_client_fd
+rr_remove_poll_fd
+rr_broadcast_to_clients
+rr_send_to_client
+rr_handle_pipe_fd_event
+rr_down_stream_unbind_handler
+rr_down_stream_msg_handler
+rr_handle_client_fd_event
+rr_recv_app_proxy_msg
+rr_app_proxy_msg_method_handler
+rr_app_proxy_msg_result_handler
+rr_app_proxy_msg_error_handler
+rr_app_proxy_msg_event_handler
+rr_app_proxy_msg_prop_handler
+rr_app_proxy_msg_default_handler
+rr_add_poll_fd
+rr_msg_proxy_thread_func
+rr_handle_listen_fd_event
+rr_accept_client
+rr_add_client_fd
+rr_msg_proxy_init
+rr_listen_fd_init
+rr_msg_proxy_destroy
+%d in client_fds
+%d in poll_fds
+{"id":1, "method":"local.wifi_reset", "params":{}}
+write failed. %s
+%.*s
+appproxy=> size=%u %.*s
+local.upload_map
+1st tok in array is not object
+path
+invalid path for map
+local.wifi_reset_done
+local.query_time
+{"id": 1, "method": "local.time", "params": {"seconds": %u}}
+local.query_country
+local.query_location
+{"id": 1, "method": "local.location", "params": {"country_code": "%s", "ip": "%s"}}
+result
+prop
+peer closed. close fd=%d
+recv error: %s, close fd=%d
+fd < 0
+poll_fd_count >= MAX_POLLFD_COUNT
+add %d to poll_fds
+listen error: %s
+fcntl error: %s
+ctx->client_fd_count >= MAX_CLIENT_COUNT
+msg proxy thread exit
+setsockopt error: %s
+rr_iot_create_dir
+rr_iot_get_wifi_status
+rr_iot_get_interface_addr
+rr_iot_get_default_gw
+mkdir faild: %s
+wpa_cli status -i wlan0
+getifaddrs
+interface: %s, exp: %s
+getting IP failed
+ip: %s
+getting mask failed
+mask: %s
+getting bcast failed
+bcast: %s
+getting gateway failed
+default gw: %s
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
+?456789:;<=
+ !"#$%&'()*+,-./0123
+$HnV
+JEhuVodiWr2/F9mixBcaAZTtjx4Rs9cJDLbpEG8i7hPKswcFdsn6MWwINP+Nwmw4AEPpVJevUEvRQbqVMVoLlw==
+  Base64 encoding test: 
+passed
+  Base64 decoding test: 
+passed
+RIPEMD160
+invalid PK
+rsa.N
+rsa.E
+eckey.Q
+RSA-alt
+ECDSA
+EC_DH
+-----BEGIN 
+-----END RSA PRIVATE KEY-----
+-----BEGIN RSA PRIVATE KEY-----
+-----END EC PRIVATE KEY-----
+-----BEGIN EC PRIVATE KEY-----
+-----END PRIVATE KEY-----
+-----BEGIN PRIVATE KEY-----
+-----END ENCRYPTED PRIVATE KEY-----
+-----BEGIN ENCRYPTED PRIVATE KEY-----
+-----END RSA PUBLIC KEY-----
+-----BEGIN RSA PUBLIC KEY-----
+-----END PUBLIC KEY-----
+-----BEGIN PUBLIC KEY-----
+-%k>
+!Y_6
+u.EW=K9
+message digest
+abcdefghijklmnopqrstuvwxyz
+abcdbcdecdefdefgefghfghighijhijkijkljklmklmnlmnomnopnopq
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+  RIPEMD-160 test #%d: 
+passed
+9292758453063D803DD603D5E777D7888ED1D5BF35786190FA2F23EBC0848AEADDA92CA6C3D80B32C4D109BE0F36D6AE7130B9CED7ACDF54CFC7555AC14EEBAB93A89813FBF3C4F8066D2D800F7C38A81AE31942917403FF4946B0A83D3D3E05EE57C6F5F5606FB5D4BC6CD34EE0801A5E94BB77B07507233A0BC7BAC8F90F79
+C36D0EB7FCD285223CFB5AABA5BDA3D82C01CAD19EA484A87EA4377637E75500FCB2005C5C7DD6EC4AC023CDA285D796C3D9E75E1EFC42488BB4F1D13AC30A57
+C000DF51A7C77AE8D7C7370C1FF55B69E211C2B9E5DB1ED0BF61D0D9899620F4910E4168387E3C30AA1E00C339A795088452DD96A9A5EA5D9DCA68DA636032AF
+24BF6185468786FDD303083D25E64EFC66CA472BC44D253102F8B4A9D3BFA75091386C0077937FE33FA3252D28855837AE1B484A8A9A45F7EE8C0C634F99E8CDDF79C5CE07EE72C7F123142198164234CABB724CF78B8173B9F880FC86322407AF1FEDFDDE2BEB674CA15F3E81A1521E071513A1E85B5DFA031F21ECAE91A34D
+10001
+  RSA key validation: 
+passed
+  PKCS#1 decryption : 
+passed
+  PKCS#1 encryption : 
+  PKCS#1 data sign  : 
+passed
+  PKCS#1 sig. verify: 
+%)+/5;=CGIOSYaegkmq
+>%qxP
+'1e4
+oabc
+abcdbcdecdefdefgefghfghighijhijkijkljklmklmnlmnomnopnopq
+  SHA-1 test #%d: 
+vRQ>
+8STs
+LwH'
+#	}"4
+RR%%
+ yFU
+abcdbcdecdefdefgefghfghighijhijkijkljklmklmnlmnomnopnopq
+Buffer allocation failed
+  SHA-%d test #%d: 
+D7q/;M
++Yo,
+&\8!
+* qW
+LwH'
+L*~e
+	qdt
+HRyr
+pL*[
+EMD#d<
+idN.B
+; D(V2
+abcdefghbcdefghicdefghijdefghijkefghijklfghijklmghijklmnhijklmnoijklmnopjklmnopqklmnopqrlmnopqrsmnopqrstnopqrstu
+0123456789ABCDEF
+%s%s
+EFE021C2645FD1DC586E69184AF4A31ED5F53E93B5F123FA41680867BA110131944FE7952E2517337780CB0DB80E61AAE7C8DDC6C5C6AADEB34EB38A2F40D5E6
+B2E7EFD37075B9F03FF989C7C5051C2034D2A323810251127E7BF8625A4F49A5F3E27F4DA8BD59C47D6DAABA4C8127BD5B5C25763222FEFCCFC38B832366C29E
+0066A198186C18C10B2F5ED9B522752A9830B69916E535C8F047518A889A43A594B6BED27A168D31D4A52F88925AA8F5
+602AB7ECA597A3D6B56FF9829A5E8B859E857EA95A03512E2BAE7391688D264AA5663B0341DB9CCFD2C4C5F421FEC8148001B72E848A38CAE1C65F78E56ABDEFE12D3C039B8A02D6BE593F0BBBDA56F1ECF677152EF804370C1A305CAF3B5BF130879B56C61DE584A0F53A2447A51E
+  MPI test #1 (mul_mpi): 
+256567336059E52CAE22925474705F39A94
+6613F26162223DF488E9CD48CC132C7A0AC93C701B001B092E4E5B9F73BCD27B9EE50D0657C77F374E903CDFA4C642
+  MPI test #2 (div_mpi): 
+  MPI test #3 (exp_mod): 
+  MPI test #4 (inv_mod): 
+failed at %d
+Unexpected error, return code = %08X
+36E139AEA55215609D2816998ED020BBBD96C37890F65171D948E9BC7CBAA4D9325D24D6A3C12710F10A09FA08AB87
+003A0AAEDD7E784FC07D8F9EC6E3BFD5C3DBA76456363A10869622EAC2DD84ECC5B8A74DAC4D09E03B5E0BE779F2DF61
+  MPI test #5 (simple gcd): 
+  ECP test #1 (constant op_count, base point G): 
+000000000000000000000000000000000000000000000001
+failed (%u)
+  ECP test #2 (constant op_count, other point): 
+FFFFFFFFFFFFFFFFFFFFFFFF99DEF836146BC9B1B4D22830
+5EA6F389A38B8BC81E767753B15AA5569E1782E30ABE7D25
+400000000000000000000000000000000000000000000000
+7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+555555555555555555555555555555555555555555555555
+secp521r1
+brainpoolP512r1
+secp384r1
+brainpoolP384r1
+secp256r1
+secp256k1
+brainpoolP256r1
+secp224r1
+secp224k1
+secp192r1
+secp192k1
+I0$r
+!d1(
+U#C9
+DPV2A
+=*\\E)
+ZQ%c
+^1kW3
+vr8^T:l)U
+U8*T
+]o,&
+=Mk`
+p<5a
+,f>'
+xj)9
+tjFi
+M3[E
+:HwSn
+ ( &
+zA0u
+u	Z}
+/HK,
+P~o]
+P~o]
+S<&A
+w!FF
+H:XV`
+LA\>Up
+h^j@GPm|_}
+.2!Zd
+[^H_JI
+2cV]8
+}01DB42
+14DEF9DEA2F79CD65812631A5CF5D3ED
+98AA
+8335DC163BB124B65129C96FDE933D8D723A70AADC873D6D54A7BB0D
+YTuiQ
+  HMAC_DRBG (PR = True) : 
+  HMAC_DRBG (PR = False) : 
+iw&a
+ki}|
+RZ/1
+message digest
+abcdefghijklmnopqrstuvwxyz
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+  MD5 test #%d: 
+%d.%d
+pbeWithSHAAnd3-KeyTripleDES-CBC
+PBE with SHA1 and 3-Key 3DES
+pbeWithSHAAnd2-KeyTripleDES-CBC
+PBE with SHA1 and 2-Key 3DES
+hmacSHA1
+HMAC-SHA-1
+hmacSHA224
+HMAC-SHA-224
+hmacSHA256
+HMAC-SHA-256
+hmacSHA384
+HMAC-SHA-384
+hmacSHA512
+HMAC-SHA-512
+id-md5
+id-sha1
+SHA-1
+id-sha224
+SHA-224
+id-sha256
+SHA-256
+id-sha384
+SHA-384
+id-sha512
+SHA-512
+desCBC
+des-ede3-cbc
+DES-EDE3-CBC
+brainpool256r1
+brainpool384r1
+brainpool512r1
+rsaEncryption
+id-ecPublicKey
+Generic EC key
+id-ecDH
+EC key for ECDH
+md5WithRSAEncryption
+RSA with MD5
+sha-1WithRSAEncryption
+RSA with SHA1
+sha224WithRSAEncryption
+RSA with SHA-224
+sha256WithRSAEncryption
+RSA with SHA-256
+sha384WithRSAEncryption
+RSA with SHA-384
+sha512WithRSAEncryption
+RSA with SHA-512
+ecdsa-with-SHA1
+ECDSA with SHA1
+ecdsa-with-SHA224
+ECDSA with SHA224
+ecdsa-with-SHA256
+ECDSA with SHA256
+ecdsa-with-SHA384
+ECDSA with SHA384
+ecdsa-with-SHA512
+ECDSA with SHA512
+RSASSA-PSS
+id-kp-serverAuth
+TLS Web Server Authentication
+id-kp-clientAuth
+TLS Web Client Authentication
+id-kp-codeSigning
+Code Signing
+id-kp-emailProtection
+E-mail Protection
+id-kp-timeStamping
+Time Stamping
+id-kp-OCSPSigning
+OCSP Signing
+id-ce-basicConstraints
+Basic Constraints
+id-ce-keyUsage
+Key Usage
+id-ce-extKeyUsage
+Extended Key Usage
+id-ce-subjectAltName
+Subject Alt Name
+id-netscape-certtype
+Netscape Certificate Type
+id-at-commonName
+Common Name
+id-at-countryName
+Country
+id-at-locality
+Locality
+id-at-state
+State
+id-at-organizationName
+Organization
+id-at-organizationalUnitName
+Org Unit
+emailAddress
+E-mail address
+id-at-serialNumber
+Serial number
+serialNumber
+id-at-postalAddress
+Postal address
+postalAddress
+id-at-postalCode
+Postal code
+postalCode
+id-at-surName
+Surname
+id-at-givenName
+Given name
+id-at-initials
+Initials
+initials
+id-at-generationQualifier
+Generation qualifier
+generationQualifier
+id-at-title
+Title
+title
+id-at-dnQualifier
+Distinguished Name qualifier
+dnQualifier
+id-at-pseudonym
+Pseudonym
+pseudonym
+id-domainComponent
+Domain component
+id-at-uniqueIdentifier
+Unique Identifier
+uniqueIdentifier
+Proc-Type: 4,ENCRYPTED
+DEK-Info: DES-EDE3-CBC,
+DEK-Info: DES-CBC,
+DEK-Info: AES-
+DEK-Info: AES-128-CBC,
+DEK-Info: AES-192-CBC,
+DEK-Info: AES-256-CBC,
+password
+password
+password
+passwordPASSWORDpassword
+pass
+word
+salt
+salt
+salt
+saltSALTsaltSALTsaltSALTsaltSALTsalt
+  PBKDF2 (SHA1) #%d: 
+oVX]
+<Se>/E
+R,k{
+ 34I
+]8`9
+ 1b=U
+R,k{
+ 34I
+0Le(
+]8`O
+y-au
+Single block msg
+ !"#
+""""""""""""""""
+""""""""""""""""
+33333
+33333
+n93@8
+3kYz
+DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDdec
+  AES-ECB-%3d (%s): 
+skipped
+  AES-CBC-%3d (%s): 
+  AES-CFB128-%3d (%s): 
+  AES-OFB-%3d (%s): 
+  AES-CTR-128 (%s): 
+  AES-XTS-128 (%s): 
+7]:  ARC4 test #%d: 
+CHACHA20-POLY1305
+CHACHA20
+ARC4-128
+BLOWFISH-CTR
+BLOWFISH-CFB64
+BLOWFISH-CBC
+BLOWFISH-ECB
+DES-EDE3-ECB
+DES-EDE-CBC
+DES-EDE-ECB
+DES-ECB
+CAMELLIA-256-CCM
+CAMELLIA-192-CCM
+CAMELLIA-128-CCM
+CAMELLIA-256-GCM
+CAMELLIA-192-GCM
+CAMELLIA-128-GCM
+CAMELLIA-256-CTR
+CAMELLIA-192-CTR
+CAMELLIA-128-CTR
+CAMELLIA-256-CFB128
+CAMELLIA-192-CFB128
+CAMELLIA-128-CFB128
+CAMELLIA-256-CBC
+CAMELLIA-192-CBC
+CAMELLIA-128-CBC
+CAMELLIA-256-ECB
+CAMELLIA-192-ECB
+CAMELLIA-128-ECB
+AES-256-CCM
+AES-192-CCM
+AES-128-CCM
+AES-256-GCM
+AES-192-GCM
+AES-128-GCM
+AES-256-XTS
+AES-128-XTS
+AES-256-CTR
+AES-192-CTR
+AES-128-CTR
+AES-256-OFB
+AES-192-OFB
+AES-128-OFB
+AES-256-CFB128
+AES-192-CFB128
+AES-128-CFB128
+AES-256-CBC
+AES-192-CBC
+AES-128-CBC
+AES-256-ECB
+AES-192-ECB
+AES-128-ECB
+ #%&)*,/12478;=>@CEFIJLOQRTWX[]^abdghkmnpsuvyz|
+Now is t
+%9vD	
+QL  DES%c-ECB-%3d (%s): 
+  DES%c-CBC-%3d (%s): 
+~0a6
+W$5/
+b:$	O
+!wt$Kr!
+!wt$Kr!
+a5;L(
+*GUi
+{lt#s
++	uD
+n%2M
+$<H0
+(fnE
+@=M`kn
+B}d:
+B}d:
+]xSe
+Ootk
+8SO}
+.L0=
+h	S/
+  AES-GCM-%3d #%d (%s): 
+  AES-GCM-%3d #%d split (%s): 
+~&jE
+ iciNWq
+x`\`U
+S2zw
+Qjh/T
+w?6r
+\^c$j
+yr,@
+H{1S
+"//w
+AJsN
+*!ec
+pzKD)
+ilRdV
+)L	u@
+?kh	
+|sG2
+U$qk.
+fC	c
+27;C
+qUN1
+/n[(
+Ze2Zh@
+Wcr"
+T0.S
+ap?#
+r3A~
+;"lY7
+@n2w
+_g@Cg
+%xP(
+B*k@5
+mK1f
+n:2C[
+V@E'
+::SU
+^|1)
+A4x{%`
+no:7
+7,gm;
+.97yY
+Bh;+j
+.x7B
+{x`M`
+BFUa.X
+YnFpW
+	-f3F2
+r9$|
+n6j/
+HWyn
+9)PF
+(-}|
+W;()f
+_xU`u
+08bX
+w``u N
+-%	?
+!(Ew
+tT0~
+(UhP
+QVlM
+6I*h<8
+6"8d
+&'$%
+=>?<
+# !"
+'$%&
+:;89
+ABC@
++()*
+"3DUfw
+"3DUfw
+gg18T
+C8<l*
+R,k{
+ZcXcbT>T*H0
+PK@p
+`U)}
+Single block msg
+ !"#
+  CAMELLIA-ECB-%3d (%s): 
+  CAMELLIA-CBC-%3d (%s): 
+  CAMELLIA-CTR-128 (%s): 
+@ABCDEFGHIJKLMNO
+ !"#$%&'()*+,-./01234567
+  CCM: setup failed
+  CCM-AES #%u: 
+AY|QWH
+J7jC
+spA`]
+RyPB
+Uiu?
+Any submission to the IETF intended by the Contributor for publication as all or part of an IETF Internet-Draft or RFC and any statement made within the context of an IETF activity is considered an "IETF Contribution". Such statements include oral statements in IETF sessions, as well as written and electronic communications made at any time or place, which are addressed to
+  ChaCha20 test %u 
+failed (output)
+PQRS
+@ABCDEFGLadies and Gentlemen of the class of '99: If I could offer you only one tip for the future, sunscreen would be it.
+  ChaCha20-Poly1305 test %u 
+setkey() error code: %i
+crypt_and_tag() error code: %i
+failure (wrong output)
+failure (wrong MAC)
+Cryptographic Forum Research Group
+'Twas brillig, and the slithy toves
+Did gyre and gimble in the wabe:
+All mimsy were the borogoves,
+And the mome raths outgrabe.
+xWUm3
+b  Poly1305 test %u 
+failed (mac)
+/home/changcheng/tuya/gitlabs/iot_common_platform/iot_common_platform/src/tuya_adapter/utilities/uni_time.c
+recycle!! last_tick:0x%x curr_tick:0x%x
+%d:%d
+sscanf err,num:%d
+uni_get_system_time
+__get_time_zone
+%.0f
+u%04x
+null
+false
+true
+Warn
+Notice
+Info
+Debug
+Trace
+def_output
+TUYA
+Null
+[%02d-%02d %02d:%02d:%02d %s %s][%s:%d] 
+/home/changcheng/tuya/gitlabs/iot_common_platform/iot_common_platform/src/tuya_iot_sdk/wifi_sdk/tuya_iot_wifi_api.c
+wifi mcu init. pid:%s firmwarekey:%s v1:%s v2:%s
+gw_unactive error
+get_wf_gw_nw_status error:%d
+wifi netstat changed to:%d  -->>
+wifi netstat changed to:%d  <<--
+register wifi network monitor. interval:%d
+tuya_iot_wf_mcu_dev_init
+tuya_iot_wf_gw_unactive
+__get_wf_nw_stat
+tuya_iot_reg_get_wf_nw_stat_cb_params
+< TUYA IOT SDK V:4.1.4 BS:30.04_PT:2.2_LAN:3.3_CAD:1.0.2_CD:1.0.0 >
+< BUILD AT:2019_03_14_22_51_31 BY changcheng FOR iot_wifi_tls AT arm-linux-gnueabihf-gcc-5.3.1 >
+IOT DEFS < WIFI_GW:1 DEBUG:1 KV_FILE:1 SHUTDOWN_MODE:1 LITTLE_END:1 TLS_MODE:4 ENABLE_LOCAL_LINKAGE:0 ENABLE_CLOUD_OPERATION:1 ENABLE_SUBDEVICE:0 ENABLE_ENGINEER_TO_NORMAL:0 OPERATING_SYSTEM:100 ENABLE_SYS_RPC:0 TY_SECURITY_CHIP:0 RELIABLE_TRANSFER:RELIABLE_TRANSFER ENABLE_LAN_ENCRYPTION:1 >
+arm-linux-gnueabihf-gcc-5.3.1
+/home/changcheng/tuya/gitlabs/iot_common_platform/iot_common_platform/src/tuya_iot_sdk/com_sdk/tuya_iot_com_api.c
+init fs. Path: %s 
+db init fails %d
+L5yNB6mbAem9J75ebEOxoXz4ygTH9bj8GiexUIf4xPOzEJFPImqa
+adapter_platform_init err %d
+smart frame init fails %d
+ty_work_queue init fails %d
+tuya tls init fails %d
+ENABLE_SUBDEVICE is not enabled when build
+ENABLE_SUBDEVICE Is NOT Eanbled, cannot report result
+dp composition fail.ret:%d
+dp report async fail.ret:%d
+history/time_%d_mapid_%d.bin
+input is invalid
+Get Region:%s  TimeZone:%s
+get custom cfg fail. type:%d ret:%d
+get custom cfg. type:%d cfg:%s
+input is null
+get location info fail. ret:%d
+countryCode
+cjson get object fail.
+Get Loc Info:%s %s
+__tuya_init_db_encrypted
+tuya_iot_init_params
+tuya_iot_upgrade_dev_notify
+tuya_iot_get_dev_if
+tuya_iot_dev_traversal
+tuya_iot_dev_upgd_result_report
+tuya_iot_gw_bind_dev_attr
+tuya_iot_gw_subdevice_update_versions
+tuya_iot_gw_unbind_dev
+tuya_iot_dev_online_stat_update
+tuya_iot_sys_mag_hb_init
+tuya_iot_set_dev_hb_timeout_cfg
+tuya_iot_fresh_dev_hb
+tuya_iot_gw_reset_dev
+dev_report_dp_json_async
+tuya_iot_get_region_info
+tuya_iot_get_custom_cfg
+tuya_iot_release_custom_cfg
+tuya_iot_get_location_info
+/home/changcheng/tuya/gitlabs/iot_common_platform/iot_common_platform/src/tuya_iot_sdk/tuya_cloud/smart_frame.c
+smart frame has been inited
+system_timer_init fails %d
+cmmod_init fails %d
+CreateMutexAndInit fails %d
+cmmod_get_free_msgid fails %d %d
+cmmod_reg_msgcb fails %d %d
+cmmod_cr_tm_msg_hand fails %d %d
+input is invalid
+devid:%s dparr[%d]:%d not find
+dparr[%d] type not match.%d %d
+dparr[%d] enum value not match.%d %d
+dparr[%d] type invalid %d
+malloc fail %d
+"%d":true,
+"%d":false,
+"%d":%d,
+"%d":"%s",
+"%d":%u,
+dp compo:%s
+dp time:%s
+Rev Cmd %d
+devId
+ctype
+dp transfer type error type is :%d
+mbid
+mqc_prot_data_rept fails %d
+__smt_frm_cmd_prep error:%d
+can't find device
+DP ID %d Invalid
+malloc error obj_dp_cnt:%d
+dp enum value[%s] invalid
+sf_obj_dp_qry_dpid error:%d  %d %d
+Param is null.
+Parse cid error.
+can't find device:%s
+can't find dps or child
+don't find dp:%s.
+Invalid Param
+create json fails
+dp id Invalid %d
+dp id %d Skip
+json print fails
+__sf_add_devid_time_to_dpstr fails %d
+__sf_mk_rfc_msg_data fails %d
+lan_dp_sata_report error:%d
+mqc_obj_dp_query error:%d
+malloc fails :%d
+cr_rfc_data fails :%d
+mqtt async dp cb %d
+msg_data:%s , mqtt async dp cb:%d
+NetWork Unavailable. schedule again, %d
+Start To Sync Dev:%s
+DP Msg Too Long, schedule again
+OUT IS NULL
+__sf_dp_report_aysnc fail %d, schedule again
+sync result:%d
+Sync Finish
+Malloc Fails
+create seme fails %d
+sync to report dp fail. %d
+report finish %d
+devID:%s Not Find
+devID:%s Not Bind
+befor Verify: %d %d %s
+dp verify fails %d
+nothing to send
+Net Invalid  %d
+add time && devid fails %d
+md rfc fail %d
+Enable Lan Send
+mqtt async send fail %d
+Update Local DP Status
+multi reponse:%s length:%d
+Lan Send
+Mqtt Send
+new flow check timezone.curr_t:%u dpID:%d
+update flow check send cnt %d dpID:%d
+Flow Ctrl. DP ID:%d flow check:%d  curr_t:%u first_t:%u send:%d lmt:%d 
+Not Flow Ctrl. DP ID:%d flow check:%d  curr_t:%u first_t:%u send:%d lmt:%d 
+DP ID:%d Verify Fails %d %d %d %d
+obj filter type invalid %d
+bool check fail %d
+value check fail %d %d %d %d
+str check fail %d %s %d
+enum check fail %d
+enum check fail %s
+bitmap check fail %d %d %d
+dp_cntl->dp_desc.prop_tp %d
+raw filter invalid %d
+file not support
+dp_cntl->dp_desc.type %d
+dp passive is true.
+dp<%d> check. need_update:%d pv_stat:%d trig_t:%d filter_type:%d force_send:%d
+Json Fails
+DP ID:%d Not Find
+cJson print fails
+Need Send %s
+Need NOT Send
+cr json err
+Pack local dp values reset_flow_ctl:%d,dpnum:%d.
+%d:%d:%d:%d:%d:%d:%d:.
+Skip DP ID %d
+unsupported dp type
+reach MaxLen %d %d
+Nothing To Pack
+Json Print fail
+addDevId:%d
+final pack:%s
+dp_cntl is null
+DP ID %d Skip
+DP ID %d Set To %d
+json parse fail %s
+json fail %s
+Malloc Fails %d
+{"dps":%s
+{"dps":%s,"cid":"%s"
+sprintf %d
+,"t":%s
+added buf:%s
+pDpIdArr is NULL
+Malloc err
+dpid cnt< %d >:
+get_gw_dev_cntl err
+query cid:%s
+{"%d":"%s"}
+Send Raw: %s retrans:%d
+Send Stat:%s Time:%s retrans:%d
+smart_frame_init
+sf_dp_data_composition
+__sf_gw_dev_cmd_cb
+__sf_handle_recv_dp
+sf_dp_data_is_equl
+__sf_response_query_obj_dp
+__sf_mk_rfc_msg_data
+__sf_obj_dp_report_async_cb
+__tmm_dp_sync_cb
+__sf_dp_report_sync
+__sf_dp_report_aysnc
+__sf_multi_dp_report_async
+sf_multi_dp_report_async
+__set_dp_flow_ctl
+__check_dp_flow_ctl
+__check_dp_type
+__append_send_json
+__dp_verify_flowctl_update
+__sf_pack_local_obj_data
+__dev_obj_dp_set_pv_stat
+__sf_set_obj_dp_pv_stat
+__sf_set_obj_dp_pv_stat_by_dc
+__sf_add_devid_time_to_dpstr
+sf_respone_obj_dp_query
+sf_raw_dp_report_sync
+sf_stat_dp_report_sync
+/home/changcheng/tuya/gitlabs/iot_common_platform/iot_common_platform/src/tuya_iot_sdk/tuya_cloud/app_agent.c
+lan is inited before
+Malloc lan_pro_cntl fails
+create mutex fails
+Wechat Mode, start WeChat thread to listen Lan
+TUYA Mode, start TUYA thread to listen Lan
+start thread fails %d
+cmmod register finish %d
+wechat_task
+lpc_task
+lan_pro_cntl is null
+start udp ap thread
+udp_ap_v3 recvfrom error:%d
+Rev Data Too short %d %d
+Frame is Too Big To Recv
+check tail fails:0x%x
+Rev Data:%s
+cJSON_Parse error:%s
+ssid
+token
+data format error:%s
+Parse ssid:%s token:%s
+passwd
+Parse passwd:%s
+Send Parsed result error:%d
+Send Parsed Result Success
+Frame Type Cannot Parse:%d
+End While. Finish AP IN UDP Listen
+start
+finish_cb is NULL
+ap cfg is inited before
+Malloc lan_ap_nw_cfg Fails
+unw_socket_create udp errno:%d
+unw_bind %d errno:%d
+start thread to listen udp
+udp_ap_v3
+ap cfg is NULL
+DeleteThrdHandle error:%d
+Delete thread
+aes128_ecb_encode error:%d
+socket Num Too Many,Cannot Send Udp Broadcast
+Get IP Fails
+create socket err
+Create UDP Socket To Broadcast
+Malloc Fails
+{"ip":"%s","gwId":"%s"
+,"active":%d,"ablilty":0
+,"encrypt":true
+,"productKey":"%s"
+,"version":"%s"
+mlp_gw_send_da error
+sendto Failed,len:%d ret:%d,errno:%d port:%d
+Socket creation failed: Port:%d errno:%d
+Failed to set reuse socket on port:%d errno:%d
+Failed to bind socket on port:%d errno:%d
+Failed to set cloexec
+Failed to listen on port:%d,errno:%d.
+begint to execute __lpc_task
+Setup TCP Server On Port:%d
+create server socket err
+Select failed: %d,errno:%d
+lan listen select timeout
+active socket num:%d
+socket fault:%d errno:%d
+net_accept client socket failed %d (errno: %d).errno:%d
+out of client limit:0x%x
+new client connect. nums:%d cfd:%d ip:0x%x
+close socket,errno:%d errno:%d
+not enough data
+lan data len is out of limit
+malloc error
+unw_recv_nd_size error ret:%d
+recv tail:0x%x
+mlp_gw_tcp_send op_ret:%d
+thread __lpc_task quit
+close all socket
+close socket err %d %d
+close socket %d
+set socket fault err %d %d
+set socket fault %d
+find error socket %d
+add socket err %d %d
+add socket %d
+up_socket_time err %d %d
+up_socket_time %d
+no socket to close
+time out close socket:%d
+Curr Socket Num:%d
+socket all falult:%d 
+socketNum:%d 
+no fd find %d, set falut
+fd %d status:%d
+Malloc Fails %d
+the socket %d is fault
+tcp sendbuf socket:%d fr_num:%d fr_type:%d ret:%d len:%d
+send length:%d
+Create Send Buf Fails
+ret:%d send_len:%d errno:%d
+TCP Send buf Success
+get_wf_gw_nw_status error:%d
+the station do't connect ap,status:%d
+Send Random %d
+ak_lan_nwc_fin_inform error:%d
+ak_lan_disc_pack_send error:%d
+Gw Not Register, Cannot Send UDP discovery
+Send airkiss discover
+aes128_ecb_decode error:%d
+find last } fails %d
+lan parse decode buf:%s
+When using LAN encryption, LAN communication version number must be greater than or equal to 3.3
+lan version over 3.3
+Cmd Parse Fails %d.Cannot handle
+parse data error
+Process Data. Num:%d Type:%d Len:%d
+Rev TP CMD %d
+gw is upgrade %d.Cannot handle
+device is upgrading...
+Not Json Cmd Parse Fails %s
+data format error
+Json Cmd Lack devId or dps %s
+Rev TP CMD. Send to User
+send_gw_dev_cmd error:%d
+recv cmd and process error
+Rev Query Cmd %s
+Json Parse Fails
+devId Not Find
+devid not found
+nothing to report app query
+json obj data unvalid
+Send Query To App:%s
+type
+time
+op_ret:%d frame_type:%d cjson format data error
+permit join set error
+inner process failed
+Rev Query Dp Data:%s
+dpId
+sf_respone_obj_dp_query error:%d
+query dp failed
+recv query dp error
+unsupport frame type:%d
+no socket connect. return
+pack_data_with_cmd error:%d
+Prepare To Send Lan:%s
+__mlp_gw_tcp_send op_ret:%d
+lan socket num is 0. skip send
+Post Msg To Send Data BY Lan
+enter [%s]
+lan no client
+leave [%s]
+lan_pro_cntl_init
+lan_pro_cntl_exit
+__udp_ap_v3_task
+lan_ap_nw_cfg_start
+lan_ap_nw_cfg_stop
+encrpt_lan_msg
+__udp_dev_discovery
+__setup_tcp_serv_socket
+__lpc_task_cb
+__lpc_close_all_socket
+__lpc_close_socket
+__lpc_set_socket_fault
+__lpc_add_socket
+__up_socket_time
+__check_socket_tm
+__get_lpc_socket_num
+__get_lpc_valid_socket_num
+__get_lpc_sockets_fault
+__mlp_gw_send_da
+__mlp_gw_tcp_send
+__airkiss_lan_discovery
+__lan_dev_tm_cb
+__lan_parse_data
+__lan_encryption_pre_handle
+__lan_protocol_process
+__lan_dp_report_cb
+lan_dp_sata_report
+lan_data_report_cb
+%02x
+sign
+data=
+/home/changcheng/tuya/gitlabs/iot_common_platform/iot_common_platform/src/tuya_iot_sdk/tuya_cloud/iot_httpc.c
+malloc fail.%d
+chunk_num.%d
+total_len:%d
+Malloc Buffer Size:%d
+chunked:%d.
+||t=%d||
+json get t fail.
+json get sign fail.
+result
+json get result fail.
+result=
+sign is not right sign1:%s,sign2:%s
+Malloc Fails
+Decode Rev:%s
+ORDER_EXPIRED
+REMOTE_API_RUN_UNKNOW_FAILED
+DEVICE_REMOVED
+CAMERA_STORAGE_ORDER_UNNORMAL
+CAMERA_STORAGE_ORDER_NOT_EXISTED
+API_OR_API_VERSION_WRONG
+GATEWAY_NOT_EXISTS
+DEVICE_ALREADY_BIND
+chunked err
+http rev data fail.%d
+json parse fail. Rev:%s
+response has e:false,by pass decode
+decode key NOT null %s
+decode content fail. %d
+success
+errorCode
+errorCode:%s
+DEV_ID_ILLEGAL
+DEVICE_HAS_RESET_FACTORY
+create_http_url_h error
+set url fail.ret:%d %s
+devId
+other
+uuid
+Make Full URL Fail.
+left size too small.%d %d
+,"t":%u}
+{"t":%u}
+Post Data: %s
+AES Post Data Fail.
+Post URL: %s
+Post Data Return Fail.%d
+%s is null
+active_key
+gw_id
+Malloc Fail.
+{"devId":"%s","offset":"%d","limit":"%d"}
+tuya.device.timer.get
+{"devId":"%s","lastFetchTime":"%d"}
+tuya.device.timer.count
+auth_key
+token
+region
+{"token":"%s","region":"%s"}
+tuya.device.config.get
+{"region":"%s", "env":"prod"}
+tuya.device.region.config.get
+param
+Input Invalid
+Malloc Fail. len:%d
+{"uuid":"%s","gwVer":"%s","ability":0,"bv":"%s","pv":"%s","devVer":"%s","productKey":"%s","timeZone":"+08:00" 
+,"devId":"%s"}
+s.gw.dev.pk.active.wx
+{"token":"%s","softVer":"%s","productKey":"%s","protocolVer":"%s","baselineVer":"%s"
+,"productKeyStr":"%s"
+,"devId":"%s"
+,"hid":"%s"
+,"modules":"%s"
+,"feature":"%s"
+,"devAttribute":%u
+,"cadVer":"%s","cdVer":"%s","options":"%s"}
+tuya.device.active
+tuya.device.reset
+{"type":%d}
+tuya.device.upgrade.get
+{"type":%d,"upgradeStatus":%d}
+tuya.device.upgrade.status.update
+vers
+{"versions":"%s"}
+tuya.device.versions.update
+sub_id
+{"subId":"%s","type":%d}
+{"subId":"%s","upgradeStatus":%d,"type":%d}
+sw_ver
+{"subId":"%s", "versions":[
+{"type":%d,"softVer":"%s"},
+socket rev error %d
+socket rev empty this time
+gf->len == gf->buf_off %u
+data handle error %d
+download %u bytes and handle remain %u bytes
+This Time Download %u Byte. Offset:%u
+download error this time %d
+download finish this time.But Content Is Not Enough %u %u
+download success this time
+invalid param
+malloc fails %d
+begin to download file. total_len:%d url:%s hmacKey:%s %d
+try:%d offset:%u total_size:%u
+download file finish
+Server Not Support Range Mode. Try Download in Full Mode Once
+tuya.device.dynamic.config.get
+ackid
+{"ackId":"%s"}
+tuya.device.dynamic.config.ack
+rs_data
+{"data":"%s"}
+atop.online.debug.log
+{"subId":null}
+{"subId":"%s"}
+tuya.device.upgrade.silent.get
+url_msg
+{"domain":"%s"}
+tuya.device.domain.certificate.get
+{"withVideoDataStorage":"true"}
+{"withVideoDataStorage":"false"}
+tuya.device.storage.config.get
+{"type":"Common"}
+p_filetype
+p_extend
+p_bucket
+p_file
+Malloc Fail. %d
+{"time":%u,"fileType":"%s","extend":"%s","bucket":"%s","file":"%s"}
+tuya.device.common.file.upload.complete
+timer_info
+tuya.device.timer.log.upload
+chipId
+secureCode1
+randomA
+{"region":"%s"}
+{"token":"%s","chipId":"%s","secureCode":"%s","randomStr":"%s"}
+tuya.device.dbauth
+C14iixkNmv1CGNkJ
+data
+tuya.device.construction.config.upload
+tuya.device.delete.status.get
+{"bizType":"%d"}
+tuya.device.custom.config.get
+tuya.device.location.info.get
+http url and https url are all NULL
+https://a2.tuyacn.com/d.json
+https://a2.tuyaus.com/d.json
+https://a2.tuyaeu.com/d.json
+httpc_gw_get_urlcfg_v41/httpc_gw_region_cfg_get_v10 error:%d
+httpUrl
+httpsUrl
+httpsPSKUrl
+mqttsUrl
+mqttUrl
+mediaMqttUrl
+get url config fail. elements not enough
+mediaMqttsUrl
+aispeech
+stdTimeZone
+httpUrl:%s
+httpsUrl:%s
+httpsPSKUrl:%s
+mqttsUrl:%s
+mqttUrl:%s
+mediaMqttUrl:%s
+AISpeech_url:%s
+mq_all_url:%s
+dstIntervals
+{\"type\":%d,\"softVer\":\"%s\",\"online\":%s},
+false
+true
+{\"isFK\":%s}
+1.0.2
+1.0.0
+modules:%s
+options:%s
+{\"type\":%d,\"protocolVer\":\"%s\",\"devAttribute\":%u,
+\"baselineVer\":\"%s\",\"softVer\":\"%s\",\"cadVer\":\"%s\",\"cdVer\":\"%s\"},
+{\"type\":%d,\"softVer\":\"%s\"},
+httpc_gw_update_if_v41 err:%d
+http://a.tuyacn.com/d.json
+https://a3.tuyacn.com/d.json
+s.tuyacn.com
+m2.tuyacn.com
+mq.gw.tuyacn.com
+https://aispeech.tuyacn.com
++08:00
+NULL input
+httpc_gw_delete_status_get_v10 error:%d
+delete status:%d
+httpc_raw_post URL: %s data_total_len:%d
+http_inf_client_post_raw fail.%d
+httpc_raw_get URL:%s  offset:%u total_len:%u
+http_inf_client_get_raw fail.%d
+httpc_raw_put URL: %s
+__httpc_chunk_recv_need_data
+__httpc_unchunk_recv_need_data
+__httpc_recv_need_data
+__decode_rev_buffer
+__httpc_gw_common_cb
+__iot_common_post
+httpc_gw_timer_v40
+httpc_gw_timer_cnt_v40
+httpc_gw_get_urlcfg_v41
+httpc_gw_region_cfg_get_v10
+httpc_gw_active_v43
+httpc_gw_reset_v40
+httpc_get_gw_upgrd_if_v43
+httpc_gw_upgrd_stat_update_v41
+httpc_gw_update_if_v41
+httpc_get_dev_upgrd_if_v43
+httpc_dev_upgrd_stat_update_v41
+httpc_dev_update_if_v41
+__httpc_getfile_cb
+httpc_get_file_v10
+httpc_dynamic_cfg_get_v10
+httpc_dynamic_cfg_ack_v10
+httpc_put_rst_log_v10
+httpc_get_self_fw_ug_info_v43
+httpc_get_domain_certs_v10
+httpc_get_storage_config_v10
+httpc_get_storage_config_v20
+httpc_file_upload_complete_v10
+httpc_gw_upload_timer_log_v10
+httpc_secure_verify_v20
+httpc_gw_put_cloud_config_v10
+httpc_gw_delete_status_get_v10
+httpc_gw_custom_cfg_get_v10
+httpc_gw_location_info_get_v10
+httpc_common_post
+http_active_url
+http_url
+http_gw_get_cloud_url
+http_gw_active_v41
+http_gw_update_version_v41
+http_upload_timer_log
+http_put_cloud_config
+http_gw_get_delete_status
+httpc_raw_post
+httpc_raw_get
+httpc_raw_put
+/home/changcheng/tuya/gitlabs/iot_common_platform/iot_common_platform/src/tuya_iot_sdk/tuya_cloud/tuya_ws_db.c
+maloc fails %d
+"%s":
+false
+true
+null
+"%s"
+type invalid %d
+json parse fails %s
+deserial fails %d
+__ty_serialize fail. %d
+write buf:%s
+kvs_write fails %s %d
+kvs_read fails %s %d
+read buf:%s
+__ty_deserialize fail. %d
+kvs init fails %d
+input is null
+uuid
+auth_key
+ap_ssid
+ap_passwd
+country_code
+prod_test
+gw_bi
+gw base write fails %d
+gw base write success
+gw base read fails %d
+gw base read success
+nc_tp
+ssid
+passwd
+random
+wfb64
+stat
+token
+region
+reg_key
+gw_wsm
+gw_wsm write fails %d
+gw_wsm write success
+gw_wsm read fails %d
+gw_wsm read success
+firmk
+cadv
+dev_swv
+s_id
+sync
+attr_num
+mst_tp_0
+mst_ver_0
+mst_tp_1
+mst_ver_1
+mst_tp_2
+mst_ver_2
+mst_tp_3
+mst_ver_3
+gw_di
+gw_di write fails %d
+gw_di write success
+gw_di read fails %d
+di->sw_ver:%s
+di->dev_sw_ver:%s
+gw_di read success
+lckey
+h_url
+hs_url
+hs_psk
+mqm_url
+mqs_url
+mq_url
+ai_sp
+mq_a_url
+time_z
+s_time_z
+wx_app_id
+wx_uuid
+gw_ai
+gw_ai write fails %d
+gw_ai write success
+gw_ai read fails %d
+gw_ai read success
+sw_ver
+bind
+uddd
+ddi-%s
+ddi write fails %d
+ddi write success
+ddi fuzzy read fails %d
+ddi read fails %d
+ddi read success
+ddi fuzzy delete fails %d
+ddi fuzzy delete success
+kvs_delete fails %s %d
+ddi delete success
+schema write fails %s %d
+schema write success
+schema read fails %s %d
+schema %s read success
+schema %s delete success
+user_param_key
+kvs_write err:%d
+kvs_read err:%d
+__ty_serialize
+__ty_deserialize
+__ty_db_serialize_save
+__ty_db_deserialize_restore
+ws_db_init
+wd_gw_base_if_write
+wd_gw_base_if_read
+wd_gw_wsm_write
+wd_gw_wsm_read
+wd_gw_desc_if_write
+wd_gw_desc_if_read
+wd_gw_actv_if_write
+wd_gw_actv_if_read
+wd_dev_if_write
+wd_dev_if_read
+wd_dev_if_delete_all
+wd_dev_if_delete
+wd_dev_schema_write
+wd_dev_schema_read
+wd_dev_schema_delete
+ws_db_user_param_write
+ws_db_user_param_read
+/home/changcheng/tuya/gitlabs/iot_common_platform/iot_common_platform/src/tuya_iot_sdk/tuya_cloud/gw_intf.c
+short timer timeout,set wifi mode as a lowpower mode after the device power on next
+short timer timeout,set wifi mode as a normal mode after the device power on next
+wd_gw_wsm_write error:%d
+cmmod_post_msg error:%d
+long timer timeout,set wifi mode as a lowpower mode
+long timer timeout,set wifi mode as a normal mode
+wf_wk_mode_set err:%d
+wechat random:%d
+region:%s token:%s regkey:%s
+Sniffer Finish %d  ssid:%s passwd:%s
+__gw_nw_cfg_fin_proc error:%d
+wf_nw_cfg_start err:%d
+stop smt cfg mthd:%d
+lowpower or special mode stop tmm_short and tmm_long timer
+cmmod_stop_tm_msg tmm_short error:%d
+cmmod_stop_tm_msg tmm_long error:%d
+wf_wk_mode_set error:%d
+__wf_ap_config error:%d
+lan_ap_nw_cfg_start error:%d
+wf_ap_stop error:%d
+do't config wifi network
+wf_station_connect has not found router(%s)
+wf_station_connect error:%d
+lan_pro_cntl_init error:%d
+gw_wsm stat:%d
+cmmod_start_tm_msg error:%d
+http_psk_url is NULL. get new url from cloud...
+timer_task_init fails %d
+mqc_app_init error:%d %d
+uni_set_time_zone error:%d zone:%s
+tm_msg start TIMEID[%d] err
+__wf_reset error:%d
+SmartLife
+%s-%02X%02X
+wf_ap_stop err:%d
+__gw_nw_cfg_fin_proc err:%d
+gw reset called. tp:%d stat:%d
+gw_reset_by_gwid error:%d
+__gw_reset error:%d
+http_device_check_upgrade_info_by_devid %s error:%d
+http_gw_check_upgrade_info error:%d
+size
+hmac
+version
+__ty_httpc_err_proc error:%d
+httpsUrl
+TLS MODE:%d set to https url
+fw_hmac: %s
+sw_ver: %s
+fw_url: %s
+file_size: %u
+ug_mag->dev_id:%s
+cloud ug_mag->tp:%d local:%d
+pre gw ug is set. and pre handled:%d
+Param is null.
+cloud_get_storage_config error: %d.
+%s.%s
+require ca fail, ret %d
+/%s_%d%02d%02d%02d%02d%02d.tar.gz
+gw_app_log_path_cb is null.
+https
+application/txt
+post_file_to_oss error: %d.
+cJSON_PrintUnformatted error
+data format error:%s
+net work unavailable
+get url cfg cb called
+we chat mode.... to set url manual
+gw_active error:%d
+actived failed,wifi module start to register
+cmmod_start_tm_msg err:%d
+http_gw_active service verify fail, unactive and restart
+gw_unactive error
+wxAppId
+devId
+schemaId
+wx_no_s_id
+resetFactory
+cloud_reset:%d local_reset:%d
+remote is reset factory and local is not,reset factory again.
+secKey
+localKey
+schema
+__gw_single_dev_bind error:%d
+wd_gw_desc_if_write error:%d
+wd_dev_schema_write error:%d
+__gw_lc_bind_device error:%d
+wd_gw_actv_if_write error:%d
+gateway versions update -->>
+http_gw_update_version_v41 error:%d
+gateway versions update <<--
+Malloc err
+wd_gw_actv_if_write err:%d
+30.04
+1.0.2
+1.0.0
+wd_gw_desc_if_write error
+Invalid Param. gw init fails
+sw_ver:%s
+dev_sw_ver:%s
+attr_num[%d] out of limit,limit is %d
+invalid version format[%d]:%s
+CreateMutexAndInit fail %d
+malloc hashmap error
+wd_gw_base_if_read fail %d
+uuid authkey invalid
+serial_no:%s
+wd_gw_wsm_read err:%d
+gw_cntl.gw_wsm.stat:%d
+gw_cntl.gw_wsm.nc_tp:%d
+gw_cntl.gw_wsm.md:%d
+token invalid,go to reset fac
+wifi config method do't fit
+gw_cntl.gw_if.abi:%d input:%d
+gw_cntl.gw_if.product_key:%s, input:%s
+gw_cntl.gw_if.tp:%d, input:%d
+gw_cntl.gw_if.firmware_key:%s, input:%s
+input firmware key is NULL but local is %s. Reset Factory
+input firmware key is %s but local is %s. Reset Factory
+abi/pid/tp invalid
+attr_num change,gw_if.attr_num:%d attr_num:%d
+attribute type check fail. idx:%d tp:%d input:%d
+device do't find err:%d
+key/url invalid
+malloc fails
+Begin Load Devices
+Index:%d ret:%d devId:%s
+wd_dev_if_read err:%d
+gw_lc_bind_device_pk err:%d
+Load Devices Finish. Cnt:%d
+enter success_proc
+enter reset factory
+ERR_EXIT is Jumped!!!!
+Invalid Param
+dev %s already bind and attach.Skip
+dev %s bind schema %s
+dp num parse invalid %d
+malloc fail dpnum %d
+malloc fail
+cjson is NULL %s
+get id null
+mode
+get mode null
+passive
+trigger
+pulse
+stat
+total
+type
+property
+get property null
+get type null
+bool
+value
+string
+maxlen
+get maxlen null
+malloc error
+enum
+range
+get range null
+get array size error
+get array null
+bitmap
+hashmap put fail dev_id:%s
+Bind Dev Attach Success %s %d
+scale
+dev %s Already In List. Return
+Malloc Fail
+Bind Dev No Attach Success %s %d
+dev %s read schema fails
+unbind dev:%s
+hashmap remove fail dev_id:%s
+unbind ok.curr dev num:%d
+device is already unbinded
+not find. curr dev num:%d
+ERR dev is deleted.should not in hashmap. %s
+set gw ext_stat:%d
+get gw ext_stat:%d
+mqtt report download percent:%d
+mqc_upgd_progress_rept_v41 err:%d
+percent %d offset:%u total:%u report:%d
+download begin, set upgrade status %d
+update upgrade-status fails %d %s, continue to download file
+set download buf size:%u
+downlaod file fails %d %s
+target file hmac:%s
+sdk calc file hmac:
+%02x
+file hmac check fail.
+file hmac check success.
+gw_upgrade_func
+gw upgrade module version. type:%d ver:%s
+invalid version format:%s
+gw_cntl.gw_if.tp:%d
+gw_cntl.gw_if.abi:%d
+soc solution. upgrade soc sw_ver:%s %s
+mcu-dev solution. upgrade soc sw_ver:%s %s
+mcu-dev solution. upgrade mcu sw_ver:%s %s
+NULL input
+get_wf_gw_nw_status error:%d
+dev not on online:%d
+get ip fails:%d wf:%d
+get mac fails:%d wf:%d
+wf_station_get_conn_ap_rssi error:%d
+Get Rssi:%d
+ssid:%s
+passwd:%s
+token:%s
+tm_msg start timerID[%d] err
+post msg error:%d
+silent get gw firmware,no firmware available
+http_get_self_fm_ug_info failed
+silent get gw firmware
+ug_mag->ug.fw_hmac = %s.
+ug_mag->ug.sw_ver  = %s.
+ug_mag->ug.fw_url  = %s.
+ug_mag->ug.file_size  = %d.
+silent get gw firmware finish
+http_put_rst_log err:%d
+http_put_rst_log finish
+op_ret:%d
+next_min:%d
+__gw_ug_cfg_cb get nothing
+config
+stdTimeZone
+timezone:%s
+has no stdTimeZone
+dstIntervals
+has no dstIntervals
+ackId
+ackid:%s
+httpc_dynamic_cfg_ack op_ret:%d
+has no ackId
+dev delete -->>
+dev delete <<--
+gw is long time(60s) disconnected to router/failed to connect mqtt,now go to reconnect!!
+netstat:%d
+cJSON_Parse err:%s
+count:%d
+__tmm_short_cb
+__tmm_long_cb
+__gw_nw_lowpower_cb
+gw_user_token_bind
+__nw_cfg_fin_cb
+__gw_nw_smt_cfg_cb
+__gw_nw_smt_cfg_stop_cb
+__gw_nw_ap_cfg_cb
+__gw_nw_ap_cfg_stop_cb
+__gw_net_conn_cb
+__gw_actived_cb
+__wf_reset_cb
+__gw_ap_nw_cfg_proc
+__gw_reset
+__gw_unregister_cb
+__gw_unactive_cb
+__get_upgrd_if_cb
+__gw_upload_log_cb
+__ty_httpc_err_proc
+__tmm_get_url_cfg_cb
+__tmm_gw_register_cb
+set_gw_active
+__tmm_gw_actv_cb
+__tmm_gw_if_sync_cb
+__gw_flash_reset_fac
+__gw_cntl_desc_init
+gw_cntl_init
+__gw_lc_bind_device
+__gw_lc_bind_dev_not_attach_dp
+gw_lc_bind_device_pk
+__gw_lc_unbind_device_unlock
+__get_dev_cntl_unlock
+set_gw_ext_stat
+get_gw_ext_stat
+__gw_upgrade_mqc_upgd_progress_timer_cb
+__gw_get_file_data_cb
+__gw_upgrade_thread_func
+gw_update_version
+gw_get_ip
+gw_get_mac
+gw_get_rssi
+gw_wifi_user_cfg
+__gw_fw_ug__cb
+__gw_rst_log__cb
+__gw_ug_cfg_cb
+__tmm_dev_delete
+__gw_connect_monitor__cb
+gw_load_sum_time_zone_tbl
+/home/changcheng/tuya/gitlabs/iot_common_platform/iot_common_platform/src/tuya_iot_sdk/tuya_cloud/com_protocol.c
+2.1_3.1 From:%d Data:%s
+Malloc %d Fails
+aes128_ecb_decode error:%d
+lpv=
+data=
+%02x
+md5 check not match %s-%s
+pcmcd check fails. %d %d
+pcmcd check success! from %d %d
+crc check fails %x %x
+find last } fails %d
+data is NULL OR Len Invalid %d
+Data From LAN AND V=3.1
+Data From LAN AND V=3.2
+Data From LAN AND V=3.3
+Data From LAN But No Match Parse %s
+Data From MQTT AND V=2.1
+Data From MQTT AND V=2.2
+Data From MQTT But No Match Parse %s
+Invlaid Cmd:%d
+Malloc Fails %d
+"t":%d,
+"s":%d
+{"protocol":%d,"t":%d,"data":%s,
+aes128_ecb_encode error:%d
+Find last } fails %d
+"t":%d
+{"protocol":%d,"t":%d,"data":%s
+Invalid Param
+Data To LAN AND V=3.1
+Data To LAN AND V=3.2
+Data To LAN AND V=3.3
+Data To LAN But No Match Parse %s
+Data To MQTT AND V=2.1
+Data To MQTT AND V=2.2
+Data To MQTT But No Match Parse %s
+__parse_data_with_pv21_lpv31
+__parse_data_with_pv22_lpv32
+parse_data_with_cmd
+__pack_data_with_cmd_pv21_lpv31
+__pack_data_with_cmd_pv22_lpv32
+pack_data_with_cmd
+/home/changcheng/tuya/gitlabs/iot_common_platform/iot_common_platform/src/tuya_iot_sdk/tuya_cloud/mqc_app.c
+cannot register cbs. reach max %d
+mq_pro:%d mqc_handler_cnt:%d
+Rev DP Cmd
+data
+dps value not in json
+send_gw_dev_cmd error:%d
+Rev Remote Reset Cmd
+type
+reset_factory
+cmd is reset factory, ungister
+unactive
+gw reset error:%d
+Rev Timer Update Cmd. Update Timer
+Rev Upgrade Cmd. Begin To Upgrade
+Rev DP Req
+Rev DP Query
+dpId
+Rev Set Summer Table Cmd
+dstIntervals
+not found dstIntervals
+wd_gw_actv_if_write error:%d
+TLS Mode is NOT TLS_DISABLE:%d .set username = gwid
+mqtt start fail, dev not actived. %d
+mqc app is already inited
+mqtt url is null
+create seme fails %d
+MQTT Protocol URL:%s Port:%d
+Malloc Fail %d
+smart/device/in/
+%s%s
+TLS in not disable. disable mqtt time check
+%02x
+create_mqtt_hand error:%d
+smart/device/out/
+mqtt send topic:%s
+d/m/o/
+mqtt-media send topic:%s
+CreateMutexAndInit fail %d
+mq_cntl_task
+cmd_time:0x%x cur_time:0x%x set_lmt:0x%x
+gateway at upgrade status
+parse_data_with_cmd error:%d
+parse error data is %s
+Rev MQTT:%s
+protocol
+param is no correct
+get json err
+ackId
+{"ackId":"%s"}
+index:%d mq_pro:%d
+MQ Not Find %d Or Handler Err cnt:%d op_ret:%d
+error:%s
+mqtt connected success
+mqtt is disconnected
+mqtt connect deny times:%d
+gateway is unregistered
+gw_unregister error:%d
+gateway is unactived
+gw_unactive error:%d
+gateway status is normal
+gateway get delete status ret:%d status:%d
+begin to get pr mcd...
+http_dynamic_cfg_get error:%d
+the gateway is not exist
+gateway get delete status fail. ret:%d status:%d
+validTime
+validTime is Not In Response
+get pr mcd success. limit:%u
+get_gw_nw_status:%d
+Send MQTT Msg.P:%d Data:%s N:%d Q:%d
+pack_data_with_cmd err:%d
+mqc_pub_async err:%d
+input is null
+malloc fail
+firmwareType
+get firmwareType fail
+gw_get_upgrd_if error:%d
+report upgrade status through mqtt timeout..%d
+input invalid:%d
+{"protocol":%d,"data":{"progress":"%d","firmwareType":%d
+,"cid":"%s"}}
+reqType
+can not get reqType
+sigQry
+{"reqType":"sigQry","data":{"signal":%d}}
+logQry
+uuid
+Param is null.
+rev log query.uuid = %s
+gw_upload_log error:%d.
+tmpjson->valuestring invalid %s
+the size of arr is too small  %u < 9
+the size of arr is too small  %u < 2
+d/w/
+false
+true
+{"success":%s,"devId":"%s","logUrl":"%s","logSuf":"%s","uuid":"%s","bucket":"%s"}
+resp:%s
+mqc_prot_data_rept fails %d
+dt_body is NULL
+gw_cntl is NULL
+malloc fails. %d
+mqc media is offline
+mqc media is not enabled
+mqtt-media publish msg. topic:%s
+dt_body->id:%d
+dt_body->posix:%d
+dt_body->step:%d
+dt_body->offset:%d
+dt_body->len:%d
+pack data fails. %d
+*dt_body is NULL
+len is :%d
+MQTT PROCESS IS ERR :%d
+mqc_media push data is err :%d
+mqc_media parm is err
+MQTT SEND START IS ERR:%d
+mqc_media_pub_async err:%d
+mqc_app_register_cb
+__mqc_proto_cb_CMD_5
+__mqc_proto_cb_RESET_11
+__mqc_proto_cb_TIMER_UG_13
+__mqc_proto_cb_UPGRADE_15
+__mqc_proto_cb_DATA_REQ_22
+__mqc_proto_cb_QUERY_31
+__mqc_proto_cb_SUMMER_TABLE_41
+__mqc_calc_user_name
+mqc_app_init
+__mqc_very_prcmd_pr
+__mqc_app_recv
+__mqc_conn_cb
+__mqc_disconn_cb
+__mqc_conn_deny_cb
+__mqc_get_pr_mcd
+__mqc_permit_cb
+__mqc_prot_data_rept
+__mq_upgrade_req
+__mqtt_upgrade_publish_cb
+mqc_upgd_progress_rept_v41
+__mqc_obj_handle_da_req
+mqc_get_wakeup_data
+mqc_get_heartbeat_data
+mqc_log_notify
+__pack_flow_data
+mqc_media_pub_async
+mqc_media_process_control
+mqc_media_pub_data_sync
+mqc_media_pub_sync
+/home/changcheng/tuya/gitlabs/iot_common_platform/iot_common_platform/src/tuya_iot_sdk/tuya_cloud/timer_task.c
+reset local timer task. write_disk:%d
+timer_arr
+no timer task in local db
+json parse fail.%s
+read timer:%s
+lastFetchTime
+get cnt info error
+hour
+loop
+Malloc %d Fails
+create cjson fail
+TIMER:%s
+wd_common_write err:%d
+not registered. skip:%d
+get timer cnt fail
+timer query time equal. skip:%d
+timer query time NOT equal %d %d begin update
+get timer cnt NO lastFetchTime 
+count
+get timer cnt:%d
+get timer cnt NO count 
+timer cnt %d > MAX %d
+update timer content: %d - %d
+timers
+Get Timer Item Fails %d %d 
+time
+loops
+date
+upload timer log:%s
+execute timer task: %s
+gateway at upgrade status. skip upload timer log
+execute timer fails %d
+pTimer->dps_info is NULL
+Delete Timer Task. cnt:%d
+malloc fail %d %d
+Increase Timer Arr %d %d
+add timer to idx:%d
+some error occur %d %d 
+timer task query, update cnt:%d
+get timer err
+single timer trigger %d-%d-%d %d:%d. %s
+loop timer trigger %d %d:%d. %s
+malloc fails %d
+cmmod_cr_tm_msg_hand fail.%d
+tm_msg start TIMEID[%d] err %d
+__reset_timer_task
+__load_timer_task_from_disk
+__save_time_task_to_disk
+__update_time_task_from_cloud
+__upload_timer_log
+__execute_timer_task
+__delete_task_from_arr
+__increase_arr_size
+__add_task_to_arr
+__timer_task_query_func
+timer_task_init
+/home/changcheng/tuya/gitlabs/iot_common_platform/iot_common_platform/src/tuya_base/kv_storge/kv_storge.c
+Init Kvs With File:%s
+kvs_init
+/home/changcheng/tuya/gitlabs/iot_common_platform/iot_common_platform/src/tuya_base/kv_storge/file/simplekv.c
+backup timer called. backup file -->>
+backup timer called. backup file <<--
+crc %u %u not equal
+update crc %u
+curr:%u last:%u <= delay. start backup timer
+curr:%u last:%u >= delay.start backup && stop backup timer
+malloc fails %d
+open back file fails %s
+fwrite failed [%d]
+backup normal file to bak success
+write failed[%d]
+restore bak to normal file success
+hd lmt %d invalid
+size in: %d and final: %d And mag_rec_max: %d
+create data hd success
+write head fails %d len[%u]
+write head to normal file success
+write key:%s And Value Len:%d
+%d key same BUT size old %d < new %d need find new hd
+%d key same AND size old %d >= new %d
+%d valid is false AND size old %d >= new %d
+find %d available space
+No Available Space %d %d!!
+new space %d startpos:%u size:%u
+reuse available space %u
+write data fail, ret = %d, size = %u
+new space. seek to end and write zero
+write data fails %d
+write header fails %d
+write success
+fwrite fails %d  retore from bak file
+magic check fail 0x%X 0x%X
+max cnt invalid %d mag_rec_size:%d
+crc32 check fails
+head check success
+curr element cnt is 0. write header.
+malloc fail.
+Erase Invalid Area: %d %s
+malloc fail.%d
+fwrite failed ret[%u] len[%u]
+Upgrade key:%d %s
+Upgrade key:%d check is vaild
+Upgrade key:%d check is invaild
+read kv %s fail!!
+write kv %s fail!!
+fread error %d %d
+__check_hd_valid error
+read and check head success
+fread error %d
+undefined version %x
+curr db is V0 %d %d. Upgrade to V1
+malloc error %d
+fread error
+SIZEOF(DATA_HD_S) is %u,SIZEOF(UINT_T) is %u,size is %u
+mag_rec:%d start_pos modify, new data_hd_size:%u, old data_hd_size:%u
+__write_data_hd error
+fwrite error.
+curr db is V1 %d %d. Upgrade to V2
+__upgrade_from_V1_to_V2 error %d
+curr db is V2. No need to upgrade
+has inited
+encrypt_key_len:%d or key is invalid.
+path:%s
+path %s invalid
+malloc fail
+%s%s
+tuya_user.db
+tuya_user.db_bak
+both file not exist %s
+file name:%s
+Error: 
+normal file exist. bak file not exist
+bak file eixst BUT normal file not exist
+both file exist
+open file fails
+__create_data_hd error:%d
+restore from bak file
+__user_data_restore error:%d
+restore file success
+read from normal file
+__rd_hd_and_check error:%d
+read from normal file success
+init NEW normal file
+__write_data_hd error:%d
+sys_add_timer error:%d
+CreateMutexAndInit error:%d
+init from normal file success.
+not inited
+aes128_ecb_encode fail:%d
+read key:%s isFuzzy:%d skipCnt:%d
+Fuzzy Find %s %s %d and skipIdx:%d
+no key find
+find key:%d %s
+malloc failed %d
+read data fails %d %d
+data crc32 check fails %u %u
+key:%s find value.Len:%d
+__read_kv_raw fail. %d
+aes128_ecb_decode fail. %d
+__read_kv_with_decode fail. %d
+delete key:%s isFuzzy:%d
+cnt:%d delete bit arr len:%d
+fuzzy del find %d %s And set Arr[%d]=0x%X
+delete key find %d
+key:%s not find
+Delete key:%d %s
+Delete key:%s %d success
+write header fails
+Delete success
+Delete FAIL
+format
+format fail %d
+format success
+file path:%s
+bak file path:%s
+crc32:%d
+version:%d
+wr_count:%d
+data_hd_size:%d
+magic:0x%X
+mag_rec_max:%d
+mag_rec_cnt:%d
+index		 valid		 key		 size		 start		 datalen		 crc32
+%d		 %d		 %s		 %u		 0x%X		 %d		 %d
+remove %s fail %d
+__backup_timer_cb
+__check_hd_crc32
+__update_hd_crc32
+__user_data_backup
+__user_data_restore
+__create_data_hd
+__write_data_hd
+__write_kv_raw
+__check_hd_valid
+__upgrade_from_V1_to_V2
+__read_and_check_hd
+__rd_hd_and_check
+simplekv_init
+simplekv_deinit
+__write_kv_with_encode
+simplekv_write
+__read_kv_raw
+__read_kv_with_decode
+simplekv_read
+__delete_kv
+simplekv_delete
+simplekv_fuzz_read
+simplekv_fuzz_delete
+simplekv_format
+simplekv_show_status
+simplekv_factory
+/home/changcheng/tuya/gitlabs/iot_common_platform/iot_common_platform/src/tuya_base/sys_serv/sys_timer.c
+sys timer handle init fail.
+system timer process run.
+system timer process exit.
+system timer has been inited
+create timer queue fails
+sys_timer
+create timer thread fails
+system timer has not been inited
+add timer fails, invild input
+Get Idle Timer Id Fails %d
+add timer to queue fails %d
+Start Timer Fails %d %d %d ret:%d
+Trigger Timer Fails %d  ret:%d
+Delete Timer Fails %d ret:%d
+Stop Timer Fails %d ret:%d
+Delete System Timer Thread Fails. %d
+Delete System Timer Thread Success
+ReleaseTimerQue Fails. %d
+ReleaseTimerQue Success
+sys_timer_thrd
+system_timer_init
+sys_add_timer
+sys_start_timer
+sys_trigger_timer
+sys_delete_timer
+sys_stop_timer
+IsThisSysTimerRun
+system_timer_release
+/home/changcheng/tuya/gitlabs/iot_common_platform/iot_common_platform/src/tuya_base/sys_serv/ty_work_queue.c
+ty work queue is alreayd inited
+init work queue. stack size:%d pro:%d num:%d
+ty work queue create fails. ret:%d
+ty work queue create success
+ty work queue is NOT inited
+ty work queue add fails. ret:%d
+ty work queue add success
+ty work queue check del fails. ret:%d
+ty work queue check del success
+ty_work_queue_init
+ty_work_queue_add
+ty_work_queue_check_and_del
+/home/changcheng/tuya/gitlabs/iot_common_platform/iot_common_platform/src/tuya_base/sys_serv/uni_msg_queue.c
+create msg queue fails, invalid param
+malloc fails %d
+create mutex fails
+create semaphore fails
+CreateMsgQueAndInit
+cmmod
+/home/changcheng/tuya/gitlabs/iot_common_platform/iot_common_platform/src/tuya_adapter/system/uni_thread.c
+Malloc Del Mgr Fails
+Create Mutex Fails
+Add Thread:%s To Delete List
+real delete thread:0x%x
+del list not empty...deleting
+Thread:%s is still running..
+Final Free Thread:%s
+Init Thread Del Mgr
+Invalid Param
+Malloc Thread Mgr Fails
+Create Thread Fails %d
+enter Thread:%s func call
+Thread:%s Exec Start. Set to Running Status
+exit Thread:%s func call
+Thread:%s Exec Finish. Set to Delete Status
+Delete Thread:%s
+__cr_and_init_del_thrd_mag
+__add_del_thrd_node
+__inner_del_thread
+__free_all_del_thrd_node
+CreateAndStart
+__WrapRunFunc
+GetThrdSta
+DeleteThrdHandle
+__GetThrdId
+/home/changcheng/tuya/gitlabs/iot_common_platform/iot_common_platform/src/tuya_adapter/system/uni_semaphore.c
+invalid param
+malloc fails
+semaphore init fails %d %d
+CreateAndInitSemaphore
+/home/changcheng/tuya/gitlabs/iot_common_platform/iot_common_platform/src/tuya_adapter/wifi_intf/wf_basic_intf.c
+create mutex fail
+wf_all_ap_scan
+wf_assign_ap_scan
+wf_wk_mode_set
+mem partition index:%d
+begin:%p
+end:%p
+pMemFreeList:%p
+memBlkSize:%d
+memNBlks:%d
+memNFree:%d
+***********************************
+/home/changcheng/tuya/gitlabs/iot_common_platform/iot_common_platform/src/tuya_adapter/utilities/mem_pool.c
+SysMalloc failed size:0x%x
+Malloc
+/home/changcheng/tuya/gitlabs/iot_common_platform/iot_common_platform/src/tuya_adapter/adapter_platform.c
+uni_output_init err:%d
+CreateLogManageAndInit err:%d
+unw_init_dns_cache err:%d
+SysMemoryPoolSetup err:%d
+uni_time_init err:%d
+adapter_platform_init
+/home/changcheng/tuya/gitlabs/iot_common_platform/iot_common_platform/src/tuya_middleware/httpc/http_inf.c
+Open session failed: %s (%d)
+Prepare request failed: %d
+Send request failed: %d
+Get resp header failed: %d
+bytes
+Server Maybe Not support download in range. %u %d %s
+Get File In Range Mode [%d %d]
+Get File In Full Mode
+%s=%s
+Get RAW In Range Mode [%u %u]
+Get RAW In Full Mode
+__http_inf_com_hanle
+http_inf_client_get_file
+http_inf_client_get_raw
+/home/changcheng/tuya/gitlabs/iot_common_platform/iot_common_platform/src/tuya_middleware/mqtt/mqtt_client.c
+mqtt_ping -->>
+mqtt_ping error,errno:%d
+mqtt_ping <<--
+respond timeout -->>
+respond timeout <<--
+Input in invalid
+malloc fail
+subcribe_topic:%s
+client_id:%s
+user_name:%s
+passwd:%s
+unw_recv err:%d errno:%d
+mqtt is close. should not be here....
+close mqtt -->>
+shutdown fd is enabled
+close mqtt <<--
+disconnect mqtt
+mqtt_disconnect error
+serverIP %d port:%d
+mqtt over TLS is enabled. Host:%s Port:%d
+tuya_tls_connect error:%d
+reset use table:%d
+msg_ack_type:%d.
+mqtt connect respond err data:%d
+mqtt subcribe respond err msg_id:%d parse msg_id:%d
+module_start_tm_msg err op_ret:%d
+mqtt subscribe success
+do't support qos == 2 publish message
+send mqtt publish ack error
+ping respond. update fail_cnt:%d success_cnt:%d
+%s start
+mqtt task is not permit to execute. random sleep..
+mqtt task is not permit to execute. short sleep..
+select mqtt host:%s
+resolve mqtt host Fail:%s
+mqtt get serve ip success
+mqtt socket connect fail. retry_cnt:%d op_ret:%d errno:%d
+mqtt socket create success. begin to connect
+mqtt socket connect success. begin to subscribe
+ret:%d.
+__mq_recv err op_ret:%d recv_len:%d
+__mq_logic_conn_proc err:%d
+__mq_conn_recv err:%d
+mqtt fail_cnt:%u and sleeptime:%d ms
+qos1 package timeout. cnt:%d
+mqtt_pub_msg_with_qos ret:%d
+can't find  free mqmde
+mqtt_pub_msg_with_qos ret:%d errno:%d
+NULL input
+unscribe:%s
+unsubscribe %s err %d 
+subscribe %s return %d 
+__alive_tm_msg_cb
+__resp_tm_cb
+create_mqtt_hand
+__mq_send_raw
+__mq_recv_raw
+__mq_send
+__mq_close
+mq_disconnect
+__mq_client_sock_conn
+__mq_reset_use_table
+__mq_logic_conning_proc
+__mq_conn_recv
+__mq_ctrl_task
+__mq_ctrl_task
+__pub_ack_timeout_proc
+mqtt_publish_async
+mqtt_get_socket_fd
+mqtt_book_wakeup_topic
+emqtt
+	AB0
+California1
+San Jose1
+Tuya Global Inc.1
+*.tuyacn.com1
+*.tuyaeu.com1
+*.tuyarf.com1
+*.tuyajp.com1
+*.tuyain.com1
+*.tuyaas.com1
+*.tuyaaf.com1
+*.tuyasa.com1
+*.wgine.com1
+*.tuya-inc.cn1
+*.tuyaus.com1
+*.tuya.com1
+Tuya1!0
+iot_world@tuya.com1
+*.tuyaus.com1
+*.tuyacn.com1
+*.tuyaeu.com1
+*.wgine.com1
+*.tuya-inc.cn1
+*.tuyajp.com1
+*.tuyain.com1
+*.tuyaas.com1
+*.tuyaaf.com1
+*.tuyasa.com1
+*.tuyarf.com1
+*.tuya.com0 
+181031053048Z
+21181007053048Z0
+California1
+San Jose1
+Tuya Global Inc.1
+*.tuyacn.com1
+*.tuyaeu.com1
+*.tuyarf.com1
+*.tuyajp.com1
+*.tuyain.com1
+*.tuyaas.com1
+*.tuyaaf.com1
+*.tuyasa.com1
+*.wgine.com1
+*.tuya-inc.cn1
+*.tuyaus.com1
+*.tuya.com1
+Tuya1!0
+iot_world@tuya.com1
+*.tuyaus.com1
+*.tuyacn.com1
+*.tuyaeu.com1
+*.wgine.com1
+*.tuya-inc.cn1
+*.tuyajp.com1
+*.tuyain.com1
+*.tuyaas.com1
+*.tuyaaf.com1
+*.tuyasa.com1
+*.tuyarf.com1
+*.tuya.com0
+/ ?"
+?4s;
+vl	e
+G.hQ
+/home/changcheng/tuya/gitlabs/iot_common_platform/iot_common_platform/src/tuya_middleware/tls/tuya_tls.c
+tls register constant %s %s
+%s %d:%s
+BAohbmd6aG91IFR1eVjaG5vbG9SBUwEwYDVLnRjbi5jb20xFTATBMMDCoudHVXVMGA1UEAYWlvbTEVMBMGA1UEA50dXlhYXM29QDDAwqLZi5xFTATBgNVBAMMDV5YXNhLmNTEwLKi53Zb20RBgNVBAMMCioud5jb20xFjAgNV5YS1pbMIILMAkGA1UEBhMCQAPBgNVBAgFpEwDwYDVQU5PVTEpMCcGA1UECFuZ3pob3UHV9sb2d5IVEQTBgNVBAMMDCoudNuLmNvbTEBM50dXlhdMRUDVQQDDAwqLnR1e5jb20xFTAgNV5YWpwLdKrrVrtLIAmOFcclWjM+5j0SmSB5FpnQg9h
+select fail.%d
+set cert loaded:%d
+NULL Input
+custom net ctx must be set
+malloc fails
+mutex create Fail. %d
+TRUE
+FALSE
+TUYA_TLS Begin Connect %s:%d  CustomNet:%s Enable_Cert:%s Default:%s 
+mbedtls_platform_set_calloc_free Fail. %x
+mbedtls_ssl_config_defaults Fail. %x %d
+tls cert verify mode:%d
+cert parse fail. ret: %x
+mbedtls_ssl_set_hostname Fail. 0x%x
+mbedtls_ssl_setup Fail. 0x%x
+socket fd is set. set to inner send/recv to handshake
+IN TUYA SDK,shoule not enter here!!!!!
+mbedtls_ssl_handshake returned %x %d
+handshake finish for %s. set send/recv to user set
+mbedtls_ssl_get_verify_result flag %x
+TUYA_TLS Success Connect %s:%d  CustomNet:%s Suit:%s
+Input Invalid
+mbedtls_ssl_write returned %d
+TUYA_TLS Disconnect Success
+tuya_tls_register_constant
+__tuya_tls_socket_recv_cb
+tuya_tls_set_load_cert
+tuya_tls_connect
+tuya_tls_write
+tuya_tls_read
+tuya_tls_disconnect
+extended master secret
+master secret
+key expansion
+client finished
+server finished
+SSLv3.0
+TLSv1.0
+TLSv1.1
+TLSv1.2
+unknown
+5mmQ
+vb^~
+I(fQ
+^F.6
+%sSSL Client
+%sSSL Server
+%sEmail
+%sObject Signing
+%sReserved
+%sSSL CA
+%sEmail CA
+%sObject Signing CA
+%sDigital Signature
+%sNon Repudiation
+%sKey Encipherment
+%sData Encipherment
+%sKey Agreement
+%sKey Cert Sign
+%sCRL Sign
+%sEncipher Only
+%sDecipher Only
+%s%s
+Certificate is uninitialised!
+%scert. version     : %d
+%sserial number     : 
+%sissuer name       : 
+%ssubject name      : 
+%sissued  on        : %04d-%02d-%02d %02d:%02d:%02d
+%sexpires on        : %04d-%02d-%02d %02d:%02d:%02d
+%ssigned using      : 
+%s%-18s: %d bits
+true
+false
+%sbasic constraints : CA=%s
+, max_pathlen=%d
+%ssubject alt name  : 
+%scert. type        : 
+%skey usage         : 
+%sext key usage     : 
+The certificate validity has expired
+The certificate has been revoked (is on a CRL)
+The certificate Common Name (CN) does not match with the expected CN
+The certificate is not correctly signed by the trusted CA
+The CRL is not correctly signed by the trusted CA
+The CRL is expired
+Certificate was missing
+Certificate verification was skipped
+Other reason (can be used by verify callback)
+The certificate validity starts in the future
+The CRL is from the future
+Usage does not match the keyUsage extension
+Usage does not match the extendedKeyUsage extension
+Usage does not match the nsCertType extension
+The certificate is signed with an unacceptable hash.
+The certificate is signed with an unacceptable PK alg (eg RSA vs ECDSA).
+The certificate is signed with an unacceptable key (eg bad curve, RSA too short).
+The CRL is signed with an unacceptable hash.
+The CRL is signed with an unacceptable PK alg (eg RSA vs ECDSA).
+The CRL is signed with an unacceptable key (eg bad curve, RSA too short).
+%s%s
+%sUnknown reason (this should not happen)
+TLS-ECDHE-RSA-WITH-AES-128-CBC-SHA256
+unknown
+ n;^
+Qkkbal
+i]Wb
+9a&g
+MGiI
+wn>Jj
+#.zf
++o*7
+#	}"4
+RR%%
+ yFU
+OShK"
+iM}j
+7l.2
+`uNj
+8Cw>
+g)f[
+yl)UU+
+QS\:5
+ SHA-%d test #%d: 
+failed
+passed
+ HMAC-SHA-%d test #%d: 
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
+%s, %02d %s %d %02d:%02d:%02d GMT
+/home/changcheng/tuya/gitlabs/iot_common_platform/iot_common_platform/src/tuya_iot_sdk/public_cloud/cloud_operation.c
+OSS Put Fail.%d
+UNSIGNED-PAYLOAD
+%s.%s
+content-type:%s
+host:%s
+x-amz-content-sha256:%s
+x-amz-date:%s
+x-amz-security-token:%s
+content-type;host;x-amz-content-sha256;x-amz-date;x-amz-security-token
+%s/%s/s3/aws4_request
+%02x
+AWS4-HMAC-SHA256
+AWS4
+aws4_request
+invalid param
+Content-Type
+config->provider = %s.
+Date
+x-oss-security-token:%s
+/%s%s?append&position=%d
+POST
+%s%s
+/%s%s
+OSS %s:%s
+Authorization
+x-oss-security-token
+%04d%02d%02dT%02d%02d%02dZ
+%04d%02d%02d
+AWS4-HMAC-SHA256 Credential=%s/%s/%s/s3/aws4_request,SignedHeaders=%s,Signature=%s
+x-amz-content-sha256
+x-amz-date
+x-amz-security-token
+CreateMutexAndInit err:%d
+input null
+require CA for url %s
+CA exist for url already
+can not store more CA
+certificate get failed %d
+fail to malloc %d for ca
+new CA stored for i:%d url %s
+we find the same ca in list:%d,url:%s ca_type:%d i:%d
+token
+fail to get value for key token
+invalid key value for key token
+fail to get value for key %s
+invalid key value %s for key %s
+pathConfig
+ak: %s
+sk: %s
+expiration: %s
+bucket: %s
+endpoint: %s
+token: %s
+provider: %s
+media_path: %s
+log_path: %s
+detect_path: %s
+expiration
+bucket
+endpoint
+region
+provider
+storeMode
+logPath
+detectPath
+mediaPath
+common
+ak: %s
+sk: %s
+expiration: %s
+bucket: %s
+endpoint: %s
+token: %s
+provider: %s common_path: %s
+input is invalid
+create http handle fails
+%s://%s.%s%s/%s
+Final PUT:%s,size %d
+%s/%s
+HTTP Put Content Fails: %d
+PUT URL:%s
+%s%d
+%s://%s.%s%s/%s?append&position=%d
+url = %s.
+Final POST:%s
+Input Is Invalid
+File Not Exist:%s
+File:%s
+File Size:%d
+content_type:%s
+File Open Fails:%s
+Malloc Fail.
+pos:%d total size:%d actual_read:%d
+oss_put_object_from_file put object failed=[%d] 
+sque:%d.
+%s,%s
+oss_put_object_from_file failed:%d
+__http_callback_after_put
+__http_callback_add_put_custom_request_head
+cloud_operation_init
+cloud_require_new_ca
+cloud_get_storage_config
+cloud_get_common_storage_config
+cloud_put_data_to_file
+cloud_put_custom_data
+cloud_append_post_data_to_file
+post_file_to_oss
+/home/changcheng/tuya/gitlabs/iot_common_platform/iot_common_platform/src/tuya_iot_sdk/public_cloud/upload_notification.c
+input is null
+Bucket:%s
+Add Key %s To Msg[%d]
+Add Obj %s To Msg[%d]
+notification_message_malloc error. size:%d
+notification_message_upload hava nothing to report
+notify MQTT:%d timeout:%u
+notification_message_upload malloc failed %d
+bucket
+{"v":"1.0","%s":"%s","%s":[
+files
+["%s","%s"],
+final:%s
+notification_message_upload failed:%d
+notification_message_upload success
+/%s%s?security-token=%s
+%04d%02d%02dT%02d%02d%02dZ
+%04d%02d%02d
+%s/%s/%s/%s/aws4_request
+X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=%s&X-Amz-Date=%s&X-Amz-Expires=%d&X-Amz-Security-Token=%s&X-Amz-SignedHeaders=host&bucket=%s&v=%s
+host:%s.%s
+UNSIGNED-PAYLOAD
+host
+%02x
+AWS4-HMAC-SHA256
+%s/%s/s3/aws4_request
+AWS4
+aws4_request
+Malloc Fails
+Malloc Fail
+%02d%02d%02dT%02d%02d%02dZ
+%s%%2F%02d%02d%02d%%2F%s%%2Fs3%%2Faws4_request
+http://%s.%s%s?X-Amz-Security-Token=%s&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=%s&X-Amz-Date=%s&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&bucket=%s&v=1.0&X-Amz-Signature=%s
+[%s]
+http://%s.%s%s?Expires=%d&OSSAccessKeyId=%s&Signature=%s&v=1.0&bucket=%s&security-token=%s
+oss uri:%s
+snapshot_message_upload failed:%d
+snapshot_message_upload success
+cloud config %d Not Inited
+cloud_get_detect_storage_config fail, ret %d
+%s.%s
+require ca fail, ret %d
+cloud config %d Init Success
+notification_content_upload_from_buffer illegal input
+notification from buffer. type:%s name:%s path:%d data_len:%d
+notification_content_upload_from_buffer init failed:%d
+https
+notification_content_upload_from_buffer put failed:%d
+__message_pack error:%d
+notification_content_upload_from_buffer success
+notification_content_upload_from_custom_ctx illegal input
+notification from custom ctx. type:%s name:%s path:%d 
+notification_content_upload_from_custom_ctx init failed:%d
+notification_content_upload_from_custom_ctx put failed:%d
+notification_content_upload_from_custom_ctx success
+notification_content_upload_from_file illegal input
+notification from file. local:%s cloud:%s type:%s path:%d
+notification_content_upload_from_file init failed:%d
+File Open Fails:%s
+File Not Exist:%s
+Malloc Fail %d
+__map_mqtt_send_mapid hava nothing to report
+malloc err %d
+{"mapType":%d,"mapPath":"%s","mapId":%d}
+map send mqtt:%d %s
+mqc_send_custom_mqtt_msg failed:%d
+__map_mqtt_send_mapid success
+__map_http_update_extend_msg hava nothing to report
+map update http. extend:%s bucket:%s,info:%s
+__map_http_update_extend_msg failed:%d
+notification_message_malloc err %d
+map send data. id:%d buf_len:%u cloud_name:%s map_type:%d %d extend:%s %d
+application/png
+notification_content_upload_from_buffer fail %d
+local_name is null
+fsize:%d
+history/time_%d_mapid_%d.bin
+{\"map_id\":%u,\"layout_size\":%lu,\"route_size\":%lu}
+./history.bin
+op_ret %d
+__message_pack
+notification_message_malloc
+notification_message_upload
+0123456789ABCDEF
+notification_snapshot_message_upload
+__content_check_init
+notification_content_upload_from_buffer
+notification_content_upload_from_custom_ctx
+notification_content_upload_from_file
+__map_mqtt_send_mapid
+__map_http_update_extend_msg
+upload_map_custom_buffer
+upload_map_custom_file
+__map_write_HeadFile
+__map_add_mapFile
+upload_recordFile
+/home/changcheng/tuya/gitlabs/iot_common_platform/iot_common_platform/src/tuya_iot_sdk/com_sdk/tuya_iot_internal_api.c
+gw unactive with specific mode:%d
+wifi mode invalid:%d only support ap first/smart first
+iot_wf_gw_unactive_custom_mode
+/home/changcheng/tuya/gitlabs/iot_common_platform/iot_common_platform/src/tuya_iot_sdk/wifi_cfg_serv/wf_nw_cfg.c
+wf_set_cur_channel[%d] err:%d
+Set New Channel %d
+wifi network config timeout,then init and config again -->>
+sys_stop_timer error:%d
+__wf_nw_cfg_init error:%d
+wifi network config timeout,then init and config again <<--
+wf_get_cur_channel err:%d
+Channel is not match %d %d!!!
+channel error
+lock channel cb %d channel:%d
+lock BSSID  %02X-%02X-%02X-%02X-%02X-%02X
+BSSID In Param Reset channel:%d
+current channel:%d
+wf_set_cur_channel error
+bssid is NULL...
+channel is error... %d
+malloc failed!
+sta search all ap and num: %d
+index:%d invaild param, channel:%d, bssid:%02x-%02x-%02x-%02x-%02x-%02x
+channel:%02d bssid:%02x-%02x-%02x-%02x-%02x-%02x ssid:%s
+__chan_change_time_cb
+__wifi_nw_cfg_timeout_cb
+__bc_sniffer_cb
+__mimo_sniffer_cb
+__lock_chan_cb
+__beacon_info_cb
+__wf_nw_cfg_init
+/home/changcheng/tuya/gitlabs/iot_common_platform/iot_common_platform/src/tuya_iot_sdk/wifi_cfg_serv/tlink_bc.c
+from:%d Captrue hd %d %d %d %d BasicVal[%d]:%d
+Capture Success. Curr best channel:%d 
+Lock channel:%d
+from:%d Capture Not Equal i:%d %d-%d
+mgk data:%04x %04x %04x %04x
+t_len check ok.Need Seq:%d Flag:%x
+data crc is success, crc_cnt:%d
+data crc is failed %02X %02X
+total_len: %02X 
+sort_rev_data: 0x%04x 0x%04x 0x%04x 0x%04x 0x%04x 0x%04x
+from:%d index:%d crc ok. finish_flag:0x%x recv_da_flag:0x%x
+ALL Rev Finish
+Parse Passwd Len:%d
+Parse Passwd :%s
+Parse Token Len:%d
+Parse Token:%s
+Parse SSID Len:%d
+Parse SSID:%s
+crc_da:%02x %02x %02x %02x %02x %02x
+tlk_bc->crc:%02x
+tlk_bc->crc error: %02x %02x %02x
+Captrue hd %d %d %d %d BasicVal[%d]:%d
+Capture Not Equal i:%d %d-%d
+[mimo lock] type:%d rssi:%d chan:%d
+__tlk_bc_hd_parse
+__tlk_bc_mgk_parse
+__tlk_bc_data_check
+__tlk_bc_data_parse
+__tlk_bc_crc_parse
+__mimo_tlk_bc_hd_parse
+TYST01
+/home/changcheng/tuya/gitlabs/iot_common_platform/iot_common_platform/src/tuya_iot_sdk/wifi_cfg_serv/ez_mc.c
+EZ Lock Chan %d %d
+EZ Header Find. Seq:%02x flag:%02x
+EZ Header Complete. Lock Chan:%d
+EZ Pattern. Match
+a3c6794oiu876t54
+EZ Passwd AES Fail
+Password Len 0
+__ez_mc_lock_chan
+__ez_mc_head_parse
+__ez_mc_data_parse
+/home/changcheng/tuya/gitlabs/iot_common_platform/iot_common_platform/src/tuya_iot_sdk/wifi_cfg_serv/thing_config.c
+type invalid...
+malloc failed...
+aes128_cbc_encode_raw error...:%d
+thing_config socket create failed
+226.%d.%d.%d
+thingconfig sendto failed... errno:%d
+>>>>>>>>>>>>>>>>>>>stop 1s<<<<<<<<<<<<<<<<<<<<<<<<
+thing_config timer start failed
+send finish...
+thing_config_start
+Malloc failed...
+ssid:%s
+passwd:%s
+thing_config->tc_tm create failed
+thing_config->tc_tm start failed
+thing_config_stop
+data
+stat
+stat:%s
+start
+token
+token:%s
+timeout
+timeout:%d
+mq thingconfig start
+stop
+mq thingconfig stop
+thing_config_multicast_encode_data
+thing_config_multicast_body
+thing_config_multicast_senddata
+thing_config_timer_cb
+thing_config_start
+thing_config_stop
+thing_config_mqc_handle
+deviceInfo
+deviceType
+deviceId
+/home/changcheng/tuya/gitlabs/iot_common_platform/iot_common_platform/src/tuya_iot_sdk/wifi_cfg_serv/ak_lan_protocol.c
+INIT wechat buf:%s
+airlink_udp_receive_thread
+socket create failed errno:%d
+malloc failed
+recvfrom failed errno:%d
+airlink start
+ak_lan_disc_init
+ak_lan_rev_active_task
+/home/changcheng/tuya/gitlabs/iot_common_platform/iot_common_platform/src/tuya_iot_sdk/wifi_cfg_serv/airkiss_bc.c
+from:%d Captrue hd %d %d %d %d BasicVal[%d]:%d
+Capture Success. Curr best channel:%d 
+Lock channel:%d
+from:%d Capture Not Equal i:%d %d-%d
+mgk_parse Temp Buf :%02x %02x %02x %02x
+Rev mgk Success,totalLen %02x, finish_flag:%x need_seq:%d
+mgk_prefix Temp Buf :%02x %02x %02x %02x
+Rev mgk_prefix Success,p_len %02x, finish_flag:%x
+index:%d data:%02x %02x %02x %02x
+index:%d crc ok. finish_flag:0x%x recv_da_flag:0x%x
+Rev Data Success,ssid:%s pwd:%s random:%02x
+Captrue hd %d %d %d %d BasicVal[%d]:%d
+Capture Not Equal i:%d %d-%d
+[mimo lock] type:%d rssi:%d chan:%d
+__ak_bc_hd_parse
+__ak_bc_mgk_parse
+__ak_bc_mgk_prefix
+__ak_bc_data_parse
+__mimo_ak_bc_hd_parse
+wk_th
+%s-%d
+/home/changcheng/tuya/gitlabs/iot_common_platform/iot_common_platform/src/tuya_middleware/httpc/httpc.c
+select fail %d err:%d
+http socket recv select time out. err:%d
+Cannot write standard
+Unable to do standard write
+Invalid params
+Cannot write data. session state: %d, session chunk state: %d
+chunked send fail. try send twice. len:%d sent:%d second:%d
+Start header read
+Header not found.
+The stream may be in inconsistent state or
+in a rare case, the header may be bigger that %d bytes
+Using actual read: %d %d
+Using prefetch: %d %d %d %d
+No entry for host %s found
+Unable to create socket
+Socket creation for %s:%d failed
+Connecting .. %s:%d
+tcp connect failed %s:%d errno=%d
+Connected .. sockfd: %d
+Could not allocate session object
+Could not allocate prefetch buffer
+Scheme: %s
+No scheme in given URL
+Parse: Hostname: %s
+Port number parsing failed: %s
+Parse: Port No: %d
+No port number given
+Resource: %s
+No resource specified in given URL
+Cannot parse URL
+NULL pointer(s) received as argument.
+Temporary buffer size is less than required
+tls http recv no memory.len:%d ret:%d err:%d. try recv again %d
+tls http recv again.len:%d ret:%d err:%d. try recv again %d
+tls http recv fail.len:%d ret:%d err:%d
+tls http recv fail.len:%d err:%d
+Cannot create session.
+Host name corrupt
+https
+Force enable TLS flag
+Connect: %s Port: %d  -->>
+Connect: %s Port: %d  --<<
+Unknown version given
+POST
+HEAD
+Method not yet supported.
+Unknown method given.
+bytes=%u-%u
+Enter: %s
+Cannot add header
+Have to extract
+Resource extraction error: %d
+send header:%s 
+Failed to send header
+content len:%u
+custom content before read cb fail. %d %u
+custom content. before read cb %d %u
+malloc fail. %u
+custom content. read content cb read_cnt:%d %u .read fail
+custom content. read content cb read_cnt:%d %u
+_http_raw_send Failed to send data. %d %d
+after read cb fail. %d
+ continue...
+custom content send fail. %u %d
+custom content send finish %u %d
+Failed to send data.
+HTTPC: Method invalid
+HTTPC: version invalid
+HTTPC: resource invalid
+%s %s %s/%s
+HTTP
+Host
+TUYA_IOT_SDK
+User-Agent
+keep-alive
+Connection
+close
+application/json
+Content-Type
+application/x-www-form-urlencoded; charset=UTF-8
+chunked
+Transfer-Encoding
+HTTPC: content len is 0
+Content-Length: %d
+Range
+Cannot prepare request, invalid parameters. State: %d
+Cannot prepare request, invalid session state. State: %d
+Enter: http_send_request
+Cannot send request
+Cannot send request. Buffer empty.
+timeout
+No timeout specified in response header.
+NAK'ing keep alive by force
+timeout=%d
+timeout value not found !
+Server timeout value: %d
+max value not found !
+max=%d
+max value invalid !
+Alive Max value:%d
+Header parsing error in pair %s
+Hdr parsing over bound:len: %d pair_len: %d
+#### %s
+Header parsing error in name %s
+Accept-Ranges
+Server
+Last-Modified
+Keep-Alive
+Server allows keep alive
+Keep-Alive present but connection: Close ?
+Server does not allow keep alive
+Content-Length
+Content-Encoding
+Parsing HTTP header
+header:%s
+Protocol mismatch in header.
+Protocol version not found.
+Defaulting to keep alive
+Protocol version mismatch.
+Status code not found.
+Status code string not found.
+Unable to get resp header, invalid params. State: %d
+Unable to get resp header, invalid session state. State: %d
+Header has used up %d bytes from the %d bytes header
+No content present. Closing this x'action
+Error in parsing header: %d
+Unable to get resp header.
+Invalid state: %d. Cannot read hdr value
+Standard read complete
+contentlen:%d size_remain:%d size_to_read:%d
+Error in reading content: %d
+Error while reading chunk len: %d
+Unable to read len. No newline
+Unable to read length. Header corrupted.
+Chunk size str (value in hex): %s
+Readng %d bytes of chunked data (b/w)... remn'g %d
+Failed to read partial chunk: %d
+Read %d bytes of partial chunked data.
+Cumulative: %d  Total: %d
+Zap chunk boundary failed
+Chunk size: %d
+At end of transaction, 
+could not zap chunk boundary
+Failed to read chunk data: %d
+Could not zap chunk boundary
+Read %d bytes of start chunked data.
+Unknown state %d
+Cannot read content.
+Cannot read content, no outstanding requests. Session state %d
+Not reading any content.
+HTTP status code: %d
+Cannot read content. Unknown state %d
+Cannot read lowlevel
+Unable to do lowlevel read
+Cannot write lowlevel
+Unable to do lowlevel write
+__select_wait_socketfd
+http_write_standard
+httpc_write_chunked
+prefetch_header
+recv_buf
+_http_parse_URL
+http_parse_URL
+__tuya_tls_http_recv_cb
+http_open_session
+new_session_object
+tcp_connect
+get_version_string
+get_method_string
+http_add_header
+sanitize_resource_name
+_http_prepare_req
+http_prepare_req
+http_send_request
+_http_send_request
+parse_keep_alive_header
+load_header_fields
+http_get_response_hdr
+_parse_http_header
+_http_get_response_hdr_value
+http_get_response_hdr_value
+http_get_response_hdr_all
+http_read_standard
+get_content_len
+zap_chunk_boundary
+http_read_chunked
+http_read_content
+http_lowlevel_read
+http_lowlevel_write
+%02X%s
+....
+ (%s, MGF1-%s, 0x%02X)
+%s key size
+c=|"
+%{:d
+r,m3
+4j+u
+k5/home/changcheng/tuya/gitlabs/iot_common_platform/iot_common_platform/src/tuya_iot_sdk/wifi_cfg_serv/wf_sniffer_intf.c
+beacon ssid id error:%d
+beacon rate id error:%d
+beacon channel id error:%d
+__sniffer_cb
+iot_wifi_tls
+HHRRQbyemo
+do't support get reset reason
+ n;^
+Qkkbal
+i]Wb
+9a&g
+MGiI
+wn>Jj
+#.zf
++o*7
+abcdbcdecdefdefgefghfghighijhijkijkljklmklmnlmnomnopnopq
+Jefe
+Hi There
+what do ya want for nothing?
+Test With Truncation
+Test Using Larger Than Block-Size Key - Hash Key First
+This is a test using a larger than block-size key and a larger than block-size data. The key needs to be hashed before being used by the HMAC algorithm.
+TYST01
+GCC: (Ubuntu/Linaro 5.4.0-6ubuntu1~16.04.9) 5.4.0 20160609
+GCC: (Ubuntu/Linaro 5.4.0-6ubuntu1~16.04.1) 5.4.0 20160609
+GCC: (Linaro GCC 5.3-2016.02) 5.3.1 20160113
+aeabi
+.shstrtab
+.interp
+.note.ABI-tag
+.note.gnu.build-id
+.gnu.hash
+.dynsym
+.dynstr
+.gnu.version
+.gnu.version_r
+.rel.dyn
+.rel.plt
+.init
+.text
+.fini
+.rodata
+.ARM.exidx
+.eh_frame
+.init_array
+.fini_array
+.jcr
+.data.rel.ro
+.dynamic
+.got
+.data
+.bss
+.comment
+.ARM.attributes

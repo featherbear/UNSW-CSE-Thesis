@@ -1,0 +1,1939 @@
+/lib/ld-linux-armhf.so.3
+I !xN
+>kY<
+9K"}
+he\&"
+*t\U
+oI>#,
+H>zpt
+5Tq#
+'$je]
+zznjFE
+libcurl.so.4
+__gmon_start__
+_Jv_RegisterClasses
+_ITM_deregisterTMCloneTable
+_ITM_registerTMCloneTable
+curl_global_cleanup
+curl_easy_init
+curl_easy_setopt
+curl_easy_strerror
+curl_global_init
+curl_easy_getinfo
+curl_slist_free_all
+curl_easy_cleanup
+curl_easy_perform
+curl_slist_append
+libroboipc.so
+_fini
+RecvPacket
+SendPacket
+librrlocale.so
+mbedtls_md_info_from_type
+mbedtls_pk_encrypt
+mbedtls_aes_free
+rr_get_location
+mbedtls_base64_decode
+mbedtls_sha256_finish
+mbedtls_aes_setkey_enc
+mbedtls_sha256_update_ret
+mbedtls_sha1_finish
+mbedtls_sha256_init
+rr_init_locale
+mbedtls_pk_init
+mbedtls_sha1_init
+mbedtls_sha256_free
+mbedtls_pk_parse_public_key
+mbedtls_pk_free
+mbedtls_sha1_free
+mbedtls_sha1_update_ret
+mbedtls_aes_crypt_ecb
+mbedtls_sha256_starts_ret
+rr_get_logserver
+mbedtls_pk_verify
+mbedtls_sha1_starts_ret
+mbedtls_md
+mbedtls_md_file
+mbedtls_aes_init
+libstat.so
+_ZN6google8protobuf8internal9ArenaImpl28AllocateAlignedAndAddCleanupEjPFvPvE
+_ZN6google8protobuf8internal20RepeatedPtrFieldBase7ReserveEi
+_ZNK6google8protobuf5Arena17OnArenaAllocationEPKSt9type_infoj
+__pthread_key_create
+_ZN6google8protobuf8internal26fixed_address_empty_stringE
+_ZN6google8protobuf8internal21arena_destruct_objectI10Stat_FloatEEvPv
+_ZN6google8protobuf8internal21arena_destruct_objectI9CleanInfoEEvPv
+_ZN6google8protobuf8internal21arena_destruct_objectI16VoicePackageInfoEEvPv
+_ZTI22StatDockStateTransInfo
+_ZN9CleanInfoC1Ev
+_ZN10RemoteInfoC1Ev
+_ZN6google8protobuf8internal21arena_destruct_objectI14BackToDockInfoEEvPv
+_ZN16SegmentCleanInfoC1Ev
+_ZTI10RemoteInfo
+_ZN6google8protobuf8internal21arena_destruct_objectI11BatteryInfoEEvPv
+_ZN6google8protobuf8internal21arena_destruct_objectI18EventTaskStateInfoEEvPv
+_ZTI12ShutdownInfo
+_ZTI7LDSInfo
+_ZN6google8protobuf8internal21arena_destruct_objectI22StatDockStateTransInfoEEvPv
+_ZN6google8protobuf8internal21arena_destruct_objectI12ShutdownInfoEEvPv
+_ZN8SpotInfoC1Ev
+_ZN9ErrorInfoC1Ev
+_ZTI18EventTaskStateInfo
+_ZTI8GotoInfo
+_ZN6google8protobuf8internal21arena_destruct_objectI18CompassRecoverInfoEEvPv
+_ZN6google8protobuf8internal21arena_destruct_objectI17CameraRecoverInfoEEvPv
+_ZTI16SegmentCleanInfo
+_ZN6google8protobuf8internal21arena_destruct_objectI13ZoneCleanInfoEEvPv
+_ZN13LDSDeviceInfoC1Ev
+_ZN6google8protobuf8internal21arena_destruct_objectI10RemoteInfoEEvPv
+_ZN6google8protobuf8internal21arena_destruct_objectI11Stat_StringEEvPv
+_ZN7LDSInfoC1Ev
+_ZN18RoboInfoStatResultC1Ev
+_ZTI11StartUpInfo
+_ZN8Stat_RawC1Ev
+_ZTI11BatteryInfo
+_ZN6google8protobuf8internal21arena_destruct_objectI8GotoInfoEEvPv
+_ZN6google8protobuf8internal21arena_destruct_objectI16SegmentCleanInfoEEvPv
+_ZN17CameraRecoverInfoC1Ev
+_ZN11StartUpInfoC1Ev
+_ZN6google8protobuf8internal21arena_destruct_objectI11StartUpInfoEEvPv
+_ZTI11DockRubInfo
+_ZN6google8protobuf8internal21arena_destruct_objectI7LDSInfoEEvPv
+_ZTI14BackToDockInfo
+_ZTI13ZoneCleanInfo
+_ZN10Stat_FloatC1Ev
+_ZN16VoicePackageInfoC1Ev
+_ZN6google8protobuf8internal21arena_destruct_objectI9ErrorInfoEEvPv
+_ZTI18StatDockSignalInfo
+_ZN8Stat_IntC1Ev
+_ZN18StatDockSignalInfoC1Ev
+_ZN18CompassRecoverInfoC1Ev
+_ZTI11Stat_String
+_ZTI17CameraRecoverInfo
+_ZN6google8protobuf8internal21arena_destruct_objectI8Stat_RawEEvPv
+_ZTI10Stat_Float
+_ZN6google8protobuf8internal21arena_destruct_objectI12TimezoneInfoEEvPv
+_ZN14BackToDockInfoC1Ev
+_ZN19EventTaskStatResultC1Ev
+_ZN6google8protobuf8internal21arena_destruct_objectI18StatDockSignalInfoEEvPv
+_ZTI16VoicePackageInfo
+_ZTI12TimezoneInfo
+_ZN11Stat_StringC1Ev
+_ZN10StatResultC1Ev
+_ZN12ShutdownInfoC1Ev
+_ZN13ZoneCleanInfoC1Ev
+_ZN12TimezoneInfoC1Ev
+_ZN18EventTaskStateInfoC1Ev
+_ZN9RobotInfoC1Ev
+_ZN6google8protobuf8internal21arena_destruct_objectI8Stat_IntEEvPv
+_ZTI9CleanInfo
+_ZN11DockRubInfoC1Ev
+_ZN6google8protobuf8internal21arena_destruct_objectI8SpotInfoEEvPv
+_ZTI18CompassRecoverInfo
+_ZTI8Stat_Int
+_ZN11BatteryInfoC1Ev
+_ZN22StatDockStateTransInfoC1Ev
+_ZN8GotoInfoC1Ev
+_ZN6google8protobuf8internal21arena_destruct_objectI11DockRubInfoEEvPv
+_ZTI8Stat_Raw
+_ZTI8SpotInfo
+_ZTI9ErrorInfo
+mbedtls_platform_zeroize
+mbedtls_sha512_starts_ret
+mbedtls_sha512_update_ret
+mbedtls_sha512_ret
+mbedtls_sha512_free
+mbedtls_sha512_init
+mbedtls_sha512_finish_ret
+librrlog.so
+rrdebug
+get_cur_time_ms
+libpthread.so.0
+sem_post
+recvfrom
+sem_init
+pthread_mutex_unlock
+pthread_join
+pthread_create
+pthread_cancel
+raise
+__errno_location
+connect
+send
+pthread_mutex_lock
+pthread_self
+pthread_detach
+sem_wait
+fcntl
+pthread_mutex_init
+libprotobuf.so.15
+_ZN6google8protobuf11MessageLite21ParsePartialFromArrayEPKvi
+_ZNK6google8protobuf7Message18SerializeToOstreamEPSo
+mbedtls_md_init
+mbedtls_md_setup
+mbedtls_md_hmac_starts
+mbedtls_md_hmac_update
+mbedtls_md_hmac_finish
+mbedtls_md_get_size
+mbedtls_md_free
+mbedtls_aes_setkey_dec
+mbedtls_base64_encode
+libstdc++.so.6
+_ZTVSt13basic_filebufIcSt11char_traitsIcEE
+_ZNSt13basic_filebufIcSt11char_traitsIcEE5closeEv
+_ZNSsC1EPKcRKSaIcE
+_ZTVSt9basic_iosIcSt11char_traitsIcEE
+_ZNSt9basic_iosIcSt11char_traitsIcEE4initEPSt15basic_streambufIcS1_E
+_ZNSt9basic_iosIcSt11char_traitsIcEE5clearESt12_Ios_Iostate
+_ZNSt13basic_filebufIcSt11char_traitsIcEE4openEPKcSt13_Ios_Openmode
+_ZNSt6localeD1Ev
+_ZNSt12__basic_fileIcED1Ev
+_ZNSt8ios_baseD2Ev
+__aeabi_atexit
+_ZNSs4swapERSs
+_ZTVSt13basic_fstreamIcSt11char_traitsIcEE
+_ZNSt13basic_filebufIcSt11char_traitsIcEED1Ev
+_ZNSs4_Rep20_S_empty_rep_storageE
+_ZNSt8ios_base4InitD1Ev
+_ZNSt8ios_baseC2Ev
+_ZTTSt13basic_fstreamIcSt11char_traitsIcEE
+_ZNSt13basic_filebufIcSt11char_traitsIcEEC1Ev
+__gxx_personality_v0
+_Znwj
+_ZNSt8ios_base4InitC1Ev
+_ZNSs4_Rep10_M_destroyERKSaIcE
+_ZNSt13basic_fstreamIcSt11char_traitsIcEED1Ev
+__cxa_end_cleanup
+_ZdlPv
+_ZTVSt15basic_streambufIcSt11char_traitsIcEE
+libgcc_s.so.1
+__aeabi_unwind_cpp_pr0
+__aeabi_unwind_cpp_pr1
+__aeabi_idiv
+__aeabi_uidiv
+libc.so.6
+socket
+fflush
+strcpy
+shmget
+gmtime_r
+__printf_chk
+readdir
+srand
+fopen
+ftruncate
+regexec
+perror
+shmat
+semctl
+__fdelt_chk
+closedir
+ftell
+signal
+strncpy
+sigprocmask
+regfree
+__stack_chk_fail
+unlink
+putchar
+mkdir
+shmdt
+realloc
+abort
+popen
+getpid
+chmod
+rewind
+localtime_r
+strtol
+feof
+fgets
+asctime_r
+strlen
+setitimer
+sigemptyset
+memset
+strstr
+bind
+fseek
+chdir
+memcmp
+getsockopt
+__fprintf_chk
+sigaddset
+stdout
+fputs
+ftime
+memcpy
+fclose
+__vsnprintf_chk
+setsockopt
+malloc
+__strncpy_chk
+opendir
+getenv
+sscanf
+regcomp
+alarm
+system
+__snprintf_chk
+strncat
+pclose
+usleep
+fwrite
+fread
+gettimeofday
+rename
+statfs
+__memcpy_chk
+atoi
+backtrace
+__fread_chk
+strchr
+mktime
+__strcpy_chk
+syscall
+__sprintf_chk
+__xstat
+uname
+backtrace_symbols
+access
+sync
+__strcat_chk
+strcmp
+__libc_start_main
+semop
+snprintf
+semget
+ld-linux-armhf.so.3
+__stack_chk_guard
+_edata
+__bss_start
+__bss_start__
+__bss_end__
+__end__
+_end
+/var/lib/jenkins/workspace/Tanos_FULL_REL/build/temp/arm/common/ipc:/var/lib/jenkins/workspace/Tanos_FULL_REL/build/temp/arm/common/locale:/var/lib/jenkins/workspace/Tanos_FULL_REL/build/temp/arm/common/stat:/var/lib/jenkins/workspace/Tanos_FULL_REL/build/temp/arm/common/rrlog:/var/lib/jenkins/workspace/Tanos_FULL_REL/build/prebuild/arm-linux-gnueabihf/libprotobuf/lib:/var/lib/jenkins/workspace/Tanos_FULL_REL/build/prebuild/arm-linux-gnueabihf/libconfig/lib
+mbedtls_hardclock_poll
+mbedtls_timing_alarmed
+mbedtls_platform_entropy_poll
+GLIBC_2.4
+CXXABI_ARM_1.3.3
+CXXABI_1.3
+GLIBCXX_3.4
+CURL_OPENSSL_3
+GCC_3.5
+GLIBC_2.7
+GLIBC_2.15
+F#hD
+0F;DE
+1F(F
+F#hD
+0F;DE
+1F(F
++XF/
+1FXF
+@F;h
+1FXF
+F(F8
+#h(F
+"F1F F
+ F !
+(FBF1F
+8F#h
+2F)F
++hXF
+ )F F
+ )F F
+ )F F
+ )F F
+ )F F
+ )F F
+ )F F
+XA(F
+!F0F
+!F0F
+(P+h
+0F+h
+YFHF
+%/9Cq{
+F#hO
+KZ.i...x....... ...............
+...............................<O
+jF1F F
+!FHF
+)FHF
+IF0F
+ F^F
+1F(F
+#h0F
++F"F9F0F
+9F(F"F
+YF F
+!F8F
+!F8F
+F:FE
+!F8F
+!F8F	
+!F8F
+!F8F	
+9F(F"F
+YF F
+!F8F
+kF1F8F
+#h(F
+(F#h
+F#h "
+lT.h
+F#h#
+2F)FE
+#x ;^+
+? ;^+
+3x ;^+
+? ;^+
+T BF
+"F@F
+"FHF
+p 3h
+F3hO
+9F(F
+)F F
+lP)F
+!Z((F
+".! F
+2F;FG
+"n! F
+@F+h
+|V;hE
+3F*F
+BAF+
+1FHF
+ F)F
+4JJ9
+ac#`
+"3h!F	
+8F3h
+=F<FO
+F1F(F"F
+9F|"/`
+#+T F
+BF)FF
+)F!"
+cS3`F
+@#F4hF
+@JFAF
+8F+h
+FAFO
+)FCF:F
+)F0F
+@+FAF
+$i3F
++FAF
+a#hF
+0`#h
+%0F#h
+&1F(F
+Ha8F
+1F8F
+1F8F
+P Fi`
+x`QQ`
+P1(F
+:F)F F
+ pGp
+F#hO
+0F!F
+F#hO
+F#hu
+ki*iIF
+|")i
+#h0h
+2F9F
+05hIF
+ki*iIF
+!(F%
+0Y9F
+FZF#hO
+9F h
+5(4(-
+1F8Y
+\.)5
+#!F0F
+(	(,
+G*F)F#F
+)FPF
+l1PF
+l1PF
+YF(Y
+AFXF
+GZFYF#F
+!FjF
+<4PF
+1F8Y
+IFPF
+IFPF
++F2F1F5
+IFPF
+0$1FD
+lP)F
+#+`k`
+1F8Y
+!FxY
+8@E?
+@F;h
+<h}h*
+3h5II
+2HJF#F
+3S`0
+0F=!
+F:F(F
+p(F !
+cl!F"l8F
+1F:F
+1#+)
+%+h0F
+1F:FE
+F+h#
+0#+@
+1F"F
+!F:FG
+:F1F@#
+#0iF
+"9F3
+F(FG
+"@! F
+ur F
+q FO
+<4(F
+$(F#h
+8F*F
+$3h F
+L40F
+$0F#h
+8F1F
+F%hF
+4)FB
+"F!F
+(F#h
+(F#h
+#h(hE
+0F#h
+(F#h
+F#h "
+#0`%
+"#hF
+#F9F0FE
+jF0F!F
+BF1FG
+;h@F
+!FHF
+F;hG
+(F!F
+(F!F
+F(hG
+|@iB
+"F)F0F
+"F)F0F
+:F0F
+BF9FL
+`#h)F
+x0;	+
+` F8
+"P! F
++a F
+a FM
+#h(F
+ `2CE
+B `=
+1Fn"
+ h1F
+n" h
+"AF#F8F
+!D0h
+$*hs
+$ F+h
+!hFM
+/%:&;'O
+*FIF#F@F
+!D8h
+tp#`
+#h.h
+0F#h
+n"(h
+e#hU
+rB!#h
+)F8F
+lU&h
+ghLD
+(`#hi`
+ "	H
+&(F3h
+ !+`O
+`3h`
+ 1+`F
+`c`P
+WJ%`
+ DAiA
+ DAiA
+#F9F0FE
+hpGCx
+kclQ
+lcmQ
+ncoQ
+gXh;
+fXh5
+\hci
+]2H!
+hciQ
+\hcj
+e2P!
+icjQ
+\hck
+m2 !
+jckQ
+\hcl
+u2(!
+\hco
+\hcm
+}2(!
+\hcn
+mcnQ
+HA "
+TA0"
+`A "
+8A("
+H1 "
+<QH"
+HQ0"
+T1 "
+TQ("
+010"
+lA "
+ F)F
+0pG-
+FRF0!
+isjQ
+hsiQ
+ A0"
+,A0"
+&`.`
+,'`sO
+ DAiA
+ DAiA
+jkkQ
+F@FIF
+OAQ`
+zXFaF
+ZFcFp`
+B(F(!
+#*aka
+RF]F
+2(F0!
+2(F0!
+RF]F
+O@P`
+]FSh
+DP`7
+RF]F
+ A0"
+,A0"
+`Q("
+F%hH
+F !0F*F
+Pc`W
+TJTK
+ih+i5
+ikiW
+ DAiA
+ DAiA
+#F8F
+ F+h
+F}D.h
+ ,`p
+M}sK
+rH{D
+r!F@F
+F3`s`
+`1F	
+3F2F
+(F0!
+ F !
+r)F@F
+SFRF
+(F0!
+ F !
+-K0"-
+O{D,M
+3F:F
+AFHFO
+8`y`
+pGAapG
+!F0F
+F'H{D
+JF)F
+JF)F(F
+)F F
+AF2F
+F(F "
+!3h	
+<q)F
+YF F
+2FAF8F
+3F:F
+F(F1F(
+UDRF
+YF8F
+2FAFXF
+YF8F
+F(F;hyDA
+r F1F
+/K0J{D-
+0yDC
+"@FO
+*FAF8F
+1F8F
+wKxJ{D-
+F F3hW
+rO !rKO
+DpI{D
+yD F=`
+8F3h
+cIdK  yD
+`I FyD
+BF9F F
+"9F F
+HI #
+yD F
+JF9F F
+"9F F
+6I8F
+0HxD
+BF9F F
+ H I #xD
+yD F
+RF9F F
+"+`iF0F
+PF@!
+BF9F0F
+AF8F
+@#WF
+1K2J{D
+`(Fp
+I"F}D0F #iX
+I0F"F
+AK@*-
+F@H{D
+(F@!
+)FHF
+QFHF
+HF@")F
+F*F@!(F
+@F)F
+F(F;hyD
+F@" F1F
+0F@!
++F@"
+/K0J{D-
++F@F
+FAF8F
+1F8F
+FK@"-
+G{DEL
+HF@"
+(F;h
+yD0F
+@"AF0F
+@"AF0F
+J{D0
+ F+hc
+0@(O
+D<hc
+*FAF
+H4`yDxD
+@F;F*F
+5` F
+d	<`
+#8`+`#h
+D9F0F
+0F}DO
+zD.D
+,9F0FzD
+,9F0FzD
+,9F0FzD
+,9F0FzD
+|,9F0FzD
+p,9F0FzD
+d,9F0FzD
+X,9F0FzD
+L,9F0FzD
+@,9F0FzD
+4,9F0FzD
+(,9F0FzD
+,9F0FzD
+,9F0FzD
+,9F0FzD
++9F0FzD
++9F0FzD
++9F0FzD
++9F0FzD
++9F0FzD
++9F0FzD
++9F0FzD
++9F0FzD
++9F0FzD
++9F0FzD
++9F0FzD
+t+9F0FzD
+h+9F0FzD
+\+9F0FzD
+P+9F0FzD
+D+9F0FzD
+8+9F0FzD
+,+9F0FzD
+ +9F0FzD
++9F0FzD
++9F0FzD
+*9F0FzD
+*9F0FzD
+*9F0FzD
+*9F0FzD
+*9F0FzD
+*9F0FzD
+*9F0FzD
+*9F0FzD
+*9F0FzD
+*9F0FzD
+*9F0FzD
+x*9F0FzD
+l*9F0FzD
+`*9F0FzD
+T*9F0FzD
+H*9F0FzD
+<*9F0FzD
+0*9F0FzD
+$*9F0FzD
+*9F0FzD
+*9F0FzD
+*9F0FzD
+)9F0FzD
+)9F0FzD
+)9F0FzD
+)9F0FzD
+)9F0FzD
+)9F0FzD
+)9F0FzD
+)9F0FzD
+)9F0FzD
+)9F0FzD
+|)9F0FzD
+p)9F0FzD
+d)9F0FzD
+X)9F0FzD
+L)9F0FzD
+@)9F0FzD
+4)9F0FzD
+()9F0FzD
+)9F0FzD
+)9F0FzD
+)9F0FzD
+(9F0FzD
+(9F0FzD
+(9F0FzD
+(9F0FzD
+(9F0FzD
+(9F0FzD
+(9F0FzD
+(9F0FzD
+(9F0FzD
+(9F0FzD
+(9F0FzD
+t(9F0FzD
+h(9F0FzD
+\(9F0FzD
+L(9F0FzD
+@(9F0FzD
+0(9F0FzD
+$(9F0FzD
+(9F0FzD
+(9F0FzD
+'9F0FzD
+'9F0FzD
+'9F0FzD
+'9F0FzD
+'9F0FzD
+'9F0FzD
+'9F0FzD
+'9F0FzD
+'9F0FzD
+|'9F0FzD
+l'9F0FzD
+`'9F0FzD
+P'9F0FzD
+D'9F0FzD
+4'9F0FzD
+('9F0FzD
+'9F0FzD
+'9F0FzD
+&9F0FzD
+&9F0FzD
+&9F0FzD
+&9F0FzD
+&9F0FzD
+&9F0FzD
+&9F0FzD
+&9F0FzD
+&9F0FzD
+&9F0FzD
+p&9F0FzD
+d&9F0FzD
+T&9F0FzD
+H&9F0FzD
+8&9F0FzD
+,&9F0FzD
+&9F0FzD
+&9F0FzD
+&9F0FzD
+%9F0FzD
+%9F0FzD
+%9F0FzD
+%9F0FzD
+%9F0FzD
+%9F0FzD
+%9F0FzD
+%9F0FzD
+%9F0FzD
+t%9F0FzD
+h%9F0FzD
+X%9F0FzD
+L%9F0FzD
+<%9F0FzD
+0%9F0FzD
+ %9F0FzD
+%9F0FzD
+%9F0FzD
+$9F0FzD
+$9F0FzD
+$9F0FzD
+$9F0FzD
+$9F0FzD
+$9F0FzD
+$9F0FzD
+$9F0FzD
+$9F0FzD
+x$9F0FzD
+l$9F0FzD
+\$9F0FzD
+P$9F0FzD
+@$9F0FzD
+4$9F0FzD
+$$9F0FzD
+$9F0FzD
+$9F0FzD
+J9F0FzD
+J9F0FzD
+J9F0FzD
+J9F0FzD
+J9F0FzD
+J9F0FzD
+J9F0FzD
+J9F0FzD
+J9F0FzD
+J9F0FzD
+J9F0FzD
+J9F0FzD
+J9F0FzD
+J9F0FzD
+J9F0FzD
+J9F0FzD
+J9F0FzD
+J9F0FzD
+J9F0FzD
+J9F0FzD
+J9F0FzD
+J9F0FzD
+J9F0FzD
+J9F0FzD
+J9F0FzD
+J9F0FzD
+J9F0FzD
+J9F0FzD
+J9F0FzD
+}J9F0FzD
+zJ9F0FzD
+wJ9F0FzD
+tJ9F0FzD
+qJ9F0FzD
+nJ9F0FzD
+kJ9F0FzD
+hJ9F0FzD
+eJ9F0FzD
+bJ9F0FzD
+_J9F0FzD
+\J9F0FzD
+YJ9F0FzD
+VJ9F0FzD
+SJ9F0FzD
+PJ9F0FzD
+MJ9F0FzD
+JJ9F0FzD
+GJ9F0FzD
+DJ9F0FzD
+AJ9F0FzD
+>J9F0FzD
+;J9F0FzD
+8J9F0FzD
+5J9F0FzD
+2J9F0FzD
+/J9F0FzD
+,J9F0FzD
+)J9F0FzD
+KzD0
+X}D#h)h
+@ {D
+$(F;h	
+#+`p
+Hq(F
+ FyD
+IF8F
+ICF:FyD
+I+F*F
+)F8F
+ICF:FyD
+Hq(F
+ FyD
+IF8F
+yICF:FyD
+JFKFyD
+IF8F
+^ICF:FyD
+KFKIJF
+ FyD
+IF8F
+@ICF:FyD
+:HxD
+`z`;`
+#{bi
+3{b{j
+xz|J@
+3;b:j;h
+xa9a
+k;`N
+:iyi
+`z`;`N
+x`9`N
+ "yh
+ 3 "9h
+`z`;`
+;j:hyh
+#;`L
+x`{h
+{h "
+F;`xh
+x`{h
+d#{`
+x`{h
+x`{h
+x`{h
+#{`xh
+#{`xh
+;JFAF8F
+getMinStatfile
+/dev/shm/timeoffset
+df | grep "%s" | awk '{print $(NF-2)}'
+check_root_freespace failed, fill it with RR_MNT_DATA_PROTECT_THR * 2
+%s/%s
+stat 
+du %s -s
+check_folder_size %u 
+rockrobo/noupload
+rockrobo/rrlog
+rockrobo/devtest
+check_folder_inode_usage %u, path %s
+init timer failed
+rr_system %s error!
+run shell script successfully.
+run shell script fail, script exit code: %d
+exit status = [%d]
+%s/rrlog/%s
+topstop.sh
+topflush.sh
+misc.sh
+ls %s
+%s.tmp
+nice -n 19 tar zcf %s %s
+tgzip_file failed: %s
+rm -rf %s/%s
+rm_file failed: %s
+unlink file %s/%s
+gzip_file failed: %s
+.enc
+%s done
+gzip_file: %s not exist
+%s/rockrobo/rrlog
+%s/%02x%02x%02x%02x.tmp
+%s/%02x%02x%02x%02x.tmp%s
+nice -n 19 gzip -c %s > %s
+tar_extra_file.sh
+/dev/shm
+%s/misc.log
+%s/misc%s
+%s/%s/watchdog.log
+%s/watchdog%s
+echo "" > %s
+%s/%s/rrlog.log
+%s/rrlog%s
+%s/%s/miio.log
+%s/miio%s
+%s/%s/*.ppm
+%s/SLAMMAP.tar%s
+rm -f %s/%s/*.ppm
+%s/%s/SYSUPD_updater_pid*.log
+%s/SYSUPD_normal_updater.tar%s
+rm -f %s/%s/SYSUPD_updater_pid*.log
+%s/%s/varlog.tar.gz
+%s/varlog.tar%s
+%s/rockrobo/Mt* %s/rockrobo/mt*
+.ss.gz
+%s/mt_test.tar%s
+rm %s
+%s/%s/top*.gz
+mv %s %s
+%s/%s/uart_test*
+%s/uarttest.tar%s
+rm %s/%s/uart_test*
+compress file %s, then delete it
+%s/%s.%s%s
+%s/%s%s
+cat /dev/null > %s
+RRLDR
+.log.old
+.tmp.log
+.ppm
+=======search for .tmp.log files=======
+search_tmp_file_for_compress %s
+cannot open %s
+=======search for .old.log files=======
+search_old_file_for_compress %s
+=======search for .log files=======
+search_file_for_compress %s
+%04d
+set_log_level shmget
+set log level = %d
+shmget
+%04d %02d %02d %02d %02d %02d %03d.tar
+^.*.gz$
+^.*.tar$
+^[0-9]{6,10}.[0-9]{17}_.*$
+^core[.].*$
+^.*[.]gz$
+^ROBO_INFO.*.gz$
+^EVENTTASK.*.gz$
+^RRLDR_fprintf.*.gz$
+^top.*.gz$
+^.*.stat$
+^NAV_binId.*.gz$
+^RRLDR_binId.*.gz$
+^.*.log$
+%s/%s/pickup
+%s/%s/flog
+%s/%s/verbose
+%s/%s/bkbox
+%s/%s/stat
+%s/%s/ss
+%s/%s/relocate
+rm_old_tar cannot scan %s
+%s:%d minname: %s
+rm -rf %s/%s*
+check_old_tar %s 
+ls -al %s/rockrobo/rrlog;rm -rf %s/rockrobo/rrlog/*.gz
+rm -rf %s/rockrobo/rrlog/miio.log;rm -rf %s/rockrobo/rrlog/watchdog.log
+check_old_tar %s done...
+check %s gz file size = %d
+oldest
+latest
+find_tar_%s done %s (%d)
+find_tar_%s cannot open %s (%d)
+find_tar_%s scan for the min extract %04d from %s (%d %d %d)
+find_oldest_tar scan for the min extract %04d from %s
+find_oldest_tar done %s (%d)
+find_oldest_tar cannot open %s (%d)
+calc_file_size cannot open %s
+check log file size = %d
+%s/boot_reason
+%s/boot_reason%s
+%s/crashlog
+%s/crashlog%s
+rm -rf %s/*.tmp
+maintain_freespace tar folder = %d gz = %d
+buildnumber
+sysctl -w net.unix.max_dgram_qlen=1024
+core file size %d of %s
+has_corefile cannot scan %s
+has_corefile size %d %d
+==========freespace too low = %d KB===============
+df -h > %s/rrlog.log
+du %s >> %s/rrlog.log
+ll %s/rockrobo/rrlog/*.log >> %s/rrlog.log
+tail -n 100 %s/rockrobo/rrlog/rrlog.log >> %s/rrlog.log
+tail -n 100 %s/rockrobo/rrlog/watchdog.log >> %s/rrlog.log
+rm -rf %s/rockrobo/rrlog/*
+rm -rf %s/rockrobo/devtest/*
+rm -rf %s/rockrobo/noupload/*
+mkdir -p %s/rockrobo/rrlog;mv %s/rrlog.log %s/rockrobo/rrlog/rrlog.log
+rm -rf %s/*;mkdir -p %s/rockrobo/rrlog;mv %s/rrlog.log %s/rockrobo/rrlog/rrlog.log;reboot
+==========freespace = %d KB=============== (%s)
+/mnt/default/device.conf
+=================GZ BEGIN=================
+%06d.%04d%02d%02d%02d%02d%02d%03d_%s_%s_%d
+%06d.%04d%02d%02d%02d%02d%02d%03d_%s_%s
+relocatemap
+mkdir -p %s/%s;cd %s;mv %s *.gz %s/;mv %s/%s/*.gz %s/%s/
+=================TAR BEGIN=================
+==============result:%d===============
+=================Change file name and tar begin=================
+=================Change file name and tar end=================
+cd %s/%s;mv EVENTTASK*.gz ../
+==============move EVENT_TASK result:%d===============
+=================TAR END=================
+no *.gz file under %s
+sem_post() failed
+fprintf
+normal_pl12
+EVENTTASK
+SLAM
+RRLDR_SERVER
+WATCHDOG
+WIFI_MANAGER
+NAV_TRAP
+APP_PROXY
+SYSUPD
+CHARGER_DATA
+ROBO_INFO
+RRLOG
+RRLOADER
+TUYA
+RRIOT
+%s%s/%s
+Couldnt open '%s': %s
+upload %s to %s size: %lld bytes.
+curl_easy_perform() failed: %s
+upload %s successfully
+start upload files in %s
+%s/%s/%s/%s
+some files in %s not uploaded success, retry
+finish upload files in %s
+ftp_upload_thread started
+ftp_upload_bkbox ready to go
+ftp_upload done...
+sem_init failed
+fl_onsignal
+%s: receive signal=%d
+==================catch sigterm, exit do nothing==================
+%04d/%s/%s
+%04d/%s/%s/%s/%s
+wait %d s
+rockrobo/rrlog/upload_en
+logtype invalid %d
+location invalid %d
+sem_wait() failed
+sem_server_wait() failed
+sem_server_post() failed
+execute_popen 
+execute_popen %s popen failed %d
+execute_popen %s fgets failed %d
+%s/rockrobo/timezone
+^[A-Za-z0-9/+_-]+$
+timezone invalid %s
+TZ='%s' date
+%s -> %02d:%02d:%02d offset:%d
+GetLocalTimeHour Failed
+do not notify upload thread to work due to current time is around %d:00 (%d %d)
+notify upload thread to work ondock = %d
+md5sum %s
+get_md5 execute_popen failed
+%s no such file
+fds open [%s/%s] len = %d blocks = %d
+cannot upload file %s for upload
+open %s for upload to %s transfer at %d bytes/s
+upload_init for file %s failed
+fseek while uploading part failed
+uploading (%d of %d) blocks / (%d of %d) bytes
+uploading (%d of %d) blocks / (%d of %d) bytes failure, try again %d
+abort uploading...
+open file in err 
+open file out err 
+fwrite err 
+fread return 
+/dev/urandom
+mbedtls_pk_encrypt
+ failed
+  ! mbedtls_ctr_drbg_seed returned -0x%04x
+ failed
+  ! mbedtls_pk_parse_public_key returned -0x%04x
+ cannot open %s
+ failed
+  ! mbedtls_pk_encrypt returned -0x%04x
+ cannot write %s
+-----BEGIN PUBLIC KEY-----
+MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAwWA83A+GTpWYtPaGzSY/
+T9qljcHS3M6SwtV/z1irxlZAOIWFRPgnEWk1J5PhovX9q/MRYSpZg7Rst2OiA//F
+MnZphgCILa+OBun2VBpMoG/NErjqigS5oVTXe6wyPCeVf33B15W5WsWj0wqUGkAg
+oQZf2xw1Eu0Ylh137mtwBoaSzeAn1X5tm9zdRJYn+r4S2U5P7MxzjiOyTWG4JjWy
+xx+oKJj+RhYxnmJ9LF7M5HIFhjcWJ5deIblWOM0Wql2MX63WAAiQJOfgaH1sqnED
+B9fm09RD3aKElm3k7V01lTD9g/1gkhqLVRtH3sjwtnFcHxzsKUDrvIy6YhJz/H8W
+2umAU8XZcREMRErmnCd+XAOMBj9WMihNBWDoT0k4i/W+E0iNe6uWL+dSYozBY7jZ
+hsjWnPR7FBQJ1kzaK4m0GMdn9SriA2RfydHctyHcOQHN53lFoRKqkJxgCNuCdES1
+HcwkxBOysLQDZDH0+hw2SAZclTtsY+l/pz6buBrZxJEEnMoPYJAaE+OR6b1MfjNC
+8Vj+thp7a0Wf+xW782NXgctI2FQ4wkC+F9u0rwF91qcfAN1Ei6t6edsecK8QfRkP
+NDqBMoqexwz9N+ye4ZEgFpaRLfsH85ZfHUOwvWYsllfsTgj2bz+kTqDc7MN1+4Oe
+oxI+9D/1bE6CFBYrwmGIgBMCAwEAAQ==
+-----END PUBLIC KEY-----
+.rr.gz
+.rr.pkg
+.rr.stat
+echo 1 > %s/%s/upload_verbose
+/dev
+mark_verbose_all done
+mark_verbose_all cannot open %s 
+%s/%s/upload_verbose
+%s/first_date
+%04d%02d%02d
+sscanf %s failed
+cannot read %s [%d]
+write %s failed
+cannot open %s for write
+%s/%04d/%s
+tar_match_file %s
+nice -n 19 tar cf %s.tar %s*;rm %s*.gz
+ready to upload(%d,%d,%d) %d,%d,%d,%d -> %d : %s/%s
+*.tmp
+break_upload files in %s 
+sn not valid abort upload
+start upload roboinfo in %s
+roboinfo.rr.bin
+sn not valid abort upload_roboinfo
+sem_server_init failed
+cancel fds_thread...
+wait fds_thread exit...
+fds_thread exit...done
+mkdir -p %s
+=================CREATE UPLOAD STAT FOLDER BEGIN=================
+bypass file: %s/%s
+current date invalid, abort upload...
+fds_upload ready to go upload_en = 0x%x (%d) uid = %s
+upload done... upload_ondock = %d,ondock = %d,break_upload = %d
+/dev/shm/upload_verbose
+======DELETE OLD FOLDER:%s========
+mkdir -p %s/%s
+=================CREATE UPLOAD FOLDER BEGIN=================
+rename 
+pl12
+^CrossBlock.*
+CrossBlock
+^DockArea.*
+DockArea
+^GlobalSearchMap.*
+GlobalSearchMap
+^LocalSearchMap.*
+LocalSearchMap
+^NAV_binId5.*
+NAV_binId5
+^NAV_binId6.*
+NAV_binId6
+^core.*
+core
+^misc.*
+^RRLDR_normal.*
+RRLDR_normal
+^top.*
+^varlog.*
+^watchdog.*
+^boot_reason.*
+^IPC_normal.*
+IPC_normal
+^WIFI_MANAGER.*
+^NAV_normal\..*
+NAV_normal.
+^rrlog.*
+^SYSUPD_normal.*
+SYSUPD_normal
+^.*.pkg$
+^APP_PROXY_normal.*
+APP_PROXY_normal
+^EVENTTASK_normal.*
+EVENTTASK_normal
+^miio.*
+^NAV_normal_pl9.*
+NAV_normal_pl9
+^NAV_TRAP_fprintf.*
+NAV_TRAP_fprintf
+^NAV_TRAP_normal.*
+NAV_TRAP_normal
+^navmap.*
+navmap
+^RRLDR_bin.*
+RRLDR_bin
+^relocatemap_.*
+^relocatesucc.*
+^shockfile.*
+^RRLDR_fprintf.*
+RRLDR_fprintf
+^RRLDR_SERVER_normal.*
+RRLDR_SERVER_normal
+^MCU_normal.*
+MCU_normal
+^RRIOT_normal.*
+RRIOT_normal
+^seg.*
+^SLAM_fprintf.*
+SLAM_fprintf
+^SLAM_normal.*
+SLAM_normal
+^SLAMMAP.*
+^roboinfo.*
+open config file failed: %s
+model
+model = %s
+.*v2$
+.*v3$
+vacuum ver = %d
+/dev/shm/ver
+echo %d > %s
+open config file failed: %s use default config
+/dev/shm/sn
+sn info is empty
+0000000000000
+cannot find sn info
+read_config robot_sn:%s
+max tar size = %d
+upload method = %d fds url = %s 
+robot sn = %s
+log flash path = %s
+log counter file = %s
+blackbox counter file = %s
+max upload speed = %d bytes/s
+initial log level = %d 
+only upload log when on dock = %d 
+https://%s
+tanos
+devtest/%s/blackbox
+roborock.vacuum.s6
+devtest/%s%s/statfile
+devtest/%s/statfile
+devtest/%s/logfile
+devtest/%s/roboinfo
+refresh_url fds switch to %s
+ERROR:server_responseok response = NULL
+fds return len = %d :%s
+set_app_select_region:%s
+select_fds_host:%s
+cannot get log server and cannot get location from app, abort upload
+cannot get log server but get location from app, abort upload
+do not upload
+use app indicated url:%s
+set_fds_hostname:%s
+clear_fds_hostname
+send_ipc_msg Failed error code: %d errno: %d
+send_ipc_msg = %d
+Date: %s GMT
+perform_curl %s
+Host: %s
+base Url illegal  %s
+%s GMT
+%s GMT
+Authorization: Galaxy-V2 %s:%s
+Accept-Encoding: gzip, deflate
+Accept: */*
+User-Agent: python-requests/2.9.1
+Content-MD5: %s
+Connection: keep-alive
+Average upload speed: %0.3f kbyte/sec. limited speed: %d byte/sec
+perform_curl ret = %d
+/%s%s
+signature
+upload_part server response NG
+/%s%s?uploadId=%s
+/dev/shm/rrlog_etag
+%s cannot append
+%s cannot read
+upload_complete server response NG
+/%s%s?partNumber=%d&uploadId=%s
+etag
+%s cannot create
+{"uploadPartResultList":[
+/%s%s?uploads
+ERROR:parse_response response = NULL
+uploadId
+"%s":"
+upload_init server response NG
+request_fds_hostname~
+semop
+bkbox_init
+rrbkbox semget
+semctl
+bkbox_pack semwait
+rm -rf /dev/shm/*.pkg
+rm -rf /dev/shm/*.enc
+blackbox
+rrBkBox.csv
+/mnt/reserve
+bkbox_pack sempost
+.rr.bkup
+%s = %d bytes
+calc_bkup_file_size files in %s total %d bytes
+extract %04d from %s
+unlink %s
+bkbox_maintain find too many blackbox backup files (%d) bytes
+bkbox csv file size = %d bytes
+%s/%04d.%s.%s%s
+%04d%02d%02d%02d%02d%02d%03d
+-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArj5TbfZ/4M9qzBOhw04u
+hmvJv7Ey6v9Qnwhyc9CasKPYPv2x4eQ7klCK/aR9D7HVgud0S+n5KrOE3VkWaYNu
+Va2ViyGSRqGHV5LDSCxGPaFk6q8lMlKhB+P58rSstbifCbz0SPxj5ZQC3+Oc4BNJ
+jlUZK96qVkjLeEA3M5navHUku4Hrfl0jtnC/EVX9EotwPxC8HSzTH9FDSzt+OcCk
+2zlci5S5fKMWpp/LaJkCFD9G9XnTBSf0BWPqQppBCznRvsY/S/5zxNqFL6QsoEXe
+13k3jLCs9Q0q2KUlBjV1CukdBnDcguj8x5fRyiBlQrHzMKgkeM4ZsirNhVXiN4nE
+5QIDAQAB
+-----END PUBLIC KEY-----
+  mbedtls_pk_parse_public_key returned -0x%04x
+  mbedtls_md returned -0x%04x
+  mbedtls_base64_decode returned -0x%04x
+  mbedtls_pk_verify returned -0x%04x
+  !  Last error was: %s
+endpoint content not valid
+  Could not open or read %s
+endpoint.bin
+endpoint.bin.old
+signature not pass rm endpoint
+endpoint not exist
+try download ep %d %d %d
+/dev/shm/endpoint.bin
+https://
+downloaded file signature pass
+file is diff, replace local file
+%s -> %s
+done.
+downloaded file signature invalid
+download code = %d
+open endpoint 
+/conf/device/fds_endpoint.bin
+/devtest%s
+download ep from %s
+invalid endpoint %s
+%s%s%s
+/devtest/%s/conf/upc
+fl_notify_self
+fl_com_rcv
+fl_com_fdisset
+_notify_daemon_self
+socket 
+/var/run/rrlogd
+bind 
+_notify_self
+%s: msglen=%d, offset=%d, ret=%d, sig=%d
+%s: received message is short (len=%d): discard   %s
+%s: received message is short (len=%d): discard
+%s: message received: type=%d,code=%d,len=%d
+==================catch SIGINT or other, FLUSH to flash then exit==================
+==================rrlogd exit!==================
+==================catch SIGUSR1, FLUSH to flash only==================
+==================catch SIGUSR1 ========== end ===================
+=================gz file too big, force tar==================
+=================gz file size normal, break==================
+==================catch SIGUSR %d, FLUSH and Tar tar_flag:%d======================
+==================catch SIGUSR %d  end =================== 
+==================PERIOD CHECK================== %d
+==================catch SIGUSR3--STAT, FLUSH and Tar tar_flag:%d======================
+==================catch SIGUSR3--STAT  end =================== 
+============ catch SIG PACK_ROBOINFO ============== 
+================relocate msg %d ============= 
+%s/%s_%s.tar%s
+relocatesucc
+shockfile
+%s/rockrobo/*_map* /dev/shm/RRLDR_binId1* /dev/shm/RRLDR_binId2* /dev/shm/RRLDR_binId3* %s/RRLDR_binId1* %s/RRLDR_binId2* %s/RRLDR_binId3* 
+cat /dev/null > /dev/shm/RRLDR_binId1.log
+cat /dev/null > /dev/shm/RRLDR_binId2.log
+cat /dev/null > /dev/shm/RRLDR_binId3.log
+RRLDR_binId1*
+RRLDR_binId2*
+RRLDR_binId3*
+%s: Unknown type specified (type=%d,code=%d,len=%d):  Discarded
+ipc_com_rcv_thread started
+ipc_com_rcv_thread RecvPacket MsgId = 0x%x rval = %d
+==================ipc_com_rcv_thread fl_notify_self MSG_FLUSH_LOG==================
+==================ipc_com_rcv_thread fl_notify_self MSG_SHUTDOWN_LOG==================
+==================ipc_com_rcv_thread  MSG_STOP_UPLOAD_LOG==================
+==================ipc_com_rcv_thread  MSG_START_UPLOAD_LOG==================
+==================ipc_com_rcv_thread  MSG_LOG_MIIO_LEVEL==================
+==================ipc_com_rcv_thread  MSG_DISABLE_LOG_UPLOAD==================
+==================ipc_com_rcv_thread  MSG_USER_UPLOAD_LOG==================
+==================ipc_com_rcv_thread  MSG_CHANGE_LOG_UPLOAD_SPEED ==================
+==================ipc_com_rcv_thread  MSG_NOTIFY_COUNTRY_DOMAIN : %s==================
+==================ipc_com_rcv_thread  MSG_NOTIFY_LOG_SERVER : %s==================
+ignore ipc_com_rcv_thread RecvPacket rval = %d
+_notify_daemon_self
+%s: msglen=%d, offset=%d, ret=%d
+connect self:
+connect self success!
+cancel ipc_thread
+wait ipc_thread exit
+ipc_thread exit done
+%llu rrlogd 
+file:already locked
+can't lock %s
+ftruncate failed
+write failed
+cp /proc/rockrobo/boot_reason %s/boot_reason
+cp /proc/rockrobo/lastlog %s/crashlog
+%04d%02d%02d%02d
+%s%s%s%s
+miio/device.uid
+miio/wifi.conf
+uid=
+pidof -x %s
+pipe open failed
+RoboControllerM
+RoboController
+.ss.stat
+.ss.pkg
+.ss.bin
+rrlog/devtest.conf
+anonymousid1
+anonymousid
+%02x
+anonymous id length invalid %d
+anonymous id not generated, may be sn not valid
+RR_ROOT
+^[A-Za-z0-9/_]+$
+/opt/rockrobo
+RR_UDATA
+/mnt/data
+RR_RESERVE
+R0.00.92
+rrlogd
+%s %s pid:%lu
+usage: rrlogd [conf file] 
+ no config file specified, turn off upload feature
+/dev/shm/rrlogd.pid
+iptables -I INPUT -j ACCEPT -p tcp --dport 22
+use log level = %d
+initialize failed
+=============rrlog first tar all gz if there is any================
+usage: %s [-f][-v][-c <config_file>]
+%s: version %s
+Obtained %zd stack frames.
+roboinfo
+%s/%s/%s%s
+tvoffset = %llu - %llu = %llu
+rr_serialize done..
+rr_stat_reset done..
+rrlogstat.bin
+rr_serialize_event_stat done..
+rr_statistic module = %d id = %d unknown code = %d
+Open anonymousid file failed
+%s/%s/%06d_%llu_v1%s
+rrlog_stat NULL == data && length != 0
+rrlog_stat semget
+rrlog_stat semwait
+rrlog_stat_open failed
+rrlog_stat fwrite mod failed?
+rrlog_stat fwrite type failed?
+rrlog_stat fwrite length failed?
+rrlog_stat fwrite data failed?
+rrlog_stat sempost
+bRmQ
+kWGO
+V,Jn
+f_?Z
+M^+1X
+  CTR_DRBG (PR = TRUE) : 
+passed
+  CTR_DRBG (PR = FALSE): 
+  ENTROPY test: 
+CIPHER - The selected feature is not available
+CIPHER - Bad input parameters
+CIPHER - Failed to allocate memory
+CIPHER - Input data contains invalid padding and is rejected
+CIPHER - Decryption of block requires a full block
+CIPHER - Authentication failed (for AEAD modes)
+CIPHER - The context is invalid. For example, because it was freed
+CIPHER - Cipher hardware accelerator failed
+DHM - Bad input parameters
+DHM - Reading of the DHM parameters failed
+DHM - Making of the DHM parameters failed
+DHM - Reading of the public values failed
+DHM - Making of the public value failed
+DHM - Calculation of the DHM secret failed
+DHM - The ASN.1 data is not formatted correctly
+DHM - Allocation of memory failed
+DHM - Read or write of file failed
+DHM - DHM hardware accelerator failed
+DHM - Setting the modulus and generator failed
+ECP - Bad input parameters to function
+ECP - The buffer is too small to write to
+ECP - The requested feature is not available, for example, the requested curve is not supported
+ECP - The signature is not valid
+ECP - Memory allocation failed
+ECP - Generation of random value, such as ephemeral key, failed
+ECP - Invalid private or public key
+ECP - The buffer contains a valid signature followed by more data
+ECP - The ECP hardware accelerator failed
+MD - The selected feature is not available
+MD - Bad input parameters to function
+MD - Failed to allocate memory
+MD - Opening or reading of file failed
+MD - MD hardware accelerator failed
+PEM - No PEM header or footer found
+PEM - PEM string is not as expected
+PEM - Failed to allocate memory
+PEM - RSA IV is not in hex-format
+PEM - Unsupported key encryption algorithm
+PEM - Private key password can't be empty
+PEM - Given private key password does not allow for correct decryption
+PEM - Unavailable feature, e.g. hashing/encryption combination
+PEM - Bad input parameters to function
+PK - Memory allocation failed
+PK - Type mismatch, eg attempt to encrypt with an ECDSA key
+PK - Bad input parameters to function
+PK - Read/write of file failed
+PK - Unsupported key version
+PK - Invalid key tag or value
+PK - Key algorithm is unsupported (only RSA and EC are supported)
+PK - Private key password can't be empty
+PK - Given private key password does not allow for correct decryption
+PK - The pubkey tag or value is invalid (only RSA and EC are supported)
+PK - The algorithm tag or value is invalid
+PK - Elliptic curve is unsupported (only NIST curves are supported)
+PK - Unavailable feature, e.g. RSA disabled for RSA key
+PK - The buffer contains a valid signature followed by more data
+PK - PK hardware accelerator failed
+PKCS12 - Bad input parameters to function
+PKCS12 - Feature not available, e.g. unsupported encryption scheme
+PKCS12 - PBE ASN.1 data not as expected
+PKCS12 - Given private key password does not allow for correct decryption
+PKCS5 - Bad input parameters to function
+PKCS5 - Unexpected ASN.1 data
+PKCS5 - Requested encryption or digest alg not available
+PKCS5 - Given private key password does not allow for correct decryption
+RSA - Bad input parameters to function
+RSA - Input data contains invalid padding and is rejected
+RSA - Something failed during generation of a key
+RSA - Key failed to pass the validity check of the library
+RSA - The public key operation failed
+RSA - The private key operation failed
+RSA - The PKCS#1 verification failed
+RSA - The output buffer for decryption is not large enough
+RSA - The random generator failed to generate non-zeros
+RSA - The implementation does not offer the requested operation, for example, because of security violations or lack of functionality
+RSA - RSA hardware accelerator failed
+SSL - The requested feature is not available
+SSL - Bad input parameters to function
+SSL - Verification of the message MAC failed
+SSL - An invalid SSL record was received
+SSL - The connection indicated an EOF
+SSL - An unknown cipher was received
+SSL - The server has no ciphersuites in common with the client
+SSL - No RNG was provided to the SSL module
+SSL - No client certification received from the client, but required by the authentication mode
+SSL - Our own certificate(s) is/are too large to send in an SSL message
+SSL - The own certificate is not set, but needed by the server
+SSL - The own private key or pre-shared key is not set, but needed
+SSL - No CA Chain is set, but required to operate
+SSL - An unexpected message was received from our peer
+SSL - A fatal alert message was received from our peer
+SSL - Verification of our peer failed
+SSL - The peer notified us that the connection is going to be closed
+SSL - Processing of the ClientHello handshake message failed
+SSL - Processing of the ServerHello handshake message failed
+SSL - Processing of the Certificate handshake message failed
+SSL - Processing of the CertificateRequest handshake message failed
+SSL - Processing of the ServerKeyExchange handshake message failed
+SSL - Processing of the ServerHelloDone handshake message failed
+SSL - Processing of the ClientKeyExchange handshake message failed
+SSL - Processing of the ClientKeyExchange handshake message failed in DHM / ECDH Read Public
+SSL - Processing of the ClientKeyExchange handshake message failed in DHM / ECDH Calculate Secret
+SSL - Processing of the CertificateVerify handshake message failed
+SSL - Processing of the ChangeCipherSpec handshake message failed
+SSL - Processing of the Finished handshake message failed
+SSL - Memory allocation failed
+SSL - Hardware acceleration function returned with error
+SSL - Hardware acceleration function skipped / left alone data
+SSL - Processing of the compression / decompression failed
+SSL - Handshake protocol not within min/max boundaries
+SSL - Processing of the NewSessionTicket handshake message failed
+SSL - Session ticket has expired
+SSL - Public key type mismatch (eg, asked for RSA key exchange and presented EC key)
+SSL - Unknown identity received (eg, PSK identity)
+SSL - Internal error (eg, unexpected failure in lower-level module)
+SSL - A counter would wrap (eg, too many messages exchanged)
+SSL - Unexpected message at ServerHello in renegotiation
+SSL - DTLS client must retry for hello verification
+SSL - A buffer is too small to receive or write a message
+SSL - None of the common ciphersuites is usable (eg, no suitable certificate, see debug messages)
+SSL - No data of requested type currently available on underlying transport
+SSL - Connection requires a write call
+SSL - The operation timed out
+SSL - The client initiated a reconnect from the same port
+SSL - Record header looks valid but is not expected
+SSL - The alert message received indicates a non-fatal error
+SSL - Couldn't set the hash for verifying CertificateVerify
+SSL - Internal-only message signaling that further message-processing should be done
+SSL - The asynchronous operation is not completed yet
+X509 - Unavailable feature, e.g. RSA hashing/encryption combination
+X509 - Requested OID is unknown
+X509 - The CRT/CRL/CSR format is invalid, e.g. different type expected
+X509 - The CRT/CRL/CSR version element is invalid
+X509 - The serial tag or value is invalid
+X509 - The algorithm tag or value is invalid
+X509 - The name tag or value is invalid
+X509 - The date tag or value is invalid
+X509 - The signature tag or value invalid
+X509 - The extension tag or value is invalid
+X509 - CRT/CRL/CSR has an unsupported version number
+X509 - Signature algorithm (oid) is unsupported
+X509 - Signature algorithms do not match. (see \c ::mbedtls_x509_crt sig_oid)
+X509 - Certificate verification failed, e.g. CRL, CA or signature check failed
+X509 - Format not recognized as DER or PEM
+X509 - Input invalid
+X509 - Allocation of memory failed
+X509 - Read/write of file failed
+X509 - Destination buffer is too small
+X509 - A fatal error occured, eg the chain is too long or the vrfy callback failed
+UNKNOWN ERROR CODE (%04X)
+AES - Invalid key length
+AES - Invalid data input length
+AES - Invalid input data
+AES - Feature not available. For example, an unsupported AES key size
+AES - AES hardware accelerator failed
+ARC4 - ARC4 hardware accelerator failed
+ASN1 - Out of data when parsing an ASN1 data structure
+ASN1 - ASN1 tag was of an unexpected value
+ASN1 - Error when trying to determine the length or invalid length
+ASN1 - Actual length differs from expected length
+ASN1 - Data is invalid. (not used)
+ASN1 - Memory allocation failed
+ASN1 - Buffer too small when writing ASN.1 data structure
+BASE64 - Output buffer too small
+BASE64 - Invalid character in input
+BIGNUM - An error occurred while reading from or writing to a file
+BIGNUM - Bad input parameters to function
+BIGNUM - There is an invalid character in the digit string
+BIGNUM - The buffer is too small to write to
+BIGNUM - The input arguments are negative or result in illegal output
+BIGNUM - The input argument for division is zero, which is not allowed
+BIGNUM - The input arguments are not acceptable
+BIGNUM - Memory allocation failed
+BLOWFISH - Invalid key length
+BLOWFISH - Blowfish hardware accelerator failed
+BLOWFISH - Invalid data input length
+CAMELLIA - Invalid key length
+CAMELLIA - Invalid data input length
+CAMELLIA - Camellia hardware accelerator failed
+CCM - Bad input parameters to the function
+CCM - Authenticated decryption failed
+CCM - CCM hardware accelerator failed
+CHACHA20 - Invalid input parameter(s)
+CHACHA20 - Feature not available. For example, s part of the API is not implemented
+CHACHA20 - Chacha20 hardware accelerator failed
+CHACHAPOLY - The requested operation is not permitted in the current state
+CHACHAPOLY - Authenticated decryption failed: data was not authentic
+CTR_DRBG - The entropy source failed
+CTR_DRBG - The requested random buffer length is too big
+CTR_DRBG - The input (entropy + additional data) is too large
+CTR_DRBG - Read or write error in file
+DES - The data input has an invalid length
+DES - DES hardware accelerator failed
+ENTROPY - Critical entropy source failure
+ENTROPY - No more sources can be added
+ENTROPY - No sources have been added to poll
+ENTROPY - No strong sources have been added to poll
+ENTROPY - Read/write error in file
+GCM - Authenticated decryption failed
+GCM - GCM hardware accelerator failed
+GCM - Bad input parameters to function
+HMAC_DRBG - Too many random requested in single call
+HMAC_DRBG - Input too large (Entropy + additional)
+HMAC_DRBG - Read/write error in file
+HMAC_DRBG - The entropy source failed
+MD5 - MD5 hardware accelerator failed
+NET - Failed to open a socket
+NET - The connection to the given server / port failed
+NET - Binding of the socket failed
+NET - Could not listen on the socket
+NET - Could not accept the incoming connection
+NET - Reading information from the socket failed
+NET - Sending information through the socket failed
+NET - Connection was reset by peer
+NET - Failed to get an IP address for the given hostname
+NET - Buffer is too small to hold the data
+NET - The context is invalid, eg because it was free()ed
+NET - Polling the net context failed
+NET - Input invalid
+OID - OID is not found
+OID - output buffer is too small
+PADLOCK - Input data should be aligned
+POLY1305 - Invalid input parameter(s)
+POLY1305 - Feature not available. For example, s part of the API is not implemented
+POLY1305 - Poly1305 hardware accelerator failed
+RIPEMD160 - RIPEMD160 hardware accelerator failed
+SHA1 - SHA-1 hardware accelerator failed
+SHA256 - SHA-256 hardware accelerator failed
+SHA512 - SHA-512 hardware accelerator failed
+XTEA - The data input has an invalid length
+XTEA - XTEA hardware accelerator failed
+  TIMING tests note: will take some time!
+  TIMING test #1 (set_alarm / get_timer): 
+failed at line %d
+ cycles=%lu ratio=%lu millisecs=%lu secs=%lu hardfail=%d a=%lu b=%lu
+ elapsed(hires)=%lu elapsed(ctx)=%lu status(ctx)=%d
+  TIMING test #2 (set/get_delay        ): 
+  TIMING test #3 (hardclock / get_timer): 
+failed (ignored)
+/mnt/reserve/material
+/opt/rockrobo/rrlog/devtest.conf
+/mnt/reserve/try
+MAX_TAR_FILE_SIZE
+UPLOAD_METHOD
+FTP_UPLOAD_URL
+BKBOX_FLASH_PATH
+LOG_COUNTER_FILE
+BKBOX_COUNTER_FILE
+MAX_UPLOAD_SPEED
+LOG_LEVEL
+ONLY_UPLOAD_ONDOCK
+UPLOAD_EN_DEFAULT
++/mnt/data/rockrobo/rrlog
+.stat
+.pkg
+.bin
+GCC: (Ubuntu/Linaro 5.4.0-6ubuntu1~16.04.9) 5.4.0 20160609
+GCC: (Ubuntu/Linaro 5.4.0-6ubuntu1~16.04.1) 5.4.0 20160609
+aeabi
+.shstrtab
+.interp
+.note.ABI-tag
+.note.gnu.build-id
+.gnu.hash
+.dynsym
+.dynstr
+.gnu.version
+.gnu.version_r
+.rel.dyn
+.rel.plt
+.init
+.text
+.fini
+.rodata
+.ARM.extab
+.ARM.exidx
+.eh_frame
+.init_array
+.fini_array
+.jcr
+.dynamic
+.got
+.data
+.bss
+.comment
+.ARM.attributes
