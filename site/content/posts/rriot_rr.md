@@ -2,7 +2,6 @@
 categories = []
 date = 2022-07-24T14:45:37Z
 description = "The binary that's not being used"
-draft = true
 series = []
 tags = []
 title = "rriot_rr"
@@ -16,6 +15,10 @@ toc = true
 `/dev/shm/.migrate_to_rriot`
 `https://api-%s.roborock.com`
 
-> Not used, probably because it's not very well written
+***
+
+> Not used for our model, though it's also not very well written..
 
 So many calls to time().. just store the variable somewhere!
+
+**![](/uploads/20220724-snipaste_2022-07-25_00-51-07.jpg)**
