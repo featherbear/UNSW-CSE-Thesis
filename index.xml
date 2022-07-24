@@ -2,7 +2,8 @@
 A DHCP server was set up to serve address leases on the 10.10.10.0/24 network, where the IPv4 address of the vacuum cleaner is dynamically issued to simulate a general home network.</description></item><item><title>5. Preliminary Results</title><link>/docs/report-c/progress/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/report-c/progress/</guid><description>Preliminary Results Privacy Assessment Network Setup An isolated wireless network was set up to securely observe the wireless network activity of the vacuum cleaner.
 A DHCP server was set up to serve address leases on the 10.10.10.0/24 network, where the IPv4 address of the vacuum cleaner is dynamically issued to simulate a general home network.</description></item><item><title>rriot_rr</title><link>/posts/rriot_rr/</link><pubDate>Sun, 24 Jul 2022 14:45:37 +0000</pubDate><guid>/posts/rriot_rr/</guid><description>The newer firmwares have a rriot_rr binary
 Check for the existence of /dev/shm/.migrate_to_rriot then migrate
-References rriot_tuya rriot_rr AppProxy Strings /dev/shm/.migrate_to_rriot https://api-%s.roborock.com
+References rriot_tuya rriot_rr AppProxy Looks like rriot_tuya instructs AppProxy to create the file
+Strings /dev/shm/.migrate_to_rriot https://api-%s.roborock.com
 Not used for our model, though it&amp;rsquo;s also not very well written.</description></item><item><title>Packet Analysis</title><link>/posts/packet-analysis/</link><pubDate>Sat, 23 Jul 2022 03:31:46 +0000</pubDate><guid>/posts/packet-analysis/</guid><description>Target IP: 10.10.10.8
 MAC: 64:90:c1:1d:24:c4
 MAC OUI (64:90:C1) - Beijing Xiaomi Mobile Software Co, Ltd
