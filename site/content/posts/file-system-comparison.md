@@ -8,14 +8,19 @@ title = "File System Comparison"
 toc = true
 
 +++
-Comparison against stock Ubuntu 14.04.03 LTS
+Comparison of the device firmware (`MI1558_TANOS_MP_S2020032500REL_M3.3.0_RELEASE_20200325-204847`) against stock Ubuntu 14.04.03 LTS
+
+Note that the Roborock S6 was first released in June 2019, but our device was manufactured June 2020 - so has newer firmware than the absolute original version.
 
 The device is an `armhf` Ubuntu 14.04.3 LTS, so we are comparing the hashes of the binaries against the stock binaries to see if there are any modifications
 
 > `find . -type f -executable -exec md5sum {} \;`  
 > `find {./bin,./sbin,./usr/bin,./usr/sbin,./opt} -executable -type f -exec md5sum {} \;`
 
-## Base
+
+## md5 sums
+
+### Base
 
 ```
 aaad82e4569e13eda32b91e9ef87d0ec  /bin/rmdir
@@ -580,7 +585,7 @@ eb05ba89545a33b039eca1ab7a7e9579  /usr/sbin/deluser
 ```
 
 
-## Device
+### Device
 
 ```
 6553d3232d065ffef4a822dfc7315245  /bin/bash
@@ -1195,7 +1200,7 @@ efe17a31624de9f9cf4bda6260502e77  /usr/sbin/vcstime
 
 ---
 
-# Diff
+## Diff
 
 ```
 # file    device md5    base_md5
@@ -1273,3 +1278,5 @@ efe17a31624de9f9cf4bda6260502e77  /usr/sbin/vcstime
 /usr/bin/pydoc3.4 (not found in device) 0125215b0550cf3ca117c2c996e98f4d
 /usr/sbin/ntpdate-debian (not found in device) 6aa46cfba91964f25fb1eb02e071a8c3
 ```
+
+* See [/usr/sbin/ntpdate](../diff-inspection)

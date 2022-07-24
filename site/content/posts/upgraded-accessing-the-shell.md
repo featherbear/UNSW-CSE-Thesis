@@ -96,7 +96,7 @@ Inside of `/etc/inittab` (SysV)
 
 We can see that the serial connection is handled by [`/sbin/rr_login`](../sbin-rr_login/).
 
-> The SSH server is replaced with `dropbear`, and additionally no longer runs by default.  
+> The SSH server is replaced with `dropbear` <s>, and additionally no longer runs by default.</s>  
 > `dropbear -B` - Start SSH server (-B allows empty password)
 
 ### Fix

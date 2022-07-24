@@ -167,7 +167,7 @@ Every now and then - ms.tuyaeu.com - {'3.121.141.195', '3.122.208.21', '3.122.21
 * `miio_client`
   * [`dns.io.mi.com`](https://whois.ipip.net/AS59019)
     * `110.43.0.83`
-    * `110.43.0.83`
+    * `110.43.0.85`
 * `rriot_tuya`
   * `a2.tuyaeu.com`
     * `3.125.199.146`
@@ -176,6 +176,8 @@ Every now and then - ms.tuyaeu.com - {'3.121.141.195', '3.122.208.21', '3.122.21
 #### a2.tuyaeu.com
 
 > Control requests
+
+* `tuya.device.timer.count` every 25 minutes
 
 ![](/uploads/20220723-snipaste_2022-07-24_00-08-53.jpg)
 
