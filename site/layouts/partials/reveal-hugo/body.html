@@ -6,6 +6,16 @@
     }
   }
 
+  if (location.search.slice(1) === 'noControls') {
+    let interval = setInterval(() => {
+      document.querySelector('.reveal .progress').style.display = 'none'
+      document.querySelector('.reveal .controls').style.display = 'none'
+      document.querySelector('.reveal .slide-number').style.display = 'none'
+      clearInterval(interval)
+    }, 250)
+    
+  }
+
   // CSS polyfill
   /*
     p:has(img[alt*=center]) {
