@@ -124,7 +124,11 @@
       <div class="flatView">
         {#each siteData.filter(d=>d.content && d.content.length).map(d => d.content.map(c => ({
           ...c, title: [d.title, c.title, c.date].filter(v=>v).join(" - ")
-        }))).flat() as content}
+        }))).flat().sort(({date: date1},{date: date2}) => {
+          let [d1, m1, y1] = date1.split("/");
+          let [d2, m2, y2] = date2.split("/");
+          return new Date(y1, m1-1, d1) < new Date(y2, m2-1, d2)
+        }) as content}
           <Content data={content} />
         {/each}
       </div>
