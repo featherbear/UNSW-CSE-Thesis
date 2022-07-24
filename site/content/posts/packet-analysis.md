@@ -327,6 +327,8 @@ Excluding log upload activity (i.e. to Hadoop), we can see that at 3am (local ti
 
 > Also very possible that I was just awake at 3am.
 
+![](/uploads/20220724-snipaste_2022-07-25_07-41-15.jpg)
+
 ![](/uploads/20220723-snipaste_2022-07-23_22-50-40.jpg)
 
 ![](/uploads/20220723-snipaste_2022-07-23_22-51-56.jpg)
