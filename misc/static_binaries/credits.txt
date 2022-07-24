@@ -1,0 +1,2 @@
+gdbserver - https://github.com/marcinguy/arm-gdb-static
+miio (v3.3.9) - https://github.com/zvldz/vacuum
