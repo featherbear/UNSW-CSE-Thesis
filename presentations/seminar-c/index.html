@@ -29,32 +29,230 @@
 <h6 id=andrew-wong--unsw-sydney>Andrew Wong | UNSW Sydney</h6>
 </section><section>
 <style>img[round]{border-radius:10px}</style>
-<h1 id=todays-agenda>Today&rsquo;s Agenda</h1>
+<h2 id=todays-agenda>Today&rsquo;s Agenda</h2>
 <ul>
-<li>Thesis B plan</li>
-<li>Thesis B review</li>
-<li>Thesis B retrospective</li>
-<li>Thesis C revised plan</li>
+<li><label>Topic Recap</label>
+<ul>
+<li>The world of IOT devices</li>
+<li>Thesis statement</li>
 </ul>
+</li>
+<li><label>Where we left off</label>
+<ul>
+<li>Previous results and findings</li>
+</ul>
+</li>
+<li><label>New progress</label></li>
+<li><label>Discussion</label></li>
+<li><label>Conclusion</label></li>
+</ul>
+</section><section>
+<style>.marquee-parent{position:relative;width:100vw;max-width:100%;height:200px;overflow-x:hidden;border-radius:10px}.marquee-child{position:absolute;white-space:nowrap;will-change:transform;max-width:unset!important;max-height:100%!important;animation:marquee 360s linear infinite}.marquee-child:hover{animation-play-state:paused}@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-87.5%)}}</style>
+<p><br></p>
+<div class=marquee-parent><img src=../../uploads/20211115-lightbulbs-marquee.png class=marquee-child></div>
+</br>
+<section data-shortcode-section>
+<p><em>&mldr;so there are a lot of IOT devices and IOT brands out there&mldr;</em></p>
+<aside class=notes><p>Smart watches, smart washing machines, smart flip-flop shoes&mldr;</p>
+</aside>
+</section><section>
+<p>🕵️‍♂️ Are competing products looking suspiciously similar to you?<br>
+Most are <u>white-labelled</u> products, the biggest ecosystem vendor being <span style=display:inline-table;vertical-align:middle><img src=../../uploads/tuya_logo.png height=40px alt=Tuya></span></p>
+<p><label>Pros</label></p>
+<p>👨‍💻 Use someone else&rsquo;s code<br>
+💹 Fast profit turnaround</p>
+<p><label>Cons</label></p>
+<p>⚠️ Use someone else&rsquo;s code<br>
+🐱‍💻 Potentially security vulnerabilities</p>
+<aside class=notes><p>FYI not here to tell you whether or not IOT devices are good or not&mldr; that&rsquo;s for you to judge. My research is on whether these big players have been doing their part (as providers) to keep us safe</p>
+</aside>
+</section><section>
+<p>IOT ecosystems often have a centralised system to manage their fleet <span style=font-size:18px> (devices)</span>.</p>
+<p><label>Pros</label></p>
+<p>A centralised management is <u><i>so</i></u> much simpler/easier/faster/cheaper/&lsquo;better&rsquo; than a decentralised one.</p>
+<p><label>Cons</label></p>
+<p>⚠️ Device functionality dependent on system availability<br>
+⚠️ Little transparency about what/where/when/why data is transmitted</p>
+</section>
 </section><section>
 <h1 id=statement>Statement</h1>
+<section data-shortcode-section>
 <blockquote>
 </blockquote>
-<p>How have manufacturers of IoT / smart home devices addressed the increasing concerns of digital privacy and product security?</p>
+<div>
+How have manufacturers of IoT / smart home devices addressed the increasing concerns of digital privacy and product security?
+<div style=text-align:right;font-size:20px>(Specifically Roborock / Xiaomi / Tuya)</span>
+</div>
 <blockquote>
 </blockquote>
-<span class=fragment><p> <br>
- </p>
+<p><br>
+<br></p>
 <ul>
-<li>Digital Privacy - Investigate the nature of network data (i.e. content, frequency, destination) and how the data is used.</li>
-<li>Product Security - Investigate potential security vulnerabilities and assess the effectiveness of current security fortifications.</li>
+<li>Digital Privacy
+<ul>
+<li>Investigate the nature of network data</li>
+<li>i.e. content, frequency, destination, usage</li>
 </ul>
-</span>
+</li>
+<li>Product Security
+<ul>
+<li>Investigate security vulnerabilities</li>
+<li>Assess the effectiveness of security fortifications</li>
+</ul>
+</li>
+</ul>
 </section><section>
-<p>Talk about threat models</p>
+<div style=display:flex;flex-direction:row>
+<div>
+Our device in scope: <label>Roborock S6</label> (2019)
+<p>A smart vacuum cleaner, with integrations to both <span style=display:inline-table;vertical-align:middle><img src=../../uploads/tuya_logo.png height=40px alt=Tuya></span> and <span style=display:inline-table;vertical-align:middle><img src=../../uploads/xiaomi_smartlife_logo.webp height=40px alt="Mijia (Xiaomi)"></span> (depending on model)</p>
+</div>
+<img src=../../uploads/20211103-s6-pure-banner.webp width=500px>
+</div>
+<blockquote>
+<p>It works pretty (very) well, according to reviews.<br>
+But is it safe to connect to your home?</p>
+</blockquote>
+</section>
+</section><section>
 <p>Talk about thesis A
 talk about thesis b
 Talk about thesis c</p>
+</section><section>
+<section data-shortcode-section>
+<p><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br></p>
+<h1 id=thesis-b--results>Thesis B | Results</h1>
+</section>
+<section data-noprocess data-shortcode-slide data-transition=fade>
+<p>Thesis B - Inspection of system (privileged processes)</p>
+<iframe style="border:2px solid #fff;border-radius:10px;pointer-events:none" width=1280 height=720 src=../seminar-b/?noControls#/7/2></iframe>
+</section>
+<section data-noprocess data-shortcode-slide data-transition=fade>
+<p>Thesis B - Recovery partition manipulation (see <a href="https://www.youtube.com/watch?v=eABmzUfZ22A">proof of concept</a>)</p>
+<iframe style="border:2px solid #fff;border-radius:10px;pointer-events:none" width=1280 height=720 src=../seminar-b/?noControls#/12/3></iframe>
+</section>
+<section data-noprocess data-shortcode-slide data-transition=fade>
+<p>Thesis B - Capture of device traffic (port-mirroring)</p>
+<iframe style="border:2px solid #fff;border-radius:10px;pointer-events:none" width=1280 height=720 src=../seminar-b/?noControls#/6></iframe>
+</section>
+<section data-noprocess data-shortcode-slide data-transition=fade>
+<p>Thesis B - Inspection of system services (<code>netstat</code>, <code>iptables</code>, <code>ip6tables</code>)</p>
+<iframe style="border:2px solid #fff;border-radius:10px;pointer-events:none" width=1280 height=720 src=../seminar-b/?noControls#/7/3></iframe>
+</section>
+<section data-noprocess data-shortcode-slide data-transition=fade>
+<p>Thesis B - Remote access persistence (see <a href="https://www.youtube.com/watch?v=om2yzYHU1A0">proof of concept</a>)</p>
+<iframe style="border:2px solid #fff;border-radius:10px;pointer-events:none" width=1280 height=720 src=../seminar-b/?noControls#/8></iframe>
+</section>
+</section><section>
+<section data-shortcode-section>
+<p><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br></p>
+<h1 id=thesis-b--observations>Thesis B | Observations</h1>
+</section><section>
+<p>Thesis B - Investigating <code>tcpdump</code></p>
+<iframe style="border:2px solid #fff;border-radius:10px;pointer-events:none" width=1280 height=720 src=../seminar-b/?noControls#/11/4></iframe>
+</section>
+<section data-noprocess data-shortcode-slide data-transition=fade>
+<p>Thesis B - Investigating <code>rrlogd</code></p>
+<iframe style="border:2px solid #fff;border-radius:10px;pointer-events:none" width=1280 height=720 src=../seminar-b/?noControls#/11/6></iframe>
+</section>
+<section data-noprocess data-shortcode-slide data-transition=fade>
+<p>Thesis B - Investigating <code>adbd</code></p>
+<iframe style="border:2px solid #fff;border-radius:10px;pointer-events:none" width=1280 height=720 src=../seminar-b/?noControls#/11/8></iframe>
+</section>
+</section><section>
+<section data-shortcode-section>
+<p><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br></p>
+<h1 id=thesis-b--future-challenges>Thesis B | Future Challenges</h1>
+</section>
+<section data-noprocess data-shortcode-slide data-transition=fade>
+<p>Thesis B - Comparing files</p>
+<iframe style="border:2px solid #fff;border-radius:10px;pointer-events:none" width=1280 height=720 src=../seminar-b/?noControls#/13/4></iframe>
+</section>
+<section data-noprocess data-shortcode-slide data-transition=fade>
+<p>Thesis B - Hooking into pre-encryption / post-decryption routines</p>
+<iframe style="border:2px solid #fff;border-radius:10px;pointer-events:none" width=1280 height=720 src=../seminar-b/?noControls#/13></iframe>
+</section>
+</section><section>
+<h4 id=labelthesis-b-completionlabel><label>Thesis B Completion</label></h4>
+<ul>
+<li>Analysis of firmware binaries to identify vulnerabilities
+<ul>
+<li>Still in progress</li>
+</ul>
+</li>
+<li>Search for unsecured secrets, logs, configurations
+<ul>
+<li>Completed (excluding encrypted <code>rrlog</code> files)</li>
+</ul>
+</li>
+</ul>
+<h4 id=labelrevised-thesis-c-planlabel><label>Revised Thesis C Plan</label></h4>
+<ul>
+<li>WAN - security, PII</li>
+<li>LAN - traffic? (tcpdump)</li>
+<li>Firmware upgrade</li>
+<li>Update to a newer firmware version and look at changes</li>
+<li>Check what files gets cleared during a format</li>
+<li>Binary assessment</li>
+<li>Verify IPv6 SSH access</li>
+</ul>
+<h1 id=the-ipv6-world>The IPv6 World</h1>
+</section><section>
+<h2 id=incoming-timeline>Incoming Timeline</h2>
+<ul>
+<li><label>22T2 W1</label> - IPv6 SSH verification, continue binary assessment</li>
+<li><label>22T2 W2</label> - WAN traffic analysis
+<ul>
+<li>Look at network behaviour</li>
+<li>Try view WAN data pre-encryption / post-decryption</li>
+</ul>
+</li>
+<li><label>22T2 W4</label> - Update to latest version (and hope we don&rsquo;t get locked out)
+<ul>
+<li>Do another vacuum clean, reimage, compare binaries</li>
+</ul>
+</li>
+<li><label>22T2 W5</label> - Factory reset device, check for remnant files</li>
+<li><label>22T2 W8</label> - Demo submission</li>
+<li><label>22T2 W11</label> - Report submission</li>
+</ul>
+<h1 id=lets-talk-threats>Let&rsquo;s Talk Threats</h1>
+<blockquote>
+<p>Talk about threat models</p>
+</blockquote>
+</section><section>
+<p>What files?</p>
+<ul>
+<li>compare against stock</li>
+<li>lots of hash matches</li>
+</ul>
 <p>threat models</p>
 <p>work done in thesis c</p>
 <p>hooking into code..</p>
@@ -144,49 +342,11 @@ When
 Why
 Where
 How</p>
-<h4 id=labelthesis-b-completionlabel><label>Thesis B Completion</label></h4>
-<ul>
-<li>Analysis of firmware binaries to identify vulnerabilities
-<ul>
-<li>Still in progress</li>
-</ul>
-</li>
-<li>Search for unsecured secrets, logs, configurations
-<ul>
-<li>Completed (excluding encrypted <code>rrlog</code> files)</li>
-</ul>
-</li>
-</ul>
-<h4 id=labelrevised-thesis-c-planlabel><label>Revised Thesis C Plan</label></h4>
-<ul>
-<li>(priority) Inspection of outbound WAN traffic - security, PII, etc</li>
-<li><s style=color:grey>Inspection of LAN traffic</s> rather, see if it is stored</li>
-<li><s style=color:grey>Inspection of interaction with nearby devices</s></li>
-<li><s style=color:grey>Protocol analysis</s></li>
-<li>Update to a newer firmware version and look at changes</li>
-<li>Check what files gets cleared during a format</li>
-<li>Binary assessment</li>
-<li>Verify IPv6 SSH access</li>
-</ul>
 </section><section>
-<h2 id=incoming-timeline>Incoming Timeline</h2>
-<ul>
-<li><label>22T2 W1</label> - IPv6 SSH verification, continue binary assessment</li>
-<li><label>22T2 W2</label> - WAN traffic analysis
-<ul>
-<li>Look at network behaviour</li>
-<li>Try view WAN data pre-encryption / post-decryption</li>
-</ul>
-</li>
-<li><label>22T2 W4</label> - Update to latest version (and hope we don&rsquo;t get locked out)
-<ul>
-<li>Do another vacuum clean, reimage, compare binaries</li>
-</ul>
-</li>
-<li><label>22T2 W5</label> - Factory reset device, check for remnant files</li>
-<li><label>22T2 W8</label> - Demo submission</li>
-<li><label>22T2 W11</label> - Report submission</li>
-</ul>
+<p>Address the statement</p>
+</section><section>
+<h1 id=thesis-in-a-year>Thesis in a Year</h1>
+<p><img src=../../uploads/screely-1658645824986.png alt></p>
 </section><section>
 <h1 id=thank-you>Thank You</h1>
 <p><br>
