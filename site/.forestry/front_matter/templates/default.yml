@@ -101,6 +101,7 @@ pages:
 - site/content/posts/recovery-mode.md
 - site/content/posts/report-a-preparation.md
 - site/content/posts/roborock-s6-teardown.md
+- site/content/posts/rriot_rr.md
 - site/content/posts/rrlogd.md
 - site/content/posts/sankey-diagrams.md
 - site/content/posts/sbin-rr_login.md
@@ -111,6 +112,7 @@ pages:
 - site/content/posts/thesis-tasks.md
 - site/content/posts/unit-reassembly-with-breakout-cables.md
 - site/content/posts/updated-opt-rockrobo-rrlog-rrlogd.md
+- site/content/posts/updated-space-saving.md
 - site/content/posts/upgrade-notes.md
 - site/content/posts/upgrade-reset-persistence.md
 - site/content/posts/upgrade-upgrade-persistence.md
