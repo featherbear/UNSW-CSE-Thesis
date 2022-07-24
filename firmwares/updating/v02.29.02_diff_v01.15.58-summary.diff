@@ -1,0 +1,232 @@
+ create mode 120000 bin/ash
+ create mode 100755 bin/busybox
+ mode change 100755 => 120000 bin/cat
+ mode change 100755 => 120000 bin/chgrp
+ mode change 100755 => 120000 bin/cp
+ mode change 100755 => 120000 bin/date
+ mode change 100755 => 120000 bin/df
+ mode change 100755 => 120000 bin/dmesg
+ mode change 100755 => 120000 bin/echo
+ mode change 100755 => 120000 bin/egrep
+ mode change 100755 => 120000 bin/false
+ mode change 100755 => 120000 bin/fgrep
+ create mode 120000 bin/fsync
+ create mode 120000 bin/getopt
+ mode change 100755 => 120000 bin/grep
+ mode change 100755 => 120000 bin/gunzip
+ mode change 100755 => 120000 bin/gzip
+ mode change 100755 => 120000 bin/hostname
+ mode change 100755 => 120000 bin/kill
+ mode change 100755 => 120000 bin/ln
+ create mode 120000 bin/lock
+ mode change 100755 => 120000 bin/login
+ mode change 100755 => 120000 bin/ls
+ mode change 100755 => 120000 bin/mkdir
+ mode change 100755 => 120000 bin/mknod
+ mode change 100755 => 120000 bin/mktemp
+ mode change 100755 => 120000 bin/mount
+ mode change 100755 => 120000 bin/mv
+ create mode 120000 bin/netmsg
+ mode change 100755 => 120000 bin/netstat
+ create mode 120000 bin/nice
+ mode change 120000 => 100755 bin/pidof
+ mode change 100755 => 120000 bin/ping
+ mode change 100755 => 120000 bin/ping6
+ mode change 100755 => 120000 bin/ps
+ mode change 100755 => 120000 bin/pwd
+ mode change 100755 => 120000 bin/rm
+ mode change 100755 => 120000 bin/rmdir
+ mode change 100755 => 120000 bin/run-parts
+ mode change 100755 => 120000 bin/sed
+ mode change 100755 => 120000 bin/sleep
+ mode change 100755 => 120000 bin/su
+ mode change 100755 => 120000 bin/sync
+ mode change 100755 => 120000 bin/touch
+ mode change 100755 => 120000 bin/true
+ mode change 100755 => 120000 bin/umount
+ mode change 100755 => 120000 bin/uname
+ create mode 120000 bin/vi
+ mode change 100755 => 120000 bin/zcat
+ create mode 100755 etc/dropbear/dropbear_dss_host_key
+ create mode 100755 etc/dropbear/dropbear_rsa_host_key
+ create mode 100755 etc/init/RRENV
+ create mode 100755 etc/init/S01logging
+ create mode 100755 etc/init/S02hostname
+ create mode 100755 etc/init/S02network
+ create mode 100755 etc/init/S03kmod
+ create mode 100755 etc/init/S03mountall
+ create mode 100755 etc/init/S04bootring
+ create mode 100755 etc/init/S04wdgenv
+ create mode 100755 etc/init/S06adbd
+ create mode 100755 etc/init/rcS
+ create mode 100755 etc/init/wifi.bak
+ create mode 100644 etc/inittab
+ create mode 120000 etc/mtab
+ create mode 100755 etc/network/if-pre-up.d/wait_iface
+ mode change 100644 => 100755 etc/profile
+ mode change 100644 => 120000 etc/resolv.conf
+ create mode 100644 etc/rr-info
+ create mode 120000 lib/arm-linux-gnueabihf/libz.so
+ create mode 120000 linuxrc
+ create mode 100644 opt/rockrobo/cleaner/lib/libroomseg.so.0.8.64
+ mode change 100755 => 100644 opt/rockrobo/cleaner/lib/librrslamdrv.so
+ create mode 120000 opt/rockrobo/cleaner/lib/libuart_api.so.4
+ create mode 100644 opt/rockrobo/cleaner/lib/libuart_api.so.4.0.0
+ create mode 100755 opt/rockrobo/firmware/img/RR_TANOS_MP_STM32.A3.G1_M4.0.0_RELEASE_20220428-201608_FULL.bin
+ create mode 100755 opt/rockrobo/firmware/uart_test-4.0.0-20220428
+ create mode 100644 opt/rockrobo/resources/sounds/Facsounds/en/UART_TEST_CAMERA.wav
+ create mode 100644 opt/rockrobo/resources/sounds/Facsounds/en/UART_TEST_COMPASS.wav
+ create mode 100644 opt/rockrobo/resources/sounds/Facsounds/en/UART_TEST_COOKER_MODE.wav
+ create mode 100644 opt/rockrobo/resources/sounds/Facsounds/en/UART_TEST_COOKER_NOISE.wav
+ create mode 100644 opt/rockrobo/resources/sounds/Facsounds/en/UART_TEST_LDS_DATA_TIMEOUT.wav
+ create mode 100644 opt/rockrobo/resources/sounds/Facsounds/en/UART_TEST_LDS_NO_VALID_POINT.wav
+ create mode 100644 opt/rockrobo/resources/sounds/Facsounds/en/UART_TEST_LDS_SPEED_CONTRL.wav
+ create mode 100644 opt/rockrobo/resources/sounds/Facsounds/en/UART_TEST_MENU_COOKER_MT_MODE.wav
+ create mode 100644 opt/rockrobo/resources/sounds/Facsounds/en/UART_TEST_NOISE_MODE.wav
+ create mode 100644 opt/rockrobo/resources/sounds/Facsounds/en/UART_TEST_PUMP.wav
+ create mode 100644 opt/rockrobo/resources/sounds/Facsounds/en/UART_TEST_SELF_CALI_MODE.wav
+ create mode 100644 opt/rockrobo/resources/sounds/Facsounds/prc/UART_TEST_CAMERA.wav
+ create mode 100644 opt/rockrobo/resources/sounds/Facsounds/prc/UART_TEST_COMPASS.wav
+ create mode 100644 opt/rockrobo/resources/sounds/Facsounds/prc/UART_TEST_COOKER_MODE.wav
+ create mode 100644 opt/rockrobo/resources/sounds/Facsounds/prc/UART_TEST_COOKER_NOISE.wav
+ create mode 100644 opt/rockrobo/resources/sounds/Facsounds/prc/UART_TEST_LDS_DATA_TIMEOUT.wav
+ create mode 100644 opt/rockrobo/resources/sounds/Facsounds/prc/UART_TEST_LDS_NO_VALID_POINT.wav
+ create mode 100644 opt/rockrobo/resources/sounds/Facsounds/prc/UART_TEST_LDS_SPEED_CONTRL.wav
+ create mode 100644 opt/rockrobo/resources/sounds/Facsounds/prc/UART_TEST_MENU_COOKER_MT_MODE.wav
+ create mode 100644 opt/rockrobo/resources/sounds/Facsounds/prc/UART_TEST_NOISE_MODE.wav
+ create mode 100644 opt/rockrobo/resources/sounds/Facsounds/prc/UART_TEST_PUMP.wav
+ create mode 100644 opt/rockrobo/resources/sounds/Facsounds/prc/UART_TEST_SELF_CALI_MODE.wav
+ create mode 100644 opt/rockrobo/resources/sounds/en/child_lock_off.wav
+ create mode 100644 opt/rockrobo/resources/sounds/en/child_lock_on.wav
+ create mode 100644 opt/rockrobo/resources/sounds/en/child_lock_on_click.wav
+ create mode 100644 opt/rockrobo/resources/sounds/en/ding.wav
+ create mode 100644 opt/rockrobo/resources/sounds/en/positioning_map_changed.wav
+ create mode 100644 opt/rockrobo/resources/sounds/en/positioning_still.wav
+ create mode 100644 opt/rockrobo/resources/sounds/en/positioning_success.wav
+ create mode 100644 opt/rockrobo/resources/sounds/en/wifi_connect_failed.wav
+ create mode 100644 opt/rockrobo/resources/sounds/en/wifi_connect_start.wav
+ create mode 100644 opt/rockrobo/resources/sounds/en/wifi_connected.wav
+ create mode 100644 opt/rockrobo/resources/sounds/en/wifi_ssid_wrong.wav
+ create mode 100644 opt/rockrobo/resources/sounds/mtest/mtest_baoji_failed.wav
+ create mode 100644 opt/rockrobo/resources/sounds/prc/child_lock_off.wav
+ create mode 100644 opt/rockrobo/resources/sounds/prc/child_lock_on.wav
+ create mode 100644 opt/rockrobo/resources/sounds/prc/child_lock_on_click.wav
+ create mode 100644 opt/rockrobo/resources/sounds/prc/ding.wav
+ create mode 100644 opt/rockrobo/resources/sounds/prc/positioning_map_changed.wav
+ create mode 100644 opt/rockrobo/resources/sounds/prc/positioning_still.wav
+ create mode 100644 opt/rockrobo/resources/sounds/prc/positioning_success.wav
+ create mode 100644 opt/rockrobo/resources/sounds/prc/wifi_connect_failed.wav
+ create mode 100644 opt/rockrobo/resources/sounds/prc/wifi_connect_start.wav
+ create mode 100644 opt/rockrobo/resources/sounds/prc/wifi_connected.wav
+ create mode 100644 opt/rockrobo/resources/sounds/prc/wifi_ssid_wrong.wav
+ create mode 100644 opt/rockrobo/resources/sounds/tw/child_lock_off.wav
+ create mode 100644 opt/rockrobo/resources/sounds/tw/child_lock_on.wav
+ create mode 100644 opt/rockrobo/resources/sounds/tw/child_lock_on_click.wav
+ create mode 100644 opt/rockrobo/resources/sounds/tw/ding.wav
+ create mode 100644 opt/rockrobo/resources/sounds/tw/positioning_map_changed.wav
+ create mode 100644 opt/rockrobo/resources/sounds/tw/positioning_still.wav
+ create mode 100644 opt/rockrobo/resources/sounds/tw/positioning_success.wav
+ create mode 100644 opt/rockrobo/resources/sounds/tw/wifi_connect_failed.wav
+ create mode 100644 opt/rockrobo/resources/sounds/tw/wifi_connect_start.wav
+ create mode 100644 opt/rockrobo/resources/sounds/tw/wifi_connected.wav
+ create mode 100644 opt/rockrobo/resources/sounds/tw/wifi_ssid_wrong.wav
+ create mode 100755 opt/rockrobo/rriot/rriot_rr
+ create mode 100755 opt/rockrobo/watchdog/core_helper
+ create mode 100755 opt/rockrobo/wlan/wifi_debug_collect.sh
+ mode change 100755 => 120000 sbin/getty
+ mode change 100755 => 120000 sbin/hwclock
+ mode change 100755 => 120000 sbin/ifconfig
+ mode change 100755 => 120000 sbin/ifup
+ mode change 100755 => 120000 sbin/init
+ create mode 120000 sbin/klogd
+ create mode 120000 sbin/logread
+ create mode 120000 sbin/mdev
+ mode change 120000 => 100755 sbin/mkfs.ext4
+ mode change 100755 => 120000 sbin/mkswap
+ mode change 100755 => 120000 sbin/pivot_root
+ mode change 100755 => 120000 sbin/reboot
+ mode change 100755 => 120000 sbin/route
+ create mode 100755 sbin/rr_login
+ mode change 100755 => 120000 sbin/start-stop-daemon
+ mode change 100755 => 120000 sbin/switch_root
+ mode change 100755 => 120000 sbin/sysctl
+ create mode 120000 sbin/syslogd
+ create mode 120000 sbin/udhcpc
+ mode change 100755 => 120000 usr/bin/[
+ create mode 120000 usr/bin/[[
+ mode change 100755 => 120000 usr/bin/basename
+ create mode 120000 usr/bin/bunzip2
+ create mode 120000 usr/bin/bzcat
+ mode change 100755 => 120000 usr/bin/clear
+ mode change 100755 => 120000 usr/bin/cmp
+ mode change 100755 => 120000 usr/bin/crontab
+ mode change 100755 => 120000 usr/bin/cut
+ mode change 100755 => 120000 usr/bin/diff
+ mode change 100755 => 120000 usr/bin/dirname
+ mode change 100755 => 120000 usr/bin/du
+ mode change 100755 => 120000 usr/bin/env
+ mode change 100755 => 120000 usr/bin/expr
+ mode change 100755 => 120000 usr/bin/find
+ mode change 100755 => 120000 usr/bin/free
+ mode change 100755 => 120000 usr/bin/head
+ create mode 120000 usr/bin/hexdump
+ mode change 100755 => 120000 usr/bin/id
+ mode change 100755 => 120000 usr/bin/killall
+ mode change 100755 => 120000 usr/bin/lsof
+ mode change 100755 => 120000 usr/bin/md5sum
+ mode change 100755 => 120000 usr/bin/mkfifo
+ create mode 120000 usr/bin/nc
+ create mode 120000 usr/bin/nslookup
+ mode change 100755 => 120000 usr/bin/passwd
+ mode change 100755 => 120000 usr/bin/pgrep
+ mode change 120000 => 100755 usr/bin/pkill
+ mode change 100755 => 120000 usr/bin/printf
+ create mode 120000 usr/bin/readlink
+ mode change 100755 => 120000 usr/bin/seq
+ mode change 100755 => 120000 usr/bin/setsid
+ mode change 100755 => 120000 usr/bin/sort
+ create mode 120000 usr/bin/strings
+ mode change 100755 => 120000 usr/bin/tail
+ mode change 100755 => 120000 usr/bin/tee
+ mode change 100755 => 120000 usr/bin/test
+ create mode 120000 usr/bin/time
+ mode change 100755 => 120000 usr/bin/tr
+ create mode 120000 usr/bin/traceroute
+ create mode 120000 usr/bin/traceroute6
+ mode change 100755 => 120000 usr/bin/uniq
+ mode change 100755 => 120000 usr/bin/uptime
+ mode change 100755 => 120000 usr/bin/wc
+ mode change 100755 => 120000 usr/bin/xargs
+ create mode 100755 usr/bin/xz
+ mode change 100755 => 120000 usr/bin/yes
+ create mode 120000 usr/lib/arm-linux-gnueabihf/libmbedcrypto.so
+ create mode 100755 usr/lib/arm-linux-gnueabihf/libmbedcrypto.so.2.16.0
+ create mode 120000 usr/lib/arm-linux-gnueabihf/libmbedcrypto.so.3
+ create mode 120000 usr/lib/arm-linux-gnueabihf/libmbedtls.so
+ create mode 120000 usr/lib/arm-linux-gnueabihf/libmbedtls.so.12
+ create mode 100755 usr/lib/arm-linux-gnueabihf/libmbedtls.so.2.16.0
+ create mode 120000 usr/lib/arm-linux-gnueabihf/libmbedx509.so
+ create mode 120000 usr/lib/arm-linux-gnueabihf/libmbedx509.so.0
+ create mode 100755 usr/lib/arm-linux-gnueabihf/libmbedx509.so.2.16.0
+ create mode 100755 usr/lib/arm-linux-gnueabihf/libstdc++.so.6.0.26
+ create mode 100755 usr/lib/libstb_vorbis.so
+ mode change 100755 => 120000 usr/sbin/adduser
+ create mode 120000 usr/sbin/brctl
+ mode change 100755 => 120000 usr/sbin/chroot
+ create mode 120000 usr/sbin/crond
+ create mode 100755 usr/sbin/dropbear
+ create mode 120000 usr/sbin/ntpd
+ rename {lib => usr/share}/terminfo/a/ansi (100%)
+ rename {lib => usr/share}/terminfo/d/dumb (100%)
+ create mode 100644 usr/share/terminfo/l/linux
+ create mode 100644 usr/share/terminfo/s/screen
+ create mode 100644 usr/share/terminfo/s/screen-256color
+ mode change 120000 => 100644 usr/share/terminfo/v/vt100
+ rename {lib => usr/share}/terminfo/v/vt102 (100%)
+ mode change 120000 => 100644 usr/share/terminfo/v/vt200
+ mode change 120000 => 100644 usr/share/terminfo/v/vt220
+ create mode 100644 usr/share/terminfo/x/xterm
+ create mode 100644 usr/share/terminfo/x/xterm-256color
+ mode change 120000 => 100644 usr/share/terminfo/x/xterm-color
+ create mode 100644 usr/share/terminfo/x/xterm-xfree86
+ create mode 100755 usr/share/udhcpc/default.script

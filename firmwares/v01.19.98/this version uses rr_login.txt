@@ -1,0 +1,2 @@
+Serial shell can no longer be accessed because /mnt/default/shadow doesn't exist.  
+Not sure if a mistake, or security feature

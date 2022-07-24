@@ -1,0 +1,4 @@
+* Improvised Wi-Fi Easy Connect
+* overall improvements
+* bug fixes
+* UX fixes

@@ -1,0 +1,5 @@
+https://featherbear.cc/UNSW-CSE-Thesis/posts/ota-updates-blocked-as-of-late-2019/
+
+Tested removing the "Recv OTA CMD!!!" handler (which drops the request) from the miio_client
+
+Running OS v02.29.02

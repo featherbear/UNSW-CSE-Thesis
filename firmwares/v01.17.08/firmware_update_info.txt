@@ -1,0 +1,9 @@
+1. Supports multi-floor map saving and robot knows which floor it is
+2. Update to new structured SLAM algorithm to make map more reliable
+2. Support customised room cleaning sequence
+3. Support no-mop zone
+
+
+dd if p10 of p9
+
+different shell!

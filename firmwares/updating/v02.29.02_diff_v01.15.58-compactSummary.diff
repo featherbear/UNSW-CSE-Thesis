@@ -1,0 +1,617 @@
+ bin/ash (new +l)                                   |    1 +
+ bin/busybox (new +x)                               |  Bin 0 -> 301924 bytes
+ bin/cat (mode +l)                                  |  Bin 30528 -> 7 bytes
+ bin/chgrp (mode +l)                                |  Bin 38712 -> 7 bytes
+ bin/cp (mode +l)                                   |  Bin 79928 -> 7 bytes
+ bin/date (mode +l)                                 |  Bin 42796 -> 7 bytes
+ bin/df (mode +l)                                   |  Bin 59584 -> 7 bytes
+ bin/dmesg (mode +l)                                |  Bin 18016 -> 7 bytes
+ bin/dnsdomainname                                  |    2 +-
+ bin/echo (mode +l)                                 |  Bin 18132 -> 7 bytes
+ bin/egrep (mode +l)                                |  Bin 112696 -> 7 bytes
+ bin/false (mode +l)                                |  Bin 18128 -> 7 bytes
+ bin/fgrep (mode +l)                                |  Bin 87992 -> 7 bytes
+ bin/fsync (new +l)                                 |    1 +
+ bin/getopt (new +l)                                |    1 +
+ bin/grep (mode +l)                                 |  Bin 116820 -> 7 bytes
+ bin/gunzip (mode +l)                               |   63 +-
+ bin/gzip (mode +l)                                 |  Bin 64060 -> 7 bytes
+ bin/hostname (mode +l)                             |  Bin 9840 -> 7 bytes
+ bin/kill (mode +l)                                 |  Bin 18136 -> 7 bytes
+ bin/ln (mode +l)                                   |  Bin 34612 -> 7 bytes
+ bin/lock (new +l)                                  |    1 +
+ bin/login (mode +l)                                |  Bin 31128 -> 7 bytes
+ bin/ls (mode +l)                                   |  Bin 71856 -> 7 bytes
+ bin/mkdir (mode +l)                                |  Bin 30500 -> 7 bytes
+ bin/mknod (mode +l)                                |  Bin 26356 -> 7 bytes
+ bin/mktemp (mode +l)                               |  Bin 26404 -> 7 bytes
+ bin/mount (mode +l)                                |  Bin 64204 -> 7 bytes
+ bin/mv (mode +l)                                   |  Bin 75812 -> 7 bytes
+ bin/netmsg (new +l)                                |    1 +
+ bin/netstat (mode +l)                              |  Bin 84748 -> 7 bytes
+ bin/nice (new +l)                                  |    1 +
+ bin/pidof (mode -l)                                |  Bin 14 -> 14036 bytes
+ bin/ping (mode +l)                                 |  Bin 34820 -> 7 bytes
+ bin/ping6 (mode +l)                                |  Bin 35124 -> 7 bytes
+ bin/ps (mode +l)                                   |  Bin 67600 -> 7 bytes
+ bin/pwd (mode +l)                                  |  Bin 18176 -> 7 bytes
+ bin/rm (mode +l)                                   |  Bin 38700 -> 7 bytes
+ bin/rmdir (mode +l)                                |  Bin 26356 -> 7 bytes
+ bin/run-parts (mode +l)                            |  Bin 14112 -> 7 bytes
+ bin/sed (mode +l)                                  |  Bin 43212 -> 7 bytes
+ bin/sh                                             |    2 +-
+ bin/sleep (mode +l)                                |  Bin 18144 -> 7 bytes
+ bin/su (mode +l)                                   |  Bin 27068 -> 7 bytes
+ bin/sync (mode +l)                                 |  Bin 18136 -> 7 bytes
+ bin/touch (mode +l)                                |  Bin 34640 -> 7 bytes
+ bin/true (mode +l)                                 |  Bin 18128 -> 7 bytes
+ bin/umount (mode +l)                               |  Bin 47268 -> 7 bytes
+ bin/uname (mode +l)                                |  Bin 18164 -> 7 bytes
+ bin/vi (new +l)                                    |    1 +
+ bin/zcat (mode +l)                                 |   57 +-
+ boot/zImage                                        |  Bin 3882616 -> 3887552 bytes
+ etc/OS_VERSION                                     |    8 +-
+ etc/dropbear/dropbear_dss_host_key (new +x)        |  Bin 0 -> 457 bytes
+ etc/dropbear/dropbear_rsa_host_key (new +x)        |  Bin 0 -> 805 bytes
+ etc/group                                          |   15 +-
+ etc/init/RRENV (new +x)                            |   41 +
+ etc/init/S01logging (new +x)                       |   35 +
+ etc/init/S02hostname (new +x)                      |   21 +
+ etc/init/S02network (new +x)                       |   25 +
+ etc/init/S03kmod (new +x)                          |   30 +
+ etc/init/S03mountall (new +x)                      |   48 +
+ etc/init/S04bootring (new +x)                      |   22 +
+ etc/init/S04wdgenv (new +x)                        |   40 +
+ etc/init/S06adbd (new +x)                          |   29 +
+ etc/init/rcS (new +x)                              |   43 +
+ etc/init/wifi.bak (new +x)                         |   21 +
+ etc/inittab (new)                                  |    6 +
+ etc/ld.so.cache                                    |  Bin 22920 -> 9702 bytes
+ etc/mtab (new +l)                                  |    1 +
+ etc/network/if-pre-up.d/wait_iface (new +x)        |   21 +
+ etc/network/interfaces                             |    7 +-
+ etc/nsswitch.conf                                  |   22 +-
+ etc/os-release                                     |    2 +-
+ etc/passwd                                         |   35 +-
+ etc/profile (mode +x)                              |   33 +-
+ etc/protocols                                      |    3 -
+ etc/resolv.conf (mode +l)                          |    3 +-
+ etc/rr-info (new)                                  |    1 +
+ etc/services                                       |  565 +++-------
+ etc/shadow                                         |    3 +-
+ etc/shells                                         |    6 +-
+ etc/sysctl.conf                                    |   65 +-
+ lib/arm-linux-gnueabihf/libcrypto.so.1.0.0         |  Bin 1050404 -> 1206732 bytes
+ lib/arm-linux-gnueabihf/libz.so (new +l)           |    1 +
+ lib/modules/3.4.39/8189es.ko                       |  Bin 2255576 -> 2255632 bytes
+ lib/modules/3.4.39/Module.symvers                  |   10 +-
+ lib/modules/3.4.39/disp.ko                         |  Bin 1077456 -> 1077456 bytes
+ lib/modules/3.4.39/drm.ko                          |  Bin 286056 -> 286056 bytes
+ lib/modules/3.4.39/g_android.ko                    |  Bin 64428 -> 64428 bytes
+ lib/modules/3.4.39/i2c-algo-bit.ko                 |  Bin 10948 -> 10948 bytes
+ lib/modules/3.4.39/lcd.ko                          |  Bin 54528 -> 54528 bytes
+ lib/modules/3.4.39/mali.ko                         |  Bin 301680 -> 301704 bytes
+ lib/modules/3.4.39/mali_drm.ko                     |  Bin 8916 -> 8916 bytes
+ lib/modules/3.4.39/scsi_wait_scan.ko               |  Bin 3392 -> 3392 bytes
+ lib/modules/3.4.39/st480.ko                        |  Bin 36900 -> 37340 bytes
+ lib/modules/3.4.39/st480_2.ko                      |  Bin 36796 -> 37236 bytes
+ lib/modules/3.4.39/ump.ko                          |  Bin 66152 -> 66164 bytes
+ linuxrc (new +l)                                   |    1 +
+ opt/rockrobo/buildnumber                           |    2 +-
+ opt/rockrobo/cleaner/bin/AppProxy                  |  Bin 757120 -> 896704 bytes
+ opt/rockrobo/cleaner/bin/RoboController            |  Bin 220000 -> 248764 bytes
+ opt/rockrobo/cleaner/bin/RoboControllerM           |  Bin 294248 -> 314764 bytes
+ opt/rockrobo/cleaner/bin/RoboControllerR           |  Bin 220000 -> 248764 bytes
+ opt/rockrobo/cleaner/bin/SysUpdate                 |  Bin 257012 -> 105552 bytes
+ opt/rockrobo/cleaner/bin/rr_loader                 |  Bin 69236 -> 69296 bytes
+ opt/rockrobo/cleaner/lib/libblcommon.so            |  Bin 9704 -> 9708 bytes
+ opt/rockrobo/cleaner/lib/libpkginfoapi.so          |  Bin 9780 -> 9780 bytes
+ opt/rockrobo/cleaner/lib/libroboipc.so             |  Bin 44216 -> 48872 bytes
+ opt/rockrobo/cleaner/lib/librobopersist.so         |  Bin 59576 -> 71964 bytes
+ opt/rockrobo/cleaner/lib/libroomseg.so.0           |    2 +-
+ .../cleaner/lib/libroomseg.so.0.8.64 (new)         |  Bin 0 -> 261140 bytes
+ opt/rockrobo/cleaner/lib/librr_plugin_chassis.so   |  Bin 84440 -> 67520 bytes
+ opt/rockrobo/cleaner/lib/librr_plugin_compass.so   |  Bin 26504 -> 26320 bytes
+ opt/rockrobo/cleaner/lib/librr_plugin_laser.so     |  Bin 72056 -> 63536 bytes
+ opt/rockrobo/cleaner/lib/librr_plugin_logger.so    |  Bin 5548 -> 5548 bytes
+ opt/rockrobo/cleaner/lib/librr_plugin_support.so   |  Bin 9876 -> 9820 bytes
+ opt/rockrobo/cleaner/lib/librrlocale.so            |  Bin 203772 -> 203764 bytes
+ opt/rockrobo/cleaner/lib/librrlog.so               |  Bin 22296 -> 294556 bytes
+ opt/rockrobo/cleaner/lib/librrnavdrv.so            |  Bin 3325248 -> 2424756 bytes
+ opt/rockrobo/cleaner/lib/librrslamdrv.so (mode -x) |  Bin 412896 -> 285308 bytes
+ opt/rockrobo/cleaner/lib/librrsound.so             |  Bin 9756 -> 38560 bytes
+ opt/rockrobo/cleaner/lib/librrutils.so             |  Bin 5552 -> 9788 bytes
+ opt/rockrobo/cleaner/lib/libstat.so                |  Bin 270564 -> 361592 bytes
+ opt/rockrobo/cleaner/lib/libuart_api.so            |    2 +-
+ opt/rockrobo/cleaner/lib/libuart_api.so.4 (new +l) |    1 +
+ .../cleaner/lib/libuart_api.so.4.0.0 (new)         |  Bin 0 -> 118732 bytes
+ opt/rockrobo/cleaner/misc/mobility_test_map        |  Bin 66476 -> 7114 bytes
+ opt/rockrobo/firmware/bin/MCU_FIRMWARE_MATCH       |    2 +-
+ ...4.0.0_RELEASE_20220428-201608_FULL.bin (new +x) |  Bin 0 -> 217072 bytes
+ opt/rockrobo/firmware/uart_test                    |    2 +-
+ .../firmware/uart_test-4.0.0-20220428 (new +x)     |  Bin 0 -> 460408 bytes
+ opt/rockrobo/miio/miio_client                      |  Bin 115480 -> 117288 bytes
+ opt/rockrobo/miio/miio_client_helper_nomqtt.sh     |   12 +-
+ opt/rockrobo/miio/miio_recv_line                   |  Bin 3688 -> 3780 bytes
+ .../sounds/Facsounds/en/UART_TEST_CAMERA.wav (new) |  Bin 0 -> 16044 bytes
+ .../Facsounds/en/UART_TEST_COMPASS.wav (new)       |  Bin 0 -> 19884 bytes
+ .../Facsounds/en/UART_TEST_COOKER_MODE.wav (new)   |  Bin 0 -> 29484 bytes
+ .../Facsounds/en/UART_TEST_COOKER_NOISE.wav (new)  |  Bin 0 -> 191404 bytes
+ .../en/UART_TEST_LDS_DATA_TIMEOUT.wav (new)        |  Bin 0 -> 38444 bytes
+ .../en/UART_TEST_LDS_NO_VALID_POINT.wav (new)      |  Bin 0 -> 30124 bytes
+ .../en/UART_TEST_LDS_SPEED_CONTRL.wav (new)        |  Bin 0 -> 35244 bytes
+ .../en/UART_TEST_MENU_COOKER_MT_MODE.wav (new)     |  Bin 0 -> 185644 bytes
+ .../Facsounds/en/UART_TEST_NOISE_MODE.wav (new)    |  Bin 0 -> 30124 bytes
+ .../sounds/Facsounds/en/UART_TEST_PUMP.wav (new)   |  Bin 0 -> 35884 bytes
+ .../en/UART_TEST_SELF_CALI_MODE.wav (new)          |  Bin 0 -> 39084 bytes
+ .../Facsounds/prc/UART_TEST_CAMERA.wav (new)       |  Bin 0 -> 17964 bytes
+ .../Facsounds/prc/UART_TEST_COMPASS.wav (new)      |  Bin 0 -> 20204 bytes
+ .../Facsounds/prc/UART_TEST_COOKER_MODE.wav (new)  |  Bin 0 -> 46764 bytes
+ .../Facsounds/prc/UART_TEST_COOKER_NOISE.wav (new) |  Bin 0 -> 160044 bytes
+ .../prc/UART_TEST_LDS_DATA_TIMEOUT.wav (new)       |  Bin 0 -> 38444 bytes
+ .../prc/UART_TEST_LDS_NO_VALID_POINT.wav (new)     |  Bin 0 -> 19884 bytes
+ .../prc/UART_TEST_LDS_SPEED_CONTRL.wav (new)       |  Bin 0 -> 16684 bytes
+ .../prc/UART_TEST_MENU_COOKER_MT_MODE.wav (new)    |  Bin 0 -> 159404 bytes
+ .../Facsounds/prc/UART_TEST_NOISE_MODE.wav (new)   |  Bin 0 -> 48044 bytes
+ .../sounds/Facsounds/prc/UART_TEST_PUMP.wav (new)  |  Bin 0 -> 21164 bytes
+ .../prc/UART_TEST_SELF_CALI_MODE.wav (new)         |  Bin 0 -> 36524 bytes
+ .../resources/sounds/en/back_dock_failed.wav       |  Bin 201222 -> 224890 bytes
+ opt/rockrobo/resources/sounds/en/bin_in.wav        |  Bin 65992 -> 71790 bytes
+ opt/rockrobo/resources/sounds/en/bin_out.wav       |  Bin 60352 -> 68998 bytes
+ .../resources/sounds/en/binout_error10.wav         |  Bin 143864 -> 106848 bytes
+ .../resources/sounds/en/bl_recovery_bootfailed.wav |  Bin 195238 -> 226156 bytes
+ .../resources/sounds/en/bl_recovery_failed.wav     |  Bin 123100 -> 132342 bytes
+ .../resources/sounds/en/bl_recovery_retry.wav      |  Bin 143690 -> 178156 bytes
+ .../resources/sounds/en/bl_recovery_start.wav      |  Bin 151552 -> 162156 bytes
+ .../sounds/en/bl_recovery_updatefailed.wav         |  Bin 197924 -> 225192 bytes
+ opt/rockrobo/resources/sounds/en/charging.wav      |  Bin 36780 -> 44926 bytes
+ .../resources/sounds/en/child_lock_off.wav (new)   |  Bin 0 -> 61360 bytes
+ .../resources/sounds/en/child_lock_on.wav (new)    |  Bin 0 -> 56772 bytes
+ .../sounds/en/child_lock_on_click.wav (new)        |  Bin 0 -> 167608 bytes
+ opt/rockrobo/resources/sounds/en/clean_bin.wav     |  Bin 51100 -> 58122 bytes
+ opt/rockrobo/resources/sounds/en/clean_finish.wav  |  Bin 111376 -> 104560 bytes
+ opt/rockrobo/resources/sounds/en/di.wav            |  Bin 37048 -> 42382 bytes
+ opt/rockrobo/resources/sounds/en/ding.wav (new)    |  Bin 0 -> 34278 bytes
+ opt/rockrobo/resources/sounds/en/error1.wav        |  Bin 191062 -> 238960 bytes
+ opt/rockrobo/resources/sounds/en/error10.wav       |  Bin 269956 -> 162156 bytes
+ opt/rockrobo/resources/sounds/en/error11.wav       |  Bin 282756 -> 296560 bytes
+ opt/rockrobo/resources/sounds/en/error12.wav       |  Bin 189834 -> 170822 bytes
+ opt/rockrobo/resources/sounds/en/error13.wav       |  Bin 220490 -> 227136 bytes
+ opt/rockrobo/resources/sounds/en/error14.wav       |  Bin 109956 -> 109576 bytes
+ opt/rockrobo/resources/sounds/en/error15.wav       |  Bin 114248 -> 174960 bytes
+ opt/rockrobo/resources/sounds/en/error16.wav       |  Bin 173020 -> 218372 bytes
+ opt/rockrobo/resources/sounds/en/error17.wav       |  Bin 202036 -> 165360 bytes
+ opt/rockrobo/resources/sounds/en/error18.wav       |  Bin 167556 -> 149360 bytes
+ opt/rockrobo/resources/sounds/en/error2.wav        |  Bin 125240 -> 203760 bytes
+ opt/rockrobo/resources/sounds/en/error21.wav       |  Bin 218756 -> 213360 bytes
+ opt/rockrobo/resources/sounds/en/error22.wav       |  Bin 157956 -> 189534 bytes
+ opt/rockrobo/resources/sounds/en/error23.wav       |  Bin 171550 -> 250474 bytes
+ opt/rockrobo/resources/sounds/en/error24.wav       |  Bin 212356 -> 206170 bytes
+ opt/rockrobo/resources/sounds/en/error3.wav        |  Bin 173956 -> 197360 bytes
+ opt/rockrobo/resources/sounds/en/error4.wav        |  Bin 257156 -> 306366 bytes
+ opt/rockrobo/resources/sounds/en/error5.wav        |  Bin 154260 -> 192014 bytes
+ opt/rockrobo/resources/sounds/en/error6.wav        |  Bin 128182 -> 200560 bytes
+ opt/rockrobo/resources/sounds/en/error7.wav        |  Bin 249474 -> 183558 bytes
+ opt/rockrobo/resources/sounds/en/error8.wav        |  Bin 161156 -> 194160 bytes
+ opt/rockrobo/resources/sounds/en/error9.wav        |  Bin 138756 -> 181360 bytes
+ .../resources/sounds/en/error_internal.wav         |  Bin 125490 -> 113696 bytes
+ opt/rockrobo/resources/sounds/en/findme.wav        |  Bin 66296 -> 72238 bytes
+ opt/rockrobo/resources/sounds/en/finish.wav        |  Bin 61518 -> 51760 bytes
+ opt/rockrobo/resources/sounds/en/goto.wav          |  Bin 63556 -> 56560 bytes
+ opt/rockrobo/resources/sounds/en/goto_complete.wav |  Bin 53622 -> 49446 bytes
+ opt/rockrobo/resources/sounds/en/goto_failed.wav   |  Bin 66756 -> 61838 bytes
+ opt/rockrobo/resources/sounds/en/home.wav          |  Bin 67736 -> 54960 bytes
+ opt/rockrobo/resources/sounds/en/map_restore.wav   |  Bin 119556 -> 83760 bytes
+ opt/rockrobo/resources/sounds/en/no_power.wav      |  Bin 109354 -> 92232 bytes
+ .../resources/sounds/en/no_power_charging.wav      |  Bin 104558 -> 75458 bytes
+ .../resources/sounds/en/no_spot_on_dock.wav        |  Bin 159086 -> 127864 bytes
+ opt/rockrobo/resources/sounds/en/pause.wav         |  Bin 31900 -> 36080 bytes
+ opt/rockrobo/resources/sounds/en/positioning.wav   |  Bin 71320 -> 75136 bytes
+ .../sounds/en/positioning_map_changed.wav (new)    |  Bin 0 -> 123760 bytes
+ .../sounds/en/positioning_still.wav (new)          |  Bin 0 -> 83760 bytes
+ .../sounds/en/positioning_success.wav (new)        |  Bin 0 -> 64010 bytes
+ opt/rockrobo/resources/sounds/en/power_off.wav     |  Bin 47556 -> 53620 bytes
+ .../resources/sounds/en/power_off_rejected.wav     |  Bin 126300 -> 118822 bytes
+ .../resources/sounds/en/power_resume_clean.wav     |  Bin 109956 -> 115878 bytes
+ .../resources/sounds/en/relocate_failed.wav        |  Bin 121284 -> 113260 bytes
+ opt/rockrobo/resources/sounds/en/remote.wav        |  Bin 68834 -> 72298 bytes
+ .../resources/sounds/en/remote_complete.wav        |  Bin 61862 -> 71436 bytes
+ opt/rockrobo/resources/sounds/en/restart_clean.wav |  Bin 110974 -> 121810 bytes
+ .../resources/sounds/en/restart_clean_fromdock.wav |  Bin 148356 -> 155272 bytes
+ .../resources/sounds/en/restart_clean_nodock.wav   |  Bin 164356 -> 154876 bytes
+ .../resources/sounds/en/resume_backtodock.wav      |  Bin 178246 -> 124940 bytes
+ opt/rockrobo/resources/sounds/en/resume_clean.wav  |  Bin 56038 -> 39458 bytes
+ opt/rockrobo/resources/sounds/en/resume_home.wav   |  Bin 81156 -> 69660 bytes
+ opt/rockrobo/resources/sounds/en/resume_room.wav   |  Bin 65156 -> 76738 bytes
+ opt/rockrobo/resources/sounds/en/resume_spot.wav   |  Bin 175146 -> 138344 bytes
+ opt/rockrobo/resources/sounds/en/resume_zone.wav   |  Bin 70102 -> 69624 bytes
+ opt/rockrobo/resources/sounds/en/return_no.wav     |  Bin 80314 -> 88410 bytes
+ opt/rockrobo/resources/sounds/en/return_yes.wav    |  Bin 183470 -> 178762 bytes
+ opt/rockrobo/resources/sounds/en/room.wav          |  Bin 62556 -> 79874 bytes
+ opt/rockrobo/resources/sounds/en/room_complete.wav |  Bin 131042 -> 138122 bytes
+ opt/rockrobo/resources/sounds/en/room_failed.wav   |  Bin 205318 -> 229962 bytes
+ .../resources/sounds/en/room_partialdone.wav       |  Bin 218756 -> 242762 bytes
+ .../resources/sounds/en/room_water_box_in.wav      |  Bin 155100 -> 132126 bytes
+ opt/rockrobo/resources/sounds/en/saving_map.wav    |  Bin 102154 -> 85250 bytes
+ opt/rockrobo/resources/sounds/en/sound.ver         |    2 +-
+ opt/rockrobo/resources/sounds/en/spot.wav          |  Bin 66834 -> 73472 bytes
+ opt/rockrobo/resources/sounds/en/start.wav         |  Bin 57156 -> 63344 bytes
+ .../resources/sounds/en/start_water_box_in.wav     |  Bin 135900 -> 102458 bytes
+ opt/rockrobo/resources/sounds/en/stop_clean.wav    |  Bin 75262 -> 56056 bytes
+ opt/rockrobo/resources/sounds/en/stop_goto.wav     |  Bin 74774 -> 65706 bytes
+ opt/rockrobo/resources/sounds/en/stop_room.wav     |  Bin 100570 -> 79562 bytes
+ .../resources/sounds/en/stop_scheduled_clean.wav   |  Bin 125956 -> 129768 bytes
+ opt/rockrobo/resources/sounds/en/stop_spot.wav     |  Bin 87552 -> 66608 bytes
+ opt/rockrobo/resources/sounds/en/stop_zone.wav     |  Bin 110916 -> 61962 bytes
+ .../resources/sounds/en/sysupd_complete.wav        |  Bin 56674 -> 79910 bytes
+ opt/rockrobo/resources/sounds/en/sysupd_failed.wav |  Bin 132356 -> 149962 bytes
+ .../resources/sounds/en/sysupd_notready.wav        |  Bin 122756 -> 217162 bytes
+ opt/rockrobo/resources/sounds/en/sysupd_start.wav  |  Bin 145156 -> 153184 bytes
+ opt/rockrobo/resources/sounds/en/sysupd_wip.wav    |  Bin 76218 -> 76362 bytes
+ opt/rockrobo/resources/sounds/en/timed_clean.wav   |  Bin 72274 -> 79708 bytes
+ opt/rockrobo/resources/sounds/en/water_box_in.wav  |  Bin 62890 -> 106996 bytes
+ opt/rockrobo/resources/sounds/en/water_box_out.wav |  Bin 58192 -> 103348 bytes
+ .../sounds/en/wifi_connect_failed.wav (new)        |  Bin 0 -> 155502 bytes
+ .../sounds/en/wifi_connect_start.wav (new)         |  Bin 0 -> 101962 bytes
+ .../resources/sounds/en/wifi_connected.wav (new)   |  Bin 0 -> 59150 bytes
+ opt/rockrobo/resources/sounds/en/wifi_reset.wav    |  Bin 58386 -> 67550 bytes
+ .../resources/sounds/en/wifi_ssid_wrong.wav (new)  |  Bin 0 -> 142210 bytes
+ opt/rockrobo/resources/sounds/en/zone.wav          |  Bin 54330 -> 64562 bytes
+ opt/rockrobo/resources/sounds/en/zone_complete.wav |  Bin 139826 -> 112810 bytes
+ opt/rockrobo/resources/sounds/en/zone_failed.wav   |  Bin 181804 -> 197150 bytes
+ .../resources/sounds/en/zone_partialdone.wav       |  Bin 211234 -> 210762 bytes
+ .../resources/sounds/en/zone_water_box_in.wav      |  Bin 71556 -> 114400 bytes
+ .../sounds/mtest/mtest_baoji_failed.wav (new)      |  Bin 0 -> 44348 bytes
+ .../resources/sounds/prc/back_dock_failed.wav      |  Bin 186272 -> 193618 bytes
+ opt/rockrobo/resources/sounds/prc/bin_in.wav       |  Bin 39276 -> 44860 bytes
+ opt/rockrobo/resources/sounds/prc/bin_out.wav      |  Bin 40084 -> 45922 bytes
+ .../resources/sounds/prc/binout_error10.wav        |  Bin 131094 -> 135056 bytes
+ .../sounds/prc/bl_recovery_bootfailed.wav          |  Bin 205038 -> 229020 bytes
+ .../resources/sounds/prc/bl_recovery_failed.wav    |  Bin 91998 -> 97894 bytes
+ .../resources/sounds/prc/bl_recovery_retry.wav     |  Bin 183128 -> 200060 bytes
+ .../resources/sounds/prc/bl_recovery_start.wav     |  Bin 166904 -> 185332 bytes
+ .../sounds/prc/bl_recovery_updatefailed.wav        |  Bin 203802 -> 229842 bytes
+ opt/rockrobo/resources/sounds/prc/charging.wav     |  Bin 29716 -> 34348 bytes
+ .../resources/sounds/prc/child_lock_off.wav (new)  |  Bin 0 -> 33324 bytes
+ .../resources/sounds/prc/child_lock_on.wav (new)   |  Bin 0 -> 36524 bytes
+ .../sounds/prc/child_lock_on_click.wav (new)       |  Bin 0 -> 128684 bytes
+ opt/rockrobo/resources/sounds/prc/clean_bin.wav    |  Bin 93270 -> 98890 bytes
+ opt/rockrobo/resources/sounds/prc/clean_finish.wav |  Bin 73722 -> 79342 bytes
+ opt/rockrobo/resources/sounds/prc/di.wav           |  Bin 35268 -> 40528 bytes
+ opt/rockrobo/resources/sounds/prc/ding.wav (new)   |  Bin 0 -> 31258 bytes
+ opt/rockrobo/resources/sounds/prc/error1.wav       |  Bin 164600 -> 184364 bytes
+ opt/rockrobo/resources/sounds/prc/error10.wav      |  Bin 142338 -> 89644 bytes
+ opt/rockrobo/resources/sounds/prc/error11.wav      |  Bin 179720 -> 185848 bytes
+ opt/rockrobo/resources/sounds/prc/error12.wav      |  Bin 107892 -> 113660 bytes
+ opt/rockrobo/resources/sounds/prc/error13.wav      |  Bin 157458 -> 163518 bytes
+ opt/rockrobo/resources/sounds/prc/error14.wav      |  Bin 79398 -> 85018 bytes
+ opt/rockrobo/resources/sounds/prc/error15.wav      |  Bin 107908 -> 113674 bytes
+ opt/rockrobo/resources/sounds/prc/error16.wav      |  Bin 139618 -> 145120 bytes
+ opt/rockrobo/resources/sounds/prc/error17.wav      |  Bin 157604 -> 163100 bytes
+ opt/rockrobo/resources/sounds/prc/error18.wav      |  Bin 154100 -> 159890 bytes
+ opt/rockrobo/resources/sounds/prc/error2.wav       |  Bin 129704 -> 135788 bytes
+ opt/rockrobo/resources/sounds/prc/error21.wav      |  Bin 142086 -> 148168 bytes
+ opt/rockrobo/resources/sounds/prc/error22.wav      |  Bin 126298 -> 132398 bytes
+ opt/rockrobo/resources/sounds/prc/error23.wav      |  Bin 135466 -> 142004 bytes
+ opt/rockrobo/resources/sounds/prc/error24.wav      |  Bin 162468 -> 168480 bytes
+ opt/rockrobo/resources/sounds/prc/error3.wav       |  Bin 124024 -> 129296 bytes
+ opt/rockrobo/resources/sounds/prc/error4.wav       |  Bin 171574 -> 177296 bytes
+ opt/rockrobo/resources/sounds/prc/error5.wav       |  Bin 145180 -> 127778 bytes
+ opt/rockrobo/resources/sounds/prc/error6.wav       |  Bin 102894 -> 108606 bytes
+ opt/rockrobo/resources/sounds/prc/error7.wav       |  Bin 177828 -> 183954 bytes
+ opt/rockrobo/resources/sounds/prc/error8.wav       |  Bin 117470 -> 123200 bytes
+ opt/rockrobo/resources/sounds/prc/error9.wav       |  Bin 106622 -> 112578 bytes
+ .../resources/sounds/prc/error_internal.wav        |  Bin 96230 -> 101850 bytes
+ opt/rockrobo/resources/sounds/prc/findme.wav       |  Bin 59944 -> 66312 bytes
+ opt/rockrobo/resources/sounds/prc/finish.wav       |  Bin 37690 -> 43310 bytes
+ opt/rockrobo/resources/sounds/prc/goto.wav         |  Bin 56462 -> 62082 bytes
+ .../resources/sounds/prc/goto_complete.wav         |  Bin 49972 -> 55592 bytes
+ opt/rockrobo/resources/sounds/prc/goto_failed.wav  |  Bin 56450 -> 62070 bytes
+ opt/rockrobo/resources/sounds/prc/home.wav         |  Bin 38552 -> 44172 bytes
+ opt/rockrobo/resources/sounds/prc/map_restore.wav  |  Bin 92584 -> 97484 bytes
+ opt/rockrobo/resources/sounds/prc/no_power.wav     |  Bin 76086 -> 81706 bytes
+ .../resources/sounds/prc/no_power_charging.wav     |  Bin 65418 -> 71334 bytes
+ .../resources/sounds/prc/no_spot_on_dock.wav       |  Bin 127726 -> 133342 bytes
+ opt/rockrobo/resources/sounds/prc/pause.wav        |  Bin 26428 -> 33014 bytes
+ opt/rockrobo/resources/sounds/prc/positioning.wav  |  Bin 66984 -> 71848 bytes
+ .../sounds/prc/positioning_map_changed.wav (new)   |  Bin 0 -> 107222 bytes
+ .../sounds/prc/positioning_still.wav (new)         |  Bin 0 -> 85956 bytes
+ .../sounds/prc/positioning_success.wav (new)       |  Bin 0 -> 37892 bytes
+ opt/rockrobo/resources/sounds/prc/power_off.wav    |  Bin 22696 -> 28638 bytes
+ .../resources/sounds/prc/power_off_rejected.wav    |  Bin 113092 -> 118612 bytes
+ .../resources/sounds/prc/power_resume_clean.wav    |  Bin 73040 -> 78660 bytes
+ .../resources/sounds/prc/relocate_failed.wav       |  Bin 102184 -> 108098 bytes
+ opt/rockrobo/resources/sounds/prc/remote.wav       |  Bin 34050 -> 40406 bytes
+ .../resources/sounds/prc/remote_complete.wav       |  Bin 32848 -> 39900 bytes
+ .../resources/sounds/prc/restart_clean.wav         |  Bin 87924 -> 94020 bytes
+ .../sounds/prc/restart_clean_fromdock.wav          |  Bin 134184 -> 140126 bytes
+ .../resources/sounds/prc/restart_clean_nodock.wav  |  Bin 130344 -> 136152 bytes
+ .../resources/sounds/prc/resume_backtodock.wav     |  Bin 120104 -> 90658 bytes
+ opt/rockrobo/resources/sounds/prc/resume_clean.wav |  Bin 35214 -> 41806 bytes
+ opt/rockrobo/resources/sounds/prc/resume_home.wav  |  Bin 34436 -> 40598 bytes
+ opt/rockrobo/resources/sounds/prc/resume_room.wav  |  Bin 50344 -> 56764 bytes
+ opt/rockrobo/resources/sounds/prc/resume_spot.wav  |  Bin 132904 -> 88738 bytes
+ opt/rockrobo/resources/sounds/prc/resume_zone.wav  |  Bin 49892 -> 55886 bytes
+ opt/rockrobo/resources/sounds/prc/return_no.wav    |  Bin 47364 -> 53598 bytes
+ opt/rockrobo/resources/sounds/prc/return_yes.wav   |  Bin 162344 -> 169866 bytes
+ opt/rockrobo/resources/sounds/prc/room.wav         |  Bin 52264 -> 59408 bytes
+ .../resources/sounds/prc/room_complete.wav         |  Bin 103464 -> 110502 bytes
+ opt/rockrobo/resources/sounds/prc/room_failed.wav  |  Bin 184104 -> 191626 bytes
+ .../resources/sounds/prc/room_partialdone.wav      |  Bin 182184 -> 186204 bytes
+ .../resources/sounds/prc/room_water_box_in.wav     |  Bin 138024 -> 145244 bytes
+ opt/rockrobo/resources/sounds/prc/saving_map.wav   |  Bin 81704 -> 87034 bytes
+ opt/rockrobo/resources/sounds/prc/sound.ver        |    2 +-
+ opt/rockrobo/resources/sounds/prc/spot.wav         |  Bin 33264 -> 39944 bytes
+ opt/rockrobo/resources/sounds/prc/start.wav        |  Bin 35826 -> 41862 bytes
+ .../resources/sounds/prc/start_water_box_in.wav    |  Bin 121384 -> 127686 bytes
+ opt/rockrobo/resources/sounds/prc/stop_clean.wav   |  Bin 37544 -> 44248 bytes
+ opt/rockrobo/resources/sounds/prc/stop_goto.wav    |  Bin 49320 -> 51072 bytes
+ opt/rockrobo/resources/sounds/prc/stop_room.wav    |  Bin 49064 -> 55480 bytes
+ .../resources/sounds/prc/stop_scheduled_clean.wav  |  Bin 106114 -> 112502 bytes
+ opt/rockrobo/resources/sounds/prc/stop_spot.wav    |  Bin 47304 -> 52924 bytes
+ opt/rockrobo/resources/sounds/prc/stop_zone.wav    |  Bin 51624 -> 58488 bytes
+ .../resources/sounds/prc/sysupd_complete.wav       |  Bin 37438 -> 43214 bytes
+ .../resources/sounds/prc/sysupd_failed.wav         |  Bin 94602 -> 99880 bytes
+ .../resources/sounds/prc/sysupd_notready.wav       |  Bin 219552 -> 225706 bytes
+ opt/rockrobo/resources/sounds/prc/sysupd_start.wav |  Bin 152938 -> 158620 bytes
+ opt/rockrobo/resources/sounds/prc/sysupd_wip.wav   |  Bin 71524 -> 77144 bytes
+ opt/rockrobo/resources/sounds/prc/timed_clean.wav  |  Bin 48378 -> 54300 bytes
+ opt/rockrobo/resources/sounds/prc/water_box_in.wav |  Bin 34984 -> 41474 bytes
+ .../resources/sounds/prc/water_box_out.wav         |  Bin 38184 -> 44630 bytes
+ .../sounds/prc/wifi_connect_failed.wav (new)       |  Bin 0 -> 132012 bytes
+ .../sounds/prc/wifi_connect_start.wav (new)        |  Bin 0 -> 92230 bytes
+ .../resources/sounds/prc/wifi_connected.wav (new)  |  Bin 0 -> 38136 bytes
+ opt/rockrobo/resources/sounds/prc/wifi_reset.wav   |  Bin 90008 -> 96462 bytes
+ .../resources/sounds/prc/wifi_ssid_wrong.wav (new) |  Bin 0 -> 133098 bytes
+ opt/rockrobo/resources/sounds/prc/zone.wav         |  Bin 51902 -> 57714 bytes
+ .../resources/sounds/prc/zone_complete.wav         |  Bin 104744 -> 110666 bytes
+ opt/rockrobo/resources/sounds/prc/zone_failed.wav  |  Bin 186024 -> 193546 bytes
+ .../resources/sounds/prc/zone_partialdone.wav      |  Bin 183464 -> 186798 bytes
+ .../resources/sounds/prc/zone_water_box_in.wav     |  Bin 137384 -> 144906 bytes
+ .../resources/sounds/tw/back_dock_failed.wav       |  Bin 216788 -> 206298 bytes
+ opt/rockrobo/resources/sounds/tw/bin_in.wav        |  Bin 63486 -> 54476 bytes
+ opt/rockrobo/resources/sounds/tw/bin_out.wav       |  Bin 62094 -> 51472 bytes
+ .../resources/sounds/tw/binout_error10.wav         |  Bin 203314 -> 182660 bytes
+ .../resources/sounds/tw/bl_recovery_bootfailed.wav |  Bin 264766 -> 252628 bytes
+ .../resources/sounds/tw/bl_recovery_failed.wav     |  Bin 128602 -> 116182 bytes
+ .../resources/sounds/tw/bl_recovery_retry.wav      |  Bin 225182 -> 210790 bytes
+ .../resources/sounds/tw/bl_recovery_start.wav      |  Bin 213306 -> 198144 bytes
+ .../sounds/tw/bl_recovery_updatefailed.wav         |  Bin 248756 -> 241976 bytes
+ opt/rockrobo/resources/sounds/tw/charging.wav      |  Bin 48292 -> 42170 bytes
+ .../resources/sounds/tw/child_lock_off.wav (new)   |  Bin 0 -> 130270 bytes
+ .../resources/sounds/tw/child_lock_on.wav (new)    |  Bin 0 -> 128470 bytes
+ .../sounds/tw/child_lock_on_click.wav (new)        |  Bin 0 -> 243158 bytes
+ opt/rockrobo/resources/sounds/tw/clean_bin.wav     |  Bin 117092 -> 112442 bytes
+ opt/rockrobo/resources/sounds/tw/clean_finish.wav  |  Bin 100392 -> 93056 bytes
+ opt/rockrobo/resources/sounds/tw/di.wav            |  Bin 32148 -> 39662 bytes
+ opt/rockrobo/resources/sounds/tw/ding.wav (new)    |  Bin 0 -> 31580 bytes
+ opt/rockrobo/resources/sounds/tw/error1.wav        |  Bin 189284 -> 176814 bytes
+ opt/rockrobo/resources/sounds/tw/error10.wav       |  Bin 181488 -> 239376 bytes
+ opt/rockrobo/resources/sounds/tw/error11.wav       |  Bin 215572 -> 203328 bytes
+ opt/rockrobo/resources/sounds/tw/error12.wav       |  Bin 136678 -> 128436 bytes
+ opt/rockrobo/resources/sounds/tw/error13.wav       |  Bin 182478 -> 173718 bytes
+ opt/rockrobo/resources/sounds/tw/error14.wav       |  Bin 107166 -> 97882 bytes
+ opt/rockrobo/resources/sounds/tw/error15.wav       |  Bin 167666 -> 146490 bytes
+ opt/rockrobo/resources/sounds/tw/error16.wav       |  Bin 188424 -> 171790 bytes
+ opt/rockrobo/resources/sounds/tw/error17.wav       |  Bin 199864 -> 188090 bytes
+ opt/rockrobo/resources/sounds/tw/error18.wav       |  Bin 191322 -> 188538 bytes
+ opt/rockrobo/resources/sounds/tw/error2.wav        |  Bin 154594 -> 149876 bytes
+ opt/rockrobo/resources/sounds/tw/error21.wav       |  Bin 172882 -> 166502 bytes
+ opt/rockrobo/resources/sounds/tw/error22.wav       |  Bin 146728 -> 138038 bytes
+ opt/rockrobo/resources/sounds/tw/error23.wav       |  Bin 170850 -> 164720 bytes
+ opt/rockrobo/resources/sounds/tw/error24.wav       |  Bin 254358 -> 249046 bytes
+ opt/rockrobo/resources/sounds/tw/error3.wav        |  Bin 165864 -> 153200 bytes
+ opt/rockrobo/resources/sounds/tw/error4.wav        |  Bin 191584 -> 183088 bytes
+ opt/rockrobo/resources/sounds/tw/error5.wav        |  Bin 180418 -> 254342 bytes
+ opt/rockrobo/resources/sounds/tw/error6.wav        |  Bin 152492 -> 137660 bytes
+ opt/rockrobo/resources/sounds/tw/error7.wav        |  Bin 232560 -> 224918 bytes
+ opt/rockrobo/resources/sounds/tw/error8.wav        |  Bin 133052 -> 123640 bytes
+ opt/rockrobo/resources/sounds/tw/error9.wav        |  Bin 146446 -> 135318 bytes
+ .../resources/sounds/tw/error_internal.wav         |  Bin 139702 -> 126252 bytes
+ opt/rockrobo/resources/sounds/tw/findme.wav        |  Bin 77016 -> 67420 bytes
+ opt/rockrobo/resources/sounds/tw/finish.wav        |  Bin 48480 -> 46922 bytes
+ opt/rockrobo/resources/sounds/tw/goto.wav          |  Bin 75344 -> 72890 bytes
+ opt/rockrobo/resources/sounds/tw/goto_complete.wav |  Bin 58666 -> 57516 bytes
+ opt/rockrobo/resources/sounds/tw/goto_failed.wav   |  Bin 67312 -> 63694 bytes
+ opt/rockrobo/resources/sounds/tw/home.wav          |  Bin 47412 -> 44090 bytes
+ opt/rockrobo/resources/sounds/tw/map_restore.wav   |  Bin 105946 -> 102796 bytes
+ opt/rockrobo/resources/sounds/tw/no_power.wav      |  Bin 92214 -> 85690 bytes
+ .../resources/sounds/tw/no_power_charging.wav      |  Bin 89010 -> 82238 bytes
+ .../resources/sounds/tw/no_spot_on_dock.wav        |  Bin 140672 -> 136604 bytes
+ opt/rockrobo/resources/sounds/tw/pause.wav         |  Bin 42122 -> 35634 bytes
+ opt/rockrobo/resources/sounds/tw/positioning.wav   |  Bin 61484 -> 79566 bytes
+ .../sounds/tw/positioning_map_changed.wav (new)    |  Bin 0 -> 110080 bytes
+ .../sounds/tw/positioning_still.wav (new)          |  Bin 0 -> 87516 bytes
+ .../sounds/tw/positioning_success.wav (new)        |  Bin 0 -> 45094 bytes
+ opt/rockrobo/resources/sounds/tw/power_off.wav     |  Bin 37040 -> 31930 bytes
+ .../resources/sounds/tw/power_off_rejected.wav     |  Bin 125414 -> 116864 bytes
+ .../resources/sounds/tw/power_resume_clean.wav     |  Bin 93466 -> 88584 bytes
+ .../resources/sounds/tw/relocate_failed.wav        |  Bin 129910 -> 124662 bytes
+ opt/rockrobo/resources/sounds/tw/remote.wav        |  Bin 49674 -> 44296 bytes
+ .../resources/sounds/tw/remote_complete.wav        |  Bin 50366 -> 46650 bytes
+ opt/rockrobo/resources/sounds/tw/restart_clean.wav |  Bin 111234 -> 103894 bytes
+ .../resources/sounds/tw/restart_clean_fromdock.wav |  Bin 163370 -> 160280 bytes
+ .../resources/sounds/tw/restart_clean_nodock.wav   |  Bin 156450 -> 153960 bytes
+ .../resources/sounds/tw/resume_backtodock.wav      |  Bin 138438 -> 204212 bytes
+ opt/rockrobo/resources/sounds/tw/resume_clean.wav  |  Bin 50704 -> 45966 bytes
+ opt/rockrobo/resources/sounds/tw/resume_home.wav   |  Bin 46922 -> 44730 bytes
+ opt/rockrobo/resources/sounds/tw/resume_room.wav   |  Bin 71710 -> 70890 bytes
+ opt/rockrobo/resources/sounds/tw/resume_spot.wav   |  Bin 150498 -> 213972 bytes
+ opt/rockrobo/resources/sounds/tw/resume_zone.wav   |  Bin 59174 -> 59460 bytes
+ opt/rockrobo/resources/sounds/tw/return_no.wav     |  Bin 65204 -> 59796 bytes
+ opt/rockrobo/resources/sounds/tw/return_yes.wav    |  Bin 169966 -> 168140 bytes
+ opt/rockrobo/resources/sounds/tw/room.wav          |  Bin 62210 -> 58160 bytes
+ opt/rockrobo/resources/sounds/tw/room_complete.wav |  Bin 109546 -> 106490 bytes
+ opt/rockrobo/resources/sounds/tw/room_failed.wav   |  Bin 169644 -> 204868 bytes
+ .../resources/sounds/tw/room_partialdone.wav       |  Bin 244630 -> 205888 bytes
+ .../resources/sounds/tw/room_water_box_in.wav      |  Bin 167648 -> 160918 bytes
+ opt/rockrobo/resources/sounds/tw/saving_map.wav    |  Bin 76204 -> 86568 bytes
+ opt/rockrobo/resources/sounds/tw/sound.ver         |    2 +-
+ opt/rockrobo/resources/sounds/tw/spot.wav          |  Bin 51322 -> 44090 bytes
+ opt/rockrobo/resources/sounds/tw/start.wav         |  Bin 46238 -> 45370 bytes
+ .../resources/sounds/tw/start_water_box_in.wav     |  Bin 135188 -> 129642 bytes
+ opt/rockrobo/resources/sounds/tw/stop_clean.wav    |  Bin 42122 -> 35578 bytes
+ opt/rockrobo/resources/sounds/tw/stop_goto.wav     |  Bin 74510 -> 70050 bytes
+ opt/rockrobo/resources/sounds/tw/stop_room.wav     |  Bin 104820 -> 98914 bytes
+ .../resources/sounds/tw/stop_scheduled_clean.wav   |  Bin 111580 -> 107580 bytes
+ opt/rockrobo/resources/sounds/tw/stop_spot.wav     |  Bin 71746 -> 68458 bytes
+ opt/rockrobo/resources/sounds/tw/stop_zone.wav     |  Bin 97950 -> 88460 bytes
+ .../resources/sounds/tw/sysupd_complete.wav        |  Bin 52826 -> 47290 bytes
+ opt/rockrobo/resources/sounds/tw/sysupd_failed.wav |  Bin 107632 -> 103290 bytes
+ .../resources/sounds/tw/sysupd_notready.wav        |  Bin 288620 -> 288628 bytes
+ opt/rockrobo/resources/sounds/tw/sysupd_start.wav  |  Bin 192838 -> 187848 bytes
+ opt/rockrobo/resources/sounds/tw/sysupd_wip.wav    |  Bin 94242 -> 85038 bytes
+ opt/rockrobo/resources/sounds/tw/timed_clean.wav   |  Bin 62814 -> 60090 bytes
+ opt/rockrobo/resources/sounds/tw/water_box_in.wav  |  Bin 50572 -> 48570 bytes
+ opt/rockrobo/resources/sounds/tw/water_box_out.wav |  Bin 46820 -> 47930 bytes
+ .../sounds/tw/wifi_connect_failed.wav (new)        |  Bin 0 -> 139638 bytes
+ .../sounds/tw/wifi_connect_start.wav (new)         |  Bin 0 -> 94492 bytes
+ .../resources/sounds/tw/wifi_connected.wav (new)   |  Bin 0 -> 57070 bytes
+ opt/rockrobo/resources/sounds/tw/wifi_reset.wav    |  Bin 49762 -> 46650 bytes
+ .../resources/sounds/tw/wifi_ssid_wrong.wav (new)  |  Bin 0 -> 137692 bytes
+ opt/rockrobo/resources/sounds/tw/zone.wav          |  Bin 63856 -> 60648 bytes
+ opt/rockrobo/resources/sounds/tw/zone_complete.wav |  Bin 110596 -> 106130 bytes
+ opt/rockrobo/resources/sounds/tw/zone_failed.wav   |  Bin 244592 -> 202692 bytes
+ .../resources/sounds/tw/zone_partialdone.wav       |  Bin 244592 -> 194128 bytes
+ .../resources/sounds/tw/zone_water_box_in.wav      |  Bin 155488 -> 152098 bytes
+ opt/rockrobo/rr-release                            |    2 +-
+ opt/rockrobo/rriot/rriot_rr (new +x)               |  Bin 0 -> 190808 bytes
+ opt/rockrobo/rriot/rriot_tuya                      |  Bin 652968 -> 640784 bytes
+ opt/rockrobo/rrlog/misc.sh                         |   18 +-
+ opt/rockrobo/rrlog/rrlog.conf                      |    1 -
+ opt/rockrobo/rrlog/rrlogd                          |  Bin 127336 -> 292496 bytes
+ opt/rockrobo/rrlog/rrlogmt.conf                    |    1 -
+ opt/rockrobo/rrlog/tar_extra_file.sh               |   36 +-
+ opt/rockrobo/rrlog/topflush.sh                     |    4 +-
+ opt/rockrobo/rrlog/toprotation.sh                  |    4 +-
+ opt/rockrobo/rrlog/topstop.sh                      |    8 +-
+ opt/rockrobo/scripts/pipes.sh                      |   84 +-
+ opt/rockrobo/scripts/provision.sh                  |    6 +-
+ opt/rockrobo/watchdog/ProcessList.conf             |    6 +-
+ opt/rockrobo/watchdog/WatchDoge                    |  Bin 96584 -> 84296 bytes
+ opt/rockrobo/watchdog/core_helper (new +x)         |   22 +
+ opt/rockrobo/watchdog/rrwatchdoge.conf             |    3 +-
+ opt/rockrobo/wlan/wifi_debug_collect.sh (new +x)   |    6 +
+ opt/rockrobo/wlan/wifi_start.sh                    |   66 +-
+ opt/rockrobo/wlan/wlanmgr                          |  Bin 47132 -> 43064 bytes
+ sbin/getty (mode +l)                               |  Bin 22628 -> 14 bytes
+ sbin/halt                                          |    2 +-
+ sbin/hwclock (mode +l)                             |  Bin 30416 -> 14 bytes
+ sbin/ifconfig (mode +l)                            |  Bin 48788 -> 14 bytes
+ sbin/ifdown                                        |    2 +-
+ sbin/ifup (mode +l)                                |  Bin 39964 -> 14 bytes
+ sbin/init (mode +l)                                |  Bin 194844 -> 14 bytes
+ sbin/insmod                                        |    2 +-
+ sbin/ip                                            |    2 +-
+ sbin/klogd (new +l)                                |    1 +
+ sbin/logread (new +l)                              |    1 +
+ sbin/lsmod                                         |    2 +-
+ sbin/mdev (new +l)                                 |    1 +
+ sbin/mkfs.ext4 (mode -l)                           |  Bin 6 -> 76028 bytes
+ sbin/mkswap (mode +l)                              |  Bin 22232 -> 14 bytes
+ sbin/pivot_root (mode +l)                          |  Bin 5592 -> 14 bytes
+ sbin/poweroff                                      |    2 +-
+ sbin/reboot (mode +l)                              |  Bin 9908 -> 14 bytes
+ sbin/rmmod                                         |    2 +-
+ sbin/route (mode +l)                               |  Bin 39680 -> 14 bytes
+ sbin/rr_login (new +x)                             |  Bin 0 -> 14084 bytes
+ sbin/start-stop-daemon (mode +l)                   |  Bin 22724 -> 14 bytes
+ sbin/switch_root (mode +l)                         |  Bin 9792 -> 14 bytes
+ sbin/sysctl (mode +l)                              |  Bin 13988 -> 14 bytes
+ sbin/syslogd (new +l)                              |    1 +
+ sbin/udhcpc (new +l)                               |    1 +
+ sbin/wpa_cli                                       |  Bin 61812 -> 61876 bytes
+ sbin/wpa_supplicant                                |  Bin 876104 -> 876116 bytes
+ usr/bin/[ (mode +l)                                |  Bin 26352 -> 17 bytes
+ usr/bin/[[ (new +l)                                |    1 +
+ usr/bin/adbd                                       |  Bin 493632 -> 76208 bytes
+ usr/bin/awk                                        |    2 +-
+ usr/bin/basename (mode +l)                         |  Bin 18144 -> 17 bytes
+ usr/bin/bunzip2 (new +l)                           |    1 +
+ usr/bin/bzcat (new +l)                             |    1 +
+ usr/bin/clear (mode +l)                            |  Bin 5604 -> 17 bytes
+ usr/bin/cmp (mode +l)                              |  Bin 30468 -> 17 bytes
+ usr/bin/crontab (mode +l)                          |  Bin 26620 -> 17 bytes
+ usr/bin/cut (mode +l)                              |  Bin 26372 -> 17 bytes
+ usr/bin/diff (mode +l)                             |  Bin 75720 -> 17 bytes
+ usr/bin/dirname (mode +l)                          |  Bin 18140 -> 17 bytes
+ usr/bin/du (mode +l)                               |  Bin 67492 -> 17 bytes
+ usr/bin/env (mode +l)                              |  Bin 18144 -> 17 bytes
+ usr/bin/expr (mode +l)                             |  Bin 26364 -> 17 bytes
+ usr/bin/find (mode +l)                             |  Bin 105176 -> 17 bytes
+ usr/bin/free (mode +l)                             |  Bin 13920 -> 17 bytes
+ usr/bin/head (mode +l)                             |  Bin 26360 -> 17 bytes
+ usr/bin/hexdump (new +l)                           |    1 +
+ usr/bin/id (mode +l)                               |  Bin 26376 -> 17 bytes
+ usr/bin/killall (mode +l)                          |  Bin 18408 -> 17 bytes
+ usr/bin/ldd                                        |    2 +-
+ usr/bin/less                                       |    2 +-
+ usr/bin/lsof (mode +l)                             |  Bin 121004 -> 17 bytes
+ usr/bin/md5sum (mode +l)                           |  Bin 26372 -> 17 bytes
+ usr/bin/mkfifo (mode +l)                           |  Bin 18148 -> 17 bytes
+ usr/bin/nc (new +l)                                |    1 +
+ usr/bin/nslookup (new +l)                          |    1 +
+ usr/bin/passwd (mode +l)                           |  Bin 33116 -> 17 bytes
+ usr/bin/pgrep (mode +l)                            |  Bin 18156 -> 17 bytes
+ usr/bin/pkill (mode -l)                            |  Bin 5 -> 18156 bytes
+ usr/bin/printf (mode +l)                           |  Bin 30460 -> 17 bytes
+ usr/bin/qemu-arm-static                            |  Bin 2971616 -> 3011840 bytes
+ usr/bin/readlink (new +l)                          |    1 +
+ usr/bin/reset                                      |    2 +-
+ usr/bin/rr_try_mount                               |  Bin 9900 -> 9900 bytes
+ usr/bin/seq (mode +l)                              |  Bin 26360 -> 17 bytes
+ usr/bin/setsid (mode +l)                           |  Bin 5624 -> 17 bytes
+ usr/bin/sort (mode +l)                             |  Bin 67700 -> 17 bytes
+ usr/bin/strings (new +l)                           |    1 +
+ usr/bin/tail (mode +l)                             |  Bin 42832 -> 17 bytes
+ usr/bin/tee (mode +l)                              |  Bin 18156 -> 17 bytes
+ usr/bin/test (mode +l)                             |  Bin 26352 -> 17 bytes
+ usr/bin/time (new +l)                              |    1 +
+ usr/bin/tr (mode +l)                               |  Bin 30456 -> 17 bytes
+ usr/bin/traceroute (new +l)                        |    1 +
+ usr/bin/traceroute6 (new +l)                       |    1 +
+ usr/bin/uniq (mode +l)                             |  Bin 26372 -> 17 bytes
+ usr/bin/uptime (mode +l)                           |  Bin 9796 -> 17 bytes
+ usr/bin/wc (mode +l)                               |  Bin 26404 -> 17 bytes
+ usr/bin/which                                      |    2 +-
+ usr/bin/wpa_passphrase                             |  Bin 26584 -> 26328 bytes
+ usr/bin/xargs (mode +l)                            |  Bin 26352 -> 17 bytes
+ usr/bin/xz (new +x)                                |  Bin 0 -> 51188 bytes
+ usr/bin/yes (mode +l)                              |  Bin 18132 -> 17 bytes
+ .../arm-linux-gnueabihf/libmbedcrypto.so (new +l)  |    1 +
+ .../libmbedcrypto.so.2.16.0 (new +x)               |  Bin 0 -> 243708 bytes
+ .../libmbedcrypto.so.3 (new +l)                    |    1 +
+ usr/lib/arm-linux-gnueabihf/libmbedtls.so (new +l) |    1 +
+ .../arm-linux-gnueabihf/libmbedtls.so.12 (new +l)  |    1 +
+ .../libmbedtls.so.2.16.0 (new +x)                  |  Bin 0 -> 128376 bytes
+ .../arm-linux-gnueabihf/libmbedx509.so (new +l)    |    1 +
+ .../arm-linux-gnueabihf/libmbedx509.so.0 (new +l)  |    1 +
+ .../libmbedx509.so.2.16.0 (new +x)                 |  Bin 0 -> 58728 bytes
+ usr/lib/arm-linux-gnueabihf/libstdc++.so.6         |    2 +-
+ .../libstdc++.so.6.0.26 (new +x)                   |  Bin 0 -> 867392 bytes
+ usr/lib/libstb_vorbis.so (new +x)                  |  Bin 0 -> 55900 bytes
+ usr/sbin/addgroup                                  |    2 +-
+ usr/sbin/adduser (mode +l)                         | 1083 +-------------------
+ usr/sbin/brctl (new +l)                            |    1 +
+ usr/sbin/chroot (mode +l)                          |  Bin 22288 -> 17 bytes
+ usr/sbin/crond (new +l)                            |    1 +
+ usr/sbin/dropbear (new +x)                         |  Bin 0 -> 137772 bytes
+ usr/sbin/ntpd (new +l)                             |    1 +
+ {lib => usr/share}/terminfo/a/ansi                 |  Bin
+ {lib => usr/share}/terminfo/d/dumb                 |  Bin
+ usr/share/terminfo/l/linux (new)                   |  Bin 0 -> 1780 bytes
+ usr/share/terminfo/p/putty                         |  Bin 2030 -> 2133 bytes
+ usr/share/terminfo/p/putty-256color                |  Bin 2074 -> 2490 bytes
+ usr/share/terminfo/p/putty-vt100                   |  Bin 2010 -> 2113 bytes
+ usr/share/terminfo/s/screen (new)                  |  Bin 0 -> 1587 bytes
+ usr/share/terminfo/s/screen-256color (new)         |  Bin 0 -> 1912 bytes
+ usr/share/terminfo/v/vt100 (mode -l)               |  Bin 21 -> 1194 bytes
+ {lib => usr/share}/terminfo/v/vt102                |  Bin
+ usr/share/terminfo/v/vt200 (mode -l)               |  Bin 5 -> 1377 bytes
+ usr/share/terminfo/v/vt220 (mode -l)               |  Bin 21 -> 1377 bytes
+ usr/share/terminfo/x/xterm (new)                   |  Bin 0 -> 3412 bytes
+ usr/share/terminfo/x/xterm-256color (new)          |  Bin 0 -> 3462 bytes
+ usr/share/terminfo/x/xterm-color (mode -l)         |  Bin 27 -> 1551 bytes
+ usr/share/terminfo/x/xterm-xfree86 (new)           |  Bin 0 -> 2240 bytes
+ usr/share/udhcpc/default.script (new +x)           |   65 ++
+ 616 files changed, 911 insertions(+), 1880 deletions(-)

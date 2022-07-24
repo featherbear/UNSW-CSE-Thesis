@@ -1,0 +1,3 @@
+Used this software - https://play.google.com/store/apps/details?id=app.greyshirts.sslcapture&hl=en_AU&gl=US
+
+On the UDP mode, but not sure how well it worked

@@ -1,0 +1,2 @@
+* Obstacle avoidance enhancements
+* Bug fixes and UI optimisation
