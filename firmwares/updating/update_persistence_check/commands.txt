@@ -1,0 +1,10 @@
+## CREATE
+find . -type d -exec sh -c "echo update-{} > {}/z5206677.was.here.update" \;
+
+## FIND
+find . -type f -name "z5206677.was.here.update"
+
+## DELETE
+find . -type f -name "z5206677.was.here.update" -exec rm {} \;
+
+
