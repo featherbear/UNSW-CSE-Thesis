@@ -1,0 +1,1 @@
+99d03de0562bb750d8000ef5ba91971e  ./output/roborock.vacuum.x6_2652_fw.tar.gz

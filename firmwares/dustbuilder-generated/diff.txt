@@ -1,0 +1,685 @@
+diff --git a/./modified/bin/hexdump b/./modified/bin/hexdump
+new file mode 100755
+index 0000000..4f40d1c
+Binary files /dev/null and b/./modified/bin/hexdump differ
+diff --git a/./modified/bin/nano b/./modified/bin/nano
+new file mode 100755
+index 0000000..aa78afe
+Binary files /dev/null and b/./modified/bin/nano differ
+diff --git a/./modified/bin/rnano b/./modified/bin/rnano
+new file mode 120000
+index 0000000..0f0ddd3
+--- /dev/null
++++ b/./modified/bin/rnano
+@@ -0,0 +1 @@
++nano
+\ No newline at end of file
+diff --git a/./modified/build.txt b/./modified/build.txt
+new file mode 100644
+index 0000000..0e3d4c6
+--- /dev/null
++++ b/./modified/build.txt
+@@ -0,0 +1,3 @@
++build with dustbuilder (https://builder.dontvacuum.me)
++Wed 13 Jul 2022 12:32:44 PM UTC
++2652
+diff --git a/./original/etc/dropbear/dropbear_dss_host_key b/./modified/etc/dropbear/dropbear_dss_host_key
+index 3160e2d..57785ed 100755
+Binary files a/./original/etc/dropbear/dropbear_dss_host_key and b/./modified/etc/dropbear/dropbear_dss_host_key differ
+diff --git a/./modified/etc/dropbear/dropbear_ecdsa_host_key b/./modified/etc/dropbear/dropbear_ecdsa_host_key
+new file mode 100644
+index 0000000..9a2f305
+Binary files /dev/null and b/./modified/etc/dropbear/dropbear_ecdsa_host_key differ
+diff --git a/./modified/etc/dropbear/dropbear_ed25519_host_key b/./modified/etc/dropbear/dropbear_ed25519_host_key
+new file mode 100644
+index 0000000..b814a19
+Binary files /dev/null and b/./modified/etc/dropbear/dropbear_ed25519_host_key differ
+diff --git a/./original/etc/dropbear/dropbear_rsa_host_key b/./modified/etc/dropbear/dropbear_rsa_host_key
+index 6e95531..ef42e4a 100755
+Binary files a/./original/etc/dropbear/dropbear_rsa_host_key and b/./modified/etc/dropbear/dropbear_rsa_host_key differ
+diff --git a/./modified/etc/init/S10cleanflags b/./modified/etc/init/S10cleanflags
+new file mode 100755
+index 0000000..d8b4d31
+--- /dev/null
++++ b/./modified/etc/init/S10cleanflags
+@@ -0,0 +1,16 @@
++#! /bin/sh
++
++case "$1" in
++  start|"")
++        /bin/bash /sbin/cleanflags.sh
++		touch /tmp/flagscleaned
++        ;;
++  stop)
++        /bin/bash /sbin/cleanflags.sh
++		touch /tmp/flagscleanedagain
++        ;;
++  *)
++        echo "Usage: cleanflags start|stop" >&2
++        exit 3
++        ;;
++esac
+diff --git a/./original/etc/inittab b/./modified/etc/inittab
+index 0e71184..9efeb36 100644
+--- a/./original/etc/inittab
++++ b/./modified/etc/inittab
+@@ -3,4 +3,4 @@
+ ::respawn:WatchDoge $RR_ROOT/watchdog >> $RR_UDATA/rockrobo/rrlog/watchdog.log 2>&1
+ ::respawn:/usr/bin/adbd
+ ::respawn:/usr/sbin/dropbear -F
+-::respawn:/sbin/rr_login -d /dev/ttyS0 -b 115200 -p vt100
++::respawn:/sbin/getty -L ttyS0 115200 vt100
+diff --git a/./modified/etc/nanorc b/./modified/etc/nanorc
+new file mode 100755
+index 0000000..4e5ba5d
+--- /dev/null
++++ b/./modified/etc/nanorc
+@@ -0,0 +1,299 @@
++## Sample initialization file for GNU nano.
++##
++## Please note that you must have configured nano with --enable-nanorc
++## for this file to be read!  Also note that this file should not be in
++## DOS or Mac format, and that characters specially interpreted by the
++## shell should not be escaped here.
++##
++## To make sure a value is disabled, use "unset <option>".
++##
++## For the options that take parameters, the default value is given.
++## Other options are unset by default.
++##
++## Quotes inside string parameters don't have to be escaped with
++## backslashes.  The last double quote in the string will be treated as
++## its end.  For example, for the "brackets" option, ""')>]}" will match
++## ", ', ), >, ], and }.
++
++## Use auto-indentation.
++# set autoindent
++
++## Backup files to filename~.
++# set backup
++
++## The directory to put unique backup files in.
++# set backupdir ""
++
++## Do backwards searches by default.
++# set backwards
++
++## Use bold text instead of reverse video text.
++# set boldtext
++
++## The characters treated as closing brackets when justifying
++## paragraphs.  They cannot contain blank characters.  Only closing
++## punctuation, optionally followed by closing brackets, can end
++## sentences.
++##
++# set brackets ""')>]}"
++
++## Do case sensitive searches by default.
++# set casesensitive
++
++## Constantly display the cursor position in the statusbar.  Note that
++## this overrides "quickblank".
++# set const
++
++## Use cut to end of line by default.
++# set cut
++
++## Set the line length for wrapping text and justifying paragraphs.
++## If fill is 0 or less, the line length will be the screen width less
++## this number.
++##
++# set fill -8
++
++## Enable ~/.nano_history for saving and reading search/replace strings.
++set historylog
++
++## The opening and closing brackets that can be found by bracket
++## searches.  They cannot contain blank characters.  The former set must
++## come before the latter set, and both must be in the same order.
++##
++# set matchbrackets "(<[{)>]}"
++
++## Use the blank line below the titlebar as extra editing space.
++# set morespace
++
++## Enable mouse support, if available for your system.  When enabled,
++## mouse clicks can be used to place the cursor, set the mark (with a
++## double click), and execute shortcuts.  The mouse will work in the X
++## Window System, and on the console when gpm is running.
++##
++# set mouse
++
++## Allow multiple file buffers (inserting a file will put it into a
++## separate buffer).  You must have configured with --enable-multibuffer
++## for this to work.
++##
++# set multibuffer
++
++## Don't convert files from DOS/Mac format.
++# set noconvert
++
++## Don't follow symlinks when writing files.
++# set nofollow
++
++## Don't display the helpful shortcut lists at the bottom of the screen.
++# set nohelp
++
++## Don't add newlines to the ends of files.
++# set nonewlines
++
++## Don't wrap text at all.
++set nowrap
++
++## Set operating directory.  nano will not read or write files outside
++## this directory and its subdirectories.  Also, the current directory
++## is changed to here, so any files are inserted from this dir.  A blank
++## string means the operating directory feature is turned off.
++##
++# set operatingdir ""
++
++## Preserve the XON and XOFF keys (^Q and ^S).
++# set preserve
++
++## The characters treated as closing punctuation when justifying
++## paragraphs.  They cannot contain blank characters.  Only closing
++## punctuation, optionally followed by closing brackets, can end
++## sentences.
++##
++# set punct "!.?"
++
++## Do quick statusbar blanking.  Statusbar messages will disappear after
++## 1 keystroke instead of 26.  Note that "const" overrides this.
++##
++# set quickblank
++
++## The email-quote string, used to justify email-quoted paragraphs.
++## This is an extended regular expression if your system supports them,
++## otherwise a literal string.  Default:
++# set quotestr "^([ 	]*[#:>\|}])+"
++## if you have extended regular expression support, otherwise:
++# set quotestr "> "
++
++## Fix Backspace/Delete confusion problem.
++# set rebinddelete
++
++## Fix numeric keypad key confusion problem.
++# set rebindkeypad
++
++## Do extended regular expression searches by default.
++# set regexp
++
++## Make the Home key smarter.  When Home is pressed anywhere but at the
++## very beginning of non-whitespace characters on a line, the cursor
++## will jump to that beginning (either forwards or backwards).  If the
++## cursor is already at that position, it will jump to the true
++## beginning of the line.
++# set smarthome
++
++## Use smooth scrolling as the default.
++# set smooth
++
++## Use this spelling checker instead of the internal one.  This option
++## does not properly have a default value.
++##
++# set speller "aspell -x -c"
++
++## Allow nano to be suspended.
++set suspend
++
++## Use this tab size instead of the default; it must be greater than 0.
++# set tabsize 8
++
++## Convert typed tabs to spaces.
++# set tabstospaces
++
++## Save automatically on exit, don't prompt.
++# set tempfile
++
++## Disallow file modification.  Why would you want this in an rcfile? ;)
++# set view
++
++## The two single-column characters used to display the first characters
++## of tabs and spaces.  187 in ISO 8859-1 (0000BB in Unicode) and 183 in
++## ISO-8859-1 (0000B7 in Unicode) seem to be good values for these.
++# set whitespace "  "
++
++## Detect word boundaries more accurately by treating punctuation
++## characters as parts of words.
++# set wordbounds
++
++## Enable the new (EXPERIMENTAL) generic undo code, not just for line cuts
++# set undo
++
++## Enable soft line wrapping (AKA full line display)
++# set softwrap
++
++
++## Color setup
++##
++## Format:
++##
++## syntax "short description" ["filename regex" ...]
++##
++## The "none" syntax is reserved; specifying it on the command line is
++## the same as not having a syntax at all.  The "default" syntax is
++## special: it takes no filename regexes, and applies to files that
++## don't match any other syntax's filename regexes.
++##
++## color foreground,background "regex" ["regex"...]
++## or
++## icolor foreground,background "regex" ["regex"...]
++##
++## "color" will do case sensitive matches, while "icolor" will do case
++## insensitive matches.
++##
++## Valid colors: white, black, red, blue, green, yellow, magenta, cyan.
++## For foreground colors, you may use the prefix "bright" to get a
++## stronger highlight.
++##
++## To use multi-line regexes, use the start="regex" end="regex"
++## [start="regex" end="regex"...] format.
++##
++## If your system supports transparency, not specifying a background
++## color will use a transparent color.  If you don't want this, be sure
++## to set the background color to black or white.
++##
++## If you wish, you may put your syntaxes in separate files.  You can
++## make use of such files (which can only include "syntax", "color", and
++## "icolor" commands) as follows:
++##
++## include "/path/to/syntax_file.nanorc"
++##
++## Unless otherwise noted, the name of the syntax file (without the
++## ".nanorc" extension) should be the same as the "short description"
++## name inside that file.  These names are kept fairly short to make
++## them easier to remember and faster to type using nano's -Y option.
++##
++## All regexes should be extended regular expressions.
++
++## Key bindings
++## Please see nanorc(5) for more details on this
++##
++## Here are some samples to get you going
++##
++# bind M-W nowrap main
++# bind M-A casesens search
++# bind ^S research main
++
++## Set this if your backspace key sends delete most of the time (2.1.3+)
++# bind kdel backspace all
++
++
++## Nanorc files
++include "/usr/share/nano/nanorc.nanorc"
++
++## C/C++
++include "/usr/share/nano/c.nanorc"
++
++## Cascading Style Sheets
++include "/usr/share/nano/css.nanorc"
++
++## Debian files
++include "/usr/share/nano/debian.nanorc"
++
++## Gentoo files
++include "/usr/share/nano/gentoo.nanorc"
++
++## HTML
++include "/usr/share/nano/html.nanorc"
++
++## PHP
++include "/usr/share/nano/php.nanorc"
++
++## TCL
++include "/usr/share/nano/tcl.nanorc"
++
++## TeX
++include "/usr/share/nano/tex.nanorc"
++
++## Quoted emails (under e.g. mutt)
++include "/usr/share/nano/mutt.nanorc"
++
++## Patch files
++include "/usr/share/nano/patch.nanorc"
++
++## Manpages
++include "/usr/share/nano/man.nanorc"
++
++## Groff
++include "/usr/share/nano/groff.nanorc"
++
++## Perl
++include "/usr/share/nano/perl.nanorc"
++
++## Python
++include "/usr/share/nano/python.nanorc"
++
++## Ruby
++include "/usr/share/nano/ruby.nanorc"
++
++## Java
++include "/usr/share/nano/java.nanorc"
++
++## AWK
++include "/usr/share/nano/awk.nanorc"
++
++## Assembler
++include "/usr/share/nano/asm.nanorc"
++
++## Bourne shell scripts
++include "/usr/share/nano/sh.nanorc"
++
++## POV-Ray
++include "/usr/share/nano/pov.nanorc"
++
++## XML-type files
++include "/usr/share/nano/xml.nanorc"
+diff --git a/./modified/etc/wgetrc b/./modified/etc/wgetrc
+new file mode 100755
+index 0000000..0e77d74
+--- /dev/null
++++ b/./modified/etc/wgetrc
+@@ -0,0 +1,135 @@
++###
++### Sample Wget initialization file .wgetrc
++###
++
++## You can use this file to change the default behaviour of wget or to
++## avoid having to type many many command-line options. This file does
++## not contain a comprehensive list of commands -- look at the manual
++## to find out what you can put into this file. You can find this here:
++##   $ info wget.info 'Startup File'
++## Or online here:
++##   https://www.gnu.org/software/wget/manual/wget.html#Startup-File
++##
++## Wget initialization file can reside in /etc/wgetrc
++## (global, for all users) or $HOME/.wgetrc (for a single user).
++##
++## To use the settings in this file, you will have to uncomment them,
++## as well as change them, in most cases, as the values on the
++## commented-out lines are the default values (e.g. "off").
++
++
++##
++## Global settings (useful for setting up in /etc/wgetrc).
++## Think well before you change them, since they may reduce wget's
++## functionality, and make it behave contrary to the documentation:
++##
++
++# You can set retrieve quota for beginners by specifying a value
++# optionally followed by 'K' (kilobytes) or 'M' (megabytes).  The
++# default quota is unlimited.
++#quota = inf
++
++# You can lower (or raise) the default number of retries when
++# downloading a file (default is 20).
++#tries = 20
++
++# Lowering the maximum depth of the recursive retrieval is handy to
++# prevent newbies from going too "deep" when they unwittingly start
++# the recursive retrieval.  The default is 5.
++#reclevel = 5
++
++# By default Wget uses "passive FTP" transfer where the client
++# initiates the data connection to the server rather than the other
++# way around.  That is required on systems behind NAT where the client
++# computer cannot be easily reached from the Internet.  However, some
++# firewalls software explicitly supports active FTP and in fact has
++# problems supporting passive transfer.  If you are in such
++# environment, use "passive_ftp = off" to revert to active FTP.
++#passive_ftp = off
++passive_ftp = on
++
++# The "wait" command below makes Wget wait between every connection.
++# If, instead, you want Wget to wait only between retries of failed
++# downloads, set waitretry to maximum number of seconds to wait (Wget
++# will use "linear backoff", waiting 1 second after the first failure
++# on a file, 2 seconds after the second failure, etc. up to this max).
++#waitretry = 10
++
++
++##
++## Local settings (for a user to set in his $HOME/.wgetrc).  It is
++## *highly* undesirable to put these settings in the global file, since
++## they are potentially dangerous to "normal" users.
++##
++## Even when setting up your own ~/.wgetrc, you should know what you
++## are doing before doing so.
++##
++
++# Set this to on to use timestamping by default:
++#timestamping = off
++
++# It is a good idea to make Wget send your email address in a `From:'
++# header with your request (so that server administrators can contact
++# you in case of errors).  Wget does *not* send `From:' by default.
++#header = From: Your Name <username@site.domain>
++
++# You can set up other headers, like Accept-Language.  Accept-Language
++# is *not* sent by default.
++#header = Accept-Language: en
++
++# You can set the default proxies for Wget to use for http, https, and ftp.
++# They will override the value in the environment.
++#https_proxy = http://proxy.yoyodyne.com:18023/
++#http_proxy = http://proxy.yoyodyne.com:18023/
++#ftp_proxy = http://proxy.yoyodyne.com:18023/
++
++# If you do not want to use proxy at all, set this to off.
++#use_proxy = on
++
++# You can customize the retrieval outlook.  Valid options are default,
++# binary, mega and micro.
++#dot_style = default
++
++# Setting this to off makes Wget not download /robots.txt.  Be sure to
++# know *exactly* what /robots.txt is and how it is used before changing
++# the default!
++#robots = on
++
++# It can be useful to make Wget wait between connections.  Set this to
++# the number of seconds you want Wget to wait.
++#wait = 0
++
++# You can force creating directory structure, even if a single is being
++# retrieved, by setting this to on.
++#dirstruct = off
++
++# You can turn on recursive retrieving by default (don't do this if
++# you are not sure you know what it means) by setting this to on.
++#recursive = off
++
++# To always back up file X as X.orig before converting its links (due
++# to -k / --convert-links / convert_links = on having been specified),
++# set this variable to on:
++#backup_converted = off
++
++# To have Wget follow FTP links from HTML files by default, set this
++# to on:
++#follow_ftp = off
++
++# To try ipv6 addresses first:
++#prefer-family = IPv6
++
++# Set default IRI support state
++#iri = off
++
++# Force the default system encoding
++#locale = UTF-8
++
++# Force the default remote server encoding
++#remoteencoding = UTF-8
++
++# Turn on to prevent following non-HTTPS links when in recursive mode
++#httpsonly = off
++
++# Tune HTTPS security (auto, SSLv2, SSLv3, TLSv1, PFS)
++#secureprotocol = auto
+diff --git a/./modified/lib/arm-linux-gnueabihf/libncursesw.so.5 b/./modified/lib/arm-linux-gnueabihf/libncursesw.so.5
+new file mode 120000
+index 0000000..0db6e74
+--- /dev/null
++++ b/./modified/lib/arm-linux-gnueabihf/libncursesw.so.5
+@@ -0,0 +1 @@
++libncursesw.so.5.9
+\ No newline at end of file
+diff --git a/./modified/lib/arm-linux-gnueabihf/libncursesw.so.5.9 b/./modified/lib/arm-linux-gnueabihf/libncursesw.so.5.9
+new file mode 100755
+index 0000000..7c79b54
+Binary files /dev/null and b/./modified/lib/arm-linux-gnueabihf/libncursesw.so.5.9 differ
+diff --git a/./original/opt/rockrobo/cleaner/lib/librrlocale.so b/./modified/opt/rockrobo/cleaner/lib/librrlocale.so
+old mode 100644
+new mode 100755
+index caf773e..e23139a
+Binary files a/./original/opt/rockrobo/cleaner/lib/librrlocale.so and b/./modified/opt/rockrobo/cleaner/lib/librrlocale.so differ
+diff --git a/./original/opt/rockrobo/rrlog/rrlogd b/./modified/opt/rockrobo/rrlog/rrlogd
+index 4939b51..243a724 100755
+Binary files a/./original/opt/rockrobo/rrlog/rrlogd and b/./modified/opt/rockrobo/rrlog/rrlogd differ
+diff --git a/./original/opt/rockrobo/watchdog/WatchDoge b/./modified/opt/rockrobo/watchdog/WatchDoge
+index f4d7dbf..3f0fbca 100755
+Binary files a/./original/opt/rockrobo/watchdog/WatchDoge and b/./modified/opt/rockrobo/watchdog/WatchDoge differ
+diff --git a/./original/opt/rockrobo/watchdog/rrwatchdoge.conf b/./modified/opt/rockrobo/watchdog/rrwatchdoge.conf
+index 67326c0..b80697f 100644
+--- a/./original/opt/rockrobo/watchdog/rrwatchdoge.conf
++++ b/./modified/opt/rockrobo/watchdog/rrwatchdoge.conf
+@@ -61,7 +61,7 @@ pre-start script
+     mkdir -p $RR_UDATA/wlan
+     mkdir -p $RR_UDATA/miio
+     ldconfig
+-    iptables -I INPUT -j DROP -p tcp --dport 22
++#    iptables -I INPUT -j DROP -p tcp --dport 22
+     iptables -I INPUT -j DROP -p tcp --dport 6665
+     iptables -I INPUT -j DROP -p udp --dport 6665
+     $RR_ROOT/scripts/provision.sh
+diff --git a/./modified/root/.ssh/authorized_keys b/./modified/root/.ssh/authorized_keys
+new file mode 100644
+index 0000000..2a4ff5c
+--- /dev/null
++++ b/./modified/root/.ssh/authorized_keys
+@@ -0,0 +1 @@
++ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCRQFaNcUcJoAK5500AtRB4LoxE7yd+okO2cb0SYmDrE4DEULQMHCwKTfgCSBXJbZkqs9dmRVWirACush3tfNI3ldW1Cd+MRQB2E0FM+T9v3nB7icUVvLENM3cGDWAc2LqW01P+b2aWDsfP7VaYllxWp0KqFG/ggje8yNzKshjIM3jGLuB+UL9F2B4bt0jw/tGZ//myzWBcs1ZVbb4EiDom8FY/mx5OJ/FBg21E6YkN7LAl1W/x14Y/pd+qxoT1R3P2A+cRtTf/3UzU11nQ2WS2sNvI6byfSAyUwqR+49uJFC4njza6NFA7UO4GKJ0nMhkqzl05N6k+ULjmft/n879L 
+diff --git a/./modified/sbin/cleanflags.sh b/./modified/sbin/cleanflags.sh
+new file mode 100755
+index 0000000..cea4e0c
+--- /dev/null
++++ b/./modified/sbin/cleanflags.sh
+@@ -0,0 +1,45 @@
++#!/bin/bash
++
++# needs to be bash or echo gets sad and writed wrong data (0x2d instead of 0x01)
++# example integration in https://dustbuilder.xvm.mit.edu/resetfix_maybe/
++
++# shellcheck disable=SC2034
++_DEV="/dev/mmcblk0p5"
++_LOG_FILE="/mnt/reserve/factory_reset_detection.log"
++# 0x1 ... just for reference
++_SHALL="AQ=="
++# 0x4 ... thats bad, this is not reached under normal circumstances (updates: 0x1-0x3)
++_SHALLNOT="BA=="
++_RESET_DETECTED=0
++
++actual=$(/bin/dd if="/dev/mmcblk0p5" bs=1 count=1 skip=309504 | /usr/bin/base64)
++if [ "$_SHALLNOT" == "$actual" ] ; then
++	  date >> "$_LOG_FILE"
++		echo -n " 309504" >> "$_LOG_FILE"
++		echo -n "$_SHALL" >> "$_LOG_FILE"
++		echo -n " " >> "$_LOG_FILE"
++		echo -n "$actual" >> "$_LOG_FILE"
++		echo -n " " >> "$_LOG_FILE"
++		echo " - bad partition flag detected for systemA" >> "$_LOG_FILE"
++        _RESET_DETECTED=1
++fi
++
++actual=$(/bin/dd if="/dev/mmcblk0p5" bs=1 count=1 skip=311552 | /usr/bin/base64)
++if [ "$_SHALLNOT" == "$actual" ] ; then
++	  date >> "$_LOG_FILE"
++		echo -n " 311552" >> "$_LOG_FILE"
++		echo -n $_SHALL >> "$_LOG_FILE"
++		echo -n " " >> "$_LOG_FILE"
++		echo -n "$actual" >> "$_LOG_FILE"
++		echo -n " " >> "$_LOG_FILE"
++		echo " - bad partition flag detected for systemB" >> "$_LOG_FILE"
++        _RESET_DETECTED=1
++fi
++
++# Clean flags only if they have a bad flag. This prevents the sysupdate process from being sad
++if [ $_RESET_DETECTED -ne 0 ] ; then
++    echo -n -e '\x1' | /bin/dd conv=notrunc of="/dev/mmcblk0p5" bs=1 count=1 seek=309504
++    echo -n -e '\x1' | /bin/dd conv=notrunc of="/dev/mmcblk0p5" bs=1 count=1 seek=311552
++    date >> "$_LOG_FILE"
++    echo " flags cleaned" >> "$_LOG_FILE"
++fi
+diff --git a/./modified/sbin/resize2fs b/./modified/sbin/resize2fs
+new file mode 100755
+index 0000000..fba7915
+Binary files /dev/null and b/./modified/sbin/resize2fs differ
+diff --git a/./modified/usr/bin/curl b/./modified/usr/bin/curl
+new file mode 100755
+index 0000000..d48302f
+Binary files /dev/null and b/./modified/usr/bin/curl differ
+diff --git a/./modified/usr/bin/dbclient b/./modified/usr/bin/dbclient
+new file mode 100755
+index 0000000..370825a
+Binary files /dev/null and b/./modified/usr/bin/dbclient differ
+diff --git a/./modified/usr/bin/dropbearkey b/./modified/usr/bin/dropbearkey
+new file mode 100755
+index 0000000..fd1bbfa
+Binary files /dev/null and b/./modified/usr/bin/dropbearkey differ
+diff --git a/./modified/usr/bin/htop b/./modified/usr/bin/htop
+new file mode 100755
+index 0000000..d52a773
+Binary files /dev/null and b/./modified/usr/bin/htop differ
+diff --git a/./modified/usr/bin/nano b/./modified/usr/bin/nano
+new file mode 120000
+index 0000000..7a06612
+--- /dev/null
++++ b/./modified/usr/bin/nano
+@@ -0,0 +1 @@
++/bin/nano
+\ No newline at end of file
+diff --git a/./original/usr/bin/scp b/./modified/usr/bin/scp
+index 914e5ae..fc887e4 100755
+Binary files a/./original/usr/bin/scp and b/./modified/usr/bin/scp differ
+diff --git a/./modified/usr/bin/wget b/./modified/usr/bin/wget
+new file mode 100755
+index 0000000..975229d
+Binary files /dev/null and b/./modified/usr/bin/wget differ
+diff --git a/./modified/usr/lib/arm-linux-gnueabihf/libformw.so.5 b/./modified/usr/lib/arm-linux-gnueabihf/libformw.so.5
+new file mode 120000
+index 0000000..a530780
+--- /dev/null
++++ b/./modified/usr/lib/arm-linux-gnueabihf/libformw.so.5
+@@ -0,0 +1 @@
++libformw.so.5.9
+\ No newline at end of file
+diff --git a/./modified/usr/lib/arm-linux-gnueabihf/libformw.so.5.9 b/./modified/usr/lib/arm-linux-gnueabihf/libformw.so.5.9
+new file mode 100755
+index 0000000..8c54be0
+Binary files /dev/null and b/./modified/usr/lib/arm-linux-gnueabihf/libformw.so.5.9 differ
+diff --git a/./modified/usr/lib/arm-linux-gnueabihf/libmenuw.so.5 b/./modified/usr/lib/arm-linux-gnueabihf/libmenuw.so.5
+new file mode 120000
+index 0000000..3a75b11
+--- /dev/null
++++ b/./modified/usr/lib/arm-linux-gnueabihf/libmenuw.so.5
+@@ -0,0 +1 @@
++libmenuw.so.5.9
+\ No newline at end of file
+diff --git a/./modified/usr/lib/arm-linux-gnueabihf/libmenuw.so.5.9 b/./modified/usr/lib/arm-linux-gnueabihf/libmenuw.so.5.9
+new file mode 100755
+index 0000000..0887032
+Binary files /dev/null and b/./modified/usr/lib/arm-linux-gnueabihf/libmenuw.so.5.9 differ
+diff --git a/./modified/usr/lib/arm-linux-gnueabihf/libpanelw.so.5 b/./modified/usr/lib/arm-linux-gnueabihf/libpanelw.so.5
+new file mode 120000
+index 0000000..9e34ed3
+--- /dev/null
++++ b/./modified/usr/lib/arm-linux-gnueabihf/libpanelw.so.5
+@@ -0,0 +1 @@
++libpanelw.so.5.9
+\ No newline at end of file
+diff --git a/./modified/usr/lib/arm-linux-gnueabihf/libpanelw.so.5.9 b/./modified/usr/lib/arm-linux-gnueabihf/libpanelw.so.5.9
+new file mode 100755
+index 0000000..d33053e
+Binary files /dev/null and b/./modified/usr/lib/arm-linux-gnueabihf/libpanelw.so.5.9 differ
+diff --git a/./original/usr/sbin/dropbear b/./modified/usr/sbin/dropbear
+index 4c06f03..ed81526 100755
+Binary files a/./original/usr/sbin/dropbear and b/./modified/usr/sbin/dropbear differ
