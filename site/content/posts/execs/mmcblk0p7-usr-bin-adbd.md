@@ -46,6 +46,8 @@ Commands are validated (`0x11dbc`) to check they that don't contain `;` `&` `|` 
 
 ![](/uploads/20220725-snipaste_2022-07-26_03-56-14.jpg)
 
+![](/uploads/20220725-snipaste_2022-07-26_04-02-13.jpg)
+
 ## Access Levels
 
 * There are different so-called "levels", \[possibly\] determined by the value of `adb_lock` in the `/mnt/default/adb.conf` file (file default is 1, app default on parse error is 0)
