@@ -994,6 +994,14 @@ Data is compressed and encrypted
 
 ---
 
+Nearby attackers
+
+* Sniff during pairing
+* Remote OTA
+
+---
+
+
 ## Vendor has the ability to issue remote commands
 
 * Packet log
@@ -1037,9 +1045,8 @@ Data is compressed and encrypted
 
 ![](/uploads/20220711-snipaste_2022-07-12_04-24-24.jpg)
 
-{{% section %}}
 
-{{< slide transition="fade" >}}
+{{% section %}}
 
 ## Upgrade procedure
 
@@ -1057,7 +1064,6 @@ Both filesystems are overwritten (meaning all our changes will disappear)
 
 ---
 
-{{< slide transition="fade" >}}
 
 ## Achieving upgrade persistence
 
@@ -1146,20 +1152,67 @@ During device initialisation, an OTA update payload could be sent...
 
 # Security Response
 
+* Saw that there were checks for buffer overflows
+* Encryption
+* Reduction in log verbosity
+* iptables
+* ip6tables
 
+## Disclosures
 
-https://featherbear.cc/UNSW-CSE-Thesis/posts/disclosures/
-Response to disclosures
-tuya and roborock only have one disclosure listed on their site?
-Hard to find
+* Only _one_ listed on their [webpage](https://global.roborock.com/pages/disclosure-security-vulnerability-on-tuya-iot-cloud)
+  * No CVE report (MITRE)
+  * Have email
+* Same as for Tuya
+  * Have SRC
+  * Bug bounty
+* Xiaomi has many vulns
+  * Bug bounty
 
+https://images.tuyacn.com/smart/docs/TuyaSmart-WhitePaper-Intl.pdf
+>> Pairing Security
 
+>> https://featherbear.cc/UNSW-CSE-Thesis/posts/xiaomi-cyber-security-baseline-for-consumer-internet-of-things/
 xiaomi paper
 
+---
+
+# Towards an expected conversation - RFC 8520
+
+> [RFC 8520](https://datatracker.ietf.org/doc/rfc8520/) - Manufacturer Usage Description
+
+{{% section %}}
+
+<img round src="/uploads/20220725-snipaste_2022-07-26_07-37-41.jpg" />
 
 
-* UNSW Elec - MUD - they could do this to heighten security
-  * note - doesn't prevent them from being malicious from within their own C2 server, but will mitigate modified devices
+[MUD](https://developer.cisco.com/docs/mud/#!what-is-mud/what-is-mud) files whitelist the nature of network traffic that a device should transmit/receive. <span style="font-size: 0.8em; color: grey">(e.g. Transmit IPv4 tcp/8890 to (DNS) example.com)</span>
+
+Traffic that does not match the MUD are discarded (or allowed but flagged). Mitigates unexpected ports/hosts - but ineffective against <span style="font-size: 0.6em">(e.g.)</span> C2 payloads
+
+IoT Research Team @ [UNSW EE&T](https://iotanalytics.unsw.edu.au/mudprofiles) has done some research
+
+---
+
+<div style='display: flex; flex-direction: row'>
+
+<div>
+<img round src="/uploads/20220725-snipaste_2022-07-26_07-26-49.jpg" >
+</div>
+
+<div>
+RFC8520 was approved and published in <label>March 2019</label>
+
+<br/>
+<br/>
+
+But is anyone adopting it?
+
+</div>
+
+{{% /section %}}
+
+---
 
 
 Takeaway
@@ -1172,9 +1225,6 @@ When
 Why
 Where
 How
-
-
----
 
 
 Address the statement
