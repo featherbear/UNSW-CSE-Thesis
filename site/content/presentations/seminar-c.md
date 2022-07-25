@@ -982,59 +982,39 @@ Data is compressed and encrypted
 
 ---
 
-# Let's Talk Threats
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
-> Talk about threat models
+# Demos and POCs
 
--
--
--
--
--
-
----
-
-Nearby attackers
-
-* Sniff during pairing
-* Remote OTA
-
----
-
-
-## Vendor has the ability to issue remote commands
-
-* Packet log
-* Possible RCE?
-* Upload arbitrary
+{{% note %}}
+Before we look at threats, let's look at some fun stuff!
+{{% /note %}}
 
 ---
 
-## DIY Remote Access
+# Remote Access (across the internet!!!)
 
 * Easy to perform - system has required libraries and network stack
 * e.g. Reverse SSH
 * e.g. VPN / SD-WAN
 
 {{< youtube om2yzYHU1A0 >}}
+<!-- TODO: video thumbnail? -->
 
 ---
 
+# Reset Persistence (factory reset friendly!!!)
 
-<!-- ## Hands-off rooting
-
-||ZeroTier|ADB|MiIO|
-|---:|
-|Disassembly Required|
-|Upgrade Persistent|
-|Reset Persistent|
-|Still Works| -->
-
-## Reset Persistence
-
-> Patch the recovery partition `mmcblk0p7`
-
-
+> #ModifyingTheRecoveryPartitionForFunAndProfit
 
 {{< youtube eABmzUfZ22A >}}
 
@@ -1060,10 +1040,9 @@ Nearby attackers
 
 >
 
-Both filesystems are overwritten (meaning all our changes will disappear)
+Both filesystems are overwritten (existing changes will disappear)
 
 ---
-
 
 ## Achieving upgrade persistence
 
@@ -1111,7 +1090,7 @@ If using a repeated or scheduled task - we'd have to have a fast loop to interce
 
 ---
 
-## OTA Rooting 
+# OTA Rooting 
 
 {{% section %}}
 
@@ -1147,6 +1126,69 @@ During device initialisation, an OTA update payload could be sent...
 
 
 {{% /section %}}
+
+
+---
+
+# Let's Talk Threats
+
+* <label>TS0 - No malicious threat</label>
+  * Data visibility, device ownership
+* <label>TS1 - Physical (proximal) threat</label>
+  * Supply-chain
+  * Second-hand seller
+  * Someone with short/prolonged access
+* <label>TS2 - Remote (proximal) threat</label>
+  * Nearby, on the network
+  * Nearby, outside of the network
+* <label>TS3 - Remote (distal) threat</label>
+  * Backdoor
+  * Vendor C2
+
+<span style="color: grey">exc: Usage of the data in the cloud</span>
+
+---
+
+# TS0 - No malicious threat
+
+> Data visibility and ownership
+
+* All WAN communications are encrypted
+* Logs are encrypted
+
+TODO: Insert screenshot from phone about deleting account
+
+Nearby attackers
+
+* Remote OTA
+
+---
+
+## TS1 - Physical (proximal) threat
+
+Takes time to open the device
+
+---
+## TS2 - Remote (proximal) threat
+
+> The "coffee shop hacker"
+
+* Sniff during pairing
+
+---
+
+## TS3 - Remote (distal) threat
+
+* Backdoor
+* Vendor
+
+---
+
+## Vendor has the ability to issue remote commands
+
+* Packet log
+* Possible RCE?
+* Upload arbitrary
 
 ---
 
@@ -1214,26 +1256,41 @@ But is anyone adopting it?
 
 ---
 
+>
 
-Takeaway
-Summary (answer main point)
+<div>
+How have manufacturers of IoT / smart home devices addressed the increasing concerns of digital privacy and product security?
+<div style="text-align: right; font-size: 20px;">(Specifically Roborock)</span>
+</div>
 
-tldr
-Who
-What 
-When
-Why
-Where
-How
+> 
 
+<br />
+<br />
 
-Address the statement
+* ADB, Serial, MiIO OTA, SSH, tcpdump, RCE?, persistence, pairing
+* Roborock has historically responded to upgrades
+* Data is cleared
+* Encryption
+* Both Tuya and Xiaomi have encouraged security research
+  * Whitepapers
+  * Bug bounties
+* MUD files - need more adoption <!-- both device and infra manufacturers >
 
 ---
 
-# Thesis in a Year
+# Future Work
 
-![](/uploads/screely-1658645824986.png)
+* Test HSTS and MITM
+* Fuzz exposed ports
+* Test the mobile app
+* Test the cloud
+
+---
+
+# Aside: Thesis in a Year
+
+[![](/uploads/screely-1658645824986.png)](https://featherbear.cc/UNSW-CSE-Thesis/tldr/)
 
 
 ---
