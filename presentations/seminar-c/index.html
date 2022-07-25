@@ -239,12 +239,453 @@ This does mean I only have access to the eMMC rather than being able to dump the
 </li>
 <li>Update to latest version <span style=font-size:18px>(and hope we don&rsquo;t get locked out)</span>
 <ul>
-<li><span style=color:grey>disclaimer: we did. hahah&mldr;.</span></li>
+<li><span style=color:grey;font-size:18px>disclaimer: we got locked out. hahah&mldr;.</span></li>
 <li>Compare file changes</li>
 </ul>
 </li>
 <li>Factory reset device, check for remnant files</li>
 </ul>
+</section>
+</section><section>
+<aside class=notes><p>Now that we&rsquo;re throwing in a new firmware version, or a few new versions actually&mldr;<br>
+What&rsquo;s the best way to explore these?</p>
+<p>All of firmware A, then all of firmware B, then all of firmware C?</p>
+<p>Or topic 1, firmware A and B and C
+then topic 2, firmware A and B and C</p>
+<p>The second idea is probably better - as we should be focussing on the <em>changes</em> (i.e. efforts that the company has done) between firmware version</p>
+</aside>
+<h1 id=firmware-comparison>Firmware Comparison</h1>
+<section data-shortcode-section>
+<pre><code class=language-bash>$&gt; cat /etc/OS_VERSION
+ro.product.device=MI1558_TANOS_MP_S2020032500REL_M3.3.0_RELEASE_20200325-204847
+$&gt; #              ^^^^^^           ^^^^^^^^
+$&gt; #              \/\\//           \\\\////
+$&gt; #          Xiaomi v01.15.58  25th March 2020
+$&gt; #                                      
+</code></pre>
+<p><label>Aside</label></p>
+<ul>
+<li>The Roborock S6 was released in June 2019</li>
+<li>The unit I have was manufactured June 2020
+<ul>
+<li>My unit has a newer base firmware (25th March 2020)</li>
+</ul>
+</li>
+<li>Note the presence of &ldquo;<label>MI</label>&rdquo; at the start of the product string</li>
+</ul>
+</section><section>
+<h2 id=stock-ubuntu-14043-lts>Stock Ubuntu 14.04.3 LTS</h2>
+<p>Performed a <code>diff</code> check against the <a href=http://cdimage.ubuntu.com/ubuntu-base/releases/14.04/release/ubuntu-base-14.04.3-core-armhf.tar.gz>Ubuntu 14.04.3 Core LTS (armhf)</a> OS.</p>
+<blockquote>
+</blockquote>
+<ul>
+<li>All binaries present on the device matched, <i>except</i> for <code>ntpdate</code> (synchronise computer time via NTP)</li>
+<li>Still functionally equivalent</li>
+</ul>
+<p><img src=../../uploads/20220724-snipaste_2022-06-29_02-32-15.jpg alt></p>
+</section><section>
+<h2 id=a-new-firmware>A new firmware</h2>
+<pre><code class=language-diff>-ro.product.device=MI1558_TANOS_MP_S2020032500REL_M3.3.0_RELEASE_20200325-204847
++ro.product.device=TANOS_V2902-2022042802REL_M3.5.8_T4.1.4-2_RELEASE_20220428-202811
+-ro.build.display.id=TANOS_MP_R16_RELEASE_20200325-204847
++ro.build.display.id=TANOS_MP_R16_RELEASE_20220428-202811
+ ro.sys.cputype=R16.STM32.A3.G1
+-ro.build.version.release=1558
++ro.build.version.release=V2902
+-ro.build.date.utc=1585140527
++ro.build.date.utc=1651148891
+</code></pre>
+<p>The update process performed several incremental updates..<br>
+finally updating to <label>v02.29.02</label> (28th April 2022)</p>
+</section><section>
+<h2 id=the-official-changelog>The Official Changelog</h2>
+<pre><code>&gt; 01.17.08 (17th April 2020)
+- Supports multi-floor map saving and robot knows which floor it is
+- Update to new structured SLAM algorithm to make map more reliable
+- Support customised room cleaning sequence
+- Support no-mop zone
+
+&gt; 01.19.98 (9th June 2020)
+* Improvised Wi-Fi Easy Connect
+* overall improvements
+* bug fixes
+* UX fixes
+
+&gt; 01.20.76 (23rd June 2020)
+* Obstacle avoidance enhancements
+* Bug fixes and UI optimisation
+
+&gt; probably more updates (got locked out)
+
+&gt; 02.29.02 (28th April 2022)
+* Optimized the quick mapping experience
+</code></pre>
+</section>
+<section data-noprocess data-shortcode-slide data-transition=fade>
+<h2 id=the-changelog-i-actually-care-about>The Changelog I Actually Care About</h2>
+<pre><code>&gt; 01.17.08 (17th April 2020)
+* /opt/rockrobo/watchdog/WatchDoge iptables drop SSH
+* /opt/rockrobo/rrlog/rrlogd iptables drop SSH
+* Utilities change to busybox
+* SSH server changed to dropbear
+* /opt/rockrobo/rriot/rriot_rr added (but not enabled)
+
+&gt; 01.19.98 (9th June 2020)
+* Serial handler changed to /sbin/rr_login
+
+&gt; 01.20.76 (23rd June 2020)
+-
+
+&gt; probably more updates (got locked out)
+
+&gt; 02.29.02 (28th April 2022)
+* /opt/rockrobo/rriot/rriot_rr enabled
+</code></pre>
+</section><section>
+<h2 id=getting-locked-out---rr_login>Getting locked out - <code>rr_login</code></h2>
+<pre><code class=language-md data-line-numbers=5>...
+* /opt/rockrobo/rriot/rriot_rr added (but not enabled)
+
+&gt; 01.19.98 (9th June 2020)
+* Serial handler changed to /sbin/rr_login
+
+&gt; 01.20.76 (23rd June 2020)
+-
+...
+</code></pre>
+<p>After the <label>v01.19.98</label> update, serial shell access was denied, uh oh!</p>
+<aside class=notes><p>Did the password change?<br>
+Did I break something?<br>
+Is this the end?</p>
+</aside>
+</section><section>
+<h2 id=lockdown-shell>Lockdown: Shell</h2>
+<ul>
+<li>Serial handler no longer uses <code>getty</code>
+<ul>
+<li>Now uses modified version called <a href=posts/sbin-rr_login/><code>rr_login</code></a></li>
+</ul>
+</li>
+<li>OpenSSH server was replaced with modified version of <code>dropbear</code></li>
+</ul>
+<blockquote>
+</blockquote>
+<p>Both only allow login as the <code>root</code> user</p>
+<p><img src=../../uploads/20220711-snipaste_2022-07-12_00-28-13.jpg alt></p>
+<aside class=notes><p>Serial handler is responsible for giving us the UART shell interface)</p>
+</aside>
+</section><section>
+<h2 id=lockdown-authentication>Lockdown: Authentication</h2>
+<p>The <code>vinda</code> file is no longer used for auth!</p>
+<blockquote>
+</blockquote>
+<p>Login attempts now verify against</p>
+<ul>
+<li><code>[mmcblk0p6]/shadow</code></li>
+<li><code>[mmcblk0p6]/shadow.sign</code>.</li>
+</ul>
+<blockquote>
+<p>But these files don&rsquo;t exist on my device&mldr;</p>
+</blockquote>
+<p>Affected: <code>rr_login</code> (serial), <code>dropbear</code> (SSH), <code>adbd</code> (USB)</p>
+<aside class=notes><p>Confirmed by checking against strace / gdb / static analysis (BinaryNinja)</p>
+</aside>
+<p><small><label>Fix</label><br>
+<a href=../posts/upgraded-accessing-the-shell/>(1)</a> Enter bootloader and force entrypoint to a shell<br>
+<a href=../posts/upgrade-notes/#notice>(2)</a> Patch <code>/etc/inittab</code> to revert back to a normal login shell</small></p>
+</section><section>
+<h2 id=lockdown-authentication-span-stylefont-size-24pxverify_shadowspan>Lockdown: Authentication <span style=font-size:24px>(<code>verify_shadow</code>)</span></h2>
+<p><img src=../../uploads/20220719-snipaste_2022-07-19_22-51-42.jpg alt></p>
+</section><section>
+<h2 id=lockdown-authentication-span-stylefont-size-24pxssh-auth-attempt-trace-with-stracespan>Lockdown: Authentication <span style=font-size:24px>(SSH auth attempt trace with <code>strace</code>)</span></h2>
+<p><img src=../../uploads/20220719-snipaste_2022-07-19_22-24-51.jpg alt></p>
+</section><section>
+<h2 id=system-changes>System Changes</h2>
+<ul>
+<li>Are we still using Ubuntu?
+<ul>
+<li>Maybe? </li>
+<li><code>apt-get</code> and <code>dpkg</code> removed</li>
+</ul>
+</li>
+<li>Lots of tools were replaced with BusyBox (v1.24.1)
+<ul>
+<li>Also a space-saving measure</li>
+<li><img src=../../uploads/20220724-snipaste_2022-07-25_02-50-06.jpg alt></li>
+</ul>
+</li>
+<li>Effectively now running embedded Linux</li>
+</ul>
+<p><small><a href=https://github.com/featherbear/UNSW-CSE-Thesis/blob/master/firmwares/updating/v02.29.02_diff_v01.15.58.diff>Download git diff</a></small></p>
+</section><section>
+<h2 id=lockdown-firewall>Lockdown: Firewall</h2>
+<ul>
+<li>There are now <code>ip6tables</code> rules to drop all packets 👏
+<ul>
+<li>Apps also no longer perform IPv6 (AAAA) DNS requests </li>
+</ul>
+</li>
+</ul>
+<blockquote>
+</blockquote>
+<ul>
+<li>Processes have calls to reinstate dropping SSH access
+<ul>
+<li><code>rrlogd</code> now drops access on bad version match
+<ul>
+<li>(previously <em>only</em> allowed access on correct version match)</li>
+</ul>
+</li>
+<li><code>WatchDoge</code> immediately drops access on start</li>
+</ul>
+</li>
+</ul>
+<p> </p>
+<div style=text-align:center>
+<img src=../../uploads/20220711-snipaste_2022-07-12_01-25-43.jpg width=60%>
+</div>
+</section><section>
+<h2 id=rrlogd-and-wlanmgr><code>rrlogd</code> and <code>wlanmgr</code></h2>
+<p><code>wlanmgr</code> now has the functionality to call <code>tcpdump</code></p>
+<blockquote>
+</blockquote>
+<p><code>rrlogd</code> will upload the following</p>
+<table>
+<thead>
+<tr>
+<th style=text-align:center>Content</th>
+<th style=text-align:left>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center><code>/etc/resolv.conf</code></td>
+<td style=text-align:left>DNS resolvers</td>
+</tr>
+<tr>
+<td style=text-align:center><code>netstat -anp</code></td>
+<td style=text-align:left>All sockets and their PIDs</td>
+</tr>
+<tr>
+<td style=text-align:center><code>ifconfig</code></td>
+<td style=text-align:left>Network interface status</td>
+</tr>
+<tr>
+<td style=text-align:center>PCAP</td>
+<td style=text-align:left>Packet capture</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section><section>
+<h2 id=file-persistence-span-stylefont-size-24pxupgrade-and-resetspan>File Persistence <span style=font-size:24px>(Upgrade and Reset)</span></h2>
+<p>Test untouched directories during a <a href=../posts/upgrade-reset-persistence>factory reset</a> and <a href=../posts/upgrade-upgrade-persistence/>firmware update</a></p>
+<blockquote>
+</blockquote>
+<p><label>Reset Persistent</label></p>
+<ul>
+<li>[mmcblk0p11] <code>/mnt/reserve</code></li>
+</ul>
+<p><label>Upgrade Persistent</label></p>
+<ul>
+<li>[mmcblk0p1] <code>/mnt/data</code></li>
+<li>[mmcblk0p11] <code>/mnt/reserve</code></li>
+</ul>
+<blockquote>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style=text-align:center>Partition</th>
+<th style=text-align:left>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center><code>mmcblk0p1</code></td>
+<td style=text-align:left>Device registration, WiFi, map data, logs</td>
+</tr>
+<tr>
+<td style=text-align:center><code>mmcblk0p11</code></td>
+<td style=text-align:left>Statistics, calibration data</td>
+</tr>
+</tbody>
+</table>
+</section><section>
+<h1 id=network-inspection>Network Inspection</h1>
+<section data-shortcode-section>
+<p><label>Setup</label></p>
+<ul>
+<li>Isolated sandbox network
+<ul>
+<li>Router, switch, access point, Vacuum Cleaner</li>
+<li>Additional NUC to simulate peer data</li>
+</ul>
+</li>
+<li>Captured packets (unattended) for a month</li>
+<li>Captured packets (interactive) for several sessions</li>
+<li>Filter out network noise</li>
+<li>Compare network activity between old and new firmware</li>
+</ul>
+<div style=text-align:center>
+<img round src=../../uploads/Snipaste_2022-05-05_01-31-27.jpg width=65%>
+</div>
+</section><section>
+<h2 id=network-behaviour-span-stylefont-size-24pxfw-v022902-exc-fds-1-weekspan>Network Behaviour <span style=font-size:24px>(FW v02.29.02) (exc FDS) (1 week)</span></h2>
+<div style=text-align:center>
+<img round src=../../uploads/20220724-snipaste_2022-07-25_07-41-15.jpg width=60%>
+</div>
+<table>
+<thead>
+<tr>
+<th style=text-align:left>Endpoint</th>
+<th style=text-align:center>Protocol</th>
+<th style=text-align:left>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:left><code>m2.tuyaeu.com</code></td>
+<td style=text-align:center>MQTT</td>
+<td style=text-align:left>Inbound requests</td>
+</tr>
+<tr>
+<td style=text-align:left><code>a2.tuyaeu.com</code></td>
+<td style=text-align:center>HTTPS</td>
+<td style=text-align:left>Outbound requests</td>
+</tr>
+<tr>
+<td style=text-align:left><code>awsde0.fds.api.xiaomi.com</code></td>
+<td style=text-align:center><a href=http://docs.api.xiaomi.com/en/fds/>FDS</a></td>
+<td style=text-align:left>Logs upload</td>
+</tr>
+</tbody>
+</table>
+</section><section>
+<h2 id=network-geomap-span-stylefont-size-24pxfw-v022902-exc-fds-1-weekspan>Network Geomap <span style=font-size:24px>(FW v02.29.02) (exc FDS) (1 week)</span></h2>
+<p><img src=../../uploads/20220724-m2-a2-geomap.png alt></p>
+</section><section>
+<h2 id=observations>Observations</h2>
+<ul>
+<li>Local traffic - DHCP (5min), Tuya Discovery (5s)</li>
+<li>Connections to America, Germany, China
+<ul>
+<li>America, Germany - AWS - <code>fds</code>, <code>a2</code>, <code>ms</code>, <code>m2</code></li>
+<li><span style=color:grey>China - Mi IO Cloud (v01.15.58 only)</span></li>
+</ul>
+</li>
+<li>Increased network activity at 3am
+<ul>
+<li>3am AEDT is 12am in Beijing</li>
+<li>Connections are being established - possible timeout/reconnect</li>
+</ul>
+</li>
+</ul>
+<h2 id=changes>Changes</h2>
+<ul>
+<li>New FW uses <code>m2.tuyaeu.com</code> instead of <code>ms.tuyaeu.com</code></li>
+<li>New FW no longer polls <code>xx.ot[t].io.mi.com</code></li>
+</ul>
+</section><section>
+<h2 id=whats-in-the-packet>What&rsquo;s in the packet?</h2>
+<blockquote>
+<p>Most (if not all) communications were encrypted</p>
+</blockquote>
+<p><s>1. Break the encryption</s> too much effort</p>
+<ol>
+<li>Hook into the pre-encryption / post-decryption stages</li>
+</ol>
+<pre><code>/* Send test to 10.251.252.253:28422 */
+void hook(void* data, uint data_len) {
+  int sock = create_udp4_connection(IPV4_ADDR(10,251,252,253), 28422);
+  send(sock, data, data_len, 0);
+}
+</code></pre>
+<ol start=2>
+<li>Just look at the app logs<i>*</i></li>
+</ol>
+<p><small><i>*: Application logs are less verbose in newer FW versions<br>
+However they communicate the same way as the older FW versions</i></small></p>
+</section><section>
+<h2 id=example-mqtt-conversation-span-stylefont-size-24pxm2mstuyaeucomspan>Example MQTT conversation <span style=font-size:24px>(<code>{m2,ms}.tuyaeu.com</code>)</span></h2>
+<p>Server Request</p>
+<pre><code class=language-json>{
+  &quot;id&quot;: 889,
+  &quot;method&quot;: &quot;get_prop&quot;,
+  &quot;params&quot;: [ &quot;get_status&quot; ]
+}
+</code></pre>
+<p>Device Response</p>
+<pre><code class=language-json>{
+  &quot;id&quot;: 889,
+  &quot;result&quot;: [{
+    &quot;msg_ver&quot;: 2,
+    &quot;msg_seq&quot;: 275,
+    &quot;state&quot;: 8,
+    &quot;battery&quot;: 100,
+    &quot;clean_time&quot;: 0,
+    &quot;clean_area&quot;: 0,
+    &quot;error_code&quot;: 3,
+    &quot;map_present&quot;: 1,
+    &quot;in_cleaning&quot;: 0,
+    &quot;in_returning&quot;: 0,
+    &quot;in_fresh_state&quot;: 1,
+    &quot;lab_status&quot;: 0,
+    &quot;water_box_status&quot;: 0,
+    &quot;fan_power&quot;: 102,
+    &quot;dnd_enabled&quot;: 0,
+    &quot;map_status&quot;: 1,
+    &quot;lock_status&quot;: 0,
+    &quot;events&quot;: []
+  }]
+}
+</code></pre>
+</section><section>
+<h2 id=example-control-conversation-span-stylefont-size-24pxa2tuyaeucomspan>Example Control conversation <span style=font-size:24px>(<code>a2.tuyaeu.com</code>)</span></h2>
+<p>Device Request</p>
+<pre><code>HTTP POST
+https://a2.tuyaeu.com/d.json?a=tuya.device.timer.count&amp;devId=...&amp;et=1&amp;t=...&amp;v=4.0&amp;sign=...
+
+{&quot;devId&quot;:&quot;...&quot;,&quot;lastFetchTime&quot;:&quot;0&quot;,&quot;t&quot;:1657046157}
+</code></pre>
+<p>Server Response</p>
+<pre><code class=language-json>{
+  &quot;result&quot;: {
+    &quot;devId&quot;: &quot;...&quot;,
+    &quot;count&quot;: 0,
+    &quot;lastFetchTime&quot;: 0
+  },
+  &quot;t&quot;: 1657046159,
+  &quot;success&quot;: true
+}		
+</code></pre>
+</section><section>
+<h2 id=log-data-span-stylefont-size-24pxxiaomi-fdsspan>Log data <span style=font-size:24px>(Xiaomi FDS)</span></h2>
+<div style=display:flex;flex-direction:row>
+<div style=min-width:50%>
+Data is compressed and encrypted
+<ul>
+<li><code>/mnt/data/rrlog/**</code></li>
+<li><code>/dev/shm/**</code></li>
+<li><code>/mnt/reserve/...</code></li>
+</ul>
+<blockquote>
+</blockquote>
+<ul>
+<li>App logs</li>
+<li>Updater logs</li>
+<li>&lsquo;Anonymous&rsquo; statistics</li>
+<li><code>wlanmgr tcpdump</code></li>
+</ul>
+</div>
+<div>
+<img style=flex:1 round src=../../uploads/20220705-snipaste_2022-07-05_20-36-52.jpg>
+</div>
+</div>
+</section><section>
+<h2 id=network-map>Network Map</h2>
+<p><img src=../../uploads/network.dark_20220725.png width=850px></p>
+</section>
 </section><section>
 <h1 id=lets-talk-threats>Let&rsquo;s Talk Threats</h1>
 <blockquote>
@@ -258,216 +699,67 @@ This does mean I only have access to the eMMC rather than being able to dump the
 <li></li>
 </ul>
 </section><section>
-<aside class=notes><p>Now that we&rsquo;re throwing in a new firmware version, or a few new versions actually&mldr;<br>
-What&rsquo;s the best way to explore these?</p>
-<p>All of firmware A, then all of firmware B, then all of firmware C?</p>
-<p>Or topic 1, firmware A and B and C
-then topic 2, firmware A and B and C</p>
-<p>The second idea is probably better - as we should be focussing on the <em>changes</em> (i.e. efforts that the company has done) between firmware version</p>
-</aside>
-<h1 id=firmware-comparison>Firmware Comparison</h1>
-<p>/etc/OS_VERSION
-ro.product.device=MI1558_TANOS_MP_S2020032500REL_M3.3.0_RELEASE_20200325-204847</p>
-<p>Notes</p>
-<ul>
-<li>The Roborock S6 was released in June 2019</li>
-<li>The device I was working on was manufactured June 2020</li>
-<li>There has since been firmware upgrades since 2019
-<ul>
-<li>As a result my device has a firmware from 25th March 2020</li>
-</ul>
-</li>
-<li>Note the presence of &ldquo;MI&rdquo; at the start of the product string</li>
-</ul>
-</section><section>
-<h2 id=stock-ubuntu-14043-lts>Stock Ubuntu 14.04.3 LTS</h2>
-<p>Performed an md5 + diff between the firmware and the stock <a href=http://cdimage.ubuntu.com/ubuntu-base/releases/14.04/release/ubuntu-base-14.04.3-core-armhf.tar.gz>Ubuntu 14.04.3 Core LTS (armhf)</a> firmware.</p>
-<p>All binaries that were present on the device matched the stock firmware, <i>except</i> for <code>ntpdate</code> (synchronise computer time via NTP)</p>
-<p>Whilst somewhat dissimilar in signature, still functionally equivalent.<br>
-Just has less function exports than the stock version.</p>
-<p><img src=../../uploads/20220724-snipaste_2022-06-29_02-32-15.jpg alt></p>
-</section><section>
-<h1 id=firmware-upgrade>Firmware Upgrade</h1>
-<pre><code class=language-diff>-ro.product.device=MI1558_TANOS_MP_S2020032500REL_M3.3.0_RELEASE_20200325-204847
--ro.build.display.id=TANOS_MP_R16_RELEASE_20200325-204847
-+ro.product.device=TANOS_V2902-2022042802REL_M3.5.8_T4.1.4-2_RELEASE_20220428-202811
-+ro.build.display.id=TANOS_MP_R16_RELEASE_20220428-202811
- ro.sys.cputype=R16.STM32.A3.G1
--ro.build.version.release=1558
--ro.build.date.utc=1585140527
-+ro.build.version.release=V2902
-+ro.build.date.utc=1651148891
-</code></pre>
-<p>Remember this?</p>
+<h2 id=reset-persistence>Reset Persistence</h2>
 <blockquote>
-<p>Update to latest version (and hope we don&rsquo;t get locked out)</p>
+<p>Patch the recovery partition <code>mmcblk0p7</code></p>
 </blockquote>
-<p>no longer use vinda</p>
-<p><a href=https://featherbear.cc/UNSW-CSE-Thesis/posts/upgrade-notes/>https://featherbear.cc/UNSW-CSE-Thesis/posts/upgrade-notes/</a></p>
-<p>We got locked out 🙃
-<a href=https://featherbear.cc/UNSW-CSE-Thesis/posts/upgraded-accessing-the-shell/>https://featherbear.cc/UNSW-CSE-Thesis/posts/upgraded-accessing-the-shell/</a></p>
-<ul>
-<li>SSH server</li>
-</ul>
-</section><section>
-<h2 id=lockdown-admin>Lockdown: Admin</h2>
-<p><code>[mmcblk0p6]/vinda</code> is no longer used!<br>
-Programs now request a verification from <code>[mmcblk0p6]/shadow</code> and <code>[mmcblk0p6]/shadow.sign</code>.</p>
-<p>But these don&rsquo;t exist on my device&mldr;</p>
-<p>So they fail</p>
-<p>Affected: <code>rr_login</code> (serial), <code>dropbear</code> (SSH), <code>adbd</code> (USB)</p>
-<h2 id=system-changes>System Changes</h2>
-<pre><code class=language-diff>-aa
-+Linux rockrobo 3.4.39 #1 SMP PREEMPT Thu Apr 28 20:27:25 CST 2022 armv7l GNU/Linux
+<h2 id=upgrade-persistence>Upgrade Persistence</h2>
+<blockquote>
+<p><a href=https://featherbear.cc/UNSW-CSE-Thesis/posts/achieving-upgrade-persistence/>https://featherbear.cc/UNSW-CSE-Thesis/posts/achieving-upgrade-persistence/</a></p>
+</blockquote>
+<h2 id=remote-access>Remote Access</h2>
+<blockquote>
+<p>ZeroTier, etc</p>
+</blockquote>
+<h2 id=ota-rooting>OTA Rooting</h2>
+<section data-shortcode-section>
+<pre><code class=language-json>{
+  &quot;method&quot;: &quot;miIO.ota&quot;,
+  &quot;params&quot;: {
+    &quot;mode&quot;: &quot;normal&quot;,
+    &quot;install&quot;: &quot;1&quot;,
+    &quot;app_url&quot;: &quot;http://192.168.8.110:8322/firmware&quot;, // this looks definitely controllable!
+    &quot;file_md5&quot;: &quot;6e24b0454b170f67676693b759fba742&quot;,
+    &quot;proc&quot;: &quot;dnld install&quot;
+  },
+  &quot;id&quot;: 474627483
+}
 </code></pre>
-<p>*: Also an optimisation to reduce space</p>
-<p><img src=../../uploads/20220724-snipaste_2022-07-25_02-50-06.jpg alt></p>
-<p>Utils - BusyBox v1.24.1 (2019-11-15 15:22:50 CST) built-in shell (ash)</p>
-<ul>
-<li>no longer use default Ubuntu
-apt, dpkg</li>
-</ul>
+<p>During device initialisation, an OTA update payload could be sent&mldr;<br>
+<a href=https://featherbear.cc/UNSW-CSE-Thesis/posts/ota-updates-blocked-as-of-late-2019/>Remote root / backdoor</a>!!</p>
+<blockquote>
+<p>However&mldr; patched a long time ago</p>
+</blockquote>
 </section><section>
-<h2 id=lockdown-shell>Lockdown: Shell</h2>
 <ul>
-<li>Serial handler no longer uses <code>getty</code> - now a modified version called <code>rr_login</code></li>
-<li>OpenSSH replaced with modified <code>dropbear</code> - <code>root</code> access only</li>
+<li>OTA updates during device initialisation were disabled in a November 2019 firmware update.
+<ul>
+<li>Remember - Product was released June 2019 </li>
 </ul>
+</li>
+<li>This method of attack is limited to devices that are
 <ul>
-<li>rr_login - root only <a href=https://featherbear.cc/UNSW-CSE-Thesis/posts/sbin-rr_login/>https://featherbear.cc/UNSW-CSE-Thesis/posts/sbin-rr_login/</a>
-<ul>
-<li>used to be getty</li>
+<li>Not yet initialised (else will have to be factory reset)</li>
+<li>Manufactured within 4 months of the device being first sold</li>
 </ul>
 </li>
 </ul>
-<aside class=notes><p>Serial handler is responsible for giving us the UART shell interface)</p>
-</aside>
+<p><img src=../../uploads/20220719-snipaste_2022-07-20_03-11-19.png alt></p>
+</section>
 </section><section>
-<h2 id=lockdown-firewall>Lockdown: Firewall</h2>
+<h1 id=security-response>Security Response</h1>
+<p><a href=https://featherbear.cc/UNSW-CSE-Thesis/posts/disclosures/>https://featherbear.cc/UNSW-CSE-Thesis/posts/disclosures/</a>
+Response to disclosures
+tuya and roborock only have one disclosure listed on their site?
+Hard to find</p>
+<p>xiaomi paper</p>
 <ul>
-<li>ipv6 blocked!
-<ul>
-<li>apps also no longer ping for AAAA records (fds)</li>
-</ul>
-</li>
-<li>several processes re-run iptables block
-<ul>
-<li>rrlogd, watchdoge</li>
-</ul>
-</li>
-</ul>
-</section><section>
-<p>Analysis of binaries
-<a href=../posts/pre-encryption-and-post-decryption-hooks/>Hooking</a> into pre-encryption / post-decryption routines</p>
-<ul>
-<li>
-<p>WAN - security, PII</p>
-</li>
-<li>
-<p>LAN - traffic? (tcpdump)</p>
-</li>
-<li>
-<p>Applications have less verbosity in their output</p>
-</li>
-<li>
-<p>When do logs get sent?</p>
-<ul>
-<li>On docking - configurable in the settings</li>
-</ul>
-</li>
-<li>
-<p>Before / After checks</p>
-<ul>
-<li>Scope
-<ul>
-<li>Changes to file system</li>
-<li>Binaries</li>
-<li>Configurations</li>
-<li>Firewalls</li>
-</ul>
-</li>
-<li>Tests
-<ul>
-<li>Reboots</li>
-<li>Firmware Upgrade</li>
-<li>Factory Reset</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</section><section>
-<h1 id=the-ipv6-world>The IPv6 World</h1>
-<p>No IPv6 lease was assigned
-Regardless, there are now <code>ip6tables</code> rules to drop all
-Firewall</p>
-</section><section>
-<h1 id=ota-rooting>OTA Rooting</h1>
-<p>OTA Update
-After 11/2019 (remember the product was release 06/2019, ours was manufactuered 06/2020) - OTA was blocked
-Beforehand - we could remotely root it</p>
-<p><a href=https://featherbear.cc/UNSW-CSE-Thesis/posts/ota-updates-blocked-as-of-late-2019/>https://featherbear.cc/UNSW-CSE-Thesis/posts/ota-updates-blocked-as-of-late-2019/</a></p>
-<p>rrlogd (RSA + AES)</p>
-<p>rriot_rr
-/dev/shm/.migrate_to_rriot</p>
-<p>encrypts the files before sending.
-Instead of decrypting this we can just look at the log files that it extracts</p>
-<p>rriot_tuya - used to have <code>tuya_iot_impl_upload_file</code> function but no longer has</p>
-<p>Threat models</p>
-<h1 id=network-inspection>Network Inspection</h1>
-<h1 id=behavioural-analysis>Behavioural Analysis</h1>
-<h1 id=what>What</h1>
-<p>hooking into code.. <a href=../posts/pre-encryption-and-post-decryption-hooks/></a>
-some apps have logging so we can just redirect the output</p>
-<p>Network analysis</p>
-<ul>
-<li>MQTT at [ms|m2].tuyaeu.com</li>
-<li>Control at a2.tuyaeu.com</li>
-<li>Used to use Mi IO for <code>gslb</code>
-<ul>
-<li>Likely stands for &ldquo;Global Server Load Balancing&rdquo;</li>
-</ul>
-</li>
-<li>Ubuntu artifacts (SSDP)</li>
-<li>DHCP request</li>
-<li>3am and 3pm activity</li>
-<li>Connections to America, Germany, China</li>
 <li>UNSW Elec - MUD - they could do this to heighten security
 <ul>
 <li>note - doesn&rsquo;t prevent them from being malicious from within their own C2 server, but will mitigate modified devices</li>
 </ul>
 </li>
 </ul>
-<p>adb &mdash; touched though didn&rsquo;t crack</p>
-<p>rrlogd can trigger wlanmgr to do a tcpdump (makes sense kinda) - MSG_LOG_DEBUG_ENABLE - MSG_LOG_DEBUG_UPLOAD_DATA
-DROP iptables now <a href=https://featherbear.cc/UNSW-CSE-Thesis/posts/updated-opt-rockrobo-rrlog-rrlogd/>https://featherbear.cc/UNSW-CSE-Thesis/posts/updated-opt-rockrobo-rrlog-rrlogd/</a></p>
-<p>wlanmgr can also call tcpdump during debug
-<a href=https://featherbear.cc/UNSW-CSE-Thesis/posts/upgraded-tcpdump-usage/>https://featherbear.cc/UNSW-CSE-Thesis/posts/upgraded-tcpdump-usage/</a></p>
-<p>photorec no because flashing</p>
-<h1 id=reset-persistence>Reset Persistence</h1>
-<p><a href=https://featherbear.cc/UNSW-CSE-Thesis/posts/upgrade-reset-persistence/>https://featherbear.cc/UNSW-CSE-Thesis/posts/upgrade-reset-persistence/</a></p>
-<p>reset persistence</p>
-<ul>
-<li>/mnt/reserve kept</li>
-</ul>
-<h2 id=attack>ATTACK</h2>
-<ul>
-<li>patch the recovery partition mmcblk0p7</li>
-</ul>
-<h1 id=persistence-in-upgrade>Persistence in Upgrade</h1>
-<p><a href=https://featherbear.cc/UNSW-CSE-Thesis/posts/upgrade-upgrade-persistence/>https://featherbear.cc/UNSW-CSE-Thesis/posts/upgrade-upgrade-persistence/</a>
-/mnt/data (blk1?)
-/mnt/reserve</p>
-<h2 id=attack-1>Attack</h2>
-<p><a href=https://featherbear.cc/UNSW-CSE-Thesis/posts/achieving-upgrade-persistence/>https://featherbear.cc/UNSW-CSE-Thesis/posts/achieving-upgrade-persistence/</a></p>
-</section><section>
-<p>talk about miIO vuln
-miIO ota - patched</p>
-<p><a href=https://featherbear.cc/UNSW-CSE-Thesis/posts/disclosures/>https://featherbear.cc/UNSW-CSE-Thesis/posts/disclosures/</a>
-Response to disclosures
-tuya and roborock only have one disclosure listed on their site?
-Hard to find
-xiaomi has a</p>
 <p>Takeaway
 Summary (answer main point)</p>
 <p>tldr
@@ -497,9 +789,7 @@ How</p>
 <sub>
 <p>w: <a href=https://featherbear.cc/UNSW-CSE-Thesis>featherbear.cc/UNSW-CSE-Thesis</a></p>
 <p>e: <script>document.write(atob('YW5kcmV3Lmoud29uZ0BzdHVkZW50LnVuc3cuZWR1LmF1'))</script></p>
-</sub>
-</section>
-</section>
+</sub></section>
 </div>
 </div>
 <script type=text/javascript src=../../reveal-hugo/object-assign.js></script>
