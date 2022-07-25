@@ -139,7 +139,7 @@
       }
       {
       title: Saturday
-      date: 23/07/2022
+      date: 22/07/2022
       content: Begin preparation for final presentation
       
       }
@@ -339,6 +339,20 @@
         content: [
           Network packet analysis
         ]
+      }
+      {
+      title: Tuesday
+      date: 26/07/2022
+      link: https://youtu.be/vUsIPE8aoJo
+      content: [
+        Played with the custom adbd binary to figure out how it works
+        sys_passwd is the vinda password
+        adb_passwd is a challenge response, new password for every dynamickey request
+        There are 'access levels' from 0-4 set by the adb_lock value in /mnt/default/adb.conf
+        0 lets us perform arbitrary command execution, but seems impossible to achieve that
+        There is also some notion of unlock and lock - but as part of the v1 functions and not the new v2 functions
+        Found a way to execute more commands through extending the uart_test command string - however you still need to authenticate (requiring vinda password)
+      ]
       }
     ]
   }
