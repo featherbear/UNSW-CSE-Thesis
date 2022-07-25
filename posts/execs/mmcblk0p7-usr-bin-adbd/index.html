@@ -22,7 +22,7 @@
 <style>html.dark{--color-primary-bg:#232327 !important}div#sidebar-toc>ul.pl-6{margin-left:1em}</style>
 <meta name=description content="locksec_init_key: can not find the prefix str from adb conf file, use default locksec_init_key: can not find the suffix str from adb conf file, use default locksec_init_serial: adb read 465 bytes from /proc/cpuinfo locksec_init_key: locksec_init_key, rockrobo%()+-[]_8a80ab8936d76c118000:;<=>?@{}rubydevicemodel locksec_apply_key: locksec_apply_key, erI09cyW%()+-[]_8a80ab8936d76c118000:;<=>?@{}CzD2xuMNlwabTK7 locksec_apply_passwd: adb source str: erI09cyW%()+-[]_8a80ab8936d76c118000:;<=>?">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"/usr/bin/adbd","item":"/posts/execs/mmcblk0p7-usr-bin-adbd/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/execs/mmcblk0p7-usr-bin-adbd/"},"headline":"\/usr\/bin\/adbd | CSE Thesis Musings","datePublished":"2022-04-06T16:01:14+00:00","dateModified":"2022-04-06T16:01:14+00:00","wordCount":64,"publisher":{"@type":"Person","name":"A. Wong"},"description":"locksec_init_key: can not find the prefix str from adb conf file, use default locksec_init_key: can not find the suffix str from adb conf file, use default locksec_init_serial: adb read 465 bytes from \/proc\/cpuinfo locksec_init_key: locksec_init_key, rockrobo%()\u002b-[]_8a80ab8936d76c118000:;\u0026lt;=\u0026gt;?@{}rubydevicemodel locksec_apply_key: locksec_apply_key, erI09cyW%()\u002b-[]_8a80ab8936d76c118000:;\u0026lt;=\u0026gt;?@{}CzD2xuMNlwabTK7 locksec_apply_passwd: adb source str: erI09cyW%()\u002b-[]_8a80ab8936d76c118000:;\u0026lt;=\u0026gt;?"}</script><meta property="og:title" content="/usr/bin/adbd | CSE Thesis Musings">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/execs/mmcblk0p7-usr-bin-adbd/"},"headline":"\/usr\/bin\/adbd | CSE Thesis Musings","datePublished":"2022-04-06T16:01:14+00:00","dateModified":"2022-04-06T16:01:14+00:00","wordCount":135,"publisher":{"@type":"Person","name":"A. Wong"},"description":"locksec_init_key: can not find the prefix str from adb conf file, use default locksec_init_key: can not find the suffix str from adb conf file, use default locksec_init_serial: adb read 465 bytes from \/proc\/cpuinfo locksec_init_key: locksec_init_key, rockrobo%()\u002b-[]_8a80ab8936d76c118000:;\u0026lt;=\u0026gt;?@{}rubydevicemodel locksec_apply_key: locksec_apply_key, erI09cyW%()\u002b-[]_8a80ab8936d76c118000:;\u0026lt;=\u0026gt;?@{}CzD2xuMNlwabTK7 locksec_apply_passwd: adb source str: erI09cyW%()\u002b-[]_8a80ab8936d76c118000:;\u0026lt;=\u0026gt;?"}</script><meta property="og:title" content="/usr/bin/adbd | CSE Thesis Musings">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/posts/execs/mmcblk0p7-usr-bin-adbd/">
 <meta property="og:description" content="locksec_init_key: can not find the prefix str from adb conf file, use default locksec_init_key: can not find the suffix str from adb conf file, use default locksec_init_serial: adb read 465 bytes from /proc/cpuinfo locksec_init_key: locksec_init_key, rockrobo%()+-[]_8a80ab8936d76c118000:;<=>?@{}rubydevicemodel locksec_apply_key: locksec_apply_key, erI09cyW%()+-[]_8a80ab8936d76c118000:;<=>?@{}CzD2xuMNlwabTK7 locksec_apply_passwd: adb source str: erI09cyW%()+-[]_8a80ab8936d76c118000:;<=>?">
@@ -71,7 +71,7 @@
 <div class=pl-scrollbar>
 <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
 <div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
-<div class="col-span-2 lg:col-start-2 lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+<div class="col-span-2 lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
 <h1 class="font-bold text-3xl text-primary-text">/usr/bin/adbd</h1>
 <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
 <div class="mr-6 my-2">
@@ -88,12 +88,21 @@ locksec_apply_key: locksec_apply_key, erI09cyW%()+-[]_8a80ab8936d76c118000:;&lt;
 locksec_apply_passwd: adb source str: erI09cyW%()+-[]_8a80ab8936d76c118000:;&lt;=&gt;?@{}CzD2xuMNlwabTK7
 locksec_apply_passwd: locksec_apply_passwd, passwd: 0y[ad8@w
 </code></pre>
-<p>adb_lock</p>
+<p>Custom adbd binary that has an authentication challenge before giving you access</p>
+<h2 id=auth-flow>Auth Flow</h2>
+<ul>
+<li>Requires you to know the vinda password</li>
+<li>Request the challenge key with <code>adb shell [VINDAVALUE]rockrobo dynamickey</code></li>
+<li>Response is generated via the challenge key + device serial</li>
+<li>Access shell with <code>adb shell [VINDAVALUE][RESPONSE]command</code></li>
+</ul>
+<h2 id=access-levels>Access Levels</h2>
+<ul>
+<li>There are different so-called &ldquo;levels&rdquo;, determined by the value of <code>adb_lock</code> in the <code>/mnt/default/adb.conf</code> file (file default is 1, app default on parse error is 0)</li>
+</ul>
 <p>adb shell</p>
-<p>locksec</p>
 <p>adb_passwd</p>
 <p>sys_passwd</p>
-<p>levels?</p>
 <p>shell</p>
 <hr>
 <blockquote>
@@ -112,6 +121,20 @@ locksec_apply_passwd: locksec_apply_passwd, passwd: 0y[ad8@w
 <a href=../../../posts/main-view-checks/ class=block>Main View Checks</a>
 </div>
 </div>
+</div>
+<div class=col-span-2>
+<div class="sticky top-16 z-10 hidden lg:block px-6 py-4 bg-primary-bg">
+<span class="text-lg font-semibold">On This Page</span>
+</div>
+<div class="sticky-toc hidden lg:block px-6 pb-6">
+<nav id=TableOfContents>
+<ul>
+<li><a href=#auth-flow>Auth Flow</a></li>
+<li><a href=#access-levels>Access Levels</a></li>
+</ul>
+</nav>
+</div>
+<script>window.addEventListener('DOMContentLoaded',()=>{enableStickyToc()})</script>
 </div>
 </div>
 <script>document.addEventListener('DOMContentLoaded',()=>{hljs.initHighlightingOnLoad()})</script>
