@@ -31,6 +31,7 @@ img[round] {
   border-radius: 10px;
 }
 </style>
+
 # Today's Agenda
 
 * Topic recap
@@ -135,7 +136,7 @@ Remotely issue firmware updates, commands, send logs, monitor network stability,
 
 <div>
 How have manufacturers of IoT / smart home devices addressed the increasing concerns of digital privacy and product security?
-<div style="text-align: right; font-size: 20px;">(Specifically Roborock / Xiaomi / Tuya)</span>
+<div style="text-align: right; font-size: 20px;">(Specifically Roborock)</span>
 </div>
 
 > 
@@ -173,21 +174,6 @@ Roborock was first tasked by Xiaomi to develop their vacuum cleaner (Mi Robot Va
 {{% /note %}}
 
 {{% /section %}}
-
----
-
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-
-# Where we left off
 
 ---
 
@@ -296,6 +282,10 @@ Thesis B - Inspection of system services (`netstat`, `ip{,6}tables`)
 
 <iframe style="border: 2px solid white; border-radius: 10px; pointer-events: none;" width=1280 height=720 src="../seminar-b/?noControls#/7/3"></iframe>
 
+{{% note %}}
+Note that there is a firewall rule - though certain programs were able to unblock the port
+{{% /note %}}
+
 ---
 
 
@@ -326,7 +316,7 @@ Thesis B - Investigating `rrlogd`
 
 Thesis B - Investigating `adbd`
 
-<iframe style="border: 2px solid white; border-radius: 10px; pointer-events: none;" width=1280 height=720 src="../seminar-b/?noControls#/11/8"></iframe>
+<iframe style="border: 2px solid white; border-radius: 10px; pointer-events: none;" width=1280 height=720 src=""></iframe>
 
 {{% /section %}}
 
@@ -370,6 +360,118 @@ Thesis B - Investigating `adbd`
 {{% /section %}}
 
 ---
+
+# More on `adbd`
+
+<small>A novel but not-so-useful way to perform arbitrary code execution</small>
+
+{{% section %}}
+Command injection vulnerability exists within the modified `adbd` binary
+
+![](/uploads/20220725-snipaste_2022-07-26_04-02-13.jpg)
+
+---
+
+## What's modified?
+
+* Interface to perform `uart_test` and `ruby_flash`
+* Authenticated access to `adb shell`
+  * Dynamic challenge/response
+  * Requires knowledge of `vinda`, device ID
+
+![](/uploads/20220725-snipaste_2022-07-25_23-49-57.jpg)
+
+---
+
+## Auth Flow
+
+```
+SYS_PASSWD = /mnt/default/vinda := ABCD1234ABCD1234
+
+# Get challenge
+CHALLENGE $= adb shell [SYS_PASSWD]rockrobo dynamickey
+
+# Generate response
+ADB_PASSWD = generate(challenge, device_id)
+
+# Perform command
+adb shell [SYS_PASSWD][ADB_PASSWD] [COMMAND*]
+```
+
+---
+
+## Achieving RCE
+
+* The modified binary has some sort of access level implementation
+  * Depends on value in `/mnt/default/adb.conf` (RO)
+
+>
+
+* Arbitrary command execution when access level = 0
+  * But the app also resets this value to 1
+  * <code>&</code>, <code>;</code>, <code>|</code>, <code>`</code> characters are also forbidden
+>
+
+😢 No arbitrary command execution...
+
+
+```bash
+$> py -3 adbStart "whoami"
+
+src/rr_ruby.c::adb_check_unlock_level1():not support /adb shell sys_passwd#adb_passwd whoami in level 1
+```
+
+---
+
+## Noooooooooo <span style="font-size: 18px">wait what</span>
+
+![](/uploads/Snipaste_2022-07-26_05-53-34.jpg)
+
+... where did `/bin/sh` come from..?
+
+---
+
+{{< slide transition="fade" >}}
+
+## RCE via command substitution
+
+![](/uploads/20220725-snipaste_2022-07-26_03-56-14.jpg)
+
+Avoiding the forbidden characters (<code>&</code>, <code>;</code>, <code>|</code>, <code>`</code>) we can exploit command substitution and redirections to inject commands.
+
+> Allows us to write to the filesystem
+
+---
+
+{{< slide transition="fade" >}}
+
+## RCE via command substitution
+
+> Or read from the filesystem too!
+
+![](/uploads/20220725-snipaste_2022-07-26_04-02-13.jpg)
+
+
+---
+
+## POC breakdown <span style="font-size: 18px">(Where it falls apart)</span>
+
+* Still need to authenticate before RCE possible
+  * Still need knowledge of the `/mnt/default/vinda` file
+  * Need to physically open the device at least once
+    * Screws. Lots of them.
+
+>
+
+* At least, provides a way to issue commands even when `adb_lock != 0`
+  * USB protocol is more common and accessible to people
+  * SSH access might stop working / be blocked <span style="color: grey; font-size: 12px">(spoilers)</span> <!-- i.e. network issues -->
+  * Serial access might stop working / be blocked <span style="color: grey; font-size: 12px">(spoilers)</span> <!-- not everyone has a UART cable -->
+
+{{% /section %}}
+
+---
+
 
 {{% note %}}
 Now that we're throwing in a new firmware version, or a few new versions actually...  
@@ -546,7 +648,7 @@ Login attempts now verify against
 
 > But these files don't exist on my device...
 
-Affected: `rr_login` (serial), `dropbear` (SSH), `adbd` (USB)
+Affected: `rr_login` (serial), `dropbear` (SSH), `adbd`? (USB)
 
 {{% note %}}
 Confirmed by checking against strace / gdb / static analysis (BinaryNinja)
@@ -636,18 +738,33 @@ Used to have the `tuya_iot_impl_upload_file` function but has been removed
 {{% /section %}}
 
 ---
-## File Persistence <span style="font-size: 24px">(Upgrade and Reset)</span>
+# File Persistence <span style="font-size: 24px">(Upgrade and Reset)</span>
 
-Test untouched directories during a [factory reset](../posts/upgrade-reset-persistence) and [firmware update](../posts/upgrade-upgrade-persistence/)
+Test untouched directories during a [firmware update](../posts/upgrade-upgrade-persistence/) and [factory reset](../posts/upgrade-reset-persistence)
 
 >
 
-<label>Reset Persistent</label>
-* [mmcblk0p11] `/mnt/reserve`
+{{% section %}}
 
+<div style="display: flex; flex-direction: row">
+
+<div>
 <label>Upgrade Persistent</label>
-* [mmcblk0p1] `/mnt/data`
-* [mmcblk0p11] `/mnt/reserve`
+
+* [mmcblk0p11] @ `/mnt/reserve`
+* [mmcblk0p1] @ `/mnt/data`
+</div>
+
+<div>
+<label>Reset Persistent</label>
+
+* [mmcblk0p11] @ `/mnt/reserve`
+</div>
+</div>
+
+&nbsp;  
+&nbsp;  
+&nbsp;  
 
 >
 
@@ -655,6 +772,39 @@ Test untouched directories during a [factory reset](../posts/upgrade-reset-persi
 |:---:|:---|
 |`mmcblk0p1`|Device registration, WiFi, map data, logs|
 |`mmcblk0p11`|Statistics, calibration data|
+
+---
+
+* Map, log and user data is cleared (securely)
+* Reserve partition is never cleared, even during factory resets
+
+```
+mmcblk0p11
+|   mcu_ready
+|   try
+|   hwinfo
+|   anonymousid1
+|   lds_calibration.txt
+|   counter
+|   CompassBumper.cfg
+|   blackbox.db
+|   rrBkBox.csv
+|   endpoint.bin
+|   RoboController.cfg
+|   last_partition
+|
+\---rriot
+        tuya.json
+```
+
+{{% note %}}
+* Can't perform byte-level recovery (e.g. photorec) due to reset method
+* Can't completely disassociate yourself from the previous owner
+* Possible to forge symbolic links?
+{{% /note %}}
+
+
+{{% /section %}}
 
 ---
 
@@ -844,21 +994,116 @@ Data is compressed and encrypted
 
 ---
 
-<!-- adb --- touched though didn't crack
+## Vendor has the ability to issue remote commands
 
---- -->
+* Packet log
+* Possible RCE?
+* Upload arbitrary
+
+---
+
+## DIY Remote Access
+
+* Easy to perform - system has required libraries and network stack
+* e.g. Reverse SSH
+* e.g. VPN / SD-WAN
+
+{{< youtube om2yzYHU1A0 >}}
+
+---
+
+
+<!-- ## Hands-off rooting
+
+||ZeroTier|ADB|MiIO|
+|---:|
+|Disassembly Required|
+|Upgrade Persistent|
+|Reset Persistent|
+|Still Works| -->
 
 ## Reset Persistence
 
 > Patch the recovery partition `mmcblk0p7`
 
-## Upgrade Persistence
 
-> https://featherbear.cc/UNSW-CSE-Thesis/posts/achieving-upgrade-persistence/
 
-## Remote Access
+{{< youtube eABmzUfZ22A >}}
 
-> ZeroTier, etc
+---
+
+# Upgrade Persistence <span style="font-size: 24px">([see concept post](../posts/achieving-upgrade-persistence/))</span>
+
+
+![](/uploads/20220711-snipaste_2022-07-12_04-24-24.jpg)
+
+{{% section %}}
+
+{{< slide transition="fade" >}}
+
+## Upgrade procedure
+
+* Download the update to <span style="font-size: 0.9em; color: grey">`mmcblk0p1`</span> (data)
+* Extract update to <span style="font-size: 0.9em; color: grey">`mmcblk0p10`</span> (updbuf)
+* Unmount <span style="font-size: 0.9em; color: grey">`mmcblk0p8`</span> (bootA) / <span style="font-size: 0.9em; color: grey">`mmcblk0p9`</span> (bootB)
+* Flash <span style="font-size: 0.9em; color: grey">`updbuf`</span> to <span style="font-size: 0.9em; color: grey">`bootA`</span> / <span style="font-size: 0.9em; color: grey">`bootB`</span>
+* Boot into <span style="font-size: 0.9em; color: grey">`bootA`</span> / <span style="font-size: 0.9em; color: grey">`bootB`</span>
+* Flash <span style="font-size: 0.9em; color: grey">`updbuf`</span> to <span style="font-size: 0.9em; color: grey">`bootB`</span> / <span style="font-size: 0.9em; color: grey">`bootA`</span>
+* Boot into <span style="font-size: 0.9em; color: grey">`bootB`</span> / <span style="font-size: 0.9em; color: grey">`bootA`</span>
+
+>
+
+Both filesystems are overwritten (meaning all our changes will disappear)
+
+---
+
+{{< slide transition="fade" >}}
+
+## Achieving upgrade persistence
+
+* Download the update to <span style="font-size: 0.9em; color: grey">`mmcblk0p1`</span> (data)
+* Extract update to <span style="font-size: 0.9em; color: grey">`mmcblk0p10`</span> (updbuf)
+* 📝 <span style="color: #b94357">Modify contents of <span style="font-size: 0.9em; color: grey">`updbuf`</span></span>
+* Unmount <span style="font-size: 0.9em; color: grey">`mmcblk0p8`</span> (bootA) / <span style="font-size: 0.9em; color: grey">`mmcblk0p9`</span> (bootB)
+* Flash <span style="color: #b94357">modified</span> <span style="font-size: 0.9em; color: grey">`updbuf`</span> to <span style="font-size: 0.9em; color: grey">`bootA`</span> / <span style="font-size: 0.9em; color: grey">`bootB`</span>
+* Boot into <span style="font-size: 0.9em; color: grey">`bootA`</span> / <span style="font-size: 0.9em; color: grey">`bootB`</span>
+* Flash <span style="color: #b94357">modified</span> <span style="font-size: 0.9em; color: grey">`updbuf`</span> to <span style="font-size: 0.9em; color: grey">`bootB`</span> / <span style="font-size: 0.9em; color: grey">`bootA`</span>
+* Boot into <span style="font-size: 0.9em; color: grey">`bootB`</span> / <span style="font-size: 0.9em; color: grey">`bootA`</span>
+
+>
+
+Modify the extracted updated firmware, so changes propagate
+
+---
+
+## How to modify?
+
+* Alter the <label>`SysUpdate`</label> binary to include modification steps
+* Service / cron / repeated task to write into `/mnt/updbuf`
+
+{{% note %}}
+Altering the `SysUpdate` binary is probably more reliable.  
+If using a repeated or scheduled task - we'd have to have a fast loop to intercept the extraction - but a lesser loop period means more wasted executions
+{{% /note %}}
+
+---
+
+## What to modify?
+
+* Remote access
+  * `/etc/passwd`
+  * `/usr/bin/adbd`
+  * `/usr/sbin/dropbear`
+  * VPN / SD-WAN
+  * iptables <span style="font-size: 0.6em">(various locations)</span>
+* 🔊 Sounds?
+* Future upgrade persistence
+  * `SysUpdate`
+  * Scheduled / repeated jobs
+
+{{% /section %}}
+
+---
 
 ## OTA Rooting 
 
@@ -962,3 +1207,7 @@ Andrew Wong
 <p>w: <a href="https://featherbear.cc/UNSW-CSE-Thesis">featherbear.cc/UNSW-CSE-Thesis</a></p>
 <p>e: <script>document.write(atob('YW5kcmV3Lmoud29uZ0BzdHVkZW50LnVuc3cuZWR1LmF1'))</script></p>
 </sub>
+
+<!-- 
+https://elinux.org/images/f/f8/Common-Attacks-on-IoT-Devices-Christina-Quast.pdf
+ -->
