@@ -118,3 +118,7 @@ int main(int argc, char* argv[]) {
     return 0;
 }
 ```
+
+---
+
+See [adbd](../execs-mmcblk0p7-usr-bin-adbd)
