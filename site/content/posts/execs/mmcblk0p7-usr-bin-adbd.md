@@ -28,6 +28,7 @@ Custom adbd binary that has an authentication challenge before giving you access
 ## Access Levels
 
 * There are different so-called "levels", determined by the value of `adb_lock` in the `/mnt/default/adb.conf` file (file default is 1, app default on parse error is 0)
+* Lock and unlock state?
 
 adb shell
 
