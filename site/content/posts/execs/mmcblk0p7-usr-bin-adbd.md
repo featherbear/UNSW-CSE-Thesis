@@ -57,6 +57,10 @@ Commands are validated (`0x11dbc`) to check they that don't contain `;` `&` `|` 
 * There are different so-called "levels", \[possibly\] determined by the value of `adb_lock` in the `/mnt/default/adb.conf` file (file default is 1, app default on parse error is 0)
 * Level 0 is the best? As its execution allows us arbitrary command execution
 
+However, it looks like the system resets the value to non-zero
+
+![](/uploads/20220725-snipaste_2022-07-26_04-35-15.jpg)
+
 ## Lock State
 
 * There's a second type of lock?
