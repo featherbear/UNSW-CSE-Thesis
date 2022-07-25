@@ -41,9 +41,8 @@ Custom adbd binary that has an authentication challenge before giving you access
 
 ## Passwords
 
-adb_passwd
-
-sys_passwd
+* adb_passwd
+* sys_passwd - vinda
 
 ***
 
