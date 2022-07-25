@@ -28,20 +28,22 @@ Custom adbd binary that has an authentication challenge before giving you access
 ## Access Levels
 
 * There are different so-called "levels", determined by the value of `adb_lock` in the `/mnt/default/adb.conf` file (file default is 1, app default on parse error is 0)
-* Lock and unlock state?
+
+## Lock State
+
+* There's a second type of lock?
+* 
   * ![](/uploads/20220725-snipaste_2022-07-26_00-29-43.jpg)
   * 0x8b5a0
   * Bit-shift left by 0x1F (31) puts the LSB into a value's `sign` bit.
   * If signed bit is `1` then the value is negative
   * Therefore - this condition is true when `is_unlocked` is 0 (aka is **locked**)
 
-adb shell
+## Passwords
 
 adb_passwd
 
 sys_passwd
-
-shell
 
 ***
 
