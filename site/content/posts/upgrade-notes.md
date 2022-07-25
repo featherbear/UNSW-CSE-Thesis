@@ -44,6 +44,7 @@ Once upgraded, there was another upgrade to go to `01.19.98`
   * Tries to access `/mnt/default/shadow` - but it doesn't exist on the system and hence always errors out
   * We can modify `/etc/inittab` and switch out `/sbin/rr_login` for the default login handler
 * IPv6 is blocked with `ip6tables`
+  * ![](/uploads/20220725-snipaste_2022-07-25_10-00-45.jpg)
 * Dropbear is used as the SSH server
   * The `WatchDoge` process will re-run the iptables SSH drop rule, rendering simple conf commenting void
   * Have to patch `WatchDoge` to null the iptables command
