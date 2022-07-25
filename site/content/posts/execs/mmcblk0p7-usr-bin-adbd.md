@@ -40,7 +40,9 @@ Supply `ADB_TRACE=1` as an env (either prefix, or set as env) to see more verbos
 
 Commands are validated (`0x11dbc`) to check they that don't contain `;` `&` `|` <code>\`</code>
 
-> However, we _can_ use the `>` redirection command - tested!
+> However, with the uart_test command - we could possibly extend it
+
+![](/uploads/20220725-snipaste_2022-07-26_03-52-41.jpg)
 
 ## Access Levels
 
