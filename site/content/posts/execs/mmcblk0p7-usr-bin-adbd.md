@@ -33,7 +33,7 @@ Custom adbd binary that has an authentication challenge before giving you access
   * 0x8b5a0
   * Bit-shift left by 0x1F (31) puts the LSB into a value's `sign` bit.
   * If signed bit is `1` then the value is negative
-  * Therefore - this condition is true when `is_unlocked` is 0 (aka is locked)
+  * Therefore - this condition is true when `is_unlocked` is 0 (aka is **locked**)
 
 adb shell
 
