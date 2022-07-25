@@ -16,17 +16,24 @@ toc = true
     locksec_apply_passwd: adb source str: erI09cyW%()+-[]_8a80ab8936d76c118000:;<=>?@{}CzD2xuMNlwabTK7
     locksec_apply_passwd: locksec_apply_passwd, passwd: 0y[ad8@w
 
-adb_lock
+Custom adbd binary that has an authentication challenge before giving you access
+
+## Auth Flow
+
+* Requires you to know the vinda password
+* Request the challenge key with `adb shell [VINDAVALUE]rockrobo dynamickey`
+* Response is generated via the challenge key + device serial
+* Access shell with `adb shell [VINDAVALUE][RESPONSE]command`
+
+## Access Levels
+
+* There are different so-called "levels", determined by the value of `adb_lock` in the `/mnt/default/adb.conf` file (file default is 1, app default on parse error is 0)
 
 adb shell
-
-locksec
 
 adb_passwd
 
 sys_passwd
-
-levels?
 
 shell
 
