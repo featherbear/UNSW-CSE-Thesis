@@ -18,6 +18,10 @@ toc = true
 
 Custom adbd binary that has an authentication challenge before giving you access
 
+## Logging
+
+Supply `ADB_TRACE=1` as an env (either prefix, or set as env) to see more verbose logs
+
 ## Auth Flow
 
 * Requires you to know the vinda password
