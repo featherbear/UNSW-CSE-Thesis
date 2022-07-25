@@ -471,6 +471,8 @@ finally updating to <label>v02.29.02</label> (28th April 2022)
 
 ```
 > 01.17.08 (17th April 2020)
+* /opt/rockrobo/watchdog/WatchDoge iptables drop SSH
+* /opt/rockrobo/rrlog/rrlogd iptables drop SSH
 * Utilities change to busybox
 * SSH server changed to dropbear
 * /opt/rockrobo/rriot/rriot_rr added (but not enabled)
@@ -513,6 +515,24 @@ Is this the end?
 
 ---
 
+## Lockdown: Shell
+
+* Serial handler no longer uses `getty`
+  * Now uses modified version called [`rr_login`](posts/sbin-rr_login/)
+* OpenSSH server was replaced with modified version of `dropbear`
+
+>
+
+Both only allow login as the `root` user
+
+![](/uploads/20220711-snipaste_2022-07-12_00-28-13.jpg)
+
+{{% note %}}
+Serial handler is responsible for giving us the UART shell interface)
+{{% /note %}}
+
+---
+
 
 ## Lockdown: Authentication
 
@@ -538,42 +558,85 @@ Confirmed by checking against strace / gdb / static analysis (BinaryNinja)
 
 ---
 
+## Lockdown: Authentication <span style="font-size: 24px">(`verify_shadow`)</span>
+
+![](/uploads/20220719-snipaste_2022-07-19_22-51-42.jpg)
+
+---
+
+## Lockdown: Authentication <span style="font-size: 24px">(SSH auth attempt trace with `strace`)</span>
+
+![](/uploads/20220719-snipaste_2022-07-19_22-24-51.jpg)
+
+---
+
 ## System Changes
 
 * Are we still using Ubuntu?
   * Maybe? <!-- /etc/os-release seems too say so, but it could be a leftover artifact -->
-  * `apt-get` removed
-  * `dpkg` removed
+  * `apt-get` and `dpkg` removed
 * Lots of tools were replaced with BusyBox (v1.24.1)
   * Also a space-saving measure
+  * ![](/uploads/20220724-snipaste_2022-07-25_02-50-06.jpg)
+* Effectively now running embedded Linux
 
-![](/uploads/20220724-snipaste_2022-07-25_02-50-06.jpg)
-
----
-
-## Lockdown: Shell
-
-* Serial handler no longer uses `getty` - now a modified version called [`rr_login`](posts/sbin-rr_login/) - `root` access only
-* OpenSSH server replaced with modified version of `dropbear` - `root` access only
-
-{{% note %}}
-Serial handler is responsible for giving us the UART shell interface)
-{{% /note %}}
+<small>[Download git diff](https://github.com/featherbear/UNSW-CSE-Thesis/blob/master/firmwares/updating/v02.29.02_diff_v01.15.58.diff)</small>
 
 ---
 
 ## Lockdown: Firewall
 
-* `ip6tables` rules to drop all IPv6 access!
+* There are now `ip6tables` rules to drop all packets 👏
     * Apps also no longer perform IPv6 (AAAA) DNS requests <!-- i.e. rrlogd: fds -->
+
+>
+
 * Processes have calls to reinstate dropping SSH access
     * `rrlogd` now drops access on bad version match
         * (previously _only_ allowed access on correct version match)
+    * `WatchDoge` immediately drops access on start
+
+&nbsp;  
+
+{{% center %}}<img src="/uploads/20220711-snipaste_2022-07-12_01-25-43.jpg" width="60%">{{% /center %}}
 
 ---
 
+## `rrlogd` and `wlanmgr`
 
-# File Persistence <span style="font-size: 24px">(Upgrade and Reset)</span>
+`wlanmgr` now has the functionality to call `tcpdump`
+<!-- * `rrlogd` receives `MSG_LOG_DEBUG_ENABLE` event -->
+
+>
+
+<!-- `MSG_LOG_DEBUG_UPLOAD_DATA` event -->
+`rrlogd` will upload the following
+
+|Content|Description|
+|:---:|:---|
+|`/etc/resolv.conf`|DNS resolvers|
+|`netstat -anp`|All sockets and their PIDs|
+|`ifconfig`|Network interface status|
+|PCAP|Packet capture|
+
+<!-- ![](/uploads/20220711-snipaste_2022-07-12_03-58-09.jpg) -->
+
+<!-- ---
+## `rriot_rr`
+
+New file, not used unless `/dev/shm/.migrate_to_rriot` exists and is populated
+
+---
+
+## `rriot_tuya`
+
+Used to have the `tuya_iot_impl_upload_file` function but has been removed
+ -->
+
+{{% /section %}}
+
+---
+## File Persistence <span style="font-size: 24px">(Upgrade and Reset)</span>
 
 Test untouched directories during a [factory reset](../posts/upgrade-reset-persistence) and [firmware update](../posts/upgrade-upgrade-persistence/)
 
@@ -593,34 +656,13 @@ Test untouched directories during a [factory reset](../posts/upgrade-reset-persi
 |`mmcblk0p1`|Device registration, WiFi, map data, logs|
 |`mmcblk0p11`|Statistics, calibration data|
 
-{{% /section %}}
-
----
-
-# Other changes
-
-## rrlogd (RSA + AES)
-encrypts the files before sending.
-Instead of decrypting this we can just look at the log files that it extracts
-
-rrlogd can trigger wlanmgr to do a tcpdump (makes sense kinda) - MSG_LOG_DEBUG_ENABLE - MSG_LOG_DEBUG_UPLOAD_DATA
-https://featherbear.cc/UNSW-CSE-Thesis/posts/upgraded-tcpdump-usage/
-
-
-## rriot_rr
-New file
-/dev/shm/.migrate_to_rriot
-
-## rriot_tuya - used to have `tuya_iot_impl_upload_file` function but no longer has
-
----
-
 ---
 
 # Network Inspection
 
 {{% section %}}
 
+<label>Setup</label>
 * Isolated sandbox network
   * Router, switch, access point, Vacuum Cleaner
   * Additional NUC to simulate peer data
@@ -656,7 +698,7 @@ New file
 * Local traffic - DHCP (5min), Tuya Discovery (5s)
 * Connections to America, Germany, China
   * America, Germany - AWS - `fds`, `a2`, `ms`, `m2`
-  * China - Mi IO Cloud (v01.15.58 only)
+  * <span style="color: grey">China - Mi IO Cloud (v01.15.58 only)</span>
 * Increased network activity at 3am <!-- MQTT, A2 -->
   * 3am AEDT is 12am in Beijing
   * Connections are being established - possible timeout/reconnect
@@ -665,7 +707,6 @@ New file
 
 * New FW uses `m2.tuyaeu.com` instead of `ms.tuyaeu.com`
 * New FW no longer polls `xx.ot[t].io.mi.com`
-  * No longer uses `miio_client`
 
 ---
 
@@ -757,21 +798,37 @@ Server Response
 
 ---
 
+## Log data <span style="font-size: 24px">(Xiaomi FDS)</span>
+
+<div style="display: flex; flex-direction: row">
+<div style="min-width: 50%">
+Data is compressed and encrypted
+
+* `/mnt/data/rrlog/**`
+* `/dev/shm/**`
+* `/mnt/reserve/...`
+
+> 
+
+* App logs
+* Updater logs
+* 'Anonymous' statistics
+* `wlanmgr tcpdump`
+</div>
+
+<div>
+<img style="flex: 1" round src="/uploads/20220705-snipaste_2022-07-05_20-36-52.jpg">
+</div>
+</div>
+
+
+---
+
 ## Network Map
 
 <img src="/uploads/network.dark_20220725.png" width="850px" >
 
 {{% /section %}}
-
----
-
-
-
-## Log data
-
-* WAN - security, PII
-* LAN - traffic? (tcpdump)
-
 
 ---
 
@@ -787,25 +844,23 @@ Server Response
 
 ---
 
-adb --- touched though didn't crack
+<!-- adb --- touched though didn't crack
 
----
+--- -->
 
+## Reset Persistence
 
-## ATTACK
+> Patch the recovery partition `mmcblk0p7`
 
-- patch the recovery partition mmcblk0p7
+## Upgrade Persistence
 
+> https://featherbear.cc/UNSW-CSE-Thesis/posts/achieving-upgrade-persistence/
 
-## Attack
-https://featherbear.cc/UNSW-CSE-Thesis/posts/achieving-upgrade-persistence/
+## Remote Access
 
+> ZeroTier, etc
 
----
-
-
-
-# OTA Rooting 
+## OTA Rooting 
 
 {{% section %}}
 
@@ -842,12 +897,9 @@ During device initialisation, an OTA update payload could be sent...
 
 {{% /section %}}
 
+---
 
-
-
-
-* UNSW Elec - MUD - they could do this to heighten security
-  * note - doesn't prevent them from being malicious from within their own C2 server, but will mitigate modified devices
+# Security Response
 
 
 
@@ -855,7 +907,14 @@ https://featherbear.cc/UNSW-CSE-Thesis/posts/disclosures/
 Response to disclosures
 tuya and roborock only have one disclosure listed on their site?
 Hard to find
+
+
 xiaomi paper
+
+
+
+* UNSW Elec - MUD - they could do this to heighten security
+  * note - doesn't prevent them from being malicious from within their own C2 server, but will mitigate modified devices
 
 
 Takeaway
