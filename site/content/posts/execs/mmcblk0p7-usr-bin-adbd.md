@@ -16,22 +16,31 @@ toc = true
     locksec_apply_passwd: adb source str: erI09cyW%()+-[]_8a80ab8936d76c118000:;<=>?@{}CzD2xuMNlwabTK7
     locksec_apply_passwd: locksec_apply_passwd, passwd: 0y[ad8@w
 
-Custom adbd binary that has an authentication challenge before giving you access
+> Custom adbd binary that has an authentication challenge before giving you access
 
-## Logging
+## Note: Debug Logging
 
 Supply `ADB_TRACE=1` as an env (either prefix, or set as env) to see more verbose logs
 
+***
+
 ## Auth Flow
 
-* Requires you to know the vinda password
+* Requires you to know the vinda password (prior to XOR)
 * Request the challenge key with `adb shell [VINDAVALUE]rockrobo dynamickey`
 * Response is generated via the challenge key + device serial
-* Access shell with `adb shell [VINDAVALUE][RESPONSE]command`
+* Access shell with `adb shell [VINDAVALUE][RESPONSE] [COMMAND]`
+* A new challenge is generated every time a new connection is opened
+
+### Commands
+
+* `uart_test` - UART but will probably fail because tty2 is in use already
+* `ruby_flash` - Boots into FEL "efex"
+* `dynamickey` - Get the dynamic key (again)
 
 ## Access Levels
 
-* There are different so-called "levels", determined by the value of `adb_lock` in the `/mnt/default/adb.conf` file (file default is 1, app default on parse error is 0)
+* There are different so-called "levels", \[possibly\] determined by the value of `adb_lock` in the `/mnt/default/adb.conf` file (file default is 1, app default on parse error is 0)
 
 ## Lock State
 
@@ -45,10 +54,16 @@ Supply `ADB_TRACE=1` as an env (either prefix, or set as env) to see more verbos
 
 ## Passwords
 
-* adb_passwd
-* sys_passwd - vinda
+* `adb_passwd` - generated challenge response
+* `sys_passwd` - vinda
 
 ***
+
+![](/uploads/20220725-snipaste_2022-07-26_03-14-37.jpg)
+
+***
+
+## Challenge Response Generation
 
 > Address 0x18d60 on adbd (MD5 110b25922d0cf121deeb5b72342b93c8)
 
