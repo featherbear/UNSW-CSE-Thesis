@@ -38,6 +38,12 @@ Supply `ADB_TRACE=1` as an env (either prefix, or set as env) to see more verbos
 * `ruby_flash` - Boots into FEL "efex"
 * `dynamickey` - Get the dynamic key (again)
 
+Not sure if we are meant to run our own commands
+```
+src/rr_ruby.c::adb_check_unlock_level1():not support /adb shell sys_passwd#adb_passwd echo TESTING/ in level 1
+```
+
+
 Commands are validated (`0x11dbc`) to check they that don't contain `;` `&` `|` <code>\`</code>
 
 > However, with the `uart_test` command, the program launches our input in a /bin/sh shell... We can inject some things!
