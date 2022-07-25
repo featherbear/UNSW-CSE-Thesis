@@ -39,10 +39,8 @@ Supply `ADB_TRACE=1` as an env (either prefix, or set as env) to see more verbos
 * `dynamickey` - Get the dynamic key (again)
 
 Not sure if we are meant to run our own commands
-```
-src/rr_ruby.c::adb_check_unlock_level1():not support /adb shell sys_passwd#adb_passwd echo TESTING/ in level 1
-```
 
+    src/rr_ruby.c::adb_check_unlock_level1():not support /adb shell sys_passwd#adb_passwd echo TESTING/ in level 1
 
 Commands are validated (`0x11dbc`) to check they that don't contain `;` `&` `|` <code>\`</code>
 
@@ -57,6 +55,7 @@ Commands are validated (`0x11dbc`) to check they that don't contain `;` `&` `|` 
 ## Access Levels
 
 * There are different so-called "levels", \[possibly\] determined by the value of `adb_lock` in the `/mnt/default/adb.conf` file (file default is 1, app default on parse error is 0)
+* Level 0 is the best? As its execution allows us arbitrary command execution
 
 ## Lock State
 
