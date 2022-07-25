@@ -149,7 +149,7 @@
     title: Hardware Hacking
     content: [
       {
-        title: Monday
+        title: Charger Tests
         date: 25/10/2021
         link: https://featherbear.cc/UNSW-CSE-Thesis/posts/roborock-s6-teardown/
         content: [
@@ -159,7 +159,7 @@
         ]
       }
       {
-        title: Tuesday
+        title: Network Preparation
         date: 26/10/2021
         link: https://featherbear.cc/UNSW-CSE-Thesis/posts/20211026-progress/
         content: [
@@ -168,13 +168,13 @@
         ]
       }
       {
-        title: Friday
+        title: Device Disassembly
         date: 29/10/2021
         link: https://featherbear.cc/UNSW-CSE-Thesis/posts/roborock-s6-teardown/#vacuum-cleaner
         content: Opened up the vacuum cleaner and inspected circuitry
       }
       {
-        title: Sunday
+        title: Preliminary Device Access Preparation
         date: 01/05/2022
         content: [
           Did some power analysis of the charger
@@ -182,7 +182,7 @@
         ]
       }
       {
-        title: Friday
+        title: Device Reassembly
         date: 24/06/2022
         content: [
           Reassemble unit
@@ -195,7 +195,7 @@
     title: Software Hacking
     content: [
       {
-        title: Monday
+        title: Begin packet capture
         date: 25/10/2021
         link: https://featherbear.cc/UNSW-CSE-Thesis/posts/20211025-progress/
         content: [
@@ -208,13 +208,13 @@
         ]
       }
       {
-        title: Friday
+        title: Preliminary ADB/USB test
         date: 29/10/2021
         link: https://featherbear.cc/UNSW-CSE-Thesis/posts/usb-port/
         content: Looked at the USB port communications (not much happening..)
       }
       {
-        title: Saturday
+        title: Breaking into the device serial
         date: 30/10/2021
         link: https://featherbear.cc/UNSW-CSE-Thesis/posts/20211030-progress/
         content: [
@@ -224,7 +224,7 @@
         ]
       }
       {
-        title: Wednesday
+        title: Firmware dump
         date: 02/03/2022
         link: https://featherbear.cc/UNSW-CSE-Thesis/posts/20211025-progress/
         content: Made a live system image of the eMMC chip for offline analysis
@@ -291,18 +291,21 @@
       {
         title: Binary Patching
         date: 05/07/2022
+        link: https://featherbear.cc/UNSW-CSE-Thesis/posts/pre-encryption-and-post-decryption-hooks/
         content: Tested how to hook into functions, though realised that the required functions printed their outputs anyway
       }
       {
         title: Reset Tests
         date: 11/07/2022
+        link: https://featherbear.cc/UNSW-CSE-Thesis/posts/upgrade-reset-persistence/
         content: [
-          Test reset persistence and made POC for payload persistence
+          Test reset persistence and made POC for reset payload persistence
         ]
       }
       {
         title: Upgrade Tests
         date: 11/07/2022
+        link: https://featherbear.cc/UNSW-CSE-Thesis/posts/upgrade-notes/
         content: [
           Upgraded to latest version (April 2022) - v02.29.02
           Test upgrade persistence (didn't really work)
@@ -312,18 +315,18 @@
         ]
       }
       {
-        title: Wednesday
+        title: MiIO POC Idea
         date: 13/07/2022
-        content: Thought about getting access to the device via MIIO OTA on device init
+        content: Thought about getting access to the device via MiIO OTA on device init
         link: https://featherbear.cc/UNSW-CSE-Thesis/posts/13-07-2022-progress-update/
       }
       {
-        title: Monday
+        title: wget... but not
         date: 18/07/2022
         content: Yoo I found this cursed downloader function for bash scripts... because I couldn't get curl on the machine haha!
       }
       {
-        title: Tuesday
+        title: MIIO OTA test, Upgraded access verification
         date: 19/07/2022
         content: [
           Explored MiIO OTA update, but found it didn't work on my June 2020 manufactured device as it had a version of miio_client that was too new, and had code to handle and drop the request without it being broadcasted to AppProxy
@@ -334,14 +337,15 @@
         ]
       }
             {
-        title: Saturday
+        title: Network analysis
         date: 23/07/2022
         content: [
-          Network packet analysis
+          Collated the network packet captures
+          Used CapAnalysis to extract statistics and graphs
         ]
       }
       {
-      title: Tuesday
+      title: ADBD
       date: 26/07/2022
       link: https://youtu.be/vUsIPE8aoJo
       content: [
