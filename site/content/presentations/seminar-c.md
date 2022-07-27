@@ -316,7 +316,7 @@ Thesis B - Investigating `rrlogd`
 
 Thesis B - Investigating `adbd`
 
-<iframe style="border: 2px solid white; border-radius: 10px; pointer-events: none;" width=1280 height=720 src=""></iframe>
+<iframe style="border: 2px solid white; border-radius: 10px; pointer-events: none;" width=1280 height=720 src="../seminar-b/?noControls#/11/8"></iframe>
 
 {{% /section %}}
 
@@ -738,6 +738,57 @@ Used to have the `tuya_iot_impl_upload_file` function but has been removed
 {{% /section %}}
 
 ---
+
+# What else is uploaded (`rrlogd`)?
+
+{{% section %}}
+
+> What can the manufacturer see?
+
+* Device data
+* Application config
+* Application logs
+* SLAM (map)
+* Running processes
+* Wireless configuration
+* Packet capture
+* Blackbox (statistics)
+
+> See: [Privacy Policy](../posts/privacy-policy-from-apk/)
+
+{{% note %}}
+It inadvertently uploads the device's wireless network credentials (because of app logs), though there is realistically no need for the manufacturer to know this.
+
+Also - the device can't connect without being connected to a wireless network with an internet connection. So the reason of 'troubleshooting connectivity issues' is rather moot.
+{{% /note %}}
+
+---
+
+```md
+Effective: 30th April 2019
+
+Cleaning-related information ... last 20 items will be saved by your device and server...
+...stored in the server for up to 180 days, ... automatically deleted after expiration.
+Network information: ...the password information is only stored on the device side...
+... will not be uploaded to the server.
+Timing information... Cleanable Area Information... Other information: For example, ....
+```
+
+"Password [...] only stored on the device" - <label>Well about that...</label>
+
+{{% center %}}
+<div><img round src="/uploads/Snipaste_2022-07-28_07-11-20.png" width="60%" ></div>
+<small>Above: Log data uploaded by <code>rrlogd</code> | FW: v02.29.02 (28th April 2022)</small>
+{{% /center %}}
+
+{{% note %}}
+Also like... "Other information" is rather bleak...
+{{% /note %}}
+
+{{% /section %}}
+
+---
+
 # File Persistence <span style="font-size: 24px">(Upgrade and Reset)</span>
 
 Test untouched directories during a [firmware update](../posts/upgrade-upgrade-persistence/) and [factory reset](../posts/upgrade-reset-persistence)
@@ -805,6 +856,23 @@ mmcblk0p11
 
 
 {{% /section %}}
+
+---
+
+# File Persistence <span style="font-size: 24px">(Account disassociation)</span>
+
+⚠️ All files kept between disassociations
+
+* Roborock should make the device reset itself automatically 
+  * They probably don't because they assume you will reconnect
+
+> 
+
+* Selling your device?
+  * Do a factory reset
+  * ...or don't.  
+* Buying a new device?
+  * Do a factory reset (and hope it's not modified)
 
 ---
 
@@ -1115,7 +1183,7 @@ During device initialisation, an OTA update payload could be sent...
 
 ---
 
-* OTA updates during device initialisation were disabled in a  November 2019 firmware update.
+* OTA updates during device initialisation were disabled in a November 2019 firmware update.
   - Remember - Product was released June 2019 <!-- ours was manufactured 06/2020 -->
 * This method of attack is limited to devices that are
   * Not yet initialised (else will have to be factory reset)
@@ -1133,17 +1201,17 @@ During device initialisation, an OTA update payload could be sent...
 # Let's Talk Threats
 
 * <label>TS0 - No malicious threat</label>
-  * Data visibility, device ownership
+  * Visibility and ownership of the data / device
 * <label>TS1 - Physical (proximal) threat</label>
   * Supply-chain
   * Second-hand seller
-  * Someone with short/prolonged access
+  * Someone with momentary/prolonged access
 * <label>TS2 - Remote (proximal) threat</label>
   * Nearby, on the network
   * Nearby, outside of the network
 * <label>TS3 - Remote (distal) threat</label>
   * Backdoor
-  * Vendor C2
+  * Vendor, C2
 
 <span style="color: grey">exc: Usage of the data in the cloud</span>
 
@@ -1151,71 +1219,198 @@ During device initialisation, an OTA update payload could be sent...
 
 # TS0 - No malicious threat
 
-> Data visibility and ownership
+{{% section %}}
 
-* All WAN communications are encrypted
-* Logs are encrypted
+> Data Visibility and Ownership
 
-TODO: Insert screenshot from phone about deleting account
+<div style="display: flex; flex-direction: row">
+<div style="text-align: center; flex: 1">
+<img round src="/uploads/Screenshot_20220726-081528_Roborock.jpg" width="70%">
+</div>
+<div>
 
-Nearby attackers
+* How do I know what data is being collected?
+  * Privacy policy[™](#/9/1)
+* How do I know what data is <label>actually</label> being collected?
+  * Need equipment, skills, willingness
+  * Patience to unscrew a lot of screws
+  * Encryption
+* (How) Can I control the data that is collected?
+  * Locally? Remotely?
+* (How) Can I confirm _my_ data has been deleted?
 
-* Remote OTA
+<small>Data includes: map data, <s>[camera]</s>, <s>[microphone]</s>, app logs, <br/>process list, network config, network data, statistics</small>
+
+
+</div>
+</div>
 
 ---
 
-## TS1 - Physical (proximal) threat
+> Device Visibility and Ownership
 
-Takes time to open the device
+<div style="display: flex; flex-direction: row">
+<div>
+
+* Is this device really mine?
+* Can I see what _my_ device is doing?
+* Can I modify _my own_ device
+
+❌ Communications are encrypted  
+❌ Logs are encrypted  
+❌ Restricted `adbd`, `ssh`, `serial`
+
+* But otherwise yes
+  * It's just Linux
+  * No hardware restrictions to flashing
+
+</div>
+
+<div style="text-align: center; flex: 1">
+<div><img round src="/uploads/Snipaste_2022-07-28_05-48-58.jpg" width="75%"></div>
+<small>Would you pay for hardware<br/>.. then pay more to use it?</small>
+</div>
+</div>
+
+{{% /section %}}
 
 ---
-## TS2 - Remote (proximal) threat
+
+# TS1 - Physical (proximal) threat
+
+> <span style="font-size: 0.5em">The "friend-who-has-your-WiFi-password-even-though-you-didn't-give-it-to-them"</span>
+
+<div style="display: flex; flex-direction: row">
+<div>
+<label>Prolonged access</label>
+
+✔️ Efforts to restrict serial access  
+⚠️ Supply chain  
+* Extract user/device/app data
+* Modifications
+  * Persistence
+  * Remote access
+  * Jumphost
+  * Eavesdropping
+
+</div>
+
+<div>
+<label>Momentary access</label>
+
+✔️ `adbd` (USB access) is restricted  
+✔️ No fast hands-off attack vector  
+  * Need to open up the device
+  * Takes time to gain shell access
+
+* Reset + OTA root
+  * <span style="font-size: 0.9em">"I wonder what this _reset button_ does"</span>
+  * <span style="color: grey">Pre-Nov 2019 units only</span>
+
+</div>
+
+</div>
+
+---
+# TS2 - Remote (proximal) threat
 
 > The "coffee shop hacker"
 
-* Sniff during pairing
+✔️ All data is encrypted (application level, not just TLS)!  
+✔️ IPv6 blocked  
+✔️ SSH server port blocked by default  
+⚠️ ...other services?  
+⚠️ OTA rooting <span style="color: grey">(patched Nov 2019)</span>  
+❌ Wireless credentials can be sniffed during pairing (+ promiscuous)  
+  
+{{% center %}}<img round src="/uploads/Snipaste_2022-05-02_01-14-22.jpg" width="40%">{{% /center %}}
+
 
 ---
 
-## TS3 - Remote (distal) threat
+# TS3 - Remote (distal) threat
 
-* Backdoor
-* Vendor
+<label>Vendor</label>
+
+⚠️ Access to user/device/app data  
+⚠️ Ability to issue remote commands  
+⚠️ Network packet logging  
+⚠️ Potential arbitrary execution in future releases  
+[⚠️](#/9/1) Privacy policy discrepancy
+
+<br />
+
+<label>Other</label>
+
+⚠️ Is my device backdoored?  
+⚠️ Unknown nature of expected traffic (see later)  
+⚠️ Vuln > RCE = root control
 
 ---
 
-## Vendor has the ability to issue remote commands
+# Privacy / Security Response
 
-* Packet log
-* Possible RCE?
-* Upload arbitrary
+{{% section %}}
+<label>Roborock</label>
+
+✔️ Evidence of buffer overflow checks in the binary  
+✔️ Application-level encryption  
+✔️ Reduction in log verbosity (though not consistent)  
+✔️ `ip{,6}tables` rules  
+✔️ Tightening of access through `adb`, `ssh`, `serial`  
+✔️ They seem to respond to security incidents  
+✔️ (some) effort to uphold privacy and define data usage
 
 ---
 
-# Security Response
+⚠️ They seem to respond to security incidents. <label><i style="font-style: italic">sort of</i></label>
 
-* Saw that there were checks for buffer overflows
-* Encryption
-* Reduction in log verbosity
-* iptables
-* ip6tables
+>
 
 ## Disclosures
 
-* Only _one_ listed on their [webpage](https://global.roborock.com/pages/disclosure-security-vulnerability-on-tuya-iot-cloud)
-  * No CVE report (MITRE)
-  * Have email
-* Same as for Tuya
-  * Have SRC
-  * Bug bounty
-* Xiaomi has many vulns
-  * Bug bounty
+* Only <label>one</label> vulnerability disclosure listed on their [webpage](https://global.roborock.com/pages/disclosure-security-vulnerability-on-tuya-iot-cloud)
+  * _8 years of business, 15 products, 1 vulnerability?_
+  * No CVE / other detail report
+* Perhaps more, but undisclosed
 
-https://images.tuyacn.com/smart/docs/TuyaSmart-WhitePaper-Intl.pdf
->> Pairing Security
+{{% center %}}<img round src="/uploads/Snipaste_2022-07-28_08-49-02.jpg" width="50%">{{% /center %}}
 
->> https://featherbear.cc/UNSW-CSE-Thesis/posts/xiaomi-cyber-security-baseline-for-consumer-internet-of-things/
-xiaomi paper
+---
+
+## What about other companies?
+
+<span style="display: inline-table; vertical-align: middle;"><img src="/uploads/tuya_logo.png" height="40px" alt="Tuya" ></span> <span style="color: grey; font-size: 0.6em">(IoT Ecosystem, Whitelabel Vendor)</span> and  <span style="display: inline-table; vertical-align: middle;"><img src="/uploads/xiaomi_smartlife_logo.webp" height="40px" alt="Mijia (Xiaomi)" ></span> Xiaomi <span style="color: grey; font-size: 0.6em">(IoT Ecosystem)</span> have published CVEs
+
+* Reminder; not a necessity
+* They both have large security teams and bug bounty programs
+  * Bigger company
+  * More at stake
+
+<br />
+
+{{% center %}}<img round src="/uploads/Snipaste_2022-07-28_09-01-52.jpg" width="70%">{{% /center %}}
+
+---
+
+<div style="display: flex; flex-direction: row">
+
+<div>
+<div style="text-align: center"><a href="https://featherbear.cc/UNSW-CSE-Thesis/posts/tuya-white-paper/"><img round src="/uploads/Snipaste_2022-07-28_09-06-38.jpg" width="50%"></a></div>
+
+</div>
+
+<div>
+<div style="text-align: center"><a href="https://featherbear.cc/UNSW-CSE-Thesis/posts/xiaomi-cyber-security-baseline-for-consumer-internet-of-things/"><img round src="/uploads/Snipaste_2022-07-28_09-07-28.jpg" width="50%"></a></div>
+
+</div>
+</div>
+
+Both companies have white-papers / publications about security minimums.
+
+<small><b>Note</b><br/>The Tuya paper mentions encryption during the pairing process.<br/>The Roborock S6 (which integrates the Tuya platform), <label>fails to do so</label>.<br/><br/>Is there a compliance check / verification between either party?</small>
+
+{{% /section %}}
 
 ---
 
@@ -1265,26 +1460,30 @@ How have manufacturers of IoT / smart home devices addressed the increasing conc
 
 > 
 
-<br />
-<br />
+✔️ Data is cleared during resets  
+✔️ Lockdown on access methods (ADB, Serial, MiIO, SSH, IPv6)  
+✔️ Data is encrypted during transit  
 
-* ADB, Serial, MiIO OTA, SSH, tcpdump, RCE?, persistence, pairing
-* Roborock has historically responded to upgrades
-* Data is cleared
-* Encryption
-* Both Tuya and Xiaomi have encouraged security research
-  * Whitepapers
-  * Bug bounties
-* MUD files - need more adoption <!-- both device and infra manufacturers >
+<label>but more can be done</label>
+
+🔥 Further transparency in disclosures  
+🔥 Improved privacy policy  
+🔥 Pairing encryption  
+🔥 Data should be cleared on device disassociation  
+🔥 Better co-ordination between ecosystems and vendors  
+🔥 MUD files - both devices and infrastructure  
+🔥 Whitepapers, bug bounties  
 
 ---
 
 # Future Work
 
-* Test HSTS and MITM
-* Fuzz exposed ports
 * Test the mobile app
-* Test the cloud
+* Test the cloud infrastructure
+* Test MITM - HSTS?
+* Make MUD profile
+* Fuzz exposed ports
+  * e.g. `rr_loader` service
 
 ---
 
