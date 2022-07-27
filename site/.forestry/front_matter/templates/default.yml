@@ -65,6 +65,7 @@ pages:
 - site/content/posts/capturing-network-activity-securely.md
 - site/content/posts/capturing-packets-on-android.md
 - site/content/posts/commentree.md
+- site/content/posts/delete-persistence.md
 - site/content/posts/device-actions.md
 - site/content/posts/devtest.conf.md
 - site/content/posts/diff-inspection.md
@@ -95,6 +96,7 @@ pages:
 - site/content/posts/post-login-actions.md
 - site/content/posts/power-notes.md
 - site/content/posts/pre-encryption-and-post-decryption-hooks.md
+- site/content/posts/privacy-policy-from-apk.md
 - site/content/posts/project-focus.md
 - site/content/posts/psa-don-t-combine-program-arguments.md
 - site/content/posts/readings.md
@@ -110,6 +112,7 @@ pages:
 - site/content/posts/system-imaging.md
 - site/content/posts/thesis-c-report-structure-notes.md
 - site/content/posts/thesis-tasks.md
+- site/content/posts/tuya-white-paper.md
 - site/content/posts/unit-reassembly-with-breakout-cables.md
 - site/content/posts/updated-opt-rockrobo-rrlog-rrlogd.md
 - site/content/posts/updated-space-saving.md
