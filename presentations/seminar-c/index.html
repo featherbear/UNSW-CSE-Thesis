@@ -77,7 +77,7 @@ Most are <u>white-labelled</u> products, the biggest ecosystem vendor being <spa
 </blockquote>
 <div>
 How have manufacturers of IoT / smart home devices addressed the increasing concerns of digital privacy and product security?
-<div style=text-align:right;font-size:20px>(Specifically Roborock / Xiaomi / Tuya)</span>
+<div style=text-align:right;font-size:20px>(Specifically Roborock)</span>
 </div>
 <blockquote>
 </blockquote>
@@ -113,18 +113,6 @@ But is it safe to connect to your home?</p>
 <aside class=notes><p>Roborock was first tasked by Xiaomi to develop their vacuum cleaner (Mi Robot Vacuum Cleaner) in 2017 - they have since become their own company, developing their own line of vacuum cleaners</p>
 </aside>
 </section>
-</section><section>
-<p><br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br></p>
-<h1 id=where-we-left-off>Where we left off</h1>
 </section><section>
 <section data-shortcode-section>
 <p><br>
@@ -188,6 +176,8 @@ This does mean I only have access to the eMMC rather than being able to dump the
 <section data-noprocess data-shortcode-slide data-transition=fade>
 <p>Thesis B - Inspection of system services (<code>netstat</code>, <code>ip{,6}tables</code>)</p>
 <iframe style="border:2px solid #fff;border-radius:10px;pointer-events:none" width=1280 height=720 src=../seminar-b/?noControls#/7/3></iframe>
+<aside class=notes><p>Note that there is a firewall rule - though certain programs were able to unblock the port</p>
+</aside>
 </section>
 <section data-noprocess data-shortcode-slide data-transition=fade>
 <p>Thesis B - Remote access persistence (see <a href="https://www.youtube.com/watch?v=om2yzYHU1A0">proof of concept</a>)</p>
@@ -244,6 +234,108 @@ This does mean I only have access to the eMMC rather than being able to dump the
 </ul>
 </li>
 <li>Factory reset device, check for remnant files</li>
+</ul>
+</section>
+</section><section>
+<h1 id=more-on-adbd>More on <code>adbd</code></h1>
+<p><small>A novel but not-so-useful way to perform arbitrary code execution</small></p>
+<section data-shortcode-section>
+<p>Command injection vulnerability exists within the modified <code>adbd</code> binary</p>
+<p><img src=../../uploads/20220725-snipaste_2022-07-26_04-02-13.jpg alt></p>
+</section><section>
+<h2 id=whats-modified>What&rsquo;s modified?</h2>
+<ul>
+<li>Interface to perform <code>uart_test</code> and <code>ruby_flash</code></li>
+<li>Authenticated access to <code>adb shell</code>
+<ul>
+<li>Dynamic challenge/response</li>
+<li>Requires knowledge of <code>vinda</code>, device ID</li>
+</ul>
+</li>
+</ul>
+<p><img src=../../uploads/20220725-snipaste_2022-07-25_23-49-57.jpg alt></p>
+</section><section>
+<h2 id=auth-flow>Auth Flow</h2>
+<pre><code>SYS_PASSWD = /mnt/default/vinda := ABCD1234ABCD1234
+
+# Get challenge
+CHALLENGE $= adb shell [SYS_PASSWD]rockrobo dynamickey
+
+# Generate response
+ADB_PASSWD = generate(challenge, device_id)
+
+# Perform command
+adb shell [SYS_PASSWD][ADB_PASSWD] [COMMAND*]
+</code></pre>
+</section><section>
+<h2 id=achieving-rce>Achieving RCE</h2>
+<ul>
+<li>The modified binary has some sort of access level implementation
+<ul>
+<li>Depends on value in <code>/mnt/default/adb.conf</code> (RO)</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+</blockquote>
+<ul>
+<li>Arbitrary command execution when access level = 0
+<ul>
+<li>But the app also resets this value to 1</li>
+<li><code>&</code>, <code>;</code>, <code>|</code>, <code>`</code> characters are also forbidden</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+</blockquote>
+<p>😢 No arbitrary command execution&mldr;</p>
+<pre><code class=language-bash>$&gt; py -3 adbStart &quot;whoami&quot;
+
+src/rr_ruby.c::adb_check_unlock_level1():not support /adb shell sys_passwd#adb_passwd whoami in level 1
+</code></pre>
+</section><section>
+<h2 id=noooooooooo-span-stylefont-size-18pxwait-whatspan>Noooooooooo <span style=font-size:18px>wait what</span></h2>
+<p><img src=../../uploads/Snipaste_2022-07-26_05-53-34.jpg alt></p>
+<p>&mldr; where did <code>/bin/sh</code> come from..?</p>
+</section>
+<section data-noprocess data-shortcode-slide data-transition=fade>
+<h2 id=rce-via-command-substitution>RCE via command substitution</h2>
+<p><img src=../../uploads/20220725-snipaste_2022-07-26_03-56-14.jpg alt></p>
+<p>Avoiding the forbidden characters (<code>&</code>, <code>;</code>, <code>|</code>, <code>`</code>) we can exploit command substitution and redirections to inject commands.</p>
+<blockquote>
+<p>Allows us to write to the filesystem</p>
+</blockquote>
+</section>
+<section data-noprocess data-shortcode-slide data-transition=fade>
+<h2 id=rce-via-command-substitution-1>RCE via command substitution</h2>
+<blockquote>
+<p>Or read from the filesystem too!</p>
+</blockquote>
+<p><img src=../../uploads/20220725-snipaste_2022-07-26_04-02-13.jpg alt></p>
+</section><section>
+<h2 id=poc-breakdown-span-stylefont-size-18pxwhere-it-falls-apartspan>POC breakdown <span style=font-size:18px>(Where it falls apart)</span></h2>
+<ul>
+<li>Still need to authenticate before RCE possible
+<ul>
+<li>Still need knowledge of the <code>/mnt/default/vinda</code> file</li>
+<li>Need to physically open the device at least once
+<ul>
+<li>Screws. Lots of them.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+</blockquote>
+<ul>
+<li>At least, provides a way to issue commands even when <code>adb_lock != 0</code>
+<ul>
+<li>USB protocol is more common and accessible to people</li>
+<li>SSH access might stop working / be blocked <span style=color:grey;font-size:12px>(spoilers)</span> </li>
+<li>Serial access might stop working / be blocked <span style=color:grey;font-size:12px>(spoilers)</span> </li>
+</ul>
+</li>
 </ul>
 </section>
 </section><section>
@@ -387,7 +479,7 @@ Is this the end?</p>
 <blockquote>
 <p>But these files don&rsquo;t exist on my device&mldr;</p>
 </blockquote>
-<p>Affected: <code>rr_login</code> (serial), <code>dropbear</code> (SSH), <code>adbd</code> (USB)</p>
+<p>Affected: <code>rr_login</code> (serial), <code>dropbear</code> (SSH), <code>adbd</code>? (USB)</p>
 <aside class=notes><p>Confirmed by checking against strace / gdb / static analysis (BinaryNinja)</p>
 </aside>
 <p><small><label>Fix</label><br>
@@ -478,19 +570,68 @@ Is this the end?</p>
 </table>
 </section>
 </section><section>
-<h2 id=file-persistence-span-stylefont-size-24pxupgrade-and-resetspan>File Persistence <span style=font-size:24px>(Upgrade and Reset)</span></h2>
-<p>Test untouched directories during a <a href=../posts/upgrade-reset-persistence>factory reset</a> and <a href=../posts/upgrade-upgrade-persistence/>firmware update</a></p>
+<h1 id=what-else-is-uploaded-rrlogd>What else is uploaded (<code>rrlogd</code>)?</h1>
+<section data-shortcode-section>
+<blockquote>
+<p>What can the manufacturer see?</p>
+</blockquote>
+<ul>
+<li>Device data</li>
+<li>Application config</li>
+<li>Application logs</li>
+<li>SLAM (map)</li>
+<li>Running processes</li>
+<li>Wireless configuration</li>
+<li>Packet capture</li>
+<li>Blackbox (statistics)</li>
+</ul>
+<blockquote>
+<p>See: <a href=../posts/privacy-policy-from-apk/>Privacy Policy</a></p>
+</blockquote>
+<aside class=notes><p>It inadvertently uploads the device&rsquo;s wireless network credentials (because of app logs), though there is realistically no need for the manufacturer to know this.</p>
+<p>Also - the device can&rsquo;t connect without being connected to a wireless network with an internet connection. So the reason of &lsquo;troubleshooting connectivity issues&rsquo; is rather moot.</p>
+</aside>
+</section><section>
+<pre><code class=language-md>Effective: 30th April 2019
+
+Cleaning-related information ... last 20 items will be saved by your device and server...
+...stored in the server for up to 180 days, ... automatically deleted after expiration.
+Network information: ...the password information is only stored on the device side...
+... will not be uploaded to the server.
+Timing information... Cleanable Area Information... Other information: For example, ....
+</code></pre>
+<p>&ldquo;Password [&mldr;] only stored on the device&rdquo; - <label>Well about that&mldr;</label></p>
+<div style=text-align:center>
+<div><img round src=../../uploads/Snipaste_2022-07-28_07-11-20.png width=60%></div>
+<small>Above: Log data uploaded by <code>rrlogd</code> | FW: v02.29.02 (28th April 2022)</small>
+</div>
+<aside class=notes><p>Also like&mldr; &ldquo;Other information&rdquo; is rather bleak&mldr;</p>
+</aside>
+</section>
+</section><section>
+<h1 id=file-persistence-span-stylefont-size-24pxupgrade-and-resetspan>File Persistence <span style=font-size:24px>(Upgrade and Reset)</span></h1>
+<p>Test untouched directories during a <a href=../posts/upgrade-upgrade-persistence/>firmware update</a> and <a href=../posts/upgrade-reset-persistence>factory reset</a></p>
 <blockquote>
 </blockquote>
-<p><label>Reset Persistent</label></p>
+<section data-shortcode-section>
+<div style=display:flex;flex-direction:row>
+<div>
+<label>Upgrade Persistent</label>
 <ul>
-<li>[mmcblk0p11] <code>/mnt/reserve</code></li>
+<li>[mmcblk0p11] @ <code>/mnt/reserve</code></li>
+<li>[mmcblk0p1] @ <code>/mnt/data</code></li>
 </ul>
-<p><label>Upgrade Persistent</label></p>
+</div>
+<div>
+<label>Reset Persistent</label>
 <ul>
-<li>[mmcblk0p1] <code>/mnt/data</code></li>
-<li>[mmcblk0p11] <code>/mnt/reserve</code></li>
+<li>[mmcblk0p11] @ <code>/mnt/reserve</code></li>
 </ul>
+</div>
+</div>
+<p> <br>
+ <br>
+ </p>
 <blockquote>
 </blockquote>
 <table>
@@ -511,6 +652,60 @@ Is this the end?</p>
 </tr>
 </tbody>
 </table>
+</section><section>
+<ul>
+<li>Map, log and user data is cleared (securely)</li>
+<li>Reserve partition is never cleared, even during factory resets</li>
+</ul>
+<pre><code>mmcblk0p11
+|   mcu_ready
+|   try
+|   hwinfo
+|   anonymousid1
+|   lds_calibration.txt
+|   counter
+|   CompassBumper.cfg
+|   blackbox.db
+|   rrBkBox.csv
+|   endpoint.bin
+|   RoboController.cfg
+|   last_partition
+|
+\---rriot
+        tuya.json
+</code></pre>
+<aside class=notes><ul>
+<li>Can&rsquo;t perform byte-level recovery (e.g. photorec) due to reset method</li>
+<li>Can&rsquo;t completely disassociate yourself from the previous owner</li>
+<li>Possible to forge symbolic links?</li>
+</ul>
+</aside>
+</section>
+</section><section>
+<h1 id=file-persistence-span-stylefont-size-24pxaccount-disassociationspan>File Persistence <span style=font-size:24px>(Account disassociation)</span></h1>
+<p>⚠️ All files kept between disassociations</p>
+<ul>
+<li>Roborock should make the device reset itself automatically
+<ul>
+<li>They probably don&rsquo;t because they assume you will reconnect</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+</blockquote>
+<ul>
+<li>Selling your device?
+<ul>
+<li>Do a factory reset</li>
+<li>&mldr;or don&rsquo;t.</li>
+</ul>
+</li>
+<li>Buying a new device?
+<ul>
+<li>Do a factory reset (and hope it&rsquo;s not modified)</li>
+</ul>
+</li>
+</ul>
 </section><section>
 <h1 id=network-inspection>Network Inspection</h1>
 <section data-shortcode-section>
@@ -687,31 +882,101 @@ Data is compressed and encrypted
 <p><img src=../../uploads/network.dark_20220725.png width=850px></p>
 </section>
 </section><section>
-<h1 id=lets-talk-threats>Let&rsquo;s Talk Threats</h1>
-<blockquote>
-<p>Talk about threat models</p>
-</blockquote>
-<ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-</ul>
+<p><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br></p>
+<h1 id=demos-and-pocs>Demos and POCs</h1>
+<aside class=notes><p>Before we look at threats, let&rsquo;s look at some fun stuff!</p>
+</aside>
 </section><section>
-<h2 id=reset-persistence>Reset Persistence</h2>
+<h1 id=remote-access-across-the-internet>Remote Access (across the internet!!!)</h1>
+<ul>
+<li>Easy to perform - system has required libraries and network stack</li>
+<li>e.g. Reverse SSH</li>
+<li>e.g. VPN / SD-WAN</li>
+</ul>
+<div style=position:relative;padding-bottom:56.25%;height:0;overflow:hidden>
+<iframe src=https://www.youtube.com/embed/om2yzYHU1A0 style=position:absolute;top:0;left:0;width:100%;height:100%;border:0 allowfullscreen title="YouTube Video"></iframe>
+</div>
+</section><section>
+<h1 id=reset-persistence-factory-reset-friendly>Reset Persistence (factory reset friendly!!!)</h1>
 <blockquote>
-<p>Patch the recovery partition <code>mmcblk0p7</code></p>
+<p>#ModifyingTheRecoveryPartitionForFunAndProfit</p>
 </blockquote>
-<h2 id=upgrade-persistence>Upgrade Persistence</h2>
+<div style=position:relative;padding-bottom:56.25%;height:0;overflow:hidden>
+<iframe src=https://www.youtube.com/embed/eABmzUfZ22A style=position:absolute;top:0;left:0;width:100%;height:100%;border:0 allowfullscreen title="YouTube Video"></iframe>
+</div>
+</section><section>
+<h1 id=upgrade-persistence-span-stylefont-size-24pxsee-concept-postpostsachieving-upgrade-persistencespan>Upgrade Persistence <span style=font-size:24px>(<a href=../posts/achieving-upgrade-persistence/>see concept post</a>)</span></h1>
+<p><img src=../../uploads/20220711-snipaste_2022-07-12_04-24-24.jpg alt></p>
+<section data-shortcode-section>
+<h2 id=upgrade-procedure>Upgrade procedure</h2>
+<ul>
+<li>Download the update to <span style=font-size:.9em;color:grey><code>mmcblk0p1</code></span> (data)</li>
+<li>Extract update to <span style=font-size:.9em;color:grey><code>mmcblk0p10</code></span> (updbuf)</li>
+<li>Unmount <span style=font-size:.9em;color:grey><code>mmcblk0p8</code></span> (bootA) / <span style=font-size:.9em;color:grey><code>mmcblk0p9</code></span> (bootB)</li>
+<li>Flash <span style=font-size:.9em;color:grey><code>updbuf</code></span> to <span style=font-size:.9em;color:grey><code>bootA</code></span> / <span style=font-size:.9em;color:grey><code>bootB</code></span></li>
+<li>Boot into <span style=font-size:.9em;color:grey><code>bootA</code></span> / <span style=font-size:.9em;color:grey><code>bootB</code></span></li>
+<li>Flash <span style=font-size:.9em;color:grey><code>updbuf</code></span> to <span style=font-size:.9em;color:grey><code>bootB</code></span> / <span style=font-size:.9em;color:grey><code>bootA</code></span></li>
+<li>Boot into <span style=font-size:.9em;color:grey><code>bootB</code></span> / <span style=font-size:.9em;color:grey><code>bootA</code></span></li>
+</ul>
 <blockquote>
-<p><a href=https://featherbear.cc/UNSW-CSE-Thesis/posts/achieving-upgrade-persistence/>https://featherbear.cc/UNSW-CSE-Thesis/posts/achieving-upgrade-persistence/</a></p>
 </blockquote>
-<h2 id=remote-access>Remote Access</h2>
+<p>Both filesystems are overwritten (existing changes will disappear)</p>
+</section><section>
+<h2 id=achieving-upgrade-persistence>Achieving upgrade persistence</h2>
+<ul>
+<li>Download the update to <span style=font-size:.9em;color:grey><code>mmcblk0p1</code></span> (data)</li>
+<li>Extract update to <span style=font-size:.9em;color:grey><code>mmcblk0p10</code></span> (updbuf)</li>
+<li>📝 <span style=color:#b94357>Modify contents of <span style=font-size:.9em;color:grey><code>updbuf</code></span></span></li>
+<li>Unmount <span style=font-size:.9em;color:grey><code>mmcblk0p8</code></span> (bootA) / <span style=font-size:.9em;color:grey><code>mmcblk0p9</code></span> (bootB)</li>
+<li>Flash <span style=color:#b94357>modified</span> <span style=font-size:.9em;color:grey><code>updbuf</code></span> to <span style=font-size:.9em;color:grey><code>bootA</code></span> / <span style=font-size:.9em;color:grey><code>bootB</code></span></li>
+<li>Boot into <span style=font-size:.9em;color:grey><code>bootA</code></span> / <span style=font-size:.9em;color:grey><code>bootB</code></span></li>
+<li>Flash <span style=color:#b94357>modified</span> <span style=font-size:.9em;color:grey><code>updbuf</code></span> to <span style=font-size:.9em;color:grey><code>bootB</code></span> / <span style=font-size:.9em;color:grey><code>bootA</code></span></li>
+<li>Boot into <span style=font-size:.9em;color:grey><code>bootB</code></span> / <span style=font-size:.9em;color:grey><code>bootA</code></span></li>
+</ul>
 <blockquote>
-<p>ZeroTier, etc</p>
 </blockquote>
-<h2 id=ota-rooting>OTA Rooting</h2>
+<p>Modify the extracted updated firmware, so changes propagate</p>
+</section><section>
+<h2 id=how-to-modify>How to modify?</h2>
+<ul>
+<li>Alter the <label><code>SysUpdate</code></label> binary to include modification steps</li>
+<li>Service / cron / repeated task to write into <code>/mnt/updbuf</code></li>
+</ul>
+<aside class=notes><p>Altering the <code>SysUpdate</code> binary is probably more reliable.<br>
+If using a repeated or scheduled task - we&rsquo;d have to have a fast loop to intercept the extraction - but a lesser loop period means more wasted executions</p>
+</aside>
+</section><section>
+<h2 id=what-to-modify>What to modify?</h2>
+<ul>
+<li>Remote access
+<ul>
+<li><code>/etc/passwd</code></li>
+<li><code>/usr/bin/adbd</code></li>
+<li><code>/usr/sbin/dropbear</code></li>
+<li>VPN / SD-WAN</li>
+<li>iptables <span style=font-size:.6em>(various locations)</span></li>
+</ul>
+</li>
+<li>🔊 Sounds?</li>
+<li>Future upgrade persistence
+<ul>
+<li><code>SysUpdate</code></li>
+<li>Scheduled / repeated jobs</li>
+</ul>
+</li>
+</ul>
+</section>
+</section><section>
+<h1 id=ota-rooting>OTA Rooting</h1>
 <section data-shortcode-section>
 <pre><code class=language-json>{
   &quot;method&quot;: &quot;miIO.ota&quot;,
@@ -747,33 +1012,281 @@ Data is compressed and encrypted
 <p><img src=../../uploads/20220719-snipaste_2022-07-20_03-11-19.png alt></p>
 </section>
 </section><section>
-<h1 id=security-response>Security Response</h1>
-<p><a href=https://featherbear.cc/UNSW-CSE-Thesis/posts/disclosures/>https://featherbear.cc/UNSW-CSE-Thesis/posts/disclosures/</a>
-Response to disclosures
-tuya and roborock only have one disclosure listed on their site?
-Hard to find</p>
-<p>xiaomi paper</p>
+<h1 id=lets-talk-threats>Let&rsquo;s Talk Threats</h1>
 <ul>
-<li>UNSW Elec - MUD - they could do this to heighten security
+<li><label>TS0 - No malicious threat</label>
 <ul>
-<li>note - doesn&rsquo;t prevent them from being malicious from within their own C2 server, but will mitigate modified devices</li>
+<li>Visibility and ownership of the data / device</li>
+</ul>
+</li>
+<li><label>TS1 - Physical (proximal) threat</label>
+<ul>
+<li>Supply-chain</li>
+<li>Second-hand seller</li>
+<li>Someone with momentary/prolonged access</li>
+</ul>
+</li>
+<li><label>TS2 - Remote (proximal) threat</label>
+<ul>
+<li>Nearby, on the network</li>
+<li>Nearby, outside of the network</li>
+</ul>
+</li>
+<li><label>TS3 - Remote (distal) threat</label>
+<ul>
+<li>Backdoor</li>
+<li>Vendor, C2</li>
 </ul>
 </li>
 </ul>
-<p>Takeaway
-Summary (answer main point)</p>
-<p>tldr
-Who
-What
-When
-Why
-Where
-How</p>
+<p><span style=color:grey>exc: Usage of the data in the cloud</span></p>
 </section><section>
-<p>Address the statement</p>
+<h1 id=ts0---no-malicious-threat>TS0 - No malicious threat</h1>
+<section data-shortcode-section>
+<blockquote>
+<p>Data Visibility and Ownership</p>
+</blockquote>
+<div style=display:flex;flex-direction:row>
+<div style=text-align:center;flex:1>
+<img round src=../../uploads/Screenshot_20220726-081528_Roborock.jpg width=70%>
+</div>
+<div>
+<ul>
+<li>How do I know what data is being collected?
+<ul>
+<li>Privacy policy<a href=#/9/1>™</a></li>
+</ul>
+</li>
+<li>How do I know what data is <label>actually</label> being collected?
+<ul>
+<li>Need equipment, skills, willingness</li>
+<li>Patience to unscrew a lot of screws</li>
+<li>Encryption</li>
+</ul>
+</li>
+<li>(How) Can I control the data that is collected?
+<ul>
+<li>Locally? Remotely?</li>
+</ul>
+</li>
+<li>(How) Can I confirm <em>my</em> data has been deleted?</li>
+</ul>
+<p><small>Data includes: map data, <s>[camera]</s>, <s>[microphone]</s>, app logs, <br>process list, network config, network data, statistics</small></p>
+</div>
+</div>
 </section><section>
-<h1 id=thesis-in-a-year>Thesis in a Year</h1>
-<p><img src=../../uploads/screely-1658645824986.png alt></p>
+<blockquote>
+<p>Device Visibility and Ownership</p>
+</blockquote>
+<div style=display:flex;flex-direction:row>
+<div>
+<ul>
+<li>Is this device really mine?</li>
+<li>Can I see what <em>my</em> device is doing?</li>
+<li>Can I modify <em>my own</em> device</li>
+</ul>
+<p>❌ Communications are encrypted<br>
+❌ Logs are encrypted<br>
+❌ Restricted <code>adbd</code>, <code>ssh</code>, <code>serial</code></p>
+<ul>
+<li>But otherwise yes
+<ul>
+<li>It&rsquo;s just Linux</li>
+<li>No hardware restrictions to flashing</li>
+</ul>
+</li>
+</ul>
+</div>
+<div style=text-align:center;flex:1>
+<div><img round src=../../uploads/Snipaste_2022-07-28_05-48-58.jpg width=75%></div>
+<small>Would you pay for hardware<br>.. then pay more to use it?</small>
+</div>
+</div>
+</section>
+</section><section>
+<h1 id=ts1---physical-proximal-threat>TS1 - Physical (proximal) threat</h1>
+<blockquote>
+<p><span style=font-size:.5em>The &ldquo;friend-who-has-your-WiFi-password-even-though-you-didn&rsquo;t-give-it-to-them&rdquo;</span></p>
+</blockquote>
+<div style=display:flex;flex-direction:row>
+<div>
+<label>Prolonged access</label>
+<p>✔️ Efforts to restrict serial access<br>
+⚠️ Supply chain</p>
+<ul>
+<li>Extract user/device/app data</li>
+<li>Modifications
+<ul>
+<li>Persistence</li>
+<li>Remote access</li>
+<li>Jumphost</li>
+<li>Eavesdropping</li>
+</ul>
+</li>
+</ul>
+</div>
+<div>
+<label>Momentary access</label>
+<p>✔️ <code>adbd</code> (USB access) is restricted<br>
+✔️ No fast hands-off attack vector</p>
+<ul>
+<li>
+<p>Need to open up the device</p>
+</li>
+<li>
+<p>Takes time to gain shell access</p>
+</li>
+<li>
+<p>Reset + OTA root</p>
+<ul>
+<li><span style=font-size:.9em>&ldquo;I wonder what this <em>reset button</em> does&rdquo;</span></li>
+<li><span style=color:grey>Pre-Nov 2019 units only</span></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</section><section>
+<h1 id=ts2---remote-proximal-threat>TS2 - Remote (proximal) threat</h1>
+<blockquote>
+<p>The &ldquo;coffee shop hacker&rdquo;</p>
+</blockquote>
+<p>✔️ All data is encrypted (application level, not just TLS)!<br>
+✔️ IPv6 blocked<br>
+✔️ SSH server port blocked by default<br>
+⚠️ &mldr;other services?<br>
+⚠️ OTA rooting <span style=color:grey>(patched Nov 2019)</span><br>
+❌ Wireless credentials can be sniffed during pairing (+ promiscuous)</p>
+<div style=text-align:center>
+<img round src=../../uploads/Snipaste_2022-05-02_01-14-22.jpg width=40%>
+</div>
+</section><section>
+<h1 id=ts3---remote-distal-threat>TS3 - Remote (distal) threat</h1>
+<p><label>Vendor</label></p>
+<p>⚠️ Access to user/device/app data<br>
+⚠️ Ability to issue remote commands<br>
+⚠️ Network packet logging<br>
+⚠️ Potential arbitrary execution in future releases<br>
+<a href=#/9/1>⚠️</a> Privacy policy discrepancy</p>
+<p><br></p>
+<p><label>Other</label></p>
+<p>⚠️ Is my device backdoored?<br>
+⚠️ Unknown nature of expected traffic (see later)<br>
+⚠️ Vuln > RCE = root control</p>
+</section><section>
+<h1 id=privacy--security-response>Privacy / Security Response</h1>
+<section data-shortcode-section>
+<p><label>Roborock</label></p>
+<p>✔️ Evidence of buffer overflow checks in the binary<br>
+✔️ Application-level encryption<br>
+✔️ Reduction in log verbosity (though not consistent)<br>
+✔️ <code>ip{,6}tables</code> rules<br>
+✔️ Tightening of access through <code>adb</code>, <code>ssh</code>, <code>serial</code><br>
+✔️ They seem to respond to security incidents<br>
+✔️ (some) effort to uphold privacy and define data usage</p>
+</section><section>
+<p>⚠️ They seem to respond to security incidents. <label><i style=font-style:italic>sort of</i></label></p>
+<blockquote>
+</blockquote>
+<h2 id=disclosures>Disclosures</h2>
+<ul>
+<li>Only <label>one</label> vulnerability disclosure listed on their <a href=https://global.roborock.com/pages/disclosure-security-vulnerability-on-tuya-iot-cloud>webpage</a>
+<ul>
+<li><em>8 years of business, 15 products, 1 vulnerability?</em></li>
+<li>No CVE / other detail report</li>
+</ul>
+</li>
+<li>Perhaps more, but undisclosed</li>
+</ul>
+<div style=text-align:center>
+<img round src=../../uploads/Snipaste_2022-07-28_08-49-02.jpg width=50%>
+</div>
+</section><section>
+<h2 id=what-about-other-companies>What about other companies?</h2>
+<p><span style=display:inline-table;vertical-align:middle><img src=../../uploads/tuya_logo.png height=40px alt=Tuya></span> <span style=color:grey;font-size:.6em>(IoT Ecosystem, Whitelabel Vendor)</span> and <span style=display:inline-table;vertical-align:middle><img src=../../uploads/xiaomi_smartlife_logo.webp height=40px alt="Mijia (Xiaomi)"></span> Xiaomi <span style=color:grey;font-size:.6em>(IoT Ecosystem)</span> have published CVEs</p>
+<ul>
+<li>Reminder; not a necessity</li>
+<li>They both have large security teams and bug bounty programs
+<ul>
+<li>Bigger company</li>
+<li>More at stake</li>
+</ul>
+</li>
+</ul>
+<p><br></p>
+<div style=text-align:center>
+<img round src=../../uploads/Snipaste_2022-07-28_09-01-52.jpg width=70%>
+</div>
+</section><section>
+<div style=display:flex;flex-direction:row>
+<div>
+<div style=text-align:center><a href=https://featherbear.cc/UNSW-CSE-Thesis/posts/tuya-white-paper/><img round src=../../uploads/Snipaste_2022-07-28_09-06-38.jpg width=50%></a></div>
+</div>
+<div>
+<div style=text-align:center><a href=https://featherbear.cc/UNSW-CSE-Thesis/posts/xiaomi-cyber-security-baseline-for-consumer-internet-of-things/><img round src=../../uploads/Snipaste_2022-07-28_09-07-28.jpg width=50%></a></div>
+</div>
+</div>
+<p>Both companies have white-papers / publications about security minimums.</p>
+<p><small><b>Note</b><br>The Tuya paper mentions encryption during the pairing process.<br>The Roborock S6 (which integrates the Tuya platform), <label>fails to do so</label>.<br><br>Is there a compliance check / verification between either party?</small></p>
+</section>
+</section><section>
+<h1 id=towards-an-expected-conversation---rfc-8520>Towards an expected conversation - RFC 8520</h1>
+<blockquote>
+<p><a href=https://datatracker.ietf.org/doc/rfc8520/>RFC 8520</a> - Manufacturer Usage Description</p>
+</blockquote>
+<section data-shortcode-section>
+<p><img round src=../../uploads/20220725-snipaste_2022-07-26_07-37-41.jpg></p>
+<p><a href=https://developer.cisco.com/docs/mud/#!what-is-mud/what-is-mud>MUD</a> files whitelist the nature of network traffic that a device should transmit/receive. <span style=font-size:.8em;color:grey>(e.g. Transmit IPv4 tcp/8890 to (DNS) example.com)</span></p>
+<p>Traffic that does not match the MUD are discarded (or allowed but flagged). Mitigates unexpected ports/hosts - but ineffective against <span style=font-size:.6em>(e.g.)</span> C2 payloads</p>
+<p>IoT Research Team @ <a href=https://iotanalytics.unsw.edu.au/mudprofiles>UNSW EE&T</a> has done some research</p>
+</section><section>
+<div style=display:flex;flex-direction:row>
+<div>
+<img round src=../../uploads/20220725-snipaste_2022-07-26_07-26-49.jpg>
+</div>
+<div>
+RFC8520 was approved and published in <label>March 2019</label>
+<br>
+<br>
+<p>But is anyone adopting it?</p>
+</div>
+</section>
+</section><section>
+<blockquote>
+</blockquote>
+<div>
+How have manufacturers of IoT / smart home devices addressed the increasing concerns of digital privacy and product security?
+<div style=text-align:right;font-size:20px>(Specifically Roborock)</span>
+</div>
+<blockquote>
+</blockquote>
+<p>✔️ Data is cleared during resets<br>
+✔️ Lockdown on access methods (ADB, Serial, MiIO, SSH, IPv6)<br>
+✔️ Data is encrypted during transit</p>
+<p><label>but more can be done</label></p>
+<p>🔥 Further transparency in disclosures<br>
+🔥 Improved privacy policy<br>
+🔥 Pairing encryption<br>
+🔥 Data should be cleared on device disassociation<br>
+🔥 Better co-ordination between ecosystems and vendors<br>
+🔥 MUD files - both devices and infrastructure<br>
+🔥 Whitepapers, bug bounties</p>
+</section><section>
+<h1 id=future-work>Future Work</h1>
+<ul>
+<li>Test the mobile app</li>
+<li>Test the cloud infrastructure</li>
+<li>Test MITM - HSTS?</li>
+<li>Make MUD profile</li>
+<li>Fuzz exposed ports
+<ul>
+<li>e.g. <code>rr_loader</code> service</li>
+</ul>
+</li>
+</ul>
+</section><section>
+<h1 id=aside-thesis-in-a-year>Aside: Thesis in a Year</h1>
+<p><a href=https://featherbear.cc/UNSW-CSE-Thesis/tldr/><img src=../../uploads/screely-1658645824986.png alt></a></p>
 </section><section>
 <h1 id=thank-you>Thank You</h1>
 <p><br>
@@ -789,7 +1302,10 @@ How</p>
 <sub>
 <p>w: <a href=https://featherbear.cc/UNSW-CSE-Thesis>featherbear.cc/UNSW-CSE-Thesis</a></p>
 <p>e: <script>document.write(atob('YW5kcmV3Lmoud29uZ0BzdHVkZW50LnVuc3cuZWR1LmF1'))</script></p>
-</sub></section>
+</sub>
+<blockquote>
+</blockquote>
+</section>
 </div>
 </div>
 <script type=text/javascript src=../../reveal-hugo/object-assign.js></script>
