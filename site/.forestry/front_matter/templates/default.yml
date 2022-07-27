@@ -65,6 +65,7 @@ pages:
 - site/content/posts/capturing-network-activity-securely.md
 - site/content/posts/capturing-packets-on-android.md
 - site/content/posts/commentree.md
+- site/content/posts/delete-persistence.md
 - site/content/posts/device-actions.md
 - site/content/posts/devtest.conf.md
 - site/content/posts/diff-inspection.md
