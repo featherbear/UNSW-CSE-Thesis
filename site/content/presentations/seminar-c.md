@@ -241,7 +241,7 @@ Thesis A - Got root access (Device runs Ubuntu 14.04.3 LTS)
 
 Thesis B - Firmware dump (`dd`) for offline/static analysis
 
-[<img round src="/uploads/20220501-0T4A9824.JPG">](../posts/20220302-progress/#backup)
+<a href="https://featherbear.cc/UNSW-CSE-Thesis/posts/20220302-progress/#backup"><img round src="/uploads/20220501-0T4A9824.JPG"></a>
 
 {{% note %}}
 Could have dumped with a flash dumper but I don't own one of those!  
@@ -344,7 +344,7 @@ Thesis B - Investigating `adbd`
 * Finish analysing firmware binaries
 * Comparing files against the stock Ubuntu OS
 * Check if an IPv6 address is assigned (hence SSH)
-  * ans: [no.](../../posts/ipv6-check/)
+  * ans: [no.](https://featherbear.cc/UNSW-CSE-Thesis/posts/ipv6-check/)
 
 ## From Thesis C (privacy)
 
@@ -655,8 +655,8 @@ Confirmed by checking against strace / gdb / static analysis (BinaryNinja)
 {{% /note %}}
 
 <small><label>Fix</label><br />
-[(1)](../posts/upgraded-accessing-the-shell/) Enter bootloader and force entrypoint to a shell<br/>
-[(2)](../posts/upgrade-notes/#notice) Patch `/etc/inittab` to revert back to a normal login shell</small>
+[(1)](https://featherbear.cc/UNSW-CSE-Thesis/posts/upgraded-accessing-the-shell/) Enter bootloader and force entrypoint to a shell<br/>
+[(2)](https://featherbear.cc/UNSW-CSE-Thesis/posts/upgrade-notes/#notice) Patch `/etc/inittab` to revert back to a normal login shell</small>
 
 ---
 
@@ -754,7 +754,7 @@ Used to have the `tuya_iot_impl_upload_file` function but has been removed
 * Packet capture
 * Blackbox (statistics)
 
-> See: [Privacy Policy](../posts/privacy-policy-from-apk/)
+> See: [Privacy Policy](https://featherbear.cc/UNSW-CSE-Thesis/posts/privacy-policy-from-apk/)
 
 {{% note %}}
 It inadvertently uploads the device's wireless network credentials (because of app logs), though there is realistically no need for the manufacturer to know this.
@@ -791,7 +791,7 @@ Also like... "Other information" is rather bleak...
 
 # File Persistence <span style="font-size: 24px">(Upgrade and Reset)</span>
 
-Test untouched directories during a [firmware update](../posts/upgrade-upgrade-persistence/) and [factory reset](../posts/upgrade-reset-persistence)
+Test untouched directories during a [firmware update](https://featherbear.cc/UNSW-CSE-Thesis/posts/upgrade-upgrade-persistence/) and [factory reset](https://featherbear.cc/UNSW-CSE-Thesis/posts/upgrade-reset-persistence)
 
 >
 
@@ -1088,7 +1088,7 @@ Before we look at threats, let's look at some fun stuff!
 
 ---
 
-# Upgrade Persistence <span style="font-size: 24px">([see concept post](../posts/achieving-upgrade-persistence/))</span>
+# Upgrade Persistence <span style="font-size: 24px">([see concept post](https://featherbear.cc/UNSW-CSE-Thesis/posts/achieving-upgrade-persistence/))</span>
 
 
 ![](/uploads/20220711-snipaste_2022-07-12_04-24-24.jpg)
