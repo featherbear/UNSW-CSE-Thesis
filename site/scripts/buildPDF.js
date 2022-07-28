@@ -47,7 +47,7 @@ let server = polka()
           [
             'node',
             './node_modules/decktape/decktape.js',
-            ['--size', '1920x1080'],
+            ['--size', '1920x1080', '--load-pause', '10000'],
             BASE_HOST + link,
             path.join(workDir, fileName + '.pdf')
           ].flat(),
