@@ -1,0 +1,260 @@
+<!doctype html><html lang=en><meta charset=utf-8>
+<meta name=viewport content="width=device-width">
+<title>/opt/rockrobo/rrlog/rrlogd (v1.15.58) | CSE Thesis Musings</title>
+<meta name=generator content="Hugo Eureka 0.8.2">
+<link rel=stylesheet href=../../../css/eureka.min.css>
+<script defer src=../../../js/eureka.min.js></script>
+<link rel=preconnect href=https://fonts.gstatic.com crossorigin>
+<link rel=preload href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" as=style onload="this.onload=null,this.rel='stylesheet'">
+<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/styles/solarized-light.min.css media=print onload="this.media='all',this.onload=null" crossorigin>
+<script defer src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/highlight.min.js crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/languages/dart.min.js crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js integrity="sha256-uNYoXefWRqv+PsIF/OflNmwtKM4lStn9yrz2gVl6ymo=" crossorigin></script>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css integrity=sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X media=print onload="this.media='all',this.onload=null" crossorigin>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js integrity=sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4 crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js integrity=sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa crossorigin></script>
+<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}]})})</script>
+<script defer src=https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js integrity="sha256-Zmpaaj+GXFsPF5WdPArSrnW3b30dovldeKsW00xBVwE=" crossorigin></script>
+<link rel=preconnect href=https://www.google-analytics.com crossorigin>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107434487-2"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-107434487-2')</script>
+<script>(function(e,b,f,c,a,d){b[c]=b[c]||function(){(b[c].q=b[c].q||[]).push(arguments)},a=e.createElement('script'),d=e.getElementsByTagName('script')[0],a.async=1,a.src=f,a.id='fathom-script',d.parentNode.insertBefore(a,d)})(document,window,'//ss.featherbear.cc/tracker.js','fathom'),fathom('set','siteId','NEQTU'),fathom('trackPageview')</script>
+<style>html.dark{--color-primary-bg:#232327 !important}div#sidebar-toc>ul.pl-6{margin-left:1em}</style>
+<meta name=description content="Responsible for compressing, (encrypting and) upload log files
+  Possibly works with logrotate.sh (system logs)  Libraries  Protobuf curl mbedtls (Polar SSL)  Note Compression is given low priority: nice -n 19 tar zcf ...
+ Nicenesses range from -20 (most favorable scheduling) to 19 (least favorable).">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"/opt/rockrobo/rrlog/rrlogd (v1.15.58)","item":"/posts/execs/opt-rockrobo-rrlog-rrlogd-v01.15.58/"}]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/execs/opt-rockrobo-rrlog-rrlogd-v01.15.58/"},"headline":"\/opt\/rockrobo\/rrlog\/rrlogd (v1.15.58) | CSE Thesis Musings","datePublished":"2022-07-05T09:31:13+00:00","dateModified":"2022-07-05T09:31:13+00:00","wordCount":224,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Responsible for compressing, (encrypting and) upload log files\n  Possibly works with logrotate.sh (system logs)  Libraries  Protobuf curl mbedtls (Polar SSL)  Note Compression is given low priority: nice -n 19 tar zcf ...\n Nicenesses range from -20 (most favorable scheduling) to 19 (least favorable)."}</script><meta property="og:title" content="/opt/rockrobo/rrlog/rrlogd (v1.15.58) | CSE Thesis Musings">
+<meta property="og:type" content="article">
+<meta property="og:url" content="/posts/execs/opt-rockrobo-rrlog-rrlogd-v01.15.58/">
+<meta property="og:description" content="Responsible for compressing, (encrypting and) upload log files
+  Possibly works with logrotate.sh (system logs)  Libraries  Protobuf curl mbedtls (Polar SSL)  Note Compression is given low priority: nice -n 19 tar zcf ...
+ Nicenesses range from -20 (most favorable scheduling) to 19 (least favorable).">
+<meta property="og:locale" content="en">
+<meta property="og:site_name" content="CSE Thesis Musings">
+<meta property="article:published_time" content="2022-07-05T09:31:13+00:00">
+<meta property="article:modified_time" content="2022-07-05T09:31:13+00:00">
+<meta property="article:section" content="posts">
+<body class="flex flex-col min-h-screen">
+<header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
+<div class="w-full max-w-screen-xl mx-auto"><script>let storageColorScheme=localStorage.getItem("lightDarkMode");((storageColorScheme=='Auto'||storageColorScheme==null)&&window.matchMedia("(prefers-color-scheme: dark)").matches||storageColorScheme=="Dark")&&document.getElementsByTagName('html')[0].classList.add('dark')</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+<a href=../../../ class="mr-6 text-primary-text text-xl font-bold">CSE Thesis Musings</a>
+<button id=navbar-btn class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+<i class="fas fa-bars"></i>
+</button>
+<div id=target class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+<div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
+<a href=../../../#about class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">About</a>
+<a href=../../../posts/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 selected-menu-item mr-4">Posts</a>
+<a href=../../../docs/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">Docs</a>
+<a href=../../../tldr/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">Progress Log</a>
+</div>
+<div class=flex>
+<div class="relative pt-4 md:pt-0">
+<div class="cursor-pointer hover:text-eureka" id=lightDarkMode>
+<i class="fas fa-adjust"></i>
+</div>
+<div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id=is-open>
+</div>
+<div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40" id=lightDarkOptions>
+<span class="px-4 py-1 hover:text-eureka" name=Light>Light</span>
+<span class="px-4 py-1 hover:text-eureka" name=Dark>Dark</span>
+<span class="px-4 py-1 hover:text-eureka" name=Auto>Auto</span>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id=is-open-mobile>
+</div>
+</nav>
+<script>let element=document.getElementById('lightDarkMode');storageColorScheme==null||storageColorScheme=='Auto'?document.addEventListener('DOMContentLoaded',()=>{window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change',switchDarkMode)}):storageColorScheme=="Light"?(element.firstElementChild.classList.remove('fa-adjust'),element.firstElementChild.setAttribute("data-icon",'sun'),element.firstElementChild.classList.add('fa-sun')):storageColorScheme=="Dark"&&(element.firstElementChild.classList.remove('fa-adjust'),element.firstElementChild.setAttribute("data-icon",'moon'),element.firstElementChild.classList.add('fa-moon')),document.addEventListener('DOMContentLoaded',()=>{getcolorscheme(),switchBurger()})</script>
+</div>
+</header>
+<main class="flex-grow pt-16">
+<div class=pl-scrollbar>
+<div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
+<div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
+<div class="col-span-2 lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+<h1 class="font-bold text-3xl text-primary-text">/opt/rockrobo/rrlog/rrlogd (v1.15.58)</h1>
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+<div class="mr-6 my-2">
+<i class="fas fa-calendar mr-1"></i>
+<span>2022-07-05</span>
+</div>
+</div>
+<div class=content>
+<blockquote>
+<p>Responsible for compressing, (encrypting and) upload log files</p>
+</blockquote>
+<ul>
+<li>Possibly works with <code>logrotate.sh</code> (system logs)</li>
+</ul>
+<p><img src=../../../uploads/20220705-snipaste_2022-07-05_19-30-19.jpg alt></p>
+<h1 id=libraries>Libraries</h1>
+<ul>
+<li>Protobuf</li>
+<li>curl</li>
+<li>mbedtls (Polar SSL)</li>
+</ul>
+<h1 id=note>Note</h1>
+<p>Compression is given low <a href=https://linux.die.net/man/1/nice>priority</a>: <code>nice -n 19 tar zcf ...</code></p>
+<blockquote>
+<p>Nicenesses range from <strong>-20</strong> (most favorable scheduling) to 19 (least favorable).</p>
+</blockquote>
+<ul>
+<li>Could patch the binary to remove the source log deletes, although we <em>can</em> see that they&rsquo;re located in <code>/var/shm</code></li>
+</ul>
+<h1 id=interesting>Interesting</h1>
+<ul>
+<li><code>rockrobo/noupload</code></li>
+<li><code>rockrobo/devtest</code></li>
+<li>@0x25c18: <code>"rm -rf %s/*;mkdir -p %s/rockrobo/rrlog;mv %s/rrlog.log %s/rockrobo/rrlog/rrlog.log;reboot"</code></li>
+<li>Call to <code>system</code> in function at <code>0x15b6c</code></li>
+<li>@0x28ca: <code>"iptables -I INPUT -j ACCEPT -p tcp --dport 22"</code></li>
+<li><code>/dev/shm/</code></li>
+<li><code>/dev/shm/endpoint.bin</code></li>
+<li>IPC</li>
+<li><code>Authorization: Galaxy-V2 %s:%s</code></li>
+<li><code>User-Agent: python-requests/2.9.1</code></li>
+<li>Cryptography - public keys</li>
+<li><code>mbedtls_pk_encrypt</code></li>
+<li><code>rr_get_logserver</code></li>
+</ul>
+<h1 id=encryption-routine>Encryption Routine</h1>
+<h2 id=wrapper>Wrapper</h2>
+<blockquote>
+<p>Location: 0x19448</p>
+</blockquote>
+<p><img src=../../../uploads/20220705-snipaste_2022-07-05_20-26-04.jpg alt></p>
+<h2 id=rsa-encryption>RSA Encryption</h2>
+<blockquote>
+<p>Location: 0x19304</p>
+</blockquote>
+<p><img src=../../../uploads/20220705-snipaste_2022-07-05_20-20-34.jpg alt></p>
+<h3 id=key>Key</h3>
+<pre><code>-----BEGIN PUBLIC KEY-----
+MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAwWA83A+GTpWYtPaGzSY/
+T9qljcHS3M6SwtV/z1irxlZAOIWFRPgnEWk1J5PhovX9q/MRYSpZg7Rst2OiA//F
+MnZphgCILa+OBun2VBpMoG/NErjqigS5oVTXe6wyPCeVf33B15W5WsWj0wqUGkAg
+oQZf2xw1Eu0Ylh137mtwBoaSzeAn1X5tm9zdRJYn+r4S2U5P7MxzjiOyTWG4JjWy
+xx+oKJj+RhYxnmJ9LF7M5HIFhjcWJ5deIblWOM0Wql2MX63WAAiQJOfgaH1sqnED
+B9fm09RD3aKElm3k7V01lTD9g/1gkhqLVRtH3sjwtnFcHxzsKUDrvIy6YhJz/H8W
+2umAU8XZcREMRErmnCd+XAOMBj9WMihNBWDoT0k4i/W+E0iNe6uWL+dSYozBY7jZ
+hsjWnPR7FBQJ1kzaK4m0GMdn9SriA2RfydHctyHcOQHN53lFoRKqkJxgCNuCdES1
+HcwkxBOysLQDZDH0+hw2SAZclTtsY+l/pz6buBrZxJEEnMoPYJAaE+OR6b1MfjNC
+8Vj+thp7a0Wf+xW782NXgctI2FQ4wkC+F9u0rwF91qcfAN1Ei6t6edsecK8QfRkP
+NDqBMoqexwz9N+ye4ZEgFpaRLfsH85ZfHUOwvWYsllfsTgj2bz+kTqDc7MN1+4Oe
+oxI+9D/1bE6CFBYrwmGIgBMCAwEAAQ==
+-----END PUBLIC KEY-----
+</code></pre>
+<h2 id=aes-encryption>AES Encryption</h2>
+<p>Generated if some seed isn&rsquo;t provided</p>
+<p><img src=../../../uploads/20220705-snipaste_2022-07-05_20-35-00.jpg alt></p>
+<hr>
+<h1 id=compresscrypt-scope>Compress/Crypt Scope</h1>
+<p><img src=../../../uploads/20220705-snipaste_2022-07-05_20-36-52.jpg alt> <img src=../../../uploads/20220705-snipaste_2022-07-05_20-37-49.jpg alt></p>
+<hr>
+<h1 id=calls-to-system>Calls to <code>system</code></h1>
+<ul>
+<li>Didn&rsquo;t see any remotely controlled system inputs</li>
+</ul>
+<p><img src=../../../uploads/20220705-snipaste_2022-07-05_20-33-03.jpg alt></p>
+<h1 id=iptables>iptables</h1>
+<h2 id=version-check>Version Check</h2>
+<p><img src=../../../uploads/20220705-snipaste_2022-07-05_20-53-02.jpg alt></p>
+<h2 id=allow-list>Allow-list</h2>
+<blockquote>
+<p>Location: 0x1545a</p>
+</blockquote>
+<p><img src=../../../uploads/20220705-snipaste_2022-07-05_20-57-36.jpg alt> <img src=../../../uploads/20220705-snipaste_2022-07-05_20-58-04.jpg alt></p>
+<hr>
+<h1 id=network-handler>Network Handler</h1>
+<blockquote>
+<p>Location: 0x1d6d8</p>
+</blockquote>
+<p><img src=../../../uploads/20220705-snipaste_2022-07-05_21-34-32.jpg alt></p>
+<p>Only one function that calls <code>recv</code> / <code>recvfrom</code> which is at <code>0x1d6d8</code></p>
+<ul>
+<li>Can arbitrary files be request to be uploaded?
+<ul>
+<li>Don&rsquo;t think so..</li>
+</ul>
+</li>
+</ul>
+<h2 id=some-sort-of-curl>Some sort of <code>curl</code></h2>
+<blockquote>
+<p>Location: 0x1bad0</p>
+</blockquote>
+<p>aka internally: <code>perform_curl</code></p>
+<p><img src=../../../uploads/20220705-snipaste_2022-07-05_21-37-51.jpg alt></p>
+<ul>
+<li>Looks like PUT request <s>to Amazon (Kinesis Firehose? / S3?)</s>
+<ul>
+<li>Nevermind it&rsquo;s some <a href=http://docs.api.xiaomi.com/en/fds/>Xiaomi Galaxy File Data Storage</a></li>
+</ul>
+</li>
+<li><code>Authorization: Galaxy-V2 %s:%s</code></li>
+<li><code>User-Agent: python-requests/2.9.1</code>
+<ul>
+<li>I mean&mldr;</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id=other>Other</h1>
+<ul>
+<li>Some existence of <code>/opt/rockrobo/rrlog/devtest.conf</code></li>
+</ul>
+<p><img src=../../../uploads/20220705-snipaste_2022-07-05_22-26-06.jpg alt></p>
+</div>
+<div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
+<div>
+<span class="block font-bold">Previous</span>
+<a href=../../../posts/devtest.conf/ class=block>devtest.conf</a>
+</div>
+<div class="md:text-right mt-4 md:mt-0">
+<span class="block font-bold">Next</span>
+<a href=../../../posts/logviews/mnt-data-rockrobo-rrlog-miio.log/ class=block>/mnt/data/rockrobo/rrlog/miio.log</a>
+</div>
+</div>
+</div>
+<div class=col-span-2>
+<div class="sticky top-16 z-10 hidden lg:block px-6 py-4 bg-primary-bg">
+<span class="text-lg font-semibold">On This Page</span>
+</div>
+<div class="sticky-toc hidden lg:block px-6 pb-6">
+<nav id=TableOfContents>
+<ul>
+<li><a href=#wrapper>Wrapper</a></li>
+<li><a href=#rsa-encryption>RSA Encryption</a>
+<ul>
+<li><a href=#key>Key</a></li>
+</ul>
+</li>
+<li><a href=#aes-encryption>AES Encryption</a></li>
+</ul>
+<ul>
+<li><a href=#version-check>Version Check</a></li>
+<li><a href=#allow-list>Allow-list</a></li>
+</ul>
+<ul>
+<li><a href=#some-sort-of-curl>Some sort of <code>curl</code></a></li>
+</ul>
+</nav>
+</div>
+<script>window.addEventListener('DOMContentLoaded',()=>{enableStickyToc()})</script>
+</div>
+</div>
+<script>document.addEventListener('DOMContentLoaded',()=>{hljs.initHighlightingOnLoad()})</script>
+</div>
+</div>
+</main>
+<footer class=pl-scrollbar>
+<div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
+<p class="text-sm text-tertiary-text">&copy; 2021 <a href=https://featherbear.cc>Andrew Wong (z5206677)</a>
+&#183; Powered by the <a href=https://github.com/wangchucheng/hugo-eureka class=hover:text-eureka>Eureka</a> theme for <a href=https://gohugo.io class=hover:text-eureka>Hugo</a></p>
+</div></div>
+</footer>
+</body>
+</html>

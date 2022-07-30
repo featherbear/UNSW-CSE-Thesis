@@ -1,0 +1,515 @@
+<!doctype html><html lang=en><meta charset=utf-8>
+<meta name=viewport content="width=device-width">
+<title>v02.29.02 - Versioning and Fingerprinting | CSE Thesis Musings</title>
+<meta name=generator content="Hugo Eureka 0.8.2">
+<link rel=stylesheet href=../../css/eureka.min.css>
+<script defer src=../../js/eureka.min.js></script>
+<link rel=preconnect href=https://fonts.gstatic.com crossorigin>
+<link rel=preload href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" as=style onload="this.onload=null,this.rel='stylesheet'">
+<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/styles/solarized-light.min.css media=print onload="this.media='all',this.onload=null" crossorigin>
+<script defer src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/highlight.min.js crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/languages/dart.min.js crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js integrity="sha256-uNYoXefWRqv+PsIF/OflNmwtKM4lStn9yrz2gVl6ymo=" crossorigin></script>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css integrity=sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X media=print onload="this.media='all',this.onload=null" crossorigin>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js integrity=sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4 crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js integrity=sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa crossorigin></script>
+<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}]})})</script>
+<script defer src=https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js integrity="sha256-Zmpaaj+GXFsPF5WdPArSrnW3b30dovldeKsW00xBVwE=" crossorigin></script>
+<link rel=preconnect href=https://www.google-analytics.com crossorigin>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107434487-2"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-107434487-2')</script>
+<script>(function(e,b,f,c,a,d){b[c]=b[c]||function(){(b[c].q=b[c].q||[]).push(arguments)},a=e.createElement('script'),d=e.getElementsByTagName('script')[0],a.async=1,a.src=f,a.id='fathom-script',d.parentNode.insertBefore(a,d)})(document,window,'//ss.featherbear.cc/tracker.js','fathom'),fathom('set','siteId','NEQTU'),fathom('trackPageview')</script>
+<style>html.dark{--color-primary-bg:#232327 !important}div#sidebar-toc>ul.pl-6{margin-left:1em}</style>
+<meta name=description content="bash-4.3# cat rr-info A.01.0014-V2902
+bash-4.3# cat OS_VERSION ro.product.device=TANOS_V2902-2022042802REL_M3.5.8_T4.1.4-2_RELEASE_20220428-202811 ro.build.display.id=TANOS_MP_R16_RELEASE_20220428-202811 ro.sys.cputype=R16.STM32.A3.G1 ro.build.version.release=V2902 ro.build.date.utc=1651148891 uname -a Linux rockrobo 3.4.39 #1 SMP PREEMPT Thu Apr 28 20:27:25 CST 2022 armv7l GNU/Linux ::sysinit:/etc/init/rcS S start ::shutdown:/etc/init/rcS K stop ::respawn:WatchDoge $RR_ROOT/watchdog >> $RR_UDATA/rockrobo/rrlog/watchdog.log 2>&1 ::respawn:/usr/bin/adbd ::respawn:/usr/sbin/dropbear -F ::respawn:/sbin/rr_login -d /dev/ttyS0 -b 115200 -p vt100 $ /usr/bin/rr_try_mount Read Conf Dir:/tmp, blk_device:tmpfs, Type:tmpfs, opt:size=30m ignore Dir:/tmp, blk_device:tmpfs, because not '/dev/mmcblk0p*' Read Conf Dir:/run/shm, blk_device:tmpfs, Type:tmpfs, opt:size=100m ignore Dir:/run/shm, blk_device:tmpfs, because not '/dev/mmcblk0p*' Read Conf Dir:/mnt/data/, blk_device:/dev/mmcblk0p1, Type:ext4, opt:defaults Check /mnt/data/ Check /dev/mmcblk0p1 Info:/dev/mmcblk0p1 File type block device.">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"v02.29.02 - Versioning and Fingerprinting","item":"/posts/versioning-and-fingerprinting-v02.29.02/"}]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/versioning-and-fingerprinting-v02.29.02/"},"headline":"v02.29.02 - Versioning and Fingerprinting | CSE Thesis Musings","datePublished":"2022-07-11T14:05:05+00:00","dateModified":"2022-07-11T14:05:05+00:00","wordCount":565,"publisher":{"@type":"Person","name":"A. Wong"},"description":"bash-4.3# cat rr-info A.01.0014-V2902\nbash-4.3# cat OS_VERSION ro.product.device=TANOS_V2902-2022042802REL_M3.5.8_T4.1.4-2_RELEASE_20220428-202811 ro.build.display.id=TANOS_MP_R16_RELEASE_20220428-202811 ro.sys.cputype=R16.STM32.A3.G1 ro.build.version.release=V2902 ro.build.date.utc=1651148891 uname -a Linux rockrobo 3.4.39 #1 SMP PREEMPT Thu Apr 28 20:27:25 CST 2022 armv7l GNU\/Linux ::sysinit:\/etc\/init\/rcS S start ::shutdown:\/etc\/init\/rcS K stop ::respawn:WatchDoge $RR_ROOT\/watchdog \u0026gt;\u0026gt; $RR_UDATA\/rockrobo\/rrlog\/watchdog.log 2\u0026gt;\u0026amp;1 ::respawn:\/usr\/bin\/adbd ::respawn:\/usr\/sbin\/dropbear -F ::respawn:\/sbin\/rr_login -d \/dev\/ttyS0 -b 115200 -p vt100 $ \/usr\/bin\/rr_try_mount Read Conf Dir:\/tmp, blk_device:tmpfs, Type:tmpfs, opt:size=30m ignore Dir:\/tmp, blk_device:tmpfs, because not \u0027\/dev\/mmcblk0p*\u0027 Read Conf Dir:\/run\/shm, blk_device:tmpfs, Type:tmpfs, opt:size=100m ignore Dir:\/run\/shm, blk_device:tmpfs, because not \u0027\/dev\/mmcblk0p*\u0027 Read Conf Dir:\/mnt\/data\/, blk_device:\/dev\/mmcblk0p1, Type:ext4, opt:defaults Check \/mnt\/data\/ Check \/dev\/mmcblk0p1 Info:\/dev\/mmcblk0p1 File type block device."}</script><meta property="og:title" content="v02.29.02 - Versioning and Fingerprinting | CSE Thesis Musings">
+<meta property="og:type" content="article">
+<meta property="og:url" content="/posts/versioning-and-fingerprinting-v02.29.02/">
+<meta property="og:description" content="bash-4.3# cat rr-info A.01.0014-V2902
+bash-4.3# cat OS_VERSION ro.product.device=TANOS_V2902-2022042802REL_M3.5.8_T4.1.4-2_RELEASE_20220428-202811 ro.build.display.id=TANOS_MP_R16_RELEASE_20220428-202811 ro.sys.cputype=R16.STM32.A3.G1 ro.build.version.release=V2902 ro.build.date.utc=1651148891 uname -a Linux rockrobo 3.4.39 #1 SMP PREEMPT Thu Apr 28 20:27:25 CST 2022 armv7l GNU/Linux ::sysinit:/etc/init/rcS S start ::shutdown:/etc/init/rcS K stop ::respawn:WatchDoge $RR_ROOT/watchdog >> $RR_UDATA/rockrobo/rrlog/watchdog.log 2>&1 ::respawn:/usr/bin/adbd ::respawn:/usr/sbin/dropbear -F ::respawn:/sbin/rr_login -d /dev/ttyS0 -b 115200 -p vt100 $ /usr/bin/rr_try_mount Read Conf Dir:/tmp, blk_device:tmpfs, Type:tmpfs, opt:size=30m ignore Dir:/tmp, blk_device:tmpfs, because not '/dev/mmcblk0p*' Read Conf Dir:/run/shm, blk_device:tmpfs, Type:tmpfs, opt:size=100m ignore Dir:/run/shm, blk_device:tmpfs, because not '/dev/mmcblk0p*' Read Conf Dir:/mnt/data/, blk_device:/dev/mmcblk0p1, Type:ext4, opt:defaults Check /mnt/data/ Check /dev/mmcblk0p1 Info:/dev/mmcblk0p1 File type block device.">
+<meta property="og:locale" content="en">
+<meta property="og:site_name" content="CSE Thesis Musings">
+<meta property="article:published_time" content="2022-07-11T14:05:05+00:00">
+<meta property="article:modified_time" content="2022-07-11T14:05:05+00:00">
+<meta property="article:section" content="posts">
+<body class="flex flex-col min-h-screen">
+<header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
+<div class="w-full max-w-screen-xl mx-auto"><script>let storageColorScheme=localStorage.getItem("lightDarkMode");((storageColorScheme=='Auto'||storageColorScheme==null)&&window.matchMedia("(prefers-color-scheme: dark)").matches||storageColorScheme=="Dark")&&document.getElementsByTagName('html')[0].classList.add('dark')</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+<a href=../../ class="mr-6 text-primary-text text-xl font-bold">CSE Thesis Musings</a>
+<button id=navbar-btn class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+<i class="fas fa-bars"></i>
+</button>
+<div id=target class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+<div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
+<a href=../../#about class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">About</a>
+<a href=../../posts/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 selected-menu-item mr-4">Posts</a>
+<a href=../../docs/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">Docs</a>
+<a href=../../tldr/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">Progress Log</a>
+</div>
+<div class=flex>
+<div class="relative pt-4 md:pt-0">
+<div class="cursor-pointer hover:text-eureka" id=lightDarkMode>
+<i class="fas fa-adjust"></i>
+</div>
+<div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id=is-open>
+</div>
+<div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40" id=lightDarkOptions>
+<span class="px-4 py-1 hover:text-eureka" name=Light>Light</span>
+<span class="px-4 py-1 hover:text-eureka" name=Dark>Dark</span>
+<span class="px-4 py-1 hover:text-eureka" name=Auto>Auto</span>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id=is-open-mobile>
+</div>
+</nav>
+<script>let element=document.getElementById('lightDarkMode');storageColorScheme==null||storageColorScheme=='Auto'?document.addEventListener('DOMContentLoaded',()=>{window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change',switchDarkMode)}):storageColorScheme=="Light"?(element.firstElementChild.classList.remove('fa-adjust'),element.firstElementChild.setAttribute("data-icon",'sun'),element.firstElementChild.classList.add('fa-sun')):storageColorScheme=="Dark"&&(element.firstElementChild.classList.remove('fa-adjust'),element.firstElementChild.setAttribute("data-icon",'moon'),element.firstElementChild.classList.add('fa-moon')),document.addEventListener('DOMContentLoaded',()=>{getcolorscheme(),switchBurger()})</script>
+</div>
+</header>
+<main class="flex-grow pt-16">
+<div class=pl-scrollbar>
+<div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
+<div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
+<div class="col-span-2 lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+<h1 class="font-bold text-3xl text-primary-text">v02.29.02 - Versioning and Fingerprinting</h1>
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+<div class="mr-6 my-2">
+<i class="fas fa-calendar mr-1"></i>
+<span>2022-07-11</span>
+</div>
+</div>
+<div class=content>
+<p>bash-4.3# cat rr-info
+A.01.0014-V2902</p>
+<pre><code>bash-4.3# cat OS_VERSION 
+ro.product.device=TANOS_V2902-2022042802REL_M3.5.8_T4.1.4-2_RELEASE_20220428-202811
+ro.build.display.id=TANOS_MP_R16_RELEASE_20220428-202811
+ro.sys.cputype=R16.STM32.A3.G1
+ro.build.version.release=V2902
+ro.build.date.utc=1651148891
+
+uname -a
+Linux rockrobo 3.4.39 #1 SMP PREEMPT Thu Apr 28 20:27:25 CST 2022 armv7l GNU/Linux
+
+::sysinit:/etc/init/rcS S start
+::shutdown:/etc/init/rcS K stop
+::respawn:WatchDoge $RR_ROOT/watchdog &gt;&gt; $RR_UDATA/rockrobo/rrlog/watchdog.log 2&gt;&amp;1
+::respawn:/usr/bin/adbd
+::respawn:/usr/sbin/dropbear -F
+::respawn:/sbin/rr_login -d /dev/ttyS0 -b 115200 -p vt100
+
+$ /usr/bin/rr_try_mount
+Read Conf Dir:/tmp, blk_device:tmpfs, Type:tmpfs, opt:size=30m
+        ignore Dir:/tmp, blk_device:tmpfs, because not '/dev/mmcblk0p*'
+
+
+Read Conf Dir:/run/shm, blk_device:tmpfs, Type:tmpfs, opt:size=100m
+        ignore Dir:/run/shm, blk_device:tmpfs, because not '/dev/mmcblk0p*'
+
+
+Read Conf Dir:/mnt/data/, blk_device:/dev/mmcblk0p1, Type:ext4, opt:defaults
+        Check /mnt/data/
+        Check /dev/mmcblk0p1
+        Info:/dev/mmcblk0p1 File type block device....OK
+Running /sbin/e2fsck on /dev/mmcblk0p1
+sh: /sbin/e2fsck: not found
+Result----Success!
+
+
+Read Conf Dir:/mnt/default/, blk_device:/dev/mmcblk0p6, Type:ext4, opt:ro
+        Check /mnt/default/
+        Check /dev/mmcblk0p6
+        Info:/dev/mmcblk0p6 File type block device....OK
+Running /sbin/e2fsck on /dev/mmcblk0p6
+sh: /sbin/e2fsck: not found
+Result----Success!
+
+
+Read Conf Dir:/mnt/updbuf/, blk_device:/dev/mmcblk0p10, Type:ext4, opt:defaults
+        Check /mnt/updbuf/
+        Check /dev/mmcblk0p10
+        Info:/dev/mmcblk0p10 File type block device....OK
+Running /sbin/e2fsck on /dev/mmcblk0p10
+sh: /sbin/e2fsck: not found
+Result----Success!
+
+
+Read Conf Dir:/mnt/reserve/, blk_device:/dev/mmcblk0p11, Type:ext4, opt:defaults
+        Check /mnt/reserve/
+        Check /dev/mmcblk0p11
+        Info:/dev/mmcblk0p11 File type block device....OK
+Running /sbin/e2fsck on /dev/mmcblk0p11
+sh: /sbin/e2fsck: not found
+</code></pre>
+<hr>
+<h1 id=autorun--startup>Autorun / Startup</h1>
+<p>SSH (dropbear) - NO</p>
+<h1 id=secrets>Secrets</h1>
+<h2 id=etcshadow>/etc/shadow</h2>
+<p><code>root:$6$mptOwWOW$DpR0O/CdKUfpapA3rEGl/4m6WZOkRYC5LSaCJSYKj9iHuZp2PUzfolgrGVeHW5tMtRSYlBWSlonusy67027JF/::0:99999:7:::</code></p>
+<hr>
+<h1 id=software>Software</h1>
+<blockquote>
+<p>Binaries in this version (v02.29.02) match base version (v01.15.58)</p>
+<p>✅ <code>/bin</code><br>
+✅ <code>/sbin</code></p>
+<p>🟨 <code>/usr/bin</code><br>
+✅ <code>/usr/sbin</code></p>
+</blockquote>
+<h2 id=-bin>✅ /bin</h2>
+<ul>
+<li><code>/bin/bash</code>
+<ul>
+<li>
+<p>GNU bash, version 4.3.11(1)-release (arm-unknown-linux-</p>
+<p>gnueabihf)</p>
+</li>
+</ul>
+</li>
+<li><code>/bin/chmod</code>
+<ul>
+<li>chmod (GNU coreutils) 8.21</li>
+</ul>
+</li>
+<li><code>/bin/chown</code>
+<ul>
+<li>chown (GNU coreutils) 8.21</li>
+</ul>
+</li>
+<li><code>/bin/dd</code>
+<ul>
+<li>dd (coreutils) 8.21</li>
+</ul>
+</li>
+<li><code>/bin/pidof</code>
+<ul>
+<li>.</li>
+</ul>
+</li>
+<li><code>/bin/tar</code>
+<ul>
+<li>
+<p>tar (GNU tar) 1.27.1</p>
+<p>6553d3232d065ffef4a822dfc7315245 bash
+00131fe7c4835dda1a8bb02fc7922364 chmod
+2fa55f966295a7a46d30ebdeae7fbc46 chown
+70efc37e6afb7f5be6c4cf76afd3965b dd
+73863d79612c16d88f7bedbacb89190a pidof
+30e4067a03cfe4ba8fc3963c0f8ba616 tar</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id=-sbin>✅ /sbin</h2>
+<ul>
+<li><code>/sbin/ip6tables</code>
+<ul>
+<li>ip6tables v1.4.21</li>
+</ul>
+</li>
+<li><code>/sbin/iptables</code>
+<ul>
+<li>iptables v1.4.21</li>
+</ul>
+</li>
+<li><code>/sbin/iw</code>
+<ul>
+<li>iw version 3.4</li>
+</ul>
+</li>
+<li><code>/sbin/ldconfig</code>
+<ul>
+<li>ldconfig (Ubuntu EGLIBC 2.19-0ubuntu6.6) 2.19</li>
+</ul>
+</li>
+<li><code>/sbin/ldconfig.real</code>
+<ul>
+<li>ldconfig (Ubuntu EGLIBC 2.19-0ubuntu6.6) 2.19</li>
+</ul>
+</li>
+<li><code>/sbin/mkfs.ext4</code>
+<ul>
+<li>mke2fs 1.42.9 (4-Feb-2014)</li>
+<li>EXT2FS Library version 1.42.9</li>
+</ul>
+</li>
+<li><code>/sbin/rr_login</code></li>
+<li><code>/sbin/wpa_cli</code>
+<ul>
+<li>wpa_cli v2.0-devel_rtw_r25669.20171213</li>
+</ul>
+</li>
+<li><code>/sbin/wpa_supplicant</code>
+<ul>
+<li>wpa_supplicant v2.0-devel_rtw_r25669.20171213</li>
+</ul>
+</li>
+<li><code>/sbin/xtables-multi</code>
+<ul>
+<li>
+<p>.</p>
+<p>d49bad0a9e3f098cc3913a8ee75fd73d ip6tables
+d49bad0a9e3f098cc3913a8ee75fd73d iptables
+9b625d8eee80b5dd49843e86f0cbe51d iw
+85e9e2c4a9c0a7af309c906516aa4548 ldconfig
+0dc3219be0c361b51bbb8d404c870387 ldconfig.real
+46747e533e25641bb14eeaf4a60040bd mkfs.ext4
+96bf1f1e1a2c745ea85d7db0fa59a952 rr_login
+cedf096ec580ff1dd66ea1b5b326f08d wpa_cli
+18ae34458be1593946dc9f885ba275dc wpa_supplicant
+d49bad0a9e3f098cc3913a8ee75fd73d xtables-multi</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id=-usrbin>🟨 /usr/bin</h2>
+<ul>
+<li><code>/usr/bin/adbd</code>
+<ul>
+<li>Probably moved logs to stderr?</li>
+<li>Old version went to stdout</li>
+</ul>
+</li>
+<li><code>/usr/bin/base64</code>
+<ul>
+<li>base64 (GNU coreutils) 8.21</li>
+</ul>
+</li>
+<li><code>/usr/bin/bootring</code>
+<ul>
+<li>different</li>
+</ul>
+</li>
+<li><code>/usr/bin/create_ap</code>
+<ul>
+<li>version 0.1</li>
+</ul>
+</li>
+<li><code>/usr/bin/iconv</code>
+<ul>
+<li>iconv (Ubuntu EGLIBC 2.19-0ubuntu6.6) 2.19</li>
+</ul>
+</li>
+<li><code>/usr/bin/ionice</code>
+<ul>
+<li>ionice from util-linux 2.20.1</li>
+</ul>
+</li>
+<li><code>/usr/bin/ldd</code>
+<ul>
+<li>ldd (Ubuntu EGLIBC 2.19-0ubuntu6.6) 2.19</li>
+</ul>
+</li>
+<li><code>/usr/bin/logrotate.sh</code>
+<ul>
+<li>no ver</li>
+</ul>
+</li>
+<li><code>/usr/bin/nohup</code>
+<ul>
+<li>nohup (GNU coreutils) 8.21</li>
+</ul>
+</li>
+<li><code>/usr/bin/openssl</code>
+<ul>
+<li>OpenSSL 1.0.1f 6 Jan 2014</li>
+</ul>
+</li>
+<li><code>/usr/bin/pkill</code>
+<ul>
+<li>pkill from procps-ng 3.3.9</li>
+</ul>
+</li>
+<li><code>/usr/bin/qemu-arm-static</code>
+<ul>
+<li>different</li>
+</ul>
+</li>
+<li><code>/usr/bin/rr_try_mount</code>
+<ul>
+<li>different</li>
+</ul>
+</li>
+<li><code>/usr/bin/scp</code>
+<ul>
+<li>no ver</li>
+</ul>
+</li>
+<li><code>/usr/bin/top</code>
+<ul>
+<li>procps-ng version 3.3.9</li>
+</ul>
+</li>
+<li><code>/usr/bin/uart_test</code>
+<ul>
+<li>different</li>
+</ul>
+</li>
+<li><code>/usr/bin/wpa_passphrase</code>
+<ul>
+<li>no ver</li>
+</ul>
+</li>
+<li><code>/usr/bin/xz</code>
+<ul>
+<li>
+<p>Original version does not use</p>
+<p>4e567a306e1569e7fd633331affa3e12 adbd
+67dc1de09b22238b155dcafc2d1a5c3c base64
+bf8f440f6fe7e1cbbdaafa491442a4a9 bootring
+fa856af527e32d1822784b1cae2dddde create_ap
+f75a585effc29768ea74bf36ca74be1b iconv
+b13dbb5753fef064dfeb89b024bdf0ec ionice
+a719dd374725a76f64161c2346df99cd ldd
+8129d3de3d967e2887447409ee84fb16 logrotate.sh
+db2b65aed02b801746f8597d9a63f97d nohup
+97fe9fe716f6246a21c20b9b82138c0f openssl
+16601b3eace3dfd544d6f1ad5b3fd6b2 pkill
+fa7add6bcd5a30ce2072646248fd87ef qemu-arm-static
+f820524e196df94d6299d75033d51b3c rr_try_mount
+354d5bef5c9f5d02f316d6840351a0cd scp
+411b32fa0ebd4aadf42f6dc0d755dcfc top
+c5bbf0b4a9a09bfb1e1d46ccfe594bc5 uart_test
+18b02d8d26edb6d1ec204543baf81524 wpa_passphrase
+372e8fc127f8abb05c417387b2ba9a6c xz</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id=-usrsbin>✅ /usr/sbin</h2>
+<ul>
+<li><code>/usr/sbin/chpasswd</code>
+<ul>
+<li>MD5: c88953805d7fde675be9bb06050a5fa5</li>
+<li>SHA-1: 83c0cb04a54409035f90c152442960ef10b6832d</li>
+</ul>
+</li>
+<li><code>/usr/sbin/dnsmasq</code>
+<ul>
+<li>Dnsmasq version 2.68</li>
+<li>MD5: 4036b0dbc14e55edef2a5ff3c6fe8569</li>
+<li>SHA-1: 30399e3f54d1a5e7c3bf7a5cde0d877c59ad7809</li>
+</ul>
+</li>
+<li><code>/usr/sbin/dropbear</code>
+<ul>
+<li>Dropbear server v2013.60 <a href=https://matt.ucc.asn.au/dropbear/dropbear.html title=https://matt.ucc.asn.au/dropbear/dropbear.html>https://matt.ucc.asn.au/dropbear/dropbear.html</a></li>
+<li>MD5: 2fb4c505e6453b06b8a2efaa86d114d0</li>
+<li>SHA-1: a4af69f09d0e24f39c486d38211779f93daa462b</li>
+<li>MODDED</li>
+</ul>
+</li>
+<li><code>/usr/sbin/hostapd</code>
+<ul>
+<li>hostapd v2.1</li>
+<li>MD5: 666417d2dc29cf52915bb2a873cf09a3</li>
+<li>SHA-1: 2a2bd9c82abae22609b4a407d4d9afeb649902d0</li>
+</ul>
+</li>
+<li><code>/usr/sbin/hostapd_cli</code>
+<ul>
+<li>hostapd_cli v2.1</li>
+<li>MD5: 19f12aef82030e3f79fd6fc2fde1ede5</li>
+<li>SHA-1: ad1a62e6a39b12da7dc3c559cb6ab85a4e46acba</li>
+</ul>
+</li>
+<li><code>/usr/sbin/ntpdate</code>
+<ul>
+<li>ntpdate <a href=mailto:4.2.6p5@1.2349>4.2.6p5@1.2349</a> Tue Jun 21 08:19:00 UTC 2016 (6)</li>
+<li>MD5: 006a0967281c9a061362086b638a21a4</li>
+<li>SHA-1: a2b23a0c461719a2828c0202b50c19ba14cd8d23</li>
+</ul>
+</li>
+<li><code>/usr/sbin/tcpdump</code>
+<ul>
+<li>tcpdump version 4.5.1</li>
+<li>libpcap version 1.5.3</li>
+<li>MD5: 50f2ed1f9707873bbd13bde776c9cff7</li>
+<li>SHA-1: b41f74a66ce1116f8352700529848f25455dc1d5</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id=possible-leads>Possible Leads</h1>
+<h2 id=-wpa---cve-2014-3686httpsbugzillaredhatcomshow_bugcgiid1151259>🙏 WPA - <a href="https://bugzilla.redhat.com/show_bug.cgi?id=1151259">CVE-2014-3686</a></h2>
+<blockquote>
+<p>✅ Safe</p>
+<p>Doesn&rsquo;t use the same binary, no call to <code>system</code> inside of <code>wpa_cli</code></p>
+<p><code>/sbin/wpa_action</code> doesn&rsquo;t exist in latest new firmware</p>
+</blockquote>
+<p><a href=https://www.openwall.com/lists/oss-security/2014/10/09/28 title=https://www.openwall.com/lists/oss-security/2014/10/09/28>https://www.openwall.com/lists/oss-security/2014/10/09/28</a></p>
+<blockquote>
+<pre><code>wpa_cli is a component distributed with wpa_supplicant and hostapd_cli
+is a component distributed with hostapd. The vulnerability affects only
+cases where wpa_cli or hostapd_cli is used to run action scripts (-a
+command line option)
+</code></pre>
+</blockquote>
+<ul>
+<li><code>/etc/wpa_supplicant/ifupdown.sh</code>
+<ul>
+<li>Sources <code>/etc/wpa_supplicant/functions.sh</code>
+<ul>
+<li><code>-a env:WPA_ACTION_SCRIPT</code></li>
+<li><code>WPA_ACTION_SCRIPT=/sbin/wpa_action</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>What even calls <code>ifupdown.sh</code>???</li>
+<li><a href="http://w1.fi/cgit/hostap/commit/?id=c5f258de76dbb67fb64beab39a99e5c5711f41fe" title="http://w1.fi/cgit/hostap/commit/?id=c5f258de76dbb67fb64beab39a99e5c5711f41fe">http://w1.fi/cgit/hostap/commit/?id=c5f258de76dbb67fb64beab39a99e5c5711f41fe</a></li>
+</ul>
+<hr>
+<ul>
+<li>Utils - BusyBox v1.24.1 (2019-11-15 15:22:50 CST) built-in shell (ash)</li>
+</ul>
+</div>
+<div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
+<div>
+<span class="block font-bold">Previous</span>
+<a href=../../posts/execs/sbin-rr_login/ class=block>/sbin/rr_login</a>
+</div>
+<div class="md:text-right mt-4 md:mt-0">
+<span class="block font-bold">Next</span>
+<a href=../../posts/v02.29.02-accessing-the-shell/ class=block>Accessing the shell on v02.29.02</a>
+</div>
+</div>
+</div>
+<div class=col-span-2>
+<div class="sticky top-16 z-10 hidden lg:block px-6 py-4 bg-primary-bg">
+<span class="text-lg font-semibold">On This Page</span>
+</div>
+<div class="sticky-toc hidden lg:block px-6 pb-6">
+<nav id=TableOfContents>
+<ul>
+<li><a href=#etcshadow>/etc/shadow</a></li>
+</ul>
+<ul>
+<li><a href=#-bin>✅ /bin</a></li>
+<li><a href=#-sbin>✅ /sbin</a></li>
+<li><a href=#-usrbin>🟨 /usr/bin</a></li>
+<li><a href=#-usrsbin>✅ /usr/sbin</a></li>
+</ul>
+<ul>
+<li><a href=#-wpa---cve-2014-3686httpsbugzillaredhatcomshow_bugcgiid1151259>🙏 WPA - <a href="https://bugzilla.redhat.com/show_bug.cgi?id=1151259">CVE-2014-3686</a></a></li>
+</ul>
+</nav>
+</div>
+<script>window.addEventListener('DOMContentLoaded',()=>{enableStickyToc()})</script>
+</div>
+</div>
+<script>document.addEventListener('DOMContentLoaded',()=>{hljs.initHighlightingOnLoad()})</script>
+</div>
+</div>
+</main>
+<footer class=pl-scrollbar>
+<div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
+<p class="text-sm text-tertiary-text">&copy; 2021 <a href=https://featherbear.cc>Andrew Wong (z5206677)</a>
+&#183; Powered by the <a href=https://github.com/wangchucheng/hugo-eureka class=hover:text-eureka>Eureka</a> theme for <a href=https://gohugo.io class=hover:text-eureka>Hugo</a></p>
+</div></div>
+</footer>
+</body>
+</html>
