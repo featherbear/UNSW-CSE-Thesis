@@ -1474,6 +1474,11 @@ How have manufacturers of IoT / smart home devices addressed the increasing conc
 🔥 MUD files - both devices and infrastructure  
 🔥 Whitepapers, bug bounties  
 
+{{% note %}}
+Least access - root, lockdown - though /dev/shm requires administrative access etc ..
+Then again it's an embedded device
+
+{{% /note %}}
 ---
 
 # Future Work

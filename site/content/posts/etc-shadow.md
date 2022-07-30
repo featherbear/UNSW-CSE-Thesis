@@ -4,7 +4,7 @@ date = 2022-05-01T09:53:25Z
 description = ""
 series = []
 tags = []
-title = "/etc/shadow"
+title = "/etc/shadow (v01.15.58)"
 toc = true
 
 +++

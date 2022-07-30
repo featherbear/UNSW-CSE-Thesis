@@ -4,7 +4,7 @@ date = 2022-06-28T15:57:42Z
 description = ""
 series = []
 tags = []
-title = "/opt/roborock MD5 hashes"
+title = "/opt/roborock MD5 hashes (v01.15.58)"
 toc = true
 
 +++
