@@ -25,7 +25,7 @@ MAC: 64:90:c1:1d:24:c4
 MAC OUI (64:90:C1) - Beijing Xiaomi Mobile Software Co, Ltd
   Filtering the data  We have a &lsquo;lot&rsquo; of network traffic that isn&rsquo;t related to the operation of the device - such as STP, SSDP, DHCP, ARP and other traffic that occurs - even without the presence of the device, so let&rsquo;s remove these.">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"Packet Analysis","item":"/posts/packet-analysis/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/packet-analysis/"},"headline":"Packet Analysis | CSE Thesis Musings","datePublished":"2022-07-23T03:31:46+00:00","dateModified":"2022-07-23T03:31:46+00:00","wordCount":1321,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Target  IP: 10.10.10.8\nMAC: 64:90:c1:1d:24:c4\nMAC OUI (64:90:C1) - Beijing Xiaomi Mobile Software Co, Ltd\n  Filtering the data  We have a \u0026lsquo;lot\u0026rsquo; of network traffic that isn\u0026rsquo;t related to the operation of the device - such as STP, SSDP, DHCP, ARP and other traffic that occurs - even without the presence of the device, so let\u0026rsquo;s remove these."}</script><meta property="og:title" content="Packet Analysis | CSE Thesis Musings">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/packet-analysis/"},"headline":"Packet Analysis | CSE Thesis Musings","datePublished":"2022-07-23T03:31:46+00:00","dateModified":"2022-07-23T03:31:46+00:00","wordCount":1339,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Target  IP: 10.10.10.8\nMAC: 64:90:c1:1d:24:c4\nMAC OUI (64:90:C1) - Beijing Xiaomi Mobile Software Co, Ltd\n  Filtering the data  We have a \u0026lsquo;lot\u0026rsquo; of network traffic that isn\u0026rsquo;t related to the operation of the device - such as STP, SSDP, DHCP, ARP and other traffic that occurs - even without the presence of the device, so let\u0026rsquo;s remove these."}</script><meta property="og:title" content="Packet Analysis | CSE Thesis Musings">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/posts/packet-analysis/">
 <meta property="og:description" content="Target  IP: 10.10.10.8
@@ -176,7 +176,7 @@ Some didn&rsquo;t work, some were too slow&mldr;</p>
 </li>
 </ul>
 <h2 id=results>Results</h2>
-<h3 id=version-v011558>Version v01.15.58</h3>
+<h3 id=version-v011558-june-july-2022>Version v01.15.58 (June-July 2022)</h3>
 <h4 id=dns>DNS</h4>
 <p><img src=../../uploads/20220723-snipaste_2022-07-23_23-08-00.jpg alt></p>
 <p><img src=../../uploads/20220723-snipaste_2022-07-23_23-08-53.jpg alt></p>
@@ -326,6 +326,11 @@ Some didn&rsquo;t work, some were too slow&mldr;</p>
 <h4 id=ssdp>SSDP</h4>
 <p>Every 5 minutes</p>
 <p><img src=../../uploads/20220723-snipaste_2022-07-24_00-56-08.jpg alt></p>
+<h3 id=version-v011558-may-2022>Version v01.15.58 (May 2022)</h3>
+<p><img src=../../uploads/20220801-snipaste_2022-08-01_11-18-26.jpg alt></p>
+<p><img src=../../uploads/20220801-snipaste_2022-08-01_11-18-44.jpg alt></p>
+<p>MQTT reconnect at 3am. Session last for around 24 hours</p>
+<p><img src=../../uploads/20220801-snipaste_2022-08-01_11-21-04.jpg alt></p>
 <h3 id=version-v022902>Version v02.29.02</h3>
 <h4 id=wireshark-filter>Wireshark Filter</h4>
 <pre><code>!arp
@@ -459,7 +464,7 @@ Some didn&rsquo;t work, some were too slow&mldr;</p>
 </code></pre>
 <hr>
 <h2 id=conclusions>Conclusions</h2>
-<h3 id=version-v011558-1>Version v01.15.58</h3>
+<h3 id=version-v011558>Version v01.15.58</h3>
 <ul>
 <li>miio_client
 <ul>
@@ -533,7 +538,11 @@ Some didn&rsquo;t work, some were too slow&mldr;</p>
 </li>
 <li>Ubuntu artifacts (SSDP)</li>
 <li>DHCP request</li>
-<li>3am and 3pm activity</li>
+<li>3am and 3pm activity
+<ul>
+<li>Reset MQTT</li>
+</ul>
+</li>
 <li>Connections to America, Germany, China</li>
 </ul>
 </div>
@@ -563,7 +572,7 @@ Some didn&rsquo;t work, some were too slow&mldr;</p>
 <li><a href=#tools>Tools</a></li>
 <li><a href=#results>Results</a>
 <ul>
-<li><a href=#version-v011558>Version v01.15.58</a>
+<li><a href=#version-v011558-june-july-2022>Version v01.15.58 (June-July 2022)</a>
 <ul>
 <li><a href=#dns>DNS</a></li>
 <li><a href=#rriot_tuya>rriot_tuya</a></li>
@@ -576,6 +585,7 @@ Some didn&rsquo;t work, some were too slow&mldr;</p>
 <li><a href=#ssdp>SSDP</a></li>
 </ul>
 </li>
+<li><a href=#version-v011558-may-2022>Version v01.15.58 (May 2022)</a></li>
 <li><a href=#version-v022902>Version v02.29.02</a>
 <ul>
 <li><a href=#wireshark-filter>Wireshark Filter</a></li>
@@ -593,7 +603,7 @@ Some didn&rsquo;t work, some were too slow&mldr;</p>
 </li>
 <li><a href=#conclusions>Conclusions</a>
 <ul>
-<li><a href=#version-v011558-1>Version v01.15.58</a></li>
+<li><a href=#version-v011558>Version v01.15.58</a></li>
 <li><a href=#version-v022902-1>Version v02.29.02</a></li>
 <li><a href=#changes>Changes</a></li>
 <li><a href=#summary>Summary</a></li>
@@ -611,7 +621,7 @@ Some didn&rsquo;t work, some were too slow&mldr;</p>
 </main>
 <footer class=pl-scrollbar>
 <div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
-<p class="text-sm text-tertiary-text">&copy; 2021 <a href=https://featherbear.cc>Andrew Wong (z5206677)</a>
+<p class="text-sm text-tertiary-text">&copy; 2021-2022 <a href=https://featherbear.cc>Andrew Wong (z5206677)</a>
 &#183; Powered by the <a href=https://github.com/wangchucheng/hugo-eureka class=hover:text-eureka>Eureka</a> theme for <a href=https://gohugo.io class=hover:text-eureka>Hugo</a></p>
 </div></div>
 </footer>

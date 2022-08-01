@@ -22,7 +22,7 @@
 <style>html.dark{--color-primary-bg:#232327 !important}div#sidebar-toc>ul.pl-6{margin-left:1em}</style>
 <meta name=description content="Setting up an isolated network">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"Capturing Network Activity (Securely)","item":"/posts/capturing-network-activity-securely/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/capturing-network-activity-securely/"},"headline":"Capturing Network Activity (Securely) | CSE Thesis Musings","datePublished":"2021-09-28T12:00:00+00:00","dateModified":"2021-09-28T12:00:00+00:00","wordCount":1088,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Setting up an isolated network"}</script><meta property="og:title" content="Capturing Network Activity (Securely) | CSE Thesis Musings">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/capturing-network-activity-securely/"},"headline":"Capturing Network Activity (Securely) | CSE Thesis Musings","datePublished":"2021-09-28T12:00:00+00:00","dateModified":"2021-09-28T12:00:00+00:00","wordCount":1073,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Setting up an isolated network"}</script><meta property="og:title" content="Capturing Network Activity (Securely) | CSE Thesis Musings">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/posts/capturing-network-activity-securely/">
 <meta property="og:description" content="Setting up an isolated network">
@@ -176,9 +176,8 @@ Switch -->|Port Mirror| M(Monitoring Device)
 Time to build a Faraday cage???</p>
 <hr>
 <h1 id=edit-5th-october-2021>EDIT: 5th October 2021</h1>
-<p>After some reasearch, it turns out that I could also use my MikroTik router to do packet sniffing and forwarding using the Packet Sniffer feature (Sending <a href=https://en.wikipedia.org/wiki/TZSP>TZSP</a> packets to Wireshark, etc).</p>
-<p>The TL-SG105E that I had <em>just</em> purchased (AUD$30 on sale)&mldr; I no longer need it haha!<br>
-I guess I can add this 5 port gigabit switch to my collection of spare devices (along with a bunch of other spare switches)</p>
+<p>I can also use my MikroTik router to do packet sniffing and forwarding using the Packet Sniffer feature (Sending <a href=https://en.wikipedia.org/wiki/TZSP>TZSP</a> packets to Wireshark, etc). Note that this won&rsquo;t be able to capture local traffic - only traffic that passes through the router (i.e. WAN traffic)</p>
+<p>So I&rsquo;ll need to use the TL-SG105E to mirror local traffic.</p>
 <p><img src=../../uploads/20211031-20210930_153318.jpg alt></p>
 <hr>
 <h1 id=references>References</h1>
@@ -235,7 +234,7 @@ I guess I can add this 5 port gigabit switch to my collection of spare devices (
 </main>
 <footer class=pl-scrollbar>
 <div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
-<p class="text-sm text-tertiary-text">&copy; 2021 <a href=https://featherbear.cc>Andrew Wong (z5206677)</a>
+<p class="text-sm text-tertiary-text">&copy; 2021-2022 <a href=https://featherbear.cc>Andrew Wong (z5206677)</a>
 &#183; Powered by the <a href=https://github.com/wangchucheng/hugo-eureka class=hover:text-eureka>Eureka</a> theme for <a href=https://gohugo.io class=hover:text-eureka>Hugo</a></p>
 </div></div>
 </footer>
