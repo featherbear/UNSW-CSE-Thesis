@@ -52,8 +52,22 @@ MUD profiles for versions: v01.15.18, v02.29.02
 
 ## Evaluation
 
+### Recommendations
+
+🔥 Further transparency in disclosures  
+ 🔥 Improved privacy policy  
+ 🔥 Pairing encryption  
+ 🔥 Data should be cleared on device disassociation  
+ 🔥 Better co-ordination between ecosystems and vendors  
+ 🔥 MUD files - both devices and infrastructure  
+ 🔥 Whitepapers, bug bounties
+
+De-elevate access
+
 ## Conclusions
 
 ## Future Work
+
+* Update MITM
 
 ## References
