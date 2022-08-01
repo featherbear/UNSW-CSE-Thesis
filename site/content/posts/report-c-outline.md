@@ -40,11 +40,15 @@ toc = true
 
 ### Identified Network Behaviour
 
+Network capture
+
 ### MUD Profiles
 
 > [https://github.com/ayyoob/mudgee](https://github.com/ayyoob/mudgee "https://github.com/ayyoob/mudgee")
 
 MUD profiles for versions: v01.15.18, v02.29.02
+
+Show flow table
 
 **Limitations: Baseline ground-truth  
 **There are likely other ports and addresses that were not identified during the packet captures
