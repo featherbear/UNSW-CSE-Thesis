@@ -1,0 +1,14 @@
+srcMac,dstMac,ethType,srcIp,dstIp,ipProto,srcPort,dstPort,priority, icmpType, icmpCode
+<deviceMac>,<gatewayMac>,0x0800,*,a2.tuyaeu.com,6,*,443,855,*,*
+<deviceMac>,<gatewayMac>,0x0800,*,10.10.10.1,17,*,53,1001,*,*
+<deviceMac>,ff:ff:ff:ff:ff:ff,0x0008,*,*,*,*,*,1300,*,*
+<deviceMac>,ff:ff:ff:ff:ff:ff,0x0800,*,255.255.255.255,17,*,67,1300,*,*
+<deviceMac>,<gatewayMac>,0x0800,*,10.10.10.1,17,*,67,1400,*,*
+<deviceMac>,<gatewayMac>,0x0800,*,m2.tuyaeu.com,6,*,8883,855,*,*
+<deviceMac>,ff:ff:ff:ff:ff:ff,0x0800,*,255.255.255.255,17,*,6667,1300,*,*
+<deviceMac>,<gatewayMac>,0x0800,*,awsde0.fds.api.xiaomi.com,6,*,443,855,*,*
+<gatewayMac>,<deviceMac>,0x0800,10.10.10.1,*,17,67,*,1400,*,*
+<gatewayMac>,<deviceMac>,0x0800,awsde0.fds.api.xiaomi.com,*,6,443,*,750,*,*
+<gatewayMac>,<deviceMac>,0x0800,m2.tuyaeu.com,*,6,8883,*,750,*,*
+<gatewayMac>,<deviceMac>,0x0800,10.10.10.1,*,17,53,*,1001,*,*
+<gatewayMac>,<deviceMac>,0x0800,a2.tuyaeu.com,*,6,443,*,750,*,*

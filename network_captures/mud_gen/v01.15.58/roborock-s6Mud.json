@@ -1,0 +1,515 @@
+{
+  "ietf-mud:mud" : {
+    "mud-version" : 1,
+    "mud-url" : "https://roborock-s6.com/roborock-s6",
+    "last-update" : "2022-08-01T13:03:12.606+10:00",
+    "cache-validity" : 100,
+    "is-supported" : true,
+    "systeminfo" : "roborock-s6",
+    "from-device-policy" : {
+      "access-lists" : {
+        "access-list" : [ {
+          "name" : "from-ipv4-roborock-s6"
+        }, {
+          "name" : "from-ethernet-roborock-s6"
+        } ]
+      }
+    },
+    "to-device-policy" : {
+      "access-lists" : {
+        "access-list" : [ {
+          "name" : "to-ipv4-roborock-s6"
+        } ]
+      }
+    }
+  },
+  "ietf-access-control-list:access-lists" : {
+    "acl" : [ {
+      "name" : "from-ipv4-roborock-s6",
+      "type" : "ipv4-acl-type",
+      "aces" : {
+        "ace" : [ {
+          "name" : "from-ipv4-roborock-s6-0",
+          "matches" : {
+            "ipv4" : {
+              "protocol" : 17,
+              "destination-ipv4-network" : "202.87.162.28/32"
+            },
+            "udp" : {
+              "destination-port" : {
+                "operator" : "eq",
+                "port" : 45314
+              }
+            }
+          },
+          "actions" : {
+            "forwarding" : "accept"
+          }
+        }, {
+          "name" : "from-ipv4-roborock-s6-1",
+          "matches" : {
+            "ipv4" : {
+              "protocol" : 6,
+              "destination-ipv4-network" : "110.43.0.83/32"
+            },
+            "tcp" : {
+              "destination-port" : {
+                "operator" : "eq",
+                "port" : 80
+              },
+              "ietf-mud:direction-initiated" : "from-device"
+            }
+          },
+          "actions" : {
+            "forwarding" : "accept"
+          }
+        }, {
+          "name" : "from-ipv4-roborock-s6-2",
+          "matches" : {
+            "ietf-mud:mud" : {
+              "controller" : "urn:ietf:params:mud:dns"
+            },
+            "ipv4" : {
+              "protocol" : 17
+            },
+            "udp" : {
+              "destination-port" : {
+                "operator" : "eq",
+                "port" : 53
+              }
+            }
+          },
+          "actions" : {
+            "forwarding" : "accept"
+          }
+        }, {
+          "name" : "from-ipv4-roborock-s6-3",
+          "matches" : {
+            "ietf-mud:mud" : {
+              "local-networks" : [ null ]
+            },
+            "ipv4" : {
+              "protocol" : 17,
+              "destination-ipv4-network" : "255.255.255.255/32"
+            },
+            "udp" : {
+              "destination-port" : {
+                "operator" : "eq",
+                "port" : 67
+              }
+            },
+            "eth" : {
+              "destination-mac-address" : "ff:ff:ff:ff:ff:ff",
+              "ethertype" : "0x0800"
+            }
+          },
+          "actions" : {
+            "forwarding" : "accept"
+          }
+        }, {
+          "name" : "from-ipv4-roborock-s6-4",
+          "matches" : {
+            "ietf-mud:mud" : {
+              "local-networks" : [ null ]
+            },
+            "ipv4" : {
+              "protocol" : 17,
+              "destination-ipv4-network" : "239.255.255.250/32"
+            },
+            "udp" : {
+              "destination-port" : {
+                "operator" : "eq",
+                "port" : 1900
+              }
+            }
+          },
+          "actions" : {
+            "forwarding" : "accept"
+          }
+        }, {
+          "name" : "from-ipv4-roborock-s6-5",
+          "matches" : {
+            "ipv4" : {
+              "protocol" : 6,
+              "destination-ipv4-network" : "110.43.0.85/32"
+            },
+            "tcp" : {
+              "destination-port" : {
+                "operator" : "eq",
+                "port" : 80
+              },
+              "ietf-mud:direction-initiated" : "from-device"
+            }
+          },
+          "actions" : {
+            "forwarding" : "accept"
+          }
+        }, {
+          "name" : "from-ipv4-roborock-s6-6",
+          "matches" : {
+            "ietf-mud:mud" : {
+              "local-networks" : [ null ]
+            },
+            "ipv4" : {
+              "protocol" : 17,
+              "destination-ipv4-network" : "255.255.255.255/32"
+            },
+            "udp" : {
+              "destination-port" : {
+                "operator" : "eq",
+                "port" : 6667
+              }
+            },
+            "eth" : {
+              "destination-mac-address" : "ff:ff:ff:ff:ff:ff",
+              "ethertype" : "0x0800"
+            }
+          },
+          "actions" : {
+            "forwarding" : "accept"
+          }
+        }, {
+          "name" : "from-ipv4-roborock-s6-7",
+          "matches" : {
+            "ipv4" : {
+              "protocol" : 6,
+              "ietf-acldns:dst-dnsname" : "a2.tuyaeu.com"
+            },
+            "tcp" : {
+              "destination-port" : {
+                "operator" : "eq",
+                "port" : 443
+              },
+              "ietf-mud:direction-initiated" : "from-device"
+            }
+          },
+          "actions" : {
+            "forwarding" : "accept"
+          }
+        }, {
+          "name" : "from-ipv4-roborock-s6-8",
+          "matches" : {
+            "ietf-mud:mud" : {
+              "controller" : "urn:ietf:params:mud:gateway"
+            },
+            "ipv4" : {
+              "protocol" : 17
+            },
+            "udp" : {
+              "destination-port" : {
+                "operator" : "eq",
+                "port" : 67
+              }
+            }
+          },
+          "actions" : {
+            "forwarding" : "accept"
+          }
+        }, {
+          "name" : "from-ipv4-roborock-s6-9",
+          "matches" : {
+            "ipv4" : {
+              "protocol" : 6,
+              "ietf-acldns:dst-dnsname" : "ms.tuyaeu.com"
+            },
+            "tcp" : {
+              "destination-port" : {
+                "operator" : "eq",
+                "port" : 8883
+              },
+              "ietf-mud:direction-initiated" : "from-device"
+            }
+          },
+          "actions" : {
+            "forwarding" : "accept"
+          }
+        }, {
+          "name" : "from-ipv4-roborock-s6-10",
+          "matches" : {
+            "ipv4" : {
+              "protocol" : 6,
+              "ietf-acldns:dst-dnsname" : "awsde0.fds.api.xiaomi.com"
+            },
+            "tcp" : {
+              "destination-port" : {
+                "operator" : "eq",
+                "port" : 443
+              },
+              "ietf-mud:direction-initiated" : "from-device"
+            }
+          },
+          "actions" : {
+            "forwarding" : "accept"
+          }
+        }, {
+          "name" : "from-ipv4-roborock-s6-11",
+          "matches" : {
+            "ipv4" : {
+              "protocol" : 17,
+              "destination-ipv4-network" : "35.209.9.241/32"
+            },
+            "udp" : {
+              "destination-port" : {
+                "operator" : "eq",
+                "port" : 62378
+              }
+            }
+          },
+          "actions" : {
+            "forwarding" : "accept"
+          }
+        }, {
+          "name" : "from-ipv4-roborock-s6-12",
+          "matches" : {
+            "ipv4" : {
+              "protocol" : 17,
+              "destination-ipv4-network" : "202.87.162.28/32"
+            },
+            "udp" : {
+              "destination-port" : {
+                "operator" : "eq",
+                "port" : 45312
+              }
+            }
+          },
+          "actions" : {
+            "forwarding" : "accept"
+          }
+        }, {
+          "name" : "from-ipv4-roborock-s6-13",
+          "matches" : {
+            "ipv4" : {
+              "protocol" : 17,
+              "destination-ipv4-network" : "35.209.96.245/32"
+            },
+            "udp" : {
+              "destination-port" : {
+                "operator" : "eq",
+                "port" : 21019
+              }
+            }
+          },
+          "actions" : {
+            "forwarding" : "accept"
+          }
+        } ]
+      }
+    }, {
+      "name" : "to-ipv4-roborock-s6",
+      "type" : "ipv4-acl-type",
+      "aces" : {
+        "ace" : [ {
+          "name" : "to-ipv4-roborock-s6-0",
+          "matches" : {
+            "ietf-mud:mud" : {
+              "controller" : "urn:ietf:params:mud:gateway"
+            },
+            "ipv4" : {
+              "protocol" : 17
+            },
+            "udp" : {
+              "source-port" : {
+                "operator" : "eq",
+                "port" : 67
+              }
+            }
+          },
+          "actions" : {
+            "forwarding" : "accept"
+          }
+        }, {
+          "name" : "to-ipv4-roborock-s6-1",
+          "matches" : {
+            "ipv4" : {
+              "protocol" : 17,
+              "source-ipv4-network" : "202.87.162.28/32"
+            },
+            "udp" : {
+              "source-port" : {
+                "operator" : "eq",
+                "port" : 45314
+              }
+            }
+          },
+          "actions" : {
+            "forwarding" : "accept"
+          }
+        }, {
+          "name" : "to-ipv4-roborock-s6-2",
+          "matches" : {
+            "ipv4" : {
+              "protocol" : 6,
+              "ietf-acldns:src-dnsname" : "ms.tuyaeu.com"
+            },
+            "tcp" : {
+              "source-port" : {
+                "operator" : "eq",
+                "port" : 8883
+              }
+            }
+          },
+          "actions" : {
+            "forwarding" : "accept"
+          }
+        }, {
+          "name" : "to-ipv4-roborock-s6-3",
+          "matches" : {
+            "ipv4" : {
+              "protocol" : 17,
+              "source-ipv4-network" : "202.87.162.28/32"
+            },
+            "udp" : {
+              "source-port" : {
+                "operator" : "eq",
+                "port" : 45312
+              }
+            }
+          },
+          "actions" : {
+            "forwarding" : "accept"
+          }
+        }, {
+          "name" : "to-ipv4-roborock-s6-4",
+          "matches" : {
+            "ipv4" : {
+              "protocol" : 6,
+              "ietf-acldns:src-dnsname" : "awsde0.fds.api.xiaomi.com"
+            },
+            "tcp" : {
+              "source-port" : {
+                "operator" : "eq",
+                "port" : 443
+              }
+            }
+          },
+          "actions" : {
+            "forwarding" : "accept"
+          }
+        }, {
+          "name" : "to-ipv4-roborock-s6-5",
+          "matches" : {
+            "ipv4" : {
+              "protocol" : 17,
+              "source-ipv4-network" : "35.209.9.241/32"
+            },
+            "udp" : {
+              "source-port" : {
+                "operator" : "eq",
+                "port" : 62378
+              }
+            }
+          },
+          "actions" : {
+            "forwarding" : "accept"
+          }
+        }, {
+          "name" : "to-ipv4-roborock-s6-6",
+          "matches" : {
+            "ipv4" : {
+              "protocol" : 17,
+              "source-ipv4-network" : "35.209.96.245/32"
+            },
+            "udp" : {
+              "source-port" : {
+                "operator" : "eq",
+                "port" : 21019
+              }
+            }
+          },
+          "actions" : {
+            "forwarding" : "accept"
+          }
+        }, {
+          "name" : "to-ipv4-roborock-s6-7",
+          "matches" : {
+            "ipv4" : {
+              "protocol" : 6,
+              "source-ipv4-network" : "110.43.0.83/32"
+            },
+            "tcp" : {
+              "source-port" : {
+                "operator" : "eq",
+                "port" : 80
+              }
+            }
+          },
+          "actions" : {
+            "forwarding" : "accept"
+          }
+        }, {
+          "name" : "to-ipv4-roborock-s6-8",
+          "matches" : {
+            "ietf-mud:mud" : {
+              "controller" : "urn:ietf:params:mud:dns"
+            },
+            "ipv4" : {
+              "protocol" : 17
+            },
+            "udp" : {
+              "source-port" : {
+                "operator" : "eq",
+                "port" : 53
+              }
+            }
+          },
+          "actions" : {
+            "forwarding" : "accept"
+          }
+        }, {
+          "name" : "to-ipv4-roborock-s6-9",
+          "matches" : {
+            "ipv4" : {
+              "protocol" : 6,
+              "ietf-acldns:src-dnsname" : "a2.tuyaeu.com"
+            },
+            "tcp" : {
+              "source-port" : {
+                "operator" : "eq",
+                "port" : 443
+              }
+            }
+          },
+          "actions" : {
+            "forwarding" : "accept"
+          }
+        }, {
+          "name" : "to-ipv4-roborock-s6-10",
+          "matches" : {
+            "ipv4" : {
+              "protocol" : 6,
+              "source-ipv4-network" : "110.43.0.85/32"
+            },
+            "tcp" : {
+              "source-port" : {
+                "operator" : "eq",
+                "port" : 80
+              }
+            }
+          },
+          "actions" : {
+            "forwarding" : "accept"
+          }
+        } ]
+      }
+    }, {
+      "name" : "from-ethernet-roborock-s6",
+      "type" : "ethernet-acl-type",
+      "aces" : {
+        "ace" : [ {
+          "name" : "from-ethernet-roborock-s6-0",
+          "matches" : {
+            "ietf-mud:mud" : {
+              "local-networks" : [ null ]
+            },
+            "eth" : {
+              "ethertype" : "0x0008"
+            }
+          },
+          "actions" : {
+            "forwarding" : "accept"
+          }
+        } ]
+      }
+    } ]
+  }
+}

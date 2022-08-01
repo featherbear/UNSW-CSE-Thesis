@@ -1,0 +1,15 @@
+{
+    "defaultGatewayConfig": {
+        "macAddress" : "00:0c:42:cf:36:21",
+        "ipAddress": "10.10.10.1",
+        "ipv6Address": "fe80:0:0:0:16cc:20ff:fe51:33ea"
+    },
+
+    "deviceConfig":{
+        "device":"64:90:c1:1d:24:c4",
+        "deviceName": "roborock-s6"
+    },
+
+    "pcapLocation": "/home/andrew/mudgee/capture.pcap",
+    "__REFER__TO__": "https://github.com/ayyoob/mudgee"
+}
