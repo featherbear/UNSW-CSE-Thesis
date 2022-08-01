@@ -61,6 +61,8 @@ Remote dump over SSH
 
 UBoot command line -> hold s
 
+[https://featherbear.cc/UNSW-CSE-Thesis/uploads/20211103-serial-comms.gif](https://featherbear.cc/UNSW-CSE-Thesis/uploads/20211103-serial-comms.gif "https://featherbear.cc/UNSW-CSE-Thesis/uploads/20211103-serial-comms.gif")
+
 ### Binary File Comparison against Ubuntu 14.04.3 LTS
 
 ### Binary File Analysis
@@ -69,11 +71,19 @@ BinaryNinja
 
 ### Proof of Concept: Remote Access
 
-### Proof of Concept: Reset Persistence
+### Filesystem
 
-### Proposed Exploit: Upgrade Persistence
+#### Partitions
 
-### Filesystem Layout
+#### Proof of Concept: Reset Persistence
+
+#### 
+
+### Upgrade Analysis
+
+#### Proposed Exploit: Upgrade Persistence
+
+#### UBoot modification
 
 ### USB Analysis
 
