@@ -20,11 +20,35 @@ toc = true
 
 ## Introduction
 
+### Threat Scenarios
+
 ## Background / Literature Review
 
 ## Work Performed
 
-## Contributions
+## Summary of Contributions
+
+### Proof of Concept: Remote Access
+
+### Proof of Concept: Reset Persistence
+
+### Proposed Exploit: Upgrade Persistence
+
+### Discovered Vulnerability: RCE via locked ADB
+
+### Identified Network Behaviour
+
+### MUD Profiles
+
+> [https://github.com/ayyoob/mudgee](https://github.com/ayyoob/mudgee "https://github.com/ayyoob/mudgee")
+
+MUD profiles for versions: v01.15.18, v02.29.02
+
+**Limitations: Baseline ground-truth  
+**There are likely other ports and addresses that were not identified during the packet captures
+
+**Limitations: Payload packing  
+**MUD files do not perform deep packet inspection, nor does it decode SSL traffic. Limited to blocking unexpected addresses and ports.
 
 ## Evaluation
 
