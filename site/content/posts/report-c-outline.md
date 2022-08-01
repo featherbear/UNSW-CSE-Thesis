@@ -26,7 +26,29 @@ toc = true
 
 ## Work Performed
 
-## Summary of Contributions
+### Scope of Assessment
+
+### Summary of Contributions
+
+Summary + mini table of contents?
+
+### Network Setup
+
+Diagram
+
+\[Vacuum\], \[Traffic Dummy\], AP, Switch, Port Mirror, Mirror Sink, Router
+
+### Analysis of Device Pairing Procedure
+
+Insecure transmission of wireless credentials.
+
+Violates Tuya's security white paper, despite integrating Tuya's service
+
+### (Not a result - Firmware Extraction)
+
+Dump command
+
+UBoot command line -> hold s
 
 ### Binary File Comparison against Ubuntu 14.04.3 LTS
 
