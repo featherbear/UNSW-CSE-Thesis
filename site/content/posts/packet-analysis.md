@@ -273,6 +273,8 @@ Every 5 minutes
 
 MQTT reconnect at 3am. Session last for around 24 hours
 
+![](/uploads/20220801-snipaste_2022-08-01_11-21-04.jpg)
+
 ### Version v02.29.02
 
 #### Wireshark Filter
@@ -467,4 +469,5 @@ Excluding log upload activity (i.e. to Hadoop), we can see that at 3am (local ti
 * Ubuntu artifacts (SSDP)
 * DHCP request
 * 3am and 3pm activity
+  * Reset MQTT
 * Connections to America, Germany, China
