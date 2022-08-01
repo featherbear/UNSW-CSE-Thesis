@@ -25,7 +25,7 @@
 Power Analysis Network Setup Diagram
 [Vacuum], [Traffic Dummy], AP, Switch, Port Mirror, Mirror Sink, Router">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"Report C Outline","item":"/posts/report-c-outline/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/report-c-outline/"},"headline":"Report C Outline | CSE Thesis Musings","datePublished":"2022-08-01T02:23:54+00:00","dateModified":"2022-08-01T02:23:54+00:00","wordCount":225,"publisher":{"@type":"Person","name":"A. Wong"},"description":"https:\/\/featherbear.cc\/UNSW-CSE-Thesis\/posts\/thesis-c-report-structure-notes\/\n  Abstract Acknowledgements Table of Contents Introduction Threat Scenarios Background \/ Literature Review Work Performed Scope of Assessment Summary of Contributions Summary \u002b mini table of contents?\nPower Analysis Network Setup Diagram\n[Vacuum], [Traffic Dummy], AP, Switch, Port Mirror, Mirror Sink, Router"}</script><meta property="og:title" content="Report C Outline | CSE Thesis Musings">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/report-c-outline/"},"headline":"Report C Outline | CSE Thesis Musings","datePublished":"2022-08-01T02:23:54+00:00","dateModified":"2022-08-01T02:23:54+00:00","wordCount":280,"publisher":{"@type":"Person","name":"A. Wong"},"description":"https:\/\/featherbear.cc\/UNSW-CSE-Thesis\/posts\/thesis-c-report-structure-notes\/\n  Abstract Acknowledgements Table of Contents Introduction Threat Scenarios Background \/ Literature Review Work Performed Scope of Assessment Summary of Contributions Summary \u002b mini table of contents?\nPower Analysis Network Setup Diagram\n[Vacuum], [Traffic Dummy], AP, Switch, Port Mirror, Mirror Sink, Router"}</script><meta property="og:title" content="Report C Outline | CSE Thesis Musings">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/posts/report-c-outline/">
 <meta property="og:description" content="https://featherbear.cc/UNSW-CSE-Thesis/posts/thesis-c-report-structure-notes/
@@ -127,7 +127,17 @@ Power Analysis Network Setup Diagram
 <h3 id=proof-of-concept-remote-access>Proof of Concept: Remote Access</h3>
 <h3 id=proof-of-concept-reset-persistence>Proof of Concept: Reset Persistence</h3>
 <h3 id=proposed-exploit-upgrade-persistence>Proposed Exploit: Upgrade Persistence</h3>
-<h3 id=discovered-vulnerability-rce-via-locked-adb>Discovered Vulnerability: RCE via locked ADB</h3>
+<h3 id=filesystem-layout>Filesystem Layout</h3>
+<h3 id=usb-analysis>USB Analysis</h3>
+<h4 id=discovered-vulnerability-rce-via-locked-adb>Discovered Vulnerability: RCE via locked ADB</h4>
+<pre><code>[5991703.724675] usb 1-2: new high-speed USB device number 4 using xhci_hcd
+[5991703.881398] usb 1-2: New USB device found, idVendor=1f3a, idProduct=1001, bcdDevice= 2.33
+[5991703.881400] usb 1-2: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[5991703.881402] usb 1-2: Product: Rockrobo ruby
+[5991703.881403] usb 1-2: Manufacturer: Rockrobo USB Developer
+[5991703.881404] usb 1-2: SerialNumber: 8a80ab8936d76c118000
+</code></pre>
+<p><code>adb_lock</code></p>
 <h3 id=identified-network-behaviour>Identified Network Behaviour</h3>
 <p>Network capture</p>
 <h3 id=mud-profiles>MUD Profiles</h3>
@@ -195,7 +205,12 @@ Power Analysis Network Setup Diagram
 <li><a href=#proof-of-concept-remote-access>Proof of Concept: Remote Access</a></li>
 <li><a href=#proof-of-concept-reset-persistence>Proof of Concept: Reset Persistence</a></li>
 <li><a href=#proposed-exploit-upgrade-persistence>Proposed Exploit: Upgrade Persistence</a></li>
+<li><a href=#filesystem-layout>Filesystem Layout</a></li>
+<li><a href=#usb-analysis>USB Analysis</a>
+<ul>
 <li><a href=#discovered-vulnerability-rce-via-locked-adb>Discovered Vulnerability: RCE via locked ADB</a></li>
+</ul>
+</li>
 <li><a href=#identified-network-behaviour>Identified Network Behaviour</a></li>
 <li><a href=#mud-profiles>MUD Profiles</a></li>
 </ul>
