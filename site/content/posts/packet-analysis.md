@@ -265,6 +265,14 @@ Every 5 minutes
 
 ![](/uploads/20220723-snipaste_2022-07-24_00-56-08.jpg)
 
+### Version v01.15.58 (May 2022)
+
+![](/uploads/20220801-snipaste_2022-08-01_11-18-26.jpg)
+
+![](/uploads/20220801-snipaste_2022-08-01_11-18-44.jpg)
+
+MQTT reconnect at 3am. Session last for around 24 hours
+
 ### Version v02.29.02
 
 #### Wireshark Filter
