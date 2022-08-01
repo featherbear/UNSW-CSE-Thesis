@@ -28,6 +28,8 @@ toc = true
 
 ## Summary of Contributions
 
+### Binary File Comparison against Ubuntu 14.04.3 LTS
+
 ### Proof of Concept: Remote Access
 
 ### Proof of Concept: Reset Persistence
