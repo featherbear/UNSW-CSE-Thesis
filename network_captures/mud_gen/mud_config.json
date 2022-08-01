@@ -10,6 +10,6 @@
         "deviceName": "roborock-s6"
     },
 
-    "pcapLocation": "/home/andrew/mudgee/v02.29.02.pcap",
+    "pcapLocation": "/home/andrew/mudgee/capture.pcap",
     "__REFER__TO__": "https://github.com/ayyoob/mudgee"
 }
