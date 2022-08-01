@@ -25,7 +25,7 @@
 Power Analysis Network Setup Diagram
 [Vacuum], [Traffic Dummy], AP, Switch, Port Mirror, Mirror Sink, Router">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"Report C Outline","item":"/posts/report-c-outline/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/report-c-outline/"},"headline":"Report C Outline | CSE Thesis Musings","datePublished":"2022-08-01T02:23:54+00:00","dateModified":"2022-08-01T02:23:54+00:00","wordCount":285,"publisher":{"@type":"Person","name":"A. Wong"},"description":"https:\/\/featherbear.cc\/UNSW-CSE-Thesis\/posts\/thesis-c-report-structure-notes\/\n  Abstract Acknowledgements Table of Contents Introduction Threat Scenarios Background \/ Literature Review Work Performed Scope of Assessment Summary of Contributions Summary \u002b mini table of contents?\nPower Analysis Network Setup Diagram\n[Vacuum], [Traffic Dummy], AP, Switch, Port Mirror, Mirror Sink, Router"}</script><meta property="og:title" content="Report C Outline | CSE Thesis Musings">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/report-c-outline/"},"headline":"Report C Outline | CSE Thesis Musings","datePublished":"2022-08-01T02:23:54+00:00","dateModified":"2022-08-01T02:23:54+00:00","wordCount":308,"publisher":{"@type":"Person","name":"A. Wong"},"description":"https:\/\/featherbear.cc\/UNSW-CSE-Thesis\/posts\/thesis-c-report-structure-notes\/\n  Abstract Acknowledgements Table of Contents Introduction Threat Scenarios Background \/ Literature Review Work Performed Scope of Assessment Summary of Contributions Summary \u002b mini table of contents?\nPower Analysis Network Setup Diagram\n[Vacuum], [Traffic Dummy], AP, Switch, Port Mirror, Mirror Sink, Router"}</script><meta property="og:title" content="Report C Outline | CSE Thesis Musings">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/posts/report-c-outline/">
 <meta property="og:description" content="https://featherbear.cc/UNSW-CSE-Thesis/posts/thesis-c-report-structure-notes/
@@ -118,21 +118,29 @@ Power Analysis Network Setup Diagram
 </ul>
 <pre><code class=language-json>{&quot;id&quot;:1,&quot;method&quot;:&quot;config_wifi&quot;,&quot;params&quot;:{&quot;password&quot;:&quot;password123&quot;,&quot;region&quot;:&quot;eu&quot;,&quot;ssid&quot;:&quot;secureTM&quot;,&quot;timezone&quot;:&quot;Australia/Sydney&quot;,&quot;uid&quot;:&quot;rr6020078a615840&quot;}}
 </code></pre>
-<h3 id=not-a-result---firmware-extraction>(Not a result - Firmware Extraction)</h3>
-<p>Remote dump over SSH</p>
-<p>UBoot command line -> hold s</p>
-<p><a href=https://featherbear.cc/UNSW-CSE-Thesis/uploads/20211103-serial-comms.gif title=https://featherbear.cc/UNSW-CSE-Thesis/uploads/20211103-serial-comms.gif>https://featherbear.cc/UNSW-CSE-Thesis/uploads/20211103-serial-comms.gif</a></p>
-<h3 id=binary-file-comparison-against-ubuntu-14043-lts>Binary File Comparison against Ubuntu 14.04.3 LTS</h3>
-<h3 id=binary-file-analysis>Binary File Analysis</h3>
-<p>BinaryNinja</p>
 <h3 id=proof-of-concept-remote-access>Proof of Concept: Remote Access</h3>
 <h3 id=filesystem>Filesystem</h3>
+<h4 id=not-a-result---firmware-extraction>(Not a result - Firmware Extraction)</h4>
+<ol>
+<li>TPA16 is the GND</li>
+<li>TPA15 is the device’s RX pin</li>
+<li>TPA 8 is the device’s TX pin</li>
+</ol>
+<p>Remote dump over SSH</p>
+<p>UBoot command line -> hold s</p>
+<p>Root XOR</p>
+<p><a href=https://featherbear.cc/UNSW-CSE-Thesis/uploads/20211103-serial-comms.gif title=https://featherbear.cc/UNSW-CSE-Thesis/uploads/20211103-serial-comms.gif>https://featherbear.cc/UNSW-CSE-Thesis/uploads/20211103-serial-comms.gif</a></p>
 <h4 id=partitions>Partitions</h4>
 <h4 id=proof-of-concept-reset-persistence>Proof of Concept: Reset Persistence</h4>
-<h4 id=heading></h4>
+<h4 id=binary-file-comparison-against-ubuntu-14043-lts>Binary File Comparison against Ubuntu 14.04.3 LTS</h4>
+<h4 id=binary-file-analysis>Binary File Analysis</h4>
+<p>BinaryNinja</p>
 <h3 id=upgrade-analysis>Upgrade Analysis</h3>
 <h4 id=proposed-exploit-upgrade-persistence>Proposed Exploit: Upgrade Persistence</h4>
 <h4 id=uboot-modification>UBoot modification</h4>
+<h4 id=changes>Changes</h4>
+<p>root password</p>
+<p>/mnt/default/shadow</p>
 <h3 id=usb-analysis>USB Analysis</h3>
 <h4 id=discovered-vulnerability-rce-via-locked-adb>Discovered Vulnerability: RCE via locked ADB</h4>
 <pre><code>[5991703.724675] usb 1-2: new high-speed USB device number 4 using xhci_hcd
@@ -204,21 +212,21 @@ Power Analysis Network Setup Diagram
 <li><a href=#power-analysis>Power Analysis</a></li>
 <li><a href=#network-setup>Network Setup</a></li>
 <li><a href=#analysis-of-device-pairing-procedure>Analysis of Device Pairing Procedure</a></li>
-<li><a href=#not-a-result---firmware-extraction>(Not a result - Firmware Extraction)</a></li>
-<li><a href=#binary-file-comparison-against-ubuntu-14043-lts>Binary File Comparison against Ubuntu 14.04.3 LTS</a></li>
-<li><a href=#binary-file-analysis>Binary File Analysis</a></li>
 <li><a href=#proof-of-concept-remote-access>Proof of Concept: Remote Access</a></li>
 <li><a href=#filesystem>Filesystem</a>
 <ul>
+<li><a href=#not-a-result---firmware-extraction>(Not a result - Firmware Extraction)</a></li>
 <li><a href=#partitions>Partitions</a></li>
 <li><a href=#proof-of-concept-reset-persistence>Proof of Concept: Reset Persistence</a></li>
-<li><a href=#heading></a></li>
+<li><a href=#binary-file-comparison-against-ubuntu-14043-lts>Binary File Comparison against Ubuntu 14.04.3 LTS</a></li>
+<li><a href=#binary-file-analysis>Binary File Analysis</a></li>
 </ul>
 </li>
 <li><a href=#upgrade-analysis>Upgrade Analysis</a>
 <ul>
 <li><a href=#proposed-exploit-upgrade-persistence>Proposed Exploit: Upgrade Persistence</a></li>
 <li><a href=#uboot-modification>UBoot modification</a></li>
+<li><a href=#changes>Changes</a></li>
 </ul>
 </li>
 <li><a href=#usb-analysis>USB Analysis</a>
