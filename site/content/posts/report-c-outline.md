@@ -32,6 +32,8 @@ toc = true
 
 Summary + mini table of contents?
 
+### Power Analysis
+
 ### Network Setup
 
 Diagram
@@ -44,13 +46,26 @@ Insecure transmission of wireless credentials.
 
 Violates Tuya's security white paper, despite integrating Tuya's service
 
+* roborock-vacuum-s6_miap\[LAST4MAC\]
+* Waits for broadcast to udp/55559
+  * Hello?
+  * JSON 
+  
+```json
+{"id":1,"method":"config_wifi","params":{"password":"password123","region":"eu","ssid":"secureTM","timezone":"Australia/Sydney","uid":"rr6020078a615840"}}
+```
+
 ### (Not a result - Firmware Extraction)
 
-Dump command
+Remote dump over SSH
 
 UBoot command line -> hold s
 
 ### Binary File Comparison against Ubuntu 14.04.3 LTS
+
+### Binary File Analysis
+
+BinaryNinja
 
 ### Proof of Concept: Remote Access
 
