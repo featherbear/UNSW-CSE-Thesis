@@ -7,9 +7,9 @@ theme:
   - hugo-eureka
   - reveal-hugo
 
-paginate: 25
+paginate: 100
 copyright: >
-  &copy; 2021 <a href="https://featherbear.cc">Andrew Wong (z5206677)</a>
+  &copy; 2021-2022 <a href="https://featherbear.cc">Andrew Wong (z5206677)</a>
 enableEmoji: true
 enableGitInfo: false
 summaryLength: 40
