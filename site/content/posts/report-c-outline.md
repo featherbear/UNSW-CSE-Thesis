@@ -73,6 +73,14 @@ Root XOR
 
 [https://featherbear.cc/UNSW-CSE-Thesis/uploads/20211103-serial-comms.gif](https://featherbear.cc/UNSW-CSE-Thesis/uploads/20211103-serial-comms.gif "https://featherbear.cc/UNSW-CSE-Thesis/uploads/20211103-serial-comms.gif")
 
+```bash
+IP=10.10.10.8
+for partition in `ssh root@$IP "ls /dev/mmcblk0?* -1"`
+do
+    ssh root@$IP "sudo dd if=$partition bs=1M" | pv | dd of=$(basename $partition).img
+done
+```
+
 #### Partitions
 
 #### Proof of Concept: Reset Persistence
