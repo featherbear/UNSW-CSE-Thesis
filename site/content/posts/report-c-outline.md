@@ -55,35 +55,45 @@ Violates Tuya's security white paper, despite integrating Tuya's service
 {"id":1,"method":"config_wifi","params":{"password":"password123","region":"eu","ssid":"secureTM","timezone":"Australia/Sydney","uid":"rr6020078a615840"}}
 ```
 
-### (Not a result - Firmware Extraction)
+### Proof of Concept: Remote Access
+
+### Filesystem
+
+#### (Not a result - Firmware Extraction)
+
+1. TPA16 is the GND
+2. TPA15 is the device’s RX pin
+3. TPA 8 is the device’s TX pin
 
 Remote dump over SSH
 
 UBoot command line -> hold s
 
+Root XOR
+
 [https://featherbear.cc/UNSW-CSE-Thesis/uploads/20211103-serial-comms.gif](https://featherbear.cc/UNSW-CSE-Thesis/uploads/20211103-serial-comms.gif "https://featherbear.cc/UNSW-CSE-Thesis/uploads/20211103-serial-comms.gif")
-
-### Binary File Comparison against Ubuntu 14.04.3 LTS
-
-### Binary File Analysis
-
-BinaryNinja
-
-### Proof of Concept: Remote Access
-
-### Filesystem
 
 #### Partitions
 
 #### Proof of Concept: Reset Persistence
 
-#### 
+#### Binary File Comparison against Ubuntu 14.04.3 LTS
+
+#### Binary File Analysis
+
+BinaryNinja
 
 ### Upgrade Analysis
 
 #### Proposed Exploit: Upgrade Persistence
 
 #### UBoot modification
+
+#### Changes
+
+root password
+
+/mnt/default/shadow
 
 ### USB Analysis
 
