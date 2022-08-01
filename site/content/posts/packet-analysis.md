@@ -92,7 +92,7 @@ Some didn't work, some were too slow...
 
 ## Results
 
-### Version v01.15.58
+### Version v01.15.58 (June-July 2022)
 
 #### DNS
 
