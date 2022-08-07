@@ -1022,7 +1022,7 @@ Server Response
 <div style="min-width: 50%">
 Data is compressed and encrypted
 
-* `/mnt/data/rrlog/**`
+* `/mnt/data/rockrobo/rrlog/**`
 * `/dev/shm/**`
 * `/mnt/reserve/...`
 
