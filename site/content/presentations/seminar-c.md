@@ -1486,7 +1486,6 @@ Then again it's an embedded device
 * Test the mobile app
 * Test the cloud infrastructure
 * Test MITM - HSTS?
-* Make MUD profile
 * Fuzz exposed ports
   * e.g. `rr_loader` service
 
