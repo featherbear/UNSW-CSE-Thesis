@@ -644,7 +644,7 @@ The `vinda` file is no longer used for auth!
 
 Login attempts now verify against
 * `[mmcblk0p6]/shadow`
-* `[mmcblk0p6]/shadow.sign`.
+* `[mmcblk0p6]/shadow.sign`
 
 > But these files don't exist on my device...
 
