@@ -644,7 +644,7 @@ The `vinda` file is no longer used for auth!
 
 Login attempts now verify against
 * `[mmcblk0p6]/shadow`
-* `[mmcblk0p6]/shadow.sign`.
+* `[mmcblk0p6]/shadow.sign`
 
 > But these files don't exist on my device...
 
@@ -1022,7 +1022,7 @@ Server Response
 <div style="min-width: 50%">
 Data is compressed and encrypted
 
-* `/mnt/data/rrlog/**`
+* `/mnt/data/rockrobo/rrlog/**`
 * `/dev/shm/**`
 * `/mnt/reserve/...`
 
@@ -1486,7 +1486,6 @@ Then again it's an embedded device
 * Test the mobile app
 * Test the cloud infrastructure
 * Test MITM - HSTS?
-* Make MUD profile
 * Fuzz exposed ports
   * e.g. `rr_loader` service
 

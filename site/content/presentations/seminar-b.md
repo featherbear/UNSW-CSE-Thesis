@@ -413,7 +413,7 @@ Recovery supposedly resets `system_a`, `system_b`, `UDISK` and `Download`
 * Find changed files (*)
 * See where they are used
 * See how they are used
-* Anything of general interested
+* Anything of general interest
 
 ---
 
