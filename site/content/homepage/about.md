@@ -45,7 +45,7 @@ widget:
 
 ## "Smart" Vacuum Cleaners - An Audit Into The Security and Integrity of IoT Systems
 
-With the ever-growing adoption of convenient and user-friendly Internet of Things devices, more and more objects around us make their way onto the internet, requiring the web for one reason or another. Despite the unknown nature of communication and limited transparency of data, such privacy concerns are often overlooked in exchange for convenience. This project involved the audit of an internet-connected robotic vacuum cleaner to assess its internal operations and network activity behaviour, as to investigate any potential vulnerabilities that may render the device unsafe or insecure.
+With the ever-growing adoption of convenient and user-friendly Internet of Things devices, more and more objects around us make their way onto the internet, requiring the web for one reason or another. Despite the unknown nature of communication and limited transparency of data, such privacy concerns are often overlooked in exchange for convenience. This project involves the audit of an internet-connected robotic vacuum cleaner to assess its internal operations and network activity behaviour, as to investigate any potential vulnerabilities that may render the device unsafe or insecure.
 
 ## Details  
 
