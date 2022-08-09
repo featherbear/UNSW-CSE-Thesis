@@ -53,6 +53,7 @@ With the ever-growing adoption of convenient and user-friendly Internet of Thing
 
 ## Conclusions
 
-We will see, when we finish :)  
-It's a work in progress right now!
+Manufacturers of IoT / smart home devices have addressed to privacy and security concerns by reacting with positive improvements and fixes, however better care must be taken to wholistically improve their privacy and security posture.
+
+... Sounds like a cop-out answer hey... well maybe you should read my paper to learn about the spicy stuff 🥵🔥
 
