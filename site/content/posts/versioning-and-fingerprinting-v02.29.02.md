@@ -73,10 +73,6 @@ A.01.0014-V2902
 
 ***
 
-# Autorun / Startup
-
-SSH (dropbear) - NO
-
 # Secrets
 
 ## /etc/shadow
