@@ -73,10 +73,6 @@ A.01.0014-V2902
 
 ***
 
-# Autorun / Startup
-
-SSH (dropbear) - NO
-
 # Secrets
 
 ## /etc/shadow
@@ -192,6 +188,8 @@ SSH (dropbear) - NO
   * no ver
 * `/usr/bin/xz`
   * Original version does not use
+
+-
 
     4e567a306e1569e7fd633331affa3e12  adbd
     67dc1de09b22238b155dcafc2d1a5c3c  base64
