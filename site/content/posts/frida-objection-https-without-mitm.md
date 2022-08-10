@@ -2,7 +2,7 @@
 categories = []
 date = 2022-05-01T14:13:15Z
 description = ""
-series = []
+series = ["Network analysis"]
 tags = []
 title = "Frida - Objection - HTTPS without MITM"
 toc = true

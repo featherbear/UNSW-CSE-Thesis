@@ -12,4 +12,5 @@ toc = true
 
 PDF timestamp - 29th March 2022
 
-Older version - October 2020 - [https://images.tuyaus.com/rms-static/585f8cb0-32d2-11eb-a70f-192d2d6adc83-1606716457211.pdf?tyName=Tuya%20Smart%20Security%20White%20Paper%20v4.0.202010%5B3%5D.pdf](https://images.tuyaus.com/rms-static/585f8cb0-32d2-11eb-a70f-192d2d6adc83-1606716457211.pdf?tyName=Tuya%20Smart%20Security%20White%20Paper%20v4.0.202010%5B3%5D.pdf "https://images.tuyaus.com/rms-static/585f8cb0-32d2-11eb-a70f-192d2d6adc83-1606716457211.pdf?tyName=Tuya%20Smart%20Security%20White%20Paper%20v4.0.202010%5B3%5D.pdf")
+
+Older version: - October 2020 - [Tuya Smart Security White Paper v4.0.202010](https://images.tuyaus.com/rms-static/585f8cb0-32d2-11eb-a70f-192d2d6adc83-1606716457211.pdf?tyName=Tuya%20Smart%20Security%20White%20Paper%20v4.0.202010%5B3%5D.pdf)

@@ -2,7 +2,6 @@
 categories = []
 date = 2022-07-05T09:26:34Z
 description = ""
-series = []
 tags = []
 title = "/mnt/data/rockrobo/rrlog/miio.log"
 toc = true

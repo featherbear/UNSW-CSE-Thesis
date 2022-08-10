@@ -1,10 +1,10 @@
 +++
-categories = []
+categories = ["v02.29.02"]
 date = 2022-07-13T10:55:08Z
 description = ""
 series = []
 tags = []
-title = "netstat (v02.29.02)"
+title = "netstat"
 toc = true
 
 +++

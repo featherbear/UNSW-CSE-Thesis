@@ -1,10 +1,9 @@
 +++
-categories = []
+categories = ["v01.15.58"]
 date = 2021-10-29T16:35:19Z
 description = ""
-series = []
 tags = []
-title = "Shutdown log (v01.15.58)"
+title = "Shutdown log"
 toc = true
 
 +++

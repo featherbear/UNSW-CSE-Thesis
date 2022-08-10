@@ -8,7 +8,6 @@ title = "Bootloader / UBoot"
 toc = true
 
 +++
-# Gaining Access
 
 * TPA16 is the GND
 * TPA15 is the device's RX pin - Connect this to your UART client's TX

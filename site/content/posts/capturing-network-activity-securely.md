@@ -2,7 +2,7 @@
 categories = []
 date = 2021-09-28T12:00:00Z
 description = "Setting up an isolated network"
-series = []
+series = ["Network analysis"]
 tags = []
 title = "Capturing Network Activity (Securely)"
 toc = true

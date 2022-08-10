@@ -1,10 +1,10 @@
 +++
-categories = []
+categories = ["v02.29.02"]
 date = 2022-07-11T17:59:43Z
 description = ""
 series = []
 tags = []
-title = "v02.29.02 - tcpdump usage"
+title = "tcpdump usage"
 toc = true
 
 +++

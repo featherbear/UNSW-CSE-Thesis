@@ -8,7 +8,7 @@ title = "Roborock S6 Teardown"
 toc = true
 
 +++
-# Charging Station
+## Charging Station
 
 > Model Number: CDZ08RR / CDZ08RR
 
@@ -20,7 +20,7 @@ toc = true
 
 ![](/uploads/20211025-20211025_180406.jpg)
 
-## Circuit
+### Circuit
 
 ![](/uploads/20211025-20211025_175245.jpg)
 
@@ -31,7 +31,7 @@ Four IR sensors
 
 ![](/uploads/20211025-20211025_175320.jpg)
 
-## Infrared
+### Infrared
 
 ![](/uploads/20211025-20211025_180001.jpg)  ![](/uploads/20211025-20211025_180131.jpg)
 
@@ -42,15 +42,15 @@ Four IR sensors
 * Is there a specific IR code it broadcasts?
   * Not really security though
 
-# Vacuum Cleaner
+## Vacuum Cleaner
 
 ![](/uploads/20211025-20211026_005121.jpg)
 
 Status LED
 
-## External Components
+### External Components
 
-### Battery
+#### Battery
 
 > BRR-2P4S-5200D
 
@@ -58,11 +58,11 @@ Status LED
 
 ![](/uploads/20211029-20211029_220613.jpg) ![](/uploads/20211029-20211029_220601.jpg) ![](/uploads/20211029-20211029_220555.jpg)
 
-### Wheels
+#### Wheels
 
 ![](/uploads/20211029-20211030_010623.jpg) ![](/uploads/20211029-20211030_010634.jpg)
 
-### LIDAR
+#### LIDAR
 
 > LDS02RR
 
@@ -70,9 +70,9 @@ Related: [https://www.robotis.us/360-laser-distance-sensor-lds-01-lidar/](https:
 
 ![](/uploads/20211029-20211030_010214.jpg)  ![](/uploads/20211029-20211030_010201.jpg)
 
-## Circuitry
+### Circuitry
 
-### Processor
+#### Processor
 
 > Allwinner R16
 
@@ -91,7 +91,7 @@ Fun Fact: Same chip used in the NES Classic and SNES Classic
 
 ![](/uploads/20211029-20211029_232800.jpg)
 
-### Microcontroller
+#### Microcontroller
 
 > STM32F103VC
 
@@ -99,13 +99,13 @@ Datasheet: [https://www.st.com/resource/en/datasheet/stm32f103vc.pdf](https://ww
 
 ![](/uploads/20211029-20211029_232748.jpg)
 
-### Memory
+#### Memory
 
 > Micron D9SHD
 
 ![](/uploads/20211029-20211029_232941.jpg)
 
-### Flash Memory (eMMC)
+#### Flash Memory (eMMC)
 
 > Kioxia THGBMNG5D1LBAIL
 
@@ -113,7 +113,7 @@ Datasheet: [https://media.digikey.com/pdf/Data%20Sheets/Toshiba%20PDFs/THGBMNG5D
 
 ![](/uploads/20211029-20211029_232807.jpg) ![](/uploads/20211029-20211029_235625.jpg)
 
-### Power Management IC
+#### Power Management IC
 
 > X-Powers AXP223
 
@@ -121,7 +121,7 @@ Datasheet: [https://www.micros.com.pl/mediaserver/info-uiaxp223.pdf](https://www
 
 ![](/uploads/20211029-20211029_232816.jpg)
 
-### WiFi Chip
+#### WiFi Chip
 
 > Realtek RTL8189ETV
 
@@ -129,13 +129,13 @@ _"802.11bgn SDIO Network Interface Controller"_
 
 ![](/uploads/20211029-20211029_233311.jpg)  ![](/uploads/20211029-20211029_232513.jpg)
 
-### Button Panel
+#### Button Panel
 
 ![](/uploads/20211029-20211030_010804.jpg)  ![](/uploads/20211029-20211030_010821.jpg)
 
 ![](/uploads/20211029-20211030_011017.jpg)  ![](/uploads/20211029-20211030_011036.jpg)
 
-### Pinout (?)
+#### Pinout (?)
 
 ![](/uploads/20211029-20211030_002444.jpg)
 
@@ -154,7 +154,7 @@ _"802.11bgn SDIO Network Interface Controller"_
 * Header 11 - 69
 * Header 12 -
 
-## Chassis
+### Chassis
 
 ![](/uploads/20211029-20211029_224759.jpg)  ![](/uploads/20211029-20211029_224911.jpg)  ![](/uploads/20211029-20211029_224857.jpg)  
 Some force is needed to pry the frontplate that surrounds the button panel off.

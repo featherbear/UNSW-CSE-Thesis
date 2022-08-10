@@ -1,10 +1,10 @@
 +++
-categories = []
+categories = ["v02.29.02"]
 date = 2022-07-11T14:05:05Z
 description = ""
 series = []
 tags = []
-title = "v02.29.02 - Versioning and Fingerprinting"
+title = "Versioning and Fingerprinting"
 toc = true
 
 +++

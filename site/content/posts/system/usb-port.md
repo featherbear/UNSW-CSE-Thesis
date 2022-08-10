@@ -8,11 +8,11 @@ title = "USB Port"
 toc = true
 
 +++
-# Device ID
+## Device ID
 
 `Bus 001 Device 004: ID 1f3a:1001 Allwinner Technology Rockrobo ruby`
 
-# dmesg output
+## dmesg output
 
     [5991703.724675] usb 1-2: new high-speed USB device number 4 using xhci_hcd
     [5991703.881398] usb 1-2: New USB device found, idVendor=1f3a, idProduct=1001, bcdDevice= 2.33
@@ -29,7 +29,7 @@ toc = true
     [5991703.881404] usb 1-2: SerialNumber: 8a80ab8936d76c118000
     [5992597.924031] usb 1-2: USB disconnect, device number 4
 
-# lsusb output
+## lsusb output
 
     Bus 001 Device 004: ID 1f3a:1001 Allwinner Technology Rockrobo ruby
     Device Descriptor:

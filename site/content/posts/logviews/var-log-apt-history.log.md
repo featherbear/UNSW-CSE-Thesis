@@ -1,10 +1,9 @@
 +++
-categories = []
+categories = ["v01.15.58"]
 date = 2022-05-01T09:50:04Z
 description = ""
-series = []
 tags = []
-title = "mmcblk0p7/var/log/apt/history.log"
+title = "/var/log/apt/history.log"
 toc = true
 
 +++

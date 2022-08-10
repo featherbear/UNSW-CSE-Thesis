@@ -1,10 +1,9 @@
 +++
-categories = []
+categories = ["v02.29.02"]
 date = 2022-07-11T13:54:06Z
 description = ""
-series = []
 tags = []
-title = "Boot log (v02.29.02)"
+title = "Boot log"
 toc = true
 
 +++

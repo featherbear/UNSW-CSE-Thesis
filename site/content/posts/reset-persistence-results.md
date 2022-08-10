@@ -2,7 +2,7 @@
 categories = []
 date = 2022-07-11T16:01:09Z
 description = ""
-series = []
+series = ["Persistence"]
 tags = []
 title = "Reset Persistence Results"
 toc = true

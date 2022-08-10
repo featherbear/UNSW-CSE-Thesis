@@ -2,7 +2,7 @@
 categories = []
 date = 2021-10-25T15:28:48Z
 description = ""
-series = []
+series = ["Network analysis"]
 tags = []
 title = "Capturing Packets on Android"
 toc = true

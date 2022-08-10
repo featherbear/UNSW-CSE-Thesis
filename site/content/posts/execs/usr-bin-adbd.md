@@ -46,6 +46,8 @@ Not sure if we are meant to be able to run our own commands (read below)?
 
 Commands are validated (`0x11dbc`) to check they that don't contain `;` `&` `|` <code>\`</code>
 
+## Vulnerability
+
 > However, with the `uart_test` command, the program launches our input in a /bin/sh shell... We can inject some things!
 
 ![](/uploads/20220725-snipaste_2022-07-26_03-52-41.jpg)

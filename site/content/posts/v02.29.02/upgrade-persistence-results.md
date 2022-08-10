@@ -1,16 +1,16 @@
 +++
-categories = []
+categories = ["v02.29.02"]
 date = 2022-07-11T15:34:35Z
 description = ""
-series = []
+series = ["Persistence"]
 tags = []
-title = "Upgrade - Upgrade Persistence Results"
+title = "Upgrade Persistence Results"
 toc = true
 
 +++
 These directories/files persisted in the upgrade
 
-```
+```plain
 /mnt/reserve/z5206677.was.here.update
 /mnt/reserve/rriot/z5206677.was.here.update
 /mnt/reserve/lost+found/z5206677.was.here.update
@@ -33,7 +33,7 @@ These directories/files persisted in the upgrade
 
 ## Second run from fresh install
 
-```
+```plain
 /mnt/reserve/rriot/z5206677.was.here.upgrade
 /mnt/reserve/lost+found/z5206677.was.here.upgrade
 /mnt/reserve/z5206677.was.here.upgrade
