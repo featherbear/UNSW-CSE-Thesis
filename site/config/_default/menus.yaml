@@ -11,4 +11,6 @@ main:
   - name: Progress Log
     url: /tldr/
     weight: 4
-    
+  - name: Thesis (PDF)
+    url: /docs/report/thesis-smart-vacuum-cleaners-z5206677.pdf
+    weight: 4
