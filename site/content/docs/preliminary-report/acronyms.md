@@ -1,6 +1,5 @@
 ---
 date: ""
-description: ""
 title: "Glossary of Acronyms"
 description: ""
 toc: false
