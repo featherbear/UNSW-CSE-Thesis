@@ -1,10 +1,11 @@
 +++
 categories = []
 date = 2022-05-01T07:28:19Z
-description = " "
+description = "The 'work in progress'"
 series = []
 tags = []
 title = "Seminar B"
+weight = 2
 toc = true
 +++
 

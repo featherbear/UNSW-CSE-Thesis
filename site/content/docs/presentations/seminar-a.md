@@ -1,11 +1,12 @@
 +++
 categories = []
 date = 2021-11-01T07:28:19Z
-description = " "
+description = "Project background, motives and goals for the thesis"
 series = []
 tags = []
 title = "Seminar A"
 toc = true
+weight = 1
 +++
 
 
