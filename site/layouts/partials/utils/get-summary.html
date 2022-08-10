@@ -2,7 +2,7 @@
     <a href="{{ .Permalink }}" class="font-bold text-xl hover:text-eureka">{{ .LinkTitle }}</a>
   </div>
   <div class="content">
-    {{ if .Description }}
+    {{ if isset .Params "description" }}
       {{ .Description | plainify | htmlUnescape }}
     {{ else }}
       {{- .Summary | plainify | htmlUnescape -}}
@@ -19,8 +19,8 @@
             <a href="{{ .Permalink }}" class="font-semibold hover:text-eureka">{{ .LinkTitle }}</a>
         </div>
         <div class="">
-            {{ if .Description }}
-              {{ .Description | plainify | htmlUnescape }}
+            {{ if isset .Params "description" }}
+              {{ .Params.Description | plainify | htmlUnescape }}
             {{ else }}
               {{- .Summary | plainify | htmlUnescape -}}
             {{ end }}
