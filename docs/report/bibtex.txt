@@ -1,0 +1,208 @@
+﻿@misc{RN5,
+   author = {Abrams, Lawrence},
+   title = {533 million Facebook users’ phone numbers leaked on hacker forum},
+   month = {03/04/2021},
+   url = {https://www.bleepingcomputer.com/news/security/533-million-facebook-users-phone-numbers-leaked-on-hacker-forum/ ,},
+   year = {2021},
+   type = {Electronic Article}
+}
+
+@misc{RN23,
+   author = {Adrian, David and Bhargavan, Karthikeyan and Durumeric, Zakir and Gaudry, Pierrick and Green, Matthew and Halderman, J. Alex and Heninger, Nadia and Springall, Drew and Thom'e, Emmanuel and Valenta, Luke and VandererSloot, Benjamin and Wustrow, Eric and Zanella-B'eguelin, Santiago and Zimmermann, Paul},
+   title = {Imperfect Forward Secrecy: How Diffie-Hellman Fails in Practice},
+   month = {oct},
+   year = {2015},
+   type = {Conference Paper}
+}
+
+@misc{RN4,
+   author = {Brown, Rich},
+   title = {Smart homes can pay off when it's time to sell},
+   month = {2015-08-11},
+   url = {https://www.cnet.com/home/smart-home/what-happens-when-you-sell-your-smart-house/ ,},
+   year = {2015},
+   type = {Electronic Article}
+}
+
+@misc{RN12,
+   author = {Costin, Andrei and Zaddach, Jonas and Francillon, Aurlien and Balzarotti, Davide},
+   title = {A Large-Scale Analysis of the Security of Embedded Firmwares},
+   publisher = {USENIX Association},
+   pages = {95--110},
+   month = {aug,},
+   url = {https://www.usenix.org/conference/usenixsecurity14/technical-sessions/presentation/costin},
+   year = {2014},
+   type = {Conference Paper}
+}
+
+@phdthesis{RN9,
+   author = {Giese, Dennis},
+   title = {Security Analysis of the Xiaomi IoT Ecosystem},
+   url = {https://dontvacuum.me/thesis/Security_Analysis_of_the_Xiaomi_IoT_Ecosystem.pdf ,},
+   year = {2019},
+   type = {Thesis}
+}
+
+@misc{RN16,
+   author = {Giese, Dennis},
+   title = {Smart Home Security & Privacy},
+   note = {https://shelat.ccis.neu.edu/dl/2550-s21/2550-L23-IOT.pdf ,},
+   year = {2021},
+   type = {Generic}
+}
+
+@misc{RN24,
+   author = {Hamza, Ayyoob and Ranathunga, Dinesha and Gharakheili, Hassan Habibi and Roughan, Matthew and Sivaraman, Vijay},
+   title = {Clear as MUD: Generating, Validating and Applying IoT Behavioral Profiles},
+   publisher = {ACM Sigcomm workshop on IoT Security and Privacy},
+   month = {Aug},
+   DOI = {10.1145/3229565.3229566 },
+   url = {http://www2.ee.unsw.edu.au/~hhabibi/pubs/conf/18iotsnp_mudgee.pdf},
+   year = {2018},
+   type = {Conference Paper}
+}
+
+@misc{RN10,
+   author = {Jimenez, Juan Carlos},
+   title = {Practical Reverse Engineering - Dumping the Flash},
+   month = {2016-06-08},
+   url = {https://jcjc-dev.com/2016/06/08/reversing-huawei-4-dumping-flash/ ,},
+   year = {2016},
+   type = {Web Page}
+}
+
+@inproceedings{RN15,
+   author = {Jmaxxz},
+   title = {Backdooring the Frontdoor},
+   publisher = {DEF CON},
+   note = {https://doi.org/10.5446/36251},
+   DOI = {10.5446/36251},
+   type = {Conference Proceedings}
+}
+
+@misc{RN6,
+   author = {Jones, Rhett},
+   title = {Roomba's Next Big Step Is Selling Maps of Your Home to the Highest Bidder},
+   month = {2017-07-24},
+   url = {https://gizmodo.com/roombas-next-big-step-is-selling-maps-of-your-home-to-t-1797187829 ,},
+   year = {2017},
+   type = {Electronic Article}
+}
+
+@misc{RN8,
+   author = {Kotlyar, Elias},
+   title = {Xiaomi DaFang Hacks},
+   url = {https://github.com/EliasKotlyar/Xiaomi-Dafang-Hacks ,},
+   year = {2017},
+   type = {Computer Program}
+}
+
+@misc{RN18,
+   author = {Miralem, Mehic and Nejra, Selimovic and Dan, Komosny},
+   title = {About the Connectivity of Xiaomi Internet-of-Things Smart Home Devices},
+   pages = {1-6},
+   DOI = {10.1109/ICAT47117.2019.8939043},
+   year = {2019},
+   type = {Conference Paper}
+}
+
+@article{RN22,
+   author = {Mishra, B. and Kertesz, A.},
+   title = {The Use of MQTT in M2M and IoT Systems: A Survey},
+   journal = {IEEE Access},
+   volume = {8},
+   pages = {201071-201086},
+   ISSN = {2169-3536},
+   DOI = {10.1109/ACCESS.2020.3035849},
+   year = {2020},
+   type = {Journal Article}
+}
+
+@misc{RN3,
+   author = {Research & Markets},
+   title = {Insights on the Smart Homes Global Market to 2026 - Featuring ABB, Acuity Brands and Emerson Electric Among Others},
+   month = {16/11/2021},
+   url = {https://www.prnewswire.com/news-releases/insights-on-the-smart-homes-global-market-to-2026---featuring-abb-acuity-brands-and-emerson-electric-among-others-301425322.html ,},
+   year = {2021},
+   type = {Electronic Article}
+}
+
+@misc{RN14,
+   author = {Sriram, Sami and Xiang, Tan Sean Rui and Yimin, Dai and Nirupam, Roy and Jun, Han},
+   title = {LidarPhone: Acoustic Eavesdropping Using a Lidar Sensor: Poster Abstract},
+   publisher = {Association for Computing Machinery},
+   pages = {701–702 , numpages = 2},
+   keywords = {eavesdropping, acoustic side-channel, lidar},
+   DOI = {10.1145/3384419.3430430},
+   url = {https://doi.org/10.1145/3384419.3430430},
+   year = {2020},
+   type = {Conference Paper}
+}
+
+@misc{RN20,
+   author = {Tuya Smart},
+   title = {Tuya Smart White Paper on Information Security & Compliance},
+   month = {29/03/2022},
+   url = {https://images.tuyacn.com/smart/docs/TuyaSmart-WhitePaper-Intl.pdf},
+   year = {2020},
+   type = {Press Release}
+}
+
+@inproceedings{RN11,
+   author = {Ullrich, Fabian and Classen, Jiska and Eger, Johannes and Hollick, Matthias},
+   title = {Vacuums in the Cloud: Analyzing Security in a Hardened IoT Ecosystem},
+   publisher = {USENIX Association},
+   url = {https://www.usenix.org/conference/woot19/presentation/ullrich},
+   type = {Conference Proceedings}
+}
+
+@inproceedings{RN7,
+   author = {Vtrust, Michael Steigerwald},
+   title = {Smart Home - Smart Hack - Wie der Weg ins digitale Zuhause zum Spaziergang wird},
+   url = {https://media.ccc.de/v/35c3-9723-smart_home_-_smart_hack ,},
+   type = {Conference Proceedings}
+}
+
+@misc{RN13,
+   author = {Wei, Teng and Wang, Shu and Zhou, Anfu and Zhang, Xinyu},
+   title = {Acoustic Eavesdropping through Wireless Vibrometry},
+   publisher = {Association for Computing Machinery},
+   pages = {130–141 , numpages = 12},
+   keywords = {acoustic-radio transformation, acoustic eavesdropping, wifi devices},
+   DOI = {10.1145/2789168.2790119},
+   url = {https://doi.org/10.1145/2789168.2790119},
+   year = {2015},
+   type = {Conference Paper}
+}
+
+@misc{RN25,
+   author = {Western Digital},
+   title = {A detailed overview of the different security methods one can use in an e.MMC storage device},
+   month = {July},
+   url = {https://documents.westerndigital.com/content/dam/doc-library/en_us/assets/public/western-digital/collateral/white-paper/white-paper-emmc-security.pdf},
+   year = {2017},
+   type = {Press Release}
+}
+
+@misc{RN21,
+   author = {Xiaomi, AIoT Security Laboratory},
+   title = {Cyber Security Baseline for Consumer Internet of Things Device},
+   month = {December 2021},
+   url = {https://github.com/MiSecurity/Cyber-Security-Baseline-for-Consumer-Internet-of-Things/blob/main/resources/pdf/Cyber%20Security%20Baseline%20for%20Consumer%20Internet%20of%20Things%20Device.pdf},
+   year = {2021},
+   type = {Press Release}
+}
+
+@article{RN19,
+   author = {Yu, Miao and Zhuge, Jianwei and Cao, Ming and Shi, Zhiwei and Jiang, Lin},
+   title = {A Survey of Security Vulnerability Analysis, Discovery, Detection, and Mitigation on IoT Devices},
+   journal = {Future Internet},
+   volume = {12},
+   number = {2},
+   pages = {27},
+   ISSN = {1999-5903},
+   url = {https://www.mdpi.com/1999-5903/12/2/27},
+   year = {2020},
+   type = {Journal Article}
+}
+

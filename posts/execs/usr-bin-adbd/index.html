@@ -22,7 +22,7 @@
 <style>html.dark{--color-primary-bg:#232327 !important}div#sidebar-toc>ul.pl-6{margin-left:1em}</style>
 <meta name=description content="locksec_init_key: can not find the prefix str from adb conf file, use default locksec_init_key: can not find the suffix str from adb conf file, use default locksec_init_serial: adb read 465 bytes from /proc/cpuinfo locksec_init_key: locksec_init_key, rockrobo%()+-\[\]_8a80ab8936d76c118000:;<=>?@{}rubydevicemodel locksec_apply_key: locksec_apply_key, erI09cyW%()+-\[\]_8a80ab8936d76c118000:;<=>?@{}CzD2xuMNlwabTK7 locksec_apply_passwd: adb source str: erI09cyW%()+-\[\]_8a80ab8936d76c118000:;<=>?">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"/usr/bin/adbd","item":"/posts/execs/usr-bin-adbd/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/execs/usr-bin-adbd/"},"headline":"\/usr\/bin\/adbd | CSE Thesis Musings","datePublished":"2022-04-06T16:01:14+00:00","dateModified":"2022-04-06T16:01:14+00:00","wordCount":351,"publisher":{"@type":"Person","name":"A. Wong"},"description":"locksec_init_key: can not find the prefix str from adb conf file, use default locksec_init_key: can not find the suffix str from adb conf file, use default locksec_init_serial: adb read 465 bytes from \/proc\/cpuinfo locksec_init_key: locksec_init_key, rockrobo%()\u002b-\\[\\]_8a80ab8936d76c118000:;\u0026lt;=\u0026gt;?@{}rubydevicemodel locksec_apply_key: locksec_apply_key, erI09cyW%()\u002b-\\[\\]_8a80ab8936d76c118000:;\u0026lt;=\u0026gt;?@{}CzD2xuMNlwabTK7 locksec_apply_passwd: adb source str: erI09cyW%()\u002b-\\[\\]_8a80ab8936d76c118000:;\u0026lt;=\u0026gt;?"}</script><meta property="og:title" content="/usr/bin/adbd | CSE Thesis Musings">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/execs/usr-bin-adbd/"},"headline":"\/usr\/bin\/adbd | CSE Thesis Musings","datePublished":"2022-04-06T16:01:14+00:00","dateModified":"2022-04-06T16:01:14+00:00","wordCount":352,"publisher":{"@type":"Person","name":"A. Wong"},"description":"locksec_init_key: can not find the prefix str from adb conf file, use default locksec_init_key: can not find the suffix str from adb conf file, use default locksec_init_serial: adb read 465 bytes from \/proc\/cpuinfo locksec_init_key: locksec_init_key, rockrobo%()\u002b-\\[\\]_8a80ab8936d76c118000:;\u0026lt;=\u0026gt;?@{}rubydevicemodel locksec_apply_key: locksec_apply_key, erI09cyW%()\u002b-\\[\\]_8a80ab8936d76c118000:;\u0026lt;=\u0026gt;?@{}CzD2xuMNlwabTK7 locksec_apply_passwd: adb source str: erI09cyW%()\u002b-\\[\\]_8a80ab8936d76c118000:;\u0026lt;=\u0026gt;?"}</script><meta property="og:title" content="/usr/bin/adbd | CSE Thesis Musings">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/posts/execs/usr-bin-adbd/">
 <meta property="og:description" content="locksec_init_key: can not find the prefix str from adb conf file, use default locksec_init_key: can not find the suffix str from adb conf file, use default locksec_init_serial: adb read 465 bytes from /proc/cpuinfo locksec_init_key: locksec_init_key, rockrobo%()+-\[\]_8a80ab8936d76c118000:;<=>?@{}rubydevicemodel locksec_apply_key: locksec_apply_key, erI09cyW%()+-\[\]_8a80ab8936d76c118000:;<=>?@{}CzD2xuMNlwabTK7 locksec_apply_passwd: adb source str: erI09cyW%()+-\[\]_8a80ab8936d76c118000:;<=>?">
@@ -45,6 +45,7 @@
 <a href=../../../posts/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 selected-menu-item mr-4">Posts</a>
 <a href=../../../docs/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">Docs</a>
 <a href=../../../tldr/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">Progress Log</a>
+<a href=../../../docs/report/thesis-smart-vacuum-cleaners-z5206677.pdf class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">Thesis (PDF)</a>
 </div>
 <div class=flex>
 <div class="relative pt-4 md:pt-0">
@@ -112,6 +113,7 @@ locksec_apply_passwd: locksec_apply_passwd, passwd: 0y\[ad8@w
 <pre><code>src/rr_ruby.c::adb_check_unlock_level1():not support /adb shell sys_passwd#adb_passwd echo TESTING/ in level 1
 </code></pre>
 <p>Commands are validated (<code>0x11dbc</code>) to check they that don&rsquo;t contain <code>;</code> <code>&</code> <code>|</code> <code>`</code></p>
+<h2 id=vulnerability>Vulnerability</h2>
 <blockquote>
 <p>However, with the <code>uart_test</code> command, the program launches our input in a /bin/sh shell&mldr; We can inject some things!</p>
 </blockquote>
@@ -181,6 +183,7 @@ locksec_apply_passwd: locksec_apply_passwd, passwd: 0y\[ad8@w
 <li><a href=#commands>Commands</a></li>
 </ul>
 </li>
+<li><a href=#vulnerability>Vulnerability</a></li>
 <li><a href=#access-levels>Access Levels</a></li>
 <li><a href=#lock-state>Lock State</a></li>
 <li><a href=#passwords>Passwords</a></li>

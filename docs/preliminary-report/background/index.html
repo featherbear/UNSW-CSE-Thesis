@@ -1,0 +1,173 @@
+<!doctype html><html lang=en><meta charset=utf-8>
+<meta name=viewport content="width=device-width">
+<title>2. Background | Preliminary Report | CSE Thesis Musings</title>
+<meta name=generator content="Hugo Eureka 0.8.2">
+<link rel=stylesheet href=../../../css/eureka.min.css>
+<script defer src=../../../js/eureka.min.js></script>
+<link rel=preconnect href=https://fonts.gstatic.com crossorigin>
+<link rel=preload href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" as=style onload="this.onload=null,this.rel='stylesheet'">
+<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/styles/solarized-light.min.css media=print onload="this.media='all',this.onload=null" crossorigin>
+<script defer src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/highlight.min.js crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/languages/dart.min.js crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js integrity="sha256-uNYoXefWRqv+PsIF/OflNmwtKM4lStn9yrz2gVl6ymo=" crossorigin></script>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css integrity=sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X media=print onload="this.media='all',this.onload=null" crossorigin>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js integrity=sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4 crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js integrity=sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa crossorigin></script>
+<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}]})})</script>
+<script defer src=https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js integrity="sha256-Zmpaaj+GXFsPF5WdPArSrnW3b30dovldeKsW00xBVwE=" crossorigin></script>
+<link rel=preconnect href=https://www.google-analytics.com crossorigin>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107434487-2"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-107434487-2')</script>
+<script>(function(e,b,f,c,a,d){b[c]=b[c]||function(){(b[c].q=b[c].q||[]).push(arguments)},a=e.createElement('script'),d=e.getElementsByTagName('script')[0],a.async=1,a.src=f,a.id='fathom-script',d.parentNode.insertBefore(a,d)})(document,window,'//ss.featherbear.cc/tracker.js','fathom'),fathom('set','siteId','NEQTU'),fathom('trackPageview')</script>
+<style>html.dark{--color-primary-bg:#232327 !important}div#sidebar-toc>ul.pl-6{margin-left:1em}</style>
+<meta name=description content="Background The widespread availability of IoT  The consumer market has experienced a large influx of IoT devices, largely attributed to the presence of IoT manufacturers who offer white-label partnerships with resellers to provide &ldquo;custom&rdquo; products. Through these partnerships, vendors buy into the IoT manufacturer&rsquo;s ecosystem - namely being the product itself, the companion smartphone application, and the cloud infrastructure supporting backend communications - all without requiring vendors to posses any knowledge or understanding of how to design, develop nor manufacture the IoT products that they sell.">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Docs","item":"/docs/"},{"@type":"ListItem","position":2,"name":"Preliminary Report","item":"/docs/preliminary-report/"},{"@type":"ListItem","position":3,"name":"2. Background","item":"/docs/preliminary-report/background/"}]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/docs/preliminary-report/background/"},"headline":"2. Background | Preliminary Report | CSE Thesis Musings","wordCount":542,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Background The widespread availability of IoT  The consumer market has experienced a large influx of IoT devices, largely attributed to the presence of IoT manufacturers who offer white-label partnerships with resellers to provide \u0026ldquo;custom\u0026rdquo; products. Through these partnerships, vendors buy into the IoT manufacturer\u0026rsquo;s ecosystem - namely being the product itself, the companion smartphone application, and the cloud infrastructure supporting backend communications - all without requiring vendors to posses any knowledge or understanding of how to design, develop nor manufacture the IoT products that they sell."}</script><meta property="og:title" content="2. Background | Preliminary Report | CSE Thesis Musings">
+<meta property="og:type" content="article">
+<meta property="og:url" content="/docs/preliminary-report/background/">
+<meta property="og:description" content="Background The widespread availability of IoT  The consumer market has experienced a large influx of IoT devices, largely attributed to the presence of IoT manufacturers who offer white-label partnerships with resellers to provide &ldquo;custom&rdquo; products. Through these partnerships, vendors buy into the IoT manufacturer&rsquo;s ecosystem - namely being the product itself, the companion smartphone application, and the cloud infrastructure supporting backend communications - all without requiring vendors to posses any knowledge or understanding of how to design, develop nor manufacture the IoT products that they sell.">
+<meta property="og:locale" content="en">
+<meta property="og:site_name" content="CSE Thesis Musings">
+<meta property="article:section" content="docs">
+<body class="flex flex-col min-h-screen">
+<header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
+<div class="w-full max-w-screen-xl mx-auto"><script>let storageColorScheme=localStorage.getItem("lightDarkMode");((storageColorScheme=='Auto'||storageColorScheme==null)&&window.matchMedia("(prefers-color-scheme: dark)").matches||storageColorScheme=="Dark")&&document.getElementsByTagName('html')[0].classList.add('dark')</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+<a href=../../../ class="mr-6 text-primary-text text-xl font-bold">CSE Thesis Musings</a>
+<button id=navbar-btn class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+<i class="fas fa-bars"></i>
+</button>
+<div id=target class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+<div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
+<a href=../../../#about class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">About</a>
+<a href=../../../posts/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">Posts</a>
+<a href=../../../docs/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 selected-menu-item mr-4">Docs</a>
+<a href=../../../tldr/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">Progress Log</a>
+<a href=../../../docs/report/thesis-smart-vacuum-cleaners-z5206677.pdf class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">Thesis (PDF)</a>
+</div>
+<div class=flex>
+<div class="relative pt-4 md:pt-0">
+<div class="cursor-pointer hover:text-eureka" id=lightDarkMode>
+<i class="fas fa-adjust"></i>
+</div>
+<div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id=is-open>
+</div>
+<div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40" id=lightDarkOptions>
+<span class="px-4 py-1 hover:text-eureka" name=Light>Light</span>
+<span class="px-4 py-1 hover:text-eureka" name=Dark>Dark</span>
+<span class="px-4 py-1 hover:text-eureka" name=Auto>Auto</span>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id=is-open-mobile>
+</div>
+</nav>
+<script>let element=document.getElementById('lightDarkMode');storageColorScheme==null||storageColorScheme=='Auto'?document.addEventListener('DOMContentLoaded',()=>{window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change',switchDarkMode)}):storageColorScheme=="Light"?(element.firstElementChild.classList.remove('fa-adjust'),element.firstElementChild.setAttribute("data-icon",'sun'),element.firstElementChild.classList.add('fa-sun')):storageColorScheme=="Dark"&&(element.firstElementChild.classList.remove('fa-adjust'),element.firstElementChild.setAttribute("data-icon",'moon'),element.firstElementChild.classList.add('fa-moon')),document.addEventListener('DOMContentLoaded',()=>{getcolorscheme(),switchBurger()})</script>
+</div>
+</header>
+<main class="flex-grow pt-16">
+<div class=pl-scrollbar>
+<div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
+<div class=lg:pt-12>
+<div class="flex flex-col md:flex-row bg-secondary-bg rounded">
+<div class="md:w-1/4 lg:w-1/5 border-r">
+<div class="sticky top-16 pt-6">
+<div id=sidebar-title class="md:hidden mx-4 px-2 pt-4 pb-2 md:border-b text-tertiary-text md:text-primary-text">
+<span class=font-semibold>Table of Contents</span>
+<i class="fas fa-caret-right ml-1"></i>
+</div>
+<div id=sidebar-toc class="hidden md:block overflow-y-auto mx-6 md:mx-0 pr-6 pt-2 md:max-h-doc-sidebar bg-primary-bg md:bg-transparent">
+<div class="flex flex-wrap ml-4 -mr-2 p-2 bg-secondary-bg md:bg-primary-bg rounded">
+<a class=hover:text-eureka href=../../../docs/preliminary-report/>Preliminary Report</a>
+</div>
+<ul class=pl-6>
+<li class=py-2>
+<div>
+<a class=hover:text-eureka href=../../../docs/preliminary-report/acronyms/>Glossary of Acronyms</a>
+</div>
+</li>
+<li class=py-2>
+<div>
+<a class=hover:text-eureka href=../../../docs/preliminary-report/introduction/>1. Introduction</a>
+</div>
+</li>
+<li class=py-2>
+<div>
+<a class="text-eureka hover:text-eureka" href=../../../docs/preliminary-report/background/>2. Background</a>
+</div>
+</li>
+<li class=py-2>
+<div>
+<a class=hover:text-eureka href=../../../docs/preliminary-report/literature-review/>3. Literature Review</a>
+</div>
+</li>
+<li class=py-2>
+<div>
+<a class=hover:text-eureka href=../../../docs/preliminary-report/proposal/>4. Thesis Plan</a>
+</div>
+</li>
+<li class=py-2>
+<div>
+<a class=hover:text-eureka href=../../../docs/preliminary-report/progress/>5. Preliminary Results</a>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="w-full md:w-3/4 lg:w-4/5 pb-8 pt-2 md:pt-8">
+<div class="w-full lg:w-3/4 pl-6 ml-0 mr-auto">
+<h1 class="font-bold text-3xl text-primary-text">2. Background</h1>
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+</div>
+</div>
+<div class=flex>
+<div class="w-full lg:w-3/4 px-6">
+<div class=content>
+<h1 id=background>Background</h1>
+<h2 id=the-widespread-availability-of-iot>The widespread availability of IoT</h2>
+<div class=marquee-parent><img src=../../../uploads/20211115-lightbulbs-marquee.png class=marquee-child></div>
+<p>The consumer market has experienced a large influx of IoT devices, largely attributed to the presence of IoT manufacturers who offer white-label partnerships with resellers to provide &ldquo;custom&rdquo; products. Through these partnerships, vendors buy into the IoT manufacturer&rsquo;s ecosystem - namely being the product itself, the companion smartphone application, and the cloud infrastructure supporting backend communications - all without requiring vendors to posses any knowledge or understanding of how to design, develop nor manufacture the IoT products that they sell.</p>
+<p>There are concerns regarding the privacy and ownership of user data that is transmitted, as vendors are often not in control of what information is transmitted, nor of how that information is used. This concern is potentially serious, as vulnerabilities within an IoT infrastructure would imply that devices and data from customers of vendor products would too be vulnerable. Furthermore, the lifetime of a vendor business is not guaranteed. With the constant opening and closing of IoT vendors, the closure of the business from which an IoT product was purchased from might result in the eventual in-operability of the said device.</p>
+<p>In the event that an IoT infrastructure suffers downtime or service instability, all white-labelled products too will also be inherently affected. Great trust must be placed in the infrastructure&rsquo;s availability and reliability. However in conjunction with aforementioned privacy and security concerns, many concerned users have turned to internet-less and self-hosted automation systems such as <a href=https://www.home-assistant.io/>HomeAssistant</a> and <a href=https://www.openhab.org/>OpenHAB</a>. As evident in later reviewed works (See chapter 3), concerns for privacy and security has been a driving force for developers and hackers to research and develop software, to replace the out-of-the-box internet-dependent software, effectively decoupling devices from vendor services.</p>
+<h1 id=about-the-company>About The Company</h1>
+<p><img src=../../../uploads/20211003-60410b5d26ef2b00045692ec.png class="plain small"></p>
+<p>Roborock is a Chinese company founded in Beijing that develops robotic cleaning appliances for households. In 2014, partnering with Xiaomi shortly after the opening of their business, Roborock releasedd a line of both affordable and premium smart robotic vacuum cleaners, with their first iteration the &ldquo;Mi Home Robotic vacuum Cleaner&rdquo; being released in September 2016. They have since released eleven other robotic vacuum cleaner models, each model offering new and improved features - such as the addition of a mop functionality and improved spatial object detection via LIDAR technologies.</p>
+<p><img src=../../../uploads/20211103-s6-pure-banner.webp alt></p>
+<p>In June 2019, Roborock released their flagship Roborock S6 vacuum cleaner (the focus of this thesis), which boasted reduced operating noise levels, and better overall cleaning performances. The Roborock S6 is powered by an Allwinner R16 SoC (ARM architecture) alongside an STM32 for auxiliary motor and sensor I/O. Depending on the region and firmware, the robot vacuum cleaner is powered by either Xiaomi Cloud or Tuya Smart cloud infrastructures, both which are market leaders in the consumer IoT industry. Whilst superseded by newer revisions such as the S6 MaxV and the S7, the S6 still remains largely popular and is still actively maintained by Roborock.</p>
+<h4 id=cloud-capability>Cloud Capability</h4>
+<p><label>Roborock (Xiaomi Cloud)</label>
+<img src=../../../uploads/20211103%20-%20Snipaste_2021-11-03_21-47-05.jpg alt></p>
+<p><label>Tuya Smart</label>
+<img src=../../../uploads/20211103%20-%20Snipaste_2021-11-03_21-48-02.jpg alt></p>
+<hr>
+<style>.marquee-parent{position:relative;width:100vw;max-width:100%;height:200px;overflow-x:hidden;border-radius:10px}.marquee-child{position:absolute;white-space:nowrap;will-change:transform;max-width:unset!important;max-height:100%!important;animation:marquee 360s linear infinite}.marquee-child:hover{animation-play-state:paused}@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-87.5%)}}</style>
+</div>
+<div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
+<div>
+<span class="block font-bold">Previous</span>
+<a href=../../../docs/preliminary-report/introduction/ class=block>1. Introduction</a>
+</div>
+<div class="md:text-right mt-4 md:mt-0">
+<span class="block font-bold">Next</span>
+<a href=../../../docs/preliminary-report/literature-review/ class=block>3. Literature Review</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>document.addEventListener('DOMContentLoaded',()=>{hljs.initHighlightingOnLoad(),changeSidebarHeight(),switchDocToc()})</script>
+</div>
+</div>
+</main>
+<footer class=pl-scrollbar>
+<div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
+<p class="text-sm text-tertiary-text">&copy; 2021-2022 <a href=https://featherbear.cc>Andrew Wong (z5206677)</a>
+&#183; Powered by the <a href=https://github.com/wangchucheng/hugo-eureka class=hover:text-eureka>Eureka</a> theme for <a href=https://gohugo.io class=hover:text-eureka>Hugo</a></p>
+</div></div>
+</footer>
+</body>
+</html>

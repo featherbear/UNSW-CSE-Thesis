@@ -27,7 +27,7 @@
 <meta property="og:description" content="Musings of a CSE Thesis">
 <meta property="og:locale" content="en">
 <meta property="og:site_name" content="CSE Thesis Musings">
-<meta property="og:updated_time" content="2022-08-01T02:23:54+00:00">
+<meta property="og:updated_time" content="2022-07-27T23:10:56+00:00">
 <meta property="article:section" content>
 <link rel=alternate type=application/rss+xml href=./index.xml title="CSE Thesis Musings">
 <body class="flex flex-col min-h-screen">
@@ -44,6 +44,7 @@
 <a href=./posts/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">Posts</a>
 <a href=./docs/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">Docs</a>
 <a href=./tldr/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">Progress Log</a>
+<a href=./docs/report/thesis-smart-vacuum-cleaners-z5206677.pdf class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">Thesis (PDF)</a>
 </div>
 <div class=flex>
 <div class="relative pt-4 md:pt-0">
@@ -100,15 +101,17 @@ I make stuff, and occasionally break stuff&mldr; mainly the lattter
 </div>
 </div>
 <div class=content>
-<h2 id=smart-vacuum-cleaners---an-audit-into-the-security-and-integrity-of-iot-systems>&ldquo;Smart&rdquo; Vacuum Cleaners - An Audit Into The Security and Integrity of IoT Systems</h2>
-<p>With the ever-growing adoption of convenient and user-friendly Internet of Things devices, more and more objects around us have made their way onto the internet, requiring connectivity to the web for one reason or another. Despite the unknown nature of communication and limited transparency of data, such privacy concerns are often overlooked in exchange for convenience. This paper audits the Roborock S6 robotic vacuum cleaner to assess its internal operations and network activity behaviour, as to investigate any potential vulnerabilities that may render the device unsafe or insecure.</p>
-<h2 id=details>Details</h2>
+<h2 id=smart-vacuum-cleaners>&ldquo;Smart&rdquo; Vacuum Cleaners</h2>
 <blockquote>
-<p>How have manufacturers of IoT / smart home devices addressed the increasing concerns of digital privacy and product security?</p>
+<p>An Audit Into The Security and Integrity of IoT Systems</p>
 </blockquote>
+<p>With the ever-growing adoption of convenient and user-friendly Internet of Things devices, more and more objects around us have made their way onto the internet, requiring connectivity to the web for one reason or another. Despite the unknown nature of communication and limited transparency of data, such privacy concerns are often overlooked in exchange for convenience. This paper audits the Roborock S6 robotic vacuum cleaner to assess its internal operations and network activity behaviour, as to investigate any potential vulnerabilities that may render the device unsafe or insecure.</p>
+<h2 id=thesis-statement>Thesis Statement</h2>
+<p>How have manufacturers of IoT / smart home devices addressed the increasing concerns of digital privacy and product security?</p>
 <h2 id=conclusions>Conclusions</h2>
 <p>Manufacturers of IoT / smart home devices have addressed to privacy and security concerns by reacting with positive improvements and fixes, however better care must be taken to wholistically improve their privacy and security posture.</p>
-<p>&mldr; Sounds like a cop-out answer hey&mldr; well maybe you should read my paper to learn about the spicy stuff 🥵🔥</p>
+<p>&mldr; sounds like a cop-out answer hey&mldr;<br>
+Read the <a href=./docs/report/thesis-smart-vacuum-cleaners-z5206677.pdf>paper</a> to see the spicy stuff 🔥</p>
 </div>
 </div>
 </div>
@@ -127,37 +130,9 @@ I make stuff, and occasionally break stuff&mldr; mainly the lattter
 <div class="bg-secondary-bg rounded overflow-hidden border hover:shadow-lg transition ease-in-out duration-200">
 <div class="px-6 pt-6">
 <div class="font-bold text-xl text-primary-text mb-2">
-<a href=./posts/report-c-outline/ class=hover:text-eureka>Report C Outline</a>
-</div>
-<div>
-https://featherbear.cc/UNSW-CSE-Thesis/posts/thesis-c-report-structure-notes/
-Abstract Acknowledgements Table of Contents Introduction Threat Scenarios Background / Literature Review Work Performed Scope of Assessment Summary of Contributions Summary + mini table of contents?
-Power Analysis Network Setup Diagram
-[Vacuum], [Traffic Dummy], AP, Switch, Port Mirror, Mirror Sink, Router
-</div>
-</div>
-<div class="px-6 pb-2">
-<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
-<div class="mr-6 my-2">
-<i class="fas fa-calendar mr-1"></i>
-<span>2022-08-01</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class=item>
-<div class=grid-content>
-<div class="bg-secondary-bg rounded overflow-hidden border hover:shadow-lg transition ease-in-out duration-200">
-<div class="px-6 pt-6">
-<div class="font-bold text-xl text-primary-text mb-2">
 <a href=./posts/tuya-white-paper/ class=hover:text-eureka>Tuya - White Paper</a>
 </div>
 <div>
-https://images.tuyacn.com/smart/docs/TuyaSmart-WhitePaper-Intl.pdf
-PDF timestamp - 29th March 2022
-Older version - October 2020 - https://images.tuyaus.com/rms-static/585f8cb0-32d2-11eb-a70f-192d2d6adc83-1606716457211.pdf?tyName=Tuya%20Smart%20Security%20White%20Paper%20v4.0.202010%5B3%5D.pdf
 </div>
 </div>
 <div class="px-6 pb-2">
@@ -188,6 +163,10 @@ What if you delete the device from your account?
 <i class="fas fa-calendar mr-1"></i>
 <span>2022-07-27</span>
 </div>
+<div class="mr-6 my-2">
+<i class="fas fa-th-list mr-1"></i>
+<a href=./series/persistence/ class=hover:text-eureka>Persistence</a>
+</div>
 </div>
 </div>
 </div>
@@ -201,7 +180,6 @@ What if you delete the device from your account?
 <a href=./posts/privacy-policy-from-apk/ class=hover:text-eureka>Privacy Policy (from APK)</a>
 </div>
 <div>
-Our Privacy Policy was published and took effect on 30th April 2019. If you no longer want to use our service, you can cancel your account by sending an e-mail to privacy@roborock.com (if you are an European Union user under the General Data Protection Regulations, please send e-mail to privacy@roborock-eu.
 </div>
 </div>
 <div class="px-6 pb-2">
@@ -220,10 +198,35 @@ Our Privacy Policy was published and took effect on 30th April 2019. If you no l
 <div class="bg-secondary-bg rounded overflow-hidden border hover:shadow-lg transition ease-in-out duration-200">
 <div class="px-6 pt-6">
 <div class="font-bold text-xl text-primary-text mb-2">
-<a href=./posts/v02.29.02-firmware-size-comparison/ class=hover:text-eureka>Firmware size comparison (v02.29.02 to v01.15.58)</a>
+<a href=./posts/v02.29.02/firmware-size-comparison/ class=hover:text-eureka>Firmware size comparison (v02.29.02 to v01.15.58)</a>
 </div>
 <div>
-> find v01.15.58 -type f | wc -l 10680 > du -sh v01.15.58 242M v01.15.58 ### > find v02.29.02 -type f | wc -l 1976 > du -sh v02.29.02 98M v02.29.02
+</div>
+</div>
+<div class="px-6 pb-2">
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+<div class="mr-6 my-2">
+<i class="fas fa-calendar mr-1"></i>
+<span>2022-07-24</span>
+</div>
+<div class="mr-6 my-2">
+<i class="fas fa-folder mr-1"></i>
+<a href=./categories/v02.29.02/ class=hover:text-eureka>v02.29.02</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=item>
+<div class=grid-content>
+<div class="bg-secondary-bg rounded overflow-hidden border hover:shadow-lg transition ease-in-out duration-200">
+<div class="px-6 pt-6">
+<div class="font-bold text-xl text-primary-text mb-2">
+<a href=./posts/execs/opt-rockrobo-rriot-rriot_rr/ class=hover:text-eureka>/opt/rockrobo/rriot/rriot_rr (v02.29.02)</a>
+</div>
+<div>
+The binary that's not being used
 </div>
 </div>
 <div class="px-6 pb-2">

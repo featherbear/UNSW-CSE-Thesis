@@ -1,0 +1,218 @@
+<!doctype html><html lang=en><meta charset=utf-8>
+<meta name=viewport content="width=device-width">
+<title>Network analysis | CSE Thesis Musings</title>
+<meta name=generator content="Hugo Eureka 0.8.2">
+<link rel=stylesheet href=../../css/eureka.min.css>
+<script defer src=../../js/eureka.min.js></script>
+<link rel=preconnect href=https://fonts.gstatic.com crossorigin>
+<link rel=preload href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" as=style onload="this.onload=null,this.rel='stylesheet'">
+<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/styles/solarized-light.min.css media=print onload="this.media='all',this.onload=null" crossorigin>
+<script defer src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/highlight.min.js crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/languages/dart.min.js crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js integrity="sha256-uNYoXefWRqv+PsIF/OflNmwtKM4lStn9yrz2gVl6ymo=" crossorigin></script>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css integrity=sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X media=print onload="this.media='all',this.onload=null" crossorigin>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js integrity=sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4 crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js integrity=sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa crossorigin></script>
+<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}]})})</script>
+<script defer src=https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js integrity="sha256-Zmpaaj+GXFsPF5WdPArSrnW3b30dovldeKsW00xBVwE=" crossorigin></script>
+<link rel=preconnect href=https://www.google-analytics.com crossorigin>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107434487-2"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-107434487-2')</script>
+<script>(function(e,b,f,c,a,d){b[c]=b[c]||function(){(b[c].q=b[c].q||[]).push(arguments)},a=e.createElement('script'),d=e.getElementsByTagName('script')[0],a.async=1,a.src=f,a.id='fathom-script',d.parentNode.insertBefore(a,d)})(document,window,'//ss.featherbear.cc/tracker.js','fathom'),fathom('set','siteId','NEQTU'),fathom('trackPageview')</script>
+<style>html.dark{--color-primary-bg:#232327 !important}div#sidebar-toc>ul.pl-6{margin-left:1em}</style>
+<meta name=description content="Musings of a CSE Thesis">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Series","item":"/series/"},{"@type":"ListItem","position":2,"name":"Network analysis","item":"/series/network-analysis/"}]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"name":"Packet Analysis","description":"Target  IP: 10.10.10.8\nMAC: 64:90:c1:1d:24:c4\nMAC OUI (64:90:C1) - Beijing Xiaomi Mobile Software Co, Ltd\n  Filtering the data  We have a \u0026lsquo;lot\u0026rsquo; of network traffic that isn\u0026rsquo;t related to the operation of the device - such as STP, SSDP, DHCP, ARP and other traffic that occurs - even without the presence of the device, so let\u0026rsquo;s remove these.","url":"/posts/packet-analysis/"},{"@type":"ListItem","position":2,"name":"Frida - Objection - HTTPS without MITM","description":"https://blog.silentsignal.eu/2020/05/04/decrypting-and-analyzing-https-traffic-without-mitm/","url":"/posts/frida-objection-https-without-mitm/"},{"@type":"ListItem","position":3,"name":"26/10/2021 Progress Update","description":"Have been preoccupied with getting a bunch of stuff repaired/quoted/replaced after a power surge hit \u0026ldquo;some\u0026rdquo; (a lot) devices. Anyhow, I was out of network cables so I went ahead and crimped some more.\n   The Roborock IoT DHCP and WAN comes out from the router (top, eth8) into the TP-Link switch (bottom right, eth5) The port mirror sink is on the switch (eth2) The wireless access point is on the switch (eth1)  ","url":"/posts/20211026-progress/"},{"@type":"ListItem","position":4,"name":"Capturing Packets on Android","description":"In order to capture the network activity during the process of pairing the Roborock - I needed to also log the network activity from my Android phone that was running Xiaomi Home.\nI ended up using PCAPdroid, which allowed me to target a specific app (or just everything) to capture network activity from.","url":"/posts/capturing-packets-on-android/"},{"@type":"ListItem","position":5,"name":"25/10/2021 Progress Update","description":"Observations Idle  Power draw during idle: 0.2W\n Whilst Charging    Wattage Current          Internal AP  Xiaomi procedure\n Hosts an AP on boot (or is it just pairing?","url":"/posts/20211025-progress/"},{"@type":"ListItem","position":6,"name":"Capturing Network Activity (Securely)","description":"Setting up an isolated network","url":"/posts/capturing-network-activity-securely/"}]}</script><meta property="og:title" content="Network analysis | CSE Thesis Musings">
+<meta property="og:type" content="website">
+<meta property="og:url" content="/series/network-analysis/">
+<meta property="og:description" content="Musings of a CSE Thesis">
+<meta property="og:locale" content="en">
+<meta property="og:site_name" content="CSE Thesis Musings">
+<meta property="og:updated_time" content="2022-07-23T03:31:46+00:00">
+<meta property="article:section" content="series">
+<link rel=alternate type=application/rss+xml href=../../series/network-analysis/index.xml title="CSE Thesis Musings">
+<body class="flex flex-col min-h-screen">
+<header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
+<div class="w-full max-w-screen-xl mx-auto"><script>let storageColorScheme=localStorage.getItem("lightDarkMode");((storageColorScheme=='Auto'||storageColorScheme==null)&&window.matchMedia("(prefers-color-scheme: dark)").matches||storageColorScheme=="Dark")&&document.getElementsByTagName('html')[0].classList.add('dark')</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+<a href=../../ class="mr-6 text-primary-text text-xl font-bold">CSE Thesis Musings</a>
+<button id=navbar-btn class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+<i class="fas fa-bars"></i>
+</button>
+<div id=target class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+<div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
+<a href=../../#about class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">About</a>
+<a href=../../posts/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">Posts</a>
+<a href=../../docs/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">Docs</a>
+<a href=../../tldr/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">Progress Log</a>
+<a href=../../docs/report/thesis-smart-vacuum-cleaners-z5206677.pdf class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">Thesis (PDF)</a>
+</div>
+<div class=flex>
+<div class="relative pt-4 md:pt-0">
+<div class="cursor-pointer hover:text-eureka" id=lightDarkMode>
+<i class="fas fa-adjust"></i>
+</div>
+<div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id=is-open>
+</div>
+<div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40" id=lightDarkOptions>
+<span class="px-4 py-1 hover:text-eureka" name=Light>Light</span>
+<span class="px-4 py-1 hover:text-eureka" name=Dark>Dark</span>
+<span class="px-4 py-1 hover:text-eureka" name=Auto>Auto</span>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id=is-open-mobile>
+</div>
+</nav>
+<script>let element=document.getElementById('lightDarkMode');storageColorScheme==null||storageColorScheme=='Auto'?document.addEventListener('DOMContentLoaded',()=>{window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change',switchDarkMode)}):storageColorScheme=="Light"?(element.firstElementChild.classList.remove('fa-adjust'),element.firstElementChild.setAttribute("data-icon",'sun'),element.firstElementChild.classList.add('fa-sun')):storageColorScheme=="Dark"&&(element.firstElementChild.classList.remove('fa-adjust'),element.firstElementChild.setAttribute("data-icon",'moon'),element.firstElementChild.classList.add('fa-moon')),document.addEventListener('DOMContentLoaded',()=>{getcolorscheme(),switchBurger()})</script>
+</div>
+</header>
+<main class="flex-grow pt-16">
+<div class=pl-scrollbar>
+<div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
+<article class="mx-6 my-8">
+<h1 class="font-bold text-3xl text-primary-text">Network analysis</h1>
+</article>
+<div class="bg-secondary-bg rounded px-6">
+<div class="overflow-hidden divide-y">
+<div class=py-6>
+<div class="flex flex-col-reverse lg:flex-row justify-between">
+<div class=w-full>
+<div class=mb-4>
+<a href=../../posts/packet-analysis/ class="font-bold text-xl hover:text-eureka">Packet Analysis</a>
+</div>
+<div class=content>
+</div>
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+<div class="mr-6 my-2">
+<i class="fas fa-calendar mr-1"></i>
+<span>2022-07-23</span>
+</div>
+<div class="mr-6 my-2">
+<i class="fas fa-th-list mr-1"></i>
+<a href=../../series/network-analysis/ class=hover:text-eureka>Network analysis</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=py-6>
+<div class="flex flex-col-reverse lg:flex-row justify-between">
+<div class=w-full>
+<div class=mb-4>
+<a href=../../posts/frida-objection-https-without-mitm/ class="font-bold text-xl hover:text-eureka">Frida - Objection - HTTPS without MITM</a>
+</div>
+<div class=content>
+</div>
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+<div class="mr-6 my-2">
+<i class="fas fa-calendar mr-1"></i>
+<span>2022-05-01</span>
+</div>
+<div class="mr-6 my-2">
+<i class="fas fa-th-list mr-1"></i>
+<a href=../../series/network-analysis/ class=hover:text-eureka>Network analysis</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=py-6>
+<div class="flex flex-col-reverse lg:flex-row justify-between">
+<div class=w-full>
+<div class=mb-4>
+<a href=../../posts/20211026-progress/ class="font-bold text-xl hover:text-eureka">26/10/2021 Progress Update</a>
+</div>
+<div class=content>
+</div>
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+<div class="mr-6 my-2">
+<i class="fas fa-calendar mr-1"></i>
+<span>2021-10-27</span>
+</div>
+<div class="mr-6 my-2">
+<i class="fas fa-th-list mr-1"></i>
+<a href=../../series/network-analysis/ class=hover:text-eureka>Network analysis</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=py-6>
+<div class="flex flex-col-reverse lg:flex-row justify-between">
+<div class=w-full>
+<div class=mb-4>
+<a href=../../posts/capturing-packets-on-android/ class="font-bold text-xl hover:text-eureka">Capturing Packets on Android</a>
+</div>
+<div class=content>
+</div>
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+<div class="mr-6 my-2">
+<i class="fas fa-calendar mr-1"></i>
+<span>2021-10-25</span>
+</div>
+<div class="mr-6 my-2">
+<i class="fas fa-th-list mr-1"></i>
+<a href=../../series/network-analysis/ class=hover:text-eureka>Network analysis</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=py-6>
+<div class="flex flex-col-reverse lg:flex-row justify-between">
+<div class=w-full>
+<div class=mb-4>
+<a href=../../posts/20211025-progress/ class="font-bold text-xl hover:text-eureka">25/10/2021 Progress Update</a>
+</div>
+<div class=content>
+</div>
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+<div class="mr-6 my-2">
+<i class="fas fa-calendar mr-1"></i>
+<span>2021-10-25</span>
+</div>
+<div class="mr-6 my-2">
+<i class="fas fa-th-list mr-1"></i>
+<a href=../../series/network-analysis/ class=hover:text-eureka>Network analysis</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=py-6>
+<div class="flex flex-col-reverse lg:flex-row justify-between">
+<div class=w-full>
+<div class=mb-4>
+<a href=../../posts/capturing-network-activity-securely/ class="font-bold text-xl hover:text-eureka">Capturing Network Activity (Securely)</a>
+</div>
+<div class=content>
+Setting up an isolated network
+</div>
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+<div class="mr-6 my-2">
+<i class="fas fa-calendar mr-1"></i>
+<span>2021-09-28</span>
+</div>
+<div class="mr-6 my-2">
+<i class="fas fa-th-list mr-1"></i>
+<a href=../../series/network-analysis/ class=hover:text-eureka>Network analysis</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class=pl-scrollbar>
+<div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
+<p class="text-sm text-tertiary-text">&copy; 2021-2022 <a href=https://featherbear.cc>Andrew Wong (z5206677)</a>
+&#183; Powered by the <a href=https://github.com/wangchucheng/hugo-eureka class=hover:text-eureka>Eureka</a> theme for <a href=https://gohugo.io class=hover:text-eureka>Hugo</a></p>
+</div></div>
+</footer>
+</body>
+</html>

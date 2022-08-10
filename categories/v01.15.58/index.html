@@ -1,0 +1,238 @@
+<!doctype html><html lang=en><meta charset=utf-8>
+<meta name=viewport content="width=device-width">
+<title>v01.15.58 | CSE Thesis Musings</title>
+<meta name=generator content="Hugo Eureka 0.8.2">
+<link rel=stylesheet href=../../css/eureka.min.css>
+<script defer src=../../js/eureka.min.js></script>
+<link rel=preconnect href=https://fonts.gstatic.com crossorigin>
+<link rel=preload href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" as=style onload="this.onload=null,this.rel='stylesheet'">
+<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/styles/solarized-light.min.css media=print onload="this.media='all',this.onload=null" crossorigin>
+<script defer src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/highlight.min.js crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/languages/dart.min.js crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js integrity="sha256-uNYoXefWRqv+PsIF/OflNmwtKM4lStn9yrz2gVl6ymo=" crossorigin></script>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css integrity=sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X media=print onload="this.media='all',this.onload=null" crossorigin>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js integrity=sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4 crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js integrity=sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa crossorigin></script>
+<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}]})})</script>
+<script defer src=https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js integrity="sha256-Zmpaaj+GXFsPF5WdPArSrnW3b30dovldeKsW00xBVwE=" crossorigin></script>
+<link rel=preconnect href=https://www.google-analytics.com crossorigin>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107434487-2"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-107434487-2')</script>
+<script>(function(e,b,f,c,a,d){b[c]=b[c]||function(){(b[c].q=b[c].q||[]).push(arguments)},a=e.createElement('script'),d=e.getElementsByTagName('script')[0],a.async=1,a.src=f,a.id='fathom-script',d.parentNode.insertBefore(a,d)})(document,window,'//ss.featherbear.cc/tracker.js','fathom'),fathom('set','siteId','NEQTU'),fathom('trackPageview')</script>
+<style>html.dark{--color-primary-bg:#232327 !important}div#sidebar-toc>ul.pl-6{margin-left:1em}</style>
+<meta name=description content="Musings of a CSE Thesis">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Categories","item":"/categories/"},{"@type":"ListItem","position":2,"name":"v01.15.58","item":"/categories/v01.15.58/"}]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"name":"netstat","description":"On idle\nroot@rockrobo:~# netstat -nltp Active Internet connections (only servers) Proto Recv-Q Send-Q Local Address Foreign Address State PID/Program name tcp 0 0 127.0.0.1:54322 0.0.0.0:* LISTEN 991/miio_client tcp 0 0 127.0.0.1:54323 0.0.0.0:* LISTEN 991/miio_client tcp 0 0 0.0.0.0:22 0.0.0.0:* LISTEN 1644/sshd tcp 0 0 127.","url":"/posts/v01.15.58/netstat/"},{"@type":"ListItem","position":2,"name":"/etc/shadow (v01.15.58)","description":"root@rockrobo:/var/log# cat /etc/shadow root:$6$mptOwWOW$DpR0O/CdKUfpapA3rEGl/4m6WZOkRYC5LSaCJSYKj9iHuZp2PUzfolgrGVeHW5tMtRSYlBWSlonusy67027JF/::0:99999:7::: daemon:*:16652:0:99999:7::: bin:*:16652:0:99999:7::: sys:*:16652:0:99999:7::: sync:*:16652:0:99999:7::: games:*:16652:0:99999:7::: man:*:16652:0:99999:7::: lp:*:16652:0:99999:7::: mail:*:16652:0:99999:7::: news:*:16652:0:99999:7::: uucp:*:16652:0:99999:7::: proxy:*:16652:0:99999:7::: www-data:*:16652:0:99999:7::: backup:*:16652:0:99999:7::: list:*:16652:0:99999:7::: irc:*:16652:0:99999:7::: gnats:*:16652:0:99999:7::: nobody:*:16652:0:99999:7::: libuuid:!:16652:0:99999:7::: syslog:*:16652:0:99999:7::: sshd:*:16799:0:99999:7::: dnsmasq:*:16799:0:99999:7::: ","url":"/posts/etc-shadow/"},{"@type":"ListItem","position":3,"name":"/etc/passwd (v01.15.58)","description":"root@rockrobo:/var/log# cat /etc/passwd root❌0:0:root:/root:/bin/bash daemon❌1:1:daemon:/usr/sbin:/usr/sbin/nologin bin❌2:2:bin:/bin:/usr/sbin/nologin sys❌3:3:sys:/dev:/usr/sbin/nologin sync❌4:65534:sync:/bin:/bin/sync games❌5:60:games:/usr/games:/usr/sbin/nologin man❌6:12:man:/var/cache/man:/usr/sbin/nologin lp❌7:7:lp:/var/spool/lpd:/usr/sbin/nologin mail❌8:8:mail:/var/mail:/usr/sbin/nologin news❌9:9:news:/var/spool/news:/usr/sbin/nologin uucp❌10:10:uucp:/var/spool/uucp:/usr/sbin/nologin proxy❌13:13:proxy:/bin:/usr/sbin/nologin www-data❌33:33:www-data:/var/www:/usr/sbin/nologin backup❌34:34:backup:/var/backups:/usr/sbin/nologin list❌38:38:Mailing List Manager:/var/list:/usr/sbin/nologin irc❌39:39:ircd:/var/run/ircd:/usr/sbin/nologin gnats❌41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin nobody❌65534:65534:nobody:/nonexistent:/usr/sbin/nologin libuuid❌100:101::/var/lib/libuuid: syslog❌101:104::/home/syslog:/bin/false sshd❌102:65534::/var/run/sshd:/usr/sbin/nologin dnsmasq❌103:65534:dnsmasq,,,:/var/lib/misc:/bin/false   There\u0026rsquo;s a /etc/passwd~ file which contains a user ruby","url":"/posts/etc-passwd/"},{"@type":"ListItem","position":4,"name":"/var/log/apt/history.log","description":"Start-Date: 2016-01-25 11:18:05 Commandline: /usr/bin/apt-get install rsync Install: rsync:armhf (3.1.0-2ubuntu0.2) End-Date: 2016-01-25 11:18:11 Start-Date: 2016-04-05 12:30:59 Commandline: /usr/bin/apt-get install ccrypt Install: ccrypt:armhf (1.10-4) End-Date: 2016-04-05 12:31:01 Start-Date: 2016-04-25 09:58:29 Commandline: /usr/bin/apt-get install tcpdump Install: tcpdump:armhf (4.5.1-2ubuntu1.2), libpcap0.8:armhf (1.5.3-2, automatic) End-Date: 2016-04-25 09:58:33 ","url":"/posts/logviews/var-log-apt-history.log/"},{"@type":"ListItem","position":5,"name":"Software Versions","description":"*-boot0 version : 4.0.0 DRAM DRIVE INFO: V1.7 ID CHECK VERSION: V0.1 [mmc]: mmc driver ver 2015-04-13 15:56:39 [mmc]: MMC ver 5.0 [mmc]: SD/MMC Card: 4bit, capacity: 3776MB [mmc]: vendor: Man 00110100 Snr 025e3285 [mmc]: product: 004GA [mmc]: revision: 3.0 [ 0.","url":"/posts/v01.15.58/software-versions/"},{"@type":"ListItem","position":6,"name":"Boot log","description":"*-boot0 version : 4.0.0 fel_flag = 0x00000000 rtc[0] value = 0x00000000 rtc[1] value = 0x00000000 rtc[2] value = 0x00000000 rtc[3] value = 0x00000000 DRAM DRIVE INFO: V1.7 DRAM Type =3 (2:DDR2,3:DDR3,6:LPDDR2,7:LPDDR3) DRAM zq value: 00003bbbDRAM CLK =552 MHZ ID CHECK VERSION: V0.","url":"/posts/logviews/boot-log-v01.15.58/"},{"@type":"ListItem","position":7,"name":"Shutdown log","description":"*-boot0 version : 4.0.0 fel_flag = 0x00000000 rtc[0] value = 0x00000000 rtc[1] value = 0x00000000 rtc[2] value = 0x00000000 rtc[3] value = 0x00000000 DRAM DRIVE INFO: V1.7 DRAM Type =3 (2:DDR2,3:DDR3,6:LPDDR2,7:LPDDR3) DRAM zq value: 00003bbbDRAM CLK =552 MHZ ID CHECK VERSION: V0.","url":"/posts/logviews/shutdown-log-v01.15.58/"}]}</script><meta property="og:title" content="v01.15.58 | CSE Thesis Musings">
+<meta property="og:type" content="website">
+<meta property="og:url" content="/categories/v01.15.58/">
+<meta property="og:description" content="Musings of a CSE Thesis">
+<meta property="og:locale" content="en">
+<meta property="og:site_name" content="CSE Thesis Musings">
+<meta property="og:updated_time" content="2022-05-01T16:11:11+00:00">
+<meta property="article:section" content="categories">
+<link rel=alternate type=application/rss+xml href=../../categories/v01.15.58/index.xml title="CSE Thesis Musings">
+<body class="flex flex-col min-h-screen">
+<header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
+<div class="w-full max-w-screen-xl mx-auto"><script>let storageColorScheme=localStorage.getItem("lightDarkMode");((storageColorScheme=='Auto'||storageColorScheme==null)&&window.matchMedia("(prefers-color-scheme: dark)").matches||storageColorScheme=="Dark")&&document.getElementsByTagName('html')[0].classList.add('dark')</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+<a href=../../ class="mr-6 text-primary-text text-xl font-bold">CSE Thesis Musings</a>
+<button id=navbar-btn class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+<i class="fas fa-bars"></i>
+</button>
+<div id=target class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+<div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
+<a href=../../#about class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">About</a>
+<a href=../../posts/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">Posts</a>
+<a href=../../docs/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">Docs</a>
+<a href=../../tldr/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">Progress Log</a>
+<a href=../../docs/report/thesis-smart-vacuum-cleaners-z5206677.pdf class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">Thesis (PDF)</a>
+</div>
+<div class=flex>
+<div class="relative pt-4 md:pt-0">
+<div class="cursor-pointer hover:text-eureka" id=lightDarkMode>
+<i class="fas fa-adjust"></i>
+</div>
+<div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id=is-open>
+</div>
+<div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40" id=lightDarkOptions>
+<span class="px-4 py-1 hover:text-eureka" name=Light>Light</span>
+<span class="px-4 py-1 hover:text-eureka" name=Dark>Dark</span>
+<span class="px-4 py-1 hover:text-eureka" name=Auto>Auto</span>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id=is-open-mobile>
+</div>
+</nav>
+<script>let element=document.getElementById('lightDarkMode');storageColorScheme==null||storageColorScheme=='Auto'?document.addEventListener('DOMContentLoaded',()=>{window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change',switchDarkMode)}):storageColorScheme=="Light"?(element.firstElementChild.classList.remove('fa-adjust'),element.firstElementChild.setAttribute("data-icon",'sun'),element.firstElementChild.classList.add('fa-sun')):storageColorScheme=="Dark"&&(element.firstElementChild.classList.remove('fa-adjust'),element.firstElementChild.setAttribute("data-icon",'moon'),element.firstElementChild.classList.add('fa-moon')),document.addEventListener('DOMContentLoaded',()=>{getcolorscheme(),switchBurger()})</script>
+</div>
+</header>
+<main class="flex-grow pt-16">
+<div class=pl-scrollbar>
+<div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
+<article class="mx-6 my-8">
+<h1 class="font-bold text-3xl text-primary-text">v01.15.58</h1>
+</article>
+<div class="bg-secondary-bg rounded px-6">
+<div class="overflow-hidden divide-y">
+<div class=py-6>
+<div class="flex flex-col-reverse lg:flex-row justify-between">
+<div class=w-full>
+<div class=mb-4>
+<a href=../../posts/v01.15.58/netstat/ class="font-bold text-xl hover:text-eureka">netstat</a>
+</div>
+<div class=content>
+</div>
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+<div class="mr-6 my-2">
+<i class="fas fa-calendar mr-1"></i>
+<span>2022-05-01</span>
+</div>
+<div class="mr-6 my-2">
+<i class="fas fa-folder mr-1"></i>
+<a href=../../categories/v01.15.58/ class=hover:text-eureka>v01.15.58</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=py-6>
+<div class="flex flex-col-reverse lg:flex-row justify-between">
+<div class=w-full>
+<div class=mb-4>
+<a href=../../posts/etc-shadow/ class="font-bold text-xl hover:text-eureka">/etc/shadow (v01.15.58)</a>
+</div>
+<div class=content>
+</div>
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+<div class="mr-6 my-2">
+<i class="fas fa-calendar mr-1"></i>
+<span>2022-05-01</span>
+</div>
+<div class="mr-6 my-2">
+<i class="fas fa-folder mr-1"></i>
+<a href=../../categories/v01.15.58/ class=hover:text-eureka>v01.15.58</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=py-6>
+<div class="flex flex-col-reverse lg:flex-row justify-between">
+<div class=w-full>
+<div class=mb-4>
+<a href=../../posts/etc-passwd/ class="font-bold text-xl hover:text-eureka">/etc/passwd (v01.15.58)</a>
+</div>
+<div class=content>
+</div>
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+<div class="mr-6 my-2">
+<i class="fas fa-calendar mr-1"></i>
+<span>2022-05-01</span>
+</div>
+<div class="mr-6 my-2">
+<i class="fas fa-folder mr-1"></i>
+<a href=../../categories/v01.15.58/ class=hover:text-eureka>v01.15.58</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=py-6>
+<div class="flex flex-col-reverse lg:flex-row justify-between">
+<div class=w-full>
+<div class=mb-4>
+<a href=../../posts/logviews/var-log-apt-history.log/ class="font-bold text-xl hover:text-eureka">/var/log/apt/history.log</a>
+</div>
+<div class=content>
+</div>
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+<div class="mr-6 my-2">
+<i class="fas fa-calendar mr-1"></i>
+<span>2022-05-01</span>
+</div>
+<div class="mr-6 my-2">
+<i class="fas fa-folder mr-1"></i>
+<a href=../../categories/v01.15.58/ class=hover:text-eureka>v01.15.58</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=py-6>
+<div class="flex flex-col-reverse lg:flex-row justify-between">
+<div class=w-full>
+<div class=mb-4>
+<a href=../../posts/v01.15.58/software-versions/ class="font-bold text-xl hover:text-eureka">Software Versions</a>
+</div>
+<div class=content>
+</div>
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+<div class="mr-6 my-2">
+<i class="fas fa-calendar mr-1"></i>
+<span>2022-03-18</span>
+</div>
+<div class="mr-6 my-2">
+<i class="fas fa-folder mr-1"></i>
+<a href=../../categories/v01.15.58/ class=hover:text-eureka>v01.15.58</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=py-6>
+<div class="flex flex-col-reverse lg:flex-row justify-between">
+<div class=w-full>
+<div class=mb-4>
+<a href=../../posts/logviews/boot-log-v01.15.58/ class="font-bold text-xl hover:text-eureka">Boot log</a>
+</div>
+<div class=content>
+</div>
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+<div class="mr-6 my-2">
+<i class="fas fa-calendar mr-1"></i>
+<span>2021-10-29</span>
+</div>
+<div class="mr-6 my-2">
+<i class="fas fa-folder mr-1"></i>
+<a href=../../categories/v01.15.58/ class=hover:text-eureka>v01.15.58</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=py-6>
+<div class="flex flex-col-reverse lg:flex-row justify-between">
+<div class=w-full>
+<div class=mb-4>
+<a href=../../posts/logviews/shutdown-log-v01.15.58/ class="font-bold text-xl hover:text-eureka">Shutdown log</a>
+</div>
+<div class=content>
+</div>
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+<div class="mr-6 my-2">
+<i class="fas fa-calendar mr-1"></i>
+<span>2021-10-29</span>
+</div>
+<div class="mr-6 my-2">
+<i class="fas fa-folder mr-1"></i>
+<a href=../../categories/v01.15.58/ class=hover:text-eureka>v01.15.58</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class=pl-scrollbar>
+<div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
+<p class="text-sm text-tertiary-text">&copy; 2021-2022 <a href=https://featherbear.cc>Andrew Wong (z5206677)</a>
+&#183; Powered by the <a href=https://github.com/wangchucheng/hugo-eureka class=hover:text-eureka>Eureka</a> theme for <a href=https://gohugo.io class=hover:text-eureka>Hugo</a></p>
+</div></div>
+</footer>
+</body>
+</html>

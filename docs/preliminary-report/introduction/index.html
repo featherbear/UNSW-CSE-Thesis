@@ -1,0 +1,170 @@
+<!doctype html><html lang=en><meta charset=utf-8>
+<meta name=viewport content="width=device-width">
+<title>1. Introduction | Preliminary Report | CSE Thesis Musings</title>
+<meta name=generator content="Hugo Eureka 0.8.2">
+<link rel=stylesheet href=../../../css/eureka.min.css>
+<script defer src=../../../js/eureka.min.js></script>
+<link rel=preconnect href=https://fonts.gstatic.com crossorigin>
+<link rel=preload href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" as=style onload="this.onload=null,this.rel='stylesheet'">
+<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/styles/solarized-light.min.css media=print onload="this.media='all',this.onload=null" crossorigin>
+<script defer src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/highlight.min.js crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/languages/dart.min.js crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js integrity="sha256-uNYoXefWRqv+PsIF/OflNmwtKM4lStn9yrz2gVl6ymo=" crossorigin></script>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css integrity=sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X media=print onload="this.media='all',this.onload=null" crossorigin>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js integrity=sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4 crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js integrity=sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa crossorigin></script>
+<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}]})})</script>
+<script defer src=https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js integrity="sha256-Zmpaaj+GXFsPF5WdPArSrnW3b30dovldeKsW00xBVwE=" crossorigin></script>
+<link rel=preconnect href=https://www.google-analytics.com crossorigin>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107434487-2"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-107434487-2')</script>
+<script>(function(e,b,f,c,a,d){b[c]=b[c]||function(){(b[c].q=b[c].q||[]).push(arguments)},a=e.createElement('script'),d=e.getElementsByTagName('script')[0],a.async=1,a.src=f,a.id='fathom-script',d.parentNode.insertBefore(a,d)})(document,window,'//ss.featherbear.cc/tracker.js','fathom'),fathom('set','siteId','NEQTU'),fathom('trackPageview')</script>
+<style>html.dark{--color-primary-bg:#232327 !important}div#sidebar-toc>ul.pl-6{margin-left:1em}</style>
+<meta name=description content="Introduction Consumer grade Internet of Things (IoT) devices have become widely adopted with continuously growing demand. With demands for such devices growing by 12% each year [@ResearchMarkets-2021], this AU$130B industry has cordially invited thousands of households to invest in smart devices such as light bulbs, fans, televisions and fridges.">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Docs","item":"/docs/"},{"@type":"ListItem","position":2,"name":"Preliminary Report","item":"/docs/preliminary-report/"},{"@type":"ListItem","position":3,"name":"1. Introduction","item":"/docs/preliminary-report/introduction/"}]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/docs/preliminary-report/introduction/"},"headline":"1. Introduction | Preliminary Report | CSE Thesis Musings","wordCount":494,"publisher":{"@type":"Person","name":"A. Wong"},"description":"Introduction Consumer grade Internet of Things (IoT) devices have become widely adopted with continuously growing demand. With demands for such devices growing by 12% each year [@ResearchMarkets-2021], this AU$130B industry has cordially invited thousands of households to invest in smart devices such as light bulbs, fans, televisions and fridges."}</script><meta property="og:title" content="1. Introduction | Preliminary Report | CSE Thesis Musings">
+<meta property="og:type" content="article">
+<meta property="og:url" content="/docs/preliminary-report/introduction/">
+<meta property="og:description" content="Introduction Consumer grade Internet of Things (IoT) devices have become widely adopted with continuously growing demand. With demands for such devices growing by 12% each year [@ResearchMarkets-2021], this AU$130B industry has cordially invited thousands of households to invest in smart devices such as light bulbs, fans, televisions and fridges.">
+<meta property="og:locale" content="en">
+<meta property="og:site_name" content="CSE Thesis Musings">
+<meta property="article:section" content="docs">
+<body class="flex flex-col min-h-screen">
+<header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
+<div class="w-full max-w-screen-xl mx-auto"><script>let storageColorScheme=localStorage.getItem("lightDarkMode");((storageColorScheme=='Auto'||storageColorScheme==null)&&window.matchMedia("(prefers-color-scheme: dark)").matches||storageColorScheme=="Dark")&&document.getElementsByTagName('html')[0].classList.add('dark')</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+<a href=../../../ class="mr-6 text-primary-text text-xl font-bold">CSE Thesis Musings</a>
+<button id=navbar-btn class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+<i class="fas fa-bars"></i>
+</button>
+<div id=target class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+<div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
+<a href=../../../#about class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">About</a>
+<a href=../../../posts/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">Posts</a>
+<a href=../../../docs/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 selected-menu-item mr-4">Docs</a>
+<a href=../../../tldr/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">Progress Log</a>
+<a href=../../../docs/report/thesis-smart-vacuum-cleaners-z5206677.pdf class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">Thesis (PDF)</a>
+</div>
+<div class=flex>
+<div class="relative pt-4 md:pt-0">
+<div class="cursor-pointer hover:text-eureka" id=lightDarkMode>
+<i class="fas fa-adjust"></i>
+</div>
+<div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id=is-open>
+</div>
+<div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40" id=lightDarkOptions>
+<span class="px-4 py-1 hover:text-eureka" name=Light>Light</span>
+<span class="px-4 py-1 hover:text-eureka" name=Dark>Dark</span>
+<span class="px-4 py-1 hover:text-eureka" name=Auto>Auto</span>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id=is-open-mobile>
+</div>
+</nav>
+<script>let element=document.getElementById('lightDarkMode');storageColorScheme==null||storageColorScheme=='Auto'?document.addEventListener('DOMContentLoaded',()=>{window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change',switchDarkMode)}):storageColorScheme=="Light"?(element.firstElementChild.classList.remove('fa-adjust'),element.firstElementChild.setAttribute("data-icon",'sun'),element.firstElementChild.classList.add('fa-sun')):storageColorScheme=="Dark"&&(element.firstElementChild.classList.remove('fa-adjust'),element.firstElementChild.setAttribute("data-icon",'moon'),element.firstElementChild.classList.add('fa-moon')),document.addEventListener('DOMContentLoaded',()=>{getcolorscheme(),switchBurger()})</script>
+</div>
+</header>
+<main class="flex-grow pt-16">
+<div class=pl-scrollbar>
+<div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
+<div class=lg:pt-12>
+<div class="flex flex-col md:flex-row bg-secondary-bg rounded">
+<div class="md:w-1/4 lg:w-1/5 border-r">
+<div class="sticky top-16 pt-6">
+<div id=sidebar-title class="md:hidden mx-4 px-2 pt-4 pb-2 md:border-b text-tertiary-text md:text-primary-text">
+<span class=font-semibold>Table of Contents</span>
+<i class="fas fa-caret-right ml-1"></i>
+</div>
+<div id=sidebar-toc class="hidden md:block overflow-y-auto mx-6 md:mx-0 pr-6 pt-2 md:max-h-doc-sidebar bg-primary-bg md:bg-transparent">
+<div class="flex flex-wrap ml-4 -mr-2 p-2 bg-secondary-bg md:bg-primary-bg rounded">
+<a class=hover:text-eureka href=../../../docs/preliminary-report/>Preliminary Report</a>
+</div>
+<ul class=pl-6>
+<li class=py-2>
+<div>
+<a class=hover:text-eureka href=../../../docs/preliminary-report/acronyms/>Glossary of Acronyms</a>
+</div>
+</li>
+<li class=py-2>
+<div>
+<a class="text-eureka hover:text-eureka" href=../../../docs/preliminary-report/introduction/>1. Introduction</a>
+</div>
+</li>
+<li class=py-2>
+<div>
+<a class=hover:text-eureka href=../../../docs/preliminary-report/background/>2. Background</a>
+</div>
+</li>
+<li class=py-2>
+<div>
+<a class=hover:text-eureka href=../../../docs/preliminary-report/literature-review/>3. Literature Review</a>
+</div>
+</li>
+<li class=py-2>
+<div>
+<a class=hover:text-eureka href=../../../docs/preliminary-report/proposal/>4. Thesis Plan</a>
+</div>
+</li>
+<li class=py-2>
+<div>
+<a class=hover:text-eureka href=../../../docs/preliminary-report/progress/>5. Preliminary Results</a>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="w-full md:w-3/4 lg:w-4/5 pb-8 pt-2 md:pt-8">
+<div class="w-full lg:w-3/4 pl-6 ml-0 mr-auto">
+<h1 class="font-bold text-3xl text-primary-text">1. Introduction</h1>
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+</div>
+</div>
+<div class=flex>
+<div class="w-full lg:w-3/4 px-6">
+<div class=content>
+<h1 id=introduction>Introduction</h1>
+<p>Consumer grade Internet of Things (IoT) devices have become widely adopted with continuously growing demand. With demands for such devices growing by 12% each year [@ResearchMarkets-2021], this AU$130B industry has cordially invited thousands of households to invest in smart devices such as light bulbs, fans, televisions and fridges. Giving the abundance and affordability of these products, IoT devices have become an integral part of many homes, where 4 in 5 consumers would be more inclined to choose a property over another if the former were to have such technologies [@RichBrown-2015].</p>
+<p>Although convenient, these devices come with hidden costs and risks. Behind the seemingly &lsquo;simple&rsquo;, &lsquo;smart&rsquo; and &lsquo;secure&rsquo; product features that attract the general populus lies a hidden complex network of services and devices, where functionality is often obscured and private. Without the transparency of what data is being sent, and of where that data is being sent to, consumers inevitably pay for convenience with not only their money but with their privacy and security [@8939043].</p>
+<p>Whilst manufacturers and vendors claim to be secure and/or confidential in how they treat <strong>UGC</strong> and <strong>PII</strong>, it lies evident from various incidents that we cannot completely trust such claims. From involuntary exposure of leaked Facebook user data [@LawrenceAbrams-2021], to rumours of corporations monetising user data without consent [@RhettJones-2017], there lies an equal need for consumers to understand the terms of service to which they agree to, but additionally for companies to be audited against those very same terms of service.</p>
+<p>The infrastructural security and product security of IoT devices must also be scrutinised, given the rapid product lifecycle of IoT developments [@DennisGiese-2021]. As security is often not a sellable feature in contrast to new products and most mistakenly, convenience, proper and wholistic security precautions are often overlooked by companies who are more concerned with profits and high return on investments. Consequently, the prevalence of malicious actors in the cyberworld is alarming, where the overall lack of security awareness between consumers invites target devices to be easily accessed with default passwords or through unpatched vulnerabilities<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup>.</p>
+<p>The black-box nature of IoT network communication raises both privacy and security concerns that may often be overlooked or trivialised in exchange for convenience. This this will involve the audit of an internet-connected robotic vacuum cleaner (Roborock S6) to assess the internal operations and nature of data that is transmitted, as to investigate any potential vulnerabilities that may render the device insecure.</p>
+<p>The outline of this thesis is as follows: In Chapter 2, we study the motivations behind wanting to audit the privacy and security of IoT systems. In Chapter 3, we will review existing research, results and methods that comprise the current state of the art of security research on robot vacuum cleaners. Gaps in existing research will then be formalised through the thesis plan in Chapter 4. Finally we will conclude this report in a discussion of preliminary results that will be carried forwards into the later stages of research</p>
+<section class=footnotes role=doc-endnotes>
+<hr>
+<ol>
+<li id=fn:1 role=doc-endnote>
+<p><a href="https://www.shodan.io/search?query=webcam">https://www.shodan.io/search?query=webcam</a>&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+</div>
+<div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
+<div>
+<span class="block font-bold">Previous</span>
+<a href=../../../docs/preliminary-report/acronyms/ class=block>Glossary of Acronyms</a>
+</div>
+<div class="md:text-right mt-4 md:mt-0">
+<span class="block font-bold">Next</span>
+<a href=../../../docs/preliminary-report/background/ class=block>2. Background</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>document.addEventListener('DOMContentLoaded',()=>{hljs.initHighlightingOnLoad(),changeSidebarHeight(),switchDocToc()})</script>
+</div>
+</div>
+</main>
+<footer class=pl-scrollbar>
+<div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
+<p class="text-sm text-tertiary-text">&copy; 2021-2022 <a href=https://featherbear.cc>Andrew Wong (z5206677)</a>
+&#183; Powered by the <a href=https://github.com/wangchucheng/hugo-eureka class=hover:text-eureka>Eureka</a> theme for <a href=https://gohugo.io class=hover:text-eureka>Hugo</a></p>
+</div></div>
+</footer>
+</body>
+</html>

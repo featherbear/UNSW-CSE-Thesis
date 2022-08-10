@@ -45,6 +45,7 @@
 <a href=../../../posts/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 selected-menu-item mr-4">Posts</a>
 <a href=../../../docs/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">Docs</a>
 <a href=../../../tldr/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">Progress Log</a>
+<a href=../../../docs/report/thesis-smart-vacuum-cleaners-z5206677.pdf class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">Thesis (PDF)</a>
 </div>
 <div class=flex>
 <div class="relative pt-4 md:pt-0">
@@ -71,7 +72,7 @@
 <div class=pl-scrollbar>
 <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
 <div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
-<div class="col-span-2 lg:col-start-2 lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+<div class="col-span-2 lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
 <h1 class="font-bold text-3xl text-primary-text">USB Port</h1>
 <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
 <div class="mr-6 my-2">
@@ -80,9 +81,9 @@
 </div>
 </div>
 <div class=content>
-<h1 id=device-id>Device ID</h1>
+<h2 id=device-id>Device ID</h2>
 <p><code>Bus 001 Device 004: ID 1f3a:1001 Allwinner Technology Rockrobo ruby</code></p>
-<h1 id=dmesg-output>dmesg output</h1>
+<h2 id=dmesg-output>dmesg output</h2>
 <pre><code>[5991703.724675] usb 1-2: new high-speed USB device number 4 using xhci_hcd
 [5991703.881398] usb 1-2: New USB device found, idVendor=1f3a, idProduct=1001, bcdDevice= 2.33
 [5991703.881400] usb 1-2: New USB device strings: Mfr=1, Product=2, SerialNumber=3
@@ -98,7 +99,7 @@
 [5991703.881404] usb 1-2: SerialNumber: 8a80ab8936d76c118000
 [5992597.924031] usb 1-2: USB disconnect, device number 4
 </code></pre>
-<h1 id=lsusb-output>lsusb output</h1>
+<h2 id=lsusb-output>lsusb output</h2>
 <pre><code>Bus 001 Device 004: ID 1f3a:1001 Allwinner Technology Rockrobo ruby
 Device Descriptor:
   bLength                18
@@ -182,6 +183,21 @@ Device Status:     0x0001
 <a href=../../../posts/20211026-progress/ class=block>26/10/2021 Progress Update</a>
 </div>
 </div>
+</div>
+<div class=col-span-2>
+<div class="sticky top-16 z-10 hidden lg:block px-6 py-4 bg-primary-bg">
+<span class="text-lg font-semibold">On This Page</span>
+</div>
+<div class="sticky-toc hidden lg:block px-6 pb-6">
+<nav id=TableOfContents>
+<ul>
+<li><a href=#device-id>Device ID</a></li>
+<li><a href=#dmesg-output>dmesg output</a></li>
+<li><a href=#lsusb-output>lsusb output</a></li>
+</ul>
+</nav>
+</div>
+<script>window.addEventListener('DOMContentLoaded',()=>{enableStickyToc()})</script>
 </div>
 </div>
 <script>document.addEventListener('DOMContentLoaded',()=>{hljs.initHighlightingOnLoad()})</script>
