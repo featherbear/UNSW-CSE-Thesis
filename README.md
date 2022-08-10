@@ -11,7 +11,6 @@ Have a look at the website version of this repository here: [featherbear.cc/UNSW
 
 ---
 
-* [Daily Log](https://featherbear.cc/UNSW-CSE-Thesis/tldr)
-* [Presentations](https://featherbear.cc/UNSW-CSE-Thesis/docs/presentations/)
 * [Thesis Report (PDF)](https://featherbear.cc/UNSW-CSE-Thesis/docs/report/)
-
+* [Presentations](https://featherbear.cc/UNSW-CSE-Thesis/docs/presentations/)
+* [Daily Log](https://featherbear.cc/UNSW-CSE-Thesis/tldr)
