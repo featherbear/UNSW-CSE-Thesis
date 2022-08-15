@@ -43,6 +43,8 @@ widget:
     attachment: 
 ---
 
+### Paper available [here](/docs/report/thesis-smart-vacuum-cleaners-z5206677.pdf)
+
 ## "Smart" Vacuum Cleaners
 
 > An Audit Into The Security and Integrity of IoT Systems
@@ -59,4 +61,3 @@ Manufacturers of IoT / smart home devices have addressed to privacy and security
 
 ... sounds like a cop-out answer hey...  
 Read the [paper](/docs/report/thesis-smart-vacuum-cleaners-z5206677.pdf) to see the spicy stuff 🔥
-
