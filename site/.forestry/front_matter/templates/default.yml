@@ -78,7 +78,7 @@ pages:
 - site/content/posts/initialisation-pairing-process.md
 - site/content/posts/ipv6-check.md
 - site/content/posts/libc.md
-- site/content/posts/mud.md
+- site/content/posts/meanwhile.md
 - site/content/posts/opt-roborock-md5-hashes.md
 - site/content/posts/ota-updates-blocked-as-of-late-2019.md
 - site/content/posts/packet-analysis.md
@@ -87,7 +87,6 @@ pages:
 - site/content/posts/post-login-actions.md
 - site/content/posts/pre-encryption-and-post-decryption-hooks.md
 - site/content/posts/privacy-policy-from-apk.md
-- site/content/posts/project-focus.md
 - site/content/posts/psa-don-t-combine-program-arguments.md
 - site/content/posts/recovery-mode.md
 - site/content/posts/report-a-preparation.md
@@ -98,7 +97,6 @@ pages:
 - site/content/posts/state-of-the-art.md
 - site/content/posts/system-imaging.md
 - site/content/posts/thesis-c-report-structure-notes.md
-- site/content/posts/thesis-tasks.md
 - site/content/posts/tuya-white-paper.md
 - site/content/posts/unit-reassembly-with-breakout-cables.md
 - site/content/posts/upgrade-notes.md

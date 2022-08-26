@@ -26,5 +26,4 @@ fields:
     max: 
     step: 
 pages:
-- site/content/docs/about-the-thesis/useful-meetings.md
 - site/content/docs/about-the-thesis/what-goes-in-a-thesis.md
